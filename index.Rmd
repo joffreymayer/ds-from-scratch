@@ -5,10 +5,15 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Chapter 2
+# My Test-Chapter
 
-Hello world =)
+For you to able to construct a book into an HTML-File, you will need the following 2 commands. The first is absolutely necessary, the second one is simply to check whether you rendered everything correctly by viewing the browser:
 
-```{python}
-print("du bisch en noob!")
+- `bookdown::render_book("index.Rmd")` to render the `.md`-file into an `.html`-file.
+- `browseURL("docs/index.html")` to see what happens.
+
+In this bookdown-chapter, I will simply try to type some code, to see whether the code I have written truly works.
+
+```{r}
+2+2
 ```
