@@ -7,3 +7,8 @@ site: bookdown::bookdown_site
 
 # Chapter 2
 
+Hello world =)
+
+```{python}
+print("du bisch en noob!")
+```
