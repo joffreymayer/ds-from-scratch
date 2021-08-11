@@ -7,7 +7,7 @@ site: bookdown::bookdown_site
 
 # My Test-Chapter
 
-Salut Bitos
+Salut Bitos. C'est moi, Jo.
 
 ```{r}
 3+2
