@@ -7,7 +7,7 @@ site: bookdown::bookdown_site
 
 # My Test-Chapter
 
-Hello, this will be my new paper by Noe Pozzan.
+Salut Bitos
 
 ```{r}
 3+2
