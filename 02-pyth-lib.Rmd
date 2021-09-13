@@ -6,5 +6,7 @@ Here, I will explore different libraries that will allow you to make forecasts i
 
 ### Facebook Prophet
 
+Aus einer didaktischen Perspektive ist die offizielle Dokumentation der **Prophet-Library wunderbar, um die Unterschiede zwischen `R` &amp; `Python` (Objekt-Orientierte Programmierung) zu entdecken**.
 
+- <u>Link zur offiziellen Dokumentation</u>: https://facebook.github.io/prophet/docs/quick_start.html
 
