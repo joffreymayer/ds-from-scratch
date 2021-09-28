@@ -5,9 +5,15 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# My Test-Chapter
+# Computer Set-Up
 
-Salut Bitos! C'est moi, Jo.
+When building projects *efficiently*, you will need different set-ups in order to have everything in your code work properly, *not only on your own machine, but also on other machines, for example of another team-member*.
+
+## Virtual Environment 
+
+Because the libraries you work with in your projects will be updated over time (this is generally *bad news*, since this will cause all sorts of dependency problems across your libaries you use), it is crucial to understand that you will need a virtual environment (`venv`). There, you will install all the libraries you need. The **major advantage here, is that you can control the version you install the library**. Furthermore, you can send the `venv` to another computer and the people will download exactly the versions of each library. 
+
+<mark>This allows that **your code will <u>always</u> work, independently of the machine you will use**! There will be no dependency problems anymore, which is a huge win.</mark>. :)
 
 ```{r}
 3+2

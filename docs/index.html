@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2021-09-13" />
+<meta name="date" content="2021-09-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">DS from Scratch Codes</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> My Test-Chapter</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Computer Set-Up</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#virtual-environment"><i class="fa fa-check"></i><b>1.1</b> Virtual Environment</a></li>
+</ul></li>
 <li class="chapter" data-level="2" data-path="python-libraries.html"><a href="python-libraries.html"><i class="fa fa-check"></i><b>2</b> Python Libraries</a><ul>
 <li class="chapter" data-level="2.1" data-path="python-libraries.html"><a href="python-libraries.html#time-series-forecasting"><i class="fa fa-check"></i><b>2.1</b> Time-Series Forecasting</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="python-libraries.html"><a href="python-libraries.html#facebook-prophet"><i class="fa fa-check"></i><b>2.1.1</b> Facebook Prophet</a></li>
@@ -166,11 +168,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Data Science from Scratch Code</h1>
 <p class="author"><em>Joffrey Anthony</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-09-13</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>2021-09-28</em></p>
 </div>
-<div id="my-test-chapter" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> My Test-Chapter</h1>
-<p>Salut Bitos! C’est moi, Jo.</p>
+<div id="computer-set-up" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Computer Set-Up</h1>
+<p>When building projects <em>efficiently</em>, you will need different set-ups in order to have everything in your code work properly, <em>not only on your own machine, but also on other machines, for example of another team-member</em>.</p>
+<div id="virtual-environment" class="section level2">
+<h2><span class="header-section-number">1.1</span> Virtual Environment</h2>
+<p>Because the libraries you work with in your projects will be updated over time (this is generally <em>bad news</em>, since this will cause all sorts of dependency problems across your libaries you use), it is crucial to understand that you will need a virtual environment (<code>venv</code>). There, you will install all the libraries you need. The <strong>major advantage here, is that you can control the version you install the library</strong>. Furthermore, you can send the <code>venv</code> to another computer and the people will download exactly the versions of each library.</p>
+<p><mark>This allows that <strong>your code will <u>always</u> work, independently of the machine you will use</strong>! There will be no dependency problems anymore, which is a huge win.</mark>. :)</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1"></a><span class="dv">3</span><span class="op">+</span><span class="dv">2</span></span></code></pre></div>
 <pre><code>## [1] 5</code></pre>
 <p>For you to able to construct a book into an HTML-File, you will need the following 2 commands. The first is absolutely necessary, the second one is simply to check whether you rendered everything correctly by viewing the browser:</p>
@@ -182,6 +188,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="index.html#cb3-1"></a><span class="dv">2</span><span class="op">+</span><span class="dv">2</span></span></code></pre></div>
 <pre><code>## [1] 4</code></pre>
 
+</div>
 </div>
             </section>
 
