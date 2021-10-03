@@ -1,0 +1,15 @@
+computer-set-up
+virtual-environment
+create-a-venv
+activate-your-newly-created-venv
+r-markdown
+hide-source-code
+execute-a-code-chunk-without-showing-any-output
+do-not-execute-a-code-chunk
+python-libraries
+time-series-forecasting
+facebook-prophet
+visualization
+graphs-with-python
+seaborn
+draw-a-time-series-line-chart

@@ -19,7 +19,7 @@ Because the libraries you work with in your projects will be updated over time (
 
 Go to your terminal and plug in the following code:
 
-```{terminal}
+```{}
 conda create -n YOUR-VENVIRONMENT-NAME-HERE python=3.6
 ```
 
@@ -27,7 +27,7 @@ conda create -n YOUR-VENVIRONMENT-NAME-HERE python=3.6
 
 Weirdly though, you also need to activate the environment you created above. Plug in the following code:
 
-```{terminal}
+```
 source activate YOUR-ENVIRONMENT-NAME
 ```
 
@@ -39,7 +39,7 @@ When writing Code, I recommend you to use `.Rmd`-Documents, which will allow you
 
 Actually, this document is written in `.Rmd`-Files, where I combine the text, with so-called "code-snippets", like the follwing:
 
-```{text}
+```{}
 This is a Code-Snippet
 ```
 

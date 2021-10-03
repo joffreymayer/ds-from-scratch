@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Python Libraries | Data Science from Scratch Code</title>
-  <meta name="description" content="Chapter 3 Python Libraries | Data Science from Scratch Code" />
+  <title>Chapter 2 R Markdown | Data Science from Scratch Code</title>
+  <meta name="description" content="Chapter 2 R Markdown | Data Science from Scratch Code" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Python Libraries | Data Science from Scratch Code" />
+  <meta property="og:title" content="Chapter 2 R Markdown | Data Science from Scratch Code" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Python Libraries | Data Science from Scratch Code" />
+  <meta name="twitter:title" content="Chapter 2 R Markdown | Data Science from Scratch Code" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="r-markdown.html"/>
-<link rel="next" href="visualization.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="python-libraries.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -177,19 +177,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="python-libraries" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Python Libraries</h1>
-<div id="time-series-forecasting" class="section level2">
-<h2><span class="header-section-number">3.1</span> Time-Series Forecasting</h2>
-<p>Here, I will explore different libraries that will allow you to make forecasts into the future.</p>
-<div id="facebook-prophet" class="section level3">
-<h3><span class="header-section-number">3.1.1</span> Facebook Prophet</h3>
-<p>Aus einer didaktischen Perspektive ist die offizielle Dokumentation der <strong>Prophet-Library wunderbar, um die Unterschiede zwischen <code>R</code> &amp; <code>Python</code> (Objekt-Orientierte Programmierung) zu entdecken</strong>.</p>
-<ul>
-<li><u>Link zur offiziellen Dokumentation</u>: <a href="https://facebook.github.io/prophet/docs/quick_start.html" class="uri">https://facebook.github.io/prophet/docs/quick_start.html</a></li>
-</ul>
-
+<div id="r-markdown" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> R Markdown</h1>
+<p>When writing Code, I recommend you to use <code>.Rmd</code>-Documents, which will allow you to combine both, text, as well as Code (in R, Python, or any other language of your choice).</p>
+<p>Actually, this document is written in <code>.Rmd</code>-Files, where I combine the text, with so-called “code-snippets”, like the follwing:</p>
+<pre><code>This is a Code-Snippet</code></pre>
+<p>When writing Code in <code>R-Markdown</code>, it will be useful for you to know when:</p>
+<ol style="list-style-type: decimal">
+<li>to execute code wihtin a code-snippet</li>
+<li>and where not.</li>
+</ol>
+<div id="hide-source-code" class="section level2">
+<h2><span class="header-section-number">2.1</span> Hide Source Code</h2>
+<p>This will be done with <code>echo = FALSE</code>:</p>
+<pre><code>## [1] 2</code></pre>
+<p>With figures, you need <code>fig.show = 'hide'</code> in R:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="r-markdown.html#cb5-1"></a><span class="kw">plot</span>(cars)</span></code></pre></div>
+<p>To hide warning-messages, just use <code>message = FALSE</code>:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="r-markdown.html#cb6-1"></a><span class="kw">message</span>(<span class="st">&quot;You will not see the message.&quot;</span>)</span></code></pre></div>
 </div>
+<div id="execute-a-code-chunk-without-showing-any-output" class="section level2">
+<h2><span class="header-section-number">2.2</span> Execute a Code-Chunk without showing any Output</h2>
+<p>You will get an output, e.g. the code will execute, but you will not show the code.</p>
+</div>
+<div id="do-not-execute-a-code-chunk" class="section level2">
+<h2><span class="header-section-number">2.3</span> Do NOT execute a Code-Chunk</h2>
+<p>If you want to show code for demonstration purposes - like on this Website -
+you will probably want to only show the code, but not execute it. This is also possible with <code>eval=FALSE</code>:</p>
+
 </div>
 </div>
             </section>
@@ -197,8 +212,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="r-markdown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="visualization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="python-libraries.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -230,7 +245,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/joffreymayer/ds-from-scratch/edit/master/02-pyth-lib.Rmd",
+"link": "https://github.com/joffreymayer/ds-from-scratch/edit/master/index.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -238,7 +253,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/joffreymayer/ds-from-scratch/blob/master/02-pyth-lib.Rmd",
+"link": "https://github.com/joffreymayer/ds-from-scratch/blob/master/index.Rmd",
 "text": null
 },
 "download": null,
