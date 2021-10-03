@@ -13,3 +13,17 @@ visualization
 graphs-with-python
 seaborn
 draw-a-time-series-line-chart
+draw-a-barplot-barchart
+draw-a-heatmap
+draw-a-scatterplot-streudiagramm-punktwolke
+with-2-variables-incl.-regression-line
+with-3-variables-where-2-are-continuous-1-is-categorical
+draw-a-histogram
+discrete-version
+continuous-version-kernel-density-estimate
+change-style-of-different-seaborn-plots
+matplotlib
+set-width-height-of-graph
+set-title-of-graph
+set-label-of-axes
+force-legend-to-appear
