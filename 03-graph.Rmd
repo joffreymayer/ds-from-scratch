@@ -8,7 +8,7 @@ When you work with Python, there are three main libraries you need to know:
 
 - `seaborn`, which can plot extremely beautiful graphs, without much efforts. 
 - `matplotlib`, for more advanced stuff, this is the library you need to master.
-- `plotly`, for implementations into websites.
+- `plotly`, for implementations into websites. Noob.
 
 ### Seaborn
 
