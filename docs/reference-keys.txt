@@ -1,8 +1,0 @@
-computer-set-up
-virtual-environment
-create-a-venv
-activate-your-newly-created-venv
-python-libraries
-time-series-forecasting
-facebook-prophet
-a-caucus-race-and-a-long-tale
