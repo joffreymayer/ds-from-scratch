@@ -64,7 +64,7 @@ Twitter-Community von Wissenschaftlern sind ebenfalls sehr wertvoll. Als **Beisp
 
 ## How to read Notebooks from other People?
 
-*Es geht am Anfang um die Gesamtübersicht und noch nicht um die Details // Eigenheiten im Code oder im Datensatz! Am wichtigsten ist es, dass du [diese Fragen](##questions-you-need-to-answer-when-starting-a-new-project) zunächst beantworten kannst, wenn du das Notebook liest.*
+*Es geht am Anfang um die Gesamtübersicht und noch nicht um die Details // Eigenheiten im Code oder im Datensatz! Am wichtigsten ist es, dass du [diese Fragen](#questions-you-need-to-answer-when-starting-a-new-project) zunächst beantworten kannst, wenn du das Notebook liest.*
 
 ## Machine-Learning Theory
 
