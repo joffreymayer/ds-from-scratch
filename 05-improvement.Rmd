@@ -1,0 +1,15 @@
+---
+title: "Improve Yourself Constantly"
+author: "Joffrey Mayer"
+date: "10/17/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Improve Yourself Constantly
+
+Like everything in Software and Informatics: you constantly need to acquire new skills to get the job done. Here, I listed different examples of what you will need to master, in order to improve yourself as a data-scientist:
+

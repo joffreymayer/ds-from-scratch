@@ -10,3 +10,29 @@ Aus einer didaktischen Perspektive ist die offizielle Dokumentation der **Prophe
 
 - <u>Link zur offiziellen Dokumentation</u>: https://facebook.github.io/prophet/docs/quick_start.html
 
+### SkLearn
+
+> In some functions, you will need to set the option `random_state`. **If you want reproducible results**, how do you need to handle `random_state`?
+
+Just set `random_state` to an integer. Dieser integer kann *beliebig* gewählt werden, das ist `SkLearn` egal!
+
+### SkTime
+
+> Überischt zum API in `sktime`?
+
+Grundsätzlich verwendet `sktime` fit-, predict-, und transform-class-methods. Um zu verstehen, was dies genau bedeutet, hier eine globalere Übersicht mit Hilfe einer Visualisierung veranschaulicht:
+
+![API of sktime](./bilder/api_sktime.jpg)
+
+- For *estimator classes* (a.k.a. model classes), `sktime` provides:
+ 	- a fit-method (= <ins>goal</ins>: training // estimating the model) and 
+ 	- a predict-method (= <ins>goal</ins>: generate new predictions).
+
+- For *transformer classes*, `sktime` provides:
+	- various fit-methods,
+	- various transform-methods to transform data that comes in series. 
+
+> What does it mean: "Reduction is composable"?  
+
+Ein Synonym wäre: "addieren" &#8594; E.g. you can split a difficult task into a bunch of smaller tasks (= reduction) and "add" them together to solve the bigger task at the end (= "reduction is composable").
+
