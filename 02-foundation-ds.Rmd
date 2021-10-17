@@ -20,9 +20,13 @@ In diesem Kapitel werde ich auf diverse **"Key-Concepts"** eingehen, die _impliz
 
 ## Technisch Essentiell
 
+### Data Science VS. mein Economics-Studium
+
 > Was ist der Unterschied zwischen einem `Data Scientist` VS. was ich in meinem `Economics-Studium` gemacht habe?
 
-- <ins>Erkenntnis</ins>: Machine Learning wird als eine "Black Box" betrachtet, wo man den X-Variablen des Modells keine grosse Beachtung schenkt: man bringt sie einfach ins Modell rein. Im Kontrast dazu, sind Ökonomen mehr dazu getrimmt, mit Hilfe eines theoretischen Modells, die "richtigen" X-Variablen zu selektieren.
+- <u>Erkenntnis</u>: Machine Learning wird als eine "Black Box" betrachtet, wo man den X-Variablen des Modells keine grosse Beachtung schenkt: man bringt sie einfach ins Modell rein. Im Kontrast dazu, sind Ökonomen mehr dazu getrimmt, mit Hilfe eines theoretischen Modells, die "richtigen" X-Variablen zu selektieren.
+
+### IDE explained
 
 > What is an **IDE**?
 
