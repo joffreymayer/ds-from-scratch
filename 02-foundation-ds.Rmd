@@ -9,7 +9,7 @@ output: html_document
 
 In meinem Data Scientist Job werde ich häufig auf ähnliche Probleme stossen mit der Zeit. Hier habe ich eine Reihe an Fragen aufgelistet, welche ich fähig sein muss, zu beantworten, wenn ich effizient in meinem Beruf sein will!
 
-## Questions you need to answer when starting a new Project
+## <a name="#key-1">Questions you need to answer when starting a new Project</a>
 
 BEFORE you start writing your R-Scripts or Jupyter-Notebooks, you **first need to think about several key-things** &amp; -questions:
 
@@ -61,6 +61,10 @@ Metriken verwendet, nämlich:
 Aus Erfahrung weiss ich jetzt, dass **Youtube bisher *immer*, die beste Quelle war, um mir etwas schnell &amp; effizient beizubringen**. 
 
 Twitter-Community von Wissenschaftlern sind ebenfalls sehr wertvoll. Als **Beispiel wäre [dieser Twitter-Post](https://twitter.com/seanjtaylor/status/1123278380369973248?s=11) vom Prophet-Gründer**.
+
+## How to read Notebooks from other People?
+
+*Es geht am Anfang um die Gesamtübersicht und noch nicht um die Details // Eigenheiten im Code oder im Datensatz! Am wichtigsten ist es, dass du [diese Fragen](#key-1) zunächst beantworten kannst, wenn du das Notebook liest.*
 
 ## Machine-Learning Theory
 

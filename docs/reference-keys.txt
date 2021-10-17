@@ -6,6 +6,8 @@ r-markdown
 hide-source-code
 execute-a-code-chunk-without-showing-any-output
 do-not-execute-a-code-chunk
+rmarkdown--vs.-markdown-files
+nützliche-hexadecimals
 terminal
 commands-in-mac
 how-to-use-a-jupyter-notebook-in-an-ide
@@ -36,6 +38,7 @@ meetings
 foundations-of-data-science
 questions-you-need-to-answer-when-starting-a-new-project
 effective-research-how-to-find-answers-quickly
+how-to-read-notebooks-from-other-people
 machine-learning-theory
 difference-between-training--validation--test-dataset
 validation-set-vs.-test-set

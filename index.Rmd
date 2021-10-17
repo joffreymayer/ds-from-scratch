@@ -85,6 +85,16 @@ you will probably want to only show the code, but not execute it. This is also p
 # any R code here
 ```
 
+### RMarkdown- VS. Markdown-Files
+
+- Verwende `<ins></ins>` als HTML, um Texte zu Unterstreichen. 
+  - <ins>Achtung</ins>: Der HTML-Tag `<u></u>` geht nicht in `.rm`-files. Lustigerweise funktioniert `<u></u>` jedoch in `.Rmd` (= R Markdown) 😂
+  
+### Nützliche Hexadecimals
+
+- Hexadecimal code for the left square-bracket = `&#91;` --> Ich muss das so machen mit den eckigen Klammern, weil `[]` wird für Links & Bilder verwendet in `Markdown` 🤪
+- Hexadecimal code for the right square-bracket = `&#93;` --> Ich muss das so machen mit den eckigen Klammern, weil `[]` wird für Links & Bilder verwendet in `Markdown` 🤪
+
 ## Terminal 
 
 ### Commands (in Mac):
