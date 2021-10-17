@@ -247,53 +247,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 - Welche Daten sind effektiv genutzt &amp; welche sind verfügbar?
 - Etc…</code></pre>
 <ul>
-<li><ins>
-<p>Datenbasis // Woher kommen die Daten?</p>
-</ins>
-<p>: ENTSOE exklusiv. Das ist der Dachverband der TSO (kennen Nachfrage und Angebot)</p></li>
-<li><ins>
-<p>Prognoseobjekt (= y-dach)</p>
-</ins>
-<p>: Stündliche EUR/kWh für Folgetag.</p></li>
-<li><ins>
-<p>Metrik</p>
-</ins>
-<p>: Zeigt, wie gut das Modell “lernt” (= training error) &amp; “generalisiert” // exrapoliert (= generalization error). Im Notebook von Philipp werden 2 verschiedene
+<li><u>Datenbasis // Woher kommen die Daten?</u>:</li>
+</ul>
+<p>ENTSOE exklusiv. Das ist der Dachverband der TSO (kennen Nachfrage und Angebot)</p>
+<ul>
+<li><u>Prognoseobjekt (= y-dach)</u>:</li>
+</ul>
+<p>Stündliche EUR/kWh für Folgetag.</p>
+<ul>
+<li><u>Metrik</u>:</li>
+</ul>
+<p>Zeigt, wie gut das Modell “lernt” (= training error) &amp; “generalisiert” // exrapoliert (= generalization error). Im Notebook von Philipp werden 2 verschiedene
 Metriken verwendet, nämlich:</p>
+<pre><code>- Mean Absolute Error, sowie 
+- [Root] Mean Squared Error.</code></pre>
 <ul>
-<li>Mean Absolute Error, sowie</li>
-<li>[Root] Mean Squared Error.</li>
-</ul></li>
-<li><ins>
-<p>Training Dataset</p>
-</ins>
-<p>: Daten von 2019.</p></li>
-<li><ins>
-<p>Validation Dataset</p>
-</ins>
-<p>: Random choice of 20% of the hours within this year.</p></li>
-<li><ins>
-<p>Mit welchem <em>true y-value</em> werden die Predictions verglichen? // Was ist der Benchmark? // Test-Set</p>
-</ins>
-<p>: EFFEX Spotpreise benutzt für Benchmark // true [y-]values.</p></li>
-<li><ins>
-<p>Struktur [der Analyse]</p>
-</ins>
-<p>:</p>
+<li><p><u>Training Dataset</u>: Daten von 2019.</p></li>
+<li><p><u>Validation Dataset</u>: Random choice of 20% of the hours within this year.</p></li>
+<li><p><u>Mit welchem <em>true y-value</em> werden die Predictions verglichen? // Was ist der Benchmark? // Test-Set</u>: EFFEX Spotpreise benutzt für Benchmark // true [y-]values.</p></li>
+<li><p><u>Struktur [der Analyse]</u>:</p>
 <ul>
-<li><ins>
-Output
-</ins>
-: Day ahead Strompreis CH</li>
-<li><ins>
-Input
-</ins>
-: jeweils 24h für ca. 20 Prädiktoren. Reshape: K dimensionen = #Prediktors x 24h</li>
+<li><u>Output</u>: Day ahead Strompreis CH</li>
+<li><u>Input</u>: jeweils 24h für ca. 20 Prädiktoren. Reshape: K dimensionen = #Prediktors x 24h</li>
 </ul></li>
-<li><ins>
-<p>Was ist die Daten-Imputation Methode?</p>
-</ins>
-<p>: Missing Values mit Mittelwerten</p></li>
+<li><p><u>Was ist die Daten-Imputation Methode?</u>: Missing Values mit Mittelwerten</p></li>
 </ul>
 </div>
 <div id="effective-research-how-to-find-answers-quickly" class="section level2">
@@ -315,10 +292,7 @@ Input
 <p class="caption">Training Set VS. Validation Set VS. Test Set</p>
 </div>
 <ul>
-<li><ins>
-Important to note
-</ins>
-: There is oftentimes confusion between the definition of <em>validation dataset</em> VS. <em>testing dataset</em>, because there is no consens about it. <strong>Therefore - and if we take the above picture as the “true” definition - some people will call the <em>validation dataset</em> the “test dataset” and vice versa, e.g. the <em>test data</em> as the “validation data”! xD</strong></li>
+<li><u>Important to note</u>: There is oftentimes confusion between the definition of <em>validation dataset</em> VS. <em>testing dataset</em>, because there is no consens about it. <strong>Therefore - and if we take the above picture as the “true” definition - some people will call the <em>validation dataset</em> the “test dataset” and vice versa, e.g. the <em>test data</em> as the “validation data”! xD</strong></li>
 </ul>
 <div id="validation-set-vs.-test-set" class="section level4">
 <h4><span class="header-section-number">2.3.1.1</span> Validation-Set VS. Test-Set</h4>
@@ -335,7 +309,7 @@ Important to note
 <blockquote>
 <p>Why do we need <code>validation set</code>?</p>
 </blockquote>
-<p>At the end, you want the best model possible. If you want to tune your hyperparameters, you will need your <code>test set</code>. <strong>The big problem here, however, is that - <em>if we use the test-set more than once when wanting to find out the best hyperparameters</em> - our model will know the data by heart and the predictions will be too good, <ins>but only</ins> on this dataset that you are currently using</strong>! The model will not generalize well on new data.</p>
+<p>At the end, you want the best model possible. If you want to tune your hyperparameters, you will need your <code>test set</code>. <strong>The big problem here, however, is that - <em>if we use the test-set more than once when wanting to find out the best hyperparameters</em> - our model will know the data by heart and the predictions will be too good, <u>but only</u> on this dataset that you are currently using</strong>! The model will not generalize well on new data.</p>
 <p><em>That’s why we need this additional subsetting of the training-dataset!</em></p>
 </div>
 </div>
@@ -343,29 +317,17 @@ Important to note
 <h3><span class="header-section-number">2.3.2</span> Concept of Stratification</h3>
 <p>Angenommen du hast eine <em>kategorische</em> Y-Variable, welche entweder Nullen oder Einsen als Werte annimmt. Nehme nun an, dass - <em>im Training-Dataset</em> - der Anteil der Nullen 60% beträgt. Wenn du nun ein <code>stratified Sample</code> willst, dann wird das <em>Test-Dataset</em> ebenfalls einen Anteil von 60% an Nullen enthalten!</p>
 <ul>
-<li><ins>
-Quelle
-</ins>
-: <a href="https://www.youtube.com/watch?v=KEBS7Kyc0Po">Train-Test-Split in Sklearn and Cross-Validation</a></li>
+<li><u>Quelle</u>: <a href="https://www.youtube.com/watch?v=KEBS7Kyc0Po">Train-Test-Split in Sklearn and Cross-Validation</a></li>
 </ul>
 </div>
 <div id="cross-validation" class="section level3">
 <h3><span class="header-section-number">2.3.3</span> Cross-Validation</h3>
 <p>The concept of <em>cross-validation</em> can be splitted into 2 parts:</p>
 <ul>
-<li><ins>
-Step 1
-</ins>
-: Split your dataset into 1 training- &amp; 1 test-set.
+<li><u>Step 1</u>: Split your dataset into 1 training- &amp; 1 test-set.
 <ul>
-<li><ins>
-Rule of Thumb
-</ins>
-: Usually, the split is <strong>70-90% training set</strong> and <strong>10-30% for the test-set</strong>.</li>
-<li><ins>
-Code Example
-</ins>
-:</li>
+<li><u>Rule of Thumb</u>: Usually, the split is <strong>70-90% training set</strong> and <strong>10-30% for the test-set</strong>.</li>
+<li><u>Code Example</u>:</li>
 </ul></li>
 </ul>
 <div class="figure">
@@ -373,18 +335,15 @@ Code Example
 <p class="caption">Example of Code for Train-Test Split</p>
 </div>
 <ul>
-<li><ins>
-Step 2
-</ins>
-: Now, we divide the <em>training set</em> further, such that it will contain - <em>if we assume a 3-fold cross-validation as an example</em> - <strong>3 <ins>different</ins> validation sets</strong> and <strong>3 training sets</strong>.</li>
+<li><u>Step 2</u>: Now, we divide the <em>training set</em> further, such that it will contain - <em>if we assume a 3-fold cross-validation as an example</em> - <strong>3 <u>different</u> validation sets</strong> and <strong>3 training sets</strong>.</li>
 </ul>
 <div class="figure">
 <img src="./bilder/example-of-a-general-3-fold-cross-validation.png" alt="" />
 <p class="caption">Allgemeine Cross-Validation</p>
 </div>
 <div id="special-case-cross-validation-for-time-series-data" class="section level4">
-<h4><span class="header-section-number">2.3.3.1</span> <ins>Special Case</ins>: Cross-Validation for Time-Series Data</h4>
-<p>Because time-series are ordered, since <em>the flow of time</em> is only going forward, the graph shown above for <em>step 2</em> is <ins>not</ins> valid and we need another approach:</p>
+<h4><span class="header-section-number">2.3.3.1</span> <u>Special Case</u>: Cross-Validation for Time-Series Data</h4>
+<p>Because time-series are ordered, since <em>the flow of time</em> is only going forward, the graph shown above for <em>step 2</em> is <u>not</u> valid and we need another approach:</p>
 <div class="figure">
 <img src="./bilder/example-3-fold-cross-validation-for-time-series.png" alt="" />
 <p class="caption">Cross-Validation for Time Series</p>
@@ -406,21 +365,12 @@ Step 2
 <p><a href="https://www.youtube.com/watch?v=w9IGkBfOoic">How to create good Data-Pipelines in Scikit-Learn?</a></p>
 </blockquote>
 <ul>
-<li><ins>
-Ziel von Data-Pipeline
-</ins>
-: Write more clean // readable code, especially when you do <em>data cleaning</em>. <strong>A datapipeline is basically a way of standardizing your code</strong>.</li>
-<li><ins>
-Warum sind Data-Pipelines so geil?
-</ins>
-: Because you can <strong>compare many different regression-models (Linear-Regression Vs. Logistic-Regression Vs. RandomForrest …), applying different “scaling-techniques” (= normalize a variable with mean 0 and standard-deviation of 1), as well as using “data cleaning techniques” (= reduce dimensions via PCA, reduce missing-values etc…)</strong>. Another cool thing to note is, that <strong>you can choose the order, in which the cleaning, scaling and fitting occures!</strong>
+<li><u>Ziel von Data-Pipeline</u>: Write more clean // readable code, especially when you do <em>data cleaning</em>. <strong>A datapipeline is basically a way of standardizing your code</strong>.</li>
+<li><u>Warum sind Data-Pipelines so geil?</u>: Because you can <strong>compare many different regression-models (Linear-Regression Vs. Logistic-Regression Vs. RandomForrest …), applying different “scaling-techniques” (= normalize a variable with mean 0 and standard-deviation of 1), as well as using “data cleaning techniques” (= reduce dimensions via PCA, reduce missing-values etc…)</strong>. Another cool thing to note is, that <strong>you can choose the order, in which the cleaning, scaling and fitting occures!</strong>
 <ul>
 <li>See also the summary of the guy <a href="https://www.youtube.com/watch?v=w9IGkBfOoic">on Youtube ab 10:00-11:00</a>.</li>
 </ul></li>
-<li><ins>
-Link to Github for an example
-</ins>
-: <a href="https://github.com/krishnaik06/Pipelines-Using-Sklearn/blob/master/SklearnPipeline.ipynb" target="_blank">Jupyter-Notebook code-example on how to create a little Data-Pipeline by yourself</a></li>
+<li><u>Link to Github for an example</u>: <a href="https://github.com/krishnaik06/Pipelines-Using-Sklearn/blob/master/SklearnPipeline.ipynb" target="_blank">Jupyter-Notebook code-example on how to create a little Data-Pipeline by yourself</a></li>
 </ul>
 </div>
 </div>
@@ -436,12 +386,9 @@ Link to Github for an example
 <div id="global-variables-vs.-local-variables" class="section level3">
 <h3><span class="header-section-number">2.4.2</span> Global Variables VS. Local Variables</h3>
 <p>Variables that are created <strong>outside of a function</strong> are known as <em>global variables</em>.</p>
-<p>Global variables can be used by everyone, both <strong>inside of functions <ins>and</ins> outside</strong>.</p>
+<p>Global variables can be used by everyone, both <strong>inside of functions <u>and</u> outside</strong>.</p>
 <ul>
-<li><ins>
-Example of a global variable
-</ins>
-:</li>
+<li><u>Example of a global variable</u>:</li>
 </ul>
 <pre><code>x = &quot;awesome&quot;
 
@@ -451,12 +398,9 @@ def myfunc():
 myfunc()
 
 &gt;&gt;&gt; Python is awesome</code></pre>
-<p>In contrast, if you create a variable <em>with the same name</em> <ins>inside</ins> a function, this variable will be <strong>local</strong>, and <strong>can only be used <ins>inside</ins> the function</strong>. The global variable with the <em>same</em> name will remain as it was, global and with the original value.</p>
+<p>In contrast, if you create a variable <em>with the same name</em> <u>inside</u> a function, this variable will be <strong>local</strong>, and <strong>can only be used <u>inside</u> the function</strong>. The global variable with the <em>same</em> name will remain as it was, global and with the original value.</p>
 <ul>
-<li><ins>
-Example of a local variable
-</ins>
-:</li>
+<li><u>Example of a local variable</u>:</li>
 </ul>
 <pre><code>x = &quot;awesome&quot;
 
@@ -485,10 +429,10 @@ print(&quot;Python is &quot; + x)</code></pre>
 <div id="p-hacking" class="section level3">
 <h3><span class="header-section-number">2.5.1</span> P-Hacking</h3>
 <blockquote>
-<p>Was ist <ins>p-hacking</ins>?</p>
+<p>Was ist <u>p-hacking</u>?</p>
 </blockquote>
 <p>In der Statistik gibt es den <strong>p-Wert</strong> ein: <em>Man nimmt an die Hypothese sei wahr und berechnet dann die Wahrscheinlichkeit, dass die beobachtete Statistik mindestens so extrem ausfallen würde (für die Gegner von Wischi-Waschi <a href="https://de.wikipedia.org/wiki/P-Wert#Mathematische_Formulierung">hier die Wikipedia-Definition</a>)</em>. Falls diese Wahrscheinlichkeit unter 5% liegt, dann sei das Resultat “statistisch signifikant” (yay!) und die Nullhypothese kann verworfen werden, was oftmals die Absicht ist.</p>
-<p><u>Das <strong>Problem</strong> ist nur</u>: <em>Hypothesen gibt es viele und z.T. auch recht ähnliche</em>. Wenn man genug Hypothesen aufstellt - <strong>vor allem, <ins>nachdem</ins> man sich die Daten angeschaut hat</strong> - dann ist es durchaus möglich, dass man ein statistisch signifikantes Resultat erhält, unabhängig davon, ob das Resultat tatsächlich auch stimmt. <strong>Das nennt man p-Hacking</strong>. Es kommt häufig in der Forschung vor, aber es kommt sicher auch in der SBB vor (dennoch hier eine +1 für Hypothesen-basiertes arbeiten!). Wie einfach man in die “falsche Signifikanz Falle” tappen kann, wird hübsch in dieser Gallerie falscher Korrelationen illustriert.</p>
+<p><u>Das <strong>Problem</strong> ist nur</u>: <em>Hypothesen gibt es viele und z.T. auch recht ähnliche</em>. Wenn man genug Hypothesen aufstellt - <strong>vor allem, <u>nachdem</u> man sich die Daten angeschaut hat</strong> - dann ist es durchaus möglich, dass man ein statistisch signifikantes Resultat erhält, unabhängig davon, ob das Resultat tatsächlich auch stimmt. <strong>Das nennt man p-Hacking</strong>. Es kommt häufig in der Forschung vor, aber es kommt sicher auch in der SBB vor (dennoch hier eine +1 für Hypothesen-basiertes arbeiten!). Wie einfach man in die “falsche Signifikanz Falle” tappen kann, wird hübsch in dieser Gallerie falscher Korrelationen illustriert.</p>
 </div>
 </div>
 <div id="appendix-for-the-future" class="section level2">
