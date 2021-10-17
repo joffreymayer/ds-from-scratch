@@ -6,6 +6,13 @@ r-markdown
 hide-source-code
 execute-a-code-chunk-without-showing-any-output
 do-not-execute-a-code-chunk
+terminal-commands-in-mac
+git-github
+first-time-using-git-github
+key-concepts-in-git
+start-project-via-github-remote-possibility
+start-project-via-local-computer-local-possibility
+working-with-branches
 python-libraries
 time-series-forecasting
 facebook-prophet
