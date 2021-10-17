@@ -61,6 +61,7 @@ sktime-api
 reduction
 forecasting-horizon
 train-test-split
+konkurrenz-libraries-für-time-series
 example-on-github
 visualization
 graphs-with-python

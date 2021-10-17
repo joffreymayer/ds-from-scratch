@@ -61,6 +61,14 @@ You need **3 arguments // inputs** for such a function in time series:
 
 - <u>Quelle</u>: [Youtube-Video ab 46:25](https://www.youtube.com/watch?v=Wf2naBHRo8Q&t=46m25s)
 
+#### Konkurrenz-Libraries für Time-Series 
+
+> What are other useful libraries when working with Time Series in Python?
+
+Besides `Sktime`, there are 5 other libraries in Python which you can use for different purposes:
+
+- Stop [this Video at 5:35](https://www.youtube.com/watch?v=Wf2naBHRo8Q&t=5m35s) um zu sehen, für welche Zwecke sie sich am besten eignen.
+
 #### Example on Github
 
 > In the [`example` Repository on Github](https://github.com/alan-turing-institute/sktime/blob/main/examples/01_forecasting.ipynb), was ist die Einheit der *y-variable* in `01_forecasting.ipynd`?
