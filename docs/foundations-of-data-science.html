@@ -158,8 +158,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#technisch-essentiell"><i class="fa fa-check"></i><b>2.1</b> Technisch Essentiell</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-science-vs.-mein-economics-studium"><i class="fa fa-check"></i><b>2.1.1</b> Data Science VS. mein Economics-Studium</a></li>
 <li class="chapter" data-level="2.1.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#ide-explained"><i class="fa fa-check"></i><b>2.1.2</b> IDE explained</a></li>
+<li class="chapter" data-level="2.1.3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#restful-api"><i class="fa fa-check"></i><b>2.1.3</b> Restful API</a></li>
+<li class="chapter" data-level="2.1.4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#magic-commands-in-python"><i class="fa fa-check"></i><b>2.1.4</b> Magic Commands in Python</a></li>
+<li class="chapter" data-level="2.1.5" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#pipe-operator-in-r"><i class="fa fa-check"></i><b>2.1.5</b> Pipe-Operator in R</a></li>
+<li class="chapter" data-level="2.1.6" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#end-to-end-data-science"><i class="fa fa-check"></i><b>2.1.6</b> End-to-End Data Science</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-science-werkzeuge"><i class="fa fa-check"></i><b>2.2</b> Data Science Werkzeuge</a></li>
+<li class="chapter" data-level="2.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-science-werkzeuge"><i class="fa fa-check"></i><b>2.2</b> Data Science Werkzeuge</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#docker"><i class="fa fa-check"></i><b>2.2.1</b> Docker</a></li>
+<li class="chapter" data-level="2.2.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-pipeline"><i class="fa fa-check"></i><b>2.2.2</b> Data Pipeline</a></li>
+<li class="chapter" data-level="2.2.3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#validation-set-vs.-test-set"><i class="fa fa-check"></i><b>2.2.3</b> Validation-Set VS. Test-Set</a></li>
+<li class="chapter" data-level="2.2.4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#array"><i class="fa fa-check"></i><b>2.2.4</b> Array</a></li>
+<li class="chapter" data-level="2.2.5" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#fundamental-daten"><i class="fa fa-check"></i><b>2.2.5</b> Fundamental-Daten</a></li>
+<li class="chapter" data-level="2.2.6" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-flow"><i class="fa fa-check"></i><b>2.2.6</b> Data-Flow</a></li>
+</ul></li>
 <li class="chapter" data-level="2.3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-science-synonyme"><i class="fa fa-check"></i><b>2.3</b> Data Science Synonyme</a></li>
 <li class="chapter" data-level="2.4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#machine-learning-in-a-nutshell"><i class="fa fa-check"></i><b>2.4</b> Machine Learning in a Nutshell</a></li>
 <li class="chapter" data-level="2.5" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#machine-learning-jargon-synonyme"><i class="fa fa-check"></i><b>2.5</b> Machine Learning Jargon &amp; Synonyme</a></li>
@@ -241,6 +252,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul>
 <blockquote>
+<p>Was ist <code>IDE PyCharm</code>?</p>
+</blockquote>
+<p>Das ist das RStudio von Python.</p>
+</div>
+<div id="restful-api" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Restful API</h3>
+<blockquote>
 <p>What are <strong>Rest APIs</strong>?</p>
 </blockquote>
 <ul>
@@ -267,10 +285,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>DELETE</code> == <em>deleting data</em></li>
 </ol></li>
 </ul>
+<div id="api-example" class="section level4">
+<h4><span class="header-section-number">2.1.3.1</span> API Example</h4>
 <blockquote>
 <p>Beispiel eines <code>API</code> in Python?</p>
 </blockquote>
 <p>Das Modul // Package <code>sktime</code> verwendet einen ähnlichen <code>API</code>, wie die berühmte Machine-Learning <code>sklearn</code>-Library. Hierbei wäre der Programmierer (= Du) als <em>Forecaster</em> verstanden, welcher via sogannten <em>methods</em> (zum Beispiel die <em>fit-method</em>, um das Modell zu trainieren // estimaten) mit der <em>application</em> (= hier: Python) interagiert.</p>
+</div>
+</div>
+<div id="magic-commands-in-python" class="section level3">
+<h3><span class="header-section-number">2.1.4</span> Magic Commands in Python</h3>
 <blockquote>
 <p>“Magic Commands” in Python, mit denen du unglaublich schnell herausfinden kannst, was eine Funktion überhaupt tut UND welche Inputs in eine Funktion gehören?</p>
 </blockquote>
@@ -278,6 +302,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>shift</code> + <code>Tab</code> → wenn du nicht weisst, was eine Funktion // Method tut</li>
 <li><code>Tab</code> → innerhalb einer Funktion, um eine Übersicht zu allen Inputs zu erhalten! xD</li>
 </ol>
+</div>
+<div id="pipe-operator-in-r" class="section level3">
+<h3><span class="header-section-number">2.1.5</span> Pipe-Operator in R</h3>
 <blockquote>
 <p>What is the <code>Pipe-Operator</code> in <code>R</code> and what does it do?</p>
 </blockquote>
@@ -289,6 +316,9 @@ result &lt;- mtcars %&gt;%
 <ul>
 <li>Quelle: <a href="https://towardsdatascience.com/an-introduction-to-the-pipe-in-r-823090760d64#:~:text=The%20pipe%20operator%20feeds%20the,the%20tibble%20result%20%2C%20shown%20below.">A Guide to the Pipe in R</a></li>
 </ul>
+</div>
+<div id="end-to-end-data-science" class="section level3">
+<h3><span class="header-section-number">2.1.6</span> End-to-End Data Science</h3>
 <blockquote>
 <p>What is end-to-end Data-Science?</p>
 </blockquote>
@@ -297,11 +327,16 @@ result &lt;- mtcars %&gt;%
 </div>
 <div id="data-science-werkzeuge" class="section level2">
 <h2><span class="header-section-number">2.2</span> Data Science Werkzeuge</h2>
+<div id="docker" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Docker</h3>
 <blockquote>
 <p>Was ist <code>Docker</code> und was ist der Vorteil davon?</p>
 </blockquote>
 <p>Docker ist ein <strong>Virtual Environment</strong>, welches - wie ein Container - dir Punktgenaue Versionen von bestimmten Packages und Programmiersprachen (Python etc.) liefert. <code>Docker</code> läuft über <code>Open Shift</code>, welches eine Art <strong>Management-Programm</strong> für <code>Docker</code> ist (so viel ich das verstanden habe…).</p>
 <p>Wichtig zu wissen ist, dass JEDES <code>Data Science Kit Notebook</code> ein Docker-Container ist, welcher auf <code>Open Shift</code> läuft. Dies hat den Vorteil, dass jedes dieser Notebooks auf jeder Maschine ge-runnt werden kann, ohne das Error-Problemen wegen aktualisierten Libraries zu begengnen.</p>
+</div>
+<div id="data-pipeline" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Data Pipeline</h3>
 <blockquote>
 <p>Was ist eine <code>Data-Pipeline</code>?</p>
 </blockquote>
@@ -311,6 +346,9 @@ result &lt;- mtcars %&gt;%
 <li><u>Youtube-Video</u>: <a href="https://www.youtube.com/watch?v=VtzvF17ysbc">What is a Data-Pipeline?</a></li>
 </ul></li>
 </ul>
+</div>
+<div id="validation-set-vs.-test-set" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Validation-Set VS. Test-Set</h3>
 <blockquote>
 <p>What is the difference between a <code>Validation Dataset</code> and a <code>Testing Dataset</code>?</p>
 </blockquote>
@@ -318,19 +356,24 @@ result &lt;- mtcars %&gt;%
 <ul>
 <li><u>Regel zu Unterscheidung der beiden Terme</u>: Wenn steht: <code>we hold out [name of the set]</code>, dann ist es das <code>testing dataset</code>.</li>
 </ul>
-<blockquote>
-<p>Was ist <code>IDE PyCharm</code>?</p>
-</blockquote>
-<p>Das ist das RStudio von Python.</p>
+</div>
+<div id="array" class="section level3">
+<h3><span class="header-section-number">2.2.4</span> Array</h3>
 <blockquote>
 <p>What is an <code>array</code>?</p>
 </blockquote>
 <p>An <code>Array</code> is a List of Data. In a <code>DataFrame</code>-Object, you can think of a <code>column</code> <em>or</em> a <code>row</code> to be <code>arrays</code>. It is a data structure, which contains “n” objects within a list.
 - <u>Quelle</u>: <a href="https://www.youtube.com/watch?v=NptnmWvkbTw">The Coding Train 3:10-3:22</a></p>
+</div>
+<div id="fundamental-daten" class="section level3">
+<h3><span class="header-section-number">2.2.5</span> Fundamental-Daten</h3>
 <blockquote>
 <p>Was versteht man unter <code>Fundamental-Daten</code>?</p>
 </blockquote>
 <p>Fundamental-Daten sind <strong>effektiv messbare Daten</strong>, die über Datenbanken accessible sind und welche als Proxy - beispielsweise in Regressions-Analysen - verwendet werden können.</p>
+</div>
+<div id="data-flow" class="section level3">
+<h3><span class="header-section-number">2.2.6</span> Data-Flow</h3>
 <blockquote>
 <p>Was versteht man unter dem <code>Data Flow</code>?</p>
 </blockquote>
@@ -344,6 +387,7 @@ result &lt;- mtcars %&gt;%
 <div class="figure">
 <img src="./bilder/beispiel-data-flow.jpg" alt="" />
 <p class="caption">Beispiel zum Data Flow</p>
+</div>
 </div>
 </div>
 <div id="data-science-synonyme" class="section level2">

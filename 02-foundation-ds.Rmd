@@ -34,6 +34,12 @@ In diesem Kapitel werde ich auf diverse **"Key-Concepts"** eingehen, die _impliz
 - <u>Definition</u>: An integrated development environment (IDE) is software for building applications. It combines common developer tools into a single graphical user interface (GUI).
   - <u>Example</u>: R, PyCharm oder Visual-Studio Code are all IDEs. Think of it as a modern Dream Weaver! :)
   
+> Was ist `IDE PyCharm`?
+
+Das ist das RStudio von Python.
+  
+### Restful API
+  
 > What are **Rest APIs**? 
 
 - <u>Synonym</u>: Restful APIs
@@ -52,15 +58,21 @@ In diesem Kapitel werde ich auf diverse **"Key-Concepts"** eingehen, die _impliz
     2) `POST` == *creating data*
     3) `PUT` == *updating data*
     4) `DELETE` == *deleting data*
+    
+#### API Example
 
 > Beispiel eines `API` in Python?
 
 Das Modul // Package `sktime` verwendet einen ähnlichen `API`, wie die berühmte Machine-Learning `sklearn`-Library. Hierbei wäre der Programmierer (= Du) als *Forecaster* verstanden, welcher via sogannten *methods* (zum Beispiel die *fit-method*, um das Modell zu trainieren // estimaten) mit der *application* (= hier: Python) interagiert.
 
+### Magic Commands in Python 
+
 > "Magic Commands" in Python, mit denen du unglaublich schnell herausfinden kannst, was eine Funktion überhaupt tut UND welche Inputs in eine Funktion gehören?
 
 1) `shift` + `Tab` &#8594; wenn du nicht weisst, was eine Funktion // Method tut
 2) `Tab` &#8594; innerhalb einer Funktion, um eine Übersicht zu allen Inputs zu erhalten! xD
+
+### Pipe-Operator in R
 
 > What is the `Pipe-Operator` in `R` and what does it do?
 
@@ -75,11 +87,15 @@ result <- mtcars %>%
 
 - Quelle: [A Guide to the Pipe in R](https://towardsdatascience.com/an-introduction-to-the-pipe-in-r-823090760d64#:~:text=The%20pipe%20operator%20feeds%20the,the%20tibble%20result%20%2C%20shown%20below.)
 
+### End-to-End Data Science
+
 > What is end-to-end Data-Science?
 
 An end-to-end data scientist can **identify and solve problems with data, to deliver value**. To achieve the goal, they'll wear as many (or as little) hats as required. 
 
 ## Data Science Werkzeuge
+
+### Docker
 
 > Was ist `Docker` und was ist der Vorteil davon?
 
@@ -87,11 +103,15 @@ Docker ist ein **Virtual Environment**, welches - wie ein Container - dir Punktg
 
 Wichtig zu wissen ist, dass JEDES `Data Science Kit Notebook` ein Docker-Container ist, welcher auf `Open Shift` läuft. Dies hat den Vorteil, dass jedes dieser Notebooks auf jeder Maschine ge-runnt werden kann, ohne das Error-Problemen wegen aktualisierten Libraries zu begengnen.
 
+### Data Pipeline
+
 > Was ist eine `Data-Pipeline`?
 
 After streaming your data (in real time) // downloading your data from a provider, it's basically **a way to automate the process of data cleaning** in order to be able to get the plots // models from your "dirty data" in a fraction of the time you would spend, if you would do the data cleaning "by hand" yourself.
 
 - - <u>Youtube-Video</u>: [What is a Data-Pipeline?](https://www.youtube.com/watch?v=VtzvF17ysbc)
+
+### Validation-Set VS. Test-Set
 
 > What is the difference between a `Validation Dataset` and a `Testing Dataset`?
 
@@ -99,18 +119,20 @@ Es gibt keinen Konsens dafür, was nun das `validation dataset` und welches das 
 
 - <u>Regel zu Unterscheidung der beiden Terme</u>: Wenn steht: `we hold out [name of the set]`, dann ist es das `testing dataset`.
 
-> Was ist `IDE PyCharm`?
-
-Das ist das RStudio von Python.
+### Array
 
 > What is an `array`?
 
 An `Array` is a List of Data. In a `DataFrame`-Object, you can think of a `column` *or* a `row` to be `arrays`. It is a data structure, which contains "n" objects within a list. 
 	- <u>Quelle</u>: [The Coding Train 3:10-3:22](https://www.youtube.com/watch?v=NptnmWvkbTw)
 	
+### Fundamental-Daten
+	
 > Was versteht man unter `Fundamental-Daten`?
 
 Fundamental-Daten sind **effektiv messbare Daten**, die über Datenbanken accessible sind und welche als Proxy - beispielsweise in Regressions-Analysen - verwendet werden können.
+
+### Data-Flow
 
 > Was versteht man unter dem `Data Flow`?
 
