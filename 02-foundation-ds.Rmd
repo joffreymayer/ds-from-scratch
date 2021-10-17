@@ -256,28 +256,4 @@ In der BWL-Sprache ist *Kanban* **ein Vorgehensmodell** zur Softwareentwicklung.
   - <ins>Ziel #1</ins>: Das Meetings soll die Anzahl an paralleler Arbeiten, (= **der Work in Progress (WiP)) minimiert // begrenzt werden** und somit kürzere Durchlaufzeiten erreicht.
   - <ins>Ziel #2</ins>: Das Meeting soll die Probleme – insbesondere **Engpässe – schnell sichtbar machen**.
 
-### Zum Abchecken
-
-> Git Cheat-Sheet?
-
-- PDF zum Git Cheat-Sheet: [klicke hier](/Users/jomaye/Nextcloud/Dokumente/Programming/Data Science/Terminal/Git-Cheatsheet.pdf)
-
-> Twitter crawler via R?
-
-- [Link zur Webseite](https://andrewcarr24.github.io/about/)
-
-> Monte-Carlo Simulation explained & how to implement in Python?
-
-- [Link zur Webseite](https://www.kdnuggets.com/2020/12/monte-carlo-integration-python.html)
-
-> How to create a „reproducable example“ in order to post it on Stackoverflow?
-
-- [Link zur Webseite](https://aosmith16.github.io/spring-r-topics/slides/week09_reprex.html#59)
-
-### To Share
-
-> Create a Website (Hugo):
-
-- [Link zur Webseite](https://www.tidyverse.tips/posts/2021-05-03-creating-an-academic-website-with-blogdown/)
-
 
