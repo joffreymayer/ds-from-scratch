@@ -184,7 +184,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#difference-between-training--validation--test-dataset"><i class="fa fa-check"></i><b>2.3.1</b> Difference between Training-, Validation- &amp; Test-dataset</a></li>
 <li class="chapter" data-level="2.3.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#concept-of-stratification"><i class="fa fa-check"></i><b>2.3.2</b> Concept of Stratification</a></li>
 <li class="chapter" data-level="2.3.3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#cross-validation"><i class="fa fa-check"></i><b>2.3.3</b> Cross-Validation</a></li>
-<li class="chapter" data-level="2.3.4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-pipelines"><i class="fa fa-check"></i><b>2.3.4</b> Data-Pipelines</a></li>
+<li class="chapter" data-level="2.3.4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#normalisierung-der-daten"><i class="fa fa-check"></i><b>2.3.4</b> Normalisierung der Daten</a></li>
+<li class="chapter" data-level="2.3.5" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-pipelines"><i class="fa fa-check"></i><b>2.3.5</b> Data-Pipelines</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#programming-theory"><i class="fa fa-check"></i><b>2.4</b> Programming Theory</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-types"><i class="fa fa-check"></i><b>2.4.1</b> Data-Types</a></li>
@@ -634,6 +635,13 @@ result &lt;- mtcars %&gt;%
 <li>Granularität (Beispiel) = Angenommen, man möchte wissen, wie viele Tage, Stunden, Minuten und Sekunden innerhalb von 20’044 Sekunden enthalten sind → hier haben wir also <em>Granularität von 4</em> → <u>Lösung</u>: 4 Tage, 18 Stunden, 37 Minuten, 44 Sekunden</li>
 <li>Kalibrierung des Modells == Wie wurde das Modell programmiert im Allgemeinen? → Dazu gehört - bei uns - die Anpassung der Prognose.</li>
 <li>label == true y-value</li>
+<li><code>Pop</code> == “Pop” is simply a word that means “to drop something”. For example, <code>df.pop('date')</code> means that I am dropping the column called “data” from a dataframe called “df”. Fancily, if you write <code>df.pop('date')</code> and <em>save</em> it into another variable, then you can only <strong>select</strong> this dropped column from the ddset.
+<ul>
+<li><ins>
+Example
+</ins>
+: <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pop.html" class="uri">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pop.html</a></li>
+</ul></li>
 <li>relativ zu == im Verhältnis zu</li>
 <li>shape == dimension</li>
 <li>target == predicted y-value</li>
@@ -680,6 +688,25 @@ result &lt;- mtcars %&gt;%
 </ul></li>
 <li><code>Extrapolation</code> == Voraussage von Y-Predict<u>ed</u> Values, welche mittels X-Variablen ermittelt werden, welche <u>zuvor nicht im Datensatz</u> waren.</li>
 <li><code>Interpolation</code> == Voraussage von Y-Predict<u>ed</u> Values, welche mittels X-Variablen ermittelt werden, welche <u>bereits im Datensatz</u> waren, als die Schätzung getätigt wurde.</li>
+<li><code>sliding window</code> == This is just a way to tell python how to do a cross-validation and have equal lengths of time series where we can learn on.</li>
+<li><code>Learning Task</code> == Forecasting Task // Extrapolation [in Time Series]</li>
+<li><code>Forecasting Horizon</code> == Time Points, you want to predict (= dein ) <span class="math inline">\(\hat{y}\)</span></li>
+<li><code>Time Heterogenous Data</code> == Different Time Series have different time stamps
+<ul>
+<li><ins>
+Quelle
+</ins>
+: Ab 27:05 (Link: <a href="http://www.youtube.com/watch?v=Wf2naBHRo8Q&amp;t=27m05s" class="uri">http://www.youtube.com/watch?v=Wf2naBHRo8Q&amp;t=27m05s</a>)</li>
+</ul></li>
+<li><code>Seasonal Periodicity</code> == The number of months per year, in which the forecaster expects to see a seasonal pattern.
+<ul>
+<li><ins>
+Concrete Example
+</ins>
+: In Philipp’s Notebook, he had a seasonal periodicity of 2, e.g. he said that in winter &amp; sommer, he expects a seasonal pattern.</li>
+</ul></li>
+<li><code>Reduction is composable</code> → Synonym wäre “addieren” → E.g. you can split a difficult task into a bunch of smaller tasks (= reduction) and “add” them together to solve the bigger task at the end (= “reduction is composable”).</li>
+<li><code>Pearson Korrelation</code> == Lineare Korrelation</li>
 </ul>
 </div>
 <div id="python" class="section level3">
@@ -805,6 +832,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

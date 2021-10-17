@@ -112,6 +112,15 @@ Because time-series are ordered, since *the flow of time* is only going forward,
 
 This picture shows **an example of a 3-fold cross-validation for a time-series**. 
 
+### Normalisierung der Daten
+
+> Was versteht man unter `Normalisierung`? Was sollte man dabei beachten? Warum wird in einem Pre-Processing Schritt eine Normalisierung durchgeführt?
+
+`Normalisierung` == **Subtrahiere den Mittelwert und dividiere durch die Standardabweichung jedes Merkmals**. Es sollte beachtet werden, dass der Mittelwert und die Standardabweichung **nur anhand der Trainings-Daten berechnet werden sollte**, damit die Modelle keinen Zugriff auf die Werte in den Validierungs- und Testsätzen haben.
+
+
+**Es ist wichtig, Features zu skalieren, bevor ein neuronales Netzwerk trainiert wird**. Normalisierung ist eine gängige Methode für diese Skalierung.
+
 ### Data-Pipelines
 
 > [How to create good Data-Pipelines in Scikit-Learn?](https://www.youtube.com/watch?v=w9IGkBfOoic)

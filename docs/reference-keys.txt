@@ -43,6 +43,7 @@ reason-for-a-validation-set
 concept-of-stratification
 cross-validation
 special-case-cross-validation-for-time-series-data
+normalisierung-der-daten
 data-pipelines
 programming-theory
 data-types
@@ -56,6 +57,11 @@ time-series-forecasting
 facebook-prophet
 sklearn
 sktime
+sktime-api
+reduction
+forecasting-horizon
+train-test-split
+example-on-github
 visualization
 graphs-with-python
 seaborn

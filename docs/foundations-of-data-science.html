@@ -184,7 +184,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#difference-between-training--validation--test-dataset"><i class="fa fa-check"></i><b>2.3.1</b> Difference between Training-, Validation- &amp; Test-dataset</a></li>
 <li class="chapter" data-level="2.3.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#concept-of-stratification"><i class="fa fa-check"></i><b>2.3.2</b> Concept of Stratification</a></li>
 <li class="chapter" data-level="2.3.3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#cross-validation"><i class="fa fa-check"></i><b>2.3.3</b> Cross-Validation</a></li>
-<li class="chapter" data-level="2.3.4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-pipelines"><i class="fa fa-check"></i><b>2.3.4</b> Data-Pipelines</a></li>
+<li class="chapter" data-level="2.3.4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#normalisierung-der-daten"><i class="fa fa-check"></i><b>2.3.4</b> Normalisierung der Daten</a></li>
+<li class="chapter" data-level="2.3.5" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-pipelines"><i class="fa fa-check"></i><b>2.3.5</b> Data-Pipelines</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#programming-theory"><i class="fa fa-check"></i><b>2.4</b> Programming Theory</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-types"><i class="fa fa-check"></i><b>2.4.1</b> Data-Types</a></li>
@@ -391,8 +392,16 @@ Step 2
 <p>This picture shows <strong>an example of a 3-fold cross-validation for a time-series</strong>.</p>
 </div>
 </div>
+<div id="normalisierung-der-daten" class="section level3">
+<h3><span class="header-section-number">2.3.4</span> Normalisierung der Daten</h3>
+<blockquote>
+<p>Was versteht man unter <code>Normalisierung</code>? Was sollte man dabei beachten? Warum wird in einem Pre-Processing Schritt eine Normalisierung durchgeführt?</p>
+</blockquote>
+<p><code>Normalisierung</code> == <strong>Subtrahiere den Mittelwert und dividiere durch die Standardabweichung jedes Merkmals</strong>. Es sollte beachtet werden, dass der Mittelwert und die Standardabweichung <strong>nur anhand der Trainings-Daten berechnet werden sollte</strong>, damit die Modelle keinen Zugriff auf die Werte in den Validierungs- und Testsätzen haben.</p>
+<p><strong>Es ist wichtig, Features zu skalieren, bevor ein neuronales Netzwerk trainiert wird</strong>. Normalisierung ist eine gängige Methode für diese Skalierung.</p>
+</div>
 <div id="data-pipelines" class="section level3">
-<h3><span class="header-section-number">2.3.4</span> Data-Pipelines</h3>
+<h3><span class="header-section-number">2.3.5</span> Data-Pipelines</h3>
 <blockquote>
 <p><a href="https://www.youtube.com/watch?v=w9IGkBfOoic">How to create good Data-Pipelines in Scikit-Learn?</a></p>
 </blockquote>
@@ -547,6 +556,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

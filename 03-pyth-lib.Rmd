@@ -18,6 +18,8 @@ Just set `random_state` to an integer. Dieser integer kann *beliebig* gewählt w
 
 ### SkTime
 
+#### SkTime API
+
 > Überischt zum API in `sktime`?
 
 Grundsätzlich verwendet `sktime` fit-, predict-, und transform-class-methods. Um zu verstehen, was dies genau bedeutet, hier eine globalere Übersicht mit Hilfe einer Visualisierung veranschaulicht:
@@ -30,9 +32,38 @@ Grundsätzlich verwendet `sktime` fit-, predict-, und transform-class-methods. U
 
 - For *transformer classes*, `sktime` provides:
 	- various fit-methods,
-	- various transform-methods to transform data that comes in series. 
+	- various transform-methods to transform data that comes in series.
+	
+#### Reduction
 
 > What does it mean: "Reduction is composable"?  
 
 Ein Synonym wäre: "addieren" &#8594; E.g. you can split a difficult task into a bunch of smaller tasks (= reduction) and "add" them together to solve the bigger task at the end (= "reduction is composable").
+
+#### Forecasting-Horizon
+
+> Welche Arten von *Forecasting-Horizon* gibt es?
+
+1) Es gibt einen **<ins>relativen</ins> forecasting-horizon** (FH), dh "relativ" zur Trainings-Periode ist hier gemeint!
+2) Es gibt auch einen **<ins>absoluten</ins> FH**. Hier werden die *absolute time-points in the future* verwendet für die Prediction. 
+
+- <ins>Quelle</ins>: [Im "examples"-Repository auf Github zur `Sktime`-Library > 01_forecasting.ipynd](https://github.com/alan-turing-institute/sktime/blob/main/examples/01_forecasting.ipynb)
+
+#### Train-Test Split
+
+> What do you need for parameters // inputs to write a train-test split function for time series data?
+
+You need **3 arguments // inputs** for such a function in time series:
+
+1) the data
+2) the window length, e.g. how many periods the training dataset should have.
+3) the length of the forecasting horizon, e.g. how many periods into the future our validation-period go.
+
+- <ins>Quelle</ins>: [Youtube-Video ab 46:25](https://www.youtube.com/watch?v=Wf2naBHRo8Q&t=46m25s)
+
+#### Example on Github
+
+> In the [`example` Repository on Github](https://github.com/alan-turing-institute/sktime/blob/main/examples/01_forecasting.ipynb), was ist die Einheit der *y-variable* in `01_forecasting.ipynd`?
+
+- <ins>Einheit der y-Variable</ins>: in Monate
 
