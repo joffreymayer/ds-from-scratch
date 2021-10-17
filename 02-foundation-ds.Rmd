@@ -54,7 +54,7 @@ Metriken verwendet, nämlich:
 - <u>Was ist die Daten-Imputation Methode?</u>: Missing Values mit Mittelwerten
 
 
-## <u>Effective Research</u>: How to find answers quickly?
+## Effective Research: How to find answers quickly?
 
 > How to find Answers quickly, especially when a Concept is complicated
 
