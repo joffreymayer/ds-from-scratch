@@ -1,5 +1,5 @@
 ---
-title: "Key Facts"
+title: "Foundations of Data Science"
 author: "Joffrey Mayer"
 date: "10/17/2021"
 output: html_document
@@ -9,7 +9,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+# Foundations of Data Science
+
+In diesem Kapitel werde ich auf diverse **Key-Concepts** eingehen, die _implizit_ im Raum stehen, wenn du Data Science betreibst.
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
