@@ -30,23 +30,23 @@ In diesem Kapitel werde ich auf diverse **"Key-Concepts"** eingehen, die _impliz
 
 > What is an **IDE**?
 
-  - <ins>Abkürzung</ins>: `IDE` == Integrated Development Environment
-  - <ins>Definition</ins>: An integrated development environment (IDE) is software for building applications. It combines common developer tools into a single graphical user interface (GUI).
-  - <ins>Example</ins>: R, PyCharm oder Visual-Studio Code are all IDEs. Think of it as a modern Dream Weaver! :)
+- <u>Abkürzung</u>: `IDE` == Integrated Development Environment
+- <u>Definition</u>: An integrated development environment (IDE) is software for building applications. It combines common developer tools into a single graphical user interface (GUI).
+  - <u>Example</u>: R, PyCharm oder Visual-Studio Code are all IDEs. Think of it as a modern Dream Weaver! :)
   
 > What are **Rest APIs**? 
 
-  - <ins>Synonym</ins>: Restful APIs
-  - <ins>Defintion</ins>: API stands for *<ins>A</ins>pplication <ins>P</ins>rogramming <ins>I</ins>nterface*. An API is a contract that allows a developer (= you) to interact with an "application" (= a database // the object of interest) through a set of "interfaces" (= list of URLs // this is *how* you are able to interact with the "application", which can be an App, a library in R / Python or a Database).
-  	- Quelle: [Pokemon-API](https://pokeapi.co/about)
-  - <ins>Zusammengefasst in meinen Worten</ins>: **Ein API sind Befehle, die du gibst, um mit einer Datenbank (z.B. auf einem Server) zu kommunizieren oder ein Package (in R oder Python) zum runnen zu bringen.** Ganz einfach xD
-  - <u>Background Client-Server Architecture</u>: most of the applications these days, follow this architecture.
-    - Client == App itself == Front-End
-    - Server == Back-End
+- <u>Synonym</u>: Restful APIs
+- <u>Defintion</u>: API stands for *<u>A</u>pplication <u>P</u>rogramming <u>I</u>nterface*. An API is a contract that allows a developer (= you) to interact with an "application" (= a database // the object of interest) through a set of "interfaces" (= list of URLs // this is *how* you are able to interact with the "application", which can be an App, a library in R / Python or a Database).
+	- Quelle: [Pokemon-API](https://pokeapi.co/about)
+- <u>Zusammengefasst in meinen Worten</u>: **Ein API sind Befehle, die du gibst, um mit einer Datenbank (z.B. auf einem Server) zu kommunizieren oder ein Package (in R oder Python) zum runnen zu bringen.** Ganz einfach xD
+- <u>Background Client-Server Architecture</u>: most of the applications these days, follow this architecture.
+  - Client == App itself == Front-End
+  - Server == Back-End
   
-  - Communication between the Sever & the Client (= App) happens via API by using the `Http Protocol`.
-    - <ins>Example</ins>: if the App wants to access the particular data of a customer, it sends a request to the server via http-protocol.
-  - **So, when does the `Rest API` comes into play?** --> the Rest API is **a standard that established itself in the industry, when communaction between client & server** --> these are the `CRUD Operations`, which are by definition: 
+- Communication between the Sever & the Client (= App) happens via API by using the `Http Protocol`.
+  - <u>Example</u>: if the App wants to access the particular data of a customer, it sends a request to the server via http-protocol.
+- **So, when does the `Rest API` comes into play?** --> the Rest API is **a standard that established itself in the industry, when communaction between client & server** --> these are the `CRUD Operations`, which are by definition: 
   
     1) `GET` == *getting the data from the server*
     2) `POST` == *creating data*
@@ -91,13 +91,13 @@ Wichtig zu wissen ist, dass JEDES `Data Science Kit Notebook` ein Docker-Contain
 
 After streaming your data (in real time) // downloading your data from a provider, it's basically **a way to automate the process of data cleaning** in order to be able to get the plots // models from your "dirty data" in a fraction of the time you would spend, if you would do the data cleaning "by hand" yourself.
 
-- - <ins>Youtube-Video</ins>: [What is a Data-Pipeline?](https://www.youtube.com/watch?v=VtzvF17ysbc)
+- - <u>Youtube-Video</u>: [What is a Data-Pipeline?](https://www.youtube.com/watch?v=VtzvF17ysbc)
 
 > What is the difference between a `Validation Dataset` and a `Testing Dataset`?
 
 Es gibt keinen Konsens dafür, was nun das `validation dataset` und welches das `test set` genau ist. **Nima** (= mein Mentor bei der SBB) verwendet den Begriff `test set` für dasjenige Dataset, welches `hold out` // separat für die (spätere) `Prediction` verwendet wird.
 
-- <ins>Regel zu Unterscheidung der beiden Terme</ins>: Wenn steht: `we hold out [name of the set]`, dann ist es das `testing dataset`.
+- <u>Regel zu Unterscheidung der beiden Terme</u>: Wenn steht: `we hold out [name of the set]`, dann ist es das `testing dataset`.
 
 > Was ist `IDE PyCharm`?
 
@@ -106,7 +106,7 @@ Das ist das RStudio von Python.
 > What is an `array`?
 
 An `Array` is a List of Data. In a `DataFrame`-Object, you can think of a `column` *or* a `row` to be `arrays`. It is a data structure, which contains "n" objects within a list. 
-	- <ins>Quelle</ins>: [The Coding Train 3:10-3:22](https://www.youtube.com/watch?v=NptnmWvkbTw)
+	- <u>Quelle</u>: [The Coding Train 3:10-3:22](https://www.youtube.com/watch?v=NptnmWvkbTw)
 	
 > Was versteht man unter `Fundamental-Daten`?
 
@@ -127,7 +127,7 @@ Zur Illustration des `Data Flows`, gab es hierzu im Wissensaustausch auch eine B
 ## Data Science Synonyme
 
 - batch = sample-size when you train your model with a dataset
-- Granularität (Beispiel) = Angenommen, man möchte wissen, wie viele Tage, Stunden, Minuten und Sekunden innerhalb von 20'044 Sekunden enthalten sind &#8594; hier haben wir also *Granularität von 4* &#8594; <ins>Lösung</ins>: 4 Tage, 18 Stunden, 37 Minuten, 44 Sekunden
+- Granularität (Beispiel) = Angenommen, man möchte wissen, wie viele Tage, Stunden, Minuten und Sekunden innerhalb von 20'044 Sekunden enthalten sind &#8594; hier haben wir also *Granularität von 4* &#8594; <u>Lösung</u>: 4 Tage, 18 Stunden, 37 Minuten, 44 Sekunden
 - Kalibrierung des Modells == Wie wurde das Modell programmiert im Allgemeinen? &#8594; Dazu gehört - bei uns - die Anpassung der Prognose.
 - label == true y-value
 - relativ zu == im Verhältnis zu
@@ -153,23 +153,23 @@ Dies ist eine super Visualisierung, wie der gesamte Machine Learning Prozess auf
 - `"the model is learning` == what is meant by "learning" is: given some Datenpunkt-Wolke, the computer will try and fit the "best line" [oftentimes by minimizing the sum of the squared residuals, if you use `OLS` (= Ordinary Least Squared)] to construct the "best model" possible.
 - `Training` == You are estimating a model on the trainig-dataset, such that the model "learns" from the data.
 - `shuffle` == englisches Wort für "mischen". In the context of `splitting the dataset into test- & training-data`, it is common practice to `shuffle` your observations within your dataset first.
-	- <ins>Reason why you `shuffle`</ins>?: Shuffling data serves the purpose of
+	- <u>Reason why you `shuffle`</u>?: Shuffling data serves the purpose of
 		- reducing variance AND 
 		- making sure that models remain general AND 
 		- overfit less.
-	- <ins>Merke</ins>: When dealing with `time series`, you should not use `shuffle` when `splitting the data` into training- &amp; testing-data.
+	- <u>Merke</u>: When dealing with `time series`, you should not use `shuffle` when `splitting the data` into training- &amp; testing-data.
 - `training score` // `Test Error` == This error // score is the [oftentimes squared] difference between the `true y-variable` and `estimated // predicted y-variable` and **measures // evaluates how well the model is "performing" // how good the model is on a `test set` with an increasingly bigger `training dataset`**.
 - `cross-validation score` // `Validation Error` == This is the (mean) error // score [because of `cross-validation`] that **measures // evaluates how the model is "learning" over increasingly bigger `training datasets`**.
 - `fold` == **subset** of the `training dataset`
-	- <ins>Example</ins>: In a `K-Fold Cross-Validation`, you *randomly* split the <ins>training set</ins> into **10 distinct subsets**, which are called `folds`.
+	- <u>Example</u>: In a `K-Fold Cross-Validation`, you *randomly* split the <u>training set</u> into **10 distinct subsets**, which are called `folds`.
 - `samples` == number of rows // number of observations within a dataset.
 - `classifiers` == These are simply regression-functions, where the **Y-Variable is binary**, e.g. die Y-Variable kann nur `Y = 0` ODER `Y = 1` als Werte annehmen.
-	- <ins>Example</ins>: Logit- &amp; Probit-Regression, or Naiv Bayes, etc...
+	- <u>Example</u>: Logit- &amp; Probit-Regression, or Naiv Bayes, etc...
 - `initialization` // `declaration` // `specification` ==  This is the assignment of an initial value for a data object or variable.
 - `Array` == A List of Data is an array. It is a data structure, which contains "n" objects within a list.
-	- <ins>Quelle</ins>: [The Coding Train 3:10-3:22](https://www.youtube.com/watch?v=NptnmWvkbTw&t=3m10s)
-- `Extrapolation` == Voraussage von Y-Predict<ins>ed</ins> Values, welche mittels X-Variablen ermittelt werden, welche <ins>zuvor nicht im Datensatz</ins> waren.
-- `Interpolation` == Voraussage von Y-Predict<ins>ed</ins> Values, welche mittels X-Variablen ermittelt werden, welche <ins>bereits im Datensatz</ins> waren, als die Schätzung  getätigt wurde.
+	- <u>Quelle</u>: [The Coding Train 3:10-3:22](https://www.youtube.com/watch?v=NptnmWvkbTw&t=3m10s)
+- `Extrapolation` == Voraussage von Y-Predict<u>ed</u> Values, welche mittels X-Variablen ermittelt werden, welche <u>zuvor nicht im Datensatz</u> waren.
+- `Interpolation` == Voraussage von Y-Predict<u>ed</u> Values, welche mittels X-Variablen ermittelt werden, welche <u>bereits im Datensatz</u> waren, als die Schätzung  getätigt wurde.
 
 ## Projekt-Management Wichtiges
 
@@ -179,7 +179,7 @@ Dies ist eine super Visualisierung, wie der gesamte Machine Learning Prozess auf
 
 - Abhängigkeitsprobleme == 1) Probleme bei den Versionen des Packages; 2) Packages werden vorausgesetzt, sodass gewisser Code dann einen Error printed, wenn man ihn nach 2 Jahren wiederverwenden will. 
 - *agnostisch* == Im IT-Umfeld hat das Wort agnostisch eine besondere Bedeutung. Es bezieht sich auf etwas, das soweit **verallgemeinert** wird, dass es auch unter verschiedenen Umgebungen funktionieren kann. 
-	- <ins>Beispiel</ins>: Eine Plattform-agnostische Software läuft unter jeder Kombination aus Betriebssystemen und Prozessorarchitekturen.
+	- <u>Beispiel</u>: Eine Plattform-agnostische Software läuft unter jeder Kombination aus Betriebssystemen und Prozessorarchitekturen.
 - *cached* == store away for future use
 - *Client* == Damit ist häufig der Browser gemeint, wenn er Abfragen an den Server gibt.
 - *composite* == custom
@@ -194,7 +194,7 @@ Dies ist eine super Visualisierung, wie der gesamte Machine Learning Prozess auf
 
 ## HR Begriffe / Jargon
 
-- Geschäftseinheiten = Organisationsstruktur (nicht zu verwechseln mit Geschäfts<ins>bereich</ins>)
+- Geschäftseinheiten = Organisationsstruktur (nicht zu verwechseln mit Geschäfts<u>bereich</u>)
 - Geschäftsbereich = Die Abteilung Energie ist z.B. ein Geschäftsbereich
 - "Operativer Betrieb" == Daily Business
 - "Pro Rata" (in Bezug zu Ferien, wenn ich nur 7.5 Monate bin bei der SBB) == 25 TAGE * (7.5 Monate / 12 Monate) = proportional
@@ -247,17 +247,17 @@ _Es ist exterm wichtig, mit dem Boss diese Ziele zu definieren, da die Planung d
 
 0) Sind die getätigten Schritte im Einklang mit dem Endziel des Bosses? Wichtig ist zu rechtfertigen, was du gerade am tun bist und warum genau du das tust.
 1) Aufklärung, damit alle auf dem gleichen Informationsstand sind 
-  - <ins>Goal</ins>: Wo stehen wir? Wie sieht die Situation mit dem Notebook aus?
+  - <u>Goal</u>: Wo stehen wir? Wie sieht die Situation mit dem Notebook aus?
 2) Gibt es noch offene Lücken im Wissen eines Team-Mitglieds, welches von anderen Mitarbeitern gedeckt werden müsste? --> <u>Goal</u>: Kein Mitglied isolieren, jeder muss sich integriert fühlen. Insbesondere Wert auf Papers & Daten setzen hier
 3) Was sind weitere offene Optionen und inwiefern eignen sich diese Ansätze für unser Ziel?
-    - <ins>Goal</ins>: Aufzeigen, dass wir noch weitere Alternativen haben, als nur Phillip's Notebooks
+    - <u>Goal</u>: Aufzeigen, dass wir noch weitere Alternativen haben, als nur Phillip's Notebooks
 4) Sonstige Unklarheiten / Bemerkungen / Inputs / Vorschläge? --> <u>Goal</u>: letzte Informationsasymmetrien beheben
 
 > Was ist ein *Kanban*?
 
 In der BWL-Sprache ist *Kanban* **ein Vorgehensmodell** zur Softwareentwicklung.
   
-  - <ins>Ziel #1</ins>: Das Meetings soll die Anzahl an paralleler Arbeiten, (= **der Work in Progress (WiP)) minimiert // begrenzt werden** und somit kürzere Durchlaufzeiten erreicht.
-  - <ins>Ziel #2</ins>: Das Meeting soll die Probleme – insbesondere **Engpässe – schnell sichtbar machen**.
+  - <u>Ziel #1</u>: Das Meetings soll die Anzahl an paralleler Arbeiten, (= **der Work in Progress (WiP)) minimiert // begrenzt werden** und somit kürzere Durchlaufzeiten erreicht.
+  - <u>Ziel #2</u>: Das Meeting soll die Probleme – insbesondere **Engpässe – schnell sichtbar machen**.
 
 
