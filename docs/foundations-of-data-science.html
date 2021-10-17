@@ -188,7 +188,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.4.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#concept-of-stratification"><i class="fa fa-check"></i><b>2.4.2</b> Concept of Stratification</a></li>
 <li class="chapter" data-level="2.4.3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#cross-validation"><i class="fa fa-check"></i><b>2.4.3</b> Cross-Validation</a></li>
 <li class="chapter" data-level="2.4.4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#normalisierung-der-daten"><i class="fa fa-check"></i><b>2.4.4</b> Normalisierung der Daten</a></li>
-<li class="chapter" data-level="2.4.5" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-pipelines"><i class="fa fa-check"></i><b>2.4.5</b> Data-Pipelines</a></li>
+<li class="chapter" data-level="2.4.5" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#rnn"><i class="fa fa-check"></i><b>2.4.5</b> RNN</a></li>
+<li class="chapter" data-level="2.4.6" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-pipelines"><i class="fa fa-check"></i><b>2.4.6</b> Data-Pipelines</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#programming-theory"><i class="fa fa-check"></i><b>2.5</b> Programming Theory</a><ul>
 <li class="chapter" data-level="2.5.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-types"><i class="fa fa-check"></i><b>2.5.1</b> Data-Types</a></li>
@@ -366,8 +367,19 @@ Metriken verwendet, nämlich:</p>
 <p><code>Normalisierung</code> == <strong>Subtrahiere den Mittelwert und dividiere durch die Standardabweichung jedes Merkmals</strong>. Es sollte beachtet werden, dass der Mittelwert und die Standardabweichung <strong>nur anhand der Trainings-Daten berechnet werden sollte</strong>, damit die Modelle keinen Zugriff auf die Werte in den Validierungs- und Testsätzen haben.</p>
 <p><strong>Es ist wichtig, Features zu skalieren, bevor ein neuronales Netzwerk trainiert wird</strong>. Normalisierung ist eine gängige Methode für diese Skalierung.</p>
 </div>
+<div id="rnn" class="section level3">
+<h3><span class="header-section-number">2.4.5</span> RNN</h3>
+<blockquote>
+<p>Was macht ein <code>Reccurrent Neural Network (RNN)</code>?</p>
+</blockquote>
+<p>Ein Beispiel für ein RNN wäre ein <code>Long Short Term Memory</code> Modell (LSTM Modell). Dabei nimmt das RNN zunächst ein ganz kleines Vergangenheits-Intervall, macht eine Modell-Estimation und dann - im nächsten Schritt - wird ein grösseres Vergangenheits-Intervall verwendet (<strong>inkl. predicted Y-Variable aus dem vorherigen Modell</strong>), um eine neue Modell-Estimation zu machen etc.</p>
+<div class="figure">
+<img src="https://github.com/tensorflow/docs/blob/master/site/en/tutorials/structured_data/images/lstm_many_window.png?raw=1" alt="" />
+<p class="caption">Beispiel eines RNN: hier ein LSTM</p>
+</div>
+</div>
 <div id="data-pipelines" class="section level3">
-<h3><span class="header-section-number">2.4.5</span> Data-Pipelines</h3>
+<h3><span class="header-section-number">2.4.6</span> Data-Pipelines</h3>
 <blockquote>
 <p><a href="https://www.youtube.com/watch?v=w9IGkBfOoic">How to create good Data-Pipelines in Scikit-Learn?</a></p>
 </blockquote>

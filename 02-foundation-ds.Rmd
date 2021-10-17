@@ -128,8 +128,15 @@ This picture shows **an example of a 3-fold cross-validation for a time-series**
 
 `Normalisierung` == **Subtrahiere den Mittelwert und dividiere durch die Standardabweichung jedes Merkmals**. Es sollte beachtet werden, dass der Mittelwert und die Standardabweichung **nur anhand der Trainings-Daten berechnet werden sollte**, damit die Modelle keinen Zugriff auf die Werte in den Validierungs- und Testsätzen haben.
 
-
 **Es ist wichtig, Features zu skalieren, bevor ein neuronales Netzwerk trainiert wird**. Normalisierung ist eine gängige Methode für diese Skalierung.
+
+### RNN
+
+> Was macht ein `Reccurrent Neural Network (RNN)`?
+
+Ein Beispiel für ein RNN wäre ein `Long Short Term Memory` Modell (LSTM Modell). Dabei nimmt das RNN zunächst ein ganz kleines Vergangenheits-Intervall, macht eine Modell-Estimation und dann - im nächsten Schritt - wird ein grösseres Vergangenheits-Intervall verwendet (**inkl. predicted Y-Variable aus dem vorherigen Modell**), um eine neue Modell-Estimation zu machen etc.
+
+![Beispiel eines RNN: hier ein LSTM](https://github.com/tensorflow/docs/blob/master/site/en/tutorials/structured_data/images/lstm_many_window.png?raw=1)
 
 ### Data-Pipelines
 

@@ -47,6 +47,7 @@ concept-of-stratification
 cross-validation
 special-case-cross-validation-for-time-series-data
 normalisierung-der-daten
+rnn
 data-pipelines
 programming-theory
 data-types

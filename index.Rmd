@@ -374,6 +374,8 @@ Zur Illustration des `Data Flows`, gab es hierzu im Wissensaustausch auch eine B
 	- <u>Concrete Example</u>: In Philipp's Notebook, he had a seasonal periodicity of 2, e.g. he said that in winter & sommer, he expects a seasonal pattern.
 - `Reduction is composable` &#8594; Synonym wäre "addieren" &#8594; E.g. you can split a difficult task into a bunch of smaller tasks (= reduction) and "add" them together to solve the bigger task at the end (= "reduction is composable").
 - `Pearson Korrelation` == Lineare Korrelation
+- `Grid` &#8594; Das ist nichts anderes als die **Optimierung von diversen "Modell-Parametern"**. 
+		- <u>Beispiel</u>: Bei Random-Forrest Modellen kann man zum Beispiel die Tiefe eines Modells bestimmen, dh die relevante Frage, welche ein Forscher sich stellt, ist, *wie viele Baum-Zweigungen die geeignesten Predictions bringen?* Mit Funktionen, wie zum Beispiel `GridSearchCV()` kann dieses Problem geregelt werden.
 
 ### Python
 

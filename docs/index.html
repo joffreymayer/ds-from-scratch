@@ -188,7 +188,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.4.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#concept-of-stratification"><i class="fa fa-check"></i><b>2.4.2</b> Concept of Stratification</a></li>
 <li class="chapter" data-level="2.4.3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#cross-validation"><i class="fa fa-check"></i><b>2.4.3</b> Cross-Validation</a></li>
 <li class="chapter" data-level="2.4.4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#normalisierung-der-daten"><i class="fa fa-check"></i><b>2.4.4</b> Normalisierung der Daten</a></li>
-<li class="chapter" data-level="2.4.5" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-pipelines"><i class="fa fa-check"></i><b>2.4.5</b> Data-Pipelines</a></li>
+<li class="chapter" data-level="2.4.5" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#rnn"><i class="fa fa-check"></i><b>2.4.5</b> RNN</a></li>
+<li class="chapter" data-level="2.4.6" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-pipelines"><i class="fa fa-check"></i><b>2.4.6</b> Data-Pipelines</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#programming-theory"><i class="fa fa-check"></i><b>2.5</b> Programming Theory</a><ul>
 <li class="chapter" data-level="2.5.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-types"><i class="fa fa-check"></i><b>2.5.1</b> Data-Types</a></li>
@@ -675,6 +676,8 @@ result &lt;- mtcars %&gt;%
 </ul></li>
 <li><code>Reduction is composable</code> → Synonym wäre “addieren” → E.g. you can split a difficult task into a bunch of smaller tasks (= reduction) and “add” them together to solve the bigger task at the end (= “reduction is composable”).</li>
 <li><code>Pearson Korrelation</code> == Lineare Korrelation</li>
+<li><code>Grid</code> → Das ist nichts anderes als die <strong>Optimierung von diversen “Modell-Parametern”</strong>.
+- <u>Beispiel</u>: Bei Random-Forrest Modellen kann man zum Beispiel die Tiefe eines Modells bestimmen, dh die relevante Frage, welche ein Forscher sich stellt, ist, <em>wie viele Baum-Zweigungen die geeignesten Predictions bringen?</em> Mit Funktionen, wie zum Beispiel <code>GridSearchCV()</code> kann dieses Problem geregelt werden.</li>
 </ul>
 </div>
 <div id="python" class="section level3">
