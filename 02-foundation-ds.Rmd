@@ -5,13 +5,70 @@ date: "10/17/2021"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # Foundations of Data Science
 
-## Validation-Set VS. Test-Set
+In meinem Data Scientist Job werde ich häufig auf ähnliche Probleme stossen mit der Zeit. Hier habe ich eine Reihe an Fragen aufgelistet, welche ich fähig sein muss, zu beantworten, wenn ich effizient in meinem Beruf sein will!
+
+## Questions you need to answer when starting a new Project
+
+BEFORE you start writing your R-Scripts or Jupyter-Notebooks, you **first need to think about several key-things** &amp; -questions:
+
+```
+- Welche Datenbasis haben wir?
+- Was ist das Prognoseobjekt?
+- Welche Metrik hast du in deinen Notebooks verwendet?
+- Wie ist das Trainings- & Validierungs-Dataset aufgebaut?
+- Welche Daten sind im Test-Set, welche für den Benchmark verwendet werden?
+- Welche Prognoseansätze wurden angewendet? 
+- Welche Daten sind effektiv genutzt & welche sind verfügbar?
+- Etc…
+```
+
+- <ins>Datenbasis // Woher kommen die Daten?</ins>: ENTSOE exklusiv. Das ist der Dachverband der TSO (kennen Nachfrage und Angebot)
+
+- <ins>Prognoseobjekt (= y-dach)</ins>: Stündliche EUR/kWh für Folgetag.
+
+- <ins>Metrik</ins>: Zeigt, wie gut das Modell "lernt" (= training error) & "generalisiert" // exrapoliert (= generalization error). Im Notebook von Philipp werden 2 verschiedene 
+Metriken verwendet, nämlich: 
+
+	- Mean Absolute Error, sowie 
+	- [Root] Mean Squared Error.
+
+- <ins>Training Dataset</ins>: Daten von 2019.
+
+- <ins>Validation Dataset</ins>: Random choice of 20% of the hours within this year.
+
+- <ins>Mit welchem *true y-value* werden die Predictions verglichen? // Was ist der Benchmark? // Test-Set</ins>: EFFEX Spotpreise benutzt für Benchmark // true [y-]values.
+
+- <ins>Struktur [der Analyse]</ins>:
+
+	- <ins>Output</ins>: Day ahead Strompreis CH
+	- <ins>Input</ins>: jeweils 24h für ca. 20 Prädiktoren. Reshape: K dimensionen = #Prediktors x 24h
+	
+- <ins>Was ist die Daten-Imputation Methode?</ins>: Missing Values mit Mittelwerten
+
+
+## <u>Effective Research</u>: How to find answers quickly?
+
+> How to find Answers quickly, especially when a Concept is complicated
+
+Aus Erfahrung weiss ich jetzt, dass **Youtube bisher *immer*, die beste Quelle war, um mir etwas schnell &amp; effizient beizubringen**. 
+
+Twitter-Community von Wissenschaftlern sind ebenfalls sehr wertvoll. Als **Beispiel wäre [dieser Twitter-Post](https://twitter.com/seanjtaylor/status/1123278380369973248?s=11) vom Prophet-Gründer**.
+
+## Machine-Learning Theory
+
+### Difference between Training-, Validation- &amp; Test-dataset
+
+Since I started with Machine Learning, I was always confused about the concept of **data splitting**, e.g. which sub-set of the *entire* dataset is now considered to be the *training dataset*, which one is the *validation dataset* and which one is the *testing dataset*. 
+
+<u>In the graph below, you see how it is defined correctly</u>:
+
+![Training Set VS. Validation Set VS. Test Set](./bilder/training-VS-validation-VS-test-ddset.jpg)
+
+- <ins>Important to note</ins>: There is oftentimes confusion between the definition of *validation dataset* VS. *testing dataset*, because there is no consens about it. **Therefore - and if we take the above picture as the "true" definition - some people will call the *validation dataset* the "test dataset" and vice versa, e.g. the *test data* as the "validation data"! xD** 
+
+#### Validation-Set VS. Test-Set
 
 > What is the difference between a `Validation Dataset` and a `Testing Dataset`?
 
@@ -19,7 +76,99 @@ Es gibt keinen Konsens dafür, was nun das `validation dataset` und welches das 
 
 - <u>Regel zu Unterscheidung der beiden Terme</u>: Wenn steht: `we hold out [name of the set]`, dann ist es das `testing dataset`.
 
-## Array
+#### Reason for a Validation-Set
+
+> Why do we need `validation set`?
+
+At the end, you want the best model possible. If you want to tune your hyperparameters, you will need your `test set`. **The big problem here, however, is that - *if we use the test-set more than once when wanting to find out the best hyperparameters* - our model will know the data by heart and the predictions will be too good, <ins>but only</ins> on this dataset that you are currently using**! The model will not generalize well on new data. 
+
+*That's why we need this additional subsetting of the training-dataset!*
+
+### Concept of Stratification
+
+Angenommen du hast eine *kategorische* Y-Variable, welche entweder Nullen oder Einsen als Werte annimmt. Nehme nun an, dass - *im Training-Dataset* - der Anteil der Nullen 60% beträgt. Wenn du nun ein `stratified Sample` willst, dann wird das *Test-Dataset* ebenfalls einen Anteil von 60% an Nullen enthalten!
+
+- <ins>Quelle</ins>: [Train-Test-Split in Sklearn and Cross-Validation](https://www.youtube.com/watch?v=KEBS7Kyc0Po)
+
+### Cross-Validation
+
+The concept of *cross-validation* can be splitted into 2 parts:
+
+- <ins>Step 1</ins>: Split your dataset into 1 training- &amp; 1 test-set.
+	- <ins>Rule of Thumb</ins>: Usually, the split is **70-90% training set** and **10-30% for the test-set**.
+	- <ins>Code Example</ins>: 
+
+![Example of Code for Train-Test Split](./bilder/code-example-cross-validation.png)
+
+- <ins>Step 2</ins>: Now, we divide the *training set* further, such that it will contain - *if we assume a 3-fold cross-validation as an example* -  **3 <ins>different</ins> validation sets** and **3 training sets**.
+
+![Allgemeine Cross-Validation](./bilder/example-of-a-general-3-fold-cross-validation.png)
+
+#### <ins>Special Case</ins>: Cross-Validation for Time-Series Data
+
+Because time-series are ordered, since *the flow of time* is only going forward, the graph shown above for *step 2* is <ins>not</ins> valid and we need another approach: 
+
+![Cross-Validation for Time Series](./bilder/example-3-fold-cross-validation-for-time-series.png)
+
+This picture shows **an example of a 3-fold cross-validation for a time-series**. 
+
+### Data-Pipelines
+
+> [How to create good Data-Pipelines in Scikit-Learn?](https://www.youtube.com/watch?v=w9IGkBfOoic)
+
+ - <ins>Ziel von Data-Pipeline</ins>: Write more clean // readable code, especially when you do <em>data cleaning</em>. **A datapipeline is basically a way of standardizing your code**.
+ - <ins>Warum sind Data-Pipelines so geil?</ins>: Because you can **compare many different regression-models (Linear-Regression Vs. Logistic-Regression Vs. RandomForrest ...), applying different "scaling-techniques" (= normalize a variable with mean 0 and standard-deviation of 1), as well as using "data cleaning techniques" (= reduce dimensions via PCA, reduce missing-values etc...)**. Another cool thing to note is, that **you can choose the order, in which the cleaning, scaling and fitting occures!**
+   - See also the summary of the guy [on Youtube ab 10:00-11:00](https://www.youtube.com/watch?v=w9IGkBfOoic).
+- <ins>Link to Github for an example</ins>: <a href="https://github.com/krishnaik06/Pipelines-Using-Sklearn/blob/master/SklearnPipeline.ipynb" target="_blank">Jupyter-Notebook code-example on how to create a little Data-Pipeline by yourself</a>
+
+## Programming Theory
+
+### Data-Types
+
+In `R` oder `Python` ist es wichtig zu verstehen, dass gewisse Funktionen nur dann funktionieren, wenn die Inputs, die wir in die Funktion eingeben wollen, einen bestimmten Data-Type aufweisen müssen.
+
+On the website *W3-Schools*, I found this [extremely good overview of all data-types](https://www.w3schools.com/python/python_datatypes.asp), which is crucial concept to understand when doing data cleaning. 
+
+![Overview of different Data-Types](./bilder/data-types-overview.jpg)
+*Data-Types are a key-thing to understand. Otherwise, you won't be able to apply some algorithms on your dataset!*
+
+### Global Variables VS. Local Variables
+
+Variables that are created **outside of a function** are known as *global variables*.
+
+Global variables can be used by everyone, both **inside of functions <ins>and</ins> outside**.
+
+- <ins>Example of a global variable</ins>:
+
+```
+x = "awesome"
+
+def myfunc():
+  print("Python is " + x)
+
+myfunc()
+
+>>> Python is awesome
+```
+
+In contrast, if you create a variable *with the same name* <ins>inside</ins> a function, this variable will be **local**, and **can only be used <ins>inside</ins> the function**. The global variable with the *same* name will remain as it was, global and with the original value.
+
+- <ins>Example of a local variable</ins>:
+
+```
+x = "awesome"
+
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+
+myfunc()
+
+print("Python is " + x)
+```
+- Output of this: [click here](https://www.w3schools.com/python/trypython.asp?filename=demo_variables_global2)
+
+### Array
 
 > What is an `array`?
 
@@ -27,6 +176,19 @@ An `Array` is a List of Data. In a `DataFrame`-Object, you can think of a `colum
 	- <u>Quelle</u>: [The Coding Train 3:10-3:22](https://www.youtube.com/watch?v=NptnmWvkbTw)
 
 
+## Statistics-Theory
+
+### P-Hacking
+
+> Was ist <ins>p-hacking</ins>?
+
+In der Statistik gibt es den **p-Wert** ein: *Man nimmt an die Hypothese sei wahr und berechnet dann die Wahrscheinlichkeit, dass die beobachtete Statistik mindestens so extrem ausfallen würde (für die Gegner von Wischi-Waschi [hier die Wikipedia-Definition](https://de.wikipedia.org/wiki/P-Wert#Mathematische_Formulierung))*. Falls diese Wahrscheinlichkeit unter 5% liegt, dann sei das Resultat "statistisch signifikant" (yay!) und die Nullhypothese kann verworfen werden, was oftmals die Absicht ist. 
+
+<u>Das **Problem** ist nur</u>: *Hypothesen gibt es viele und z.T. auch recht ähnliche*. Wenn man genug Hypothesen aufstellt - **vor allem, <ins>nachdem</ins> man sich die Daten angeschaut hat** - dann ist es durchaus möglich, dass man ein statistisch signifikantes Resultat erhält, unabhängig davon, ob das Resultat tatsächlich auch stimmt. **Das nennt man p-Hacking**. Es kommt häufig in der Forschung vor, aber es kommt sicher auch in der SBB vor (dennoch hier eine +1 für Hypothesen-basiertes arbeiten!). Wie einfach man in die "falsche Signifikanz Falle" tappen kann, wird hübsch in dieser Gallerie falscher Korrelationen illustriert.
+
+## Appendix for the Future
+
+> Welche Zeitperiode sind am geeignetsten für Zeitreihenanalysen mit Machine Learning?
 
 
 

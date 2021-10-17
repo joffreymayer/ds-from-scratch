@@ -85,7 +85,9 @@ you will probably want to only show the code, but not execute it. This is also p
 # any R code here
 ```
 
-## Terminal Commands (in Mac):
+## Terminal 
+
+### Commands (in Mac):
 	
 - `clear` = clears the terminal
 - `cd` = change directory
@@ -101,6 +103,14 @@ you will probably want to only show the code, but not execute it. This is also p
   - <ins>Example</ins>: Type `cd Dok` + "Tab"-Taste --> *auto-fill activates* --> im Terminal steht dann der automatisch ausgefüllte Name des Files / Directories, zum Beispiel `cd Dokumente` bzw. `cd Name_Of_Child_Directory` 
 - <ins>Trick #2</ins>: How to find a path of a directory that is situated very deeply in your local computer?
   - <ins>Example</ins>: Type `cd ` + drag-&-drop the **folder** that is deep in your computer with the file in it.
+  
+### How to use a Jupyter Notebook in an IDE?¨
+
+Let's assume, that we took `PyCharm` as our IDE. We do the following steps:
+
+1) Use the `Terminal` <ins>within</ins> PyCharm.
+2) Once you opened the PyCharm-`Terminal`, go to the directory that will be used for the Jupyter Notebook, by typing something as `cd /some_folder_name`.
+3) Finally, type in `jupyter notebook` in the `Terminal` to launch the Jupyter Notebook App. The notebook interface will appear in a new browser window or tab.
 
 ## Git &amp; Github: 
 	
