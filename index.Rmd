@@ -111,6 +111,7 @@ you will probably want to only show the code, but not execute it. This is also p
 > How to tell the original owner you want to merge <ins>your</ins> changes that you made back into their orignal repo and implement them those changes into their original work // repo?
 				
 Look at [the youtube video from Coding Train ab 9:35-11:50](https://www.youtube.com/watch?v=_NrSWLQsDL4&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=3)
+  
   - To see how to **refer** to issues & bugs in your code <ins>directly</ins> via your commit-command, [look at the youtube video ab 6:35-7:40](https://www.youtube.com/watch?v=WMykv2ZMyEQ&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=4) and to <u>diretly</u> **close** issues, because you resolved it, look [look at the youtube video ab 7:40-8:55](https://www.youtube.com/watch?v=WMykv2ZMyEQ&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=4).
 
 > What is a remote?
