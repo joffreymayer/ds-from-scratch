@@ -77,6 +77,10 @@ statistics-theory
 p-hacking
 appendix-for-the-future
 python-libraries
+list-of-useful-python-libraries
+put-a-time-stamp-on-each-python-cell
+installation
+activation
 necessary-foundations
 pandas
 loc--vs.-iloc-selection

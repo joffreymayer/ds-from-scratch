@@ -1,5 +1,30 @@
 # Python Libraries
 
+## List of Useful Python-Libraries 
+
+### Put a time-stamp on each Python-Cell
+
+The `ipython-autotime` library is particularly useful to get an overview of **how long each Python-Cell** takes to be executed. 
+
+You can even use it for  debugging in combination with the `datetime`-library in order to use `print()`-statements that gives you **the run-time of - for example - each model-fiting iteration (in a loop)**.
+
+#### Installation
+
+To install this wonderful 
+
+```
+pip install ipython-autotime
+```
+
+#### Activation
+
+It uses a `Python Magic-Command` in order to be able to use this library:
+
+```
+%load_ext autotime
+```
+
+
 ## Necessary Foundations
 
 ### Pandas
