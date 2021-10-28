@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2021-10-17" />
+<meta name="date" content="2021-10-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -141,6 +141,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#virtual-environment"><i class="fa fa-check"></i><b>1.1</b> Virtual Environment</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#create-a-venv"><i class="fa fa-check"></i><b>1.1.1</b> Create a <code>venv</code></a></li>
 <li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#activate-your-newly-created-venv"><i class="fa fa-check"></i><b>1.1.2</b> Activate your newly created <code>venv</code></a></li>
+<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#install-packages"><i class="fa fa-check"></i><b>1.1.3</b> Install packages</a></li>
+<li class="chapter" data-level="1.1.4" data-path="index.html"><a href="index.html#overview-of-packages"><i class="fa fa-check"></i><b>1.1.4</b> Overview of packages</a></li>
+<li class="chapter" data-level="1.1.5" data-path="index.html"><a href="index.html#overview-of-every-venv"><i class="fa fa-check"></i><b>1.1.5</b> Overview of every <code>venv</code></a></li>
+<li class="chapter" data-level="1.1.6" data-path="index.html"><a href="index.html#execute-any-python-skript"><i class="fa fa-check"></i><b>1.1.6</b> Execute any python skript</a></li>
+<li class="chapter" data-level="1.1.7" data-path="index.html"><a href="index.html#deactivate-the-venv"><i class="fa fa-check"></i><b>1.1.7</b> Deactivate the <code>venv</code></a></li>
+<li class="chapter" data-level="1.1.8" data-path="index.html"><a href="index.html#delete-a-venv"><i class="fa fa-check"></i><b>1.1.8</b> Delete a <code>venv</code></a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#r-markdown"><i class="fa fa-check"></i><b>1.2</b> R Markdown</a><ul>
 <li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#hide-source-code"><i class="fa fa-check"></i><b>1.2.1</b> Hide Source Code</a></li>
@@ -149,34 +155,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.2.4" data-path="index.html"><a href="index.html#rmarkdown--vs.-markdown-files"><i class="fa fa-check"></i><b>1.2.4</b> RMarkdown- VS. Markdown-Files</a></li>
 <li class="chapter" data-level="1.2.5" data-path="index.html"><a href="index.html#nützliche-hexadecimals"><i class="fa fa-check"></i><b>1.2.5</b> Nützliche Hexadecimals</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#terminal"><i class="fa fa-check"></i><b>1.3</b> Terminal</a><ul>
-<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#commands-in-mac"><i class="fa fa-check"></i><b>1.3.1</b> Commands (in Mac):</a></li>
-<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#how-to-use-a-jupyter-notebook-in-an-ide"><i class="fa fa-check"></i><b>1.3.2</b> How to use a Jupyter Notebook in an IDE?¨</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#terminal-commands"><i class="fa fa-check"></i><b>1.3</b> Terminal-Commands:</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#aktuelle-position-directory"><i class="fa fa-check"></i><b>1.3.1</b> Aktuelle Position // Directory?</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#showing-the-child-directories-inside-the-directory-you-are-currently-in"><i class="fa fa-check"></i><b>1.3.2</b> Showing the child-directories inside the directory you are currently in?</a></li>
+<li class="chapter" data-level="1.3.3" data-path="index.html"><a href="index.html#delete-everything-you-wrote-in-your-terminal-up-until-now"><i class="fa fa-check"></i><b>1.3.3</b> Delete everything you wrote in your <code>Terminal</code> up until now?</a></li>
+<li class="chapter" data-level="1.3.4" data-path="index.html"><a href="index.html#change-directory"><i class="fa fa-check"></i><b>1.3.4</b> Change directory?</a></li>
+<li class="chapter" data-level="1.3.5" data-path="index.html"><a href="index.html#creating-a-new-directory"><i class="fa fa-check"></i><b>1.3.5</b> Creating a new directory?</a></li>
+<li class="chapter" data-level="1.3.6" data-path="index.html"><a href="index.html#create-a-new-file"><i class="fa fa-check"></i><b>1.3.6</b> Create a new file?</a></li>
+<li class="chapter" data-level="1.3.7" data-path="index.html"><a href="index.html#remove-files"><i class="fa fa-check"></i><b>1.3.7</b> Remove files?</a></li>
+<li class="chapter" data-level="1.3.8" data-path="index.html"><a href="index.html#open-the-current-directory-you-are-in"><i class="fa fa-check"></i><b>1.3.8</b> Open the current directory you are in?</a></li>
+<li class="chapter" data-level="1.3.9" data-path="index.html"><a href="index.html#terminal-magic-commands-for-being-faster"><i class="fa fa-check"></i><b>1.3.9</b> Terminal Magic-Commands for being faster?</a></li>
+<li class="chapter" data-level="1.3.10" data-path="index.html"><a href="index.html#syntax-im-terminal"><i class="fa fa-check"></i><b>1.3.10</b> Syntax im Terminal</a></li>
 </ul></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#git-github"><i class="fa fa-check"></i><b>1.4</b> Git &amp; Github:</a><ul>
-<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#first-time-using-git-github"><i class="fa fa-check"></i><b>1.4.1</b> First time using Git &amp; Github</a></li>
-<li class="chapter" data-level="1.4.2" data-path="index.html"><a href="index.html#key-concepts-in-git"><i class="fa fa-check"></i><b>1.4.2</b> 2 Key concepts in Git</a></li>
-<li class="chapter" data-level="1.4.3" data-path="index.html"><a href="index.html#working-with-branches"><i class="fa fa-check"></i><b>1.4.3</b> Working with Branches</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#how-to-activate-use-python"><i class="fa fa-check"></i><b>1.4</b> How to activate &amp; use Python?</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#git-github"><i class="fa fa-check"></i><b>1.5</b> Git &amp; Github:</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#first-time-using-git-github"><i class="fa fa-check"></i><b>1.5.1</b> First time using Git &amp; Github</a></li>
+<li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#key-concepts-in-git"><i class="fa fa-check"></i><b>1.5.2</b> 2 Key concepts in Git</a></li>
+<li class="chapter" data-level="1.5.3" data-path="index.html"><a href="index.html#working-with-branches"><i class="fa fa-check"></i><b>1.5.3</b> Working with Branches</a></li>
 </ul></li>
-<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#wörterbuch"><i class="fa fa-check"></i><b>1.5</b> Wörterbuch</a><ul>
-<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#data-science-vs.-mein-economics-studium"><i class="fa fa-check"></i><b>1.5.1</b> Data Science VS. mein Economics-Studium</a></li>
-<li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#ide-explained"><i class="fa fa-check"></i><b>1.5.2</b> IDE explained</a></li>
-<li class="chapter" data-level="1.5.3" data-path="index.html"><a href="index.html#restful-api"><i class="fa fa-check"></i><b>1.5.3</b> Restful API</a></li>
-<li class="chapter" data-level="1.5.4" data-path="index.html"><a href="index.html#magic-commands-in-python"><i class="fa fa-check"></i><b>1.5.4</b> Magic Commands in Python</a></li>
-<li class="chapter" data-level="1.5.5" data-path="index.html"><a href="index.html#pipe-operator-in-r"><i class="fa fa-check"></i><b>1.5.5</b> Pipe-Operator in R</a></li>
-<li class="chapter" data-level="1.5.6" data-path="index.html"><a href="index.html#docker"><i class="fa fa-check"></i><b>1.5.6</b> Docker</a></li>
-<li class="chapter" data-level="1.5.7" data-path="index.html"><a href="index.html#data-pipeline"><i class="fa fa-check"></i><b>1.5.7</b> Data Pipeline</a></li>
-<li class="chapter" data-level="1.5.8" data-path="index.html"><a href="index.html#fundamental-daten"><i class="fa fa-check"></i><b>1.5.8</b> Fundamental-Daten</a></li>
-<li class="chapter" data-level="1.5.9" data-path="index.html"><a href="index.html#data-flow"><i class="fa fa-check"></i><b>1.5.9</b> Data-Flow</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#latex"><i class="fa fa-check"></i><b>1.6</b> LaTeX</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="index.html"><a href="index.html#what-is-the-latex-code-for-haty"><i class="fa fa-check"></i><b>1.6.1</b> What is the LaTeX-Code for <span class="math inline">\(\hat{y}\)</span>?</a></li>
 </ul></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#synonyme"><i class="fa fa-check"></i><b>1.6</b> Synonyme</a><ul>
-<li class="chapter" data-level="1.6.1" data-path="index.html"><a href="index.html#data-science"><i class="fa fa-check"></i><b>1.6.1</b> Data Science</a></li>
-<li class="chapter" data-level="1.6.2" data-path="index.html"><a href="index.html#machine-learning"><i class="fa fa-check"></i><b>1.6.2</b> Machine Learning</a></li>
-<li class="chapter" data-level="1.6.3" data-path="index.html"><a href="index.html#python"><i class="fa fa-check"></i><b>1.6.3</b> Python</a></li>
-<li class="chapter" data-level="1.6.4" data-path="index.html"><a href="index.html#it-software-development"><i class="fa fa-check"></i><b>1.6.4</b> IT &amp; Software-Development</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#wörterbuch"><i class="fa fa-check"></i><b>1.7</b> Wörterbuch</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#data-science-vs.-mein-economics-studium"><i class="fa fa-check"></i><b>1.7.1</b> Data Science VS. mein Economics-Studium</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#ide-explained"><i class="fa fa-check"></i><b>1.7.2</b> IDE explained</a></li>
+<li class="chapter" data-level="1.7.3" data-path="index.html"><a href="index.html#restful-api"><i class="fa fa-check"></i><b>1.7.3</b> Restful API</a></li>
+<li class="chapter" data-level="1.7.4" data-path="index.html"><a href="index.html#magic-commands-in-python"><i class="fa fa-check"></i><b>1.7.4</b> Magic Commands in Python</a></li>
+<li class="chapter" data-level="1.7.5" data-path="index.html"><a href="index.html#pipe-operator-in-r"><i class="fa fa-check"></i><b>1.7.5</b> Pipe-Operator in R</a></li>
+<li class="chapter" data-level="1.7.6" data-path="index.html"><a href="index.html#docker"><i class="fa fa-check"></i><b>1.7.6</b> Docker</a></li>
+<li class="chapter" data-level="1.7.7" data-path="index.html"><a href="index.html#data-pipeline"><i class="fa fa-check"></i><b>1.7.7</b> Data Pipeline</a></li>
+<li class="chapter" data-level="1.7.8" data-path="index.html"><a href="index.html#fundamental-daten"><i class="fa fa-check"></i><b>1.7.8</b> Fundamental-Daten</a></li>
+<li class="chapter" data-level="1.7.9" data-path="index.html"><a href="index.html#data-flow"><i class="fa fa-check"></i><b>1.7.9</b> Data-Flow</a></li>
 </ul></li>
-<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#projekt-management"><i class="fa fa-check"></i><b>1.7</b> Projekt-Management</a><ul>
-<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#meetings"><i class="fa fa-check"></i><b>1.7.1</b> Meetings</a></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#synonyme"><i class="fa fa-check"></i><b>1.8</b> Synonyme</a><ul>
+<li class="chapter" data-level="1.8.1" data-path="index.html"><a href="index.html#data-science"><i class="fa fa-check"></i><b>1.8.1</b> Data Science</a></li>
+<li class="chapter" data-level="1.8.2" data-path="index.html"><a href="index.html#machine-learning"><i class="fa fa-check"></i><b>1.8.2</b> Machine Learning</a></li>
+<li class="chapter" data-level="1.8.3" data-path="index.html"><a href="index.html#python"><i class="fa fa-check"></i><b>1.8.3</b> Python</a></li>
+<li class="chapter" data-level="1.8.4" data-path="index.html"><a href="index.html#it-software-development"><i class="fa fa-check"></i><b>1.8.4</b> IT &amp; Software-Development</a></li>
+</ul></li>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#projekt-management"><i class="fa fa-check"></i><b>1.9</b> Projekt-Management</a><ul>
+<li class="chapter" data-level="1.9.1" data-path="index.html"><a href="index.html#meetings"><i class="fa fa-check"></i><b>1.9.1</b> Meetings</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html"><i class="fa fa-check"></i><b>2</b> Foundations of Data Science</a><ul>
@@ -202,10 +220,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.7" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#appendix-for-the-future"><i class="fa fa-check"></i><b>2.7</b> Appendix for the Future</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="python-libraries.html"><a href="python-libraries.html"><i class="fa fa-check"></i><b>3</b> Python Libraries</a><ul>
-<li class="chapter" data-level="3.1" data-path="python-libraries.html"><a href="python-libraries.html#time-series-forecasting"><i class="fa fa-check"></i><b>3.1</b> Time-Series Forecasting</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="python-libraries.html"><a href="python-libraries.html#facebook-prophet"><i class="fa fa-check"></i><b>3.1.1</b> Facebook Prophet</a></li>
-<li class="chapter" data-level="3.1.2" data-path="python-libraries.html"><a href="python-libraries.html#sklearn"><i class="fa fa-check"></i><b>3.1.2</b> SkLearn</a></li>
-<li class="chapter" data-level="3.1.3" data-path="python-libraries.html"><a href="python-libraries.html#sktime"><i class="fa fa-check"></i><b>3.1.3</b> SkTime</a></li>
+<li class="chapter" data-level="3.1" data-path="python-libraries.html"><a href="python-libraries.html#necessary-foundations"><i class="fa fa-check"></i><b>3.1</b> Necessary Foundations</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="python-libraries.html"><a href="python-libraries.html#pandas"><i class="fa fa-check"></i><b>3.1.1</b> Pandas</a></li>
+<li class="chapter" data-level="3.1.2" data-path="python-libraries.html"><a href="python-libraries.html#loc--vs.-iloc-selection"><i class="fa fa-check"></i><b>3.1.2</b> <code>loc</code>- VS. <code>iloc</code>-Selection</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="python-libraries.html"><a href="python-libraries.html#time-series-forecasting"><i class="fa fa-check"></i><b>3.2</b> Time-Series Forecasting</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="python-libraries.html"><a href="python-libraries.html#facebook-prophet"><i class="fa fa-check"></i><b>3.2.1</b> Facebook Prophet</a></li>
+<li class="chapter" data-level="3.2.2" data-path="python-libraries.html"><a href="python-libraries.html#sklearn"><i class="fa fa-check"></i><b>3.2.2</b> SkLearn</a></li>
+<li class="chapter" data-level="3.2.3" data-path="python-libraries.html"><a href="python-libraries.html#sktime"><i class="fa fa-check"></i><b>3.2.3</b> SkTime</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="visualization.html"><a href="visualization.html"><i class="fa fa-check"></i><b>4</b> Visualization</a><ul>
