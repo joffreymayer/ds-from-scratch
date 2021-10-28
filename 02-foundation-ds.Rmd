@@ -118,6 +118,16 @@ The concept of *cross-validation* can be splitted into 2 parts:
 
 Because time-series are ordered, since *the flow of time* is only going forward, the graph shown above for *step 2* is <u>not</u> valid and we need another approach: 
 
+#### Why do we use Cross-Validation?
+
+There are 2 reasons:
+
+1) It allows us **to compare the score (MAPE, MAE or RMSE) of different model set-ups**, for example: 
+  - *CV-Scheme changes*, e.g. a _Time-Series_ Prophet-Model with a `Sliding-Window` of 4 Months VS. a Prophet-Model with an `Expanding-Window` (full past).
+  - OR *changes in the covariates*, e.g. a model that includes an important covariate, while the other model does not.
+  **This will allow you to draw conclusions regarding the selection of "the best" model**.
+2) It allows you **to assess the performance** of different machine-learning methods. In a _classification-setting_ for example, you can use the _confusion-matrix_. 
+
 ![Cross-Validation for Time Series](./bilder/example-3-fold-cross-validation-for-time-series.png)
 
 This picture shows **an example of a 3-fold cross-validation for a time-series**. 

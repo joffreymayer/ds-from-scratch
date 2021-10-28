@@ -1,5 +1,18 @@
 # Python Libraries
 
+## Necessary Foundations
+
+### Pandas
+
+### `loc`- VS. `iloc`-Selection
+
+`loc` &amp; `iloc` are the "accessor operators" in the `pandas`-library. With these,, you can <u>select</u> rows and columns in your dataframe:
+
+- <u>For `loc`</u>: Based on the _name_ of the rows (= row-label // row-index)
+and columns.
+
+- <u>For `iloc`</u>: Based on the <u>position</u> // where the specific rows &amp; columns are within the dataset.
+
 ## Time-Series Forecasting
 
 Here, I will explore different libraries that will allow you to make forecasts into the future.

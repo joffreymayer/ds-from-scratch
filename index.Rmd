@@ -95,26 +95,78 @@ you will probably want to only show the code, but not execute it. This is also p
 - Hexadecimal code for the left square-bracket = `&#91;` --> Ich muss das so machen mit den eckigen Klammern, weil `[]` wird für Links & Bilder verwendet in `Markdown` 🤪
 - Hexadecimal code for the right square-bracket = `&#93;` --> Ich muss das so machen mit den eckigen Klammern, weil `[]` wird für Links & Bilder verwendet in `Markdown` 🤪
 
-## Terminal 
+## Terminal-Commands:
 
-### Commands (in Mac):
-	
-- `clear` = clears the terminal
-- `cd` = change directory
-  - `cd ..` = go back one directory
-- `pwd` = print working directory
+A terminal will be essential for your projects, since you will - oftentimes - install packages or move files around your repositories with it. Here, you will find the most useful things you should know when using the `Terminal`.
+
+### Aktuelle Position // Directory?
+
+- <u>For Mac</u>: `pwd` = print working directory
+
+- <u>For Windows</u>: `dir` = this is the same command as `pwd`, but `dir` is for `Windows`
+
+### Showing the child-directories inside the directory you are currently in?
+
 - `ls` = prints all the `child-directories` (= one layer deeper of the path) from the `parent-directory` (= current directory you are in with your terminal) you are currently in.
-  - `dir` = this is the same command as `ls` but `dir` is for `Windows`.
-- `pwd` = print working directory
+
+### Delete everything you wrote in your `Terminal` up until now?
+
+- `clear` = clears the terminal
+
+### Change directory?
+
+- `cd` = change directory
+  - `cd ..` = go back one directory.
+  
+### Creating a new directory?
+
+`mkdir new-folder-1 new-folder-2 new-folder-3` = This creates 3 new folder within the current (working-) directory you are currently in.
+
+### Create a new file?
+
+`touch index.html app.css` == This will create an `index.html`, as well as a `app.css`-file within the current (working-) directory you are currently in.
+
+### Remove files?
+
+`rm index.html app.css capture.png` = This will delete the `index.html`-, the `app.css` and the `capture.png`-files from the current (working-) directory you are currently in.
+
+### Open the current directory you are in?
+
 - `open .` = opens the current directory you are in
-- `commit` = save
-- `hash` = unique identifier in the history of files (--> it is a huge string composed of characters (= Buchstaben) & numbers) 
+
+### Terminal Magic-Commands for being faster?
+
 - <u>Trick #1</u>: hit the "Tab-Taste" == will automatically auto-fill the name of the file / directories etc.
   - <u>Example</u>: Type `cd Dok` + "Tab"-Taste --> *auto-fill activates* --> im Terminal steht dann der automatisch ausgefüllte Name des Files / Directories, zum Beispiel `cd Dokumente` bzw. `cd Name_Of_Child_Directory` 
 - <u>Trick #2</u>: How to find a path of a directory that is situated very deeply in your local computer?
   - <u>Example</u>: Type `cd ` + drag-&-drop the **folder** that is deep in your computer with the file in it.
   
-### How to use a Jupyter Notebook in an IDE?¨
+### Syntax im Terminal
+
+- `*`-Zeichen == Represents "all files".
+
+#### <u>Beispiel</u>: Delete all Files in a folder that start with the letter `a`?
+
+To delete all files in a folder that start with the letter `a`, then you should write:
+
+```
+/folder/a*
+```
+
+- `.`-Zeichen == use the `.` character to represent the **current folder**.
+- `~`-Zeichen == represents the "home directory".
+
+#### <u>Beispiel</u>: how to return to your home directory?
+
+You should use:
+
+```
+cd ~
+```
+
+## How to activate &amp; use Python?
+
+`Python` can be executed on your local computer via a `Jupyter Notebook`, which can be accessed through an IDE. `R`, `Visual Studio Code` or `PyCharm` are examples of IDEs. 
 
 Let's assume, that we took `PyCharm` as our IDE. We do the following steps:
 
@@ -124,9 +176,11 @@ Let's assume, that we took `PyCharm` as our IDE. We do the following steps:
 
 ## Git &amp; Github: 
 	
-- pull request = "Take some changes from a particular branch and bring it into another branch."
+- `pull request` = "Take some changes from a particular branch and bring it into another branch."
 	- <u>Achtung</u>: es ist eine *Request*, es wurde noch nichts gemerged! Für das brauch es noch `merge` als zusätzlichen Befehl. 		
-- fork a repo = "Take someone else's repo - because you love it 😊  - and put it into your own list of repos, in order to be able to edit it yourself without affectig the original repository of the owner."
+- `fork a repo` = "Take someone else's repo - because you love it 😊  - and put it into your own list of repos, in order to be able to edit it yourself without affectig the original repository of the owner."
+- `commit` = save
+- `hash` = unique identifier in the history of files. A `has` is a huge string composed of characters (= Buchstaben) & numbers and is used when using a version-control software, such as `Git`.
 				
 > How to tell the original owner you want to merge <u>your</u> changes that you made back into their orignal repo and implement them those changes into their original work // repo?
 				
@@ -373,9 +427,16 @@ Zur Illustration des `Data Flows`, gab es hierzu im Wissensaustausch auch eine B
 - `Seasonal Periodicity` == The number of months per year, in which the forecaster expects to see a seasonal pattern. 
 	- <u>Concrete Example</u>: In Philipp's Notebook, he had a seasonal periodicity of 2, e.g. he said that in winter & sommer, he expects a seasonal pattern.
 - `Reduction is composable` &#8594; Synonym wäre "addieren" &#8594; E.g. you can split a difficult task into a bunch of smaller tasks (= reduction) and "add" them together to solve the bigger task at the end (= "reduction is composable").
-- `Pearson Korrelation` == Lineare Korrelation
+- `Pearson Korrelation` == <u>Lineare</u> Korrelation
 - `Grid` &#8594; Das ist nichts anderes als die **Optimierung von diversen "Modell-Parametern"**. 
 		- <u>Beispiel</u>: Bei Random-Forrest Modellen kann man zum Beispiel die Tiefe eines Modells bestimmen, dh die relevante Frage, welche ein Forscher sich stellt, ist, *wie viele Baum-Zweigungen die geeignesten Predictions bringen?* Mit Funktionen, wie zum Beispiel `GridSearchCV()` kann dieses Problem geregelt werden.
+- `Classifier` == These are simply Regression-Functions, where **the Y-variable is binary**, e.g. die Y-Variable kann nur `Y = 0` <u>oder</u> `Y= = 1` als Werte annehmen. 
+  - <u>Beispiele</u>: 
+    - Logit-Regression
+    - Probit-Regression
+    - Naive Bayes
+    - etc...
+
 
 ### Python
 
