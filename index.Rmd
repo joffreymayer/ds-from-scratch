@@ -33,6 +33,55 @@ source activate YOUR-ENVIRONMENT-NAME
 
 <mark>**Note that the code above can also be used to activate virtual environments you created in the past**!</mark> =) 
 
+### Install packages
+
+Now that you are in your new `venv`, you can start downloading some packages:
+
+```
+python -m pip install SOME-PACKAGES
+```
+
+### Overview of packages
+
+To check your packages within your `venv`, simply type:
+
+```
+conda list
+```
+
+### Overview of every `venv` 
+
+To check all the `venv` I created, simply type:
+
+```
+conda env list
+```
+
+### Execute any python skript
+
+In order to execute a `Python`-script, you will need to head towards the directory that the `.py`-file is and - then - type in:
+
+```
+cd go-to-the-dir-where-your-file-is
+python my-script.py
+```
+
+### Deactivate the `venv`
+
+After you have completed what you wanted, you will need to shut-down the `venv`. Simply type:
+
+```
+conda deactivate
+```
+
+### Delete a `venv`
+
+Simply type:
+
+```
+conda env remove -n my-new-env
+```
+
 ## R Markdown
 
 When writing Code, I recommend you to use `.Rmd`-Documents, which will allow you to combine both, text, as well as Code (in R, Python, or any other language of your choice).
@@ -269,6 +318,18 @@ Look at [youtube-videos from Coding Train](https://youtu.be/oPpnCh7InLY).
 4) `git merge new_branch` == Since you currently are in the `master-branch`, Git will know that you want to **merge** `new_branch` <u>into</u> the `master-branch`.
 		
 That was it 😎
+
+## LaTeX
+
+This `bookdown` is created via a `.Rmd`-File. For a `Markdown` to be able to read some mathematical formulas, we will need the `LaTeX`-language. 
+
+### What is the LaTeX-Code for $\hat{y}$?
+
+Simply type:
+
+```
+$\hat{y}$
+```
 
 ## Wörterbuch
 
