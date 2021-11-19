@@ -114,3 +114,9 @@ set-label-of-axes
 force-legend-to-appear
 improve-yourself-constantly
 to-share
+git-versioncontrol
+useful-git-commands
+create-a-.gitignore-file
+speicherplatz-verwendet-durch-git-history
+unstage-everything
+stage-only-a-certain-type-of-file---for-example---only-.html-files

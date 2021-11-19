@@ -1,0 +1,56 @@
+# Git Versioncontrol
+
+If you work on projects, especially when collaborating in teams, it is very important to use a versioncontrol system, such as - for example - `Git`.
+
+
+## Useful `Git`-Commands
+
+### Create a `.gitignore`-file
+
+You will NEVER want to use version-control on every single file in your repository. That's why you need a `.gitignore`-file, in which you can write - on each line - which paths can be ignored. 
+
+**Be sure to be in the root of your working directory when you create the `.gitignore`-file!**
+
+- `touch .gitignore`
+
+> Example, of what to write into a `.gitignore`-file?
+
+- <u>It can be a path to a repository that you don't want to stage</u>: `/bilder`
+- <u>It can be all `log`-files</u>: `**.log`
+
+### Speicherplatz verwendet durch `Git`-History
+
+Um den Status zu erhalten, brauchen wir bloss, den folgenden Code einzugeben: 
+`git count-objects -v`.
+
+Der Output wird sein:
+
+``` 
+git count-objects -v
+count: 7
+size: 32
+in-pack: 17
+packs: 1
+size-pack: 4868
+prune-packable: 0
+garbage: 0
+size-garbage: 0
+```
+
+Der size-pack Eintrag gibt die Größe Ihrer Packdateien in Kilobyte an. Somit verwenden Sie **fast 5 MB an Speicherplatz**. Das ist **oftmals zu gross, beispielsweise Bild-Dateien sind hier enthalten**, die man nicht - wie zum Beispiel HTML-Files - ständig bearbeitet. Deshalb solltest du diese nicht alles in deinem Repository stagen!
+
+### Unstage everything
+
+Dieser Befehl enthält zwar den gefährlichen Befehel `rm`, doch hier werden keine Files deleted, sondern bloss die _komplette_ `git`-history gelöscht:
+
+- `git rm --cached -r .`
+
+> Warum will man die gesamte `Git`-History löschen?
+
+Weil man muss nicht alles via Version-Control verwalten. Ein gutes Beispiel sind Bild-Dateien, welche man _nicht_ - im Gegensatz zu HTML- oder CSS-Files - häufig bearbeitet. 
+
+Ein zweiter Nachteil, wenn alles via Version-Control läuft, ist, dass es viel zu viel Speicher benötigt, obwohl `Git` Bilder zwar komprimiert, aber diese bleiben trotzdem grosse Dateien...
+
+### Stage only a certain type of file - for example - only `.html`-files
+
+- `git add *.html`

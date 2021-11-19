@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Improve Yourself Constantly | Data Science from Scratch Code</title>
-  <meta name="description" content="Chapter 5 Improve Yourself Constantly | Data Science from Scratch Code" />
+  <title>Chapter 6 Git Versioncontrol | Data Science from Scratch Code</title>
+  <meta name="description" content="Chapter 6 Git Versioncontrol | Data Science from Scratch Code" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Improve Yourself Constantly | Data Science from Scratch Code" />
+  <meta property="og:title" content="Chapter 6 Git Versioncontrol | Data Science from Scratch Code" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Improve Yourself Constantly | Data Science from Scratch Code" />
+  <meta name="twitter:title" content="Chapter 6 Git Versioncontrol | Data Science from Scratch Code" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="visualization.html"/>
-<link rel="next" href="git-versioncontrol.html"/>
+<link rel="prev" href="improve-yourself-constantly.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -269,42 +269,61 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="improve-yourself-constantly" class="section level1">
-<h1><span class="header-section-number">Chapter 5</span> Improve Yourself Constantly</h1>
-<p>Like everything in Software and Informatics: you constantly need to acquire new skills to get the job done. Here, I listed different examples of what you will need to master, in order to improve yourself as a data-scientist:</p>
-<blockquote>
-<p>Git Cheat-Sheet?</p>
-</blockquote>
+<div id="git-versioncontrol" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Git Versioncontrol</h1>
+<p>If you work on projects, especially when collaborating in teams, it is very important to use a versioncontrol system, such as - for example - <code>Git</code>.</p>
+<div id="useful-git-commands" class="section level2">
+<h2><span class="header-section-number">6.1</span> Useful <code>Git</code>-Commands</h2>
+<div id="create-a-.gitignore-file" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> Create a <code>.gitignore</code>-file</h3>
+<p>You will NEVER want to use version-control on every single file in your repository. That’s why you need a <code>.gitignore</code>-file, in which you can write - on each line - which paths can be ignored.</p>
+<p><strong>Be sure to be in the root of your working directory when you create the <code>.gitignore</code>-file!</strong></p>
 <ul>
-<li>PDF zum Git Cheat-Sheet: <a href="/Users/jomaye/Nextcloud/Dokumente/Programming/Data%20Science/Terminal/Git-Cheatsheet.pdf">klicke hier</a></li>
+<li><code>touch .gitignore</code></li>
 </ul>
 <blockquote>
-<p>Twitter crawler via R?</p>
+<p>Example, of what to write into a <code>.gitignore</code>-file?</p>
 </blockquote>
 <ul>
-<li><a href="https://andrewcarr24.github.io/about/">Link zur Webseite</a></li>
+<li><u>It can be a path to a repository that you don’t want to stage</u>: <code>/bilder</code></li>
+<li><u>It can be all <code>log</code>-files</u>: <code>**.log</code></li>
+</ul>
+</div>
+<div id="speicherplatz-verwendet-durch-git-history" class="section level3">
+<h3><span class="header-section-number">6.1.2</span> Speicherplatz verwendet durch <code>Git</code>-History</h3>
+<p>Um den Status zu erhalten, brauchen wir bloss, den folgenden Code einzugeben:
+<code>git count-objects -v</code>.</p>
+<p>Der Output wird sein:</p>
+<pre><code>git count-objects -v
+count: 7
+size: 32
+in-pack: 17
+packs: 1
+size-pack: 4868
+prune-packable: 0
+garbage: 0
+size-garbage: 0</code></pre>
+<p>Der size-pack Eintrag gibt die Größe Ihrer Packdateien in Kilobyte an. Somit verwenden Sie <strong>fast 5 MB an Speicherplatz</strong>. Das ist <strong>oftmals zu gross, beispielsweise Bild-Dateien sind hier enthalten</strong>, die man nicht - wie zum Beispiel HTML-Files - ständig bearbeitet. Deshalb solltest du diese nicht alles in deinem Repository stagen!</p>
+</div>
+<div id="unstage-everything" class="section level3">
+<h3><span class="header-section-number">6.1.3</span> Unstage everything</h3>
+<p>Dieser Befehl enthält zwar den gefährlichen Befehel <code>rm</code>, doch hier werden keine Files deleted, sondern bloss die <em>komplette</em> <code>git</code>-history gelöscht:</p>
+<ul>
+<li><code>git rm --cached -r .</code></li>
 </ul>
 <blockquote>
-<p>Monte-Carlo Simulation explained &amp; how to implement in Python?</p>
+<p>Warum will man die gesamte <code>Git</code>-History löschen?</p>
 </blockquote>
+<p>Weil man muss nicht alles via Version-Control verwalten. Ein gutes Beispiel sind Bild-Dateien, welche man <em>nicht</em> - im Gegensatz zu HTML- oder CSS-Files - häufig bearbeitet.</p>
+<p>Ein zweiter Nachteil, wenn alles via Version-Control läuft, ist, dass es viel zu viel Speicher benötigt, obwohl <code>Git</code> Bilder zwar komprimiert, aber diese bleiben trotzdem grosse Dateien…</p>
+</div>
+<div id="stage-only-a-certain-type-of-file---for-example---only-.html-files" class="section level3">
+<h3><span class="header-section-number">6.1.4</span> Stage only a certain type of file - for example - only <code>.html</code>-files</h3>
 <ul>
-<li><a href="https://www.kdnuggets.com/2020/12/monte-carlo-integration-python.html">Link zur Webseite</a></li>
-</ul>
-<blockquote>
-<p>How to create a „reproducable example“ in order to post it on Stackoverflow?</p>
-</blockquote>
-<ul>
-<li><a href="https://aosmith16.github.io/spring-r-topics/slides/week09_reprex.html#59">Link zur Webseite</a></li>
-</ul>
-<div id="to-share" class="section level2">
-<h2><span class="header-section-number">5.1</span> To Share</h2>
-<blockquote>
-<p>Create a Website (Hugo):</p>
-</blockquote>
-<ul>
-<li><a href="https://www.tidyverse.tips/posts/2021-05-03-creating-an-academic-website-with-blogdown/">Link zur Webseite</a></li>
+<li><code>git add *.html</code></li>
 </ul>
 
+</div>
 </div>
 </div>
             </section>
@@ -312,8 +331,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="visualization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="git-versioncontrol.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="improve-yourself-constantly.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -345,7 +364,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/joffreymayer/ds-from-scratch/edit/master/05-improvement.Rmd",
+"link": "https://github.com/joffreymayer/ds-from-scratch/edit/master/06-git.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -353,7 +372,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/joffreymayer/ds-from-scratch/blob/master/05-improvement.Rmd",
+"link": "https://github.com/joffreymayer/ds-from-scratch/blob/master/06-git.Rmd",
 "text": null
 },
 "download": null,
