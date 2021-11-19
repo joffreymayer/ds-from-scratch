@@ -230,6 +230,11 @@ Let's assume, that we took `PyCharm` as our IDE. We do the following steps:
 - `fork a repo` = "Take someone else's repo - because you love it 😊  - and put it into your own list of repos, in order to be able to edit it yourself without affectig the original repository of the owner."
 - `commit` = save
 - `hash` = unique identifier in the history of files. A `has` is a huge string composed of characters (= Buchstaben) & numbers and is used when using a version-control software, such as `Git`.
+- `git add` =  Der Befehl `git add` wird zu vielen verschiedenen Zwecken eingesetzt. Man verwendet ihn, um: 
+  1) neue Dateien zur Version-Control hinzuzufügen, 
+  2) Dateien für einen Commit vorzumerken, UND
+  3) verschiedene andere Dinge – beispielsweise einen Konflikt aus einem Merge als aufgelöst zu kennzeichnen. 
+Leider wird der Befehl `git add` oft missverstanden. Viele assoziieren damit, dass damit Dateien zum Projekt hinzugefügt werden. Wie Sie aber gerade gelernt haben, wird der Befehl auch noch für viele andere Dinge eingesetzt. Wenn Sie den Befehl git add einsetzen, sollten Sie das eher so sehen, dass Sie damit einen bestimmten Inhalt für den nächsten Commit vormerken (= also Punkt (2) ist vor allem relevant in der obigen Liste.
 				
 > How to tell the original owner you want to merge <u>your</u> changes that you made back into their orignal repo and implement them those changes into their original work // repo?
 				
