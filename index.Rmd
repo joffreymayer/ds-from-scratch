@@ -321,6 +321,14 @@ Look at [youtube-videos from Coding Train](https://youtu.be/oPpnCh7InLY).
 2) `git checkout new_branch` == You will tell `Git`: "I now want to **work on this newly created branch** called 'new_branch'".
 3) `git checkout master` == *After* you are happy with the changes you did in `new_branch` you will need to prepare for the merging by **switching to your main-branch**, which is the `master`-branch.
 4) `git merge new_branch` == Since you currently are in the `master-branch`, Git will know that you want to **merge** `new_branch` <u>into</u> the `master-branch`.
+
+### Set-Up an SSH-Key for Github
+
+Whenever you will work with `Git` and `Github`, you will always need to type in your password, whenever you push something to the `Github`-Cloud. 
+
+*That's why you should start using an SSH-Key, giving `Github` your public-key and your computer the private-key.
+
+[This Youtube-Video](https://www.youtube.com/watch?v=HfTXHrWMGVY&t=1m52s) from `WebDevSimplified` will show you how to do it =)
 		
 That was it 😎
 
