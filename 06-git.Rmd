@@ -5,6 +5,14 @@ If you work on projects, especially when collaborating in teams, it is very impo
 
 ## Useful `Git`-Commands
 
+### Activate the automatic Password: from local Computer to Github
+
+If you use `Github`, you will absolutely need an `shh-key`, where `Github` gets the `public-key` and your computer has the `private-key` to establish an **automatic connection** when you work on your local computer and you want to push some changes to the Github-Cloud.
+
+In order to activate the connection between your local computer and the Github-Cloud, you will need to type in the following command **into your terminal**:
+
+`git remote set-url origin git@github.com:Your_Github_UserName_here/Name_of_Your_Remote_Repository_on_Github.git`
+
 ### Create a `.gitignore`-file
 
 You will NEVER want to use version-control on every single file in your repository. That's why you need a `.gitignore`-file, in which you can write - on each line - which paths can be ignored. 

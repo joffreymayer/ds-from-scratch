@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2021-11-20" />
+<meta name="date" content="2021-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -172,6 +172,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#first-time-using-git-github"><i class="fa fa-check"></i><b>1.5.1</b> First time using Git &amp; Github</a></li>
 <li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#key-concepts-in-git"><i class="fa fa-check"></i><b>1.5.2</b> 2 Key concepts in Git</a></li>
 <li class="chapter" data-level="1.5.3" data-path="index.html"><a href="index.html#working-with-branches"><i class="fa fa-check"></i><b>1.5.3</b> Working with Branches</a></li>
+<li class="chapter" data-level="1.5.4" data-path="index.html"><a href="index.html#set-up-an-ssh-key-for-github"><i class="fa fa-check"></i><b>1.5.4</b> Set-Up an SSH-Key for Github</a></li>
 </ul></li>
 <li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#latex"><i class="fa fa-check"></i><b>1.6</b> LaTeX</a><ul>
 <li class="chapter" data-level="1.6.1" data-path="index.html"><a href="index.html#what-is-the-latex-code-for-haty"><i class="fa fa-check"></i><b>1.6.1</b> What is the LaTeX-Code for <span class="math inline">\(\hat{y}\)</span>?</a></li>
@@ -244,10 +245,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html"><i class="fa fa-check"></i><b>6</b> Git Versioncontrol</a><ul>
 <li class="chapter" data-level="6.1" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html#useful-git-commands"><i class="fa fa-check"></i><b>6.1</b> Useful <code>Git</code>-Commands</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html#create-a-.gitignore-file"><i class="fa fa-check"></i><b>6.1.1</b> Create a <code>.gitignore</code>-file</a></li>
-<li class="chapter" data-level="6.1.2" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html#speicherplatz-verwendet-durch-git-history"><i class="fa fa-check"></i><b>6.1.2</b> Speicherplatz verwendet durch <code>Git</code>-History</a></li>
-<li class="chapter" data-level="6.1.3" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html#unstage-everything"><i class="fa fa-check"></i><b>6.1.3</b> Unstage everything</a></li>
-<li class="chapter" data-level="6.1.4" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html#stage-only-a-certain-type-of-file---for-example---only-.html-files"><i class="fa fa-check"></i><b>6.1.4</b> Stage only a certain type of file - for example - only <code>.html</code>-files</a></li>
+<li class="chapter" data-level="6.1.1" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html#activate-the-automatic-password-from-local-computer-to-github"><i class="fa fa-check"></i><b>6.1.1</b> Activate the automatic Password: from local Computer to Github</a></li>
+<li class="chapter" data-level="6.1.2" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html#create-a-.gitignore-file"><i class="fa fa-check"></i><b>6.1.2</b> Create a <code>.gitignore</code>-file</a></li>
+<li class="chapter" data-level="6.1.3" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html#speicherplatz-verwendet-durch-git-history"><i class="fa fa-check"></i><b>6.1.3</b> Speicherplatz verwendet durch <code>Git</code>-History</a></li>
+<li class="chapter" data-level="6.1.4" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html#unstage-everything"><i class="fa fa-check"></i><b>6.1.4</b> Unstage everything</a></li>
+<li class="chapter" data-level="6.1.5" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html#stage-only-a-certain-type-of-file---for-example---only-.html-files"><i class="fa fa-check"></i><b>6.1.5</b> Stage only a certain type of file - for example - only <code>.html</code>-files</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -272,7 +274,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Data Science from Scratch Code</h1>
 <p class="author"><em>Joffrey Anthony</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-11-20</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>2021-12-14</em></p>
 </div>
 <div id="computer-set-up" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Computer Set-Up</h1>
@@ -596,6 +598,12 @@ Leider wird der Befehl <code>git add</code> oft missverstanden. Viele assoziiere
 <li><code>git checkout master</code> == <em>After</em> you are happy with the changes you did in <code>new_branch</code> you will need to prepare for the merging by <strong>switching to your main-branch</strong>, which is the <code>master</code>-branch.</li>
 <li><code>git merge new_branch</code> == Since you currently are in the <code>master-branch</code>, Git will know that you want to <strong>merge</strong> <code>new_branch</code> <u>into</u> the <code>master-branch</code>.</li>
 </ol>
+</div>
+<div id="set-up-an-ssh-key-for-github" class="section level3">
+<h3><span class="header-section-number">1.5.4</span> Set-Up an SSH-Key for Github</h3>
+<p>Whenever you will work with <code>Git</code> and <code>Github</code>, you will always need to type in your password, whenever you push something to the <code>Github</code>-Cloud.</p>
+<p>*That’s why you should start using an SSH-Key, giving <code>Github</code> your public-key and your computer the private-key.</p>
+<p><a href="https://www.youtube.com/watch?v=HfTXHrWMGVY&amp;t=1m52s">This Youtube-Video</a> from <code>WebDevSimplified</code> will show you how to do it =)</p>
 <p>That was it 😎</p>
 </div>
 </div>
