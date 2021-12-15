@@ -596,4 +596,4 @@ In der BWL-Sprache ist *Kanban* **ein Vorgehensmodell** zur Softwareentwicklung.
 
 Hier liste ich alles auf, das ich in nächster Zeit ausprobieren möchte und - meiner Meinung nach - grossen Wert besitzt:
 
-- <u>Tutorial (Artikel von _Towards-Datascience_): [Build Animated R-Visualizations](https://towardsdatascience.com/how-to-build-animated-charts-like-hans-rosling-doing-it-all-in-r-570efc6ba382)
+- <u>Tutorial (Artikel von _Towards-Datascience_)</u>: [Build Animated R-Visualizations](https://towardsdatascience.com/how-to-build-animated-charts-like-hans-rosling-doing-it-all-in-r-570efc6ba382)
