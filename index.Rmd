@@ -427,10 +427,26 @@ Docker wird verwendet, um ein **Virtual Environment** zu bilden, welches - wie e
 
 - `DockerHub`  - An online community for storing and sharing container images. Has Public and Private repositories for image storage. It's basically a Cloud, like Github.
 
-
-
 - <u>Fazit</u>: DockerFile --> Docker Image (can be pre-built and hosted on the DockerHub-Cloud) --> Docker Container
 
+### Tensorflow and PyTorch
+
+> Definition?
+
+PyTorch and TensorFlow are far and away **the two most popular Deep Learning frameworks** today.
+
+While **`TensorFlow` has a reputation for being an industry-focused framework** and **`PyTorch` has a reputation for being a research-focused framework**.
+
+> Which one is more popular in the Deep-Learning Community?
+
+![PyTorch VS. Tensorflow popularity](./bilder/usage-pytorch-vs-tensorflow.png)
+
+As you can see, the adoption of PyTorch was extremely rapid and, in just a few years, grew from use in just about 7% to use in almost 80% of papers that use either PyTorch or TensorFlow.
+
+![Sankey-Diagram, in order to answer the question: Which one has the Momentum?](./bilder/momentum-tensorflow-vs-pytorch)
+The researchers find that **the majority of authors who used TensorFlow in 2018 migrated to PyTorch in 2019 (55%), while the vast majority of authors who used PyTorch in 2018 stayed with PyTorch 2019 (85%)**. 
+
+This data is visualized in the `Sankey diagram` above, where the left side corresponds to 2018 and the right side to 2019.
 
 ### Data Pipeline
 
@@ -572,8 +588,12 @@ In der BWL-Sprache ist *Kanban* **ein Vorgehensmodell** zur Softwareentwicklung.
   - <u>Ziel #1</u>: Das Meetings soll die Anzahl an paralleler Arbeiten, (= **der Work in Progress (WiP)) minimiert // begrenzt werden** und somit kürzere Durchlaufzeiten erreicht.
   - <u>Ziel #2</u>: Das Meeting soll die Probleme – insbesondere **Engpässe – schnell sichtbar machen**.
   
+## Job-Interviews
+
+- <u>Vorbereitung Data-Science Interviews</u>: [Diese Webseite](https://www.kdnuggets.com/2020/01/data-science-interview-study-guide.html) hat einen kompletten Guide mit Videos / Artikeln zu extrem vielen Key-Concepts gesammelt und zur Verfügung gestellt.
+  
 ## Ausblick
 
 Hier liste ich alles auf, das ich in nächster Zeit ausprobieren möchte und - meiner Meinung nach - grossen Wert besitzt:
 
-- 
+- <u>Tutorial (Artikel von _Towards-Datascience_): [Build Animated R-Visualizations](https://towardsdatascience.com/how-to-build-animated-charts-like-hans-rosling-doing-it-all-in-r-570efc6ba382)

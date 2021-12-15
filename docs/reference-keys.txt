@@ -46,6 +46,7 @@ magic-commands-in-python
 pipe-operator-in-r
 docker
 definitions
+tensorflow-and-pytorch
 data-pipeline
 fundamental-daten
 data-flow
@@ -56,6 +57,7 @@ python
 it-software-development
 projekt-management
 meetings
+job-interviews
 ausblick
 foundations-of-data-science
 questions-you-need-to-answer-when-starting-a-new-project
