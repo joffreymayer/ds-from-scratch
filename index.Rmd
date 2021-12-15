@@ -9,6 +9,114 @@ site: bookdown::bookdown_site
 
 When building projects *efficiently*, you will need different set-ups in order to have everything in your code work properly, *not only on your own machine, but also on other machines, for example of another team-member*.
 
+## Mac Tricks
+
+_Before_ we start with the whole set-up, you will also need to know how to **work more efficiently with your Macbook-Computer**.
+
+_Those "tricks" will be useful for many other programs you will need when working in the field of datascience._ 
+
+### Öffne die Developer-Tools von Google-Chrome
+
+- `command + shift + i`
+
+### Speichern 
+
+- `command + s`
+
+### Speichern Unter
+
+- `shift + option + command + s`
+
+### Finder 
+
+- `command + leerschlag`
+
+### Programm schliessen
+
+- `command + q`
+
+### Neuer Ordner 
+
+- `shift + command + n`
+
+### Tilde Zeichen
+
+Das ist nützlich für shortcuts im Terminal, wenn man das Working Directory festlegt: 
+
+- `option + n`
+
+### Backslash 
+
+Useful for paths within the Directory:
+
+- `option + shift + 7` 
+
+### Screenshot vom Bildschirm
+
+- `command + shift + 3`
+
+### Teil des Bildschirms Screen-Schoten 
+
+- `shift + command + 4`
+
+### Verlauf löschen in Chrome Browser 
+
+- `shift + command + entfernen`
+
+### Verlauf löschen Safari 
+
+- `command + alt + e`
+
+### Bildschirm Aufnahme 
+
+Funktioniert nur, wenn QuickTime Player aktiv ist:  
+
+- `option + command + n`
+
+### Lesezeichen in Google Chrome 
+
+- `command + d`
+
+### Search Console Pop Up 
+
+- `option + command + j`
+
+### Format Kopieren einer Zelle (in Numbers)
+
+- `option + command + c`
+
+### Format übertragen einer Zelle (in Numbers) 
+
+- `option + command + v`
+
+### Switch between Applications on your computer 
+
+- `command + tab`
+
+### Move Forward through Tabs 
+
+- `control + tab`
+
+### Zahl als Exponent 
+
+Geht nur in Pages oder Tablett!: 
+
+- `shift + control + command + „+“-Zeichen WÄHREND man die Zahl mit der Maus markiert` 
+
+Dann ist sie noch „normal“ und nicht tiefgestellt —> also so: zum Beispiel: 2.
+
+### Source-Code einer Webseite aufschalten 
+
+- `Option + CMD + u im Browser drücken`
+
+### Interaktive Code-Ansicht für das Abchecken von Webseiten 
+
+`fn + F12-Taste auf Touch Bar drücken`
+
+### Approximate Symbol `≈` 
+
+- `option + x`
+
 ## Virtual Environment 
 
 Because the libraries you work with in your projects will be updated over time (this is generally *bad news*, since this will cause all sorts of dependency problems across your libaries you use), it is crucial to understand that you will need a virtual environment (`venv`). There, you will install all the libraries you need. The **major advantage here, is that you can control the version you install the library**. Furthermore, you can send the `venv` to another computer and the people will download exactly the versions of each library. 
