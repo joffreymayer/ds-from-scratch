@@ -443,7 +443,7 @@ While **`TensorFlow` has a reputation for being an industry-focused framework** 
 
 As you can see, the adoption of PyTorch was extremely rapid and, in just a few years, grew from use in just about 7% to use in almost 80% of papers that use either PyTorch or TensorFlow.
 
-![Sankey-Diagram, in order to answer the question: Which one has the Momentum?](./bilder/momentum-tensorflow-vs-pytorch)
+![Sankey-Diagram, in order to answer the question: Which one has the Momentum?](./bilder/momentum-tensorflow-vs-pytorch.png)
 The researchers find that **the majority of authors who used TensorFlow in 2018 migrated to PyTorch in 2019 (55%), while the vast majority of authors who used PyTorch in 2018 stayed with PyTorch 2019 (85%)**. 
 
 This data is visualized in the `Sankey diagram` above, where the left side corresponds to 2018 and the right side to 2019.
