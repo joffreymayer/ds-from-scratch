@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2021-12-14" />
+<meta name="date" content="2021-12-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -197,6 +197,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#projekt-management"><i class="fa fa-check"></i><b>1.9</b> Projekt-Management</a><ul>
 <li class="chapter" data-level="1.9.1" data-path="index.html"><a href="index.html#meetings"><i class="fa fa-check"></i><b>1.9.1</b> Meetings</a></li>
 </ul></li>
+<li class="chapter" data-level="1.10" data-path="index.html"><a href="index.html#ausblick"><i class="fa fa-check"></i><b>1.10</b> Ausblick</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html"><i class="fa fa-check"></i><b>2</b> Foundations of Data Science</a><ul>
 <li class="chapter" data-level="2.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#questions-you-need-to-answer-when-starting-a-new-project"><i class="fa fa-check"></i><b>2.1</b> Questions you need to answer when starting a new Project</a></li>
@@ -274,7 +275,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Data Science from Scratch Code</h1>
 <p class="author"><em>Joffrey Anthony</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-12-14</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>2021-12-15</em></p>
 </div>
 <div id="computer-set-up" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Computer Set-Up</h1>
@@ -710,8 +711,16 @@ result &lt;- mtcars %&gt;%
 <blockquote>
 <p>Was ist <code>Docker</code> und was ist der Vorteil davon?</p>
 </blockquote>
-<p>Docker ist ein <strong>Virtual Environment</strong>, welches - wie ein Container - dir Punktgenaue Versionen von bestimmten Packages und Programmiersprachen (Python etc.) liefert. <code>Docker</code> läuft über <code>Open Shift</code>, welches eine Art <strong>Management-Programm</strong> für <code>Docker</code> ist (so viel ich das verstanden habe…).</p>
-<p>Wichtig zu wissen ist, dass JEDES <code>Data Science Kit Notebook</code> ein Docker-Container ist, welcher auf <code>Open Shift</code> läuft. Dies hat den Vorteil, dass jedes dieser Notebooks auf jeder Maschine ge-runnt werden kann, ohne das Error-Problemen wegen aktualisierten Libraries zu begengnen.</p>
+<p>Docker wird verwendet, um ein <strong>Virtual Environment</strong> zu bilden, welches - wie ein Container - dir Punktgenaue Versionen von bestimmten Packages und Programmiersprachen (Python etc.) liefert. <code>Docker</code> läuft über <code>Open Shift</code>, welches eine Art <strong>Management-Programm</strong> für <code>Docker</code> ist (so viel ich das verstanden habe…).</p>
+<div id="definitions" class="section level4">
+<h4><span class="header-section-number">1.7.6.1</span> Definitions</h4>
+<ul>
+<li><p><code>Image</code> - An image is an environment that has been built from a series of instructions called a <code>DockerFile</code>. Images can be prebuilt and hosted on <code>DockerHub</code> (similar to how GitHub hosts version controlled software files). The image is needed to run a Docker Container.</p></li>
+<li><p><code>Container</code> - A container is a virtual environment that <strong>combines a Docker Image with software (files) to run an application</strong> in a controlled environment (a reproducible software environment created virtually from the Docker Image).</p></li>
+<li><p><code>DockerHub</code> - An online community for storing and sharing container images. Has Public and Private repositories for image storage. It’s basically a Cloud, like Github.</p></li>
+<li><p><u>Fazit</u>: DockerFile –&gt; Docker Image (can be pre-built and hosted on the DockerHub-Cloud) –&gt; Docker Container</p></li>
+</ul>
+</div>
 </div>
 <div id="data-pipeline" class="section level3">
 <h3><span class="header-section-number">1.7.7</span> Data Pipeline</h3>
@@ -896,8 +905,15 @@ result &lt;- mtcars %&gt;%
 <li><u>Ziel #1</u>: Das Meetings soll die Anzahl an paralleler Arbeiten, (= <strong>der Work in Progress (WiP)) minimiert // begrenzt werden</strong> und somit kürzere Durchlaufzeiten erreicht.</li>
 <li><u>Ziel #2</u>: Das Meeting soll die Probleme – insbesondere <strong>Engpässe – schnell sichtbar machen</strong>.</li>
 </ul>
-
 </div>
+</div>
+<div id="ausblick" class="section level2">
+<h2><span class="header-section-number">1.10</span> Ausblick</h2>
+<p>Hier liste ich alles auf, das ich in nächster Zeit ausprobieren möchte und - meiner Meinung nach - grossen Wert besitzt:</p>
+<ul>
+<li></li>
+</ul>
+
 </div>
 </div>
             </section>

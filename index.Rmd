@@ -417,9 +417,20 @@ result <- mtcars %>%
 
 > Was ist `Docker` und was ist der Vorteil davon?
 
-Docker ist ein **Virtual Environment**, welches - wie ein Container - dir Punktgenaue Versionen von bestimmten Packages und Programmiersprachen (Python etc.) liefert. `Docker` läuft über `Open Shift`, welches eine Art **Management-Programm** für `Docker` ist (so viel ich das verstanden habe...).
+Docker wird verwendet, um ein **Virtual Environment** zu bilden, welches - wie ein Container - dir Punktgenaue Versionen von bestimmten Packages und Programmiersprachen (Python etc.) liefert. `Docker` läuft über `Open Shift`, welches eine Art **Management-Programm** für `Docker` ist (so viel ich das verstanden habe...).
 
-Wichtig zu wissen ist, dass JEDES `Data Science Kit Notebook` ein Docker-Container ist, welcher auf `Open Shift` läuft. Dies hat den Vorteil, dass jedes dieser Notebooks auf jeder Maschine ge-runnt werden kann, ohne das Error-Problemen wegen aktualisierten Libraries zu begengnen.
+#### Definitions
+
+- `Image` - An image is an environment that has been built from a series of instructions called a `DockerFile`. Images can be prebuilt and hosted on `DockerHub` (similar to how GitHub hosts version controlled software files). The image is needed to run a Docker Container.
+
+- `Container` - A container is a virtual environment that **combines a Docker Image with software (files) to run an application** in a controlled environment (a reproducible software environment created virtually from the Docker Image).
+
+- `DockerHub`  - An online community for storing and sharing container images. Has Public and Private repositories for image storage. It's basically a Cloud, like Github.
+
+
+
+- <u>Fazit</u>: DockerFile --> Docker Image (can be pre-built and hosted on the DockerHub-Cloud) --> Docker Container
+
 
 ### Data Pipeline
 
@@ -560,3 +571,9 @@ In der BWL-Sprache ist *Kanban* **ein Vorgehensmodell** zur Softwareentwicklung.
   
   - <u>Ziel #1</u>: Das Meetings soll die Anzahl an paralleler Arbeiten, (= **der Work in Progress (WiP)) minimiert // begrenzt werden** und somit kürzere Durchlaufzeiten erreicht.
   - <u>Ziel #2</u>: Das Meeting soll die Probleme – insbesondere **Engpässe – schnell sichtbar machen**.
+  
+## Ausblick
+
+Hier liste ich alles auf, das ich in nächster Zeit ausprobieren möchte und - meiner Meinung nach - grossen Wert besitzt:
+
+- 
