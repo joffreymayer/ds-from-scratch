@@ -454,6 +454,16 @@ $\hat{y}$
 
 ## Wörterbuch
 
+Jargon of a domain - like in Artificial Intelligence, Software Development or Economics - is one of the biggest challenges if you truly want tounderstand and master a new subject. 
+
+Scientists love to create sophisticated new words for new discoveries, methods or conclusions that they came to uncover in their respecitve fields. The problem with that, is that it acts as a huge market-barrier to those that want to enter the world many years later. You can see this even for "non-scientific" things, like the Pokemon franchise, that grow from 150 Pokemon to almost 1'000 Pokemons. The problem is, that the audience does not nearly grow as much, as in the beginning and that the new generation is not so enthousiastic about it, partly because the field has become too large for noobies. 
+
+That's why it is form utmost importance to know each field's jargon. I firmly believe that it is one of the biggest chalenges to overcome in order to be good at something. Because when you are able to "decode" the jargon, you can start "understand" the things. And when you understand, you can start applying, and that is where the fun truly begins :)
+
+### Synonyme
+
+- Source == Programming Language (any kind of)
+
 ### Data Science VS. mein Economics-Studium
 
 > Was ist der Unterschied zwischen einem `Data Scientist` VS. was ich in meinem `Economics-Studium` gemacht habe?
