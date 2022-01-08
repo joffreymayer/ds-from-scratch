@@ -151,3 +151,9 @@ create-a-.gitignore-file
 speicherplatz-verwendet-durch-git-history
 unstage-everything
 stage-only-a-certain-type-of-file---for-example---only-.html-files
+econometrics
+synonyme-2
+english-words-synonyme
+allgemeines
+statistics-formulas
+definitionen

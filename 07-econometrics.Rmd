@@ -1,0 +1,139 @@
+# Econometrics
+
+## Synonyme:
+
+- Dependent variable // y-variable // regressand // Y-intercept // outcome variable // response variable // label // ground truth
+- X-variable // variable of interest // explanatory variable // regressor // covariates // independent variable // predictor // attribute
+- regression of y on x // regress y on x
+- slope coefficient // beta
+- Controlling for // conditional on // holding fixed // holding constant // "certeris paribus" // statistically account
+- Classical linear regression model // CLRM 
+- Linear probability model // LPM
+- Probit model // probit regressions
+- Logit model // logit regressions
+- (Population) data generating process // Population regression function // PRF // „true“ regression  (—> very often unknown)
+- Sample regression function // SRF // fitted model // estimated model
+- Range // distribution // histogram
+- Dummy variable // categorical variable
+- Endogeneity // Omitted variable Bias // OVB // violation of assumption 2 (= the non-zero mean assumption)
+- R squared // coefficient of determination 
+- RSS // SSR // residual sum of squares // sum of squared residuals
+- Fitted value // predicted value // Y(hat)
+- Validity // internal Validity // external Validity
+- Randomized experiment // Random Assignment study // social experiment // randomized control trial // randomized trial
+- Expected value // predicted value 
+- Heterogeneous treatment effects // interaction terms 
+- Fixed Effects // FE
+- Difference-in-Differences // Diff-in-Diff // DiD 
+- Two stage least squares // 2SLS // Second Stage // IV-Regression
+- NA // Censored Data // Latent Variable —> can be estimated with a Tobit Model or Heckman Two stage Model (where the dependent variable is censored // has NAs, for example wages of people who don’t work cannot be observed // are censored) 
+- Observation // Row in R // samples // records (in computer science)
+- Column in R // field (in computer science)
+- Variable // Column in R 
+- Finite // Definite
+- Infinite // indefinite
+- Relativ zu // im Verhältnis zu
+
+## English Words Synonyme
+
+- Among = across
+- Fixed = not random —> an example would be the true parameters of the population would be fixed // not random, but you don’t know them —> you can only approximate the true parameters by taking a random sample and estimating it’s coefficient to approach the true / fixed coefficient with a random (but estimated) coefficient, which resulted from a sample that the researcher took.
+- With respect to … = in Bezug auf… = Auf der (z.B. klanglichen) Ebene…
+
+## Allgemeines
+
+- **Numerator** = Zähler
+- **Denominator** = Nenner
+- **Ditto** = ebenfalls
+- **A priori** = When dealing with ommitted variable bias, you need to ask yourself the question: what are the most likely sources of important omitted variable bias in this regression? Answering such a question requires applying economic theory & expert knowledge, and should occur before you actually runy any regressions; because this step is done before analyzing the data, it is referred to as „a priori“ („before the fact“) reasoning.
+- **Non-Linearity in X examples**: A regression is not linear in one regressor „x“, if - for example - the „x“ was logarithmic or is an interaction term.
+- **Non-linearity in „beta“ // parameters // coefficients**: An example of a regression function being non-linear in the parameters // coefficients are: 1) logistic regressions, where the dependent variable is between 0 and 1 (you use an s-shape function that can match all x-values between -infinity to +infinity to a y-value between 0 and 1); or 2) negative exponential growth:
+![Non-Linearity in Beta illustriert. **Importantly**, non-linearity in „beta“ cannot be estimated using OLS, but rather, with an extention of OLS called nonlinear least squareds.](./bilder/econ/nonlinear-in-their-parameters.jpeg)
+- **Independence assumption when dealing with probabilities & variances**: Independence has implications on how you calculate in statistics. For example, it affects the calculation of joint probabilities or variances with 2 random variables:
+![Example of the calculation when two random variables are assumed to be independent from each other.](./bilder/econ/independence-assumption-on-joint-prob.jpeg)
+
+## Statistics Formulas
+
+- **Formula for covariance**:
+![The Formula for Covariance](./bilder/econ/nonlinear-in-their-parameters.jpeg)
+- **Formula for (population) variance**:
+![The Formula for the population Variance](./bilder/econ/formula-pop-variance.jpeg)
+
+## Definitionen
+
+- Beliefs: VL1, Yanazingawa, S.2
+- Evidence: VL1, Yanazingawa, S.2
+- Counterfactual: VL 1, Yanazingawa, S.5
+- Validity // internal Validity // external Validity: VL 1, Yanazingawa, S.7, S.12
+- Randomized experiment // Random Assignment study // social experiment // randomized control trial // randomized trial: VL1, Yanazingawa, S.7
+- control group: it mimics the counterfactual: VL1, Yanazingawa, S.7
+- treatment group: VL1, Yanazingawa, S.7
+- Random assignment (= part of randomization): VL1, Yanazingawa, S.7
+- Random sampling (= part of randomization): VL1, Yanazingawa, S.7
+- Why is randomization important?: VL1, Yanazingawa, S.7-8
+- Observational study: VL1, Yanazingawa, S.10 (wichtig für MA, weil es genau in mein Kontext fällt!)
+- bivariate regression: Vl2, Yanazingawa, S.2
+- population regression funtion // sample regression function: VL2, Yanazingawa, S.3
+- dependent variable // y-variable // regressand // Y-intercept: VL2, Y-intercept, S.3
+- independent variable // x-variable // regressor // covariate // explanatory variable(s): VL2, Y-intercept, S.3
+- slope coefficient // beta: VL2, Y-intercept, S.3
+- interpretation of slope coefficient bivariate regression: VL2, Yanazingawa, S.4
+- interpretation of slope coefficient multivariate(!) regression: VL2, Yanazingawa, S.10
+- interpretation of intercept bivariate regression: VL2, Yanazingawa, S.4
+- interpretation of intercept multivariate(!) regression: VL2, Yanazingawa, S.10
+- expected value // predicted value: VL2, Yanazingawa, S.4
+- interpretation p-value (= it's a bedingte(!!) W'keit): VL2, Yanazingawa, S.5
+- what does it mean to have a small standard-error?:  VL2, Yanazingawa, S.6
+- statistical significance & its implication: VL2, Yanazingawa, S.7
+- understanding "holding constant": VL2, Yanazingawa, S.12
+- positive // negative bias table: VL3, Yanazingawa, S.5
+- overstated // understated concept (Prof does not like the concept...): VL3, Yanazingawa, S.5
+- Dummy variable // categorical variable: VL4, Yanazingawa, S.1
+- Dummy variable trap: VL4, Yanazingawa, S.3 & S.6
+- Multicolinearity: VL4, Yanazingawa, S.3
+- range // distribution // histogram: Ü1, Yanazingawa
+- scatterplot:Ü1, Yanazingawa
+- Linear probability model // LPM: VL5, Yanazingawa, S.2
+- interpretation of slope coefficient in linear probability model // regression: VL4, Yanazingawa, S.2
+- interpretation of intercept linear probability model // regression: VL4, Yanazingawa, S.2
+- advantages // disadvantages of LPM: VL5, Yanazingawa, S.4
+- advantages // disadvantages of logit model: VL5, Yanazingawa, S.5
+- probit model // probit regressions: VL5, Yanazingawa, S.5
+- logit model // logit regressions: VL5, Yanazingawa, S.13
+- implement a probit model with code: Ü2, Yanazingawa, Question 6
+- heterogeneous treatment effects // interaction terms: VL6, Yanazingawa, S.1, S.4 (first bullet)
+- coefficient interpretation of continuous-dummy interaction: VL6, Yanazingawa, S.4-7
+- coefficient interpretation of dummy-dummy interaction: Vl6, Yanazingawa, S.8
+- merge different datasets together: Ü3, Yanazingawa, 5) c)
+- bad controls: Ü3, Yanazingawa, 5) d), siehe Korrektur auf meinem gedruckten Problemset!
+- Fixed Effects // FE: VL7, Yanazingawa, S.3 & Zusammenfassung (ZF) auf letzter Seite des Handouts
+- Difference-in-Differences // Diff-in-Diff // DiD: VL8, Yanazingawa, S.1
+- Parallel trend assumption: VL8, Yanazingawa, S.2
+- Interaction terms between two FEs: Ü4, Yanazingawa, Aufgabe 3, Part I = a „country x time FE“ interaction controls for country-specific time-trends. However, to use it, you need 2 observations for each country and year (if we assume the time FE to be years...)
+- Make dummy variables while having multiple conditions: for example, the city needs to be between 25 km and 75 km away from the border = Ü4, Yanazingawa, Aufgabe 1, Part II
+- clustering the standard errors:  Ü4, Aufgabe 1, Part II
+- endogeneous regressor: VL9, Yanazingawa, S.1
+- validity of an instrument: VL9, Yanazingawa, S.1
+- Exclusion restriction: VL9, Yanazingawa, S.2
+- Two stage least squares // 2SLS // Second Stage: VL9, Yanazingawa, S.6 & S.7
+- First Stage: VL9, Yanazingawa, S.6
+- Reduced Form: VL9, Yanazingawa, S.6
+- IV-Regression in R: Ü5, Yanazingawa, Aufgabe 1 a)
+- Calculation of mean while ignoring NAs: Ü5, Aufgabe 2 a)
+- Standardize a variable: Ü5, Audgabe 2 a)
+- Interpretation with standardized variables: Ü5, Audgabe 3
+- ATE, ATT, ATUT: Ü2, Biroli, Aufgabe 2
+- Selection problem: Ü2, Biroli, Aufgabe 3
+- Histrogram: zeigt die an, wie häufig ein Wert auftaucht.
+- Scatter-Plot: Plot, welcher die Korrelation zwischen zwei Variablen in einem Datensatz aufzeigen.
+- Dichtefunktion: W'keit, einen Wert zwischen "Wart a" und "Wert b" zu erhalten (im Kontext von Zufallsvariablen) = verwendet man bei stetigen Massen, wie Gewicht oder Distanz etc...
+- Cross-sectional Data: Observation of an economic agent (for example individuals, firms, households etc.) collected at one point in time; you can have agent FEs, but not time FEs!
+- Panel data: Multiple observations on agents over time (—> you have a time index, as well as an index for individuals!) —> here you can add time FEs and also agent FEs
+- Confounders // mediator variables: These are the unobservable factors in your regression // in the error term that correlate with your x-variable of interest, as well as your y-vaiable, thus inducing bias when you estimate your model
+![Confounders illustrated.](./bilder/econ/mediator-variables-illustration.jpeg)
+  - <u>Note</u>: The term „Mediator“ is used for independent variables that cause a change in the y-variable.
+  - <u>Note 2</u>: The term „Moderator“ are used for interaction terms, e.g. that the effect of an x-variable is modified and depends on the second variable.
+
+
+
+
