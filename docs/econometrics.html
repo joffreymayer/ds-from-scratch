@@ -290,6 +290,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.6" data-path="econometrics.html"><a href="econometrics.html#different-tests-vorgehen-bei-den-tests"><i class="fa fa-check"></i><b>7.6</b> Different Tests // Vorgehen bei den Tests</a></li>
 <li class="chapter" data-level="7.7" data-path="econometrics.html"><a href="econometrics.html#diverse-berechnungen"><i class="fa fa-check"></i><b>7.7</b> Diverse Berechnungen</a></li>
 <li class="chapter" data-level="7.8" data-path="econometrics.html"><a href="econometrics.html#accept-reject-null-hypothesis"><i class="fa fa-check"></i><b>7.8</b> Accept // Reject Null-Hypothesis</a></li>
+<li class="chapter" data-level="7.9" data-path="econometrics.html"><a href="econometrics.html#coefficient-interpretation"><i class="fa fa-check"></i><b>7.9</b> Coefficient Interpretation</a></li>
+<li class="chapter" data-level="7.10" data-path="econometrics.html"><a href="econometrics.html#nice-to-know"><i class="fa fa-check"></i><b>7.10</b> Nice to Know</a></li>
+<li class="chapter" data-level="7.11" data-path="econometrics.html"><a href="econometrics.html#allgemeine-regeln"><i class="fa fa-check"></i><b>7.11</b> Allgemeine Regeln</a></li>
+<li class="chapter" data-level="7.12" data-path="econometrics.html"><a href="econometrics.html#ommitted-variable-bias-ovb"><i class="fa fa-check"></i><b>7.12</b> Ommitted Variable Bias = OVB</a></li>
+<li class="chapter" data-level="7.13" data-path="econometrics.html"><a href="econometrics.html#randomization"><i class="fa fa-check"></i><b>7.13</b> Randomization</a></li>
+<li class="chapter" data-level="7.14" data-path="econometrics.html"><a href="econometrics.html#dummy-variables"><i class="fa fa-check"></i><b>7.14</b> Dummy Variables</a></li>
+<li class="chapter" data-level="7.15" data-path="econometrics.html"><a href="econometrics.html#implication-of-statistically-significant-coefficients"><i class="fa fa-check"></i><b>7.15</b> Implication of statistically significant coefficients</a></li>
+<li class="chapter" data-level="7.16" data-path="econometrics.html"><a href="econometrics.html#linear-probability-model-vs.-probit-model-comparison"><i class="fa fa-check"></i><b>7.16</b> Linear probability model VS. Probit model: comparison</a></li>
+<li class="chapter" data-level="7.17" data-path="econometrics.html"><a href="econometrics.html#heterogeneous-treatment-effects-interaction-terms"><i class="fa fa-check"></i><b>7.17</b> Heterogeneous treatment effects // interaction terms</a></li>
+<li class="chapter" data-level="7.18" data-path="econometrics.html"><a href="econometrics.html#definitions-of-bad-controls"><i class="fa fa-check"></i><b>7.18</b> Definitions of “bad controls”</a></li>
+<li class="chapter" data-level="7.19" data-path="econometrics.html"><a href="econometrics.html#fixed-effects-fe"><i class="fa fa-check"></i><b>7.19</b> Fixed effects // FE</a></li>
+<li class="chapter" data-level="7.20" data-path="econometrics.html"><a href="econometrics.html#cross-sectional-data"><i class="fa fa-check"></i><b>7.20</b> Cross-sectional Data</a></li>
+<li class="chapter" data-level="7.21" data-path="econometrics.html"><a href="econometrics.html#panel-data"><i class="fa fa-check"></i><b>7.21</b> Panel Data</a></li>
+<li class="chapter" data-level="7.22" data-path="econometrics.html"><a href="econometrics.html#difference-in-differences"><i class="fa fa-check"></i><b>7.22</b> Difference-in-Differences</a></li>
+<li class="chapter" data-level="7.23" data-path="econometrics.html"><a href="econometrics.html#instrumental-variables-iv"><i class="fa fa-check"></i><b>7.23</b> Instrumental variables // IV</a></li>
+<li class="chapter" data-level="7.24" data-path="econometrics.html"><a href="econometrics.html#regression-discontinuity-design-rdd"><i class="fa fa-check"></i><b>7.24</b> Regression discontinuity design // RDD</a></li>
+<li class="chapter" data-level="7.25" data-path="econometrics.html"><a href="econometrics.html#coded-algorithms-r-functions"><i class="fa fa-check"></i><b>7.25</b> Coded Algorithms &amp; R-Functions</a></li>
+<li class="chapter" data-level="7.26" data-path="econometrics.html"><a href="econometrics.html#nützliche-funktionen-r"><i class="fa fa-check"></i><b>7.26</b> Nützliche Funktionen R:</a></li>
+<li class="chapter" data-level="7.27" data-path="econometrics.html"><a href="econometrics.html#useful-econometrics-documents"><i class="fa fa-check"></i><b>7.27</b> Useful Econometrics documents:</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -526,7 +545,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="accept-reject-null-hypothesis" class="section level2">
 <h2><span class="header-section-number">7.8</span> Accept // Reject Null-Hypothesis</h2>
 <ul>
-<li><strong>t-statistic</strong>:
+<li><p><strong>t-statistic</strong>:</p>
 <ul>
 <li><em>beidseitiger Test</em>: if t-stat (im Betrag) &gt; crit.-value –&gt; reject the null
 <ul>
@@ -541,7 +560,428 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><u>Note</u>: use Z<sub>(1-alpha)</sub> as the crit value, since we have a one-sided test.</li>
 </ul></li>
 </ul></li>
-<li><strong>Important general fact about hypothesis</strong>: Just because you cannot reject a null-hypothesis does not mean that the null-hypothesis is true. It just means that you don’t have enough empirical evidence to prove that the alternative-hypothesis is true.</li>
+<li><p><strong>Important general fact about hypothesis</strong>: Just because you cannot reject a null-hypothesis does not mean that the null-hypothesis is true. It just means that you don’t have enough empirical evidence to prove that the alternative-hypothesis is true.</p></li>
+<li><p><strong>p-value</strong>:</p>
+<ul>
+<li><u>Definition</u>: Gives the probability that we would get our „sample-mean“ IF the Null-hypothesis was true!
+<ul>
+<li><u>Interpretation</u>: This implies - <em>when we have a <strong>very small p-value</strong> this implies</em> - that - GIVEN our sample - there is very small probability that we would get this sample mean if the nullhypothesis was true. —&gt; this is a good result for a researcher, since he / she seeks to reject the null-hypothesis!</li>
+</ul></li>
+<li><em>beidseitiger Test</em>: if p-value &lt; alpha –&gt; reject the null</li>
+<li><em>rechtsseitiger Test</em>:</li>
+<li><em>linksseitiger Test</em>:</li>
+</ul></li>
+<li><p><strong>Types of Errors in statistical Testing</strong>:
+<img src="./bilder/econ/types-of-errors.jpeg" alt="These are all the possible types of errors you encounter." />
+## Formulierungen</p></li>
+<li><p><strong>For “correlation”</strong>:</p>
+<ul>
+<li>“is correlated with”</li>
+<li>“is associated with”</li>
+</ul></li>
+<li><p><strong>For “causation”</strong>:</p>
+<ul>
+<li>“lead to…”</li>
+<li>“has an effect on..”</li>
+</ul></li>
+<li><p><strong>In Regressions</strong>:</p>
+<ul>
+<li>“hold constant”</li>
+<li>“certeris paribus”</li>
+<li>“holding fixed”</li>
+<li>“controlling for”</li>
+<li>“conditional on”</li>
+<li>“statistically account for”</li>
+</ul></li>
+<li><p><strong>“Y is a function of X”</strong>:</p>
+<ul>
+<li>y(x)</li>
+<li>y depends on x</li>
+<li>y as a function of x</li>
+</ul></li>
+</ul>
+</div>
+<div id="coefficient-interpretation" class="section level2">
+<h2><span class="header-section-number">7.9</span> Coefficient Interpretation</h2>
+<ul>
+<li><strong>Lin-Lin</strong>:</li>
+<li><strong>Lin-Log</strong>: a 1% increase in X will increase // decrase Y by (beta/100) units!</li>
+<li><strong>Log-Lin</strong>: a unit change in X will increase // decrease Y by beta *100 percent!</li>
+<li><strong>Log-Log</strong>: a 1% increase in X will increase // decrease Y by beta %</li>
+<li><strong>Log-Dummy (dh logarithmierter dummy?)</strong>: Here you have to be very careful (Fallunterscheidung!):
+<ul>
+<li>If your coefficient on the dummy is very small, then you can do the normal „Lin-Log“ interpretation, it will be approximately correct.</li>
+<li>However, if your coefficient on the dummy is big, then you need to transform your coefficient before you do the interpretation! The formula would be: exp^(estimated beta) -1 —&gt; if you multiply this result by 100 then you get the correct %-units abd you can procede to do the normal „Lin-Log“ interpretation!</li>
+</ul></li>
+<li><strong>Coefficient Interpretation (multivariate Case)</strong>: "Beta 1 tells us the average change (, e.g. increase // decrease) in Y associated with a one-unit-change(!!) in X(1), holding constant X(2) and all other variables!</li>
+<li><strong>Coefficient Interpretation (y-variable in Prozent)</strong>: "A unitary increase in X is associated with a change in Y of XYZ Percentage Points(!!!)</li>
+<li><strong>Coefficient Interpretation (x-variable in percent)</strong>: "An 1 percentage point(!!) increase (= unitary increase when x-var. is in percent) is associated with a XY unitary change in y</li>
+<li><strong>Coefficient Interpretation of a Linear Probability Model</strong>: "Being 1 year older (= x-variable is age [in years]) increases the probability of getting married. Pay attention: the increase is in percentage points (-&gt; y-variable is a dummy!!! [–&gt; dh the slope coefficient is the change in the probability in a LPM! –&gt; dh you need to multiply the number of the coefficient by 100 to get the result in the change in probability (in percentage points of course…)!]) - <strong>Coefficient Interpretation of a Probit Model</strong>: you cannot interpret the magnitude (= Grösse des coeff.) directly, you need to transform it first (with a complicated formula for the s-shape function)! However, the sign AND the statistical significance can be directly interpreted from the coefficient of a probit model!</li>
+<li><strong>Coefficient Interpretation of a <code>dummy*continuous</code> Interaction</strong>: for example the gender-wage gap –&gt; returns to education can vary depending if you are a man or a female. Hence, the coefficient represents the difference in slopes (for education, e.g. the continuous variable) for males and females.</li>
+<li><strong>Coefficient Interpretation of a <code>Dummy-Dummy</code> Interaction Term (hier: <code>female * black // gender * enthnicity</code>)</strong>: when you have 2 dummies, you have - in total - 4 different “states of the world” // 4 different possibilities. Hence, you have 2 different possibilities to do the coefficient interpretation, which is either the differences between black and white males // females, or the differences between white male and females // black male and females. –&gt; these two interpretations are equivalent, but often one is more interesting than the other! –&gt; very important: the <code>dummy*dummy</code>-coefficient = Diff-in-Diff estimator!!</li>
+<li><strong>Coefficient Interpretation while “holding constant” FEs</strong>: Within(!!) districts, full RTML reception is associated with a XY unitary change in genocide cases, compared to zero reception. –&gt; Alternative: “holding constant all factors that vary across districts (= FEs)”</li>
+<li><strong>Coefficient Interpretation with standardized Measurements in X and in Y</strong>: If corruption increases by one standard deviation, then child mortality will rise by 0.6259 standard deviations or 62.59% of a standard deviation of child mortality.</li>
+</ul>
+</div>
+<div id="nice-to-know" class="section level2">
+<h2><span class="header-section-number">7.10</span> Nice to Know</h2>
+<ul>
+<li><strong>Why do we need statistics in econometrics?</strong> -&gt; Because it is the statistical theory that allows you to make statistical inference from your sample to your underlying population!</li>
+<li><strong>Random VS. Non-Randomness of Mean &amp; Variance // Features</strong>: Features of the population are fixed, dh non-random (but unknown!), whereas features of the sample are random (but known!) —&gt; e.g. if you draw another sample from the population, it is very likely that you get different numbers than in your other sample!</li>
+<li><strong>If you want to see, if an estimator is economically meaningful</strong>: This is done by looking at the magnitude of the coefficient.
+<ul>
+<li><em>How to calculate the magnitude of a coefficient // whether to know if the effect is big or not?</em> —&gt; <u>formula</u>: <code>magnitude = coeff. of interest / average estimated Y</code> —&gt; make a summary-statistic of your regression to find out this average estimated Y!</li>
+</ul></li>
+<li><strong>Law of large numbers</strong>: The sample mean converges to the population mean as the sample size „N“ gets large.</li>
+<li><strong>Bootstrapping</strong>: when you pick a random sample out of a population, you probably will get a different number than with another sample (of the exact same size &amp; exact same population). This exact method can be done with „Bootstrapping“ —&gt; the goal is to see, if your analysis gets completely different (—&gt; this would be bad…) or stays approximately the same (this is the outcome you want…).</li>
+<li><strong>The 5 assumptions in a regression model that must be true (otherwise we get a biased estimator)</strong>:
+<ol style="list-style-type: decimal">
+<li>The PRF is assumed to take a linear form (—&gt; that‘s why you need to sometimes take the logarithm of a non-linear relationship!)</li>
+<li>Key assumption for causal interpretation of the coefficient: Mean zero Error —&gt; the error term has an expected value of zero —&gt; E(error/X) = 0 implies that cov(error, X) = 0 —&gt; in other words: that there is no correlation between the coefficient of interest and „everthing else“ // all unobservables in a regression</li>
+<li>Homoskedasticity —&gt; dh the variance of the residuals should always stay the same —&gt; how to see if A3 is satisfied? —&gt; look at a scatterplot of the residuals (on y-axis) plotted against a regressor: you want to see „picasso on drugs“, e.g. a variation in the residuals on the y-axis that stays constant with increasing „x“
+<img src="./bilder/econ/violation-of-homoscedasticity.jpeg" alt="Here is an example of a violation of the Homoscedasticity-Assumtion" /></li>
+<li>A4: No correlation between the lagged residuals —&gt; how to see if A4 is satisfied? —&gt; use the Autocorrelation-function in R to see if the residuals are correlated with each other (this is what you don‘t want!)-
+<img src="./bilder/econ/autocorr-residuals-a4.jpeg" alt="Here an example of non-correlated residuals across time, which is what we want to see (= no violation)" /></li>
+<li>A5: Normality —&gt; residuals should be normally distributed —&gt; how to see if A5 is satisfied? —&gt; plot the density function of the residuals, it should look like a normal-distribution! If not, then the assumption is violated!
+<img src="./bilder/econ/density-of-residuals-a5.jpeg" alt="Here, we see that the residuals’ distribution does not look like a normal-distribution. Therefore, we can conclude that the normality-assumption of the linear regression model is violated." /></li>
+</ol></li>
+<li><strong>What happens, if all the above 5 assumptions are satisfied?</strong>
+<ol style="list-style-type: decimal">
+<li>The coefficient of interest will be unbiased (= Unbiasedness)</li>
+<li>Efficiency —&gt; e.g. the variance of the estimated coefficient is the smallest (compared to non-OLS estimation), which is a good thing, because we will always have an estimated coefficient that will be the closest guess to the true beta-coefficient!</li>
+<li>Our estimated coefficient will be normally distributed (good for hypothesis testing etc…)</li>
+</ol></li>
+<li><strong>What happens if A1-A5 are violated and how to fix it?</strong>
+<ul>
+<li><u>Assumption 1 (= Linearity)</u>: This assumption is most certainly violated (the true PRF is very rarely linear) —&gt; fixing it is not such a big deal —&gt; either you can add non-linearity in x:
+<ul>
+<li>log-transform your regressor</li>
+<li>Make a polynomial for x (often used in RDD)</li>
+<li>OR add interaction terms</li>
+</ul></li>
+<li><u>or</u> <strong>add non-linearity in beta</strong>:
+<ul>
+<li>Using nonlinear Least Squares (= these are non-linear models —&gt; look it up in a fat textbook!)</li>
+</ul></li>
+<li><u>Assumption 2 (= non-zero mean)</u>: This will lead to OVB // your regressor is endogeneous! —&gt; to fix it, you need to control for the unobservable factor OR to use some fancy methods like Fixed effects, IV, RDD or RCT that allows you to control for the unobserved factor!</li>
+<li><u>Assumption 3 (homoskedasticity)</u>: if your variance of the error term is heteroskedastic, your assumption 3 is violated —&gt; use a statistical test to see if your variance is homo- or heteroskedastic! —&gt; it‘s not a big deal if this assumption 3 is violated, because the estimated coefficient of interest will still be unbiased! But the standard errors will be wrong though —&gt; to fix it, you can tell your statistical software to account for heteroscedasticity! —&gt; when you account for heteroscedasticity, you will have to use so called „robust standard errors“!
+<img src="./bilder/econ/breusch-pagan-test-for-homoscedasticity-check.jpeg" alt="Here is an example of using a “Breusch-Pagan-Test” to see whether there is need to include a counter-measure for heteroscedastic standard-errors. Here, we see that the null-hypothesis (of homogeneous variance) is violated and - hence - we need to include robust standard-errors." /></li>
+<li><u>Assumption 4 (correlation between error terms is zero)</u>: if this assumption gets violated, it‘s also not a big deal, because (like A3) the estimated coefficient of interest will also still be unbiased! But the standard errors will again be wrong though! To fix this, you can tell your statistical software to cluster the standard errors</li>
+<li><u>Assumption 5 (normally distributed errors)</u>: very uikely that this assumption is violated, because we have the very powerful „Central Limit theorem“ that backs it up! —&gt; prof crawford did not tell us how to fix it, because it is very rarely violated!</li>
+</ul></li>
+<li><strong>Under which of the above assumptions is an estimated coefficient BLUE?</strong> —&gt; under the Assumptions 1-4 the estimated beta-coefficient will be BLUE!</li>
+<li><strong>Why do we take correlations instead of covariances?</strong> —&gt; because correlations have no units (only a number between -1 and +1), while covariances can have strange units like „hours-gradepoints“ xD</li>
+<li><strong>If you include an irrelevant variable in the regression, will there be a bias on your estimated coefficient of interest?</strong> —&gt; no, you coefficient stays unbiased, but the coefficient will be inefficient (not the lowest possible variance(beta_hat)) —&gt; if you are not sure whether to include a variable or not: better to include it, rather than ommit it (otherwise OVB in the worst case!)</li>
+<li><strong>Dertermine the sign of bias (if you have OVB)</strong>:
+<img src="./bilder/econ/determine-sign-of-bias.jpeg" alt="This is the table that you need to know by heart, in order to determine the sign of the bias of a coefficient, where beta(2) is the correlation between the ommitted variable and the y-variable!" />
+<ul>
+<li><u><strong>Another formula to dertermine the sign of the bias</strong></u>: <code>bias = short regression coeff. - long regression coeff.</code></li>
+</ul></li>
+<li><strong>“Without loss of generality”?</strong> —&gt; it means that a statement // formula is always true!</li>
+<li><strong>Check if an instrument is „strong“ or „weak“</strong>: —&gt; you can do an F-Test: if the instrument has an F-value that exceeds 10, you have approximately a strong instrument.
+<ul>
+<li>If you only have one instrument, you can use the t-test. If the value <strong>exceeds 3.16</strong>, then you also have a „strong“ instrument (rule of thumb).</li>
+</ul></li>
+<li><strong>When is the usage of the synthetic-control method optimal?</strong> —&gt; If you have a single unit that is treated (for example a country) and many other units that are not treated, all of which could be a control, but none of which is a perfect one.</li>
+</ul>
+</div>
+<div id="allgemeine-regeln" class="section level2">
+<h2><span class="header-section-number">7.11</span> Allgemeine Regeln</h2>
+<ul>
+<li>“Larger sample sizes yield to smaller standard errors and thus less uncertainty // narrower confidence intervalls // preciser estimates.”</li>
+<li>“Larger residuals (= Differenz zwischen durchschnittliches Y und tatsächliches Y = noisier data) yield to larger standard errors and thus more uncertainty.”
+<ul>
+<li>“Regress Y on X(1), X(2)…X(k)”</li>
+<li>“We regress Y on X(1), X(2), … X(k)”</li>
+<li>“The impact of X on Y…”</li>
+</ul></li>
+</ul>
+</div>
+<div id="ommitted-variable-bias-ovb" class="section level2">
+<h2><span class="header-section-number">7.12</span> Ommitted Variable Bias = OVB</h2>
+<ul>
+<li><strong>Condition for ommitted variable bias</strong>: corr(Y, omm. var.) &gt; // &lt; 0 AND corr(X, omm. var.) &gt; // &lt; 0 –&gt; sign of the OVB</li>
+<li><strong>Bias</strong> = short Regression Coeff. - long Regression Coeff. = <code>beta(2)*gamma [= corr(Y, omitted) * corr(X, omitted)]</code>
+<ul>
+<li><u>Note</u>: if beta(2) = 0 OR if gamma = 0, there is no bias! –&gt; the higher the magnitude of the bias, the less precise our sample regression funtion (SRF) relative to our population regression function (PRF), thus we have lower internal validity (dh likelyhood of estimating the true causal effect is low, since we have an unprecise SRF)</li>
+</ul></li>
+</ul>
+</div>
+<div id="randomization" class="section level2">
+<h2><span class="header-section-number">7.13</span> Randomization</h2>
+<ul>
+<li>If you don’t randomize, there will be a selection problem, e.g. mean untreaded outcomes will diﬀer from the mean of the treated outcomes. By randomizing, you will make it impossible for people to self-select in or out of a treatment!</li>
+<li>Implementation of “randomization” can be achieved by - for example - tossing a (fair) coin. –&gt; this is difficult to implement because not all people want // need a treatment to begin with (= there are often debates where such “randomized experiments” are seen as unethical!)</li>
+</ul>
+</div>
+<div id="dummy-variables" class="section level2">
+<h2><span class="header-section-number">7.14</span> Dummy Variables</h2>
+<ul>
+<li>You can also use other numbers than 0 or 1 to define a dummy. However, 0 and 1 is easier to interpret.</li>
+<li>If you estimate a model without(!!) a constant, then you can include all dummies. However, you cannot add all dummies from a category (for example you cannot add female &amp; male into one regression, when these two are the only gender-dummies), otherwise you will run into a multicolinearity problem.</li>
+</ul>
+</div>
+<div id="implication-of-statistically-significant-coefficients" class="section level2">
+<h2><span class="header-section-number">7.15</span> Implication of statistically significant coefficients</h2>
+<ul>
+<li>If a coefficient is statistically significant, it means that we have strong evidence for an association between X and Y! (very relevant for my Master-Thesis!) –&gt; thus, if you don’t find a statistically significant coefficient, you don’t have, you will never have enough evidence for a causal effect!</li>
+</ul>
+</div>
+<div id="linear-probability-model-vs.-probit-model-comparison" class="section level2">
+<h2><span class="header-section-number">7.16</span> Linear probability model VS. Probit model: comparison</h2>
+<ul>
+<li>A good rule-of-thumb is that the probit model’s prediction are similar to those of the linear probability model near the sample mean of X but can be very different far from the sample mean!</li>
+</ul>
+</div>
+<div id="heterogeneous-treatment-effects-interaction-terms" class="section level2">
+<h2><span class="header-section-number">7.17</span> Heterogeneous treatment effects // interaction terms</h2>
+<ul>
+<li>The three categories of different heterogeneous treatment effects are:
+<ol style="list-style-type: decimal">
+<li>Continuous * Dummy</li>
+<li>Dummy * Dummy</li>
+<li>Continuous * Continuous</li>
+</ol></li>
+</ul>
+</div>
+<div id="definitions-of-bad-controls" class="section level2">
+<h2><span class="header-section-number">7.18</span> Definitions of “bad controls”</h2>
+<ul>
+<li>If the treatment can strongly influence some of your variables you control for, they are “bad controls”!</li>
+</ul>
+</div>
+<div id="fixed-effects-fe" class="section level2">
+<h2><span class="header-section-number">7.19</span> Fixed effects // FE</h2>
+<ul>
+<li><u>Definition</u>: By using fixed effects, one controlls for all the factors that differ across(!) groups, like districts (if you use for example “district fixed effects”) that are time-invariant!Therefore, any differences that vary across districts (and don’t change over time within a particular district) are controlled for. Instead, the regression exploits variation of the X-variable that vary within groups.
+<ul>
+<li>Note: when you deal with cross-sectional data and use FEs, you controll for all the factors that differ across(!) groups. You cannot include time FE in a cross-section, since you only have observations for a particular point in time (not like panel data, where you have multiple observation for an agent over time, and thus there you can include time FE).</li>
+</ul></li>
+<li>Intuition, why you controll for all factors that vary across districts: in a regression, you want a counterfactual that - ideally - only differs from your population of interest by the treatment. FE is a powerful tool to construct a better counterfactual, because it allows you to group the data and thus make comparisons within those different groups!</li>
+<li>What does FEs not control for? –&gt; However, note that you need to control for all factors which vary within a district if you use FEs!</li>
+<li>Key requirement to use FEs: have multiple observations within a group! However, be aware that there will ALWAYS be other unobserved factors that could explain your results. The question is how important those other factors are, and whether they are correlated with the variable of interest (such as RTML reception in Rwanda example).</li>
+<li>intuition for Time FEs: schlecht erklärt in Handouts, aber ich habe eine gute Visualisierung –&gt; stelle dir zwei benachbarte Regionen vor: ZH und Aargau –&gt; wenn ich jetzt Time-FEs habe in einer Regression, kontrolliere ich für folgendes:
+<ul>
+<li>Alle Faktoren, die sich über die Zeit verändern ABER beide Regionen GLEICH STARK “hitten” (–&gt; zum Beispiel BIP-Growth Rates der SCHWEIZ oder global economic conditions, welche sich über die Zeit verändern, aber wahrscheinlich diese beiden Nachbar-Regionen gleich stark beeinflussen)</li>
+<li>für was hier jedoch NICHT kontrolliert wird, sind zum Beispiel Faktoren wie REGIONALE BIP-Growthrates REGIONALE crime rates // ein Meteoriteinschlag in Zürich, aber NICHT in Aargau</li>
+<li>deine Aufgabe als Forscher ist nun herauszufinden: welche dieser Faktoren für dein Modell jetzt relevant? –&gt; folglich weisst du auch, was die Faktoren sind, die durch Time FEs nicht kontrolliert werden und somit kannst du - hoffentlich - dafür kontrollieren!</li>
+</ul></li>
+<li>intuition for region FEs: schlecht erklärt in Handouts, aber ich habe eine gute Visualisierung:
+<ul>
+<li>wie vorher: zwei Nachbar-Regionen, Zürich und Aargau –&gt; nun hat man region FEs in Regression. Diese kontrollieren für:
+<ol style="list-style-type: decimal">
+<li>Alle Faktoren, die sich zwischen Zürich und Aargau unterscheiden ABER über die Zeit sich nicht verändern // ZEITINVARIABEL sind (–&gt; zum Beispiel ein SCHWEIZER Gesetz, das nur auf den Aargau abzielt und welches sich über die (vom Forscher betrachtete // fixierte) Zeitperiode NICHT verändert hat oder die unterschiedliche Geographie der beiden Regionen (wird sich wohl kaum verändern über die betrachtete Zeit) oder meistens auch Bevölkerungszusammensetzung (unterscheiden sich zwischen ZH und AR, aber bleiben meist konstant über die Betrachtungsperiode)</li>
+</ol></li>
+</ul></li>
+<li>indexing coefficients: when you use FEs, the index for the coefficients are the groups. —&gt; example: when you use time-FEs, the index will be time. Or, if you use region-FE, the index will be regions</li>
+<li>usage of causal language: you can use causal language when interpreting the FEs coefficients if you are convinced that the Fixed effects have eliminated the main threats to internal validity!</li>
+<li>„controlling for Time FEs“, how to make a coefficient interpretation? –&gt; when interpreting a coefficient while using Time FEs: On average and”controlling for time trends"(!!), a unitary increase in X is associated with an YZ-change in Y.</li>
+</ul>
+</div>
+<div id="cross-sectional-data" class="section level2">
+<h2><span class="header-section-number">7.20</span> Cross-sectional Data</h2>
+<ul>
+<li><strong>Definition</strong>: Cross-sectional Data is data from one moment in time.</li>
+<li><strong>Conditions to use FE for cross-sectional data</strong>: you can use FEs, if your data:
+<ol style="list-style-type: decimal">
+<li>contains groups AND</li>
+<li>if your groups have at least 2 observations</li>
+</ol></li>
+</ul>
+</div>
+<div id="panel-data" class="section level2">
+<h2><span class="header-section-number">7.21</span> Panel Data</h2>
+<ul>
+<li><strong>Definition</strong>: Observing outcomes in the same units // of the same individuals // of the same states (etc.) in multiple moments in time (years). –&gt; note: you observe for example the beer-tax over multiple periods of times for many different states, e.g. we can do a cross-section analysis &amp; analysis over time!</li>
+<li><strong>Fixed Effects with Panel Data</strong>: panel data allows us to:
+<ol style="list-style-type: decimal">
+<li>You can do Time Fixed effects, which control for all factors that differ over time but are constant across units, for example globalisation or price level –&gt; both vary over time but are the same across states // units</li>
+<li>You can do state fixed effects, e.g. you control for factors that differ across states but stay the same over time (= e.g. needs to be time invariant factors within the state // not change over time within the state).</li>
+</ol></li>
+</ul>
+</div>
+<div id="difference-in-differences" class="section level2">
+<h2><span class="header-section-number">7.22</span> Difference-in-Differences</h2>
+<ul>
+<li><strong>Key assumption that needs to be satisfied with DiD</strong>: parallel trend assumption –&gt; this means: in the absence of treatment(!) // policy change, the treatment group would have had the same mean change(!!) in outcomes (X) as the control group
+<ul>
+<li>Wichtige Bemerkungen:
+<ol style="list-style-type: decimal">
+<li>The parallel assumtion cannot be tested, because we NEVER observe the counterfactual! BUT what you can do is to observe multiple data-points over time BEFORE treatment and look if the treatment- and control-group have similar trends –&gt; then you can look if they move in the same direction (this is what you want to have a good DiD).</li>
+<li>This assumption does not require the treatment group to have the same level(!!) of Y for the treatment and the control group, either before or after, the policy change!</li>
+</ol></li>
+</ul></li>
+<li><strong>If the parallel trend assumption is satisfied</strong>, then the DiD technique allows you to control for variables that differ across the groups but are constant over time (within the group –&gt; for example district FEs) and also allows you to control for variables that differ over time but are contstant across the groups (within the determined time period –&gt; e.g. time FEs)</li>
+<li><strong>Examples</strong>:
+<ol style="list-style-type: decimal">
+<li>other policies that don’t change over this period but vary across the districts (abgedeckt durch district FEs);</li>
+<li>global policies, that affect both regions the same (time FEs absorbs that);</li>
+<li>one example that you would absolutely need to control for in a Diff-in-Diff in the Card &amp; Kruger paper would be „distance to New Jersey", because - after treatment - people near the border would start to head to New Jersey to gain more money because the policy changed rised it in New Jersey, but not in the neighboring state Pensylvania.</li>
+</ol></li>
+<li><strong>Requirements to use Diff-in-Diff</strong>:
+<ol style="list-style-type: decimal">
+<li>you need to divide the world into 2 time periods: before &amp; after treatment.</li>
+<li>You need two groups: 1) treatment-group &amp; 2) control-group.</li>
+<li>Parallel trend assumption needs to hold, otherwise the results are biased.</li>
+</ol></li>
+</ul>
+</div>
+<div id="instrumental-variables-iv" class="section level2">
+<h2><span class="header-section-number">7.23</span> Instrumental variables // IV</h2>
+<ul>
+<li><strong>Requirements to use IV</strong>: the instrument needs to be valid, which means:
+<ol style="list-style-type: decimal">
+<li>corr(Z, coefficient of interest X(1)) &gt; OR &lt; 0 &lt;–&gt; relevance assumption</li>
+<li>corr(Z, u) = 0 &lt;–&gt; exogeneity assumption // exclusion restriction (= Synonyme)</li>
+</ol>
+<ul>
+<li><u>Wichtige Bemerkung hier</u>: it is NOT possible to test whether an instrument is valid. To be more precise: only the relevance assumption can be tested, but you cannot(!!) test the exogeneity assumption // exclusion restriction. —&gt; You can try and convince your readers and argue in favor of the exogeneity assumption by testing if the differences between two groups are not statistically significant from each other (and that the instrument is indeed a random process which is independent from every variable)</li>
+</ul></li>
+<li><strong>Key (assumption)</strong>: The instrument Z should affect the outcome Y ONLY through the variable X, and not through any other(!) channel (e.g. Z –&gt; u –&gt; Y darf nicht sein!)</li>
+<li><strong>What is the First-Stage and why do you have to look at it?</strong>
+<ol style="list-style-type: decimal">
+<li>you want to show that the relevance assumption is satisfied, e.g. that there is indeed a correlation between your instrument and your coefficient of interest.</li>
+<li>you want a strong instrument, e.g. you want to see a statistical significance of at least 5% on your Z-variable.</li>
+</ol></li>
+<li><strong>What is the Reduced-Form and why do you look at it?</strong> —&gt; You regress the outcome Y directly(!) on the instrument, without including your “X” in this regression.</li>
+<li><strong>What is the “2 Stage-Least-Squares” regression?</strong> —&gt; this is the regression where you regress your Y on your estimated(!!) coefficient of interest (your statistical software skips the first stage). –&gt; by doing this you only use that part of the variation in your coefficient of interest “X”, that is due to the instrument “Z” which only correlates with “X” and NOT with other unobserved variables in the error-term “u”. —&gt; when you do an IV-Regression, you need to show this. It contains a First-Stage, where you regress your X (= coefficient of interest) on your instrument Z and a reduced form</li>
+<li><strong>Usage of causal language?</strong> —&gt; at the 2SLS, you can use causal languange, if you assume the instrument to be valid (bzw. if you assume the exclusion restriction holds!)</li>
+<li><strong>How to get the 2SLS-coefficient of interest if you only have the coefficients for the Reduced Form and the First Stage?</strong> –&gt; <u>Berechnung</u>: 2SLS = Reduced Form / First Stage</li>
+<li><strong>LATE // Local average treatment effects</strong> –&gt; Estimates generated from instrumental variables are based on the individuals whose behavior is affected by the instrument. Thus, people refer to instrumental variable estimates as “local average treatment effects (= LATE)”, because these estimates are the average effects for a SUBSET (i.e. local part) of the population.</li>
+<li><strong>Use of more than 1 instrument</strong>: You can use more than 1 instrument. However, all instrument need to be valid &amp; you need to include all instruments as explanatory variables in the estimation of the first stage.</li>
+</ul>
+</div>
+<div id="regression-discontinuity-design-rdd" class="section level2">
+<h2><span class="header-section-number">7.24</span> Regression discontinuity design // RDD</h2>
+<ul>
+<li><strong>Requirement to RDD?</strong> –&gt; You need to have a “Cutoff Score” (= Assignment variable? –&gt; Synonyme?) which decides whether you get treated or not. This cutoff score needs to be a continuous variable.</li>
+<li><strong>3 Assumptions for the RDD that you need to check</strong>:
+<ol style="list-style-type: decimal">
+<li>Whether an individual gets treated should ONLY depend on the cutoff score! If - for example - an individual can still decide whether he participates in the treatment or not AFTER he knows his cutoff score, this assumotion is violated!</li>
+<li>The individuals cannot(!) perfectly control the cutoff score.</li>
+<li>The assignment variable // cutoff score cannot(!) be caused by the treatment or the outcome (of the treatment?) –&gt; reverse causality –&gt; Y-variable wird zur X-variable und X-variable zur Y-Variable…</li>
+</ol></li>
+<li><strong>Which people do we compare in an RDD?</strong> —&gt; In a RDD, we only compare our individuals exactly above and below the treatment. That’s why we can say that - whether these indivuals receive the treatment or not - is basically random! The fact that those two individual being treated or not is random is nice, because the variable becomes basically independent (no correlation) from all other factors that we cannot conrtrol for.</li>
+<li><strong>External validity with RDD?</strong> In an RDD, we compare the two individuals just above &amp; below the threshold value, e.g. we compare the very first person that does not get the treatment with the last person who gets treated. Generally, this generates precise and valid estimates (that are causal) –&gt; high internal validity. But because we look at two precise individuals when estimating our effect, the estimated effects are not generalizable, but rather: they estimate a local treatment effect, which can at most be applied to the individuals just around the threshold, but not for the rest of the sample!</li>
+</ul>
+</div>
+<div id="coded-algorithms-r-functions" class="section level2">
+<h2><span class="header-section-number">7.25</span> Coded Algorithms &amp; R-Functions</h2>
+<ul>
+<li><strong>Monte Carlo Simulation</strong>: PS1, empirical methods, File: „ExpoR“</li>
+<li><strong>Construct a Scatterplot (= Streudiagramm) for the residuals</strong>, where you have the residuals on the Y-axis and a certain regressor on the X-Axis (—&gt; in order to check if A3 is satisfied): PS1, empirical methods, File: „Cigs“: Zeilen 20-33 (—&gt; Bemerkung: viel Zusatz, aber nützlicher Zusatz!)</li>
+<li><strong>Construct a normal distribution</strong>: PS1, empirical methods, File: „Cigs“: Zeilen 29-33</li>
+<li><strong>Do an F-Test to check joint hypothesis</strong>: PS2, empirical methods, „PS2“: Zeilen 5-9 &amp; 45-49</li>
+<li><strong>Make a confidence intervall out of a regression</strong>: PS3, empirical methods, „PS3“: Zeilen 15-28</li>
+<li><strong>Only take the coefficient from a summary(regression_1) code</strong>: PS4, empirical methods, „PS4“: Zeilen 35; Zeilen 44-46</li>
+<li><strong>Reformulate a dataset, such that the unit of observation is not „the twin“, but rather the „family“</strong>: —&gt; PS4, empirical methods, „PS4“: Zeilen 52</li>
+<li><strong>Sort a dataset and only display some information &amp; drop some observations: PS4, empirical methods, „PS4“</strong>: Zeilen 83-84</li>
+<li><strong>Ommit NAs by looking at one particular column, from which you want to eliminate every NAs</strong>: Replication of Bonjour stud, lifestyle seminar, „Replication“: Zeilen 81-82</li>
+<li><strong>Make a beautiful table with two vectors (which are transformed to a dataframe)</strong>: Replication of Bonjour stud, lifestyle seminar, „Replication“: Zeilen 163-182</li>
+<li><strong>Randomly add a person to a treatment group &amp; others to the control group</strong>: PS2, PeCi , „PS2“, Zeilen 119-121, Rmarkdown file</li>
+<li><strong>Calculate means for treatment and control groups &amp; apply a t-test to see if they differ from each other in their characteristics</strong>: PS2, PeCi , „PS2“, Zeilen 129-133</li>
+<li><strong>Breusch-Pagan Test to test for heteroscedastic variances</strong>: PS3, PeCi, Aufgabe 2 a), Zeilen 66-68</li>
+<li><strong>Implementation of heterogeneous Treatment effects</strong>: PS3, PeCi, Aufgabe 4 a), Zeilen 112-118 &amp; 130-133</li>
+<li><strong>Calculate the average (total) treatment out of (multiple) heterogeneous treatment effects</strong>: PS3, PeCi, Aufgabe 4 b), Zeilen 137-139</li>
+<li><strong>Comparison of means in a DiD setting // summary statistics of a dataset using stargazer</strong>: PS5, Aufgabe 3 a), Zeilen 189-206</li>
+</ul>
+</div>
+<div id="nützliche-funktionen-r" class="section level2">
+<h2><span class="header-section-number">7.26</span> Nützliche Funktionen R:</h2>
+<ul>
+<li><strong>Count number of observations</strong>:
+<ul>
+<li><code>NROW(dataset)</code>: counts the number of rows (= Zeilen = Anzahl Beobachtungen), OR</li>
+<li><code>dim(dataset)</code>: the first number would be the number of observations, the second one is the number of variables in the dataset</li>
+</ul></li>
+<li><strong>Summary statistics of each variable in the dataset</strong>:
+<ul>
+<li><code>summary(dataset)</code></li>
+</ul></li>
+<li><strong>Simple linear bivariate regression model</strong>:
+<ul>
+<li><code>lm(data$cigs ~ data$educ)</code></li>
+</ul></li>
+<li><strong>Simple linear regression without a constant</strong>:
+<ul>
+<li><code>lm(data$cigs ~ data$educ + 0)</code>, wobei hier zu beachten gilt, dass <code>lm(y ~ x)</code></li>
+</ul></li>
+<li><strong>Simple coefficient summary of a regression model</strong>:
+<ul>
+<li><code>summary(regression_model)</code></li>
+</ul></li>
+<li><strong>Autocorrelation-function // ACF</strong>:
+<ul>
+<li><code>acf(residual, main=„title of the plot)</code>, need this to check A4 of the CLRM</li>
+</ul></li>
+<li><strong>Create a dummy with one condition</strong>:
+<ul>
+<li><code>ifelse(data$educ &gt;= 16, 1, 0)</code></li>
+</ul></li>
+<li><strong>Append new vector (of same length as the dataset) to a dataset</strong>:
+<ul>
+<li><code>data.frame(dataset, dummy_university, log-educ)</code></li>
+</ul></li>
+<li><strong>Build a subset of a dataset</strong>:
+<ul>
+<li><code>subset &lt;- subset(data, data$female ==0)</code></li>
+</ul></li>
+<li><strong>Make a scatterplot (= Streuungsdiagram)</strong>:
+<ul>
+<li><code>plot(x, y, options)</code></li>
+</ul></li>
+<li><strong>Make a histogram</strong>:
+<ul>
+<li><code>hist(X, options)</code></li>
+</ul></li>
+<li><strong>Adding new variable to the dataset</strong>:
+<ul>
+<li><code>data[„new-variable“] &lt;- data$educ*data$noob</code></li>
+</ul></li>
+<li><strong>Select a particular coefficient in your regression</strong>:
+<ul>
+<li><code>regression$coefficients[5]</code>, Achtung: bei der selection wird der intercept mit in den code berücksichtigt!! Man hat also scho +1 gemacht, das wäre also der coefficient der 4. Variable!!</li>
+</ul></li>
+<li><strong>Create a confidence intervall vector</strong>:
+<ul>
+<li><code>predict(regression, intervall=„confidence“, level=.95)</code></li>
+</ul></li>
+<li><strong>Delete a whole column (= variable) from a dataset</strong>:
+<ul>
+<li><code>dataset$female &lt;- NULL</code></li>
+</ul></li>
+<li><strong>Tell R in which format a date (= Datum) is</strong>:
+<ul>
+<li><code>dataset$arrest_date &lt;- as.Date(datase$arrest_date, format =„%m/%d/%Y“)</code></li>
+</ul></li>
+<li><strong>Umbenennung einer Spalte mit einem Spalten-Namen, welcher mehr Sinn macht</strong>:
+<ul>
+<li><code>data$white_crime &lt;- data$PERP_RACE_WHITE</code></li>
+</ul></li>
+</ul>
+</div>
+<div id="useful-econometrics-documents" class="section level2">
+<h2><span class="header-section-number">7.27</span> Useful Econometrics documents:</h2>
+<ul>
+<li><strong>Datascience</strong>:
+<ul>
+<li>Datascience cheat-sheat:<a href="https://storage.ning.com/topology/rest/1.0/file/get/1211570060?profile=original" class="uri">https://storage.ning.com/topology/rest/1.0/file/get/1211570060?profile=original</a></li>
+<li>r-graph-gallery.com</li>
+<li>python-graph-gallery.com</li>
+</ul></li>
+<li><strong>Different Statistical Tests &amp; Models</strong>:
+<ul>
+<li>Common statistical tests are linear models: <a href="https://lindeloev.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf" class="uri">https://lindeloev.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf</a></li>
+<li>Statistical Power Calculator: <a href="http://powerandsamplesize.com" class="uri">http://powerandsamplesize.com</a></li>
+</ul></li>
+<li><strong>Difference-in-Differences // DiD</strong>:
+<ul>
+<li>Revisitting parallel trend assumption: <a href="https://blogs.worldbank.org/impactevaluations/revisiting-difference-differences-parallel-trends-assumption-part-i-pre-trend" class="uri">https://blogs.worldbank.org/impactevaluations/revisiting-difference-differences-parallel-trends-assumption-part-i-pre-trend</a></li>
+</ul></li>
+<li><strong>Machine Learning</strong>:
+<ul>
+<li>Fussball Machine Learning code in python: <a href="https://mariamsulakian.com/2018/02/01/machine-learning-predicting-the-2018-epl-matches/" class="uri">https://mariamsulakian.com/2018/02/01/machine-learning-predicting-the-2018-epl-matches/</a></li>
+</ul></li>
 </ul>
 
 </div>
