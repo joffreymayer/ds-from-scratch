@@ -157,3 +157,6 @@ english-words-synonyme
 allgemeines
 statistics-formulas
 definitionen
+different-tests-vorgehen-bei-den-tests
+diverse-berechnungen
+accept-reject-null-hypothesis
