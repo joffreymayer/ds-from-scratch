@@ -598,7 +598,9 @@ Zur Illustration des `Data Flows`, gab es hierzu im Wissensaustausch auch eine B
 
 ### Data Science
 
-- batch = sample-size when you train your model with a dataset
+- **bias**:
+![This is the definition, Google-Researchers gave to `bias`.](./bilder/home/def-bias-from-google.png)
+- **batch**: sample-size when you train your model with a dataset
 - Granularität (Beispiel) = Angenommen, man möchte wissen, wie viele Tage, Stunden, Minuten und Sekunden innerhalb von 20'044 Sekunden enthalten sind &#8594; hier haben wir also *Granularität von 4* &#8594; <u>Lösung</u>: 4 Tage, 18 Stunden, 37 Minuten, 44 Sekunden
 - Kalibrierung des Modells == Wie wurde das Modell programmiert im Allgemeinen? &#8594; Dazu gehört - bei uns - die Anpassung der Prognose.
 - label == true y-value
