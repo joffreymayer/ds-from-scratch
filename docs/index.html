@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-01-16" />
+<meta name="date" content="2022-04-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -332,7 +332,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Data Science from Scratch Code</h1>
 <p class="author"><em>Joffrey Anthony</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2022-01-16</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>2022-04-19</em></p>
 </div>
 <div id="computer-set-up" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Computer Set-Up</h1>
@@ -859,16 +859,22 @@ Leider wird der Befehl <code>git add</code> oft missverstanden. Viele assoziiere
 </div>
 <div id="restful-api" class="section level3">
 <h3><span class="header-section-number">1.8.4</span> Restful API</h3>
+<p>In a Rest API, every</p>
 <blockquote>
 <p>What are <strong>Rest APIs</strong>?</p>
 </blockquote>
 <ul>
 <li><p><u>Synonym</u>: Restful APIs</p></li>
-<li><p><u>Defintion</u>: API stands for <em><u>A</u>pplication <u>P</u>rogramming <u>I</u>nterface</em>. An API is a contract that allows a developer (= you) to interact with an “application” (= a database // the object of interest) through a set of “interfaces” (= list of URLs // this is <em>how</em> you are able to interact with the “application”, which can be an App, a library in R / Python or a Database).</p>
+<li><p><u>Defintion</u>: API stands for <em><u>A</u>pplication <u>P</u>rogramming <u>I</u>nterface</em>. It <strong>is a way for 2 computers to “talk” // communicate with each other</strong>. During the talk, one computer sends a “request”, while the other sends the “response”. <em>How is this possible?</em> In order for you to use an API (e.g. to enable the “talking” between the computers), you need to write code to explicitly “request” data from a server // computer. Most APIs in the world are <strong>“restful”</strong>, e.g. they follow some set of rules // constraints known as “representational state transfer”, which is the “gold-standard” for API-development since the early 2000’s (invented by <strong>Roy Fielding</strong>, in its PhD dissertation).</p>
+<ul>
+<li><u>Example</u>: If you are a “noob”, you can retrieve the NASA-images of asteroids by looking at their websites. However, you could also use NASA’s “Rest API” to get the data via a <code>.json</code>-file.</li>
+<li><u>How it works?</u>: From a architecture point a view, a Rest API, organizes “data entities” // resources into a bunch of unique URLs. Well, technically speaking, they are NOT URLs, but rather “URIs” (aka “uniform resource identifier”), which identifies exactly each data-resource on the server. A client can then retrieve // get the data about a resource by making a request to the server // “endpoint” (over the “http”-protocol). This request has a very specific format, see <a href="https://www.youtube.com/watch?v=-MTSQjw5DrM&amp;t=103s">this youtube-video (ab 1:03)</a>.</li>
+<li><u>“Stateless” Architecture (key to know)</u>: The two parties // computers <strong>don’t need to store any information about each other</strong> <u>AND</u> every “request-response”-cycle is <strong>independent</strong> from another “request-response”-cycle. These two characteristics are important, because it leads to an application that is <strong>predictable</strong> AND <strong>reliable</strong>.
 <ul>
 <li>Quelle: <a href="https://pokeapi.co/about">Pokemon-API</a></li>
 </ul></li>
-<li><p><u>Zusammengefasst in meinen Worten</u>: <strong>Ein API sind Befehle, die du gibst, um mit einer Datenbank (z.B. auf einem Server) zu kommunizieren oder ein Package (in R oder Python) zum runnen zu bringen.</strong> Ganz einfach xD</p></li>
+</ul></li>
+<li><p><u>Zusammengefasst in meinen Worten</u>: <strong>Ein API sind Befehle, die du gibst, um mit einer Datenbank (z.B. auf einem Server) zu kommunizieren ODER ein Package (in R oder Python) zum runnen zu bringen.</strong> Ganz einfach xD</p></li>
 <li><p><u>Background Client-Server Architecture</u>: most of the applications these days, follow this architecture.</p>
 <ul>
 <li>Client == App itself == Front-End</li>
@@ -1095,8 +1101,9 @@ The researchers find that <strong>the majority of authors who used TensorFlow in
 <li><em>cached</em> == store away for future use</li>
 <li><em>Client</em> == Damit ist häufig der Browser gemeint, wenn er Abfragen an den Server gibt.</li>
 <li><em>composite</em> == custom</li>
+<li><em>fetch data</em> == retrieve data</li>
 <li><em>Remote</em> == Das ist z.B. ein Server / eine Maschine, die du nicht lokal bedienst.</li>
-<li>Rest API == Restful API</li>
+<li><em>Rest API</em> == Restful API</li>
 <li><em>instanziieren</em> == Das Erzeugen eines Objekts in der objektorientierten Programmierung.</li>
 </ul>
 </div>

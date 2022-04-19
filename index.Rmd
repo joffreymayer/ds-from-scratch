@@ -483,13 +483,18 @@ That's why it is form utmost importance to know each field's jargon. I firmly be
 Das ist das RStudio von Python.
   
 ### Restful API
+
+In a Rest API, every
   
 > What are **Rest APIs**? 
 
 - <u>Synonym</u>: Restful APIs
-- <u>Defintion</u>: API stands for *<u>A</u>pplication <u>P</u>rogramming <u>I</u>nterface*. An API is a contract that allows a developer (= you) to interact with an "application" (= a database // the object of interest) through a set of "interfaces" (= list of URLs // this is *how* you are able to interact with the "application", which can be an App, a library in R / Python or a Database).
+- <u>Defintion</u>: API stands for *<u>A</u>pplication <u>P</u>rogramming <u>I</u>nterface*. It **is a way for 2 computers to "talk" // communicate with each other**. During the talk, one computer sends a "request", while the other sends the "response". *How is this possible?* In order for you to use an API (e.g. to enable the "talking" between the computers), you need to write code to explicitly "request" data from a server // computer. Most APIs in the world are **"restful"**, e.g. they follow some set of rules // constraints known as "representational state transfer", which is the "gold-standard" for API-development since the early 2000's (invented by **Roy Fielding**, in its PhD dissertation).
+  - <u>Example</u>: If you are a "noob", you can retrieve the NASA-images of asteroids by looking at their websites. However, you could also use NASA's "Rest API" to get the data via a `.json`-file.
+  - <u>How it works?</u>: From a architecture point a view, a Rest API, organizes "data entities" // resources into a bunch of unique URLs. Well, technically speaking, they are NOT URLs, but rather "URIs" (aka "uniform resource identifier"), which identifies exactly each data-resource on the server. A client can then retrieve // get the data about a resource by making a request to the server // "endpoint" (over the "http"-protocol). This request has a very specific format, see [this youtube-video (ab 1:03)](https://www.youtube.com/watch?v=-MTSQjw5DrM&t=103s).
+  - <u>"Stateless" Architecture (key to know)</u>: The two parties // computers **don't need to store any information about each other** <u>AND</u> every "request-response"-cycle is **independent** from another "request-response"-cycle. These two characteristics are important, because  it leads to an application that is **predictable** AND **reliable**.
 	- Quelle: [Pokemon-API](https://pokeapi.co/about)
-- <u>Zusammengefasst in meinen Worten</u>: **Ein API sind Befehle, die du gibst, um mit einer Datenbank (z.B. auf einem Server) zu kommunizieren oder ein Package (in R oder Python) zum runnen zu bringen.** Ganz einfach xD
+- <u>Zusammengefasst in meinen Worten</u>: **Ein API sind Befehle, die du gibst, um mit einer Datenbank (z.B. auf einem Server) zu kommunizieren ODER ein Package (in R oder Python) zum runnen zu bringen.** Ganz einfach xD
 - <u>Background Client-Server Architecture</u>: most of the applications these days, follow this architecture.
   - Client == App itself == Front-End
   - Server == Back-End
@@ -673,8 +678,9 @@ Zur Illustration des `Data Flows`, gab es hierzu im Wissensaustausch auch eine B
 - *cached* == store away for future use
 - *Client* == Damit ist häufig der Browser gemeint, wenn er Abfragen an den Server gibt.
 - *composite* == custom
+- *fetch data* == retrieve data
 - *Remote* == Das ist z.B. ein Server / eine Maschine, die du nicht lokal bedienst.
-- Rest API == Restful API
+- *Rest API* == Restful API
 - *instanziieren* == Das Erzeugen eines Objekts in der objektorientierten Programmierung.
 
 ## Projekt-Management

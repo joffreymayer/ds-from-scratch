@@ -150,6 +150,10 @@ Ein Beispiel für ein RNN wäre ein `Long Short Term Memory` Modell (LSTM Modell
 
 ### Data-Pipelines
 
+**Data Pipelines use an input to produce an output and then - on a second step - use the produced output as an input to produce another output etc...**
+
+- <u>Visualisierung</u>: Du kannst dir unter _Data Pipelines_ nichts anderes als eine "Guetzli Fabrik" vorstellen, welche diverse Produktionsmaschinen verwendet - zum Beispiel einen Teig-Cutter, dann einen Butter-Schmierer, sowie einen fetten Ofen und einen Sortierer von "guten VS. schlechte Guetzli" - um die Inputs immer weiter zu verarbeiten, sodass schlussendlich ein Endprodukt (= die fertigen "Guetzli") ensteht, dass man verkaufen kann.
+
 > [How to create good Data-Pipelines in Scikit-Learn?](https://www.youtube.com/watch?v=w9IGkBfOoic)
 
  - <u>Ziel von Data-Pipeline</u>: Write more clean // readable code, especially when you do <em>data cleaning</em>. **A datapipeline is basically a way of standardizing your code**.
