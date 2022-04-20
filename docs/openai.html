@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Python Libraries | Data Science from Scratch Code</title>
-  <meta name="description" content="Chapter 3 Python Libraries | Data Science from Scratch Code" />
+  <title>Chapter 8 OpenAI | Data Science from Scratch Code</title>
+  <meta name="description" content="Chapter 8 OpenAI | Data Science from Scratch Code" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Python Libraries | Data Science from Scratch Code" />
+  <meta property="og:title" content="Chapter 8 OpenAI | Data Science from Scratch Code" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Python Libraries | Data Science from Scratch Code" />
+  <meta name="twitter:title" content="Chapter 8 OpenAI | Data Science from Scratch Code" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="foundations-of-data-science.html"/>
-<link rel="next" href="visualization.html"/>
+<link rel="prev" href="econometrics.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -336,139 +336,61 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="python-libraries" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Python Libraries</h1>
-<div id="list-of-useful-python-libraries" class="section level2">
-<h2><span class="header-section-number">3.1</span> List of Useful Python-Libraries</h2>
-<div id="put-a-time-stamp-on-each-python-cell" class="section level3">
-<h3><span class="header-section-number">3.1.1</span> Put a time-stamp on each Python-Cell</h3>
-<p>The <code>ipython-autotime</code> library is particularly useful to get an overview of <strong>how long each Python-Cell</strong> takes to be executed.</p>
-<p>You can even use it for debugging in combination with the <code>datetime</code>-library in order to use <code>print()</code>-statements that gives you <strong>the run-time of - for example - each model-fiting iteration (in a loop)</strong>.</p>
-<div id="installation" class="section level4">
-<h4><span class="header-section-number">3.1.1.1</span> Installation</h4>
-<p>To install this wonderful</p>
-<pre><code>pip install ipython-autotime</code></pre>
-</div>
-<div id="activation" class="section level4">
-<h4><span class="header-section-number">3.1.1.2</span> Activation</h4>
-<p>It uses a <code>Python Magic-Command</code> in order to be able to use this library:</p>
-<pre><code>%load_ext autotime</code></pre>
-</div>
-</div>
-</div>
-<div id="necessary-foundations" class="section level2">
-<h2><span class="header-section-number">3.2</span> Necessary Foundations</h2>
-<div id="pandas" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> Pandas</h3>
-</div>
-<div id="loc--vs.-iloc-selection" class="section level3">
-<h3><span class="header-section-number">3.2.2</span> <code>loc</code>- VS. <code>iloc</code>-Selection</h3>
-<p><code>loc</code> &amp; <code>iloc</code> are the “accessor operators” in the <code>pandas</code>-library. With these,, you can <u>select</u> rows and columns in your dataframe:</p>
+<div id="openai" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> OpenAI</h1>
+<p>Here is the link in order for you to play around: <code>https://beta.openai.com/playground</code></p>
 <ul>
-<li><p><u>For <code>loc</code></u>: Based on the <em>name</em> of the rows (= row-label // row-index)
-and columns.</p></li>
-<li><p><u>For <code>iloc</code></u>: Based on the <u>position</u> // where the specific rows &amp; columns are within the dataset.</p></li>
+<li><u><strong>Achtung</strong></u>: <em>Even if you play around on the “playground”-area, you will get charged! <code>OpenAI</code> treats “Playground” the same, as the usage from the regular API. You can see how much you are billed by navigating to this link: <code>https://beta.openai.com/account/usage</code>.</em></li>
+</ul>
+<p>Open AI is a non-profit organisation that uses NLP-Models (with Deep-Learning) to be able to understand the context of - for example - questions and <strong>generate content on its own</strong>! But it goes even further than that.: <a href="https://www.youtube.com/watch?v=alJdw4JDJ4o">in his youtube-video</a>, <code>Fireship.io</code> talks about <code>OpenAI</code> creating art, e.g. the computer is able to draw for you!</p>
+<p>It is awesome! The guy / team who created this, truly is / are admirable and has / have surely put an incredible amount of effort in it! :O</p>
+<div id="what-can-openai-do-the-output" class="section level2">
+<h2><span class="header-section-number">8.1</span> What can <code>OpenAI</code> do? | The Output</h2>
+<ul>
+<li><strong>Content generation</strong></li>
+<li><strong>Summarization</strong></li>
+<li>Classification, categorization, and sentiment analysis</li>
+<li><strong>Data extraction</strong></li>
+<li>Translation</li>
+<li>Many more!</li>
 </ul>
 </div>
+<div id="how-does-the-model-work-the-blueprint" class="section level2">
+<h2><span class="header-section-number">8.2</span> How does the Model work? | The Blueprint</h2>
+<p>The model predicts <strong>which text is most likely to follow the text preceding it</strong>.</p>
 </div>
-<div id="time-series-forecasting" class="section level2">
-<h2><span class="header-section-number">3.3</span> Time-Series Forecasting</h2>
-<p>Here, I will explore different libraries that will allow you to make forecasts into the future.</p>
-<div id="facebook-prophet" class="section level3">
-<h3><span class="header-section-number">3.3.1</span> Facebook Prophet</h3>
-<p>Aus einer didaktischen Perspektive ist die offizielle Dokumentation der <strong>Prophet-Library wunderbar, um die Unterschiede zwischen <code>R</code> &amp; <code>Python</code> (Objekt-Orientierte Programmierung) zu entdecken</strong>.</p>
+<div id="terminology-of-openai-api-wörterbuch" class="section level2">
+<h2><span class="header-section-number">8.3</span> Terminology of <code>OpenAI</code>-API | Wörterbuch</h2>
 <ul>
-<li><u>Link zur offiziellen Dokumentation</u>: <a href="https://facebook.github.io/prophet/docs/quick_start.html" class="uri">https://facebook.github.io/prophet/docs/quick_start.html</a></li>
-</ul>
-</div>
-<div id="sklearn" class="section level3">
-<h3><span class="header-section-number">3.3.2</span> SkLearn</h3>
-<blockquote>
-<p>In some functions, you will need to set the option <code>random_state</code>. <strong>If you want reproducible results</strong>, how do you need to handle <code>random_state</code>?</p>
-</blockquote>
-<p>Just set <code>random_state</code> to an integer. Dieser integer kann <em>beliebig</em> gewählt werden, das ist <code>SkLearn</code> egal!</p>
-</div>
-<div id="sktime" class="section level3">
-<h3><span class="header-section-number">3.3.3</span> SkTime</h3>
-<div id="sktime-api" class="section level4">
-<h4><span class="header-section-number">3.3.3.1</span> SkTime API</h4>
-<blockquote>
-<p>Überischt zum API in <code>sktime</code>?</p>
-</blockquote>
-<p>Grundsätzlich verwendet <code>sktime</code> fit-, predict-, und transform-class-methods. Um zu verstehen, was dies genau bedeutet, hier eine globalere Übersicht mit Hilfe einer Visualisierung veranschaulicht:</p>
-<div class="figure">
-<img src="./bilder/api_sktime.jpg" alt="" />
-<p class="caption">API of sktime</p>
-</div>
+<li><strong>Prompt</strong> = Input-Text you give the model. For example, this can be a question like <code>What is Economics? And what is Structural Economics?</code>.
 <ul>
-<li>For <em>estimator classes</em> (a.k.a. model classes), <code>sktime</code> provides:
-<ul>
-<li>a fit-method (= <u>goal</u>: training // estimating the model) and</li>
-<li>a predict-method (= <u>goal</u>: generate new predictions).</li>
+<li><u>Key</u>: Adding a simple adjective to our “prompt” is able to change the resulting output completely! <em>Designing your prompt is essentially how you “program” the model</em>.</li>
 </ul></li>
-<li>For <em>transformer classes</em>, <code>sktime</code> provides:
+<li><strong>Completions</strong> = This is the output of the model, for example, it would be the “prediction” // answer that the model provides for the question <code>What is Economics? And what is Structural Economics?</code></li>
+<li><strong>“Temperature”</strong> = This is a way to bring in <strong>variation in the prediction // suggested results</strong> of the model.
 <ul>
-<li>various fit-methods,</li>
-<li>various transform-methods to transform data that comes in series.</li>
+<li><u>Example</u>: If you submit the <em>same</em> prompt multiple times <strong>when the “temperature” is set to <code>0</code></strong>, the model would always return identical or very similar completions // results. If you re-submit <em>the same prompt</em> a few times <strong>with temperature set to <code>1</code></strong>, you will notice that the proposed results will be different.</li>
+<li><u>Possible Range for “temperature”</u>: You can set the parameter “temperature” with values between (and including) <code>0</code> and <code>1</code>.
+<ul>
+<li><u>Key to note</u>: “Temperature” is a value between <code>0</code> and <code>1</code> that essentially <em>lets you control how confident the model should be when making these predictions</em>. <strong>Lowering temperature towards <code>0</code> means it will take fewer risks when making a prediction</strong>.
+<ul>
+<li><u>Faustregel</u>: It’s usually best to set a <em>low</em> “temperature” for tasks <strong>where the desired output is well-defined</strong>. <em>Higher</em> “temperature” may be useful for <strong>tasks where variety OR creativity are desired</strong>.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><strong>token</strong> = You can think of tokens as pieces of words used for natural language processing. For English text, 1 token is approximately 4 characters or 0.75 words. As a point of reference, the collected works of Shakespeare are about 900’000 words or 1.2M tokens.
+<ul>
+<li><u>“Wechselkurs” Token zu Wörter</u>: 1 token = 0.75 words, also ein <strong>1:0.75 Verhältnis</strong>, dh für 1 Token erhalte ich 0.75 Wörter bzw. für 1 Wort erhalte ich 1.333 Token.</li>
+<li><u>“Wechselkurs” Token zu Zeichen</u>: 1 token = 4 Zeichen, also ein <strong>1:4 Verhältnis</strong>, dh für 1 Token erhalte ich 4 Zeichen bzw. für 1 Zeichen erhalte ich 1/4-tel Token.</li>
 </ul></li>
 </ul>
 </div>
-<div id="reduction" class="section level4">
-<h4><span class="header-section-number">3.3.3.2</span> Reduction</h4>
-<blockquote>
-<p>What does it mean: “Reduction is composable”?</p>
-</blockquote>
-<p>Ein Synonym wäre: “addieren” → E.g. you can split a difficult task into a bunch of smaller tasks (= reduction) and “add” them together to solve the bigger task at the end (= “reduction is composable”).</p>
-</div>
-<div id="forecasting-horizon" class="section level4">
-<h4><span class="header-section-number">3.3.3.3</span> Forecasting-Horizon</h4>
-<blockquote>
-<p>Welche Arten von <em>Forecasting-Horizon</em> gibt es?</p>
-</blockquote>
-<ol style="list-style-type: decimal">
-<li>Es gibt einen <strong><u>relativen</u> forecasting-horizon</strong> (FH), dh “relativ” zur Trainings-Periode ist hier gemeint!</li>
-<li>Es gibt auch einen <strong><u>absoluten</u> FH</strong>. Hier werden die <em>absolute time-points in the future</em> verwendet für die Prediction.</li>
-</ol>
+<div id="technology-behind-it-quellen" class="section level2">
+<h2><span class="header-section-number">8.4</span> Technology behind it | Quellen</h2>
 <ul>
-<li><u>Quelle</u>: <a href="https://github.com/alan-turing-institute/sktime/blob/main/examples/01_forecasting.ipynb">Im “examples”-Repository auf Github zur <code>Sktime</code>-Library &gt; 01_forecasting.ipynd</a></li>
-</ul>
-</div>
-<div id="train-test-split" class="section level4">
-<h4><span class="header-section-number">3.3.3.4</span> Train-Test Split</h4>
-<blockquote>
-<p>What do you need for parameters // inputs to write a train-test split function for time series data?</p>
-</blockquote>
-<p>You need <strong>3 arguments // inputs</strong> for such a function in time series:</p>
-<ol style="list-style-type: decimal">
-<li>the data</li>
-<li>the window length, e.g. how many periods the training dataset should have.</li>
-<li>the length of the forecasting horizon, e.g. how many periods into the future our validation-period go.</li>
-</ol>
-<ul>
-<li><u>Quelle</u>: <a href="https://www.youtube.com/watch?v=Wf2naBHRo8Q&amp;t=46m25s">Youtube-Video ab 46:25</a></li>
-</ul>
-</div>
-<div id="konkurrenz-libraries-für-time-series" class="section level4">
-<h4><span class="header-section-number">3.3.3.5</span> Konkurrenz-Libraries für Time-Series</h4>
-<blockquote>
-<p>What are other useful libraries when working with Time Series in Python?</p>
-</blockquote>
-<p>Besides <code>Sktime</code>, there are 5 other libraries in Python which you can use for different purposes:</p>
-<ul>
-<li>Stop <a href="https://www.youtube.com/watch?v=Wf2naBHRo8Q&amp;t=5m35s">this Video at 5:35</a> um zu sehen, für welche Zwecke sie sich am besten eignen.</li>
-</ul>
-</div>
-<div id="example-on-github" class="section level4">
-<h4><span class="header-section-number">3.3.3.6</span> Example on Github</h4>
-<blockquote>
-<p>In the <a href="https://github.com/alan-turing-institute/sktime/blob/main/examples/01_forecasting.ipynb"><code>example</code> Repository on Github</a>, was ist die Einheit der <em>y-variable</em> in <code>01_forecasting.ipynd</code>?</p>
-</blockquote>
-<ul>
-<li><u>Einheit der y-Variable</u>: in Monate</li>
+<li><code>Hierarchical Text-Conditional Image-Generation with CLIP-Latents</code> | Ramesh, Dhariwal</li>
 </ul>
 
-</div>
-</div>
 </div>
 </div>
             </section>
@@ -476,8 +398,8 @@ and columns.</p></li>
           </div>
         </div>
       </div>
-<a href="foundations-of-data-science.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="visualization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="econometrics.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -509,7 +431,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/joffreymayer/ds-from-scratch/edit/master/03-pyth-lib.Rmd",
+"link": "https://github.com/joffreymayer/ds-from-scratch/edit/master/08-openai.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -517,7 +439,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/joffreymayer/ds-from-scratch/blob/master/03-pyth-lib.Rmd",
+"link": "https://github.com/joffreymayer/ds-from-scratch/blob/master/08-openai.Rmd",
 "text": null
 },
 "download": null,

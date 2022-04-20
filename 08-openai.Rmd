@@ -1,0 +1,41 @@
+# OpenAI
+
+Here is the link in order for you to play around: `https://beta.openai.com/playground`
+
+- <u>**Achtung**</u>: _Even if you play around on the "playground"-area, you will get charged! `OpenAI` treats "Playground" the same, as the usage from the regular API. You can see how much you are billed by navigating to this link: `https://beta.openai.com/account/usage`._
+
+
+Open AI is a non-profit organisation that uses NLP-Models (with Deep-Learning) to be able to understand the context of - for example - questions and **generate content on its own**! But it goes even further than that.: [in his youtube-video](https://www.youtube.com/watch?v=alJdw4JDJ4o), `Fireship.io` talks about `OpenAI` creating art, e.g. the computer is able to draw for you!
+
+It is awesome! The guy / team who created this, truly is / are admirable and has / have surely put an incredible amount of effort in it! :O
+
+## What can `OpenAI` do? | The Output
+
+- **Content generation**
+- **Summarization**
+- Classification, categorization, and sentiment analysis
+- **Data extraction**
+- Translation
+- Many more!
+
+## How does the Model work? | The Blueprint
+
+The model predicts **which text is most likely to follow the text preceding it**.
+
+## Terminology of `OpenAI`-API | Wörterbuch
+
+- **Prompt** = Input-Text you give the model. For example, this can be a question like `What is Economics? And what is Structural Economics?`.
+  - <u>Key</u>: Adding a simple adjective to our "prompt" is able to change the resulting output completely! _Designing your prompt is essentially how you “program” the model_.
+- **Completions** = This is the output of the model, for example, it would be the "prediction" // answer that the model provides for the question `What is Economics? And what is Structural Economics?`
+- **"Temperature"** = This is a way to bring in **variation in the prediction // suggested results** of the model.
+  - <u>Example</u>: If you submit the _same_ prompt multiple times **when the "temperature" is set to `0`**, the model would always return identical or very similar completions // results. If you re-submit _the same prompt_ a few times **with temperature set to `1`**, you will notice that the proposed results will be different.
+  - <u>Possible Range for "temperature"</u>: You can set the parameter "temperature" with values between (and including) `0` and `1`. 
+    - <u>Key to note</u>: "Temperature" is a value between `0` and `1` that essentially *lets you control how confident the model should be when making these predictions*. **Lowering temperature towards `0` means it will take fewer risks when making a prediction**.
+      - <u>Faustregel</u>: It’s usually best to set a _low_ "temperature" for tasks **where the desired output is well-defined**. _Higher_ "temperature" may be useful for **tasks where variety OR creativity are desired**.
+- **token** = You can think of tokens as pieces of words used for natural language processing. For English text, 1 token is approximately 4 characters or 0.75 words. As a point of reference, the collected works of Shakespeare are about 900'000 words or 1.2M tokens.
+  - <u>"Wechselkurs" Token zu Wörter</u>: 1 token = 0.75 words, also ein **1:0.75 Verhältnis**, dh für 1 Token erhalte ich 0.75 Wörter bzw. für 1 Wort erhalte ich 1.333 Token.
+  - <u>"Wechselkurs" Token zu Zeichen</u>: 1 token = 4 Zeichen, also ein **1:4 Verhältnis**, dh für 1 Token erhalte ich 4 Zeichen bzw. für 1 Zeichen erhalte ich 1/4-tel Token.
+
+## Technology behind it | Quellen
+
+- `Hierarchical Text-Conditional Image-Generation with CLIP-Latents` | Ramesh, Dhariwal 

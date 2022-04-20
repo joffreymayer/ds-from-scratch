@@ -62,6 +62,7 @@ set-up-an-ssh-key-for-github
 latex
 what-is-the-latex-code-for-haty
 wörterbuch
+allgemein
 synonyme
 data-science-vs.-mein-economics-studium
 ide-explained
@@ -179,3 +180,8 @@ regression-discontinuity-design-rdd
 coded-algorithms-r-functions
 nützliche-funktionen-r
 useful-econometrics-documents
+openai
+what-can-openai-do-the-output
+how-does-the-model-work-the-blueprint
+terminology-of-openai-api-wörterbuch
+technology-behind-it-quellen

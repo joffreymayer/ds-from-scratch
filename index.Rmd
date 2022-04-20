@@ -460,6 +460,11 @@ Scientists love to create sophisticated new words for new discoveries, methods o
 
 That's why it is form utmost importance to know each field's jargon. I firmly believe that it is one of the biggest chalenges to overcome in order to be good at something. Because when you are able to "decode" the jargon, you can start "understand" the things. And when you understand, you can start applying, and that is where the fun truly begins :)
 
+### Allgemein
+
+- Overfitting = The problem of overfitting occurs when a model is **too complex and captures too much detail** from the _training_ data. This can lead to the model being unable to generalize to new, unseen data.
+  - <u>Fazit</u>: This is like the problem of "**low external validity**". You may have a high "internal validity", but external validity is _low_! 
+
 ### Synonyme
 
 - Source == Programming Language (any kind of)
@@ -468,7 +473,11 @@ That's why it is form utmost importance to know each field's jargon. I firmly be
 
 > Was ist der Unterschied zwischen einem `Data Scientist` VS. was ich in meinem `Economics-Studium` gemacht habe?
 
-- <u>Erkenntnis</u>: Machine Learning wird als eine "Black Box" betrachtet, wo man den X-Variablen des Modells keine grosse Beachtung schenkt: man bringt sie einfach ins Modell rein. Im Kontrast dazu, sind Ökonomen mehr dazu getrimmt, mit Hilfe eines theoretischen Modells, die "richtigen" X-Variablen zu selektieren.
+- <u>Erkenntnis</u>: Machine Learning wird als eine "Black Box" betrachtet, wo man den X-Variablen des Modells keine grosse Beachtung schenkt: man bringt sie einfach ins Modell rein. Im Kontrast dazu, sind Ökonomen mehr dazu getrimmt, mit Hilfe eines theoretischen Modells, die "richtigen" X-Variablen zu selektieren. Man nennt dies dann auch "structural econometrics".
+
+> What is artificial intelligence?
+
+Artificial intelligence is a branch of computer science that deals with the creation of "intelligent agents", which are systems that can _reason, learn, and act autonomously_.
 
 ### IDE explained
 
