@@ -2,7 +2,7 @@
 
 Here is the link in order for you to play around: `https://beta.openai.com/playground`
 
-- <u>**Achtung**</u>: _Even if you play around on the "playground"-area, you will get charged! `OpenAI` treats "Playground" the same, as the usage from the regular API. You can see how much you are billed by navigating to this link: `https://beta.openai.com/account/usage`._
+- <u>**Achtung Kostenpflichtig (ab sofort)**</u>: _Even if you play around on the "playground"-area, you will get charged! `OpenAI` treats "Playground" the same, as the usage from the regular API. You can see how much you are billed by navigating to this link: `https://beta.openai.com/account/usage` (you get 18$ and 3 months to spend them "for free")._
 
 
 Open AI is a non-profit organisation that uses NLP-Models (with Deep-Learning) to be able to understand the context of - for example - questions and **generate content on its own**! But it goes even further than that.: [in his youtube-video](https://www.youtube.com/watch?v=alJdw4JDJ4o), `Fireship.io` talks about `OpenAI` creating art, e.g. the computer is able to draw for you!
