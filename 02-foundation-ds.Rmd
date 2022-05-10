@@ -9,6 +9,18 @@ output: html_document
 
 In meinem Data Scientist Job werde ich häufig auf ähnliche Probleme stossen mit der Zeit. Hier habe ich eine Reihe an Fragen aufgelistet, welche ich fähig sein muss, zu beantworten, wenn ich effizient in meinem Beruf sein will!
 
+## Find Data
+
+In order to work with data, you also need to have the supply. 
+
+Here is a list of **websites, that offer free to use datasets**:
+
+- Kaggle
+- UCI Machine Learning Repository
+- [awesome-public-datasets](https://project-awesome.org/awesomedata/awesome-public-datasets)
+- Google Dataset Search
+- https://datasetsearch.research.google.com/
+
 ## Questions you need to answer when starting a new Project
 
 BEFORE you start writing your R-Scripts or Jupyter-Notebooks, you **first need to think about several key-things** &amp; -questions:

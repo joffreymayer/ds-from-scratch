@@ -86,6 +86,7 @@ meetings
 job-interviews
 ausblick
 foundations-of-data-science
+find-data
 questions-you-need-to-answer-when-starting-a-new-project
 effective-research-how-to-find-answers-quickly
 how-to-read-notebooks-from-other-people
