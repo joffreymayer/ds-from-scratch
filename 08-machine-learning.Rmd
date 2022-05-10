@@ -1,0 +1,113 @@
+# Machine Learning
+
+In diesem Kapitel, werde ich vertiefter in das Thema "Machine Learning" eingehen. 
+
+Zu Beginn ist zu bemerken, dass ich an der Uni nur sehr oberflächlich an dieses Thema geraten bin. Allerdings scheint es in der Unternehmenswelt ein sehr heisses Thema zu sein.
+
+## Uni-Kurs `Neural Networks & Deep Learning`
+
+### Notation Neural Networks
+
+<u>Nach VL sortiert</u>:
+
+- weights = Beta-Coefficients = parameters = a, b = neurons
+- Input units = independent variables "x" 
+- inputs = Anzahl Observations in Total
+- Output unit = Dependent variable = labels
+- Activation function = you need this function to plug in your estimated regression model. Examples of AF = logit, probit, relu, simple "threshold" AF etc...
+- Perceptron = Linear Binary Classifier = linear seperator (= line that separates group in a regression) = Perceptron is a single layer neural network and amulti-layer perceptron is called Neural Networks.
+- learning rate = how far to go in a particular direction
+- features = inputs = independent variables "x" = X(ki)
+- labels = this is the "true Y" you observe in the real world = output = dependent variable
+- "going downhill" = this is the learning process that you get by using the method "gradient decent" (look youtube video of user called "the coding train" at ca. 17:30) & applying a "learning rate" to it
+- y(k) = this is the estimated regresion function
+- z(k) = "logits" --> the same as y(k) but we then apply the specific activation function "logit function" to the estimated z(k) // y(hat)
+- Input Layer = Layer 0 = very first set of Neuron
+- Output Layer = Last Layer = last set of Neurons
+- Hidden Layers = All Layers between the input & output Layer
+- input node = nodes at the input layer
+- output node = node at the output layer
+- hidden nodes = nodes, which are in the hidden layers or at the output layer & don't give out outputs
+- Feed forward neural networks = connections only between layer i and layer i+1
+- Convolutional neural networks = a type of feed-foward network
+- Recurrent neural networks = connections flow backwards to previous layers as well
+- supervised learning = zhe "standard" function estimation that you are acquainted from your economics studies: these are models that fit <u>known</u> input-variables (= our different regressors) to a <u>known</u> output varible (= our Y-Variable) --> 2 different types: 1) regression; 2) classification
+- unsupervised learning = In this case, you let the comuter structure the data into groups (very subjective) // detecting patterns // data reduction
+- loss-function = cost-function = [TRUE y - ESTIMATED Y(hat)]^2 = error --> we define the loss-function be the "least squares"
+- identity function = y = x bzw. f(x) = x
+- sigmoid function = logit function
+- bias term = error term 
+- Epoch = means we go through the whole data set once --> default is ten epochs
+- Net Input Function = Regressionsmodell als Ganzes = sum of all weighted inputs // "x"
+- kernel = (starting) values for the weights
+- regularizers = penalties that are used to reduce overfitting (of the starting values for the weights?)
+- backpropagation = back pass = when we have our error-term, we can calculate the gradient and - if the error was too big - we can backpass the error-term with the helplearning rate to a previous layer and estimate new // better weights
+- breaking symmetry = principle, which says that you need to have different initial weights for hidden units with the same activation function and same inputs
+- batches = these are samples from the whole dataset --> you use batches because the computation gets faster rather than putting the whole dataset into the machine learning "Apparat" --> Rule: the higher the batch size, the better estimates you get
+- decay = make learning rates dynamic --> typically, this decay will make the learning rate smaller as the training continues.
+- momentum = makes learning rates dynamic --> If you see that - in the history of gradients - the gradients point generally in the same direction, momentum will adjust the learning rate by increasing the step size
+- hyperparameters = examples are: Learning rate, Learning Rate Decay, Momentum, Batch Size, Weight / Bias initialization
+- Confusion Matrix = C = shows - in the diagonal of the matrix - how many times your predicted outcome was the same as the actual outcome. All the other numbers are saying that your model's prediction was not in line with the actual outcome
+- Precision = if i look at a guess // prediction, how many % my algorithm guessed correctly?
+- Recall = if i look at an actual true outcome, how many % where guessed correctly
+- Training data = Training set is the one on which we train and fit our model basically to fit the parameters.
+- Testing data = Testing Data is used only to assess performance of the model.
+- Variance = Overfit = you use too much X's // features in your model --> you get too much variance in your predictions
+- Bagging = Train the same architecture on different subsets of data
+- Boosting = Train different model architectures on the same data
+- data augmentation = get more data by adding noise on the input layer
+- weight tying = Make the weights similar
+
+
+<u>Alphabetisch sortiert</u>:
+
+- Activation function = you need this function to plug in your estimated regression model. Examples of AF = logit, probit, relu, simple "threshold" AF etc...
+- backpropagation = back pass = when we have our error-term, we can calculate the gradient and - if the error was too big - we can backpass the error-term with  the help of the learning rate to a previous layer and estimate new // better weights
+- batches = these are samples from the whole dataset --> you use batches because the computation gets faster rather than putting the whole dataset into the machine learning "Apparat" --> Rule: the higher the batch size, the better estimates you get
+- bias term = error term 
+- breaking symmetry = principle, which says that you need to have different initial weights for hidden units with the same activation function and same inputs
+- Confusion Matrix = C = shows - in the diagonal of the matrix - how many times your predicted outcome was the same as the actual outcome. All the other numbers are saying that your model's prediction was not in line with the actual outcome
+- Convolutional neural networks = a type of feed fowardnetwork
+- decay = make learning rates dynamic --> typically, this decay will make the learning rate smaller as the training continues.
+- Epoch = means we go through the whole data set once --> default is ten epochs
+- features = inputs = independent variables "x" = X(ki)
+- Feed forward neural networks = connections only between layer i and layer i+1
+- "going downhill" = this is the learning process that you get by using the method "gradient decent" (look youtube video by "the coding train" at ca. 17:30) & applying a "learning rate" to it
+- Hidden Layers = All Layers between the input & output Layer
+- hidden nodes = nodes, which are in the hidden layers or at the output layer & don't give out outputs
+- hyperparameters = examples are: Learning rate, Learning Rate Decay, Momentum, Batch Size, Weight / Bias initialization
+- identity function = y = x bzw. f(x) = x
+- inputs = Anzahl Observations in Total
+- Input Layer = Layer 0 = very first set of Neuron
+- input node = nodes at the input layer
+- Input units = independent variables "x" 
+- kernel = (starting) values for the weights
+- labels = this is the "true Y" you observe in the real world = output = dependent variable
+- learning rate = how far to go in a particular direction
+- loss-function = cost-function = [TRUE y - ESTIMATED Y(hat)]^2 = error --> we define the loss-function be the "least squares"
+- Net Input Function = Regressionsmodell als Ganzes = sum of all weighted inputs // "x"
+- momentum = makes learning rates dynamic --> If you see that - in the history of gradients - the gradients point generally in the same direction, momentum will adjust the learning rate by increasing the step size
+- Output Layer = Last Layer = last set of Neurons
+- output node = node at the output layer
+- Perceptron = Linear Binary Classifier = linear seperator (= line that separates group in a regression) = Perceptron is a single layer neural network and a multi-layer perceptron is called Neural Networks.
+- Precision = if i look at a guess // prediction, how many % my algorithm guessed correctly?
+- Recall = if i look at an actual true outcome, how many % where guessed correctly
+- Recurrent neural networks = connections flow backwards to previous layers as well
+- regularizers = penalties that are used to reduce overfitting (of the starting values for the weights?)
+- sigmoid function = logit function
+- saling = pre-processing data 
+- supervised learning = function estimation --> 2 different types: 1) regression; 2) classification
+- Training data = Training set is the one on which we train and fit our model basically to fit the parameters.
+- Testing data = Testing Data is used only to assess performance of the model.
+unsupervised learning = structure the data into groups (very subjective) // detecting patterns // data reduction
+- weights = Beta-Coefficients = parameters = a, b = neurons
+- y(k) = this is the estimated(!!) regresion function
+- z(k) = "logits" --> the same as y(k) but we then apply the specific activation function "logit function" to the estimated z(k) // y(hat)
+- Multilayer Feedforward Network = Standard multilayer feedforward networks are capable of approximating any measurable function to any desired degree of accuracy. There are no theoretical constraints for the success of feedforward networks. Lack of success is due to inadequate learning, insufficient number of hidden units or the lack of a deterministic relationship between input and target. The information moves in only one direction, forward, from the input nodes, through the hidden nodes (if any) and to the output nodes. 
+
+## Quellen 
+
+- https://blog.exxactcorp.com/lets-learn-the-difference-between-a-deep-learning-cnn-and-rnn/
+https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Fall.2016/notes/Sonia_Hornik.pdf
+
+

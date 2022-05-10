@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 9 OpenAI | Data Science from Scratch Code</title>
-  <meta name="description" content="Chapter 9 OpenAI | Data Science from Scratch Code" />
+  <title>Chapter 8 Machine Learning | Data Science from Scratch Code</title>
+  <meta name="description" content="Chapter 8 Machine Learning | Data Science from Scratch Code" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 9 OpenAI | Data Science from Scratch Code" />
+  <meta property="og:title" content="Chapter 8 Machine Learning | Data Science from Scratch Code" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 OpenAI | Data Science from Scratch Code" />
+  <meta name="twitter:title" content="Chapter 8 Machine Learning | Data Science from Scratch Code" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="machine-learning-1.html"/>
-
+<link rel="prev" href="econometrics.html"/>
+<link rel="next" href="openai.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -344,59 +344,117 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="openai" class="section level1">
-<h1><span class="header-section-number">Chapter 9</span> OpenAI</h1>
-<p>Here is the link in order for you to play around: <code>https://beta.openai.com/playground</code></p>
+<div id="machine-learning-1" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Machine Learning</h1>
+<p>In diesem Kapitel, werde ich vertiefter in das Thema “Machine Learning” eingehen.</p>
+<p>Zu Beginn ist zu bemerken, dass ich an der Uni nur sehr oberflächlich an dieses Thema geraten bin. Allerdings scheint es in der Unternehmenswelt ein sehr heisses Thema zu sein.</p>
+<div id="uni-kurs-neural-networks-deep-learning" class="section level2">
+<h2><span class="header-section-number">8.1</span> Uni-Kurs <code>Neural Networks &amp; Deep Learning</code></h2>
+<div id="notation-neural-networks" class="section level3">
+<h3><span class="header-section-number">8.1.1</span> Notation Neural Networks</h3>
+<p><u>Nach VL sortiert</u>:</p>
 <ul>
-<li><u><strong>Achtung Kostenpflichtig (ab sofort)</strong></u>: <em>Even if you play around on the “playground”-area, you will get charged! <code>OpenAI</code> treats “Playground” the same, as the usage from the regular API. You can see how much you are billed by navigating to this link: <code>https://beta.openai.com/account/usage</code> (you get 18$ and 3 months to spend them “for free”).</em></li>
+<li>weights = Beta-Coefficients = parameters = a, b = neurons</li>
+<li>Input units = independent variables “x”</li>
+<li>inputs = Anzahl Observations in Total</li>
+<li>Output unit = Dependent variable = labels</li>
+<li>Activation function = you need this function to plug in your estimated regression model. Examples of AF = logit, probit, relu, simple “threshold” AF etc…</li>
+<li>Perceptron = Linear Binary Classifier = linear seperator (= line that separates group in a regression) = Perceptron is a single layer neural network and amulti-layer perceptron is called Neural Networks.</li>
+<li>learning rate = how far to go in a particular direction</li>
+<li>features = inputs = independent variables “x” = X(ki)</li>
+<li>labels = this is the “true Y” you observe in the real world = output = dependent variable</li>
+<li>“going downhill” = this is the learning process that you get by using the method “gradient decent” (look youtube video of user called “the coding train” at ca. 17:30) &amp; applying a “learning rate” to it</li>
+<li>y(k) = this is the estimated regresion function</li>
+<li>z(k) = “logits” –&gt; the same as y(k) but we then apply the specific activation function “logit function” to the estimated z(k) // y(hat)</li>
+<li>Input Layer = Layer 0 = very first set of Neuron</li>
+<li>Output Layer = Last Layer = last set of Neurons</li>
+<li>Hidden Layers = All Layers between the input &amp; output Layer</li>
+<li>input node = nodes at the input layer</li>
+<li>output node = node at the output layer</li>
+<li>hidden nodes = nodes, which are in the hidden layers or at the output layer &amp; don’t give out outputs</li>
+<li>Feed forward neural networks = connections only between layer i and layer i+1</li>
+<li>Convolutional neural networks = a type of feed-foward network</li>
+<li>Recurrent neural networks = connections flow backwards to previous layers as well</li>
+<li>supervised learning = zhe “standard” function estimation that you are acquainted from your economics studies: these are models that fit <u>known</u> input-variables (= our different regressors) to a <u>known</u> output varible (= our Y-Variable) –&gt; 2 different types: 1) regression; 2) classification</li>
+<li>unsupervised learning = In this case, you let the comuter structure the data into groups (very subjective) // detecting patterns // data reduction</li>
+<li>loss-function = cost-function = [TRUE y - ESTIMATED Y(hat)]^2 = error –&gt; we define the loss-function be the “least squares”</li>
+<li>identity function = y = x bzw. f(x) = x</li>
+<li>sigmoid function = logit function</li>
+<li>bias term = error term</li>
+<li>Epoch = means we go through the whole data set once –&gt; default is ten epochs</li>
+<li>Net Input Function = Regressionsmodell als Ganzes = sum of all weighted inputs // “x”</li>
+<li>kernel = (starting) values for the weights</li>
+<li>regularizers = penalties that are used to reduce overfitting (of the starting values for the weights?)</li>
+<li>backpropagation = back pass = when we have our error-term, we can calculate the gradient and - if the error was too big - we can backpass the error-term with the helplearning rate to a previous layer and estimate new // better weights</li>
+<li>breaking symmetry = principle, which says that you need to have different initial weights for hidden units with the same activation function and same inputs</li>
+<li>batches = these are samples from the whole dataset –&gt; you use batches because the computation gets faster rather than putting the whole dataset into the machine learning “Apparat” –&gt; Rule: the higher the batch size, the better estimates you get</li>
+<li>decay = make learning rates dynamic –&gt; typically, this decay will make the learning rate smaller as the training continues.</li>
+<li>momentum = makes learning rates dynamic –&gt; If you see that - in the history of gradients - the gradients point generally in the same direction, momentum will adjust the learning rate by increasing the step size</li>
+<li>hyperparameters = examples are: Learning rate, Learning Rate Decay, Momentum, Batch Size, Weight / Bias initialization</li>
+<li>Confusion Matrix = C = shows - in the diagonal of the matrix - how many times your predicted outcome was the same as the actual outcome. All the other numbers are saying that your model’s prediction was not in line with the actual outcome</li>
+<li>Precision = if i look at a guess // prediction, how many % my algorithm guessed correctly?</li>
+<li>Recall = if i look at an actual true outcome, how many % where guessed correctly</li>
+<li>Training data = Training set is the one on which we train and fit our model basically to fit the parameters.</li>
+<li>Testing data = Testing Data is used only to assess performance of the model.</li>
+<li>Variance = Overfit = you use too much X’s // features in your model –&gt; you get too much variance in your predictions</li>
+<li>Bagging = Train the same architecture on different subsets of data</li>
+<li>Boosting = Train different model architectures on the same data</li>
+<li>data augmentation = get more data by adding noise on the input layer</li>
+<li>weight tying = Make the weights similar</li>
 </ul>
-<p>Open AI is a non-profit organisation that uses NLP-Models (with Deep-Learning) to be able to understand the context of - for example - questions and <strong>generate content on its own</strong>! But it goes even further than that.: <a href="https://www.youtube.com/watch?v=alJdw4JDJ4o">in his youtube-video</a>, <code>Fireship.io</code> talks about <code>OpenAI</code> creating art, e.g. the computer is able to draw for you!</p>
-<p>It is awesome! The guy / team who created this, truly is / are admirable and has / have surely put an incredible amount of effort in it! :O</p>
-<div id="what-can-openai-do-the-output" class="section level2">
-<h2><span class="header-section-number">9.1</span> What can <code>OpenAI</code> do? | The Output</h2>
+<p><u>Alphabetisch sortiert</u>:</p>
 <ul>
-<li><strong>Content generation</strong></li>
-<li><strong>Summarization</strong></li>
-<li>Classification, categorization, and sentiment analysis</li>
-<li><strong>Data extraction</strong></li>
-<li>Translation</li>
-<li>Many more!</li>
+<li>Activation function = you need this function to plug in your estimated regression model. Examples of AF = logit, probit, relu, simple “threshold” AF etc…</li>
+<li>backpropagation = back pass = when we have our error-term, we can calculate the gradient and - if the error was too big - we can backpass the error-term with the help of the learning rate to a previous layer and estimate new // better weights</li>
+<li>batches = these are samples from the whole dataset –&gt; you use batches because the computation gets faster rather than putting the whole dataset into the machine learning “Apparat” –&gt; Rule: the higher the batch size, the better estimates you get</li>
+<li>bias term = error term</li>
+<li>breaking symmetry = principle, which says that you need to have different initial weights for hidden units with the same activation function and same inputs</li>
+<li>Confusion Matrix = C = shows - in the diagonal of the matrix - how many times your predicted outcome was the same as the actual outcome. All the other numbers are saying that your model’s prediction was not in line with the actual outcome</li>
+<li>Convolutional neural networks = a type of feed fowardnetwork</li>
+<li>decay = make learning rates dynamic –&gt; typically, this decay will make the learning rate smaller as the training continues.</li>
+<li>Epoch = means we go through the whole data set once –&gt; default is ten epochs</li>
+<li>features = inputs = independent variables “x” = X(ki)</li>
+<li>Feed forward neural networks = connections only between layer i and layer i+1</li>
+<li>“going downhill” = this is the learning process that you get by using the method “gradient decent” (look youtube video by “the coding train” at ca. 17:30) &amp; applying a “learning rate” to it</li>
+<li>Hidden Layers = All Layers between the input &amp; output Layer</li>
+<li>hidden nodes = nodes, which are in the hidden layers or at the output layer &amp; don’t give out outputs</li>
+<li>hyperparameters = examples are: Learning rate, Learning Rate Decay, Momentum, Batch Size, Weight / Bias initialization</li>
+<li>identity function = y = x bzw. f(x) = x</li>
+<li>inputs = Anzahl Observations in Total</li>
+<li>Input Layer = Layer 0 = very first set of Neuron</li>
+<li>input node = nodes at the input layer</li>
+<li>Input units = independent variables “x”</li>
+<li>kernel = (starting) values for the weights</li>
+<li>labels = this is the “true Y” you observe in the real world = output = dependent variable</li>
+<li>learning rate = how far to go in a particular direction</li>
+<li>loss-function = cost-function = [TRUE y - ESTIMATED Y(hat)]^2 = error –&gt; we define the loss-function be the “least squares”</li>
+<li>Net Input Function = Regressionsmodell als Ganzes = sum of all weighted inputs // “x”</li>
+<li>momentum = makes learning rates dynamic –&gt; If you see that - in the history of gradients - the gradients point generally in the same direction, momentum will adjust the learning rate by increasing the step size</li>
+<li>Output Layer = Last Layer = last set of Neurons</li>
+<li>output node = node at the output layer</li>
+<li>Perceptron = Linear Binary Classifier = linear seperator (= line that separates group in a regression) = Perceptron is a single layer neural network and a multi-layer perceptron is called Neural Networks.</li>
+<li>Precision = if i look at a guess // prediction, how many % my algorithm guessed correctly?</li>
+<li>Recall = if i look at an actual true outcome, how many % where guessed correctly</li>
+<li>Recurrent neural networks = connections flow backwards to previous layers as well</li>
+<li>regularizers = penalties that are used to reduce overfitting (of the starting values for the weights?)</li>
+<li>sigmoid function = logit function</li>
+<li>saling = pre-processing data</li>
+<li>supervised learning = function estimation –&gt; 2 different types: 1) regression; 2) classification</li>
+<li>Training data = Training set is the one on which we train and fit our model basically to fit the parameters.</li>
+<li>Testing data = Testing Data is used only to assess performance of the model.
+unsupervised learning = structure the data into groups (very subjective) // detecting patterns // data reduction</li>
+<li>weights = Beta-Coefficients = parameters = a, b = neurons</li>
+<li>y(k) = this is the estimated(!!) regresion function</li>
+<li>z(k) = “logits” –&gt; the same as y(k) but we then apply the specific activation function “logit function” to the estimated z(k) // y(hat)</li>
+<li>Multilayer Feedforward Network = Standard multilayer feedforward networks are capable of approximating any measurable function to any desired degree of accuracy. There are no theoretical constraints for the success of feedforward networks. Lack of success is due to inadequate learning, insufficient number of hidden units or the lack of a deterministic relationship between input and target. The information moves in only one direction, forward, from the input nodes, through the hidden nodes (if any) and to the output nodes.</li>
 </ul>
 </div>
-<div id="how-does-the-model-work-the-blueprint" class="section level2">
-<h2><span class="header-section-number">9.2</span> How does the Model work? | The Blueprint</h2>
-<p>The model predicts <strong>which text is most likely to follow the text preceding it</strong>.</p>
 </div>
-<div id="terminology-of-openai-api-wörterbuch" class="section level2">
-<h2><span class="header-section-number">9.3</span> Terminology of <code>OpenAI</code>-API | Wörterbuch</h2>
+<div id="quellen" class="section level2">
+<h2><span class="header-section-number">8.2</span> Quellen</h2>
 <ul>
-<li><strong>Prompt</strong> = Input-Text you give the model. For example, this can be a question like <code>What is Economics? And what is Structural Economics?</code>.
-<ul>
-<li><u>Key</u>: Adding a simple adjective to our “prompt” is able to change the resulting output completely! <em>Designing your prompt is essentially how you “program” the model</em>.</li>
-</ul></li>
-<li><strong>Completions</strong> = This is the output of the model, for example, it would be the “prediction” // answer that the model provides for the question <code>What is Economics? And what is Structural Economics?</code></li>
-<li><strong>“Temperature”</strong> = This is a way to bring in <strong>variation in the prediction // suggested results</strong> of the model.
-<ul>
-<li><u>Example</u>: If you submit the <em>same</em> prompt multiple times <strong>when the “temperature” is set to <code>0</code></strong>, the model would always return identical or very similar completions // results. If you re-submit <em>the same prompt</em> a few times <strong>with temperature set to <code>1</code></strong>, you will notice that the proposed results will be different.</li>
-<li><u>Possible Range for “temperature”</u>: You can set the parameter “temperature” with values between (and including) <code>0</code> and <code>1</code>.
-<ul>
-<li><u>Key to note</u>: “Temperature” is a value between <code>0</code> and <code>1</code> that essentially <em>lets you control how confident the model should be when making these predictions</em>. <strong>Lowering temperature towards <code>0</code> means it will take fewer risks when making a prediction</strong>.
-<ul>
-<li><u>Faustregel</u>: It’s usually best to set a <em>low</em> “temperature” for tasks <strong>where the desired output is well-defined</strong>. <em>Higher</em> “temperature” may be useful for <strong>tasks where variety OR creativity are desired</strong>.</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><strong>token</strong> = You can think of tokens as pieces of words used for natural language processing. For English text, 1 token is approximately 4 characters or 0.75 words. As a point of reference, the collected works of Shakespeare are about 900’000 words or 1.2M tokens.
-<ul>
-<li><u>“Wechselkurs” Token zu Wörter</u>: 1 token = 0.75 words, also ein <strong>1:0.75 Verhältnis</strong>, dh für 1 Token erhalte ich 0.75 Wörter bzw. für 1 Wort erhalte ich 1.333 Token.</li>
-<li><u>“Wechselkurs” Token zu Zeichen</u>: 1 token = 4 Zeichen, also ein <strong>1:4 Verhältnis</strong>, dh für 1 Token erhalte ich 4 Zeichen bzw. für 1 Zeichen erhalte ich 1/4-tel Token.</li>
-</ul></li>
-</ul>
-</div>
-<div id="technology-behind-it-quellen" class="section level2">
-<h2><span class="header-section-number">9.4</span> Technology behind it | Quellen</h2>
-<ul>
-<li><code>Hierarchical Text-Conditional Image-Generation with CLIP-Latents</code> | Ramesh, Dhariwal</li>
+<li><a href="https://blog.exxactcorp.com/lets-learn-the-difference-between-a-deep-learning-cnn-and-rnn/" class="uri">https://blog.exxactcorp.com/lets-learn-the-difference-between-a-deep-learning-cnn-and-rnn/</a>
+<a href="https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Fall.2016/notes/Sonia_Hornik.pdf" class="uri">https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Fall.2016/notes/Sonia_Hornik.pdf</a></li>
 </ul>
 
 </div>
@@ -406,8 +464,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="machine-learning-1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="econometrics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="openai.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -439,7 +497,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/joffreymayer/ds-from-scratch/edit/master/99-openai.Rmd",
+"link": "https://github.com/joffreymayer/ds-from-scratch/edit/master/08-machine-learning.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -447,7 +505,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/joffreymayer/ds-from-scratch/blob/master/99-openai.Rmd",
+"link": "https://github.com/joffreymayer/ds-from-scratch/blob/master/08-machine-learning.Rmd",
 "text": null
 },
 "download": null,

@@ -162,6 +162,7 @@ definitionen
 different-tests-vorgehen-bei-den-tests
 diverse-berechnungen
 accept-reject-null-hypothesis
+formulierungen
 coefficient-interpretation
 nice-to-know
 allgemeine-regeln
@@ -181,6 +182,10 @@ regression-discontinuity-design-rdd
 coded-algorithms-r-functions
 nützliche-funktionen-r
 useful-econometrics-documents
+machine-learning-1
+uni-kurs-neural-networks-deep-learning
+notation-neural-networks
+quellen
 openai
 what-can-openai-do-the-output
 how-does-the-model-work-the-blueprint

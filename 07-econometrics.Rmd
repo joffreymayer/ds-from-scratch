@@ -196,13 +196,14 @@
     - <u>Note</u>: use Z<sub>(1-alpha)</sub> as the crit value, since we have a one-sided test.
 - **Important general fact about hypothesis**: Just because you cannot reject a null-hypothesis does not mean that the null-hypothesis is true. It just means that you don’t have enough empirical evidence to prove that the alternative-hypothesis is true.
 - **p-value**:
-  - <u>Definition</u>: Gives the probability that we would get our „sample-mean“ <u>**_IF_**</u> the Null-hypothesis was true!
-    - <u>Interpretation</u>: This implies - _when we have a **very small p-value** this implies_ - that - *GIVEN our sample* - there is very small probability that we would get this sample mean <u>**_if_**</u> the nullhypothesis was true. —> this is a good result for a researcher, since he / she seeks to reject the null-hypothesis!
+  - <u>Definition</u>: Gives the probability that we would get our „**sample**-mean“ (= the mean that you just calculated from the data // sample you have drawn) <u>**_IF_**</u> the Null-hypothesis was true!
+    - <u>Interpretation</u>: This implies - _when we have a **very small p-value**_ - that - *GIVEN our sample* - there is very small probability that we would get this sample mean <u>**_if_**</u> the nullhypothesis was true. —> this is a good result for a researcher, since he / she seeks to reject the null-hypothesis!
   - *beidseitiger Test*: if p-value < alpha --> reject the null
   - *rechtsseitiger Test*:
   - *linksseitiger Test*: 
 - **Types of Errors in statistical Testing**:
 ![These are all the possible types of errors you encounter.](./bilder/econ/types-of-errors.jpeg)
+
 ## Formulierungen
 
 - **For "correlation"**:
@@ -303,7 +304,7 @@
 
 ## Randomization 
 
-- If you don't randomize, there will be a selection problem, e.g. mean untreaded outcomes will diﬀer from the mean of the treated outcomes. By randomizing, you will make it impossible for people to self-select in or out of a treatment!
+- If you don't randomize, there will be a selection problem, e.g. mean untreated outcomes will diﬀer from the mean of the treated outcomes. By randomizing, you will make it impossible for people to self-select in or out of a treatment!
 - Implementation of "randomization" can be achieved by - for example - tossing a (fair) coin. --> this is difficult to implement because not all people want // need a treatment to begin with (= there are often debates where such "randomized experiments" are seen as unethical!)
 
 ## Dummy Variables
@@ -346,7 +347,7 @@
         1. Alle Faktoren, die sich zwischen Zürich und Aargau unterscheiden *ABER* über die Zeit sich nicht verändern // ZEITINVARIABEL sind (--> zum **Beispiel ein SCHWEIZER Gesetz**, das nur auf den Aargau abzielt und welches sich über die  (vom Forscher betrachtete // fixierte) Zeitperiode <u>NICHT</u> verändert hat <u>oder</u> die **unterschiedliche Geographie** der beiden Regionen (wird sich wohl kaum verändern über die betrachtete Zeit) <u>oder</u> meistens auch **Bevölkerungszusammensetzung** (unterscheiden sich zwischen ZH und AR, aber bleiben meist konstant über die Betrachtungsperiode).
 - **Indexing coefficients**: when you use FEs, the index for the coefficients are the groups. —> <u>example</u>: when you use time-FEs, the index will be time. Or, if you use region-FE, the index will be regions
 - **Usage of causal language**: you can use causal language when interpreting the FEs coefficients if you are convinced that the Fixed effects have eliminated the main threats to internal validity!
-- **„Controlling for Time FEs", how to make a coefficient interpretation?**     --> when interpreting a coefficient while using Time FEs: On average and "**controlling for time trends**"(!!), a unitary increase in X is associated with an YZ-change in Y.
+- **`Controlling for Time FEs`, how to make a coefficient interpretation?**     --> when interpreting a coefficient while using Time FEs: On average and **`controlling for time trends`**(!!), a unitary increase in X is associated with an YZ-change in Y.
 
 
 ## Cross-sectional Data
