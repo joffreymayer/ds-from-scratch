@@ -2,7 +2,7 @@
 
 In diesem Kapitel, werde ich vertiefter in das Thema "Machine Learning" eingehen. 
 
-Zu Beginn ist zu bemerken, dass ich an der Uni nur sehr oberflächlich an dieses Thema geraten bin. Allerdings scheint es in der Unternehmenswelt ein sehr heisses Thema zu sein.
+**Machine Learning verwendet unterschiedliche Begriffe für diverse gleiche Konzepte & Definitionen aus den Wirtschaftswissenschaften**. Nun geht es darum, die korrekte Übersetzungen für diese Wörter aufzulisten:
 
 ## Uni-Kurs `Neural Networks & Deep Learning`
 

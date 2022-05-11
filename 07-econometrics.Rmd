@@ -221,6 +221,7 @@
   - "statistically account for"
 - **"Y is a function of X"**:
   - y(x) 
+  - y = f(x)
   - y depends on x 
   - y as a function of x
 

@@ -186,6 +186,9 @@ machine-learning-1
 uni-kurs-neural-networks-deep-learning
 notation-neural-networks
 quellen
+mengenlehre
+wörterbuch-1
+mathematische-schrift-lesen
 openai
 what-can-openai-do-the-output
 how-does-the-model-work-the-blueprint

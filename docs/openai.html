@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 9 OpenAI | Data Science from Scratch Code</title>
-  <meta name="description" content="Chapter 9 OpenAI | Data Science from Scratch Code" />
+  <title>Chapter 10 OpenAI | Data Science from Scratch Code</title>
+  <meta name="description" content="Chapter 10 OpenAI | Data Science from Scratch Code" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 9 OpenAI | Data Science from Scratch Code" />
+  <meta property="og:title" content="Chapter 10 OpenAI | Data Science from Scratch Code" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 OpenAI | Data Science from Scratch Code" />
+  <meta name="twitter:title" content="Chapter 10 OpenAI | Data Science from Scratch Code" />
   
   
   
@@ -24,14 +24,14 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-05-10" />
+<meta name="date" content="2022-05-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="machine-learning-1.html"/>
+<link rel="prev" href="mengenlehre.html"/>
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -319,11 +319,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8.2" data-path="machine-learning-1.html"><a href="machine-learning-1.html#quellen"><i class="fa fa-check"></i><b>8.2</b> Quellen</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="openai.html"><a href="openai.html"><i class="fa fa-check"></i><b>9</b> OpenAI</a><ul>
-<li class="chapter" data-level="9.1" data-path="openai.html"><a href="openai.html#what-can-openai-do-the-output"><i class="fa fa-check"></i><b>9.1</b> What can <code>OpenAI</code> do? | The Output</a></li>
-<li class="chapter" data-level="9.2" data-path="openai.html"><a href="openai.html#how-does-the-model-work-the-blueprint"><i class="fa fa-check"></i><b>9.2</b> How does the Model work? | The Blueprint</a></li>
-<li class="chapter" data-level="9.3" data-path="openai.html"><a href="openai.html#terminology-of-openai-api-wörterbuch"><i class="fa fa-check"></i><b>9.3</b> Terminology of <code>OpenAI</code>-API | Wörterbuch</a></li>
-<li class="chapter" data-level="9.4" data-path="openai.html"><a href="openai.html#technology-behind-it-quellen"><i class="fa fa-check"></i><b>9.4</b> Technology behind it | Quellen</a></li>
+<li class="chapter" data-level="9" data-path="mengenlehre.html"><a href="mengenlehre.html"><i class="fa fa-check"></i><b>9</b> Mengenlehre</a><ul>
+<li class="chapter" data-level="9.1" data-path="mengenlehre.html"><a href="mengenlehre.html#wörterbuch-1"><i class="fa fa-check"></i><b>9.1</b> Wörterbuch</a></li>
+<li class="chapter" data-level="9.2" data-path="mengenlehre.html"><a href="mengenlehre.html#mathematische-schrift-lesen"><i class="fa fa-check"></i><b>9.2</b> Mathematische “Schrift” lesen</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="openai.html"><a href="openai.html"><i class="fa fa-check"></i><b>10</b> OpenAI</a><ul>
+<li class="chapter" data-level="10.1" data-path="openai.html"><a href="openai.html#what-can-openai-do-the-output"><i class="fa fa-check"></i><b>10.1</b> What can <code>OpenAI</code> do? | The Output</a></li>
+<li class="chapter" data-level="10.2" data-path="openai.html"><a href="openai.html#how-does-the-model-work-the-blueprint"><i class="fa fa-check"></i><b>10.2</b> How does the Model work? | The Blueprint</a></li>
+<li class="chapter" data-level="10.3" data-path="openai.html"><a href="openai.html#terminology-of-openai-api-wörterbuch"><i class="fa fa-check"></i><b>10.3</b> Terminology of <code>OpenAI</code>-API | Wörterbuch</a></li>
+<li class="chapter" data-level="10.4" data-path="openai.html"><a href="openai.html#technology-behind-it-quellen"><i class="fa fa-check"></i><b>10.4</b> Technology behind it | Quellen</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -345,7 +349,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="openai" class="section level1">
-<h1><span class="header-section-number">Chapter 9</span> OpenAI</h1>
+<h1><span class="header-section-number">Chapter 10</span> OpenAI</h1>
 <p>Here is the link in order for you to play around: <code>https://beta.openai.com/playground</code></p>
 <ul>
 <li><u><strong>Achtung Kostenpflichtig (ab sofort)</strong></u>: <em>Even if you play around on the “playground”-area, you will get charged! <code>OpenAI</code> treats “Playground” the same, as the usage from the regular API. You can see how much you are billed by navigating to this link: <code>https://beta.openai.com/account/usage</code> (you get 18$ and 3 months to spend them “for free”).</em></li>
@@ -353,7 +357,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Open AI is a non-profit organisation that uses NLP-Models (with Deep-Learning) to be able to understand the context of - for example - questions and <strong>generate content on its own</strong>! But it goes even further than that.: <a href="https://www.youtube.com/watch?v=alJdw4JDJ4o">in his youtube-video</a>, <code>Fireship.io</code> talks about <code>OpenAI</code> creating art, e.g. the computer is able to draw for you!</p>
 <p>It is awesome! The guy / team who created this, truly is / are admirable and has / have surely put an incredible amount of effort in it! :O</p>
 <div id="what-can-openai-do-the-output" class="section level2">
-<h2><span class="header-section-number">9.1</span> What can <code>OpenAI</code> do? | The Output</h2>
+<h2><span class="header-section-number">10.1</span> What can <code>OpenAI</code> do? | The Output</h2>
 <ul>
 <li><strong>Content generation</strong></li>
 <li><strong>Summarization</strong></li>
@@ -364,11 +368,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 </div>
 <div id="how-does-the-model-work-the-blueprint" class="section level2">
-<h2><span class="header-section-number">9.2</span> How does the Model work? | The Blueprint</h2>
+<h2><span class="header-section-number">10.2</span> How does the Model work? | The Blueprint</h2>
 <p>The model predicts <strong>which text is most likely to follow the text preceding it</strong>.</p>
 </div>
 <div id="terminology-of-openai-api-wörterbuch" class="section level2">
-<h2><span class="header-section-number">9.3</span> Terminology of <code>OpenAI</code>-API | Wörterbuch</h2>
+<h2><span class="header-section-number">10.3</span> Terminology of <code>OpenAI</code>-API | Wörterbuch</h2>
 <ul>
 <li><strong>Prompt</strong> = Input-Text you give the model. For example, this can be a question like <code>What is Economics? And what is Structural Economics?</code>.
 <ul>
@@ -394,7 +398,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 </div>
 <div id="technology-behind-it-quellen" class="section level2">
-<h2><span class="header-section-number">9.4</span> Technology behind it | Quellen</h2>
+<h2><span class="header-section-number">10.4</span> Technology behind it | Quellen</h2>
 <ul>
 <li><code>Hierarchical Text-Conditional Image-Generation with CLIP-Latents</code> | Ramesh, Dhariwal</li>
 </ul>
@@ -406,7 +410,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="machine-learning-1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="mengenlehre.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

@@ -1,0 +1,41 @@
+# Mengenlehre
+
+Du wirst ein bestimmtes Maß an Wissen in der Mengenlehre brauchen, denn dieser Teil der Mathematik ist besonders wichtig:
+
+- **für Statistik**: weil in Statistik mit *Mengen an `possible outcomes`* gearbeitet wird.
+- **für Choice Theory**: weil dort mit einer **Menge an `possible choices`** gearbeitet wird.
+
+**Häufige Schwierigkeit**, welche ich bei diesem Thema begegnet bin, ist das Nachvollziehen der mathematischen Schreibweise von Mengen, _insbesondere in Kombination mit Funktionen_! 
+
+> Wieso ist dies problematisch?
+
+**Weil ich dann nicht einmal verstehe, was ich lese¨** Und das ist schlimm! Denn, ohne Verständnis, kann man gar nichts lernen. Man ist dann bloss jemand, der gut auswendig etwas nachplappert, was schlecht (& gefährlich) ist!
+
+## Wörterbuch
+
+- **Mapping** = Mapping is simply a (general) function between two methematical objects or structures. In many branches of mathematics, the term `mapping` (or `map`) is used to mean a function.
+  - <u>Visualisierng</u>:
+  
+![Beispiel eines "mapping"](./bilder/mengenlehre/mapping.jpg)
+  - <u>Note</u>: More than one `x<sub>a</sub>` can point to a element of `Y` (= `y<sub>a</sub>`), <u>but</u> every `y<sub>a</sub>` is only associated with one unique `x<sub>a</sub>`.
+
+## Mathematische "Schrift" lesen
+
+- **"Y is a function of X"**:
+  - y(x) 
+  - y = f(x)
+  - y depends on x 
+  - y as a function of x
+- **Was heisst `f: X &#8594; Y`**?
+  - <u>In Worten heisst dies</u>: A function `f` from `X` to `Y`.
+    - <u>Beispiel anhand einer "choice correspondance" (= `C`) definition</u>:
+![Hier die "mathematische Schreibweise"](./bilder/mengenlehre/beispiel-1.jpg)
+    - <u>In Worten</u>: A function `C` from the power set of `X` (= `2<sup>X</sup>` &#8594; das ist unser `x` in der Funktion `C`) (wihtout leere Menge) <u>to</u> the power set of `X` (= `2<sup>X</sup>` &#8594; das ist unser `y` in der Funktion `C`) (without leerer Menge). 
+- **Weitere Beispiele für `f: X #&8594; Y`:
+  - `${delta}: Y #&8594; [0, 1]`
+    - <u>In Worten</u>: The function ${delta} - when applied to `Y` (= our `X`) - will assign a value in the intervall between 0 and 1 to `Y`, which will be the outcome.
+  - `f: X x Y #&8594; [0, 1], assume X is a vector, Y is a vector too`
+    - <u>In Worten</u>: The function `f` - when applied to <u>each</u> combination of `X` and `Y` (= our inputs) - will assign a value in the intervall between 0 and 1 to each combination of `X` and `Y`, which will be the outcome...
+
+
+
