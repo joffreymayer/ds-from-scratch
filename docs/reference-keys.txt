@@ -36,12 +36,6 @@ how-to-efficiently-manage-a-project
 create-a-website-on-github-for-free
 r-markdown-syntax
 headers
-h1
-h2
-h3
-h4
-h5
-h6
 alt-h1
 alt-h2
 wichtige-textausschnitte-markieren
