@@ -60,7 +60,7 @@ ggplot(data.frame(x = c(-10, 10)), aes(x = x)) +
 
 - **<u>Logitstic Function // Sigmoid Function // S-Shaped Function</u>**: damit ist die Funktion $\sigma(x) = \frac{1}{1 + e^{-x}}$ gemeint:
   
-```{r input-only, echo=FALSE, message=FALSE, warning=FALSE}
+```{r input-only-2, echo=FALSE, message=FALSE, warning=FALSE}
 # Here I will plot a Graph with ggplot2:
 
 
@@ -89,8 +89,6 @@ ggplot(data.frame(x = c(-7, 7)), aes(x = x)) +
 ```
 
 ## Uni-Kurs `Neural Networks & Deep Learning`
-
-**Machine Learning verwendet unterschiedliche Begriffe für diverse gleiche Konzepte & Definitionen aus den Wirtschaftswissenschaften**. Nun geht es darum, die korrekte Übersetzungen für diese Wörter aufzulisten:
 
 ### Notation Neural Networks
 

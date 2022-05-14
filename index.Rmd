@@ -190,7 +190,424 @@ Simply type:
 conda env remove -n my-new-env
 ```
 
-## R Markdown
+## How to efficiently manage a Project?
+
+In today's world, it is from utmost importance to be able to explain & document your work, otherwise you cannot convince your managers / higher-ups of your work. 
+
+*Ideally, your documentation should be done in an environment that can be accessed anywhere! And what better tool nowadays than a website, since everyone has access to a computer with a browser today*! =) 
+
+### Create a Website on Github (for free)
+
+- <u>Für mich</u>: https://www.youtube.com/watch?v=xt3-JgAxWgE
+- <u>For visitors, I recommend you to watch this tutorial</u>: https://www.youtube.com/watch?v=m5D-yoH416Y
+
+### R Markdown Syntax
+
+Es folgt eine Zusammenfassung der wichtigsten Markdown-Sytnax, damit ich schnell gute Anleitungen & Tutorials für jegliche Themen meiner Wahl verfassen kann.
+
+#### Headers
+
+---
+
+Headers sind die `<h1>` bis `<h6>` in der HTML-Sprache. Diese werden hier mit Hashtags `#` geschrieben. Es gibt folgende Möglichkeiten:
+
+```
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+======
+
+Alt-H2
+------
+```
+
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+======
+
+Alt-H2
+------
+
+#### Wichtige Textausschnitte markieren
+
+---
+
+Wenn ein Autor einen Text verfasst, dann kann es sehr hilfreich für einen Leser sein, wenn die Hauptbotschaften hervorgehoben werden. Es gibt in Markdown grundsätzlich **sieben Wege**, um dies zu tun:
+
+```
+Italics, aka kursiv, mit *asterisks* or _underscores_.
+
+Fettgedruckt, aka bold, mit **asterisks** or __underscores__.
+
+Kombiniere fett & kursiv mit **asterisks and _underscores_**.
+
+Wörter unterstreichen mit HTML-Tag <u>dies ist wichtig</u>!
+
+Durchgestrichen mit zwei tildes. ~~Scratch this.~~ (= drücke Option + n)
+
+Codes hervorheben mit Appostroph. `<h1>` (= drücke shift + ^-Taste)
+
+Ganze Code-Chunks mit drei Appostrophs. ```noob```
+```
+
+<u>Als Output, sieht es so aus</u>:
+
+1) **Fettgedruckte Wörter**
+2) *Italics*, dh kursiv 
+3) Kombination aus **fettgedrucktem und _kursiv_**.
+4) Dies ist <u>nicht</u> korrekt gelöst!
+5) Du bisch ~~en spasst~~, just kiddin du Esel ;)
+6) Codes im Text hervorheben, also zum Beispiel `<h1>`.
+7) Sogenannte Code-Chunks, wie oben verwendet, braucht einen neue Zeile, also:
+
+```
+This is a Code Chunk, where you can write your R-Code, for example.
+```
+
+#### Listen
+
+---
+
+Oftmals ist es von Vorteil, wenn jeder Schritt einer Erklärung oder Anleitung mit Hilfe von Listenpunkten heruntergebrochen wird. Ein Mensch versteht dann viel besser, was er zu tun hat, wenn er etwas Neues / zum ersten Mal macht.
+
+Wie du es bereits aus HTML kennst, gibt es sogenannte **Unordered Lists** (HTML-Code wäre `ul`) <u>oder</u> **odered Lists** (HTML-Code wäre `ol`). Ausserdem können *Listen innerhalb von Listen* erstellt werden, wenn ein Arbeitsschritt noch weiter heruntergebrochen werden kann:
+
+```
+1. Erstes Element einer Ordered List, aka das erste <li></li> im HTML-Code.
+2. Zweites Element einer Ordered List, aka das zweite <li></li> im HTML-Code.
+  * Unordered sub-list. ACHTUNG: Drücke 2-mal auf die Tab-Taste, sonst wird keine Einrückung gemacht!
+1. Bemerke, dass ich hier absichtlich wieder bei "1" beginne, weil ich dir zeigen will: Actual numbers don't matter, just that it's a number
+  1. Ordered sub-list
+2. Vierter Listenpunkt.  
+
+Alternative für Unordered Lists:
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+```
+
+1. Erstes Element einer Ordered List, aka das erste `<li></li>` im HTML-Code.
+2. Zweites Element einer Ordered List, aka das zweite `<li></li>` im HTML-Code.
+    * **<u>Un</u>ordered** Sub-List. **<u>ACHTUNG</u>**: Man muss 2-mal auf die Tab-Taste drücken, sonst wird keine Einrückung gemacht!
+1. Bemerke, dass ich hier absichtlich wieder eine "1" im Code schreibe, weil ich dir zeigen will, dass die ordered List mit einem `3)` beginnen wird!
+    1. **Ordered** Sub-List. **<u>ACHTUNG</u>**: Auch hier muss man wieder 2-mal auf die Tab-Taste drücken, sonst wird keine Einrückung gemacht!
+2. Vierter Listenpunkt.  
+
+
+Alternative für <u>Un</u>ordered-Lists:
+
+* Unordered list mit der **Asterisk-Schreibweise**.
+- Oder mit einem **Minus-Zeichen**.
++ Oder mit einem **Plus-Zeichen**.
+
+#### Hyperlinks
+
+---
+
+Häufig gibt es im Internet sehr gute Zusammenfassungen oder Konzepte, auf welche du **referenzieren** kannst, indem du einen Textausschnitt mit Hilfe von einem Hyperlink hervorhebst:
+
+```
+[Dies ist zum Beispiel die Zusammenfassung](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#h4), auf welche ich mich basiere, um dir Markdown beizubringen.
+
+Ich kann so auch - zum Beispiel - auf die [Webseite von Tee](https://www.audiophil-dreams.com/) verlinken. 
+```
+[Dies ist zum Beispiel die Zusammenfassung](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#h4), auf welche ich mich basiere, um dir Markdown beizubringen.
+
+Ich kann so auch - zum Beispiel - auf die [Webseite von Tee](https://www.audiophil-dreams.com/) verlinken.
+
+
+#### Bilder
+
+---
+
+Wenn jemand eine Erklärung erhält, ist es unentbehrlich, auch Bilder zu verwenden, denn Visualisierungen von Konzepten sind oftmals extrem nützlich, um eine Intuition / Verständnis für Neues zu entwickeln. Bei einer Anleitung können zum Beispiel Screenshots verwendet werden, um die schriftlichen Erklärungen mit Bilder effizient zu unterstützen. Es gibt grundsätzlich **vier Arten**, um Bilder in ein Markdown-Dokument einzufügen:
+
+```
+1) Bild aus Internet, "Inline-Style": 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+2) Bild aus Internet, "Reference-Style": 
+![alt text][logo_1]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png
+
+3) Bild aus Root-Directory (= Ordner, indem sich das R-Markdown-File 'ZF-Syntax' befindet), "Inline-Style":
+![alt text](path-to-image-here)
+
+4) Bild aus Root-Directory (= Ordner, indem sich das R-Markdown-File 'ZF-Syntax' befindet), "Reference-Style":
+![alt text][logo_2]
+
+[logo]: path-to-image-here
+
+---
+
+Bemerkung: "Reference-Style" ist sehr nützlich, insbesondere, weil du die References basically zuunterst in das R-Markdown Dokument einfügen kannst.
+```
+
+Nehmen wir zunächst den Fall von einem **Bild aus dem Internet**:
+
+- Die **Inline-Methode** ist einfach: ![Beispielsbild aus Internet mit Inline-Methode](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Beispielsbild aus Internet mit Inline-Methode")
+- Die **Reference-Methode** kann auch verwendet werden, um den gleichen Output zu generieren: ![Beispielsbild aus Internet mit Reference-Methode][logo_1]
+
+
+Als nächstes, nehmen wir ein **Bild, welches von meinem eigenen Computer stammt**. Ich hatte ich VTX eine Frage bezüglich meiner Domain geschrieben und musst Ihnen einen Screenshot einer meiner E-Mails angeben:
+
+- Mit **Inline-Methode**: ![Screenshot mit Inline-Methode](docs/bilder/home/capture-d-ecran.png)
+- Mit **Reference-Methode**: ![Screenshot mit Reference-Methode][logo_2]
+
+#### Tabellen 
+
+---
+
+Für gewisse Konzepte, eignen sich Tabellen besonders gut, insbesondere wenn es um die übersichtliche Darstellung eines Konzeptes geht:
+
+```
+| Produkt       | Beschreibung  | Preis      |
+| ------------- |:-------------:| -----:     |
+| Focal Sopra   | Lautsprecher  | CHF 12'000 |
+| Focal Chorus  | Lautsprecher  | CHF 1'200  |
+| B&W 800 D3    | Lautsprecher  | CHF 30'000 |
+
+Alternativ kann auch mit weniger Zeichen gearbeitet werden, allerdings sieht die Tabelle - als Code - nicht besonders leserlich aus:
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+```
+
+Hier wäre die Muster-Tabelle für die Preise von Lautsprechern:
+
+| Produkt       | Beschreibung  | Preis      |
+| ------------- |:-------------:| -----:     |
+| Focal Sopra   | Lautsprecher  | CHF 12'000 |
+| Focal Chorus  | Lautsprecher  | CHF 1'200  |
+| B&W 800 D3    | Lautsprecher  | CHF 30'000 |
+
+Alternativ kann die gleiche Tabelle mit weniger Syntax erzielt werden:
+
+Produkt | Beschreibung | Preis
+--- | --- | ---
+Focal Sopra | `Lautsprecher` | **CHF 12'000**
+Focal Chorus | `Lautsprecher` | **CHF 1'200**
+B&W 800 D3 | `Lautsprecher` | **CHF 30'000**
+
+<u>Bemerkung</u>: Man kann innerhalb der Tabelle die Textausschnitte weiterhin mit Markdown erweitern, also - beispielsweise - fettgedurckt oder kursiv schreiben.
+
+#### Blockquotes
+
+---
+
+Zitate oder - in Emails - können Fragen der gegenüberstehenden Person besser hervorgehoben werden und tragen zum Verständnis bei:
+
+```
+> Herr Mayer, was sind die Vorteile des Optimize-Audio Konzeptes?
+
+> "Comerades" isn't just a word. It refers to heart and believing in each other. - Mavis 
+```
+
+> Herr Mayer, was sind die Vorteile des Optimize-Audio Konzeptes?
+
+Sie profitieren von Synergie-Effekten, welche die Leistung einer Anlage qualitätsmässig vervielfacht.
+
+> "Regrets is a powerful poison. The more you harbor those feelings, the harder it is to move on." Amamya
+
+#### HTML in Markdown
+
+---
+
+Wie bereits in einem oberen Kapitel gesehen, lässt sich `R Markdown` auch mit einfachem HTML kombinieren:
+
+```
+<ul>
+  <li>Definition list</li>
+  <li>Is something people use sometimes.</li>
+  <li>Does *not* work very **well**. Use HTML <em>tags</em> instead.</li>
+</ul>
+```
+
+<ul>
+  <li>Definition list</li>
+  <li>Is something people use sometimes.</li>
+  <li>Sometimes, does *not* seem to work very **well** with normal `R Markdown`. Use HTML <em>tags</em> instead.</li>
+</ul>
+
+#### Horizontale Linien
+
+---
+
+Um Themen voneinander abzugrenden und schöneres Layout zu haben, empfiehlt sich, mit Linien zu arbeiten, sobald ein neues Thema beginnt. Es gibt **drei Möglichkeiten**, um horizontale Linien einzubauen:
+
+```
+
+1) Verwende 3 Hyphens
+
+---
+
+2) Verwende 3 Asterisks
+
+***
+
+3) Verwende 3 Underscores
+
+___
+
+```
+
+Hyphens
+
+---
+
+Asterisks
+
+***
+
+Underscores
+
+___
+
+#### Videos einfügen
+
+---
+
+In `R Markdown`gibt es **keinen direkten Weg**, um Videos direkt einzubetten. Am einfachsten geht es mittels HTML-Code, bei dem es grundsätzliche **eine Möglichkeit** gibt:
+
+```
+Füge ein Bild mit einem Link zum Video hinzu:
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
+" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
+```
+                
+- Mit der Bild-zum-Video-Methode erhalte ich:
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=ds7pFOj0-FU
+" target="_blank"><img src="http://img.youtube.com/vi/ds7pFOj0-FU/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
+#### LaTeX für mathematische Formeln
+
+---
+
+Es gibt die Möglichkeit, mittels der Programmiersprache `LaTeX` mathematische Formeln aufzuschreiben. Indem man das Dollarzeichen `$` verwendet, versteht `R Markdown`, dass man die Sprache `LaTeX` verwendet:
+
+```
+- Für ein "Block-Element" - dh man beginnt auf einer neuen Zeile - verwendet man zwei Dollarzeichen:
+
+$$\underbrace{z-score = \frac{\overbrace{x}^{observation}-\overbrace{\mu}^{population-mean}}{\underbrace{\sigma}_{population-sd}}}_{Standardisierungs-Formel}$$
+
+- Für ein "Inline-Element", verwendet man nur ein Dollarzeichen:
+
+Der Mittelwert wird oftmals als $\muh$ bezeichnet und die Varianz $\sigma$.
+```
+
+- <u>Beispiel für ein **"Block-Element"**</u>:
+
+$$\underbrace{z-score = \frac{\overbrace{x}^{observation}-\overbrace{\mu}^{population-mean}}{\underbrace{\sigma}_{population-sd}}}_{Standardisierungs-Formel}$$
+
+- <u>Illustration des **"Inline-Elements"**</u>: Der Mittelwert wird oftmals als **$\mu$** bezeichnet und die Varianz **$\sigma$**.
+
+[logo_1]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Beispielsbild aus Internet mit Reference-Methode"
+[logo_2]: docs/bilder/home/capture-d-ecran.png "corehub.net Email Screenshot"
+
+#### Code Chunks Inputs / Outputs anzeigen / verstecken mit `Eval, Echo, Results` 
+
+---
+
+Bei Code Chunks, möchte man manchmal den Code absichtlich zeigen, aber manchmal auch  - zum Beispiel - nur eine Graphik, ohne dass man den Code (= Input) sieht. Deshalb gibt es in `RMarkdown` diverse Befehle, die man als sogenannte *Argumente* (= Inputs) angeben kann: 
+
+- Wenn man **nur den Input-Code anzeigen** will, jedoch *nicht* den dazugehörigen Output (= z.B. um den Code anzuzeigen, wie man ein Bild exportiert, aber dieses Bild nicht effektiv exportieren will), verwendet man das Argument `eval = FALSE`.
+
+  - <u>Hier ein Beispiel anhand meines Masterarbeit-Codes, welchen ich nur zeigen, aber nicht runnen möchte</u>:
+
+```{r load-packages-clear-workspace, eval = FALSE}
+###############
+## Step 1: Preliminary basic steps
+###### 1) Load some packages, set working directory and clear the workspace. ######
+rm(list = ls()) # clear workspace
+
+setwd("~/Uni/Masterstudium/Masterarbeit/final-code") # set wd
+
+# load some packages:
+library(dummies)
+library(foreign)
+library(stargazer) # important to create tables
+library(readstata13) # important to load the ddset
+library(haven)
+library(plyr)# to use functions like count()
+# Note: install.packages("readstata13") first before you can load them!
+```
+
+- Wenn man **nur den Output des Codes zeigen** möchte, aber nicht den dazugehörigen Input (= Code), dann verwendet man das Argument `echo = FALSE`. Eventuell müssen auch noch `message=FALSE` und `warning=FALSE` verwendet werden, falls zusätzliche Hinsweise beim evaluieren / runnen des Codes auftauchen (**im unteren Beispiel ist dies der Fall!**).
+
+  - <u>Hier ein Beispiel, bei dem ich nur die erstellte Graphik zeigen möchte</u>:
+  
+```{r input-only, echo=FALSE, message=FALSE, warning=FALSE}
+# Here I will plot a Graph with ggplot2:
+
+
+### 1) Load packages & datasets needed:
+
+library(ggplot2)
+library(dplyr)
+library(gcookbook)
+
+### 2) Plot a function:
+
+myfun <- function(xvar) {
+1 / (1 + exp(-xvar + 10))
+} # first, I specify the function
+
+# First, create a dataframe with only 1 variable - e.g. our range of x-values -
+# that goes - for example - from 0 to 20 [note that - technically - the command
+# x = c(0,20) will only create two values, namely 0 and 20, but NOT the whole
+# range of values from 0 to 20!!! However, the code below works anyway!]. Next,
+# tell R that you want those numbers 0 & 20 to be plottet on your x-axis -
+# -> this is all the code within the 'ggplot()' function:
+ggplot(data.frame(x = c(0, 20)), aes(x = x)) +
+  stat_function(fun = myfun, geom = "line") # then, pass the above "user-defined
+# function" called 'myfun' as an input into the function stat_function()
+```
+
+- Abschliessend gibt es noch den Fall, dass man **weder den Input, noch den Output eines Code Chunks nicht zeigen möchte, aber der Code dennoch evaluiert wird**. Dies tut man mittels des Arguments `results = hide` & `include = FALSE`. 
+
+  - Beispielsweise hast du in deiner MA ganz viele male den Code `View = data` verwendet. Dadurch gibt es ein Fenster, welches durch Pop-Up auftaucht. Oftmals ist dies praktisch, wenn man nach bugs im Code sucht, aber schlussendlich sollten diese im Endergebnis nicht angezeigt werden. Hier verwende ich einfach basic Mathe, um dir zu zeigen, dass es funktioniert, obwohl ich einen Code Chunk im `RMarkdown`-Dokument eingefügt habe: *no code shows*!
+  
+```{r testing-arguments, include=FALSE, results="hide"}
+
+# Basic math!
+3*3
+
+3*4 / 2
+
+```
+
+#### Hyperlinks 
+
+---
+
+- Hier ein Link zu [einem guten Youtube-Video](https://www.youtube.com/watch?v=L-Lsfu4ab74).
+
+
+#### Code-Snippets
 
 When writing Code, I recommend you to use `.Rmd`-Documents, which will allow you to combine both, text, as well as Code (in R, Python, or any other language of your choice).
 
@@ -205,7 +622,7 @@ When writing Code in `R-Markdown`, it will be useful for you to know when:
 1) to execute code wihtin a code-snippet
 2) and where not.
 
-### Hide Source Code
+##### Hide Source Code
 
 This will be done with `echo = FALSE`:
 
@@ -225,7 +642,7 @@ To hide warning-messages, just use `message = FALSE`:
 message("You will not see the message.")
 ```
 
-### Execute a Code-Chunk without showing any Output
+##### Execute a Code-Chunk without showing any Output
 
 You will get an output, e.g. the code will execute, but you will not show the code.
 
@@ -233,7 +650,7 @@ You will get an output, e.g. the code will execute, but you will not show the co
 # any R code here
 ```
 
-### Do NOT execute a Code-Chunk
+##### Do NOT execute a Code-Chunk
 
 If you want to show code for demonstration purposes - like on this Website - 
 you will probably want to only show the code, but not execute it. This is also possible with `eval=FALSE`:
@@ -242,12 +659,12 @@ you will probably want to only show the code, but not execute it. This is also p
 # any R code here
 ```
 
-### RMarkdown- VS. Markdown-Files
+#### RMarkdown- VS. Markdown-Files
 
 - Verwende `<ins></ins>` als HTML, um Texte zu Unterstreichen. 
   - <ins>Achtung</ins>: Der HTML-Tag `<u></u>` geht nicht in `.rm`-files. Lustigerweise funktioniert `<u></u>` jedoch in `.Rmd` (= R Markdown) 😂
   
-### Nützliche Hexadecimals
+#### Nützliche Hexadecimals
 
 - Hexadecimal code for the left square-bracket = `&#91;` --> Ich muss das so machen mit den eckigen Klammern, weil `[]` wird für Links & Bilder verwendet in `Markdown` 🤪
 - Hexadecimal code for the right square-bracket = `&#93;` --> Ich muss das so machen mit den eckigen Klammern, weil `[]` wird für Links & Bilder verwendet in `Markdown` 🤪

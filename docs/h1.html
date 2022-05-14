@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 12 OpenAI | Data Science from Scratch Code</title>
-  <meta name="description" content="Chapter 12 OpenAI | Data Science from Scratch Code" />
+  <title>Chapter 2 H1 | Data Science from Scratch Code</title>
+  <meta name="description" content="Chapter 2 H1 | Data Science from Scratch Code" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 12 OpenAI | Data Science from Scratch Code" />
+  <meta property="og:title" content="Chapter 2 H1 | Data Science from Scratch Code" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 12 OpenAI | Data Science from Scratch Code" />
+  <meta name="twitter:title" content="Chapter 2 H1 | Data Science from Scratch Code" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="mengenlehre.html"/>
-
+<link rel="prev" href="index.html"/>
+<link rel="next" href="alt-h1.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -357,61 +357,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="openai" class="section level1">
-<h1><span class="header-section-number">Chapter 12</span> OpenAI</h1>
-<p>Here is the link in order for you to play around: <code>https://beta.openai.com/playground</code></p>
-<ul>
-<li><u><strong>Achtung Kostenpflichtig (ab sofort)</strong></u>: <em>Even if you play around on the “playground”-area, you will get charged! <code>OpenAI</code> treats “Playground” the same, as the usage from the regular API. You can see how much you are billed by navigating to this link: <code>https://beta.openai.com/account/usage</code> (you get 18$ and 3 months to spend them “for free”).</em></li>
-</ul>
-<p>Open AI is a non-profit organisation that uses NLP-Models (with Deep-Learning) to be able to understand the context of - for example - questions and <strong>generate content on its own</strong>! But it goes even further than that.: <a href="https://www.youtube.com/watch?v=alJdw4JDJ4o">in his youtube-video</a>, <code>Fireship.io</code> talks about <code>OpenAI</code> creating art, e.g. the computer is able to draw for you!</p>
-<p>It is awesome! The guy / team who created this, truly is / are admirable and has / have surely put an incredible amount of effort in it! :O</p>
-<div id="what-can-openai-do-the-output" class="section level2">
-<h2><span class="header-section-number">12.1</span> What can <code>OpenAI</code> do? | The Output</h2>
-<ul>
-<li><strong>Content generation</strong></li>
-<li><strong>Summarization</strong></li>
-<li>Classification, categorization, and sentiment analysis</li>
-<li><strong>Data extraction</strong></li>
-<li>Translation</li>
-<li>Many more!</li>
-</ul>
+<div id="h1" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> H1</h1>
+<div id="h2" class="section level2">
+<h2><span class="header-section-number">2.1</span> H2</h2>
+<div id="h3" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> H3</h3>
+<div id="h4" class="section level4">
+<h4><span class="header-section-number">2.1.1.1</span> H4</h4>
+<div id="h5" class="section level5">
+<h5><span class="header-section-number">2.1.1.1.1</span> H5</h5>
+<div id="h6" class="section level6">
+<h6><span class="header-section-number">2.1.1.1.1.1</span> H6</h6>
+<p>Alternatively, for H1 and H2, an underline-ish style:</p>
 </div>
-<div id="how-does-the-model-work-the-blueprint" class="section level2">
-<h2><span class="header-section-number">12.2</span> How does the Model work? | The Blueprint</h2>
-<p>The model predicts <strong>which text is most likely to follow the text preceding it</strong>.</p>
 </div>
-<div id="terminology-of-openai-api-wörterbuch" class="section level2">
-<h2><span class="header-section-number">12.3</span> Terminology of <code>OpenAI</code>-API | Wörterbuch</h2>
-<ul>
-<li><strong>Prompt</strong> = Input-Text you give the model. For example, this can be a question like <code>What is Economics? And what is Structural Economics?</code>.
-<ul>
-<li><u>Key</u>: Adding a simple adjective to our “prompt” is able to change the resulting output completely! <em>Designing your prompt is essentially how you “program” the model</em>.</li>
-</ul></li>
-<li><strong>Completions</strong> = This is the output of the model, for example, it would be the “prediction” // answer that the model provides for the question <code>What is Economics? And what is Structural Economics?</code></li>
-<li><strong>“Temperature”</strong> = This is a way to bring in <strong>variation in the prediction // suggested results</strong> of the model.
-<ul>
-<li><u>Example</u>: If you submit the <em>same</em> prompt multiple times <strong>when the “temperature” is set to <code>0</code></strong>, the model would always return identical or very similar completions // results. If you re-submit <em>the same prompt</em> a few times <strong>with temperature set to <code>1</code></strong>, you will notice that the proposed results will be different.</li>
-<li><u>Possible Range for “temperature”</u>: You can set the parameter “temperature” with values between (and including) <code>0</code> and <code>1</code>.
-<ul>
-<li><u>Key to note</u>: “Temperature” is a value between <code>0</code> and <code>1</code> that essentially <em>lets you control how confident the model should be when making these predictions</em>. <strong>Lowering temperature towards <code>0</code> means it will take fewer risks when making a prediction</strong>.
-<ul>
-<li><u>Faustregel</u>: It’s usually best to set a <em>low</em> “temperature” for tasks <strong>where the desired output is well-defined</strong>. <em>Higher</em> “temperature” may be useful for <strong>tasks where variety OR creativity are desired</strong>.</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><strong>token</strong> = You can think of tokens as pieces of words used for natural language processing. For English text, 1 token is approximately 4 characters or 0.75 words. As a point of reference, the collected works of Shakespeare are about 900’000 words or 1.2M tokens.
-<ul>
-<li><u>“Wechselkurs” Token zu Wörter</u>: 1 token = 0.75 words, also ein <strong>1:0.75 Verhältnis</strong>, dh für 1 Token erhalte ich 0.75 Wörter bzw. für 1 Wort erhalte ich 1.333 Token.</li>
-<li><u>“Wechselkurs” Token zu Zeichen</u>: 1 token = 4 Zeichen, also ein <strong>1:4 Verhältnis</strong>, dh für 1 Token erhalte ich 4 Zeichen bzw. für 1 Zeichen erhalte ich 1/4-tel Token.</li>
-</ul></li>
-</ul>
 </div>
-<div id="technology-behind-it-quellen" class="section level2">
-<h2><span class="header-section-number">12.4</span> Technology behind it | Quellen</h2>
-<ul>
-<li><code>Hierarchical Text-Conditional Image-Generation with CLIP-Latents</code> | Ramesh, Dhariwal</li>
-</ul>
-
+</div>
 </div>
 </div>
             </section>
@@ -419,8 +381,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="mengenlehre.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="alt-h1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -452,7 +414,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/joffreymayer/ds-from-scratch/edit/master/99-openai.Rmd",
+"link": "https://github.com/joffreymayer/ds-from-scratch/edit/master/index.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -460,7 +422,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/joffreymayer/ds-from-scratch/blob/master/99-openai.Rmd",
+"link": "https://github.com/joffreymayer/ds-from-scratch/blob/master/index.Rmd",
 "text": null
 },
 "download": null,

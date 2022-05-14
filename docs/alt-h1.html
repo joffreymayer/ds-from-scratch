@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Alt-H1 | Data Science from Scratch Code</title>
+  <meta name="description" content="Chapter 3 Alt-H1 | Data Science from Scratch Code" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Alt-H1 | Data Science from Scratch Code" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Alt-H1 | Data Science from Scratch Code" />
+  
+  
+  
+
+<meta name="author" content="Joffrey Anthony" />
+
+
+<meta name="date" content="2022-05-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="h1.html"/>
+<link rel="next" href="foundations-of-data-science.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">DS from Scratch Codes</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Computer Set-Up</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#mac-tricks"><i class="fa fa-check"></i><b>1.1</b> Mac Tricks</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#öffne-die-developer-tools-von-google-chrome"><i class="fa fa-check"></i><b>1.1.1</b> Öffne die Developer-Tools von Google-Chrome</a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#speichern"><i class="fa fa-check"></i><b>1.1.2</b> Speichern</a></li>
+<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#speichern-unter"><i class="fa fa-check"></i><b>1.1.3</b> Speichern Unter</a></li>
+<li class="chapter" data-level="1.1.4" data-path="index.html"><a href="index.html#finder"><i class="fa fa-check"></i><b>1.1.4</b> Finder</a></li>
+<li class="chapter" data-level="1.1.5" data-path="index.html"><a href="index.html#programm-schliessen"><i class="fa fa-check"></i><b>1.1.5</b> Programm schliessen</a></li>
+<li class="chapter" data-level="1.1.6" data-path="index.html"><a href="index.html#neuer-ordner"><i class="fa fa-check"></i><b>1.1.6</b> Neuer Ordner</a></li>
+<li class="chapter" data-level="1.1.7" data-path="index.html"><a href="index.html#tilde-zeichen"><i class="fa fa-check"></i><b>1.1.7</b> Tilde Zeichen</a></li>
+<li class="chapter" data-level="1.1.8" data-path="index.html"><a href="index.html#backslash"><i class="fa fa-check"></i><b>1.1.8</b> Backslash</a></li>
+<li class="chapter" data-level="1.1.9" data-path="index.html"><a href="index.html#screenshot-vom-bildschirm"><i class="fa fa-check"></i><b>1.1.9</b> Screenshot vom Bildschirm</a></li>
+<li class="chapter" data-level="1.1.10" data-path="index.html"><a href="index.html#teil-des-bildschirms-screen-schoten"><i class="fa fa-check"></i><b>1.1.10</b> Teil des Bildschirms Screen-Schoten</a></li>
+<li class="chapter" data-level="1.1.11" data-path="index.html"><a href="index.html#verlauf-löschen-in-chrome-browser"><i class="fa fa-check"></i><b>1.1.11</b> Verlauf löschen in Chrome Browser</a></li>
+<li class="chapter" data-level="1.1.12" data-path="index.html"><a href="index.html#verlauf-löschen-safari"><i class="fa fa-check"></i><b>1.1.12</b> Verlauf löschen Safari</a></li>
+<li class="chapter" data-level="1.1.13" data-path="index.html"><a href="index.html#bildschirm-aufnahme"><i class="fa fa-check"></i><b>1.1.13</b> Bildschirm Aufnahme</a></li>
+<li class="chapter" data-level="1.1.14" data-path="index.html"><a href="index.html#lesezeichen-in-google-chrome"><i class="fa fa-check"></i><b>1.1.14</b> Lesezeichen in Google Chrome</a></li>
+<li class="chapter" data-level="1.1.15" data-path="index.html"><a href="index.html#search-console-pop-up"><i class="fa fa-check"></i><b>1.1.15</b> Search Console Pop Up</a></li>
+<li class="chapter" data-level="1.1.16" data-path="index.html"><a href="index.html#format-kopieren-einer-zelle-in-numbers"><i class="fa fa-check"></i><b>1.1.16</b> Format Kopieren einer Zelle (in Numbers)</a></li>
+<li class="chapter" data-level="1.1.17" data-path="index.html"><a href="index.html#format-übertragen-einer-zelle-in-numbers"><i class="fa fa-check"></i><b>1.1.17</b> Format übertragen einer Zelle (in Numbers)</a></li>
+<li class="chapter" data-level="1.1.18" data-path="index.html"><a href="index.html#switch-between-applications-on-your-computer"><i class="fa fa-check"></i><b>1.1.18</b> Switch between Applications on your computer</a></li>
+<li class="chapter" data-level="1.1.19" data-path="index.html"><a href="index.html#move-forward-through-tabs"><i class="fa fa-check"></i><b>1.1.19</b> Move Forward through Tabs</a></li>
+<li class="chapter" data-level="1.1.20" data-path="index.html"><a href="index.html#zahl-als-exponent"><i class="fa fa-check"></i><b>1.1.20</b> Zahl als Exponent</a></li>
+<li class="chapter" data-level="1.1.21" data-path="index.html"><a href="index.html#source-code-einer-webseite-aufschalten"><i class="fa fa-check"></i><b>1.1.21</b> Source-Code einer Webseite aufschalten</a></li>
+<li class="chapter" data-level="1.1.22" data-path="index.html"><a href="index.html#interaktive-code-ansicht-für-das-abchecken-von-webseiten"><i class="fa fa-check"></i><b>1.1.22</b> Interaktive Code-Ansicht für das Abchecken von Webseiten</a></li>
+<li class="chapter" data-level="1.1.23" data-path="index.html"><a href="index.html#approximate-symbol"><i class="fa fa-check"></i><b>1.1.23</b> Approximate Symbol <code>≈</code></a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#virtual-environment"><i class="fa fa-check"></i><b>1.2</b> Virtual Environment</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#create-a-venv"><i class="fa fa-check"></i><b>1.2.1</b> Create a <code>venv</code></a></li>
+<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#activate-your-newly-created-venv"><i class="fa fa-check"></i><b>1.2.2</b> Activate your newly created <code>venv</code></a></li>
+<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#install-packages"><i class="fa fa-check"></i><b>1.2.3</b> Install packages</a></li>
+<li class="chapter" data-level="1.2.4" data-path="index.html"><a href="index.html#overview-of-packages"><i class="fa fa-check"></i><b>1.2.4</b> Overview of packages</a></li>
+<li class="chapter" data-level="1.2.5" data-path="index.html"><a href="index.html#overview-of-every-venv"><i class="fa fa-check"></i><b>1.2.5</b> Overview of every <code>venv</code></a></li>
+<li class="chapter" data-level="1.2.6" data-path="index.html"><a href="index.html#execute-any-python-skript"><i class="fa fa-check"></i><b>1.2.6</b> Execute any python skript</a></li>
+<li class="chapter" data-level="1.2.7" data-path="index.html"><a href="index.html#deactivate-the-venv"><i class="fa fa-check"></i><b>1.2.7</b> Deactivate the <code>venv</code></a></li>
+<li class="chapter" data-level="1.2.8" data-path="index.html"><a href="index.html#delete-a-venv"><i class="fa fa-check"></i><b>1.2.8</b> Delete a <code>venv</code></a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#how-to-efficiently-manage-a-project"><i class="fa fa-check"></i><b>1.3</b> How to efficiently manage a Project?</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#create-a-website-on-github-for-free"><i class="fa fa-check"></i><b>1.3.1</b> Create a Website on Github (for free)</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#r-markdown-syntax"><i class="fa fa-check"></i><b>1.3.2</b> R Markdown Syntax</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="h1.html"><a href="h1.html"><i class="fa fa-check"></i><b>2</b> H1</a><ul>
+<li class="chapter" data-level="2.1" data-path="h1.html"><a href="h1.html#h2"><i class="fa fa-check"></i><b>2.1</b> H2</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="h1.html"><a href="h1.html#h3"><i class="fa fa-check"></i><b>2.1.1</b> H3</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="alt-h1.html"><a href="alt-h1.html"><i class="fa fa-check"></i><b>3</b> Alt-H1</a><ul>
+<li class="chapter" data-level="3.1" data-path="alt-h1.html"><a href="alt-h1.html#alt-h2"><i class="fa fa-check"></i><b>3.1</b> Alt-H2</a></li>
+<li class="chapter" data-level="3.2" data-path="alt-h1.html"><a href="alt-h1.html#terminal-commands"><i class="fa fa-check"></i><b>3.2</b> Terminal-Commands:</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="alt-h1.html"><a href="alt-h1.html#aktuelle-position-directory"><i class="fa fa-check"></i><b>3.2.1</b> Aktuelle Position // Directory?</a></li>
+<li class="chapter" data-level="3.2.2" data-path="alt-h1.html"><a href="alt-h1.html#showing-the-child-directories-inside-the-directory-you-are-currently-in"><i class="fa fa-check"></i><b>3.2.2</b> Showing the child-directories inside the directory you are currently in?</a></li>
+<li class="chapter" data-level="3.2.3" data-path="alt-h1.html"><a href="alt-h1.html#delete-everything-you-wrote-in-your-terminal-up-until-now"><i class="fa fa-check"></i><b>3.2.3</b> Delete everything you wrote in your <code>Terminal</code> up until now?</a></li>
+<li class="chapter" data-level="3.2.4" data-path="alt-h1.html"><a href="alt-h1.html#change-directory"><i class="fa fa-check"></i><b>3.2.4</b> Change directory?</a></li>
+<li class="chapter" data-level="3.2.5" data-path="alt-h1.html"><a href="alt-h1.html#creating-a-new-directory"><i class="fa fa-check"></i><b>3.2.5</b> Creating a new directory?</a></li>
+<li class="chapter" data-level="3.2.6" data-path="alt-h1.html"><a href="alt-h1.html#create-a-new-file"><i class="fa fa-check"></i><b>3.2.6</b> Create a new file?</a></li>
+<li class="chapter" data-level="3.2.7" data-path="alt-h1.html"><a href="alt-h1.html#remove-files"><i class="fa fa-check"></i><b>3.2.7</b> Remove files?</a></li>
+<li class="chapter" data-level="3.2.8" data-path="alt-h1.html"><a href="alt-h1.html#open-the-current-directory-you-are-in"><i class="fa fa-check"></i><b>3.2.8</b> Open the current directory you are in?</a></li>
+<li class="chapter" data-level="3.2.9" data-path="alt-h1.html"><a href="alt-h1.html#terminal-magic-commands-for-being-faster"><i class="fa fa-check"></i><b>3.2.9</b> Terminal Magic-Commands for being faster?</a></li>
+<li class="chapter" data-level="3.2.10" data-path="alt-h1.html"><a href="alt-h1.html#syntax-im-terminal"><i class="fa fa-check"></i><b>3.2.10</b> Syntax im Terminal</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="alt-h1.html"><a href="alt-h1.html#how-to-activate-use-python"><i class="fa fa-check"></i><b>3.3</b> How to activate &amp; use Python?</a></li>
+<li class="chapter" data-level="3.4" data-path="alt-h1.html"><a href="alt-h1.html#git-github"><i class="fa fa-check"></i><b>3.4</b> Git &amp; Github:</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="alt-h1.html"><a href="alt-h1.html#first-time-using-git-github"><i class="fa fa-check"></i><b>3.4.1</b> First time using Git &amp; Github</a></li>
+<li class="chapter" data-level="3.4.2" data-path="alt-h1.html"><a href="alt-h1.html#key-concepts-in-git"><i class="fa fa-check"></i><b>3.4.2</b> 2 Key concepts in Git</a></li>
+<li class="chapter" data-level="3.4.3" data-path="alt-h1.html"><a href="alt-h1.html#working-with-branches"><i class="fa fa-check"></i><b>3.4.3</b> Working with Branches</a></li>
+<li class="chapter" data-level="3.4.4" data-path="alt-h1.html"><a href="alt-h1.html#set-up-an-ssh-key-for-github"><i class="fa fa-check"></i><b>3.4.4</b> Set-Up an SSH-Key for Github</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="alt-h1.html"><a href="alt-h1.html#latex"><i class="fa fa-check"></i><b>3.5</b> LaTeX</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="alt-h1.html"><a href="alt-h1.html#what-is-the-latex-code-for-haty"><i class="fa fa-check"></i><b>3.5.1</b> What is the LaTeX-Code for <span class="math inline">\(\hat{y}\)</span>?</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="alt-h1.html"><a href="alt-h1.html#wörterbuch"><i class="fa fa-check"></i><b>3.6</b> Wörterbuch</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="alt-h1.html"><a href="alt-h1.html#allgemein"><i class="fa fa-check"></i><b>3.6.1</b> Allgemein</a></li>
+<li class="chapter" data-level="3.6.2" data-path="alt-h1.html"><a href="alt-h1.html#synonyme"><i class="fa fa-check"></i><b>3.6.2</b> Synonyme</a></li>
+<li class="chapter" data-level="3.6.3" data-path="alt-h1.html"><a href="alt-h1.html#data-science-vs.-mein-economics-studium"><i class="fa fa-check"></i><b>3.6.3</b> Data Science VS. mein Economics-Studium</a></li>
+<li class="chapter" data-level="3.6.4" data-path="alt-h1.html"><a href="alt-h1.html#ide-explained"><i class="fa fa-check"></i><b>3.6.4</b> IDE explained</a></li>
+<li class="chapter" data-level="3.6.5" data-path="alt-h1.html"><a href="alt-h1.html#restful-api"><i class="fa fa-check"></i><b>3.6.5</b> Restful API</a></li>
+<li class="chapter" data-level="3.6.6" data-path="alt-h1.html"><a href="alt-h1.html#magic-commands-in-python"><i class="fa fa-check"></i><b>3.6.6</b> Magic Commands in Python</a></li>
+<li class="chapter" data-level="3.6.7" data-path="alt-h1.html"><a href="alt-h1.html#pipe-operator-in-r"><i class="fa fa-check"></i><b>3.6.7</b> Pipe-Operator in R</a></li>
+<li class="chapter" data-level="3.6.8" data-path="alt-h1.html"><a href="alt-h1.html#docker"><i class="fa fa-check"></i><b>3.6.8</b> Docker</a></li>
+<li class="chapter" data-level="3.6.9" data-path="alt-h1.html"><a href="alt-h1.html#tensorflow-and-pytorch"><i class="fa fa-check"></i><b>3.6.9</b> Tensorflow and PyTorch</a></li>
+<li class="chapter" data-level="3.6.10" data-path="alt-h1.html"><a href="alt-h1.html#data-pipeline"><i class="fa fa-check"></i><b>3.6.10</b> Data Pipeline</a></li>
+<li class="chapter" data-level="3.6.11" data-path="alt-h1.html"><a href="alt-h1.html#fundamental-daten"><i class="fa fa-check"></i><b>3.6.11</b> Fundamental-Daten</a></li>
+<li class="chapter" data-level="3.6.12" data-path="alt-h1.html"><a href="alt-h1.html#data-flow"><i class="fa fa-check"></i><b>3.6.12</b> Data-Flow</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="alt-h1.html"><a href="alt-h1.html#synonyme-1"><i class="fa fa-check"></i><b>3.7</b> Synonyme</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="alt-h1.html"><a href="alt-h1.html#data-science"><i class="fa fa-check"></i><b>3.7.1</b> Data Science</a></li>
+<li class="chapter" data-level="3.7.2" data-path="alt-h1.html"><a href="alt-h1.html#machine-learning"><i class="fa fa-check"></i><b>3.7.2</b> Machine Learning</a></li>
+<li class="chapter" data-level="3.7.3" data-path="alt-h1.html"><a href="alt-h1.html#python"><i class="fa fa-check"></i><b>3.7.3</b> Python</a></li>
+<li class="chapter" data-level="3.7.4" data-path="alt-h1.html"><a href="alt-h1.html#it-software-development"><i class="fa fa-check"></i><b>3.7.4</b> IT &amp; Software-Development</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="alt-h1.html"><a href="alt-h1.html#projekt-management"><i class="fa fa-check"></i><b>3.8</b> Projekt-Management</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="alt-h1.html"><a href="alt-h1.html#meetings"><i class="fa fa-check"></i><b>3.8.1</b> Meetings</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="alt-h1.html"><a href="alt-h1.html#job-interviews"><i class="fa fa-check"></i><b>3.9</b> Job-Interviews</a></li>
+<li class="chapter" data-level="3.10" data-path="alt-h1.html"><a href="alt-h1.html#ausblick"><i class="fa fa-check"></i><b>3.10</b> Ausblick</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html"><i class="fa fa-check"></i><b>4</b> Foundations of Data Science</a><ul>
+<li class="chapter" data-level="4.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#find-data"><i class="fa fa-check"></i><b>4.1</b> Find Data</a></li>
+<li class="chapter" data-level="4.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#questions-you-need-to-answer-when-starting-a-new-project"><i class="fa fa-check"></i><b>4.2</b> Questions you need to answer when starting a new Project</a></li>
+<li class="chapter" data-level="4.3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#effective-research-how-to-find-answers-quickly"><i class="fa fa-check"></i><b>4.3</b> Effective Research: How to find answers quickly?</a></li>
+<li class="chapter" data-level="4.4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#how-to-read-notebooks-from-other-people"><i class="fa fa-check"></i><b>4.4</b> How to read Notebooks from other People?</a></li>
+<li class="chapter" data-level="4.5" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#machine-learning-theory"><i class="fa fa-check"></i><b>4.5</b> Machine-Learning Theory</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#difference-between-training--validation--test-dataset"><i class="fa fa-check"></i><b>4.5.1</b> Difference between Training-, Validation- &amp; Test-dataset</a></li>
+<li class="chapter" data-level="4.5.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#concept-of-stratification"><i class="fa fa-check"></i><b>4.5.2</b> Concept of Stratification</a></li>
+<li class="chapter" data-level="4.5.3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#cross-validation"><i class="fa fa-check"></i><b>4.5.3</b> Cross-Validation</a></li>
+<li class="chapter" data-level="4.5.4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#normalisierung-der-daten"><i class="fa fa-check"></i><b>4.5.4</b> Normalisierung der Daten</a></li>
+<li class="chapter" data-level="4.5.5" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#rnn"><i class="fa fa-check"></i><b>4.5.5</b> RNN</a></li>
+<li class="chapter" data-level="4.5.6" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-pipelines"><i class="fa fa-check"></i><b>4.5.6</b> Data-Pipelines</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#programming-theory"><i class="fa fa-check"></i><b>4.6</b> Programming Theory</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-types"><i class="fa fa-check"></i><b>4.6.1</b> Data-Types</a></li>
+<li class="chapter" data-level="4.6.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#global-variables-vs.-local-variables"><i class="fa fa-check"></i><b>4.6.2</b> Global Variables VS. Local Variables</a></li>
+<li class="chapter" data-level="4.6.3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#array"><i class="fa fa-check"></i><b>4.6.3</b> Array</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#statistics-theory"><i class="fa fa-check"></i><b>4.7</b> Statistics-Theory</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#p-hacking"><i class="fa fa-check"></i><b>4.7.1</b> P-Hacking</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#appendix-for-the-future"><i class="fa fa-check"></i><b>4.8</b> Appendix for the Future</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="python-libraries.html"><a href="python-libraries.html"><i class="fa fa-check"></i><b>5</b> Python Libraries</a><ul>
+<li class="chapter" data-level="5.1" data-path="python-libraries.html"><a href="python-libraries.html#list-of-useful-python-libraries"><i class="fa fa-check"></i><b>5.1</b> List of Useful Python-Libraries</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="python-libraries.html"><a href="python-libraries.html#put-a-time-stamp-on-each-python-cell"><i class="fa fa-check"></i><b>5.1.1</b> Put a time-stamp on each Python-Cell</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="python-libraries.html"><a href="python-libraries.html#necessary-foundations"><i class="fa fa-check"></i><b>5.2</b> Necessary Foundations</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="python-libraries.html"><a href="python-libraries.html#pandas"><i class="fa fa-check"></i><b>5.2.1</b> Pandas</a></li>
+<li class="chapter" data-level="5.2.2" data-path="python-libraries.html"><a href="python-libraries.html#loc--vs.-iloc-selection"><i class="fa fa-check"></i><b>5.2.2</b> <code>loc</code>- VS. <code>iloc</code>-Selection</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="python-libraries.html"><a href="python-libraries.html#time-series-forecasting"><i class="fa fa-check"></i><b>5.3</b> Time-Series Forecasting</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="python-libraries.html"><a href="python-libraries.html#facebook-prophet"><i class="fa fa-check"></i><b>5.3.1</b> Facebook Prophet</a></li>
+<li class="chapter" data-level="5.3.2" data-path="python-libraries.html"><a href="python-libraries.html#sklearn"><i class="fa fa-check"></i><b>5.3.2</b> SkLearn</a></li>
+<li class="chapter" data-level="5.3.3" data-path="python-libraries.html"><a href="python-libraries.html#sktime"><i class="fa fa-check"></i><b>5.3.3</b> SkTime</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="visualization.html"><a href="visualization.html"><i class="fa fa-check"></i><b>6</b> Visualization</a><ul>
+<li class="chapter" data-level="6.1" data-path="visualization.html"><a href="visualization.html#graphs-with-python"><i class="fa fa-check"></i><b>6.1</b> Graphs with Python</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="visualization.html"><a href="visualization.html#seaborn"><i class="fa fa-check"></i><b>6.1.1</b> Seaborn</a></li>
+<li class="chapter" data-level="6.1.2" data-path="visualization.html"><a href="visualization.html#matplotlib"><i class="fa fa-check"></i><b>6.1.2</b> Matplotlib</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="improve-yourself-constantly.html"><a href="improve-yourself-constantly.html"><i class="fa fa-check"></i><b>7</b> Improve Yourself Constantly</a><ul>
+<li class="chapter" data-level="7.1" data-path="improve-yourself-constantly.html"><a href="improve-yourself-constantly.html#to-share"><i class="fa fa-check"></i><b>7.1</b> To Share</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html"><i class="fa fa-check"></i><b>8</b> Git Versioncontrol</a><ul>
+<li class="chapter" data-level="8.1" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html#useful-git-commands"><i class="fa fa-check"></i><b>8.1</b> Useful <code>Git</code>-Commands</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html#activate-the-automatic-password-from-local-computer-to-github"><i class="fa fa-check"></i><b>8.1.1</b> Activate the automatic Password: from local Computer to Github</a></li>
+<li class="chapter" data-level="8.1.2" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html#create-a-.gitignore-file"><i class="fa fa-check"></i><b>8.1.2</b> Create a <code>.gitignore</code>-file</a></li>
+<li class="chapter" data-level="8.1.3" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html#speicherplatz-verwendet-durch-git-history"><i class="fa fa-check"></i><b>8.1.3</b> Speicherplatz verwendet durch <code>Git</code>-History</a></li>
+<li class="chapter" data-level="8.1.4" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html#unstage-everything"><i class="fa fa-check"></i><b>8.1.4</b> Unstage everything</a></li>
+<li class="chapter" data-level="8.1.5" data-path="git-versioncontrol.html"><a href="git-versioncontrol.html#stage-only-a-certain-type-of-file---for-example---only-.html-files"><i class="fa fa-check"></i><b>8.1.5</b> Stage only a certain type of file - for example - only <code>.html</code>-files</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>9</b> Econometrics</a><ul>
+<li class="chapter" data-level="9.1" data-path="econometrics.html"><a href="econometrics.html#synonyme-2"><i class="fa fa-check"></i><b>9.1</b> Synonyme:</a></li>
+<li class="chapter" data-level="9.2" data-path="econometrics.html"><a href="econometrics.html#english-words-synonyme"><i class="fa fa-check"></i><b>9.2</b> English Words Synonyme</a></li>
+<li class="chapter" data-level="9.3" data-path="econometrics.html"><a href="econometrics.html#allgemeines"><i class="fa fa-check"></i><b>9.3</b> Allgemeines</a></li>
+<li class="chapter" data-level="9.4" data-path="econometrics.html"><a href="econometrics.html#statistics-formulas"><i class="fa fa-check"></i><b>9.4</b> Statistics Formulas</a></li>
+<li class="chapter" data-level="9.5" data-path="econometrics.html"><a href="econometrics.html#definitionen"><i class="fa fa-check"></i><b>9.5</b> Definitionen</a></li>
+<li class="chapter" data-level="9.6" data-path="econometrics.html"><a href="econometrics.html#different-tests-vorgehen-bei-den-tests"><i class="fa fa-check"></i><b>9.6</b> Different Tests // Vorgehen bei den Tests</a></li>
+<li class="chapter" data-level="9.7" data-path="econometrics.html"><a href="econometrics.html#diverse-berechnungen"><i class="fa fa-check"></i><b>9.7</b> Diverse Berechnungen</a></li>
+<li class="chapter" data-level="9.8" data-path="econometrics.html"><a href="econometrics.html#accept-reject-null-hypothesis"><i class="fa fa-check"></i><b>9.8</b> Accept // Reject Null-Hypothesis</a></li>
+<li class="chapter" data-level="9.9" data-path="econometrics.html"><a href="econometrics.html#formulierungen"><i class="fa fa-check"></i><b>9.9</b> Formulierungen</a></li>
+<li class="chapter" data-level="9.10" data-path="econometrics.html"><a href="econometrics.html#coefficient-interpretation"><i class="fa fa-check"></i><b>9.10</b> Coefficient Interpretation</a></li>
+<li class="chapter" data-level="9.11" data-path="econometrics.html"><a href="econometrics.html#nice-to-know"><i class="fa fa-check"></i><b>9.11</b> Nice to Know</a></li>
+<li class="chapter" data-level="9.12" data-path="econometrics.html"><a href="econometrics.html#allgemeine-regeln"><i class="fa fa-check"></i><b>9.12</b> Allgemeine Regeln</a></li>
+<li class="chapter" data-level="9.13" data-path="econometrics.html"><a href="econometrics.html#ommitted-variable-bias-ovb"><i class="fa fa-check"></i><b>9.13</b> Ommitted Variable Bias = OVB</a></li>
+<li class="chapter" data-level="9.14" data-path="econometrics.html"><a href="econometrics.html#randomization"><i class="fa fa-check"></i><b>9.14</b> Randomization</a></li>
+<li class="chapter" data-level="9.15" data-path="econometrics.html"><a href="econometrics.html#dummy-variables"><i class="fa fa-check"></i><b>9.15</b> Dummy Variables</a></li>
+<li class="chapter" data-level="9.16" data-path="econometrics.html"><a href="econometrics.html#implication-of-statistically-significant-coefficients"><i class="fa fa-check"></i><b>9.16</b> Implication of statistically significant coefficients</a></li>
+<li class="chapter" data-level="9.17" data-path="econometrics.html"><a href="econometrics.html#linear-probability-model-vs.-probit-model-comparison"><i class="fa fa-check"></i><b>9.17</b> Linear probability model VS. Probit model: comparison</a></li>
+<li class="chapter" data-level="9.18" data-path="econometrics.html"><a href="econometrics.html#heterogeneous-treatment-effects-interaction-terms"><i class="fa fa-check"></i><b>9.18</b> Heterogeneous treatment effects // interaction terms</a></li>
+<li class="chapter" data-level="9.19" data-path="econometrics.html"><a href="econometrics.html#definitions-of-bad-controls"><i class="fa fa-check"></i><b>9.19</b> Definitions of “bad controls”</a></li>
+<li class="chapter" data-level="9.20" data-path="econometrics.html"><a href="econometrics.html#fixed-effects-fe"><i class="fa fa-check"></i><b>9.20</b> Fixed effects // FE</a></li>
+<li class="chapter" data-level="9.21" data-path="econometrics.html"><a href="econometrics.html#cross-sectional-data"><i class="fa fa-check"></i><b>9.21</b> Cross-sectional Data</a></li>
+<li class="chapter" data-level="9.22" data-path="econometrics.html"><a href="econometrics.html#panel-data"><i class="fa fa-check"></i><b>9.22</b> Panel Data</a></li>
+<li class="chapter" data-level="9.23" data-path="econometrics.html"><a href="econometrics.html#difference-in-differences"><i class="fa fa-check"></i><b>9.23</b> Difference-in-Differences</a></li>
+<li class="chapter" data-level="9.24" data-path="econometrics.html"><a href="econometrics.html#instrumental-variables-iv"><i class="fa fa-check"></i><b>9.24</b> Instrumental variables // IV</a></li>
+<li class="chapter" data-level="9.25" data-path="econometrics.html"><a href="econometrics.html#regression-discontinuity-design-rdd"><i class="fa fa-check"></i><b>9.25</b> Regression discontinuity design // RDD</a></li>
+<li class="chapter" data-level="9.26" data-path="econometrics.html"><a href="econometrics.html#coded-algorithms-r-functions"><i class="fa fa-check"></i><b>9.26</b> Coded Algorithms &amp; R-Functions</a></li>
+<li class="chapter" data-level="9.27" data-path="econometrics.html"><a href="econometrics.html#nützliche-funktionen-r"><i class="fa fa-check"></i><b>9.27</b> Nützliche Funktionen R:</a></li>
+<li class="chapter" data-level="9.28" data-path="econometrics.html"><a href="econometrics.html#useful-econometrics-documents"><i class="fa fa-check"></i><b>9.28</b> Useful Econometrics documents:</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="machine-learning-1.html"><a href="machine-learning-1.html"><i class="fa fa-check"></i><b>10</b> Machine Learning</a><ul>
+<li class="chapter" data-level="10.1" data-path="machine-learning-1.html"><a href="machine-learning-1.html#typen-von-machine-learning"><i class="fa fa-check"></i><b>10.1</b> Typen von Machine Learning</a></li>
+<li class="chapter" data-level="10.2" data-path="machine-learning-1.html"><a href="machine-learning-1.html#supervised-learning"><i class="fa fa-check"></i><b>10.2</b> Supervised Learning</a></li>
+<li class="chapter" data-level="10.3" data-path="machine-learning-1.html"><a href="machine-learning-1.html#methods"><i class="fa fa-check"></i><b>10.3</b> Methods</a></li>
+<li class="chapter" data-level="10.4" data-path="machine-learning-1.html"><a href="machine-learning-1.html#wichtige-funktionen"><i class="fa fa-check"></i><b>10.4</b> Wichtige Funktionen</a></li>
+<li class="chapter" data-level="10.5" data-path="machine-learning-1.html"><a href="machine-learning-1.html#uni-kurs-neural-networks-deep-learning"><i class="fa fa-check"></i><b>10.5</b> Uni-Kurs <code>Neural Networks &amp; Deep Learning</code></a><ul>
+<li class="chapter" data-level="10.5.1" data-path="machine-learning-1.html"><a href="machine-learning-1.html#notation-neural-networks"><i class="fa fa-check"></i><b>10.5.1</b> Notation Neural Networks</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="machine-learning-1.html"><a href="machine-learning-1.html#quellen"><i class="fa fa-check"></i><b>10.6</b> Quellen</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="mengenlehre.html"><a href="mengenlehre.html"><i class="fa fa-check"></i><b>11</b> Mengenlehre</a><ul>
+<li class="chapter" data-level="11.1" data-path="mengenlehre.html"><a href="mengenlehre.html#wörterbuch-1"><i class="fa fa-check"></i><b>11.1</b> Wörterbuch</a></li>
+<li class="chapter" data-level="11.2" data-path="mengenlehre.html"><a href="mengenlehre.html#mathematische-schrift-lesen"><i class="fa fa-check"></i><b>11.2</b> Mathematische “Schrift” lesen</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="openai.html"><a href="openai.html"><i class="fa fa-check"></i><b>12</b> OpenAI</a><ul>
+<li class="chapter" data-level="12.1" data-path="openai.html"><a href="openai.html#what-can-openai-do-the-output"><i class="fa fa-check"></i><b>12.1</b> What can <code>OpenAI</code> do? | The Output</a></li>
+<li class="chapter" data-level="12.2" data-path="openai.html"><a href="openai.html#how-does-the-model-work-the-blueprint"><i class="fa fa-check"></i><b>12.2</b> How does the Model work? | The Blueprint</a></li>
+<li class="chapter" data-level="12.3" data-path="openai.html"><a href="openai.html#terminology-of-openai-api-wörterbuch"><i class="fa fa-check"></i><b>12.3</b> Terminology of <code>OpenAI</code>-API | Wörterbuch</a></li>
+<li class="chapter" data-level="12.4" data-path="openai.html"><a href="openai.html#technology-behind-it-quellen"><i class="fa fa-check"></i><b>12.4</b> Technology behind it | Quellen</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science from Scratch Code</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="alt-h1" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Alt-H1</h1>
+<div id="alt-h2" class="section level2">
+<h2><span class="header-section-number">3.1</span> Alt-H2</h2>
+<div id="wichtige-textausschnitte-markieren" class="section level4">
+<h4><span class="header-section-number">3.1.0.1</span> Wichtige Textausschnitte markieren</h4>
+<hr />
+<p>Wenn ein Autor einen Text verfasst, dann kann es sehr hilfreich für einen Leser sein, wenn die Hauptbotschaften hervorgehoben werden. Es gibt in Markdown grundsätzlich <strong>sieben Wege</strong>, um dies zu tun:</p>
+<pre><code>Italics, aka kursiv, mit *asterisks* or _underscores_.
+
+Fettgedruckt, aka bold, mit **asterisks** or __underscores__.
+
+Kombiniere fett &amp; kursiv mit **asterisks and _underscores_**.
+
+Wörter unterstreichen mit HTML-Tag &lt;u&gt;dies ist wichtig&lt;/u&gt;!
+
+Durchgestrichen mit zwei tildes. ~~Scratch this.~~ (= drücke Option + n)
+
+Codes hervorheben mit Appostroph. `&lt;h1&gt;` (= drücke shift + ^-Taste)
+
+Ganze Code-Chunks mit drei Appostrophs. ```noob```</code></pre>
+<p><u>Als Output, sieht es so aus</u>:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Fettgedruckte Wörter</strong></li>
+<li><em>Italics</em>, dh kursiv</li>
+<li>Kombination aus <strong>fettgedrucktem und <em>kursiv</em></strong>.</li>
+<li>Dies ist <u>nicht</u> korrekt gelöst!</li>
+<li>Du bisch <del>en spasst</del>, just kiddin du Esel ;)</li>
+<li>Codes im Text hervorheben, also zum Beispiel <code>&lt;h1&gt;</code>.</li>
+<li>Sogenannte Code-Chunks, wie oben verwendet, braucht einen neue Zeile, also:</li>
+</ol>
+<pre><code>This is a Code Chunk, where you can write your R-Code, for example.</code></pre>
+</div>
+<div id="listen" class="section level4">
+<h4><span class="header-section-number">3.1.0.2</span> Listen</h4>
+<hr />
+<p>Oftmals ist es von Vorteil, wenn jeder Schritt einer Erklärung oder Anleitung mit Hilfe von Listenpunkten heruntergebrochen wird. Ein Mensch versteht dann viel besser, was er zu tun hat, wenn er etwas Neues / zum ersten Mal macht.</p>
+<p>Wie du es bereits aus HTML kennst, gibt es sogenannte <strong>Unordered Lists</strong> (HTML-Code wäre <code>ul</code>) <u>oder</u> <strong>odered Lists</strong> (HTML-Code wäre <code>ol</code>). Ausserdem können <em>Listen innerhalb von Listen</em> erstellt werden, wenn ein Arbeitsschritt noch weiter heruntergebrochen werden kann:</p>
+<pre><code>1. Erstes Element einer Ordered List, aka das erste &lt;li&gt;&lt;/li&gt; im HTML-Code.
+2. Zweites Element einer Ordered List, aka das zweite &lt;li&gt;&lt;/li&gt; im HTML-Code.
+  * Unordered sub-list. ACHTUNG: Drücke 2-mal auf die Tab-Taste, sonst wird keine Einrückung gemacht!
+1. Bemerke, dass ich hier absichtlich wieder bei &quot;1&quot; beginne, weil ich dir zeigen will: Actual numbers don&#39;t matter, just that it&#39;s a number
+  1. Ordered sub-list
+2. Vierter Listenpunkt.  
+
+Alternative für Unordered Lists:
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses</code></pre>
+<ol style="list-style-type: decimal">
+<li>Erstes Element einer Ordered List, aka das erste <code>&lt;li&gt;&lt;/li&gt;</code> im HTML-Code.</li>
+<li>Zweites Element einer Ordered List, aka das zweite <code>&lt;li&gt;&lt;/li&gt;</code> im HTML-Code.
+<ul>
+<li><strong><u>Un</u>ordered</strong> Sub-List. <strong><u>ACHTUNG</u></strong>: Man muss 2-mal auf die Tab-Taste drücken, sonst wird keine Einrückung gemacht!</li>
+</ul></li>
+<li>Bemerke, dass ich hier absichtlich wieder eine “1” im Code schreibe, weil ich dir zeigen will, dass die ordered List mit einem <code>3)</code> beginnen wird!
+<ol style="list-style-type: decimal">
+<li><strong>Ordered</strong> Sub-List. <strong><u>ACHTUNG</u></strong>: Auch hier muss man wieder 2-mal auf die Tab-Taste drücken, sonst wird keine Einrückung gemacht!</li>
+</ol></li>
+<li>Vierter Listenpunkt.</li>
+</ol>
+<p>Alternative für <u>Un</u>ordered-Lists:</p>
+<ul>
+<li>Unordered list mit der <strong>Asterisk-Schreibweise</strong>.</li>
+<li>Oder mit einem <strong>Minus-Zeichen</strong>.</li>
+<li>Oder mit einem <strong>Plus-Zeichen</strong>.</li>
+</ul>
+</div>
+<div id="hyperlinks" class="section level4">
+<h4><span class="header-section-number">3.1.0.3</span> Hyperlinks</h4>
+<hr />
+<p>Häufig gibt es im Internet sehr gute Zusammenfassungen oder Konzepte, auf welche du <strong>referenzieren</strong> kannst, indem du einen Textausschnitt mit Hilfe von einem Hyperlink hervorhebst:</p>
+<pre><code>[Dies ist zum Beispiel die Zusammenfassung](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#h4), auf welche ich mich basiere, um dir Markdown beizubringen.
+
+Ich kann so auch - zum Beispiel - auf die [Webseite von Tee](https://www.audiophil-dreams.com/) verlinken. </code></pre>
+<p><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#h4">Dies ist zum Beispiel die Zusammenfassung</a>, auf welche ich mich basiere, um dir Markdown beizubringen.</p>
+<p>Ich kann so auch - zum Beispiel - auf die <a href="https://www.audiophil-dreams.com/">Webseite von Tee</a> verlinken.</p>
+</div>
+<div id="bilder" class="section level4">
+<h4><span class="header-section-number">3.1.0.4</span> Bilder</h4>
+<hr />
+<p>Wenn jemand eine Erklärung erhält, ist es unentbehrlich, auch Bilder zu verwenden, denn Visualisierungen von Konzepten sind oftmals extrem nützlich, um eine Intuition / Verständnis für Neues zu entwickeln. Bei einer Anleitung können zum Beispiel Screenshots verwendet werden, um die schriftlichen Erklärungen mit Bilder effizient zu unterstützen. Es gibt grundsätzlich <strong>vier Arten</strong>, um Bilder in ein Markdown-Dokument einzufügen:</p>
+<pre><code>1) Bild aus Internet, &quot;Inline-Style&quot;: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 1&quot;)
+
+2) Bild aus Internet, &quot;Reference-Style&quot;: 
+![alt text][logo_1]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png
+
+3) Bild aus Root-Directory (= Ordner, indem sich das R-Markdown-File &#39;ZF-Syntax&#39; befindet), &quot;Inline-Style&quot;:
+![alt text](path-to-image-here)
+
+4) Bild aus Root-Directory (= Ordner, indem sich das R-Markdown-File &#39;ZF-Syntax&#39; befindet), &quot;Reference-Style&quot;:
+![alt text][logo_2]
+
+[logo]: path-to-image-here
+
+---
+
+Bemerkung: &quot;Reference-Style&quot; ist sehr nützlich, insbesondere, weil du die References basically zuunterst in das R-Markdown Dokument einfügen kannst.</code></pre>
+<p>Nehmen wir zunächst den Fall von einem <strong>Bild aus dem Internet</strong>:</p>
+<ul>
+<li>Die <strong>Inline-Methode</strong> ist einfach: <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Beispielsbild aus Internet mit Inline-Methode" alt="Beispielsbild aus Internet mit Inline-Methode" /></li>
+<li>Die <strong>Reference-Methode</strong> kann auch verwendet werden, um den gleichen Output zu generieren: <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Beispielsbild aus Internet mit Reference-Methode" alt="Beispielsbild aus Internet mit Reference-Methode" /></li>
+</ul>
+<p>Als nächstes, nehmen wir ein <strong>Bild, welches von meinem eigenen Computer stammt</strong>. Ich hatte ich VTX eine Frage bezüglich meiner Domain geschrieben und musst Ihnen einen Screenshot einer meiner E-Mails angeben:</p>
+<ul>
+<li>Mit <strong>Inline-Methode</strong>: <img src="docs/bilder/home/capture-d-ecran.png" alt="Screenshot mit Inline-Methode" /></li>
+<li>Mit <strong>Reference-Methode</strong>: <img src="docs/bilder/home/capture-d-ecran.png" title="corehub.net Email Screenshot" alt="Screenshot mit Reference-Methode" /></li>
+</ul>
+</div>
+<div id="tabellen" class="section level4">
+<h4><span class="header-section-number">3.1.0.5</span> Tabellen</h4>
+<hr />
+<p>Für gewisse Konzepte, eignen sich Tabellen besonders gut, insbesondere wenn es um die übersichtliche Darstellung eines Konzeptes geht:</p>
+<pre><code>| Produkt       | Beschreibung  | Preis      |
+| ------------- |:-------------:| -----:     |
+| Focal Sopra   | Lautsprecher  | CHF 12&#39;000 |
+| Focal Chorus  | Lautsprecher  | CHF 1&#39;200  |
+| B&amp;W 800 D3    | Lautsprecher  | CHF 30&#39;000 |
+
+Alternativ kann auch mit weniger Zeichen gearbeitet werden, allerdings sieht die Tabelle - als Code - nicht besonders leserlich aus:
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3</code></pre>
+<p>Hier wäre die Muster-Tabelle für die Preise von Lautsprechern:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Produkt</th>
+<th align="center">Beschreibung</th>
+<th align="right">Preis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Focal Sopra</td>
+<td align="center">Lautsprecher</td>
+<td align="right">CHF 12’000</td>
+</tr>
+<tr class="even">
+<td>Focal Chorus</td>
+<td align="center">Lautsprecher</td>
+<td align="right">CHF 1’200</td>
+</tr>
+<tr class="odd">
+<td>B&amp;W 800 D3</td>
+<td align="center">Lautsprecher</td>
+<td align="right">CHF 30’000</td>
+</tr>
+</tbody>
+</table>
+<p>Alternativ kann die gleiche Tabelle mit weniger Syntax erzielt werden:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Produkt</th>
+<th>Beschreibung</th>
+<th>Preis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Focal Sopra</td>
+<td><code>Lautsprecher</code></td>
+<td><strong>CHF 12’000</strong></td>
+</tr>
+<tr class="even">
+<td>Focal Chorus</td>
+<td><code>Lautsprecher</code></td>
+<td><strong>CHF 1’200</strong></td>
+</tr>
+<tr class="odd">
+<td>B&amp;W 800 D3</td>
+<td><code>Lautsprecher</code></td>
+<td><strong>CHF 30’000</strong></td>
+</tr>
+</tbody>
+</table>
+<p><u>Bemerkung</u>: Man kann innerhalb der Tabelle die Textausschnitte weiterhin mit Markdown erweitern, also - beispielsweise - fettgedurckt oder kursiv schreiben.</p>
+</div>
+<div id="blockquotes" class="section level4">
+<h4><span class="header-section-number">3.1.0.6</span> Blockquotes</h4>
+<hr />
+<p>Zitate oder - in Emails - können Fragen der gegenüberstehenden Person besser hervorgehoben werden und tragen zum Verständnis bei:</p>
+<pre><code>&gt; Herr Mayer, was sind die Vorteile des Optimize-Audio Konzeptes?
+
+&gt; &quot;Comerades&quot; isn&#39;t just a word. It refers to heart and believing in each other. - Mavis </code></pre>
+<blockquote>
+<p>Herr Mayer, was sind die Vorteile des Optimize-Audio Konzeptes?</p>
+</blockquote>
+<p>Sie profitieren von Synergie-Effekten, welche die Leistung einer Anlage qualitätsmässig vervielfacht.</p>
+<blockquote>
+<p>“Regrets is a powerful poison. The more you harbor those feelings, the harder it is to move on.” Amamya</p>
+</blockquote>
+</div>
+<div id="html-in-markdown" class="section level4">
+<h4><span class="header-section-number">3.1.0.7</span> HTML in Markdown</h4>
+<hr />
+<p>Wie bereits in einem oberen Kapitel gesehen, lässt sich <code>R Markdown</code> auch mit einfachem HTML kombinieren:</p>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;Definition list&lt;/li&gt;
+  &lt;li&gt;Is something people use sometimes.&lt;/li&gt;
+  &lt;li&gt;Does *not* work very **well**. Use HTML &lt;em&gt;tags&lt;/em&gt; instead.&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<ul>
+<li>
+Definition list
+</li>
+<li>
+Is something people use sometimes.
+</li>
+<li>
+Sometimes, does <em>not</em> seem to work very <strong>well</strong> with normal <code>R Markdown</code>. Use HTML <em>tags</em> instead.
+</li>
+</ul>
+</div>
+<div id="horizontale-linien" class="section level4">
+<h4><span class="header-section-number">3.1.0.8</span> Horizontale Linien</h4>
+<hr />
+<p>Um Themen voneinander abzugrenden und schöneres Layout zu haben, empfiehlt sich, mit Linien zu arbeiten, sobald ein neues Thema beginnt. Es gibt <strong>drei Möglichkeiten</strong>, um horizontale Linien einzubauen:</p>
+<pre><code>
+1) Verwende 3 Hyphens
+
+---
+
+2) Verwende 3 Asterisks
+
+***
+
+3) Verwende 3 Underscores
+
+___
+</code></pre>
+<p>Hyphens</p>
+<hr />
+<p>Asterisks</p>
+<hr />
+<p>Underscores</p>
+<hr />
+</div>
+<div id="videos-einfügen" class="section level4">
+<h4><span class="header-section-number">3.1.0.9</span> Videos einfügen</h4>
+<hr />
+<p>In <code>R Markdown</code>gibt es <strong>keinen direkten Weg</strong>, um Videos direkt einzubetten. Am einfachsten geht es mittels HTML-Code, bei dem es grundsätzliche <strong>eine Möglichkeit</strong> gibt:</p>
+<pre><code>Füge ein Bild mit einem Link zum Video hinzu:
+
+&lt;a href=&quot;http://www.youtube.com/watch?feature=player_embedded&amp;v=YOUTUBE_VIDEO_ID_HERE
+&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg&quot; 
+alt=&quot;IMAGE ALT TEXT HERE&quot; width=&quot;240&quot; height=&quot;180&quot; border=&quot;10&quot; /&gt;&lt;/a&gt;
+</code></pre>
+<ul>
+<li>Mit der Bild-zum-Video-Methode erhalte ich:</li>
+</ul>
+<p><a href="http://www.youtube.com/watch?feature=player_embedded&v=ds7pFOj0-FU
+" target="_blank"><img src="http://img.youtube.com/vi/ds7pFOj0-FU/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a></p>
+</div>
+<div id="latex-für-mathematische-formeln" class="section level4">
+<h4><span class="header-section-number">3.1.0.10</span> LaTeX für mathematische Formeln</h4>
+<hr />
+<p>Es gibt die Möglichkeit, mittels der Programmiersprache <code>LaTeX</code> mathematische Formeln aufzuschreiben. Indem man das Dollarzeichen <code>$</code> verwendet, versteht <code>R Markdown</code>, dass man die Sprache <code>LaTeX</code> verwendet:</p>
+<pre><code>- Für ein &quot;Block-Element&quot; - dh man beginnt auf einer neuen Zeile - verwendet man zwei Dollarzeichen:
+
+$$\underbrace{z-score = \frac{\overbrace{x}^{observation}-\overbrace{\mu}^{population-mean}}{\underbrace{\sigma}_{population-sd}}}_{Standardisierungs-Formel}$$
+
+- Für ein &quot;Inline-Element&quot;, verwendet man nur ein Dollarzeichen:
+
+Der Mittelwert wird oftmals als $\muh$ bezeichnet und die Varianz $\sigma$.</code></pre>
+<ul>
+<li><u>Beispiel für ein <strong>“Block-Element”</strong></u>:</li>
+</ul>
+<p><span class="math display">\[\underbrace{z-score = \frac{\overbrace{x}^{observation}-\overbrace{\mu}^{population-mean}}{\underbrace{\sigma}_{population-sd}}}_{Standardisierungs-Formel}\]</span></p>
+<ul>
+<li><u>Illustration des <strong>“Inline-Elements”</strong></u>: Der Mittelwert wird oftmals als <strong><span class="math inline">\(\mu\)</span></strong> bezeichnet und die Varianz <strong><span class="math inline">\(\sigma\)</span></strong>.</li>
+</ul>
+</div>
+<div id="code-chunks-inputs-outputs-anzeigen-verstecken-mit-eval-echo-results" class="section level4">
+<h4><span class="header-section-number">3.1.0.11</span> Code Chunks Inputs / Outputs anzeigen / verstecken mit <code>Eval, Echo, Results</code></h4>
+<hr />
+<p>Bei Code Chunks, möchte man manchmal den Code absichtlich zeigen, aber manchmal auch - zum Beispiel - nur eine Graphik, ohne dass man den Code (= Input) sieht. Deshalb gibt es in <code>RMarkdown</code> diverse Befehle, die man als sogenannte <em>Argumente</em> (= Inputs) angeben kann:</p>
+<ul>
+<li><p>Wenn man <strong>nur den Input-Code anzeigen</strong> will, jedoch <em>nicht</em> den dazugehörigen Output (= z.B. um den Code anzuzeigen, wie man ein Bild exportiert, aber dieses Bild nicht effektiv exportieren will), verwendet man das Argument <code>eval = FALSE</code>.</p>
+<ul>
+<li><u>Hier ein Beispiel anhand meines Masterarbeit-Codes, welchen ich nur zeigen, aber nicht runnen möchte</u>:</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="alt-h1.html#cb21-1"></a><span class="co">###############</span></span>
+<span id="cb21-2"><a href="alt-h1.html#cb21-2"></a><span class="co">## Step 1: Preliminary basic steps</span></span>
+<span id="cb21-3"><a href="alt-h1.html#cb21-3"></a><span class="co">###### 1) Load some packages, set working directory and clear the workspace. ######</span></span>
+<span id="cb21-4"><a href="alt-h1.html#cb21-4"></a><span class="kw">rm</span>(<span class="dt">list =</span> <span class="kw">ls</span>()) <span class="co"># clear workspace</span></span>
+<span id="cb21-5"><a href="alt-h1.html#cb21-5"></a></span>
+<span id="cb21-6"><a href="alt-h1.html#cb21-6"></a><span class="kw">setwd</span>(<span class="st">&quot;~/Uni/Masterstudium/Masterarbeit/final-code&quot;</span>) <span class="co"># set wd</span></span>
+<span id="cb21-7"><a href="alt-h1.html#cb21-7"></a></span>
+<span id="cb21-8"><a href="alt-h1.html#cb21-8"></a><span class="co"># load some packages:</span></span>
+<span id="cb21-9"><a href="alt-h1.html#cb21-9"></a><span class="kw">library</span>(dummies)</span>
+<span id="cb21-10"><a href="alt-h1.html#cb21-10"></a><span class="kw">library</span>(foreign)</span>
+<span id="cb21-11"><a href="alt-h1.html#cb21-11"></a><span class="kw">library</span>(stargazer) <span class="co"># important to create tables</span></span>
+<span id="cb21-12"><a href="alt-h1.html#cb21-12"></a><span class="kw">library</span>(readstata13) <span class="co"># important to load the ddset</span></span>
+<span id="cb21-13"><a href="alt-h1.html#cb21-13"></a><span class="kw">library</span>(haven)</span>
+<span id="cb21-14"><a href="alt-h1.html#cb21-14"></a><span class="kw">library</span>(plyr)<span class="co"># to use functions like count()</span></span>
+<span id="cb21-15"><a href="alt-h1.html#cb21-15"></a><span class="co"># Note: install.packages(&quot;readstata13&quot;) first before you can load them!</span></span></code></pre></div>
+<ul>
+<li><p>Wenn man <strong>nur den Output des Codes zeigen</strong> möchte, aber nicht den dazugehörigen Input (= Code), dann verwendet man das Argument <code>echo = FALSE</code>. Eventuell müssen auch noch <code>message=FALSE</code> und <code>warning=FALSE</code> verwendet werden, falls zusätzliche Hinsweise beim evaluieren / runnen des Codes auftauchen (<strong>im unteren Beispiel ist dies der Fall!</strong>).</p>
+<ul>
+<li><u>Hier ein Beispiel, bei dem ich nur die erstellte Graphik zeigen möchte</u>:</li>
+</ul></li>
+</ul>
+<p><img src="bookdownproj_files/figure-html/input-only-1.png" width="672" /></p>
+<ul>
+<li><p>Abschliessend gibt es noch den Fall, dass man <strong>weder den Input, noch den Output eines Code Chunks nicht zeigen möchte, aber der Code dennoch evaluiert wird</strong>. Dies tut man mittels des Arguments <code>results = hide</code> &amp; <code>include = FALSE</code>.</p>
+<ul>
+<li>Beispielsweise hast du in deiner MA ganz viele male den Code <code>View = data</code> verwendet. Dadurch gibt es ein Fenster, welches durch Pop-Up auftaucht. Oftmals ist dies praktisch, wenn man nach bugs im Code sucht, aber schlussendlich sollten diese im Endergebnis nicht angezeigt werden. Hier verwende ich einfach basic Mathe, um dir zu zeigen, dass es funktioniert, obwohl ich einen Code Chunk im <code>RMarkdown</code>-Dokument eingefügt habe: <em>no code shows</em>!</li>
+</ul></li>
+</ul>
+</div>
+<div id="hyperlinks-1" class="section level4">
+<h4><span class="header-section-number">3.1.0.12</span> Hyperlinks</h4>
+<hr />
+<ul>
+<li>Hier ein Link zu <a href="https://www.youtube.com/watch?v=L-Lsfu4ab74">einem guten Youtube-Video</a>.</li>
+</ul>
+</div>
+<div id="code-snippets" class="section level4">
+<h4><span class="header-section-number">3.1.0.13</span> Code-Snippets</h4>
+<p>When writing Code, I recommend you to use <code>.Rmd</code>-Documents, which will allow you to combine both, text, as well as Code (in R, Python, or any other language of your choice).</p>
+<p>Actually, this document is written in <code>.Rmd</code>-Files, where I combine the text, with so-called “code-snippets”, like the follwing:</p>
+<pre><code>This is a Code-Snippet</code></pre>
+<p>When writing Code in <code>R-Markdown</code>, it will be useful for you to know when:</p>
+<ol style="list-style-type: decimal">
+<li>to execute code wihtin a code-snippet</li>
+<li>and where not.</li>
+</ol>
+<div id="hide-source-code" class="section level5">
+<h5><span class="header-section-number">3.1.0.13.1</span> Hide Source Code</h5>
+<p>This will be done with <code>echo = FALSE</code>:</p>
+<pre><code>## [1] 2</code></pre>
+<p>With figures, you need <code>fig.show = 'hide'</code> in R:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="alt-h1.html#cb24-1"></a><span class="kw">plot</span>(cars)</span></code></pre></div>
+<p>To hide warning-messages, just use <code>message = FALSE</code>:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="alt-h1.html#cb25-1"></a><span class="kw">message</span>(<span class="st">&quot;You will not see the message.&quot;</span>)</span></code></pre></div>
+</div>
+<div id="execute-a-code-chunk-without-showing-any-output" class="section level5">
+<h5><span class="header-section-number">3.1.0.13.2</span> Execute a Code-Chunk without showing any Output</h5>
+<p>You will get an output, e.g. the code will execute, but you will not show the code.</p>
+</div>
+<div id="do-not-execute-a-code-chunk" class="section level5">
+<h5><span class="header-section-number">3.1.0.13.3</span> Do NOT execute a Code-Chunk</h5>
+<p>If you want to show code for demonstration purposes - like on this Website -
+you will probably want to only show the code, but not execute it. This is also possible with <code>eval=FALSE</code>:</p>
+</div>
+</div>
+<div id="rmarkdown--vs.-markdown-files" class="section level4">
+<h4><span class="header-section-number">3.1.0.14</span> RMarkdown- VS. Markdown-Files</h4>
+<ul>
+<li>Verwende <code>&lt;ins&gt;&lt;/ins&gt;</code> als HTML, um Texte zu Unterstreichen.
+<ul>
+<li><ins>
+Achtung
+</ins>
+: Der HTML-Tag <code>&lt;u&gt;&lt;/u&gt;</code> geht nicht in <code>.rm</code>-files. Lustigerweise funktioniert <code>&lt;u&gt;&lt;/u&gt;</code> jedoch in <code>.Rmd</code> (= R Markdown) 😂</li>
+</ul></li>
+</ul>
+</div>
+<div id="nützliche-hexadecimals" class="section level4">
+<h4><span class="header-section-number">3.1.0.15</span> Nützliche Hexadecimals</h4>
+<ul>
+<li>Hexadecimal code for the left square-bracket = <code>&amp;#91;</code> –&gt; Ich muss das so machen mit den eckigen Klammern, weil <code>[]</code> wird für Links &amp; Bilder verwendet in <code>Markdown</code> 🤪</li>
+<li>Hexadecimal code for the right square-bracket = <code>&amp;#93;</code> –&gt; Ich muss das so machen mit den eckigen Klammern, weil <code>[]</code> wird für Links &amp; Bilder verwendet in <code>Markdown</code> 🤪</li>
+</ul>
+</div>
+</div>
+<div id="terminal-commands" class="section level2">
+<h2><span class="header-section-number">3.2</span> Terminal-Commands:</h2>
+<p>A terminal will be essential for your projects, since you will - oftentimes - install packages or move files around your repositories with it. Here, you will find the most useful things you should know when using the <code>Terminal</code>.</p>
+<div id="aktuelle-position-directory" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Aktuelle Position // Directory?</h3>
+<ul>
+<li><p><u>For Mac</u>: <code>pwd</code> = print working directory</p></li>
+<li><p><u>For Windows</u>: <code>dir</code> = this is the same command as <code>pwd</code>, but <code>dir</code> is for <code>Windows</code></p></li>
+</ul>
+</div>
+<div id="showing-the-child-directories-inside-the-directory-you-are-currently-in" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Showing the child-directories inside the directory you are currently in?</h3>
+<ul>
+<li><code>ls</code> = prints all the <code>child-directories</code> (= one layer deeper of the path) from the <code>parent-directory</code> (= current directory you are in with your terminal) you are currently in.</li>
+</ul>
+</div>
+<div id="delete-everything-you-wrote-in-your-terminal-up-until-now" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Delete everything you wrote in your <code>Terminal</code> up until now?</h3>
+<ul>
+<li><code>clear</code> = clears the terminal</li>
+</ul>
+</div>
+<div id="change-directory" class="section level3">
+<h3><span class="header-section-number">3.2.4</span> Change directory?</h3>
+<ul>
+<li><code>cd</code> = change directory
+<ul>
+<li><code>cd ..</code> = go back one directory.</li>
+</ul></li>
+</ul>
+</div>
+<div id="creating-a-new-directory" class="section level3">
+<h3><span class="header-section-number">3.2.5</span> Creating a new directory?</h3>
+<p><code>mkdir new-folder-1 new-folder-2 new-folder-3</code> = This creates 3 new folder within the current (working-) directory you are currently in.</p>
+</div>
+<div id="create-a-new-file" class="section level3">
+<h3><span class="header-section-number">3.2.6</span> Create a new file?</h3>
+<p><code>touch index.html app.css</code> == This will create an <code>index.html</code>, as well as a <code>app.css</code>-file within the current (working-) directory you are currently in.</p>
+</div>
+<div id="remove-files" class="section level3">
+<h3><span class="header-section-number">3.2.7</span> Remove files?</h3>
+<p><code>rm index.html app.css capture.png</code> = This will delete the <code>index.html</code>-, the <code>app.css</code> and the <code>capture.png</code>-files from the current (working-) directory you are currently in.</p>
+</div>
+<div id="open-the-current-directory-you-are-in" class="section level3">
+<h3><span class="header-section-number">3.2.8</span> Open the current directory you are in?</h3>
+<ul>
+<li><code>open .</code> = opens the current directory you are in</li>
+</ul>
+</div>
+<div id="terminal-magic-commands-for-being-faster" class="section level3">
+<h3><span class="header-section-number">3.2.9</span> Terminal Magic-Commands for being faster?</h3>
+<ul>
+<li><u>Trick #1</u>: hit the “Tab-Taste” == will automatically auto-fill the name of the file / directories etc.
+<ul>
+<li><u>Example</u>: Type <code>cd Dok</code> + “Tab”-Taste –&gt; <em>auto-fill activates</em> –&gt; im Terminal steht dann der automatisch ausgefüllte Name des Files / Directories, zum Beispiel <code>cd Dokumente</code> bzw. <code>cd Name_Of_Child_Directory</code></li>
+</ul></li>
+<li><u>Trick #2</u>: How to find a path of a directory that is situated very deeply in your local computer?
+<ul>
+<li><u>Example</u>: Type <code>cd</code> + drag-&amp;-drop the <strong>folder</strong> that is deep in your computer with the file in it.</li>
+</ul></li>
+</ul>
+</div>
+<div id="syntax-im-terminal" class="section level3">
+<h3><span class="header-section-number">3.2.10</span> Syntax im Terminal</h3>
+<ul>
+<li><code>*</code>-Zeichen == Represents “all files”.</li>
+</ul>
+<div id="beispiel-delete-all-files-in-a-folder-that-start-with-the-letter-a" class="section level4">
+<h4><span class="header-section-number">3.2.10.1</span> <u>Beispiel</u>: Delete all Files in a folder that start with the letter <code>a</code>?</h4>
+<p>To delete all files in a folder that start with the letter <code>a</code>, then you should write:</p>
+<pre><code>/folder/a*</code></pre>
+<ul>
+<li><code>.</code>-Zeichen == use the <code>.</code> character to represent the <strong>current folder</strong>.</li>
+<li><code>~</code>-Zeichen == represents the “home directory”.</li>
+</ul>
+</div>
+<div id="beispiel-how-to-return-to-your-home-directory" class="section level4">
+<h4><span class="header-section-number">3.2.10.2</span> <u>Beispiel</u>: how to return to your home directory?</h4>
+<p>You should use:</p>
+<pre><code>cd ~</code></pre>
+</div>
+</div>
+</div>
+<div id="how-to-activate-use-python" class="section level2">
+<h2><span class="header-section-number">3.3</span> How to activate &amp; use Python?</h2>
+<p><code>Python</code> can be executed on your local computer via a <code>Jupyter Notebook</code>, which can be accessed through an IDE. <code>R</code>, <code>Visual Studio Code</code> or <code>PyCharm</code> are examples of IDEs.</p>
+<p>Let’s assume, that we took <code>PyCharm</code> as our IDE. We do the following steps:</p>
+<ol style="list-style-type: decimal">
+<li>Use the <code>Terminal</code> <u>within</u> PyCharm.</li>
+<li>Once you opened the PyCharm-<code>Terminal</code>, go to the directory that will be used for the Jupyter Notebook, by typing something as <code>cd /some_folder_name</code>.</li>
+<li>Finally, type in <code>jupyter notebook</code> in the <code>Terminal</code> to launch the Jupyter Notebook App. The notebook interface will appear in a new browser window or tab.</li>
+</ol>
+</div>
+<div id="git-github" class="section level2">
+<h2><span class="header-section-number">3.4</span> Git &amp; Github:</h2>
+<ul>
+<li><code>pull request</code> = “Take some changes from a particular branch and bring it into another branch.”
+<ul>
+<li><u>Achtung</u>: es ist eine <em>Request</em>, es wurde noch nichts gemerged! Für das brauch es noch <code>merge</code> als zusätzlichen Befehl.<br />
+</li>
+</ul></li>
+<li><code>fork a repo</code> = “Take someone else’s repo - because you love it 😊 - and put it into your own list of repos, in order to be able to edit it yourself without affectig the original repository of the owner.”</li>
+<li><code>commit</code> = save</li>
+<li><code>hash</code> = unique identifier in the history of files. A <code>has</code> is a huge string composed of characters (= Buchstaben) &amp; numbers and is used when using a version-control software, such as <code>Git</code>.</li>
+<li><code>git add</code> = Der Befehl <code>git add</code> wird zu vielen verschiedenen Zwecken eingesetzt. Man verwendet ihn, um:
+<ol style="list-style-type: decimal">
+<li>neue Dateien zur Version-Control hinzuzufügen,</li>
+<li>Dateien für einen Commit vorzumerken, UND</li>
+<li>verschiedene andere Dinge – beispielsweise einen Konflikt aus einem Merge als aufgelöst zu kennzeichnen.
+Leider wird der Befehl <code>git add</code> oft missverstanden. Viele assoziieren damit, dass damit Dateien zum Projekt hinzugefügt werden. Wie Sie aber gerade gelernt haben, wird der Befehl auch noch für viele andere Dinge eingesetzt. Wenn Sie den Befehl git add einsetzen, sollten Sie das eher so sehen, dass Sie damit einen bestimmten Inhalt für den nächsten Commit vormerken (= also Punkt (2) ist vor allem relevant in der obigen Liste.</li>
+</ol></li>
+</ul>
+<blockquote>
+<p>How to tell the original owner you want to merge <u>your</u> changes that you made back into their orignal repo and implement them those changes into their original work // repo?</p>
+</blockquote>
+<p>Look at <a href="https://www.youtube.com/watch?v=_NrSWLQsDL4&amp;list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&amp;index=3">the youtube video from Coding Train ab 9:35-11:50</a></p>
+<ul>
+<li>To see how to <strong>refer</strong> to issues &amp; bugs in your code <u>directly</u> via your commit-command, <a href="https://www.youtube.com/watch?v=WMykv2ZMyEQ&amp;list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&amp;index=4">look at the youtube video ab 6:35-7:40</a> and to <u>diretly</u> <strong>close</strong> issues, because you resolved it, look <a href="https://www.youtube.com/watch?v=WMykv2ZMyEQ&amp;list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&amp;index=4">look at the youtube video ab 7:40-8:55</a>.</li>
+</ul>
+<blockquote>
+<p>What is a remote?</p>
+</blockquote>
+<p>A remote is a <strong>duplicate instance of your repository (on your local computer)</strong> that lives somewhere else on a remote server (like Github).</p>
+<div id="first-time-using-git-github" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> First time using Git &amp; Github</h3>
+<p>There are specific <code>Git</code>-commands that you need to know, when you begin to start to work with <code>Git</code> and Gibthun for the first time. Note that all these <code>Git</code>-commands need to be typed <u>within the Terminal</u> on your local computer.</p>
+<ul>
+<li><code>git config --list</code> = Sehr wichtig, <strong>wenn du <code>Git</code> zum ersten Mal via einem neuen Computer runst</strong>! Dieser Befehl zeigt dir, welchen Username &amp; Email du aktuell verwendest (schaue bei <code>user.name</code> &amp; <code>user.email</code>, ob es deine Github Anmelde-Daten sind). Es ist key - <strong>insbesondere, wenn du neu mit Git beginnst</strong> - dass diese Parameter mit deinen Github Anmelde-Daten übereinstimmen! Ansonsten musst du immer <code>git clone</code> machen und die ältere Version in einen “alt”-Ordner tun, was extrem mühsam ist.
+<ul>
+<li>Wenn du noch keinen <code>user.name</code> hast, dann gebe folgenden Code in die Command-Line ein: <code>git config --global user.name 'Dein_Github_UserName'</code>.
+<ul>
+<li><u>Beachte</u>: Schreibe den Namen <u><strong>mit</strong></u> die Anführungszeichen!</li>
+</ul></li>
+<li>Wenn du noch keinen <code>user.name</code> hast, dann gebe folgenden Code in die Command-Line ein: <code>git config --global user.name 'deineEmail@email.ch'</code>.
+<ul>
+<li><u>Beachte</u>: Schreibe die Email <u><strong>ohne</strong></u> die Anführungszeichen!</li>
+</ul></li>
+<li><u>Check if it worked</u>?: Gebe wieder den Befehl <code>git config --list</code> und schaue bei <code>user.name</code> &amp; <code>user.email</code>, ob dort deine Github Anmelde-Daten übernommen wurden.</li>
+</ul></li>
+<li><code>git push</code> = this is the act of sending to <code>Github</code>.</li>
+<li><code>git pull</code> = this is the act of receiving from <code>Github</code>.</li>
+</ul>
+</div>
+<div id="key-concepts-in-git" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> 2 Key concepts in Git</h3>
+<p>Before starting to work with <code>Git</code>, you need to understand that there are 2 ways of starting a project:</p>
+<pre><code>1) Create a `remote` repository on Github and then `cloning` it - via Git - on your local computer to work from there.
+2) Creating a repository `locally` on your computer and then - aftre a few months working on this repository - adding it to Github.</code></pre>
+<p><em>Depending on which of those 2 different ways you choose to start a project (create a repo right from the get-go on <code>Github</code> VS. work locally and then - after some time - push everything to <code>Github</code>), the Git-Commands will slightly differ.</em></p>
+<div id="start-project-via-github-remote-possibility" class="section level4">
+<h4><span class="header-section-number">3.4.2.1</span> Start Project via Github (remote-possibility)</h4>
+<blockquote>
+<p>What are the Git-Commands, if you start your project directly by creating a Repo on Github (= <em>possibility 1</em>) above)?</p>
+</blockquote>
+<ul>
+<li><code>git clone https://github.com/joffreymayer/tageb.git</code> == Will clone your <u>remote</u> directory <code>tageb</code> - which is currently on Github on your <u>local</u> computer, which is simpler // more comfy when working on projects =)</li>
+<li><code>git status</code> = Assume that you worked on &amp; modified a file on your local computer that you previously had on Github (you cloned the directory with the file in it on your local computer). With the command <code>git status</code>, <code>Git</code> will check whether there is any changes between your local files VS. the files in the remote directory on the Github-Server // -Website.</li>
+<li><a name="anchor-1"><code>git commit -a -m "Test comment for a commit"</code></a> = If you changed a file locally and you are happy with your results, you will need to make a <code>commit</code> (= save) <u>and</u> <code>add</code> all files (= this is why we have an input // argument <code>-a</code>; the concept of <code>adding</code> will be explored in the chapter below, where you want to put a local repo into Github after a few months) and you also want to document, what exactly you modified, if you need to go back to a previous version of your file (= this is why we have an input // argument <code>-m "comment is here..."</code>).</li>
+<li><code>git push origin master</code> = If you have done some changes locally on your file, you can now <code>push</code> everything on the Github-Website.</li>
+<li><code>git log</code> = see, locally, the history of your <code>git commit</code>s.
+<ul>
+<li><u>Achtung</u>: When running this command, you might - accidentally - run into a dangerous environment called <code>VIM</code>, which is a terminal-based text-editor. The problem when you are in <code>VIM</code>, is that you might not be able to get out of it.
+-<u>Solution</u>: To get out of <code>VIM</code>, just type in <code>:q</code> and you will get out of it.</li>
+</ul></li>
+<li><code>git remote -v</code> = This will tell you which URL is the <code>remote</code> on which your repository is hosted.
+<ul>
+<li><u>Merke</u>: The URL of your repo is <em>assigned</em> to the variable <code>origin</code> in <code>Git</code>.</li>
+</ul></li>
+</ul>
+</div>
+<div id="start-project-via-local-computer-local-possibility" class="section level4">
+<h4><span class="header-section-number">3.4.2.2</span> Start Project via local computer (local-possibility)</h4>
+<blockquote>
+<p>What commands do you need, when you decide - after a few months working <u>locally</u> on your computer - to put everything on Github (= <em>possibility 2</em>)?</p>
+</blockquote>
+<ul>
+<li><code>git init</code> == To get started, you need to go to your repository with your terminal - e.g. set the working directory with <code>cd Joffrey\dokumente\my_project</code>) first - and, then, transform your repository to a <em>Git-Repository</em> by just typing <code>git init</code> into your terminal.</li>
+<li><code>git add single_file.txt</code> == <em>After</em> you initialized your repository, you will have an <strong>empty git-repository</strong>. <code>Git</code> will <u>not</u> <code>track</code> the files in your repository (= <code>untracked files</code>), unless you explicitly point them out via the <code>git add</code> command.
+<ul>
+<li><u>If you want to add all files quickly // simultanoeusly</u>: <code>git add .</code></li>
+<li><u>Für genauere Theorie // Erklärung dahinter</u>: Siehe Youtube-Video Coding Train ab <a href="https://www.youtube.com/watch?v=9p2d-CuVlgc&amp;list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&amp;index=7">2:10-6:03</a></li>
+</ul></li>
+<li><code>git commit -m "Adding a new comment for my commit"</code>: <em>After</em> having pointed out to <code>Git</code>, which files he needs to track, you can do a <code>commit</code> of the changes of the files you modified, like in <em>possibility 1)</em>.
+<ul>
+<li><u>Achtung, es gibt einen kleinen Unterschied zu <em>possibility 1)</em></u>: das <code>-a</code> (<a href="#anchor-1">siehe oben</a>) ist verschwunden, weil wir hier <code>add</code> und <code>commit</code> als zwei separate Schritte betrachten.</li>
+</ul></li>
+<li><code>git remote add origin https://github.com/joffreymayer/new-repo</code> = Because our repository is still currently not on <code>Github</code>, we <u>first</u> need to <a href="https://github.com/joffreymayer?tab=repositories">go on the Github Website</a> and create an <u>empty</u> repository. <em>After</em> having done this, you need to tell <code>Git</code> - with the command <code>git remote add origin</code> + <strong>copy-pasting the URL</strong> “<a href="https://github.com/joffreymayer/new-repo" class="uri">https://github.com/joffreymayer/new-repo</a>” - that this is our local
+<ul>
+<li><u>Check if it worked</u>: Type the following into the Terminal <code>git remote -v</code>. It should output the variable name - usually called <code>origin</code> -
+<ul>
+<li><u>Note if you want to be fancy</u>: Within <code>git remote add origin</code>, the name <code>origin</code> can be changed to any word you like. This is just the variable name in which your Github-URL will be stored.</li>
+</ul></li>
+<li>If there is already a remote with the default name <code>origin</code> but you don’t like the name, you can change the name by:
+<ol style="list-style-type: decimal">
+<li><code>git remote remove origin</code> –&gt; this will delete the remote</li>
+<li><code>git remote -v</code> –&gt; just to check if step 1) worked –&gt; should not output anything</li>
+<li><code>git remote add noob https:\\github.com\project-1</code> –&gt; now, re-name the remote and call it <code>noob</code></li>
+</ol></li>
+</ul></li>
+<li><code>git push origin master</code> == <em>Finally</em>, you will be able to put all your files into the freshly made remote-repository on <code>Github</code>.</li>
+<li><code>git pull origin master</code> == Assume that you did changes <code>remotly</code> on Github but not yet locally on your computer. This does not matter, since you can just enter the command <code>git pull origin master</code> to be able to retrieve the changes that you did <code>remotly</code> on Github onto your local computer =)</li>
+</ul>
+</div>
+</div>
+<div id="working-with-branches" class="section level3">
+<h3><span class="header-section-number">3.4.3</span> Working with Branches</h3>
+<blockquote>
+<p>Tutorial for branches?</p>
+</blockquote>
+<p>Look at <a href="https://youtu.be/oPpnCh7InLY">youtube-videos from Coding Train</a>.</p>
+<ul>
+<li><code>git branch new_branch</code> == this will create a branch locally on your computer</li>
+<li><code>git checkout new_branch</code> == this will tell <code>Git</code>: “ah, he wants to go into the branch called ‘new_branch’”.</li>
+<li><code>git branch</code> == this will give you a list of all the branches you ave created locally. Furthermore, it will tell you on which branch you currently work on.</li>
+</ul>
+<blockquote>
+<p>How to merge the changes you made on a separate branch to the <code>master-branch</code> (= main branch)?</p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li><code>git branch new_branch</code> == this will <strong>create a branch</strong> called <code>new_branch</code> locally on your computer.</li>
+<li><code>git checkout new_branch</code> == You will tell <code>Git</code>: “I now want to <strong>work on this newly created branch</strong> called ‘new_branch’”.</li>
+<li><code>git checkout master</code> == <em>After</em> you are happy with the changes you did in <code>new_branch</code> you will need to prepare for the merging by <strong>switching to your main-branch</strong>, which is the <code>master</code>-branch.</li>
+<li><code>git merge new_branch</code> == Since you currently are in the <code>master-branch</code>, Git will know that you want to <strong>merge</strong> <code>new_branch</code> <u>into</u> the <code>master-branch</code>.</li>
+</ol>
+</div>
+<div id="set-up-an-ssh-key-for-github" class="section level3">
+<h3><span class="header-section-number">3.4.4</span> Set-Up an SSH-Key for Github</h3>
+<p>Whenever you will work with <code>Git</code> and <code>Github</code>, you will always need to type in your password, whenever you push something to the <code>Github</code>-Cloud.</p>
+<p>*That’s why you should start using an SSH-Key, giving <code>Github</code> your public-key and your computer the private-key.</p>
+<p><a href="https://www.youtube.com/watch?v=HfTXHrWMGVY&amp;t=1m52s">This Youtube-Video</a> from <code>WebDevSimplified</code> will show you how to do it =)</p>
+<p>That was it 😎</p>
+</div>
+</div>
+<div id="latex" class="section level2">
+<h2><span class="header-section-number">3.5</span> LaTeX</h2>
+<p>This <code>bookdown</code> is created via a <code>.Rmd</code>-File. For a <code>Markdown</code> to be able to read some mathematical formulas, we will need the <code>LaTeX</code>-language.</p>
+<div id="what-is-the-latex-code-for-haty" class="section level3">
+<h3><span class="header-section-number">3.5.1</span> What is the LaTeX-Code for <span class="math inline">\(\hat{y}\)</span>?</h3>
+<p>Simply type:</p>
+<pre><code>$\hat{y}$</code></pre>
+</div>
+</div>
+<div id="wörterbuch" class="section level2">
+<h2><span class="header-section-number">3.6</span> Wörterbuch</h2>
+<p>Jargon of a domain - like in Artificial Intelligence, Software Development or Economics - is one of the biggest challenges if you truly want tounderstand and master a new subject.</p>
+<p>Scientists love to create sophisticated new words for new discoveries, methods or conclusions that they came to uncover in their respecitve fields. The problem with that, is that it acts as a huge market-barrier to those that want to enter the world many years later. You can see this even for “non-scientific” things, like the Pokemon franchise, that grow from 150 Pokemon to almost 1’000 Pokemons. The problem is, that the audience does not nearly grow as much, as in the beginning and that the new generation is not so enthousiastic about it, partly because the field has become too large for noobies.</p>
+<p>That’s why it is form utmost importance to know each field’s jargon. I firmly believe that it is one of the biggest chalenges to overcome in order to be good at something. Because when you are able to “decode” the jargon, you can start “understand” the things. And when you understand, you can start applying, and that is where the fun truly begins :)</p>
+<div id="allgemein" class="section level3">
+<h3><span class="header-section-number">3.6.1</span> Allgemein</h3>
+<ul>
+<li>Overfitting = The problem of overfitting occurs when a model is <strong>too complex and captures too much detail</strong> from the <em>training</em> data. This can lead to the model being unable to generalize to new, unseen data.
+<ul>
+<li><u>Fazit</u>: This is like the problem of “<strong>low external validity</strong>”. You may have a high “internal validity”, but external validity is <em>low</em>!</li>
+</ul></li>
+</ul>
+</div>
+<div id="synonyme" class="section level3">
+<h3><span class="header-section-number">3.6.2</span> Synonyme</h3>
+<ul>
+<li>Source == Programming Language (any kind of)</li>
+</ul>
+</div>
+<div id="data-science-vs.-mein-economics-studium" class="section level3">
+<h3><span class="header-section-number">3.6.3</span> Data Science VS. mein Economics-Studium</h3>
+<blockquote>
+<p>Was ist der Unterschied zwischen einem <code>Data Scientist</code> VS. was ich in meinem <code>Economics-Studium</code> gemacht habe?</p>
+</blockquote>
+<ul>
+<li><u>Erkenntnis</u>: Machine Learning wird als eine “Black Box” betrachtet, wo man den X-Variablen des Modells keine grosse Beachtung schenkt: man bringt sie einfach ins Modell rein. Im Kontrast dazu, sind Ökonomen mehr dazu getrimmt, mit Hilfe eines theoretischen Modells, die “richtigen” X-Variablen zu selektieren. Man nennt dies dann auch “structural econometrics”.</li>
+</ul>
+<blockquote>
+<p>What is artificial intelligence?</p>
+</blockquote>
+<p>Artificial intelligence is a branch of computer science that deals with the creation of “intelligent agents”, which are systems that can <em>reason, learn, and act autonomously</em>.</p>
+</div>
+<div id="ide-explained" class="section level3">
+<h3><span class="header-section-number">3.6.4</span> IDE explained</h3>
+<blockquote>
+<p>What is an <strong>IDE</strong>?</p>
+</blockquote>
+<ul>
+<li><u>Abkürzung</u>: <code>IDE</code> == Integrated Development Environment</li>
+<li><u>Definition</u>: An integrated development environment (IDE) is software for building applications. It combines common developer tools into a single graphical user interface (GUI).
+<ul>
+<li><u>Example</u>: R, PyCharm oder Visual-Studio Code are all IDEs. Think of it as a modern Dream Weaver! :)</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>Was ist <code>IDE PyCharm</code>?</p>
+</blockquote>
+<p>Das ist das RStudio von Python.</p>
+</div>
+<div id="restful-api" class="section level3">
+<h3><span class="header-section-number">3.6.5</span> Restful API</h3>
+<p>In a Rest API, every</p>
+<blockquote>
+<p>What are <strong>Rest APIs</strong>?</p>
+</blockquote>
+<ul>
+<li><p><u>Synonym</u>: Restful APIs</p></li>
+<li><p><u>Defintion</u>: API stands for <em><u>A</u>pplication <u>P</u>rogramming <u>I</u>nterface</em>. It <strong>is a way for 2 computers to “talk” // communicate with each other</strong>. During the talk, one computer sends a “request”, while the other sends the “response”. <em>How is this possible?</em> In order for you to use an API (e.g. to enable the “talking” between the computers), you need to write code to explicitly “request” data from a server // computer. Most APIs in the world are <strong>“restful”</strong>, e.g. they follow some set of rules // constraints known as “representational state transfer”, which is the “gold-standard” for API-development since the early 2000’s (invented by <strong>Roy Fielding</strong>, in its PhD dissertation).</p>
+<ul>
+<li><u>Example</u>: If you are a “noob”, you can retrieve the NASA-images of asteroids by looking at their websites. However, you could also use NASA’s “Rest API” to get the data via a <code>.json</code>-file.</li>
+<li><u>How it works?</u>: From a architecture point a view, a Rest API, organizes “data entities” // resources into a bunch of unique URLs. Well, technically speaking, they are NOT URLs, but rather “URIs” (aka “uniform resource identifier”), which identifies exactly each data-resource on the server. A client can then retrieve // get the data about a resource by making a request to the server // “endpoint” (over the “http”-protocol). This request has a very specific format, see <a href="https://www.youtube.com/watch?v=-MTSQjw5DrM&amp;t=103s">this youtube-video (ab 1:03)</a>.</li>
+<li><u>“Stateless” Architecture (key to know)</u>: The two parties // computers <strong>don’t need to store any information about each other</strong> <u>AND</u> every “request-response”-cycle is <strong>independent</strong> from another “request-response”-cycle. These two characteristics are important, because it leads to an application that is <strong>predictable</strong> AND <strong>reliable</strong>.
+<ul>
+<li>Quelle: <a href="https://pokeapi.co/about">Pokemon-API</a></li>
+</ul></li>
+</ul></li>
+<li><p><u>Zusammengefasst in meinen Worten</u>: <strong>Ein API sind Befehle, die du gibst, um mit einer Datenbank (z.B. auf einem Server) zu kommunizieren ODER ein Package (in R oder Python) zum runnen zu bringen.</strong> Ganz einfach xD</p></li>
+<li><p><u>Background Client-Server Architecture</u>: most of the applications these days, follow this architecture.</p>
+<ul>
+<li>Client == App itself == Front-End</li>
+<li>Server == Back-End</li>
+</ul></li>
+<li><p>Communication between the Sever &amp; the Client (= App) happens via API by using the <code>Http Protocol</code>.</p>
+<ul>
+<li><u>Example</u>: if the App wants to access the particular data of a customer, it sends a request to the server via http-protocol.</li>
+</ul></li>
+<li><p><strong>So, when does the <code>Rest API</code> comes into play?</strong> –&gt; the Rest API is <strong>a standard that established itself in the industry, when communaction between client &amp; server</strong> –&gt; these are the <code>CRUD Operations</code>, which are by definition:</p>
+<ol style="list-style-type: decimal">
+<li><code>GET</code> == <em>getting the data from the server</em></li>
+<li><code>POST</code> == <em>creating data</em></li>
+<li><code>PUT</code> == <em>updating data</em></li>
+<li><code>DELETE</code> == <em>deleting data</em></li>
+</ol></li>
+</ul>
+<div id="api-example" class="section level4">
+<h4><span class="header-section-number">3.6.5.1</span> API Example</h4>
+<blockquote>
+<p>Beispiel eines <code>API</code> in Python?</p>
+</blockquote>
+<p>Das Modul // Package <code>sktime</code> verwendet einen ähnlichen <code>API</code>, wie die berühmte Machine-Learning <code>sklearn</code>-Library. Hierbei wäre der Programmierer (= Du) als <em>Forecaster</em> verstanden, welcher via sogannten <em>methods</em> (zum Beispiel die <em>fit-method</em>, um das Modell zu trainieren // estimaten) mit der <em>application</em> (= hier: Python) interagiert.</p>
+</div>
+</div>
+<div id="magic-commands-in-python" class="section level3">
+<h3><span class="header-section-number">3.6.6</span> Magic Commands in Python</h3>
+<blockquote>
+<p>“Magic Commands” in Python, mit denen du unglaublich schnell herausfinden kannst, was eine Funktion überhaupt tut UND welche Inputs in eine Funktion gehören?</p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li><code>shift</code> + <code>Tab</code> → wenn du nicht weisst, was eine Funktion // Method tut</li>
+<li><code>Tab</code> → innerhalb einer Funktion, um eine Übersicht zu allen Inputs zu erhalten! xD</li>
+</ol>
+</div>
+<div id="pipe-operator-in-r" class="section level3">
+<h3><span class="header-section-number">3.6.7</span> Pipe-Operator in R</h3>
+<blockquote>
+<p>What is the <code>Pipe-Operator</code> in <code>R</code> and what does it do?</p>
+</blockquote>
+<p>The Pipe-Operator in <code>R</code> looks like this: <code>%&gt;%</code>. It takes in an input and “transports” it into another function to use the input and produces an output. This verbal explanation can be best illustrated via a code-example in R:</p>
+<pre><code>library(tidyverse)
+result &lt;- mtcars %&gt;% 
+    group_by(cyl) %&gt;% 
+    summarise(meanMPG = mean(mpg))</code></pre>
+<ul>
+<li>Quelle: <a href="https://towardsdatascience.com/an-introduction-to-the-pipe-in-r-823090760d64#:~:text=The%20pipe%20operator%20feeds%20the,the%20tibble%20result%20%2C%20shown%20below.">A Guide to the Pipe in R</a></li>
+</ul>
+</div>
+<div id="docker" class="section level3">
+<h3><span class="header-section-number">3.6.8</span> Docker</h3>
+<blockquote>
+<p>Was ist <code>Docker</code> und was ist der Vorteil davon?</p>
+</blockquote>
+<p>Docker wird verwendet, um ein <strong>Virtual Environment</strong> zu bilden, welches - wie ein Container - dir Punktgenaue Versionen von bestimmten Packages und Programmiersprachen (Python etc.) liefert. <code>Docker</code> läuft über <code>Open Shift</code>, welches eine Art <strong>Management-Programm</strong> für <code>Docker</code> ist (so viel ich das verstanden habe…).</p>
+<div id="definitions" class="section level4">
+<h4><span class="header-section-number">3.6.8.1</span> Definitions</h4>
+<ul>
+<li><p><code>Image</code> - An image is an environment that has been built from a series of instructions called a <code>DockerFile</code>. Images can be prebuilt and hosted on <code>DockerHub</code> (similar to how GitHub hosts version controlled software files). The image is needed to run a Docker Container.</p></li>
+<li><p><code>Container</code> - A container is a virtual environment that <strong>combines a Docker Image with software (files) to run an application</strong> in a controlled environment (a reproducible software environment created virtually from the Docker Image).</p></li>
+<li><p><code>DockerHub</code> - An online community for storing and sharing container images. Has Public and Private repositories for image storage. It’s basically a Cloud, like Github.</p></li>
+<li><p><u>Fazit</u>: DockerFile –&gt; Docker Image (can be pre-built and hosted on the DockerHub-Cloud) –&gt; Docker Container</p></li>
+</ul>
+</div>
+</div>
+<div id="tensorflow-and-pytorch" class="section level3">
+<h3><span class="header-section-number">3.6.9</span> Tensorflow and PyTorch</h3>
+<blockquote>
+<p>Definition?</p>
+</blockquote>
+<p>PyTorch and TensorFlow are far and away <strong>the two most popular Deep Learning frameworks</strong> today.</p>
+<p>While <strong><code>TensorFlow</code> has a reputation for being an industry-focused framework</strong> and <strong><code>PyTorch</code> has a reputation for being a research-focused framework</strong>.</p>
+<blockquote>
+<p>Which one is more popular in the Deep-Learning Community?</p>
+</blockquote>
+<div class="figure">
+<img src="./bilder/usage-pytorch-vs-tensorflow.png" alt="" />
+<p class="caption">PyTorch VS. Tensorflow popularity</p>
+</div>
+<p>As you can see, the adoption of PyTorch was extremely rapid and, in just a few years, grew from use in just about 7% to use in almost 80% of papers that use either PyTorch or TensorFlow.</p>
+<p><img src="./bilder/momentum-tensorflow-vs-pytorch.png" alt="Sankey-Diagram, in order to answer the question: Which one has the Momentum?" />
+The researchers find that <strong>the majority of authors who used TensorFlow in 2018 migrated to PyTorch in 2019 (55%), while the vast majority of authors who used PyTorch in 2018 stayed with PyTorch 2019 (85%)</strong>.</p>
+<p>This data is visualized in the <code>Sankey diagram</code> above, where the left side corresponds to 2018 and the right side to 2019.</p>
+</div>
+<div id="data-pipeline" class="section level3">
+<h3><span class="header-section-number">3.6.10</span> Data Pipeline</h3>
+<blockquote>
+<p>Was ist eine <code>Data-Pipeline</code>?</p>
+</blockquote>
+<p>After streaming your data (in real time) // downloading your data from a provider, it’s basically <strong>a way to automate the process of data cleaning</strong> in order to be able to get the plots // models from your “dirty data” in a fraction of the time you would spend, if you would do the data cleaning “by hand” yourself.</p>
+<ul>
+<li><u>Youtube-Video</u>: <a href="https://www.youtube.com/watch?v=VtzvF17ysbc">What is a Data-Pipeline?</a></li>
+</ul>
+</div>
+<div id="fundamental-daten" class="section level3">
+<h3><span class="header-section-number">3.6.11</span> Fundamental-Daten</h3>
+<blockquote>
+<p>Was versteht man unter <code>Fundamental-Daten</code>?</p>
+</blockquote>
+<p>Fundamental-Daten sind <strong>effektiv messbare Daten</strong>, die über Datenbanken accessible sind und welche als Proxy - beispielsweise in Regressions-Analysen - verwendet werden können.</p>
+</div>
+<div id="data-flow" class="section level3">
+<h3><span class="header-section-number">3.6.12</span> Data-Flow</h3>
+<blockquote>
+<p>Was versteht man unter dem <code>Data Flow</code>?</p>
+</blockquote>
+<p>Mit dem <code>Data Flow</code> sollen folgende Fragen beantwortet werden:</p>
+<ol style="list-style-type: decimal">
+<li>Welche Daten werden wo geholt &amp; wieso?</li>
+<li>Wie werden die Daten anschliessend verarbeitet?</li>
+<li>Was ist der End-Output, nachdem die Daten - beispielsweise - in einem ML-Modell verwedet wurde?</li>
+</ol>
+<p>Zur Illustration des <code>Data Flows</code>, gab es hierzu im Wissensaustausch auch eine Bild:</p>
+<div class="figure">
+<img src="./bilder/beispiel-data-flow.jpg" alt="" />
+<p class="caption">Beispiel zum Data Flow</p>
+</div>
+</div>
+</div>
+<div id="synonyme-1" class="section level2">
+<h2><span class="header-section-number">3.7</span> Synonyme</h2>
+<div id="data-science" class="section level3">
+<h3><span class="header-section-number">3.7.1</span> Data Science</h3>
+<ul>
+<li><strong>bias</strong>:
+<img src="./bilder/home/def-bias-from-google.png" alt="This is the definition, Google-Researchers gave to bias." /></li>
+<li><strong>batch</strong>: sample-size when you train your model with a dataset</li>
+<li>Granularität (Beispiel) = Angenommen, man möchte wissen, wie viele Tage, Stunden, Minuten und Sekunden innerhalb von 20’044 Sekunden enthalten sind → hier haben wir also <em>Granularität von 4</em> → <u>Lösung</u>: 4 Tage, 18 Stunden, 37 Minuten, 44 Sekunden</li>
+<li>Kalibrierung des Modells == Wie wurde das Modell programmiert im Allgemeinen? → Dazu gehört - bei uns - die Anpassung der Prognose.</li>
+<li>label == true y-value</li>
+<li><code>Pop</code> == “Pop” is simply a word that means “to drop something”. For example, <code>df.pop('date')</code> means that I am dropping the column called “data” from a dataframe called “df”. Fancily, if you write <code>df.pop('date')</code> and <em>save</em> it into another variable, then you can only <strong>select</strong> this dropped column from the ddset.
+<ul>
+<li><u>Example</u>: <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pop.html" class="uri">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pop.html</a></li>
+</ul></li>
+<li>relativ zu == im Verhältnis zu</li>
+<li>shape == dimension</li>
+<li>target == predicted y-value</li>
+<li>Treiber == x-Variablen</li>
+<li>Volume == Speicherplatz</li>
+<li>weights == estimated coefficients</li>
+</ul>
+</div>
+<div id="machine-learning" class="section level3">
+<h3><span class="header-section-number">3.7.2</span> Machine Learning</h3>
+<ul>
+<li><code>"feed in"</code> == plug in (–&gt; häufig im Zusammenhang mit Einsetzen von konkreten Werten für die x-Variablen in das geschätzte Modell, um Predictions zu erhalten)</li>
+<li><code>instance</code> == value within a cell == konkreter “x”-Wert, welcher angenommen wird und du - beispielsweise - für eine Prediction verwenden kannst.</li>
+<li><code>Forcasted data</code> == These are the predictions that you do via the help of a model (–&gt; by plugging in concrete x-values), that you’ve built.</li>
+<li><code>Training Dataset</code> // <code>Training Set</code> == This is the sample, that you use to estimate your model.</li>
+<li><code>Testing Dataset</code> // <code>Test Set</code> == This is the <code>hold out</code> set, which you use at the end, to check whether your model is able to <code>generalize</code> // <code>extrapolate</code> well to new data.</li>
+<li><code>"the model is learning</code> == what is meant by “learning” is: given some Datenpunkt-Wolke, the computer will try and fit the “best line” [oftentimes by minimizing the sum of the squared residuals, if you use <code>OLS</code> (= Ordinary Least Squared)] to construct the “best model” possible.</li>
+<li><code>Training</code> == You are estimating a model on the trainig-dataset, such that the model “learns” from the data.</li>
+<li><code>shuffle</code> == englisches Wort für “mischen”. In the context of <code>splitting the dataset into test- &amp; training-data</code>, it is common practice to <code>shuffle</code> your observations within your dataset first.
+<ul>
+<li><u>Reason why you <code>shuffle</code></u>?: Shuffling data serves the purpose of
+<ul>
+<li>reducing variance AND</li>
+<li>making sure that models remain general AND</li>
+<li>overfit less.</li>
+</ul></li>
+<li><u>Merke</u>: When dealing with <code>time series</code>, you should not use <code>shuffle</code> when <code>splitting the data</code> into training- &amp; testing-data.</li>
+</ul></li>
+<li><code>training score</code> // <code>Test Error</code> == This error // score is the [oftentimes squared] difference between the <code>true y-variable</code> and <code>estimated // predicted y-variable</code> and <strong>measures // evaluates how well the model is “performing” // how good the model is on a <code>test set</code> with an increasingly bigger <code>training dataset</code></strong>.</li>
+<li><code>cross-validation score</code> // <code>Validation Error</code> == This is the (mean) error // score [because of <code>cross-validation</code>] that <strong>measures // evaluates how the model is “learning” over increasingly bigger <code>training datasets</code></strong>.</li>
+<li><code>fold</code> == <strong>subset</strong> of the <code>training dataset</code>
+<ul>
+<li><u>Example</u>: In a <code>K-Fold Cross-Validation</code>, you <em>randomly</em> split the <u>training set</u> into <strong>10 distinct subsets</strong>, which are called <code>folds</code>.</li>
+</ul></li>
+<li><code>samples</code> == number of rows // number of observations within a dataset.</li>
+<li><code>classifiers</code> == These are simply regression-functions, where the <strong>Y-Variable is binary</strong>, e.g. die Y-Variable kann nur <code>Y = 0</code> ODER <code>Y = 1</code> als Werte annehmen.
+<ul>
+<li><u>Example</u>: Logit- &amp; Probit-Regression, or Naiv Bayes, etc…</li>
+</ul></li>
+<li><code>initialization</code> // <code>declaration</code> // <code>specification</code> == This is the assignment of an initial value for a data object or variable.</li>
+<li><code>Array</code> == A List of Data is an array. It is a data structure, which contains “n” objects within a list.
+<ul>
+<li><u>Quelle</u>: <a href="https://www.youtube.com/watch?v=NptnmWvkbTw&amp;t=3m10s">The Coding Train 3:10-3:22</a></li>
+</ul></li>
+<li><code>Extrapolation</code> == Voraussage von Y-Predict<u>ed</u> Values, welche mittels X-Variablen ermittelt werden, welche <u>zuvor nicht im Datensatz</u> waren.</li>
+<li><code>Interpolation</code> == Voraussage von Y-Predict<u>ed</u> Values, welche mittels X-Variablen ermittelt werden, welche <u>bereits im Datensatz</u> waren, als die Schätzung getätigt wurde.</li>
+<li><code>sliding window</code> == This is just a way to tell python how to do a cross-validation and have equal lengths of time series where we can learn on.</li>
+<li><code>Learning Task</code> == Forecasting Task // Extrapolation [in Time Series]</li>
+<li><code>Forecasting Horizon</code> == Time Points, you want to predict (= dein ) <span class="math inline">\(\hat{y}\)</span></li>
+<li><code>Time Heterogenous Data</code> == Different Time Series have different time stamps
+<ul>
+<li><u>Quelle</u>: Ab 27:05 (Link: <a href="http://www.youtube.com/watch?v=Wf2naBHRo8Q&amp;t=27m05s" class="uri">http://www.youtube.com/watch?v=Wf2naBHRo8Q&amp;t=27m05s</a>)</li>
+</ul></li>
+<li><code>Seasonal Periodicity</code> == The number of months per year, in which the forecaster expects to see a seasonal pattern.
+<ul>
+<li><u>Concrete Example</u>: In Philipp’s Notebook, he had a seasonal periodicity of 2, e.g. he said that in winter &amp; sommer, he expects a seasonal pattern.</li>
+</ul></li>
+<li><code>Reduction is composable</code> → Synonym wäre “addieren” → E.g. you can split a difficult task into a bunch of smaller tasks (= reduction) and “add” them together to solve the bigger task at the end (= “reduction is composable”).</li>
+<li><code>Pearson Korrelation</code> == <u>Lineare</u> Korrelation</li>
+<li><code>Grid</code> → Das ist nichts anderes als die <strong>Optimierung von diversen “Modell-Parametern”</strong>.
+- <u>Beispiel</u>: Bei Random-Forrest Modellen kann man zum Beispiel die Tiefe eines Modells bestimmen, dh die relevante Frage, welche ein Forscher sich stellt, ist, <em>wie viele Baum-Zweigungen die geeignesten Predictions bringen?</em> Mit Funktionen, wie zum Beispiel <code>GridSearchCV()</code> kann dieses Problem geregelt werden.</li>
+<li><code>Classifier</code> == These are simply Regression-Functions, where <strong>the Y-variable is binary</strong>, e.g. die Y-Variable kann nur <code>Y = 0</code> <u>oder</u> <code>Y= = 1</code> als Werte annehmen.
+<ul>
+<li><u>Beispiele</u>:
+<ul>
+<li>Logit-Regression</li>
+<li>Probit-Regression</li>
+<li>Naive Bayes</li>
+<li>etc…</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="python" class="section level3">
+<h3><span class="header-section-number">3.7.3</span> Python</h3>
+<ul>
+<li><code>Module</code> == Python-File</li>
+<li><code>PyPA</code> == Python Packaging Authority</li>
+<li><code>PyPI</code> == Python Package Index</li>
+</ul>
+</div>
+<div id="it-software-development" class="section level3">
+<h3><span class="header-section-number">3.7.4</span> IT &amp; Software-Development</h3>
+<ul>
+<li>Abhängigkeitsprobleme == 1) Probleme bei den Versionen des Packages; 2) Packages werden vorausgesetzt, sodass gewisser Code dann einen Error printed, wenn man ihn nach 2 Jahren wiederverwenden will.</li>
+<li><em>agnostisch</em> == Im IT-Umfeld hat das Wort agnostisch eine besondere Bedeutung. Es bezieht sich auf etwas, das soweit <strong>verallgemeinert</strong> wird, dass es auch unter verschiedenen Umgebungen funktionieren kann.
+<ul>
+<li><u>Beispiel</u>: Eine Plattform-agnostische Software läuft unter jeder Kombination aus Betriebssystemen und Prozessorarchitekturen.</li>
+</ul></li>
+<li><em>cached</em> == store away for future use</li>
+<li><em>Client</em> == Damit ist häufig der Browser gemeint, wenn er Abfragen an den Server gibt.</li>
+<li><em>composite</em> == custom</li>
+<li><em>fetch data</em> == retrieve data</li>
+<li><em>Remote</em> == Das ist z.B. ein Server / eine Maschine, die du nicht lokal bedienst.</li>
+<li><em>Rest API</em> == Restful API</li>
+<li><em>instanziieren</em> == Das Erzeugen eines Objekts in der objektorientierten Programmierung.</li>
+</ul>
+</div>
+</div>
+<div id="projekt-management" class="section level2">
+<h2><span class="header-section-number">3.8</span> Projekt-Management</h2>
+<ul>
+<li><strong>Sitzungen müssen gut dokumentiert werden! Insbesondere ist hervorzuheben, in welche Richtung das Projekt geht.</strong></li>
+</ul>
+<div id="meetings" class="section level3">
+<h3><span class="header-section-number">3.8.1</span> Meetings</h3>
+<blockquote>
+<p>Was ist das Ziel eines Meetings?</p>
+</blockquote>
+<p>Das Ziel des Meetings ist es, dir &amp; deinem Team die <strong>nötige Basis zu geben, damit du in der folgenden Zeit bis zum nächsten Meeting genau weisst, was du zu tun hast</strong>.</p>
+<p>Am wichtigsten ist hier mit dem “Boss” zu reden und klar definieren, was er erreichen will im Projekt. Dies gibt die <em>globale Richtung</em> des Projektes an.</p>
+<p><em>Es ist exterm wichtig, mit dem Boss diese Ziele zu definieren, da die Planung des gesamten Projektes in dieser Phase hier noch definiert werden kann. Nachdem diese anfängliche Gliederung getätigt wurde, kann im Verlauf des Projektes nicht mehr viel davon abgewichen werden. Deshalb hängt die Gesampt-Performance eines Projektes sehr stark von der anfänglichen Planung ab!</em></p>
+<p><u>Während</u> des Projektes gibt es dann immer wieder folgende Punkte zu prüfen:</p>
+<ol start="0" style="list-style-type: decimal">
+<li>Sind die getätigten Schritte im Einklang mit dem Endziel des Bosses? Wichtig ist zu rechtfertigen, was du gerade am tun bist und warum genau du das tust.</li>
+<li>Aufklärung, damit alle auf dem gleichen Informationsstand sind</li>
+</ol>
+<ul>
+<li><u>Goal</u>: Wo stehen wir? Wie sieht die Situation mit dem Notebook aus?</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Gibt es noch offene Lücken im Wissen eines Team-Mitglieds, welches von anderen Mitarbeitern gedeckt werden müsste? –&gt; <u>Goal</u>: Kein Mitglied isolieren, jeder muss sich integriert fühlen. Insbesondere Wert auf Papers &amp; Daten setzen hier</li>
+<li>Was sind weitere offene Optionen und inwiefern eignen sich diese Ansätze für unser Ziel?
+<ul>
+<li><u>Goal</u>: Aufzeigen, dass wir noch weitere Alternativen haben, als nur Phillip’s Notebooks</li>
+</ul></li>
+<li>Sonstige Unklarheiten / Bemerkungen / Inputs / Vorschläge? –&gt; <u>Goal</u>: letzte Informationsasymmetrien beheben</li>
+</ol>
+<blockquote>
+<p>Was ist ein <em>Kanban</em>?</p>
+</blockquote>
+<p>In der BWL-Sprache ist <em>Kanban</em> <strong>ein Vorgehensmodell</strong> zur Softwareentwicklung.</p>
+<ul>
+<li><u>Ziel #1</u>: Das Meetings soll die Anzahl an paralleler Arbeiten, (= <strong>der Work in Progress (WiP)) minimiert // begrenzt werden</strong> und somit kürzere Durchlaufzeiten erreicht.</li>
+<li><u>Ziel #2</u>: Das Meeting soll die Probleme – insbesondere <strong>Engpässe – schnell sichtbar machen</strong>.</li>
+</ul>
+</div>
+</div>
+<div id="job-interviews" class="section level2">
+<h2><span class="header-section-number">3.9</span> Job-Interviews</h2>
+<ul>
+<li><u>Vorbereitung Data-Science Interviews</u>: <a href="https://www.kdnuggets.com/2020/01/data-science-interview-study-guide.html">Diese Webseite</a> hat einen kompletten Guide mit Videos / Artikeln zu extrem vielen Key-Concepts gesammelt und zur Verfügung gestellt.</li>
+</ul>
+</div>
+<div id="ausblick" class="section level2">
+<h2><span class="header-section-number">3.10</span> Ausblick</h2>
+<p>Hier liste ich alles auf, das ich in nächster Zeit ausprobieren möchte und - meiner Meinung nach - grossen Wert besitzt:</p>
+<ul>
+<li><u>Tutorial (Artikel von <em>Towards-Datascience</em>)</u>: <a href="https://towardsdatascience.com/how-to-build-animated-charts-like-hans-rosling-doing-it-all-in-r-570efc6ba382">Build Animated R-Visualizations</a></li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="h1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="foundations-of-data-science.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/joffreymayer/ds-from-scratch/edit/master/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/joffreymayer/ds-from-scratch/blob/master/index.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
