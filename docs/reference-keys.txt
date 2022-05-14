@@ -183,8 +183,13 @@ coded-algorithms-r-functions
 nützliche-funktionen-r
 useful-econometrics-documents
 machine-learning-1
+typen-von-machine-learning
+supervised-learning
+methods
+wichtige-funktionen
 uni-kurs-neural-networks-deep-learning
 notation-neural-networks
+alphabetisch-sortiert
 quellen
 mengenlehre
 wörterbuch-1

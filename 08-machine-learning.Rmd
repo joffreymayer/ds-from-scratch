@@ -2,54 +2,164 @@
 
 In diesem Kapitel, werde ich vertiefter in das Thema "Machine Learning" eingehen. 
 
-**Machine Learning verwendet unterschiedliche Begriffe für diverse gleiche Konzepte & Definitionen aus den Wirtschaftswissenschaften**. Nun geht es darum, die korrekte Übersetzungen für diese Wörter aufzulisten:
+## Typen von Machine Learning
+
+Es gibt grundsätzlich **2 Kategorien**, in denen die verschiedenen *Methoden in Machine Learning* eingeordnet werden:
+
+1) **Supervised Learning**
+    - Classification:
+      - Image Classification
+    - Regression
+    - Prediction:
+      - Translation (zum Beispiel angewendet in Deepl.com)
+      - Image Captioning (siehe Bild): ![Beispiel zu Image Captioning](docs/bilder/machine-learning/example-image-captioning.png)
+      
+  
+2) **Unsupervised Learning**
+    - Clustering:
+      - Matching // K-Means Clustering
+    - Dimension Reduction:
+      - Principal Component Analysis (PCA)
+    - Outlier Detection
+  
+
+## Supervised Learning
+
+**Bei Supervised Learning** wird die **Annahme** gemacht, *dass man die Funktion 'f' **kennt**, um mittels den Werten der Zufallsvariablen 'X' die Werte der Zufallsvariablen 'Y' herauszufinden*. 
+
+<u>Mathematisch ausgedrückt</u>: `f : X -> Y`.
+
+## Methods
+
+Hier soll eine Auflistung aller Vorgehen bei Machine Learning aufgelistet werden:
+
+- **<u>Algorithm for "best fit" to find the weights</u>**:
+  
+  1) Guess some random weights.
+  
+  2) "Go downhill", e.g. **apply a _learning rate_** when using the method **gradient descent**.
+  
+  3) Is the **fitted line good enough?** 
+      - If the *answer is "no"*, then go **back to point 2)**.
+
+## Wichtige Funktionen
+
+Da Machine Learning mittels Aktivierungsfunktionen funktioniert, folgt eine Übersicht zu verschiedenen Funktionen:
+
+- **<u>Identity Function</u>**: damit ist die Funktion `f(x) = x` bzw. `y = x` gemeint:
+
+```{r identity-function, echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+myfun <- function(xvar) {
+  xvar
+} # first, I specify the function
+ggplot(data.frame(x = c(-10, 10)), aes(x = x)) +
+  stat_function(fun = myfun, geom = "line", colour="#FF9999") + # then, pass the above "user-defined function" called 'myfun' as an input into the function stat_function(). Note that I plot the function with a red line, to differentiate it form x- & y-axis.
+  geom_vline(xintercept = 0) + # zeichnet eine vertikale Linie bei 0, um die y-Achse zu verdeutlichen
+  geom_hline(yintercept = 0) # zeichnet eine horizontale Linie bei 0, um die y-Achse zu verdeutlichen
+```
+
+- **<u>Logitstic Function // Sigmoid Function // S-Shaped Function</u>**: damit ist die Funktion $\sigma(x) = \frac{1}{1 + e^{-x}}$ gemeint:
+  
+```{r input-only, echo=FALSE, message=FALSE, warning=FALSE}
+# Here I will plot a Graph with ggplot2:
+
+
+### 1) Load packages & datasets needed:
+
+library(ggplot2)
+library(dplyr)
+library(gcookbook)
+
+### 2) Plot a function:
+
+myfun <- function(xvar) {
+1 / (1 + exp(-xvar))
+} # first, I specify the function
+
+# First, create a dataframe with only 1 variable - e.g. our range of x-values -
+# that goes - for example - from 0 to 20 [note that - technically - the command
+# x = c(0,20) will only create two values, namely 0 and 20, but NOT the whole
+# range of values from 0 to 20!!! However, the code below works anyway!]. Next,
+# tell R that you want those numbers 0 & 20 to be plottet on your x-axis -
+# -> this is all the code within the 'ggplot()' function:
+ggplot(data.frame(x = c(-7, 7)), aes(x = x)) +
+  stat_function(fun = myfun, geom = "line", colour="#FF9999") + # then, pass the above "user-defined function" called 'myfun' as an input into the function stat_function()
+  geom_vline(xintercept = 0) + # zeichnet eine vertikale Linie bei 0, um die y-Achse zu verdeutlichen
+  geom_hline(yintercept = 0) # zeichnet eine horizontale Linie bei 0, um die y-Achse zu verdeutlichen
+```
 
 ## Uni-Kurs `Neural Networks & Deep Learning`
 
+**Machine Learning verwendet unterschiedliche Begriffe für diverse gleiche Konzepte & Definitionen aus den Wirtschaftswissenschaften**. Nun geht es darum, die korrekte Übersetzungen für diese Wörter aufzulisten:
+
 ### Notation Neural Networks
 
-<u>Nach VL sortiert</u>:
+**Machine Learning verwendet unterschiedliche Begriffe für diverse gleiche Konzepte & Definitionen aus den Wirtschaftswissenschaften**. Nun geht es darum, die korrekte Übersetzungen für diese Wörter aufzulisten: 
 
 - weights = Beta-Coefficients = parameters = a, b = neurons
 - Input units = independent variables "x" 
 - inputs = Anzahl Observations in Total
-- Output unit = Dependent variable = labels
-- Activation function = you need this function to plug in your estimated regression model. Examples of AF = logit, probit, relu, simple "threshold" AF etc...
-- Perceptron = Linear Binary Classifier = linear seperator (= line that separates group in a regression) = Perceptron is a single layer neural network and amulti-layer perceptron is called Neural Networks.
+- Output unit = Dependent variable "y" = labels
+- Activation function (AF) = you need this function to plug in your <u>estimated</u> regression model. 
+  - <u>**Examples of AF**</u>: 
+    - logit, 
+    - probit, 
+    - relu, 
+    - simple "threshold" AF etc...
+- Perceptron = Linear Binary Classifier = usually, the perceptron is a <u>linear</u> separator (= line that separates group in a regression) = *Perceptron* is a **single layer neural network**
+- Multi-layer perceptron == *Neural Networks*.
+  - <u>Example</u>: 
+  ![Neural Network with 3 Layers](docs/bilder/machine-learning/example-of-a-multi-layer-network.png)
 - learning rate = how far to go in a particular direction
-- features = inputs = independent variables "x" = X(ki)
+- features = inputs = independent variables "x" = X<sub>ki</sub>
 - labels = this is the "true Y" you observe in the real world = output = dependent variable
-- "going downhill" = this is the learning process that you get by using the method "gradient decent" (look youtube video of user called "the coding train" at ca. 17:30) & applying a "learning rate" to it
-- y(k) = this is the estimated regresion function
-- z(k) = "logits" --> the same as y(k) but we then apply the specific activation function "logit function" to the estimated z(k) // y(hat)
+- "going downhill" = this is the learning process that you get by using the method "gradient decent" ([look youtube video of user called "the coding train" at ca. 17:30](https://www.youtube.com/watch?v=L-Lsfu4ab74)) & applying a "learning rate" to it
+- y<sub>k</sub> = this is the <u>estimated</u> regression function
+- z<sub>k</sub> = "logits", e.g. this is the whole *sum of the weights multiplied by the x-variables (= entire regression)*, but this time we **put this entire regression as an _input_ into the logistic function** --> <u>in other words</u>: the same as y<sub>k</sub> but we then apply the specific activation function "logit function" to the estimated z<sub>k</sub> // $\hat{y}$
 - Input Layer = Layer 0 = very first set of Neuron
 - Output Layer = Last Layer = last set of Neurons
 - Hidden Layers = All Layers between the input & output Layer
 - input node = nodes at the input layer
-- output node = node at the output layer
+- output node = nodes at the output layer
 - hidden nodes = nodes, which are in the hidden layers or at the output layer & don't give out outputs
 - Feed forward neural networks = connections only between layer i and layer i+1
 - Convolutional neural networks = a type of feed-foward network
 - Recurrent neural networks = connections flow backwards to previous layers as well
-- supervised learning = zhe "standard" function estimation that you are acquainted from your economics studies: these are models that fit <u>known</u> input-variables (= our different regressors) to a <u>known</u> output varible (= our Y-Variable) --> 2 different types: 1) regression; 2) classification
-- unsupervised learning = In this case, you let the comuter structure the data into groups (very subjective) // detecting patterns // data reduction
-- loss-function = cost-function = [TRUE y - ESTIMATED Y(hat)]^2 = error --> we define the loss-function be the "least squares"
+- supervised learning = function estimation
+  - <u>There are 2 different types</u>: 
+    1) regression,
+    2) classification
+- unsupervised learning = structure the data into groups (very subjective) // detecting patterns. 
+  - Can also be used for:
+    1) data reduction,
+    2) outlier detection
+- loss-function = cost-function = [TRUE y - ESTIMATED $\hat{Y}$]<sup>2</sup> = error --> we define the loss-function be the "least squares"
 - identity function = y = x bzw. f(x) = x
 - sigmoid function = logit function
 - bias term = error term 
+  - <u>Note</u>: Oftmals wird der **"input" für den bias term als Zahl "1"** angegeben (siehe Bild oben "Example of Multi-Layer Network", wo der bias term als Zahl "1" angegeben ist.)
 - Epoch = means we go through the whole data set once --> default is ten epochs
 - Net Input Function = Regressionsmodell als Ganzes = sum of all weighted inputs // "x"
 - kernel = (starting) values for the weights
 - regularizers = penalties that are used to reduce overfitting (of the starting values for the weights?)
-- backpropagation = back pass = when we have our error-term, we can calculate the gradient and - if the error was too big - we can backpass the error-term with the helplearning rate to a previous layer and estimate new // better weights
+- backpropagation = back pass = when we have our error-term, we can calculate the gradient and - if the error was too big - we can backpass the error-term with the help of the *learning rate* to a previous layer and estimate new // better weights
 - breaking symmetry = principle, which says that you need to have different initial weights for hidden units with the same activation function and same inputs
-- batches = these are samples from the whole dataset --> you use batches because the computation gets faster rather than putting the whole dataset into the machine learning "Apparat" --> Rule: the higher the batch size, the better estimates you get
-- decay = make learning rates dynamic --> typically, this decay will make the learning rate smaller as the training continues.
+- batches = these are smaller samples that you take from the whole dataset, e.g. you take only a fraction of the dataset  --> you use batches because the computation gets faster rather than putting the whole dataset into the machine
+learning "Apparat" --> Rule: the higher the batch size, the better estimates you get
+- decay = In Machine Learning, it has become kind of standard to make learning rates dynamic, e.g. first have bigger learning rates, because you can be very wrong at the beginning with the random weights, but then - towards the end of estimation - you adapt the learning rate only very smoothly, since you slowly go towards the optimum --> typically, this decay will make the learning rate smaller as the training continues.
 - momentum = makes learning rates dynamic --> If you see that - in the history of gradients - the gradients point generally in the same direction, momentum will adjust the learning rate by increasing the step size
-- hyperparameters = examples are: Learning rate, Learning Rate Decay, Momentum, Batch Size, Weight / Bias initialization
+- hyperparameters = <u>examples are</u>: 
+  - Learning rate, 
+  - Learning Rate Decay, 
+  - Momentum, 
+  - Batch Size, 
+  - Weight / Bias initialization
 - Confusion Matrix = C = shows - in the diagonal of the matrix - how many times your predicted outcome was the same as the actual outcome. All the other numbers are saying that your model's prediction was not in line with the actual outcome
-- Precision = if i look at a guess // prediction, how many % my algorithm guessed correctly?
-- Recall = if i look at an actual true outcome, how many % where guessed correctly
+- Precision = if i look at a guess // prediction, how many % my algorithm guessed correctly? --> E.g. Anteil der predicted outcome $\hat{y}$, welche korrekt mit den ture outcomes übereinstimmen.
+  - <u>Mathematisch ausgedrückt</u>: Im Zähler die Anzahl an übereinstimmenden predicted outcomes $\hat{y}$ & im Nenner Totale Anzahl an predicted Outcomes $\hat{y}$.
+- Recall = if i look at an actual true outcome, how many % where guessed correctly? --> E.g. Anteil der true outcome Y, welche korrekt vorhergesagt wurden 
+  - <u>Mathematisch ausgedrückt</u>: Im Zähler die Anzahl an korrekt vorhergesehenen true outcomes & im Nenner Totale Anzahl an True Outcomes.
 - Training data = Training set is the one on which we train and fit our model basically to fit the parameters.
 - Testing data = Testing Data is used only to assess performance of the model.
 - Variance = Overfit = you use too much X's // features in your model --> you get too much variance in your predictions
@@ -58,12 +168,15 @@ In diesem Kapitel, werde ich vertiefter in das Thema "Machine Learning" eingehen
 - data augmentation = get more data by adding noise on the input layer
 - weight tying = Make the weights similar
 
+#### Alphabetisch sortiert:
 
-<u>Alphabetisch sortiert</u>:
+Um die Begriffe noch leichter zu finden, habe ich sie hier noch alphabetisch sortiert:
 
 - Activation function = you need this function to plug in your estimated regression model. Examples of AF = logit, probit, relu, simple "threshold" AF etc...
-- backpropagation = back pass = when we have our error-term, we can calculate the gradient and - if the error was too big - we can backpass the error-term with  the help of the learning rate to a previous layer and estimate new // better weights
-- batches = these are samples from the whole dataset --> you use batches because the computation gets faster rather than putting the whole dataset into the machine learning "Apparat" --> Rule: the higher the batch size, the better estimates you get
+- backpropagation = back pass = when we have our error-term, we can calculate the gradient and - if the error was too big - we can backpass the error-term with 
+the helplearning rate to a previous layer and estimate new // better weights
+- batches = these are samples from the whole dataset --> you use batches because the computation gets faster rather than putting the whole dataset into the machine
+learning "Apparat" --> Rule: the higher the batch size, the better estimates you get
 - bias term = error term 
 - breaking symmetry = principle, which says that you need to have different initial weights for hidden units with the same activation function and same inputs
 - Confusion Matrix = C = shows - in the diagonal of the matrix - how many times your predicted outcome was the same as the actual outcome. All the other numbers are saying that your model's prediction was not in line with the actual outcome
@@ -92,7 +205,7 @@ In diesem Kapitel, werde ich vertiefter in das Thema "Machine Learning" eingehen
 - Perceptron = Linear Binary Classifier = linear seperator (= line that separates group in a regression) = Perceptron is a single layer neural network and a multi-layer perceptron is called Neural Networks.
 - Precision = if i look at a guess // prediction, how many % my algorithm guessed correctly?
 - Recall = if i look at an actual true outcome, how many % where guessed correctly
-- Recurrent neural networks = connections flow backwards to previous layers as well
+- Recurrent neural networks = connections flow backwards to previous layers as well 
 - regularizers = penalties that are used to reduce overfitting (of the starting values for the weights?)
 - sigmoid function = logit function
 - saling = pre-processing data 
@@ -103,7 +216,6 @@ unsupervised learning = structure the data into groups (very subjective) // dete
 - weights = Beta-Coefficients = parameters = a, b = neurons
 - y(k) = this is the estimated(!!) regresion function
 - z(k) = "logits" --> the same as y(k) but we then apply the specific activation function "logit function" to the estimated z(k) // y(hat)
-- Multilayer Feedforward Network = Standard multilayer feedforward networks are capable of approximating any measurable function to any desired degree of accuracy. There are no theoretical constraints for the success of feedforward networks. Lack of success is due to inadequate learning, insufficient number of hidden units or the lack of a deterministic relationship between input and target. The information moves in only one direction, forward, from the input nodes, through the hidden nodes (if any) and to the output nodes. 
 
 ## Quellen 
 
