@@ -7,10 +7,9 @@ In diesem Kapitel, werde ich vertiefter in das Thema "Machine Learning" eingehen
 Es gibt grundsätzlich **2 Kategorien**, in denen die verschiedenen *Methoden in Machine Learning* eingeordnet werden:
 
 1) **Supervised Learning**
-    - Classification:
+    - <u>Goal 1</u>: **Classification**
       - Image Classification
-    - Regression
-    - Prediction:
+    - <u>Goal 2</u>: **Predictions** with Regressions
       - Translation (zum Beispiel angewendet in Deepl.com)
       - Image Captioning (siehe Bild): ![Beispiel zu Image Captioning](docs/bilder/machine-learning/example-image-captioning.png)
       
@@ -54,7 +53,7 @@ myfun <- function(xvar) {
   xvar
 } # first, I specify the function
 ggplot(data.frame(x = c(-10, 10)), aes(x = x)) +
-  stat_function(fun = myfun, geom = "line", colour="#FF9999") + # then, pass the above "user-defined function" called 'myfun' as an input into the function stat_function(). Note that I plot the function with a red line, to differentiate it form x- & y-axis.
+  stat_function(fun = myfun, geom = "line", colour="#FF9999") + # then, pass the above "user-defined function" called 'myfun' as an input into the function stat_function(). Note that I plot the function with a red line, to differentiate it from the x- & y-axis.
   geom_vline(xintercept = 0) + # zeichnet eine vertikale Linie bei 0, um die y-Achse zu verdeutlichen
   geom_hline(yintercept = 0) # zeichnet eine horizontale Linie bei 0, um die y-Achse zu verdeutlichen
 ```
