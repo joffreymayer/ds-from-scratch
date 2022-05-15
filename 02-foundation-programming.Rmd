@@ -1,0 +1,35 @@
+# Programming
+
+## How to Program?
+
+In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen, meine Programmierkenntnisse zu erweitern.
+
+## Tools to get started 
+
+- [Download the Program _Processing_](http://processing.org): _The Coding Train_ uses this to make all of his example. The programming language of _Processing_ is **Java**. 
+  - [Processing Foundation](https://processingfoundation.org/)
+  - [Learning Processing Book](http://learningprocessing.com/)
+
+### Definitionen
+
+- **<u>What is an Algorithm?</u>**:
+
+    An Algorithm is **a _list_ of instructions**.
+
+- **<u>What is Programming about?</u>**:
+
+    Programming is <u>not</u> about hardcoding numbers into functions to create a picture. **Programming is about creating a _sequence of instructions_ (= a logic) to execute a task**. 
+    
+- **<u>What is a Command & what are arguments?</u>**:
+
+![The command is a function, while arguments are the inputs of a function // command](./bilder/commands-and-arguments.PNG)
+
+- **<u>The coordinate system of a computer VS. the coordinate system in mathematics?</u>**:
+
+![The y-axis of a computer goes down starting the top-right corner, while the x-axis goes to the right starting the top-right corner](./bilder/coordinate-system.PNG)
+
+### Synonyme
+
+- inputs == arguments
+- function == command
+- cartesian coordinate system == "normales Koordinatensystem", dh mit der X-Achse für die horizontale Linie & Y-Achse für die vertikale Linie
