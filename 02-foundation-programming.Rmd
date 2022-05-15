@@ -22,11 +22,11 @@ In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen
     
 - **<u>What is a Command & what are arguments?</u>**:
 
-![The command is a function, while arguments are the inputs of a function // command](/bilder/programming/commands-and-arguments.PNG)
+![The command is a function, while arguments are the inputs of a function // command](docs/bilder/programming/commands-and-arguments.png)
 
 - **<u>The coordinate system of a computer VS. the coordinate system in mathematics?</u>**:
 
-![The y-axis of a computer goes down starting the top-right corner, while the x-axis goes to the right starting the top-right corner](./bilder/coordinate-system.PNG)
+![The y-axis of a computer goes down starting the top-right corner, while the x-axis goes to the right starting the top-right corner](docs/bilder/programming/coordinate-system.png)
 
 ### Synonyme
 
