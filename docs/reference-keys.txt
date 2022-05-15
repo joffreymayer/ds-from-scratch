@@ -101,6 +101,11 @@ projekt-management
 meetings
 job-interviews
 ausblick
+foundatios-of-programming
+how-to-program
+tools-to-get-started
+definitionen
+synonyme-2
 foundations-of-data-science
 find-data
 questions-you-need-to-answer-when-starting-a-new-project
@@ -170,11 +175,11 @@ speicherplatz-verwendet-durch-git-history
 unstage-everything
 stage-only-a-certain-type-of-file---for-example---only-.html-files
 econometrics
-synonyme-2
+synonyme-3
 english-words-synonyme
 allgemeines
 statistics-formulas
-definitionen
+definitionen-1
 different-tests-vorgehen-bei-den-tests
 diverse-berechnungen
 accept-reject-null-hypothesis
