@@ -353,7 +353,7 @@ Nehmen wir zunächst den Fall von einem **Bild aus dem Internet**:
 
 Als nächstes, nehmen wir ein **Bild, welches von meinem eigenen Computer stammt**. Ich hatte ich VTX eine Frage bezüglich meiner Domain geschrieben und musst Ihnen einen Screenshot einer meiner E-Mails angeben:
 
-- Mit **Inline-Methode**: ![Screenshot mit Inline-Methode](docs/bilder/home/capture-d-ecran.png)
+- Mit **Inline-Methode**: ![Screenshot mit Inline-Methode](./bilder/home/capture-d-ecran.png)
 - Mit **Reference-Methode**: ![Screenshot mit Reference-Methode][logo_2]
 
 #### Tabellen 
@@ -511,7 +511,7 @@ $$\underbrace{z-score = \frac{\overbrace{x}^{observation}-\overbrace{\mu}^{popul
 - <u>Illustration des **"Inline-Elements"**</u>: Der Mittelwert wird oftmals als **$\mu$** bezeichnet und die Varianz **$\sigma$**.
 
 [logo_1]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Beispielsbild aus Internet mit Reference-Methode"
-[logo_2]: docs/bilder/home/capture-d-ecran.png "corehub.net Email Screenshot"
+[logo_2]: ./bilder/home/capture-d-ecran.png "corehub.net Email Screenshot"
 
 #### Code Chunks Inputs / Outputs anzeigen / verstecken mit `Eval, Echo, Results` 
 
