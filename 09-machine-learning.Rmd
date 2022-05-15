@@ -214,6 +214,51 @@ unsupervised learning = structure the data into groups (very subjective) // dete
 - y(k) = this is the estimated(!!) regresion function
 - z(k) = "logits" --> the same as y(k) but we then apply the specific activation function "logit function" to the estimated z(k) // y(hat)
 
+### More ML-Jargon
+
+- `"feed in"` == plug in (--> häufig im Zusammenhang mit Einsetzen von konkreten Werten für die x-Variablen in das geschätzte Modell, um Predictions zu erhalten)
+- `instance` == value within a cell == konkreter "x"-Wert, welcher angenommen wird und du - beispielsweise - für eine Prediction verwenden kannst.
+- `Forcasted data` == These are the predictions that you do via the help of a model (--> by plugging in concrete x-values), that you've built.
+- `Training Dataset` // `Training Set` == This is the sample, that you use to estimate your model.
+- `Testing Dataset` // `Test Set` == This is the `hold out` set, which you use at the end, to check whether your model is able to `generalize` // `extrapolate` well to new data.
+- `"the model is learning` == what is meant by "learning" is: given some Datenpunkt-Wolke, the computer will try and fit the "best line" [oftentimes by minimizing the sum of the squared residuals, if you use `OLS` (= Ordinary Least Squared)] to construct the "best model" possible.
+- `Training` == You are estimating a model on the trainig-dataset, such that the model "learns" from the data.
+- `shuffle` == englisches Wort für "mischen". In the context of `splitting the dataset into test- & training-data`, it is common practice to `shuffle` your observations within your dataset first.
+	- <u>Reason why you `shuffle`</u>?: Shuffling data serves the purpose of
+		- reducing variance AND 
+		- making sure that models remain general AND 
+		- overfit less.
+	- <u>Merke</u>: When dealing with `time series`, you should not use `shuffle` when `splitting the data` into training- &amp; testing-data.
+- `training score` // `Test Error` == This error // score is the [oftentimes squared] difference between the `true y-variable` and `estimated // predicted y-variable` and **measures // evaluates how well the model is "performing" // how good the model is on a `test set` with an increasingly bigger `training dataset`**.
+- `cross-validation score` // `Validation Error` == This is the (mean) error // score [because of `cross-validation`] that **measures // evaluates how the model is "learning" over increasingly bigger `training datasets`**.
+- `fold` == **subset** of the `training dataset`
+	- <u>Example</u>: In a `K-Fold Cross-Validation`, you *randomly* split the <u>training set</u> into **10 distinct subsets**, which are called `folds`.
+- `samples` == number of rows // number of observations within a dataset.
+- `classifiers` == These are simply regression-functions, where the **Y-Variable is binary**, e.g. die Y-Variable kann nur `Y = 0` ODER `Y = 1` als Werte annehmen.
+	- <u>Example</u>: Logit- &amp; Probit-Regression, or Naiv Bayes, etc...
+- `initialization` // `declaration` // `specification` ==  This is the assignment of an initial value for a data object or variable.
+- `Array` == A List of Data is an array. It is a data structure, which contains "n" objects within a list.
+	- <u>Quelle</u>: [The Coding Train 3:10-3:22](https://www.youtube.com/watch?v=NptnmWvkbTw&t=3m10s)
+- `Extrapolation` == Voraussage von Y-Predict<u>ed</u> Values, welche mittels X-Variablen ermittelt werden, welche <u>zuvor nicht im Datensatz</u> waren.
+- `Interpolation` == Voraussage von Y-Predict<u>ed</u> Values, welche mittels X-Variablen ermittelt werden, welche <u>bereits im Datensatz</u> waren, als die Schätzung  getätigt wurde.
+- `sliding window` == This is just a way to tell python how to do a cross-validation and have equal lengths of time series where we can learn on.
+- `Learning Task` == Forecasting Task // Extrapolation [in Time Series]
+- `Forecasting Horizon` == Time Points, you want to predict (= dein ) $\hat{y}$
+- `Time Heterogenous Data` == Different Time Series have different time stamps
+	- <u>Quelle</u>: Ab 27:05 (Link: http://www.youtube.com/watch?v=Wf2naBHRo8Q&t=27m05s)
+- `Seasonal Periodicity` == The number of months per year, in which the forecaster expects to see a seasonal pattern. 
+	- <u>Concrete Example</u>: In Philipp's Notebook, he had a seasonal periodicity of 2, e.g. he said that in winter & sommer, he expects a seasonal pattern.
+- `Reduction is composable` &#8594; Synonym wäre "addieren" &#8594; E.g. you can split a difficult task into a bunch of smaller tasks (= reduction) and "add" them together to solve the bigger task at the end (= "reduction is composable").
+- `Pearson Korrelation` == <u>Lineare</u> Korrelation
+- `Grid` &#8594; Das ist nichts anderes als die **Optimierung von diversen "Modell-Parametern"**. 
+		- <u>Beispiel</u>: Bei Random-Forrest Modellen kann man zum Beispiel die Tiefe eines Modells bestimmen, dh die relevante Frage, welche ein Forscher sich stellt, ist, *wie viele Baum-Zweigungen die geeignesten Predictions bringen?* Mit Funktionen, wie zum Beispiel `GridSearchCV()` kann dieses Problem geregelt werden.
+- `Classifier` == These are simply Regression-Functions, where **the Y-variable is binary**, e.g. die Y-Variable kann nur `Y = 0` <u>oder</u> `Y= = 1` als Werte annehmen. 
+  - <u>Beispiele</u>: 
+    - Logit-Regression
+    - Probit-Regression
+    - Naive Bayes
+    - etc...
+
 ## Quellen 
 
 - https://blog.exxactcorp.com/lets-learn-the-difference-between-a-deep-learning-cnn-and-rnn/

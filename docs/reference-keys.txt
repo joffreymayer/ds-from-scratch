@@ -94,7 +94,6 @@ fundamental-daten
 data-flow
 synonyme-1
 data-science
-machine-learning
 python
 it-software-development
 projekt-management
@@ -203,7 +202,7 @@ regression-discontinuity-design-rdd
 coded-algorithms-r-functions
 nützliche-funktionen-r
 useful-econometrics-documents
-machine-learning-1
+machine-learning
 typen-von-machine-learning
 supervised-learning
 methods
@@ -211,6 +210,7 @@ wichtige-funktionen
 uni-kurs-neural-networks-deep-learning
 notation-neural-networks
 alphabetisch-sortiert
+more-ml-jargon
 quellen
 mengenlehre
 wörterbuch-1
