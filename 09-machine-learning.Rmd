@@ -11,7 +11,7 @@ Es gibt grundsätzlich **2 Kategorien**, in denen die verschiedenen *Methoden in
       - Image Classification
     - <u>Goal 2</u>: **Predictions** with Regressions
       - Translation (zum Beispiel angewendet in Deepl.com)
-      - Image Captioning (siehe Bild): ![Beispiel zu Image Captioning](docs/bilder/machine-learning/example-image-captioning.png)
+      - Image Captioning (siehe Bild): ![Beispiel zu Image Captioning](./bilder/machine-learning/example-image-captioning.png)
       
   
 2) **Unsupervised Learning**
