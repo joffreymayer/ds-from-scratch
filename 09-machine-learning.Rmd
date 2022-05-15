@@ -259,6 +259,8 @@ unsupervised learning = structure the data into groups (very subjective) // dete
     - Naive Bayes
     - etc...
 
+checj 
+
 ## Quellen 
 
 - https://blog.exxactcorp.com/lets-learn-the-difference-between-a-deep-learning-cnn-and-rnn/
