@@ -133,9 +133,15 @@ list-of-useful-python-libraries
 put-a-time-stamp-on-each-python-cell
 installation
 activation
-necessary-foundations
 pandas
+how-to-display-all-the-columns
+drop-missing-values
 loc--vs.-iloc-selection
+statsmodels
+useful-nice-to-knows
+define-the-y-variable-x-variables
+estimate-a-model
+extract-the-hatbeta-parameters
 time-series-forecasting
 facebook-prophet
 sklearn

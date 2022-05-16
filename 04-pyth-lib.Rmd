@@ -2,13 +2,27 @@
 
 ## List of Useful Python-Libraries 
 
-### Put a time-stamp on each Python-Cell
+- `numpy`, for **mathematical operations**.
+- `pandas`, for **handling data**, for example:
+  - _Drop missing values_.
+  - _Feature Engineering_.
+- `statsmodels`, for **regression analysis in "econometrics-style"**.
+  - Run a linear model (OLS).
+  - Run a binary-regression (logit or probit).
+  - Run a choice-model.
+- `sktime`, for **time-series analysis inkl. machine-learning**.
+- `sklearn`, for **machine-learning in "computer-science style"**.
+- `matplotlib`, for **data-visualization**.
+- `seaborn`, for **data-visualization**.
+- `datetime`, for **dealing with dates**.
+
+## Put a time-stamp on each Python-Cell
 
 The `ipython-autotime` library is particularly useful to get an overview of **how long each Python-Cell** takes to be executed. 
 
 You can even use it for  debugging in combination with the `datetime`-library in order to use `print()`-statements that gives you **the run-time of - for example - each model-fiting iteration (in a loop)**.
 
-#### Installation
+### Installation
 
 To install this wonderful 
 
@@ -16,7 +30,7 @@ To install this wonderful
 pip install ipython-autotime
 ```
 
-#### Activation
+### Activation
 
 It uses a `Python Magic-Command` in order to be able to use this library:
 
@@ -24,10 +38,17 @@ It uses a `Python Magic-Command` in order to be able to use this library:
 %load_ext autotime
 ```
 
+## Pandas
 
-## Necessary Foundations
+### How to display all the columns?
 
-### Pandas
+```pd.set_option('display.max_columns', None)```
+
+### Drop Missing-values?
+
+```
+df = df.dropna() # drop the missing values
+```
 
 ### `loc`- VS. `iloc`-Selection
 
@@ -37,6 +58,43 @@ It uses a `Python Magic-Command` in order to be able to use this library:
 and columns.
 
 - <u>For `iloc`</u>: Based on the <u>position</u> // where the specific rows &amp; columns are within the dataset.
+
+## Statsmodels
+
+### Useful Nice-to-Knows
+
+- Use `statsmodels` in combination with the `patsy`-library. For instance, if we have: some variable y, and we want to regress it against some other variables x, a, b, and the interaction of a and b, then we simply write:
+
+```
+patsy.dmatrices("y ~ x + a + b + a:b", data)
+```
+
+### Define the `y`-variable & `X`-variable<u>s</u>
+
+```
+y, X = dmatrices('Lottery ~ Literacy + Wealth + Region', data=df, return_type='dataframe')
+```
+
+<u>Notice that `dmatrices`-function above does the following things</u>:
+
+- **It creates Dummies**: Split the <u>categorical-variable</u> _Region_ into a set of indicator-variables (= Dummy-Variables).
+- **Added a _constant_** (= `Intercept`-Column) to the exogenous regressors matrix.
+- **Returned `pandas`-DataFrames** instead of simple `numpy`-arrays.
+
+### Estimate a Model
+
+```
+model = sm.OLS(y, X) # Step 1) Choose the model type --> here, we choose the model to be of the class "OLS" (= instantiate the model: which type of model do you want, for example OLS, GLM, RLM etc...?)
+results = model.fit() # Step 2: Fit the model
+print(results.summary()) # Step 3: Summarize model
+```
+
+#### Extract the `$\hat\beta$`-Parameters
+
+```
+results.params
+```
+
 
 ## Time-Series Forecasting
 
