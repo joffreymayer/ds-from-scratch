@@ -131,7 +131,9 @@ appendix-for-the-future
 python-libraries
 list-of-useful-python-libraries
 basic-python
+create-a-dataframe
 apply-a-function-on-a-column
+save-a-dataframe
 put-a-time-stamp-on-each-python-cell
 installation
 activation
@@ -148,6 +150,8 @@ string-manipulation
 split-a-string-at-a-specific-point
 cut-a-string-in-half
 working-with-date-columns
+define-a-range-of-dates
+date-range-in-15-minutes-abstand
 convert-a-string-date-column-into-a-date-time-format
 umgekehrt-convert-a-date-time-column-into-a-str-format
 for-utc-conversions-keep-a-copy-of-the-local-time
@@ -231,15 +235,6 @@ quellen
 mengenlehre
 wörterbuch-1
 mathematische-schrift-lesen
-openai
-what-can-openai-do-the-output
-how-does-the-model-work-the-blueprint
-terminology-of-openai-api-wörterbuch
-technology-behind-it-quellen
-create-a-dataframe
-save-a-dataframe
-define-a-range-of-dates
-date-range-in-15-minutes-abstand
 python-mustercodes
 inhaltsverzeichnis
 list-comprehensions
@@ -367,3 +362,8 @@ how-to-always-round-downwards
 calculate-the-median
 fun
 arbeitszeit-left-to-work-berechnung
+openai
+what-can-openai-do-the-output
+how-does-the-model-work-the-blueprint
+terminology-of-openai-api-wörterbuch
+technology-behind-it-quellen

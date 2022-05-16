@@ -1,5 +1,4 @@
 # <a id="top" style="color:black; text-decoration: none;">Python Mustercodes</a>
----
 
 In diesem Dokument habe ich eine **Liste von diversen Python-Codes**, welche mir in meiner Arbeit als Data Scientist behilflich sein könnten. I hope you find what you are looking for =)
 
@@ -262,7 +261,7 @@ help()
     
 
 
-# <a id="path" style="color:black; text-decoration: none;">Path Handling</a>
+## <a id="path" style="color:black; text-decoration: none;">Path Handling</a>
 ---
 
 *Sehr oft wirst du Modelle, die eventuell stundenlang gelernt haben oder Daten-Files etc... laden & speichern müssen. Hierfür ist es von hoher Bedeutung, dass du gut mit Pfaden umgehen kannst, insbesondere mit der Library `os`!*
@@ -295,7 +294,7 @@ save_folder # check if it worked? --> yes! Now you see your path =)
 
 
 
-# <a id="saving" style="color:black; text-decoration: none;">Save data</a>
+## <a id="saving" style="color:black; text-decoration: none;">Save data</a>
 ---
 
 ### <u><a id="save-csv" style="color:black; text-decoration: none;">Save as CSV-File</u></a>:
@@ -306,7 +305,7 @@ dynamic_name = "name_of_a_specific_characteristic_of_the_variable_that_you_want_
 YOUR_VAR_NAME.to_csv(f"Name-of-the-CSV-{dynamic_name}.csv") # I use f-strings since it allows me to adapt the CSV-filenames to a specific characteristic, that I used for a model / method etc...
 ```
 
-# <a id="read-data" style="color:black; text-decoration: none;">Read data // Load data</a>
+## <a id="read-data" style="color:black; text-decoration: none;">Read data // Load data</a>
 ---
 
 In order to load datasets, you will need the library `pandas`. For *some* cases, additional libraries may be needed.
@@ -718,7 +717,7 @@ filename = "Put_Your_Pickle-File_Name_Here" # Alternativ: os.path.join(data_fold
 test_loaded_pkl =  pickle.load(open(filename, 'rb'))
 ```
 
-# <a id="vanilla-exploration" style="color:black; text-decoration: none;">Vanilla Exploration of your Dataset</a>
+## <a id="vanilla-exploration" style="color:black; text-decoration: none;">Vanilla Exploration of your Dataset</a>
 ---
 
 <u>After</u> having told Python to read in your dataset, the **first thing** you will want to do is to <mark>get (very) familiar with your dataset</mark>. This is **key**, otherwise you will <u>not</u> be able to perform a good data analysis!
@@ -963,7 +962,7 @@ df['id'] = df.groupby(['LastName','FirstName']).ngroup() # here, we use the colu
 df['id'] = df.groupby(['date']).ngroup() # if Course, you could also simply use 1 column fo the assignment of an unique ID. 
 ```
 
-# <a id="sel-and-filt" style="color:black; text-decoration: none;">Selection &amp; Filtering Rows and Columns</a>
+## <a id="sel-and-filt" style="color:black; text-decoration: none;">Selection &amp; Filtering Rows and Columns</a>
 ---
 
 When you will work wit dataframes in `pandas`, one of the most important things you will need to master is how to select some columns, as well as print out `subsets` // particular columns from the dataframe.
@@ -1234,7 +1233,7 @@ null_data = df[df.isnull().any(axis = 1)] # this will only select the rows that 
 null_data # check, if it worked?
 ```
 
-#  <a id="sel-loc-iloc" style="color:black; text-decoration: none;">Selection with "accessor operators" `iloc` &amp; `loc`</a>
+##  <a id="sel-loc-iloc" style="color:black; text-decoration: none;">Selection with "accessor operators" `iloc` &amp; `loc`</a>
 ---
 
 Das Package `Pandas` erlaubt die Verwendung von sogenannten `accessor operators`, um Dataframes einfacher zu filtrieren. Dabei unterscheidet man zwischen: 
@@ -1437,7 +1436,7 @@ print(loc_test)
     Name: order_id, dtype: int64
 
 
-# <a id="sort-and-filt" style="color:black; text-decoration: none;">Sorting &amp; Filtering</a>
+## <a id="sort-and-filt" style="color:black; text-decoration: none;">Sorting &amp; Filtering</a>
 ---
 
 ### <u><a id="sort-pearson-corr-from-most-imp-to-least-imp" style="color:black; text-decoration: none;">How to sort a Data-Frame Column (hier: Pearson-Correlation Matrix) from '_most important_' to '_least important_'?</a></u>:
@@ -1463,7 +1462,7 @@ highly_correlated = correlations[correlations > 0.75]
 print(highly_correlated[highly_correlated < 1.0].stack().to_string())
 ```
 
-# <a id="dealing-with-missings" style="color:black; text-decoration: none;">Data-Cleaning: Missings</a>
+## <a id="dealing-with-missings" style="color:black; text-decoration: none;">Data-Cleaning: Missings</a>
 ---
 
 ### <a id="count-total-missings-ddset" style="color:black; text-decoration: none;"><u>Number of Missing Values across the WHOLE Data-Frame</u></a>:
@@ -1549,7 +1548,7 @@ This list will grow with time, the more I stumble onto various codes:
 df_energy.interpolate(method='linear', limit_direction='forward', inplace=True, axis=0) # since we have 
 ```
 
-# <a id="data-duplicates" style="color:black; text-decoration: none;">Data-Cleaning: Duplicates</a>
+## <a id="data-duplicates" style="color:black; text-decoration: none;">Data-Cleaning: Duplicates</a>
 ---
 
 
@@ -1581,7 +1580,7 @@ df_unique_dates = df_ferien.drop_duplicates(subset='datum', # only consider the 
 df_unique_dates
 ```
 
-# <a id="outliers" style="color:black; text-decoration: none;">Data-Cleaning: Outliers</a>
+## <a id="outliers" style="color:black; text-decoration: none;">Data-Cleaning: Outliers</a>
 ---
 
 ### <a id="draw-boxplot" style="color:black; text-decoration: none;"><u>Draw a Boxplot for a specific column</u></a>:
@@ -1595,7 +1594,7 @@ plt.show()
 ```
 
 <ul>
-    <li><strong><u>Key-Question</u></strong>: <h1><em><center>Are there Outliers? &#8594; Yes / No</center></em></h1></li><br>
+    <li><strong><u>Key-Question</u></strong>: <h2><em><center>Are there Outliers? &#8594; Yes / No</center></em></h2></li><br>
     <ul>
         <li><strong><u>"Trick" to answer the question</u></strong>: If you deal with temperature for example, google for "highest Temperature on earth" and look it up in Wikipedia to dertermine whether your value is an outlier.</li>
     </ul>
@@ -1614,7 +1613,7 @@ df_weather.loc[df_weather.pressure > 1051, 'pressure'] = np.nan
 df_weather.loc[df_weather.pressure < 931, 'pressure'] = np.nan
 ```
 
-# <a id="merging-and-splitting" style="color:black; text-decoration: none;">Merging &amp; Splitting</a>
+## <a id="merging-and-splitting" style="color:black; text-decoration: none;">Merging &amp; Splitting</a>
 ---
 
 - <u>**Important note before you start**</u>: If you want to merge 2 dataframes, where _one is smaller than the other_, then you <mark>CANNOT make the bigger dataset become _smaller_ with `merge()`</mark>. I did spend alot of time, but without success. However, there is **another solution**: you just need to drop the duplicates of the bigger dataframe ([see chapter `Duplicates`](#duplicates-chapter) in order to be able to make the dataset smaller! =)
@@ -1698,7 +1697,7 @@ df_final.columns # show the merging-results, by displaying all the column-names 
 <u>**Step 3**</u>: Make some final-checks
 
 <ul>
-    <li><strong><u>Key-Question</u></strong>: <h1><em><center>Did the merging really worked? &#8594; Yes / No</center></em></h1></li><br>
+    <li><strong><u>Key-Question</u></strong>: <h2><em><center>Did the merging really worked? &#8594; Yes / No</center></em></h2></li><br>
     <ul>
         <li><strong><u>"Trick" to answer the question</u></strong>: Look at Missings &amp; Duplicates.</li>
     </ul>
@@ -1720,7 +1719,7 @@ print('\nThere are {} duplicate rows in df_energy based on all columns.'
 <h3><em>If the answer is 'yes', then merging should have worked, if you have no missings and no duplicates. <br><br>
     If the answer to the above question is 'no', then you need to go back to step 2 and try to figure out what you did wrong when merging the datasets together.</em></h3>
 
-# <a id="advanced-exploration" style="color:black; text-decoration: none;">Advanced Exploration of your data</a>
+## <a id="advanced-exploration" style="color:black; text-decoration: none;">Advanced Exploration of your data</a>
 ---
 
 ### <a id="create-correlation-matrix" style="color:black; text-decoration: none;"><u>How to create &amp; plot a `Pearson Correlation Matrix` out of a Dataframe?</u></a>:
@@ -1740,7 +1739,7 @@ plt.title('Pearson Correlation Matrix')
 plt.show()
 ```
 
-# <a id="time-series-exploration" style="color:black; text-decoration: none;">Time-Series: Exploration &amp; Visualizations</a>
+## <a id="time-series-exploration" style="color:black; text-decoration: none;">Time-Series: Exploration &amp; Visualizations</a>
 ---
 
 ### <a id="plot-time-series" style="color:black; text-decoration: none;"><u>Plotting a Time Series</u></a>:
@@ -1815,7 +1814,7 @@ plt.plot(cross_corr[0:50])
 plt.show()
 ```
 
-# <a id="feature-engineering-time-series" style="color:black; text-decoration: none;">Feature Engineering for Time-Series</a>
+## <a id="feature-engineering-time-series" style="color:black; text-decoration: none;">Feature Engineering for Time-Series</a>
 ---
 
 Wenn du mit Variablen arbeitest, welche mit "Zeit" zu tun haben, brauchst du einige "Tricks", um Data Cleaning betreiben zu können mit sogenannten `Date-Time Objects` in Python.
@@ -2002,7 +2001,7 @@ next_next_next_next_day
 
 We see that the `21.03.2020` was a **Saturday**. I checked it with the calendar: it's correct =)
 
-# Dummy-Variables
+## Dummy-Variables
 ---
 
 ### <a id="create-normal-dummies" style="color:black; text-decoration: none;"><u>Create a "normal" Dummy</u></a>:
@@ -2104,7 +2103,7 @@ X_norm = scaler_X.transform(X_compl_df)
 y_norm = scaler_y.transform(y_compl_df)
 ```
 
-# <a id="umwandlungen" style="color:black; text-decoration: none;">Umwandlungen</a>
+## <a id="umwandlungen" style="color:black; text-decoration: none;">Umwandlungen</a>
 ---
 
 
@@ -2120,12 +2119,12 @@ Series.to_numpy() # this also works on a column of a dataframe =)
 
 ```
 
-# Apply If-Conditions on a DataFrame
+## Apply If-Conditions on a DataFrame
 ---
 
 - Here is a really good reference: https://datatofish.com/if-condition-in-pandas-dataframe/
 
-# <a id="data-viz" style="color:black; text-decoration: none;">Visualization of the Data</a>
+## <a id="data-viz" style="color:black; text-decoration: none;">Visualization of the Data</a>
 ---
 
 ### <a id="plot-and-save-image" style="color:black; text-decoration: none;"><u>Plot &amp; Save an Image</u></a>:
@@ -2173,7 +2172,7 @@ for i in cov_list:
     # f-strings to create a unique name for each file =)
 ```
 
-# <a id="magic-commands" style="color:black; text-decoration: none;">Python Magic Commands</a>
+## <a id="magic-commands" style="color:black; text-decoration: none;">Python Magic Commands</a>
 ---
 
 ## <u><a id="view-all-columns" style="color:black; text-decoration: none;">Show ALL Columns of a DataFrames</a></u>
@@ -2227,7 +2226,7 @@ Now that you 'saved' the variable `myData` with the `Magic Commands`, **go and o
 myData # step 2: run this line in the secons cell
 ```
 
-# <a id="useful-tricks" style="color:black; text-decoration: none;">Useful "Tricks" I stumbled upon</a>
+## <a id="useful-tricks" style="color:black; text-decoration: none;">Useful "Tricks" I stumbled upon</a>
 ---
 
 ### <a id="reshape-1-1" style="color:black; text-decoration: none;"><u>Reshape(-1, 1)</u></a>:
@@ -2240,7 +2239,7 @@ Using `reshape(-1,1)` on it, will create a new **list of lists, with only 1 elem
 
 *See also [this Stack-Overflow answer](https://stackoverflow.com/questions/18691084/what-does-1-mean-in-numpy-reshape)*.
 
-# <a id="math-tricks" style="color:black; text-decoration: none;">Math Tricks for Hacks</a>
+## <a id="math-tricks" style="color:black; text-decoration: none;">Math Tricks for Hacks</a>
 ---
 
 ### <a id="round-downwards" style="color:black; text-decoration: none;"><u>How to _always_ round downwards</u></a>?:
@@ -2311,7 +2310,7 @@ assert median([1, 10, 2, 9, 5]) == 5 # check if the above function was written c
 # what happens, if this expression becomes incorrect)
 ```
 
-# Fun
+## Fun
 ---
 
 In this section, I will just put some important concepts &amp; some of my "inventions" that I found useful.
