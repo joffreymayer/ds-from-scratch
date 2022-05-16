@@ -130,6 +130,8 @@ p-hacking
 appendix-for-the-future
 python-libraries
 list-of-useful-python-libraries
+basic-python
+apply-a-function-on-a-column
 put-a-time-stamp-on-each-python-cell
 installation
 activation
@@ -142,6 +144,14 @@ useful-nice-to-knows
 define-the-y-variable-x-variables
 estimate-a-model
 extract-the-hatbeta-parameters
+string-manipulation
+split-a-string-at-a-specific-point
+cut-a-string-in-half
+working-with-date-columns
+convert-a-string-date-column-into-a-date-time-format
+umgekehrt-convert-a-date-time-column-into-a-str-format
+for-utc-conversions-keep-a-copy-of-the-local-time
+create-a-unique-id-based-on-a-date-column
 time-series-forecasting
 facebook-prophet
 sklearn
