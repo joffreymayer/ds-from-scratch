@@ -1,5 +1,7 @@
 # Python Libraries
 
+Dieses [Juypiter Notebook ZF](./cheat-sheets/python-mustercodes.ipynb).
+
 ## List of Useful Python-Libraries 
 
 - `numpy`, for **mathematical operations**.
