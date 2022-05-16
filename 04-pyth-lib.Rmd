@@ -20,6 +20,34 @@
 
 In this part, I will give you some useful `Python`-Code, which can be helpful in _any_ project.
 
+### Create a `DataFrame`
+
+The following `DataFrame` was build with many `Series`-Objects:
+
+```
+df = pd.DataFrame({'LoadCH': ts_loadFc[time_index_hourly], 
+                   'LoadD': ts_DE_loadFc.resample('H').mean()[time_index_hourly], 
+                   'LoadF': ts_FR_loadFc[time_index_hourly], 
+                   'LoadIT': ts_IT_loadFc[time_index_hourly],
+                   'GenCH': ts_genFc[time_index_hourly], 
+                   'GenD': ts_DE_genFc[time_index_hourly], 
+                   'GenF': ts_FR_genFc[time_index_hourly], 
+                   'GenIT': ts_IT_genFc[time_index_hourly],
+                   'RenGenCH': ts_RenGenAllCH[time_index_hourly], # we take the aggregated renewable generation
+                   'RenGenD': ts_RenGenAllDE[time_index_hourly], 
+                   'RenGenF': ts_RenGenAllFR[time_index_hourly], 
+                   'RenGenIT': ts_RenGenAllIT[time_index_hourly], 
+                   'TransFromDach': ts_TransFromDACH[time_index_hourly], 
+                   'TransToDach': ts_TransToDACH[time_index_hourly], 
+                   'TransToIT': ts_TransToIT[time_index_hourly],
+                   'SeasonAndProduct': ts_season_prod[time_index_hourly], # TO-DO: re-name this column, since its name is confusing!
+                   'tInfoDaySin' : ts_timeInfoDayI_4forecast[time_index_hourly],
+                   'tInfoDayCos' : ts_timeInfoDayII_4forecast[time_index_hourly], 
+                   'tInfoYearSin' : ts_timeInfoYearI_4forecast[time_index_hourly], 
+                   'tInfoYearCos' : ts_timeInfoYearII_4forecast[time_index_hourly],
+                   'PricesCH': ts_DA_Price[time_index_hourly]}) 
+```
+
 ### Apply a `function` on a Column
 
 This can be useful, when you need to do some transformation to a column of a `df`:
@@ -35,6 +63,12 @@ def my_function():
 # Step 2: Apply this newly specified function on your column of your data-frame, that you wish to transform
 
 df['new_column'] = df['column_1'].apply(my_function)
+```
+
+### Save a `DataFrame`
+
+```
+df.to_csv('Your_FileName.csv', index = True) # this will be saved into your 'wd'
 ```
 
 ### Put a time-stamp on each Python-Cell
@@ -152,6 +186,33 @@ _Since you will - most probably - often work with time-series data, you MUST lea
 - What is the current 'dtype' of your 'Date-Time'-Column?
 - If you work with multiple time-series: are all time-series already in the UTC-format? If NOT, then you better do it, otherwise you have the wrong hours across different time-zones!
 ```
+
+### Define a Range of Dates
+
+```
+# Step 1: We need a starting & endpoint for the range of dates
+the_start_date = '2019-01-01'
+the_end_date = str(datetime.today().date() + timedelta(days = 2)) # this is simply "today" + 2 days into the future 
+
+# Step 2: Let's create the range of dates based on the starting- & end-point
+date_range_of_interest = pd.date_range(the_start_date, # starting date-point (= is fixed)
+                                         the_end_date, # end date-point (= can change dynamically // updates with new data from entsoe)
+                                         freq = 'h', # we want to have 'hours'
+                                         closed = 'left', # The input 'closed' let's you choose whether you want to include the start and end dates. 
+                                         # --> 'left' will exclude the end-date, which is good, since this date is in the "future" (= today + 2)!
+                                         tz = 'Europe/Berlin') # this is the time-zone
+```
+
+#### Date-Range in 15-Minutes Abstand
+
+```
+date_range_15Min = pd.date_range(the_start_date,
+                                        the_end_date, 
+                                        freq = '15Min', # only thing that changes --> will be used for Germany, since DE has quarterly-houred observations
+                                        closed = 'left', 
+                                        tz = 'Europe/Berlin')
+```
+
 
 ### Convert a `string`-Date Column INTO a `date-time`-format
 
