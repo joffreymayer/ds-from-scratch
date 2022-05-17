@@ -84,10 +84,10 @@ In diesem Kapitel habe ich anhand von Beispielen versucht, **eine Liste zu mit d
 
 ### Methoden
 
-- Difference-in-Differences
+- _Difference-in-Differences_
   - <u>Geeignet für</u>: **Kausaleffekte**, wobei hier ein Vergleich zweier _praktisch gleicher_ Gruppen über die Zeit stattfindet, um den Effekt eines "Treatments" (= treated OR not treated) zu messen.
   
-### "Feature-Engineering" für gute Modellierung
+## Die "Kunst des Feature-Engineering" für gute Modellierung
 
 Was "gute" Modelle von "Schlechten" unterscheidet, ist oftmals, wie du deine `X`-Variablen für das Modell kallibriest. Das wird in der Data-Science Branche als "Feature Engineering" bezeichnet. 
 
