@@ -14525,6 +14525,7 @@ a.anchor-link {
 <h2 id="Inhaltsverzeichnis">Inhaltsverzeichnis<a class="anchor-link" href="#Inhaltsverzeichnis">&#182;</a></h2>
 <pre><code>&lt;a id="gebe-hier-passenden-id-namen" style="color:black; text-decoration: none;"&gt;&lt;/a&gt;</code></pre>
 <ul>
+<li><a href="#basic-python">Basic Python for Data-Science</a><ul>
 <li><a href="#list-compr">List Comprehensions</a></li>
 <li><a href="#str-manip">String Manipulation</a></li>
 <li><a href="#package-install">Package Installation</a><ul>
@@ -14544,22 +14545,9 @@ a.anchor-link {
 <li><a href="#load-pickle">Load Pickle</a></li>
 </ul>
 </li>
-<li><a href="#vanilla-exploration">Vanilla Data Exploration</a><ul>
-<li><a href="#number-of-rows">Number of Rows</a></li>
-<li><a href="#view-all-ddset">View whole Dataset</a></li>
-<li><a href="#view-first-five">View 5 first observations in the Dataset</a></li>
-<li><a href="#view-last-five">View 5 last observations in the Dataset</a></li>
-<li><a href="#missings-per-column">Number of Missings per Column within a dataset</a></li>
-<li><a href="#find-data-type">Find the <code>Data Type</code> of a Variable</a></li>
-<li><a href="#drop-columns">Drop 1 OR multiple Columns</a></li>
-<li><a href="#rename-columns">Re-Name 1 OR multiple Columns</a></li>
-<li><a href="#reset-and-set-idx"><code>.reset_index()</code> and <code>.set_index()</code></a></li>
-<li><a href="#summary-ddset">Summary of a Dataset</a></li>
-<li><a href="#unique-values">Show only <code>unique()</code> Columns</a></li>
-<li><a href="#median-and-mean">Median &amp; Mean for a particular Column</a></li>
-<li><a href="#apply-a-function-based-on-cond">Apply a Fustom-Function <code>f(x)</code>, but only on certain rows within a Dataframe via <code>numpy</code></a></li>
+<li><a href="#umwandlungen">Umwandlungen</a><ul>
+<li><a href="#series-to-array">Series to Array</a></li>
 <li><a href="#trans-series-to-frame">Transform a Series to a Dataframe</a></li>
-<li><a href="#unique-id">Assign a <code>unique ID</code></a></li>
 </ul>
 </li>
 <li><a href="#sel-and-filt">Selection &amp; Filtering of Rows &amp; Columns</a><ul>
@@ -14590,6 +14578,25 @@ a.anchor-link {
 </li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#vanilla-exploration">Vanilla Data Exploration</a><ul>
+<li><a href="#number-of-rows">Number of Rows</a></li>
+<li><a href="#view-all-ddset">View whole Dataset</a></li>
+<li><a href="#view-first-five">View 5 first observations in the Dataset</a></li>
+<li><a href="#view-last-five">View 5 last observations in the Dataset</a></li>
+<li><a href="#summary-ddset">Summary of a Dataset</a></li>
+<li><a href="#unique-values">Show only <code>unique()</code>-values from a Columns</a></li>
+<li><a href="#median-and-mean">Median &amp; Mean for a particular Column</a></li>
+<li><a href="#apply-a-function-based-on-cond">Apply a Fustom-Function <code>f(x)</code>, but only on certain rows within a Dataframe via <code>numpy</code></a></li>
+</ul>
+</li>
+<li><a href="#data-cleaning">Data Cleaning</a><ul>
+<li><a href="#find-data-type">Find the <code>Data Type</code> of a Variable AND the number of missings per Column</a></li>
+<li><a href="#drop-columns">Drop 1 OR multiple Columns</a></li>
+<li><a href="#rename-columns">Re-Name 1 OR multiple Columns</a></li>
+<li><a href="#reset-and-set-idx">Control the Row-Index with <code>.reset_index()</code> and <code>.set_index()</code></a></li>
+<li><a href="#unique-id">Assign a <code>unique ID</code></a></li>
 <li><a href="#dealing-with-missings">Dealing with Missings</a><ul>
 <li><a href="#count-total-missings-ddset">Count total Number of Missings within a Dataframe</a></li>
 <li><a href="#count-missings-per-columns">Count Missings per Columns</a></li>
@@ -14617,19 +14624,28 @@ a.anchor-link {
 <li><a href="#merge-multiple-ddset">Merging <em>multiple</em> Datasets _simultaneously</a></li>
 </ul>
 </li>
+<li><a href="#scaling-variables">Scaling Variables</a><ul>
+<li><a href="#normalization-scaling">Normalization</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#advanced-exploration">Advanced Data Exploration</a><ul>
 <li><a href="#create-correlation-matrix">Create a Correlation-Matrix from a Dataframe</a></li>
 </ul>
 </li>
 <li><a href="#time-series-exploration">Time Series Exploration</a><ul>
-<li><a href="#plot-time-series">Plot Time-Series</a></li>
-<li><a href="#auto-and-partial-auto-corr">Autocorrelation &amp; Partial-Autocorrelation</a></li>
-<li><a href="#cross-corr">Cross-Correlation</a></li>
-<li><a href="#feature-engineering-time-series">Feature Engineering</a><ul>
+<li><a href="#indexing">Indexing</a><ul>
 <li><a href="#time-stamps-as-index">Creating a Time-Index</a></li>
 <li><a href="#copy-index-as-columns">Copy Index as a Column</a></li>
 <li><a href="#make-datetime-and-set-index">Transform a "Pseudo"-Time-Column into a <code>Date-Time</code>-Column and set it as the index</a></li>
 <li><a href="#create-range-of-dates">Create a <code>range()</code> of Dates</a></li>
+</ul>
+</li>
+<li><a href="#plot-time-series">Plot Time-Series</a></li>
+<li><a href="#auto-and-partial-auto-corr">Autocorrelation &amp; Partial-Autocorrelation</a></li>
+<li><a href="#cross-corr">Cross-Correlation</a></li>
+<li><a href="#feature-engineering-time-series">Feature Engineering</a><ul>
 <li><a href="#rechnen-mit-date-time-objects">Rechnen (Addition &amp; Substraktion) mit <code>Date-Time</code></a><ul>
 <li><a href="#today">Genauer Zeitpunkt "jetzt" (Heute // <code>Today</code>) herausfinden</a></li>
 <li><a href="#zukunft-relativ-zu-jetzt">Zukunft relativ zu "jetzt"</a></li>
@@ -14649,18 +14665,9 @@ a.anchor-link {
 </li>
 </ul>
 </li>
-<li><a href="#scaling-variables">Scaling Variables</a><ul>
-<li><a href="#normalization-scaling">Normalization</a></li>
-<li><a href="#series-to-array">Series to Array</a></li>
-</ul>
-</li>
 <li><a href="#data-viz">Data Visualization</a><ul>
 <li><a href="#plot-and-save-image">Plot and Save Image</a></li>
 <li><a href="#multi-plots-for-loop"><em>Multiple</em> Plots with For-Loops</a></li>
-</ul>
-</li>
-<li><a href="#umwandlungen">Umwandlungen von <code>Data Types</code> in einen anderen <code>Data Type</code></a><ul>
-<li><a href="#series-to-array">Convert Series to Array</a></li>
 </ul>
 </li>
 <li><a href="#useful-tricks">Useful "tricks" I stumbled upon</a><ul>
@@ -14679,6 +14686,12 @@ a.anchor-link {
 </ul>
 </li>
 </ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Basic-Python-for-Data-Science"><a id="basic-python" style="color:black; text-decoration: none;">Basic Python for Data-Science</a><a class="anchor-link" href="#Basic-Python-for-Data-Science">&#182;</a></h1><hr>
 
 </div>
 </div>
@@ -15665,14 +15678,13 @@ or summary contain a given string such as &#34;spam&#34;, type &#34;modules spam
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Vanilla-Exploration-of-your-Dataset"><a id="vanilla-exploration" style="color:black; text-decoration: none;">Vanilla Exploration of your Dataset</a><a class="anchor-link" href="#Vanilla-Exploration-of-your-Dataset">&#182;</a></h1><hr>
+<h1 id="Umwandlungen"><a id="umwandlungen" style="color:black; text-decoration: none;">Umwandlungen</a><a class="anchor-link" href="#Umwandlungen">&#182;</a></h1><hr>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><u>After</u> having told Python to read in your dataset, the <strong>first thing</strong> you will want to do is to <mark>get (very) familiar with your dataset</mark>. This is <strong>key</strong>, otherwise you will <u>not</u> be able to perform a good data analysis!</p>
-<h3 id="Find-out-the-number-of-%60observations%60-//-rows-in-your-dataset:"><a id="number-of-rows" style="color:black; text-decoration: none;"><u>Find out the number of `observations` // rows in your dataset</u></a>:<a class="anchor-link" href="#Find-out-the-number-of-%60observations%60-//-rows-in-your-dataset:">&#182;</a></h3>
+<h3 id="Convert-a-Series-into-an-array:"><a id="series-to-array" style="color:black; text-decoration: none;"><u>Convert a Series into an array</u></a>:<a class="anchor-link" href="#Convert-a-Series-into-an-array:">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -15680,394 +15692,12 @@ or summary contain a given string such as &#34;spam&#34;, type &#34;modules spam
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">nba</span><span class="p">)</span> <span class="c1"># to get the number of observations // rows </span>
-
-    <span class="c1"># note: &#39;nba&#39; is the name of the ddset</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Series</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span> <span class="c1"># this also works on a column of a dataframe =)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Find-out-the-number-of-%60rows%60-&amp;-%60columns%60-within-your-dataset:"><u>Find out the number of `rows` &amp; `columns` within your dataset</u>:<a class="anchor-link" href="#Find-out-the-number-of-%60rows%60-&amp;-%60columns%60-within-your-dataset:">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nba</span><span class="o">.</span><span class="n">shape</span> <span class="c1"># to get number of rows AND columns</span>
-
-    <span class="c1"># note: &#39;nba&#39; is the name of the ddset</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%60View%60-the-whole-Dataset:"><a id="view-all-ddset" style="color:black; text-decoration: none;"><u>`View` the <mark>whole</mark> Dataset</u></a>:<a class="anchor-link" href="#%60View%60-the-whole-Dataset:">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nba</span> <span class="c1"># just type in the name of the variable in which your dataframe is stored in --&gt; &#39;nba&#39; is the name of your dataframe here</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%60View%60-the-first-5-rows-of-your-dataset:"><a id="view-first-five" style="color:black; text-decoration: none;"><u>`View` the first 5-rows of your dataset</u></a>:<a class="anchor-link" href="#%60View%60-the-first-5-rows-of-your-dataset:">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nba</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> <span class="c1"># head() is often used to check whether your dataset really contains data you care about </span>
-
-    <span class="c1"># here we check: does the ddset really contains data about the NBA?</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong><u>Achtung</u></strong>: If you have alot of columns, Python will not display them all when you use <code>head()</code>. <u>However</u> you can change the settings via:</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max.columns&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="c1"># this will tell Python: &quot;show me ALL the columns!&quot;</span>
-
-<span class="n">nba</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> <span class="c1"># execute &#39;head()&#39; again to check if the setting changed correclty? --&gt; yes!</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="You-can-also-%60View%60-the-5-last-rows-of-your-dataset-by-using-%60tail()%60:"><a id="view-last-five" style="color:black; text-decoration: none;">You can also `View` the 5 last rows of your dataset by using `tail()`</a>:<a class="anchor-link" href="#You-can-also-%60View%60-the-5-last-rows-of-your-dataset-by-using-%60tail()%60:">&#182;</a></h4>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nba</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span> <span class="c1"># View last 5 rows</span>
-
-<span class="c1"># Viewing very specific rows is also possible: </span>
-<span class="n">nba</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># Here, we view the last 3 rows</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Find-out-the-%60Data-Type%60-of-each-column-within-your-dataset-&amp;-number-of-%60non-missing-values%60:"><a id="missings-per-column" style="color:black; text-decoration: none;"><u>Find out the `Data Type` of each column within your dataset &amp; number of `non-missing values`</u></a>:<a class="anchor-link" href="#Find-out-the-%60Data-Type%60-of-each-column-within-your-dataset-&amp;-number-of-%60non-missing-values%60:">&#182;</a></h3><p>With the following simple code, we can find out, whether the columns are from the type of an <code>integer</code>, a <code>string</code>, a <code>boolean</code> etc...</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nba</span><span class="o">.</span><span class="n">info</span><span class="p">()</span> <span class="c1"># this will output all the types of each column in your dataset &amp; how many NON-missings you have per column</span>
-
-    <span class="c1"># note: Pay attention to any columns that are from the type &#39;object&#39;! --&gt; lese bemerkung unten...</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a href="https://www.w3schools.com/python/python_datatypes.asp" target="_blank">To get a beautiful overview over all types that exist in Python, I recommend you to visit the website of W3Schools.com</a></p>
-<p><strong><u>Bemerkung hier</u></strong>: It can be, that columns are from the type <code>object</code>. In practice, it often means that <em>all</em> of the values in an <code>object</code>-column are <u>strings</u>. If you encounter any <code>object</code>-columns, it is strongly recommended that you convert them into a more apropriate <code>data-type</code>, otherwise some of the functions won't work on these <code>object</code>-columns...</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Find-the-%60type%60-of-*any*-object-in-Python:"><a id="find-data-type" style="color:black; text-decoration: none;">Find the `type` of *any* object in Python</a>:<a class="anchor-link" href="#Find-the-%60type%60-of-*any*-object-in-Python:">&#182;</a></h4>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Drop-specific-Columns:"><a id="drop-columns" style="color:black; text-decoration: none;"><u>Drop specific Columns</u></a>:<a class="anchor-link" href="#Drop-specific-Columns:">&#182;</a></h3><p>Note that <code>axis = 1</code> denotes the columns that will be droped, while <code>axis = 0</code> (default), will denote the rows that should be dropped.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_energy</span> <span class="o">=</span> <span class="n">df_energy</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;tInfoDaySin&#39;</span><span class="p">,</span> <span class="s1">&#39;tInfoDayCos&#39;</span><span class="p">,</span> <span class="s1">&#39;tInfoYearSin&#39;</span><span class="p">,</span> <span class="s1">&#39;tInfoYearCos&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Re-Name-the-Columns-of-a-DataFrame:"><a id="rename-columns" style="color:black; text-decoration: none;"><u>Re-Name the Columns of a DataFrame</u></a>:<a class="anchor-link" href="#Re-Name-the-Columns-of-a-DataFrame:">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;oldName1&#39;</span><span class="p">:</span> <span class="s1">&#39;newName1&#39;</span><span class="p">,</span> <span class="s1">&#39;oldName2&#39;</span><span class="p">:</span> <span class="s1">&#39;newName2&#39;</span><span class="p">},</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;columns&#39;</span><span class="p">)</span> <span class="c1"># not all columns have to be renamed, only those with a new name</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Set-&amp;-Reset-the-Index-/-Row-Label:"><a id="reset-and-set-idx" style="color:black; text-decoration: none;"><u>Set &amp; Reset the Index / Row-Label</u></a>:<a class="anchor-link" href="#Set-&amp;-Reset-the-Index-/-Row-Label:">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_energy</span> <span class="o">=</span> <span class="n">df_energy</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Date-Time&#39;</span><span class="p">)</span> <span class="c1"># to set the index</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_energy</span> <span class="o">=</span> <span class="n">df_energy</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span> <span class="c1"># to reset the index --&gt; df.reset_index(drop= True) will drop the index, which would </span>
-                                    <span class="c1"># otherwise become a new column instead of just dropping it!</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Make-a-%60Summary%60-out-of-all-the-variables-in-your-dataset:"><a id="summary-ddset" style="color:black; text-decoration: none;"><u>Make a `Summary` out of all the variables in your dataset</u></a>:<a class="anchor-link" href="#Make-a-%60Summary%60-out-of-all-the-variables-in-your-dataset:">&#182;</a></h3><p>Note that, in order to be able to do some <strong>summary-statistics</strong>, you will need the additional library <code>numpy</code>.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># load numpy for summary-statistics</span>
-
-<span class="n">nba</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># results will be rounded onto 2 digits</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong><u>Achtung</u></strong>: If you have columns from the type <code>object</code>, you will need a slightly different version of the <code>describe()</code> function to display some summary-statistics from such columns.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nba</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span> <span class="c1"># if you have some weird columns being of the type &#39;object&#39;</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Find-the-unique-values-from-a-column:"><a id="unique-values" style="color:black; text-decoration: none;"><u>Find the unique values from a column</u></a>:<a class="anchor-link" href="#Find-the-unique-values-from-a-column:">&#182;</a></h3><p>This can be useful, when you want to filter all unique <code>categories</code> within a column. <em>You can then put all those categories within a new variable in order to loop through them to apply some function to those</em>.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gapminder</span><span class="p">[</span><span class="s1">&#39;continent&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Calculating-the-%60mean%60-or-%60median%60-from-a-particular-column:"><a id="median-and-mean" style="color:black; text-decoration: none;"><u>Calculating the `mean` or `median` from a particular column</u></a>:<a class="anchor-link" href="#Calculating-the-%60mean%60-or-%60median%60-from-a-particular-column:">&#182;</a></h3><p>For the <u>**mean**</u>, you will need the following code.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean_points</span> <span class="o">=</span> <span class="n">reviews</span><span class="o">.</span><span class="n">points</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1"># calculate the mean of the column &#39;points&#39; within the ddset &#39;reviews&#39;</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><u>For the **median**</u>:</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">median_points</span> <span class="o">=</span> <span class="n">reviews</span><span class="o">.</span><span class="n">points</span><span class="o">.</span><span class="n">median</span><span class="p">()</span> <span class="c1"># calculate the median of the column &#39;points&#39; within the ddset &#39;reviews&#39;</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Transform-a-column-based-on-conditions-with-%60numpy%60:"><a id="apply-a-function-based-on-cond" style="color:black; text-decoration: none;"><u>Transform a column based on conditions with `numpy`</u></a>:<a class="anchor-link" href="#Transform-a-column-based-on-conditions-with-%60numpy%60:">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># In order to be able to perform a transformation, we will need the `numpy`-package</span>
-
-<span class="c1"># set-up:</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># this is our column &#39;x&#39; --&gt; Output of this: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
-<span class="n">condlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">]</span> <span class="c1"># set of conditions, that need to be fullfilled --&gt; which are the value-ranges, on which you will apply </span>
-<span class="c1"># a custom-function [which will be defined next]? --&gt; all numbers below 3 AND all numbers above 5</span>
-<span class="n">choicelist</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># the custom-function you will apply here: x^2</span>
-
-<span class="c1"># output:</span>
-<span class="n">np</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">condlist</span><span class="p">,</span> <span class="n">choicelist</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span> <span class="c1"># apply x^2 on: x &lt; 3 AND x &gt; 5</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([ 0.,  1.,  2., nan, nan, nan, 36., 49., 64., 81.])</pre>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -16151,46 +15781,13 @@ or summary contain a given string such as &#34;spam&#34;, type &#34;modules spam
 
 </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Assign-a-unique-ID:"><a id="unique-id" style="color:black; text-decoration: none;"><u>Assign a unique ID</u></a>:<a class="anchor-link" href="#Assign-a-unique-ID:">&#182;</a></h3><ul>
-<li><strong><u>For a single Column</u></strong>:</li>
-</ul>
-
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;date&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">ngroup</span><span class="p">()</span> <span class="c1"># of Course, you could simply use 1 column fo the assignment of an unique ID. </span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li><strong><u>For multiple Columns</u></strong>:</li>
-</ul>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;LastName&#39;</span><span class="p">,</span><span class="s1">&#39;FirstName&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">ngroup</span><span class="p">()</span> <span class="c1"># here, we use the column &#39;LastName&#39; &amp; &#39;FirstName&#39; together, to create </span>
-<span class="c1"># a unique ID.</span>
-
-<span class="c1"># Quelle: https://stackoverflow.com/questions/45685254/q-pandas-how-to-efficiently-assign-unique-id-to-individuals-with-multiple-ent</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
      </div>
@@ -16716,7 +16313,7 @@ Name: order_id, dtype: int64
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Selection-with-%22accessor-operators%22-%60iloc%60-&amp;-%60loc%60"><a id="sel-loc-iloc" style="color:black; text-decoration: none;">Selection with "accessor operators" `iloc` &amp; `loc`</a><a class="anchor-link" href="#Selection-with-%22accessor-operators%22-%60iloc%60-&amp;-%60loc%60">&#182;</a></h1><hr>
+<h2 id="Selection-with-%22accessor-operators%22-%60iloc%60-&amp;-%60loc%60"><a id="sel-loc-iloc" style="color:black; text-decoration: none;">Selection with "accessor operators" `iloc` &amp; `loc`</a><a class="anchor-link" href="#Selection-with-%22accessor-operators%22-%60iloc%60-&amp;-%60loc%60">&#182;</a></h2><hr>
 <p>Das Package <code>Pandas</code> erlaubt die Verwendung von sogenannten <code>accessor operators</code>, um Dataframes einfacher zu filtrieren. Dabei unterscheidet man zwischen:</p>
 <ul>
 <li><code>iloc</code> (= based on the <u>**Postition**</u> (= Nummer) des Index innerhalb der Spalten &amp; Reihen im ddset),<ul>
@@ -17146,7 +16743,468 @@ Name: order_id, dtype: int64
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Data-Cleaning:-Missings"><a id="dealing-with-missings" style="color:black; text-decoration: none;">Data-Cleaning: Missings</a><a class="anchor-link" href="#Data-Cleaning:-Missings">&#182;</a></h1><hr>
+<h1 id="Vanilla-Exploration-of-your-Dataset"><a id="vanilla-exploration" style="color:black; text-decoration: none;">Vanilla Exploration of your Dataset</a><a class="anchor-link" href="#Vanilla-Exploration-of-your-Dataset">&#182;</a></h1><hr>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><u>After</u> having told Python to read in your dataset, the <strong>first thing</strong> you will want to do is to <mark>get (very) familiar with your dataset</mark>. This is <strong>key</strong>, otherwise you will <u>not</u> be able to perform a good data analysis!</p>
+<h3 id="Find-out-the-number-of-%60observations%60-//-rows-in-your-dataset:"><a id="number-of-rows" style="color:black; text-decoration: none;"><u>Find out the number of `observations` // rows in your dataset</u></a>:<a class="anchor-link" href="#Find-out-the-number-of-%60observations%60-//-rows-in-your-dataset:">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">nba</span><span class="p">)</span> <span class="c1"># to get the number of observations // rows </span>
+
+    <span class="c1"># note: &#39;nba&#39; is the name of the ddset</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Find-out-the-number-of-%60rows%60-&amp;-%60columns%60-within-your-dataset:"><u>Find out the number of `rows` &amp; `columns` within your dataset</u>:<a class="anchor-link" href="#Find-out-the-number-of-%60rows%60-&amp;-%60columns%60-within-your-dataset:">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nba</span><span class="o">.</span><span class="n">shape</span> <span class="c1"># to get number of rows AND columns</span>
+
+    <span class="c1"># note: &#39;nba&#39; is the name of the ddset</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="%60View%60-the-whole-Dataset:"><a id="view-all-ddset" style="color:black; text-decoration: none;"><u>`View` the <mark>whole</mark> Dataset</u></a>:<a class="anchor-link" href="#%60View%60-the-whole-Dataset:">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nba</span> <span class="c1"># just type in the name of the variable in which your dataframe is stored in --&gt; &#39;nba&#39; is the name of your dataframe here</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="%60View%60-the-first-5-rows-of-your-dataset:"><a id="view-first-five" style="color:black; text-decoration: none;"><u>`View` the first 5-rows of your dataset</u></a>:<a class="anchor-link" href="#%60View%60-the-first-5-rows-of-your-dataset:">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nba</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> <span class="c1"># head() is often used to check whether your dataset really contains data you care about </span>
+
+    <span class="c1"># here we check: does the ddset really contains data about the NBA?</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong><u>Achtung</u></strong>: If you have alot of columns, Python will not display them all when you use <code>head()</code>. <u>However</u> you can change the settings via:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max.columns&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="c1"># this will tell Python: &quot;show me ALL the columns!&quot;</span>
+
+<span class="n">nba</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> <span class="c1"># execute &#39;head()&#39; again to check if the setting changed correclty? --&gt; yes!</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="You-can-also-%60View%60-the-5-last-rows-of-your-dataset-by-using-%60tail()%60:"><a id="view-last-five" style="color:black; text-decoration: none;">You can also `View` the 5 last rows of your dataset by using `tail()`</a>:<a class="anchor-link" href="#You-can-also-%60View%60-the-5-last-rows-of-your-dataset-by-using-%60tail()%60:">&#182;</a></h4>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nba</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span> <span class="c1"># View last 5 rows</span>
+
+<span class="c1"># Viewing very specific rows is also possible: </span>
+<span class="n">nba</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># Here, we view the last 3 rows</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Make-a-%60Summary%60-out-of-all-the-variables-in-your-dataset:"><a id="summary-ddset" style="color:black; text-decoration: none;"><u>Make a `Summary` out of all the variables in your dataset</u></a>:<a class="anchor-link" href="#Make-a-%60Summary%60-out-of-all-the-variables-in-your-dataset:">&#182;</a></h3><p>Note that, in order to be able to do some <strong>summary-statistics</strong>, you will need the additional library <code>numpy</code>.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># load numpy for summary-statistics</span>
+
+<span class="n">nba</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># results will be rounded onto 2 digits</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong><u>Achtung</u></strong>: If you have columns from the type <code>object</code>, you will need a slightly different version of the <code>describe()</code> function to display some summary-statistics from such columns.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nba</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span> <span class="c1"># if you have some weird columns being of the type &#39;object&#39;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Find-the-unique-values-from-a-column:"><a id="unique-values" style="color:black; text-decoration: none;"><u>Find the unique values from a column</u></a>:<a class="anchor-link" href="#Find-the-unique-values-from-a-column:">&#182;</a></h3><p>This can be useful, when you want to filter all unique <code>categories</code> within a column. <em>You can then put all those categories within a new variable in order to loop through them to apply some function to those</em>.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gapminder</span><span class="p">[</span><span class="s1">&#39;continent&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Calculating-the-%60mean%60-or-%60median%60-from-a-particular-column:"><a id="median-and-mean" style="color:black; text-decoration: none;"><u>Calculating the `mean` or `median` from a particular column</u></a>:<a class="anchor-link" href="#Calculating-the-%60mean%60-or-%60median%60-from-a-particular-column:">&#182;</a></h3><p>For the <u>**mean**</u>, you will need the following code.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean_points</span> <span class="o">=</span> <span class="n">reviews</span><span class="o">.</span><span class="n">points</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1"># calculate the mean of the column &#39;points&#39; within the ddset &#39;reviews&#39;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><u>For the **median**</u>:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">median_points</span> <span class="o">=</span> <span class="n">reviews</span><span class="o">.</span><span class="n">points</span><span class="o">.</span><span class="n">median</span><span class="p">()</span> <span class="c1"># calculate the median of the column &#39;points&#39; within the ddset &#39;reviews&#39;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Transform-a-column-based-on-conditions-with-%60numpy%60:"><a id="apply-a-function-based-on-cond" style="color:black; text-decoration: none;"><u>Transform a column based on conditions with `numpy`</u></a>:<a class="anchor-link" href="#Transform-a-column-based-on-conditions-with-%60numpy%60:">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># In order to be able to perform a transformation, we will need the `numpy`-package</span>
+
+<span class="c1"># set-up:</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># this is our column &#39;x&#39; --&gt; Output of this: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+<span class="n">condlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">]</span> <span class="c1"># set of conditions, that need to be fullfilled --&gt; which are the value-ranges, on which you will apply </span>
+<span class="c1"># a custom-function [which will be defined next]? --&gt; all numbers below 3 AND all numbers above 5</span>
+<span class="n">choicelist</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># the custom-function you will apply here: x^2</span>
+
+<span class="c1"># output:</span>
+<span class="n">np</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">condlist</span><span class="p">,</span> <span class="n">choicelist</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span> <span class="c1"># apply x^2 on: x &lt; 3 AND x &gt; 5</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>array([ 0.,  1.,  2., nan, nan, nan, 36., 49., 64., 81.])</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Data-Cleaning"><a id="data-cleaning" style="color:black; text-decoration: none;">Data-Cleaning</a><a class="anchor-link" href="#Data-Cleaning">&#182;</a></h1><hr>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Find-out-the-%60Data-Type%60-of-each-column-within-your-dataset-&amp;-number-of-%60non-missing-values%60:"><a id="find-data-type" style="color:black; text-decoration: none;"><u>Find out the `Data Type` of each column within your dataset &amp; number of `non-missing values`</u></a>:<a class="anchor-link" href="#Find-out-the-%60Data-Type%60-of-each-column-within-your-dataset-&amp;-number-of-%60non-missing-values%60:">&#182;</a></h3><p>With the following simple code, we can find out, whether the columns are from the type of an <code>integer</code>, a <code>string</code>, a <code>boolean</code> etc...</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nba</span><span class="o">.</span><span class="n">info</span><span class="p">()</span> <span class="c1"># this will output all the types of each column in your dataset &amp; how many NON-missings you have per column</span>
+
+    <span class="c1"># note: Pay attention to any columns that are from the type &#39;object&#39;! --&gt; lese bemerkung unten...</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><a href="https://www.w3schools.com/python/python_datatypes.asp" target="_blank">To get a beautiful overview over all types that exist in Python, I recommend you to visit the website of W3Schools.com</a></p>
+<p><strong><u>Bemerkung hier</u></strong>: It can be, that columns are from the type <code>object</code>. In practice, it often means that <em>all</em> of the values in an <code>object</code>-column are <u>strings</u>. If you encounter any <code>object</code>-columns, it is strongly recommended that you convert them into a more apropriate <code>data-type</code>, otherwise some of the functions won't work on these <code>object</code>-columns...</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Find-the-type-of-any-object-in-Python:">Find the <code>type</code> of <em>any</em> object in Python:<a class="anchor-link" href="#Find-the-type-of-any-object-in-Python:">&#182;</a></h4>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Drop-specific-Columns:"><a id="drop-columns" style="color:black; text-decoration: none;"><u>Drop specific Columns</u></a>:<a class="anchor-link" href="#Drop-specific-Columns:">&#182;</a></h3><p>Note that <code>axis = 1</code> denotes the columns that will be droped, while <code>axis = 0</code> (default), will denote the rows that should be dropped.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_energy</span> <span class="o">=</span> <span class="n">df_energy</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;tInfoDaySin&#39;</span><span class="p">,</span> <span class="s1">&#39;tInfoDayCos&#39;</span><span class="p">,</span> <span class="s1">&#39;tInfoYearSin&#39;</span><span class="p">,</span> <span class="s1">&#39;tInfoYearCos&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Re-Name-the-Columns-of-a-DataFrame:"><a id="rename-columns" style="color:black; text-decoration: none;"><u>Re-Name the Columns of a DataFrame</u></a>:<a class="anchor-link" href="#Re-Name-the-Columns-of-a-DataFrame:">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;oldName1&#39;</span><span class="p">:</span> <span class="s1">&#39;newName1&#39;</span><span class="p">,</span> <span class="s1">&#39;oldName2&#39;</span><span class="p">:</span> <span class="s1">&#39;newName2&#39;</span><span class="p">},</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;columns&#39;</span><span class="p">)</span> <span class="c1"># not all columns have to be renamed, only those with a new name</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Set-&amp;-Reset-the-Index-/-Row-Label:"><a id="reset-and-set-idx" style="color:black; text-decoration: none;"><u>Set &amp; Reset the Index / Row-Label</u></a>:<a class="anchor-link" href="#Set-&amp;-Reset-the-Index-/-Row-Label:">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_energy</span> <span class="o">=</span> <span class="n">df_energy</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Date-Time&#39;</span><span class="p">)</span> <span class="c1"># to set the index</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_energy</span> <span class="o">=</span> <span class="n">df_energy</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span> <span class="c1"># to reset the index --&gt; df.reset_index(drop= True) will drop the index, which would </span>
+                                    <span class="c1"># otherwise become a new column instead of just dropping it!</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Assign-a-unique-ID:"><a id="unique-id" style="color:black; text-decoration: none;"><u>Assign a unique ID</u></a>:<a class="anchor-link" href="#Assign-a-unique-ID:">&#182;</a></h3><ul>
+<li><strong><u>For a single Column</u></strong>:</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;date&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">ngroup</span><span class="p">()</span> <span class="c1"># of Course, you could simply use 1 column fo the assignment of an unique ID. </span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><strong><u>For multiple Columns</u></strong>:</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;LastName&#39;</span><span class="p">,</span><span class="s1">&#39;FirstName&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">ngroup</span><span class="p">()</span> <span class="c1"># here, we use the column &#39;LastName&#39; &amp; &#39;FirstName&#39; together, to create </span>
+<span class="c1"># a unique ID.</span>
+
+<span class="c1"># Quelle: https://stackoverflow.com/questions/45685254/q-pandas-how-to-efficiently-assign-unique-id-to-individuals-with-multiple-ent</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Dealing-with-Missings"><a id="dealing-with-missings" style="color:black; text-decoration: none;">Dealing with Missings</a><a class="anchor-link" href="#Dealing-with-Missings">&#182;</a></h1><hr>
 
 </div>
 </div>
@@ -17638,6 +17696,71 @@ Name: order_id, dtype: int64
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Scaling-Variables"><a id="scaling-variables" style="color:black; text-decoration: none;">Scaling Variables</a><a class="anchor-link" href="#Scaling-Variables">&#182;</a></h2><hr>
+<p>When applying machine learning, one condition to use those fancy models will be to scale our variables first.</p>
+<p>The main <strong>methods for scaling can be seen in <a href="https://stats.stackexchange.com/questions/70553/what-does-normalization-mean-and-how-to-verify-that-a-sample-or-a-distribution" target="_blank" style="text-decoration: none;">this Stack-Exchange Post</a></strong>.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Normalization:"><a id="normalization-scaling" style="color:black; text-decoration: none;"><u>Normalization</u></a>:<a class="anchor-link" href="#Normalization:">&#182;</a></h3><p>If you normalize variables, then it means that the RANGE of possible values (= Definitionsbereich), is set between 0 and 1.</p>
+<h4 id="Scale-_all_-X-Variables-and-your-Y-variable:"><u>Scale _all_ X-Variables and your Y-variable</u>:<a class="anchor-link" href="#Scale-_all_-X-Variables-and-your-Y-variable:">&#182;</a></h4>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span> <span class="c1"># Der Name der Klasse für Normalisierung = &#39;MinMaxScaler&#39; (--&gt; mega weird xDD)</span>
+
+<span class="c1"># step 1: initialize the Class</span>
+<span class="n">scaler_X</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">(</span><span class="n">feature_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">scaler_y</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">(</span><span class="n">feature_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># step 2: wende den Scaler uf die X- &amp; Y-Variablen (dabei nur auf das Training-Set) an (Achtung: funktioniert nur auf numy-arrays, </span>
+<span class="c1"># aber nicht auf Series // Data-Frame Columns!)</span>
+<span class="n">scaler_X</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_compl_df</span><span class="p">[:</span><span class="n">train_end_idx</span><span class="p">])</span> <span class="c1"># alternativ: scaler_y.fit(X_train.to_numpy().reshape(-1, 1))</span>
+<span class="n">scaler_y</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">y_compl_df</span><span class="p">[:</span><span class="n">train_end_idx</span><span class="p">])</span> <span class="c1"># alternativ: scaler_y.fit(y_train.to_numpy().reshape(-1, 1))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># step 3: nach dem &quot;fit&quot; haben wir die Werte noch nicht als &quot;DataFrame&quot;-Typ gespeichert, weshalb wir nun noch &#39;transform&#39; anwenden</span>
+<span class="n">X_norm</span> <span class="o">=</span> <span class="n">scaler_X</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_compl_df</span><span class="p">)</span>
+<span class="n">y_norm</span> <span class="o">=</span> <span class="n">scaler_y</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">y_compl_df</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Advanced-Exploration-of-your-data"><a id="advanced-exploration" style="color:black; text-decoration: none;">Advanced Exploration of your data</a><a class="anchor-link" href="#Advanced-Exploration-of-your-data">&#182;</a></h1><hr>
 <h3 id="How-to-create-&amp;-plot-a-%60Pearson-Correlation-Matrix%60-out-of-a-Dataframe?:"><a id="create-correlation-matrix" style="color:black; text-decoration: none;"><u>How to create &amp; plot a `Pearson Correlation Matrix` out of a Dataframe?</u></a>:<a class="anchor-link" href="#How-to-create-&amp;-plot-a-%60Pearson-Correlation-Matrix%60-out-of-a-Dataframe?:">&#182;</a></h3>
 </div>
@@ -17668,151 +17791,13 @@ Name: order_id, dtype: int64
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Time-Series:-Exploration-&amp;-Visualizations"><a id="time-series-exploration" style="color:black; text-decoration: none;">Time-Series: Exploration &amp; Visualizations</a><a class="anchor-link" href="#Time-Series:-Exploration-&amp;-Visualizations">&#182;</a></h1><hr>
+<h1 id="Time-Series-Data"><a id="time-series-exploration" style="color:black; text-decoration: none;">Time-Series Data</a><a class="anchor-link" href="#Time-Series-Data">&#182;</a></h1><hr>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Plotting-a-Time-Series:"><a id="plot-time-series" style="color:black; text-decoration: none;"><u>Plotting a Time Series</u></a>:<a class="anchor-link" href="#Plotting-a-Time-Series:">&#182;</a></h3>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong><u>Step 1</u></strong>: Transform the <code>date</code>-column into a <code>date-time</code>-column.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span> <span class="c1"># this is the package we need to convert a column into a &#39;date-time&#39;</span>
-
-<span class="c1"># Step 1: Define a function that is reading the date-column correctly</span>
-
-<span class="k">def</span> <span class="nf">parse_date</span><span class="p">(</span><span class="n">date</span><span class="p">):</span>
-    <span class="n">data</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">date</span><span class="o">==</span><span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="c1"># this condition will never be true, since the column &#39;Date-Time&#39; NEVER has an empty string; </span>
-    <span class="c1">### raise exception</span>
-        <span class="k">return</span> <span class="kc">None</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">,</span> <span class="n">yearfirst</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">utc</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Step 2: apply the above function on the Column &#39;Date-Time&#39; to transform the column into a &#39;date-time&#39;-type</span>
-<span class="n">raw_dd</span><span class="p">[</span><span class="s2">&quot;Date-Time&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw_dd</span><span class="p">[</span><span class="s2">&quot;Date-Time&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">parse_date</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong><u>Step 2</u></strong>: Set the 'time'-column as the index (= row-label), otherwise the plotting won't work</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># set the date-column as our row-label:</span>
-<span class="n">raw_dd</span> <span class="o">=</span> <span class="n">raw_dd</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Date-Time&quot;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><u>**Step 3**</u>: Visualize the Time-Series</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sktime.utils.plotting</span> <span class="kn">import</span> <span class="n">plot_series</span> <span class="c1"># use sktime and the &#39;plot_series&#39;-module for this task</span>
-
-<span class="c1"># Define our y-variable (= DA-Prices in CH):</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">raw_dd</span><span class="p">[</span><span class="s2">&quot;pricesCH&quot;</span><span class="p">]</span> 
-
-<span class="n">plot_series</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="c1"># visual check if it worked? --&gt; yes!</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Plot-Auto-Correlation-&amp;-Partial-Auto-Correlation-Functions:"><a id="auto-and-partial-auto-corr" style="color:black; text-decoration: none;"><u>Plot Auto-Correlation &amp; Partial-Auto-Correlation Functions</u></a>:<a class="anchor-link" href="#Plot-Auto-Correlation-&amp;-Partial-Auto-Correlation-Functions:">&#182;</a></h3><p>The partial autocorrelation plot of the eletricity price time series shows that the direct relationship between an observation at a given hour (t) is strongest with the observations at t-1, t-2, t-24 and t-25 time-steps and diminishes afterwards. <strong>Thus, we are going to use the 25 previous values of each time series which will constitute a feature for our models</strong>.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Step 1: load library</span>
-<span class="kn">from</span> <span class="nn">statsmodels.graphics.tsaplots</span> <span class="kn">import</span> <span class="n">plot_acf</span><span class="p">,</span> <span class="n">plot_pacf</span> <span class="c1"># to plot </span>
-
-<span class="c1"># Step 2: Plot autocorrelation and partial autocorrelation plots</span>
-<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">plot_acf</span><span class="p">(</span><span class="n">df_energy</span><span class="p">[</span><span class="s1">&#39;pricesCH&#39;</span><span class="p">],</span> <span class="n">lags</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>
-<span class="n">plot_pacf</span><span class="p">(</span><span class="n">df_energy</span><span class="p">[</span><span class="s1">&#39;pricesCH&#39;</span><span class="p">],</span> <span class="n">lags</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Plot-the-Cross-Correlation(Yt,-Xt---k):"><a id="cross-corr" style="color:black; text-decoration: none;"><u>Plot the Cross-Correlation(Y<sub>t</sub>, X<sub>t - k</sub>)</u></a>:<a class="anchor-link" href="#Plot-the-Cross-Correlation(Yt,-Xt---k):">&#182;</a></h3><p>It would quite definitely be <strong>more beneficial if we only chose to use specific past values (observations at certain time-lags) of a given feature, based on the cross-correlation between the electricity price and each one of the features in the dataset</strong>. For example, below we can see the cross-correlation between the electricity price and the Renewable Generation from Switzerland. We see that there are many time-lags with a correlation which is close to zero and could be ommited.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.tsa.stattools</span> <span class="kn">import</span> <span class="n">ccf</span> <span class="c1"># to plot the cross-correlation function</span>
-
-<span class="c1"># Step 2: plot the cross-correlation between the day-ahead price &quot;today&quot; and with each of the first 50-lags of the column &#39;RenGen&#39; </span>
-<span class="n">cross_corr</span> <span class="o">=</span> <span class="n">ccf</span><span class="p">(</span><span class="n">df_energy</span><span class="p">[</span><span class="s1">&#39;RenGenCH&#39;</span><span class="p">],</span> <span class="n">df_energy</span><span class="p">[</span><span class="s1">&#39;pricesCH&#39;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cross_corr</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">50</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Feature-Engineering-for-Time-Series"><a id="feature-engineering-time-series" style="color:black; text-decoration: none;">Feature Engineering for Time-Series</a><a class="anchor-link" href="#Feature-Engineering-for-Time-Series">&#182;</a></h1><hr>
-<p>Wenn du mit Variablen arbeitest, welche mit "Zeit" zu tun haben, brauchst du einige "Tricks", um Data Cleaning betreiben zu können mit sogenannten <code>Date-Time Objects</code> in Python.</p>
+<h2 id="Indexing-for-Time-Series"><a id="indexing" style="color:black; text-decoration: none;"><u>Indexing for Time-Series</u></a><a class="anchor-link" href="#Indexing-for-Time-Series">&#182;</a></h2><p>Wenn du mit Variablen arbeitest, welche mit "Zeit" zu tun haben, brauchst du einige "Tricks", um Data Cleaning betreiben zu können mit sogenannten <code>Date-Time Objects</code> in Python.</p>
 
 </div>
 </div>
@@ -17989,6 +17974,149 @@ Name: order_id, dtype: int64
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Plotting-a-Time-Series:"><a id="plot-time-series" style="color:black; text-decoration: none;"><u>Plotting a Time Series</u></a>:<a class="anchor-link" href="#Plotting-a-Time-Series:">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong><u>Step 1</u></strong>: Transform the <code>date</code>-column into a <code>date-time</code>-column.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span> <span class="c1"># this is the package we need to convert a column into a &#39;date-time&#39;</span>
+
+<span class="c1"># Step 1: Define a function that is reading the date-column correctly</span>
+
+<span class="k">def</span> <span class="nf">parse_date</span><span class="p">(</span><span class="n">date</span><span class="p">):</span>
+    <span class="n">data</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">date</span><span class="o">==</span><span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="c1"># this condition will never be true, since the column &#39;Date-Time&#39; NEVER has an empty string; </span>
+    <span class="c1">### raise exception</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">,</span> <span class="n">yearfirst</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">utc</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Step 2: apply the above function on the Column &#39;Date-Time&#39; to transform the column into a &#39;date-time&#39;-type</span>
+<span class="n">raw_dd</span><span class="p">[</span><span class="s2">&quot;Date-Time&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw_dd</span><span class="p">[</span><span class="s2">&quot;Date-Time&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">parse_date</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong><u>Step 2</u></strong>: Set the 'time'-column as the index (= row-label), otherwise the plotting won't work</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># set the date-column as our row-label:</span>
+<span class="n">raw_dd</span> <span class="o">=</span> <span class="n">raw_dd</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Date-Time&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><u>**Step 3**</u>: Visualize the Time-Series</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sktime.utils.plotting</span> <span class="kn">import</span> <span class="n">plot_series</span> <span class="c1"># use sktime and the &#39;plot_series&#39;-module for this task</span>
+
+<span class="c1"># Define our y-variable (= DA-Prices in CH):</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">raw_dd</span><span class="p">[</span><span class="s2">&quot;pricesCH&quot;</span><span class="p">]</span> 
+
+<span class="n">plot_series</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="c1"># visual check if it worked? --&gt; yes!</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Plot-Auto-Correlation-&amp;-Partial-Auto-Correlation-Functions:"><a id="auto-and-partial-auto-corr" style="color:black; text-decoration: none;"><u>Plot Auto-Correlation &amp; Partial-Auto-Correlation Functions</u></a>:<a class="anchor-link" href="#Plot-Auto-Correlation-&amp;-Partial-Auto-Correlation-Functions:">&#182;</a></h3><p>The partial autocorrelation plot of the eletricity price time series shows that the direct relationship between an observation at a given hour (t) is strongest with the observations at t-1, t-2, t-24 and t-25 time-steps and diminishes afterwards. <strong>Thus, we are going to use the 25 previous values of each time series which will constitute a feature for our models</strong>.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Step 1: load library</span>
+<span class="kn">from</span> <span class="nn">statsmodels.graphics.tsaplots</span> <span class="kn">import</span> <span class="n">plot_acf</span><span class="p">,</span> <span class="n">plot_pacf</span> <span class="c1"># to plot </span>
+
+<span class="c1"># Step 2: Plot autocorrelation and partial autocorrelation plots</span>
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plot_acf</span><span class="p">(</span><span class="n">df_energy</span><span class="p">[</span><span class="s1">&#39;pricesCH&#39;</span><span class="p">],</span> <span class="n">lags</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>
+<span class="n">plot_pacf</span><span class="p">(</span><span class="n">df_energy</span><span class="p">[</span><span class="s1">&#39;pricesCH&#39;</span><span class="p">],</span> <span class="n">lags</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Plot-the-Cross-Correlation(Yt,-Xt---k):"><a id="cross-corr" style="color:black; text-decoration: none;"><u>Plot the Cross-Correlation(Y<sub>t</sub>, X<sub>t - k</sub>)</u></a>:<a class="anchor-link" href="#Plot-the-Cross-Correlation(Yt,-Xt---k):">&#182;</a></h3><p>It would quite definitely be <strong>more beneficial if we only chose to use specific past values (observations at certain time-lags) of a given feature, based on the cross-correlation between the electricity price and each one of the features in the dataset</strong>. For example, below we can see the cross-correlation between the electricity price and the Renewable Generation from Switzerland. We see that there are many time-lags with a correlation which is close to zero and could be ommited.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.tsa.stattools</span> <span class="kn">import</span> <span class="n">ccf</span> <span class="c1"># to plot the cross-correlation function</span>
+
+<span class="c1"># Step 2: plot the cross-correlation between the day-ahead price &quot;today&quot; and with each of the first 50-lags of the column &#39;RenGen&#39; </span>
+<span class="n">cross_corr</span> <span class="o">=</span> <span class="n">ccf</span><span class="p">(</span><span class="n">df_energy</span><span class="p">[</span><span class="s1">&#39;RenGenCH&#39;</span><span class="p">],</span> <span class="n">df_energy</span><span class="p">[</span><span class="s1">&#39;pricesCH&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cross_corr</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">50</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Feature-Engineering-for-Time-Series"><a id="feature-engineering-time-series" style="color:black; text-decoration: none;">Feature Engineering for Time-Series</a><a class="anchor-link" href="#Feature-Engineering-for-Time-Series">&#182;</a></h1><hr>
+
+</div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -18370,110 +18498,6 @@ Name: order_id, dtype: int64
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_dd</span><span class="p">[</span><span class="s1">&#39;day_of_week&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw_dd</span><span class="p">[</span><span class="s1">&#39;Date-Time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">weekday</span><span class="p">())</span> <span class="c1"># Werte von 0 [= Montag] bis 6 [= Sonntag]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Scaling-Variables"><a id="scaling-variables" style="color:black; text-decoration: none;">Scaling Variables</a><a class="anchor-link" href="#Scaling-Variables">&#182;</a></h2><hr>
-<p>When applying machine learning, one condition to use those fancy models will be to scale our variables first.</p>
-<p>The main <strong>methods for scaling can be seen in <a href="https://stats.stackexchange.com/questions/70553/what-does-normalization-mean-and-how-to-verify-that-a-sample-or-a-distribution" target="_blank" style="text-decoration: none;">this Stack-Exchange Post</a></strong>.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Normalization:"><a id="normalization-scaling" style="color:black; text-decoration: none;"><u>Normalization</u></a>:<a class="anchor-link" href="#Normalization:">&#182;</a></h3><p>If you normalize variables, then it means that the RANGE of possible values (= Definitionsbereich), is set between 0 and 1.</p>
-<h4 id="Scale-_all_-X-Variables-and-your-Y-variable:"><u>Scale _all_ X-Variables and your Y-variable</u>:<a class="anchor-link" href="#Scale-_all_-X-Variables-and-your-Y-variable:">&#182;</a></h4>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span> <span class="c1"># Der Name der Klasse für Normalisierung = &#39;MinMaxScaler&#39; (--&gt; mega weird xDD)</span>
-
-<span class="c1"># step 1: initialize the Class</span>
-<span class="n">scaler_X</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">(</span><span class="n">feature_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">scaler_y</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">(</span><span class="n">feature_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># step 2: wende den Scaler uf die X- &amp; Y-Variablen (dabei nur auf das Training-Set) an (Achtung: funktioniert nur auf numy-arrays, </span>
-<span class="c1"># aber nicht auf Series // Data-Frame Columns!)</span>
-<span class="n">scaler_X</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_compl_df</span><span class="p">[:</span><span class="n">train_end_idx</span><span class="p">])</span> <span class="c1"># alternativ: scaler_y.fit(X_train.to_numpy().reshape(-1, 1))</span>
-<span class="n">scaler_y</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">y_compl_df</span><span class="p">[:</span><span class="n">train_end_idx</span><span class="p">])</span> <span class="c1"># alternativ: scaler_y.fit(y_train.to_numpy().reshape(-1, 1))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># step 3: nach dem &quot;fit&quot; haben wir die Werte noch nicht als &quot;DataFrame&quot;-Typ gespeichert, weshalb wir nun noch &#39;transform&#39; anwenden</span>
-<span class="n">X_norm</span> <span class="o">=</span> <span class="n">scaler_X</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_compl_df</span><span class="p">)</span>
-<span class="n">y_norm</span> <span class="o">=</span> <span class="n">scaler_y</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">y_compl_df</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Umwandlungen"><a id="umwandlungen" style="color:black; text-decoration: none;">Umwandlungen</a><a class="anchor-link" href="#Umwandlungen">&#182;</a></h1><hr>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Convert-a-Series-into-an-array:"><a id="series-to-array" style="color:black; text-decoration: none;"><u>Convert a Series into an array</u></a>:<a class="anchor-link" href="#Convert-a-Series-into-an-array:">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Series</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span> <span class="c1"># this also works on a column of a dataframe =)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
      </div>
