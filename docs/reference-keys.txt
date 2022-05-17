@@ -109,6 +109,11 @@ foundations-of-data-science
 find-data
 questions-you-need-to-answer-when-starting-a-new-project
 effective-research-how-to-find-answers-quickly
+fragestellungen-beantworten
+methoden
+feature-engineering-für-gute-modellierung
+geographie
+finance
 how-to-read-notebooks-from-other-people
 machine-learning-theory
 difference-between-training--validation--test-dataset
@@ -133,8 +138,6 @@ list-of-useful-python-libraries
 python-mustercodes-für-data-science
 basic-python
 create-a-dataframe
-apply-a-function-on-a-column
-save-a-dataframe
 put-a-time-stamp-on-each-python-cell
 installation
 activation
@@ -142,6 +145,7 @@ pandas
 how-to-display-all-the-columns
 drop-missing-values
 loc--vs.-iloc-selection
+vorsicht-different-slicing-for-loc-vs.-iloc
 statsmodels
 useful-nice-to-knows
 define-the-y-variable-x-variables

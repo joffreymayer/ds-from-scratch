@@ -52,29 +52,6 @@ df = pd.DataFrame({'LoadCH': ts_loadFc[time_index_hourly],
                    'PricesCH': ts_DA_Price[time_index_hourly]}) 
 ```
 
-### Apply a `function` on a Column
-
-This can be useful, when you need to do some transformation to a column of a `df`:
-
-```
-# Step 1: Define any function, that you will need to be applied, in order to transform 
-
-def my_function():
-  ... # hier kommen die verschiedenen Anweisungen
-  ... # hier kommen die verschiedenen Anweisungen
-  return some_variable
-
-# Step 2: Apply this newly specified function on your column of your data-frame, that you wish to transform
-
-df['new_column'] = df['column_1'].apply(my_function)
-```
-
-### Save a `DataFrame`
-
-```
-df.to_csv('Your_FileName.csv', index = True) # this will be saved into your 'wd'
-```
-
 ### Put a time-stamp on each Python-Cell
 
 The `ipython-autotime` library is particularly useful to get an overview of **how long each Python-Cell** takes to be executed. 
@@ -117,6 +94,35 @@ df = df.dropna() # drop the missing values
 and columns.
 
 - <u>For `iloc`</u>: Based on the <u>position</u> // where the specific rows &amp; columns are within the dataset.
+
+#### <u>Vorsicht</u>: different Slicing for `loc` VS. `iloc`!
+
+When using `iloc`, **the range 0:5** will select entries `0,...,4` that is: it indexes EXCLUSIVELY. On the other hand, `loc`, meanwhile, indexes *INCLUSIVELY*. So **the <u>same</u> range 0:5** will select entries `0,...,5`!!!
+
+*Hence, if you want the SAME output with `loc` and `iloc`, you simply need to slightly change the `range()`-function.*
+
+- <u>Example</u>:
+
+```{python eval=FALSE}
+## Möglichkeit 1: with 'iloc'
+iloc_test = dd.iloc[0:5,0] # row-position == 0:5 --> first 5 rows; EXCLUDES '5' from the range "0,1,2,3,4,5" 
+                                          # --> hence range(0:5) results in --> "0,1,2,3,4"
+                                          # column-position == 0 --> 1st row --> remember: indexing in 
+                                          # Python starts at '0'!
+
+    # IMPORTANT: 'iloc' uses the 'Python stdlib' indexing scheme, where the first element of the range is 
+    # included and the last one excluded. So 0:5 will select entries 0,...,4 (= these are the first *5* 
+    # entries!!).
+
+## Möglichkeit 2: to get the SAME output with 'loc', we need a slightly DIFFERENT range!
+loc_test = dd.loc[0:4,'order_id'] # row-position == 0:4 --> first 5 rows; INCLUDES '4' 
+                                  # --> hence range(0:4) results in --> "0,1,2,3,4"
+
+## check if the output are the same, even though "range()" has slightly different inputs? --> yes!
+print(iloc_test)
+print(loc_test)
+```
+
 
 ## Statsmodels
 

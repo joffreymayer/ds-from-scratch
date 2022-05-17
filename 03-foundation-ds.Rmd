@@ -74,6 +74,57 @@ Aus Erfahrung weiss ich jetzt, dass **Youtube bisher *immer*, die beste Quelle w
 
 Twitter-Community von Wissenschaftlern sind ebenfalls sehr wertvoll. Als **Beispiel wäre [dieser Twitter-Post](https://twitter.com/seanjtaylor/status/1123278380369973248?s=11) vom Prophet-Gründer**.
 
+## Fragestellungen beantworten
+
+**In Data-Science - wie auch in der Wissenschaft - dreht sich alles um die Beantwortung von (relevanten) Fragen**. 
+
+_Somit stellt die Datenanalyse schlussendlich nur das Werkzeug, mit welchem man eine bestimmte Frage(stellung) beantworten kann_.
+
+In diesem Kapitel habe ich anhand von Beispielen versucht, **eine Liste zu mit diversen Methoden & konkreten Daten-Features** zu erstellen, mit denen man interessante Fragen zu beantworten versucht.
+
+### Methoden
+
+- Difference-in-Differences
+  - <u>Geeignet für</u>: Vergleich zweier _praktisch gleicher_ Gruppen über die Zeit, um den Effekt eines "Treatments" (= treated OR not treated) zu messen.
+  
+### "Feature-Engineering" für gute Modellierung
+
+Was "gute" Modelle von "Schlechten" unterscheidet, ist oftmals, wie du deine `X`-Variablen für das Modell kallibriest. Das wird in der Data-Science Branche als "Feature Engineering" bezeichnet. 
+
+**Hierbei geht es grundsätzlich um die Approximierung von "abstrakten Grössen" - zum Beispiel die Variable "Talent" bei der Prediction von "Student's Test-Scores" - mittels tatsächlich zur Verfügung stehende Daten**. 
+
+<mark>Der _Key-Point_, den es hier zu verstehen gilt: "Talent" gibt es zwar schon, aber die Kunst besteht darin, eine _echte_, messbare Daten-Grösse zu haben, welche "Talent" approximiert</mark>.
+
+#### Geographie
+
+- Approx. von "_Propensity to work in another country_" OR "_Propensity to buy cheap food abroad"
+  - <u>Benötigte Variable</u>: **Distance to Boarder**
+  - <u>Themen</u>: Wurde in Card & Krueger (1992) Diff-in-Diff Methode verwendet
+
+#### Finance
+
+- Approx. von "_Marktmacht_"
+  - <u>Benötigte Variable</u>: **Marktanteil within a country**. _Hierfür musst du die Unternehmen der Branchen & deren Umsätze kennen_...
+    - <u>Berechnung</u>: $ Marktanteil-Firma_i= \frac{Umsatz_i}{\sum_{i=1}^N Umsatz_i}$
+    - <u>Where to get the Data?</u>: Beispielsweise aus **Geschäftsberichten**.
+    - <u>Themen</u>: Übertragung der Teuerung der Lebensmittel auf die Konsumenten von Migros & Coop (wegen Krieg in der Ukraine, 2022).
+- Approx. von "_unternehmerischer Erfolg_"
+  - <u>Variable</u>: **Bruttomargen von Unternehmen**. 
+    - <u>Definition & Kontext</u>: Sie messen, was Unternehmen vom Umsatz für sich behalten, _nachdem_ die Zahlungen an die Zulieferer von Waren abgezogen worden sind. Die Bruttomargen spiegeln im Grossen und Ganzen den Kostenblock, den sich die Unternehmen leisten. Ist er gross, spiegelt sich das auch in höheren Endpreise wider. Laut Brancheninsidern sollte eine gut geführte Supermarktkette mit einer Bruttomarge von 25 Prozent des Umsatzes auskommen, um damit ihre Aufwendungen für Personal, Mieten, Verwaltung, Werbung, Abschreibungen auf Maschinen und Weiteres zu bestreiten. 
+      - <u>Wichtige Bemerkung</u>: **Viele Unternehmen machen aus ihren Bruttomargen ein grosses Geheimnis. publizieren ihre Bruttomargen nur auf Ebene des Gesamtkonzerns**.
+  - <u>Where to get the Data?</u>: Beispielsweise aus **Geschäftsberichten**.
+  - <u>Themen</u>: Übertragung der Teuerung der Lebensmittel auf die Konsumenten von Migros & Coop (wegen Krieg in der Ukraine, 2022).
+- Approx. für "_unternehmerische Effizienz_"
+  - <u>Variablen</u>: 
+    - <u>Auf der Seite der Einnahmen</u>: **Umsatz pro Quadratmeter an Unternehmensfläche**.
+      - <u>Berechnung</u>: $Einnahmen-Effizienz_{i,j}= \frac{\sum_{j=1}^NUmsatz_j}{\sum_{j=1}^N Quadratmeter_j}$, wobei _i_ = Firma "i" & _j_ = Filiale "j"
+    - <u>Auf der Seite der Ausgaben</u>: **Anzahl Mitarbeiter pro Quadratmeter an Unternehmensfläche**.
+      - <u>Berechnung</u>: $Kosten-Effizienz_{i,j}= \frac{\sum_{j=1}^NMitarbeiter_j}{\sum_{j=1}^N Quadratmeter_j}$, wobei _i_ = Firma "i" & _j_ = Filiale "j"
+        - <u>Einheit</u>: z.B. Mitarbeiter pro 1'000m<sup>2</sup>.
+  - <u>Where to get the Data?</u>: Beispielsweise aus **Geschäftsberichten**.
+  - <u>Themen</u>: Übertragung der Teuerung der Lebensmittel auf die Konsumenten von Migros & Coop (wegen Krieg in der Ukraine, 2022).
+
+
 ## How to read Notebooks from other People?
 
 *Es geht am Anfang um die Gesamtübersicht und noch nicht um die Details // Eigenheiten im Code oder im Datensatz! Am wichtigsten ist es, dass du [diese Fragen](#questions-you-need-to-answer-when-starting-a-new-project) zunächst beantworten kannst, wenn du das Notebook liest.*
