@@ -1,6 +1,6 @@
 # Python Libraries
 
-Dieses [Juypiter Notebook ZF](python-mustercodes.html).
+Dieses <a href="https://joffreymayer.github.io/ds-from-scratch/python-mustercodes.html" target="_blank">Juypiter Notebook ZF</a>.
 
 ## List of Useful Python-Libraries 
 
