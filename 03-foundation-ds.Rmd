@@ -85,7 +85,7 @@ In diesem Kapitel habe ich anhand von Beispielen versucht, **eine Liste zu mit d
 ### Methoden
 
 - Difference-in-Differences
-  - <u>Geeignet für</u>: Vergleich zweier _praktisch gleicher_ Gruppen über die Zeit, um den Effekt eines "Treatments" (= treated OR not treated) zu messen.
+  - <u>Geeignet für</u>: **Kausaleffekte**, wobei hier ein Vergleich zweier _praktisch gleicher_ Gruppen über die Zeit stattfindet, um den Effekt eines "Treatments" (= treated OR not treated) zu messen.
   
 ### "Feature-Engineering" für gute Modellierung
 
