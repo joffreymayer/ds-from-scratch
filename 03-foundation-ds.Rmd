@@ -97,7 +97,7 @@ Was "gute" Modelle von "Schlechten" unterscheidet, ist oftmals, wie du deine `X`
 
 #### Geographie
 
-- Approx. von "_Propensity to work in another country_" OR "_Propensity to buy cheap food abroad"
+- Approx. von "_Propensity to work in another country_" OR "_Propensity to buy cheap food abroad_"
   - <u>Benötigte Variable</u>: **Distance to Boarder**
   - <u>Themen</u>: Wurde in Card & Krueger (1992) Diff-in-Diff Methode verwendet
 

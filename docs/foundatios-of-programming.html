@@ -226,9 +226,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html"><i class="fa fa-check"></i><b>2</b> Foundatios of Programming</a><ul>
 <li class="chapter" data-level="2.1" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#how-to-program"><i class="fa fa-check"></i><b>2.1</b> How to Program?</a></li>
-<li class="chapter" data-level="2.2" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#tools-to-get-started"><i class="fa fa-check"></i><b>2.2</b> Tools to get started</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#definitionen"><i class="fa fa-check"></i><b>2.2.1</b> Definitionen</a></li>
-<li class="chapter" data-level="2.2.2" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#synonyme-2"><i class="fa fa-check"></i><b>2.2.2</b> Synonyme</a></li>
+<li class="chapter" data-level="2.2" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#tools-to-get-started"><i class="fa fa-check"></i><b>2.2</b> Tools to get started</a></li>
+<li class="chapter" data-level="2.3" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#definitionen"><i class="fa fa-check"></i><b>2.3</b> Definitionen</a></li>
+<li class="chapter" data-level="2.4" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#synonyme-2"><i class="fa fa-check"></i><b>2.4</b> Synonyme</a></li>
+<li class="chapter" data-level="2.5" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#python-basics"><i class="fa fa-check"></i><b>2.5</b> Python-Basics</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#begriffe-bzw.-fragen"><i class="fa fa-check"></i><b>2.5.1</b> Begriffe bzw. Fragen</a></li>
+<li class="chapter" data-level="2.5.2" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#tricks"><i class="fa fa-check"></i><b>2.5.2</b> Tricks</a></li>
+<li class="chapter" data-level="2.5.3" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#libraries"><i class="fa fa-check"></i><b>2.5.3</b> Libraries</a></li>
+<li class="chapter" data-level="2.5.4" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#data-analysis-functions"><i class="fa fa-check"></i><b>2.5.4</b> Data-Analysis Functions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html"><i class="fa fa-check"></i><b>3</b> Foundations of Data Science</a><ul>
@@ -395,8 +400,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="http://learningprocessing.com/">Learning Processing Book</a></li>
 </ul></li>
 </ul>
-<div id="definitionen" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Definitionen</h3>
+</div>
+<div id="definitionen" class="section level2">
+<h2><span class="header-section-number">2.3</span> Definitionen</h2>
 <ul>
 <li><p><strong><u>What is an Algorithm?</u></strong>:</p>
 <p>An Algorithm is <strong>a <em>list</em> of instructions</strong>.</p></li>
@@ -416,13 +422,93 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p class="caption">The y-axis of a computer goes down starting the top-right corner, while the x-axis goes to the right starting the top-right corner</p>
 </div>
 </div>
-<div id="synonyme-2" class="section level3">
-<h3><span class="header-section-number">2.2.2</span> Synonyme</h3>
+<div id="synonyme-2" class="section level2">
+<h2><span class="header-section-number">2.4</span> Synonyme</h2>
 <ul>
 <li>inputs == arguments</li>
 <li>function == command</li>
 <li>cartesian coordinate system == “normales Koordinatensystem”, dh mit der X-Achse für die horizontale Linie &amp; Y-Achse für die vertikale Linie</li>
 </ul>
+</div>
+<div id="python-basics" class="section level2">
+<h2><span class="header-section-number">2.5</span> Python-Basics</h2>
+<ul>
+<li><u>Kernel</u>: The kernel is the <strong>command line for a jupyter notebook</strong>. It always runs in the background when you run code in the jupyter notebook environment. You can <strong>think of it as the terminal on your mac</strong>, only that this time, it is for a jupyter notebook. This is how it looks like:</li>
+</ul>
+<div class="figure">
+<img src="./bilder/programming/example-kernel.png" alt="" />
+<p class="caption">This is the Kernel</p>
+</div>
+<ul>
+<li><p><u>Variables</u>: Eine Variable wird mittels dem <strong>“=”-Zeichen</strong> assigned.</p></li>
+<li><p><u>If-Else Statements</u>: Die If-Else Statements bestehen aus zwei (oder mehr Bausteinen).</p>
+<ol style="list-style-type: decimal">
+<li>“If-clause”:</li>
+</ol></li>
+</ul>
+<div class="figure">
+<img src="./bilder/programming/if-clause.png" alt="" />
+<p class="caption">This is an If-Clause</p>
+</div>
+<pre><code>2) &quot;Else-clause&quot;:</code></pre>
+<div class="figure">
+<img src="./bilder/programming/else-clause.png" alt="" />
+<p class="caption">This is an Else-Clause</p>
+</div>
+<div id="begriffe-bzw.-fragen" class="section level3">
+<h3><span class="header-section-number">2.5.1</span> Begriffe bzw. Fragen</h3>
+<ul>
+<li>What is a “Cell”?</li>
+</ul>
+<p>This is the green box which you can write your code into, when you use jupyter notebook:</p>
+<div class="figure">
+<img src="./bilder/programming/example-of-a-cell.png" alt="" />
+<p class="caption">This is a Cell</p>
+</div>
+<ul>
+<li>What is “the state” of a jupyter notebook?</li>
+</ul>
+<p>To answer this question more precisely, look at this <a href="https://www.youtube.com/watch?v=AWek49wXGzI&amp;list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg&amp;index=2">youtube video from 3:50-4:30</a>. You can think of it as the <strong>internal memory of the jupyter notebook</strong>. You can erase the memory by restarting the kernel by clicking on the button I just marked in the image below:</p>
+<div class="figure">
+<img src="./bilder/programming/clear-state-of-jupyter-notebook.png" alt="" />
+<p class="caption">Clearing the “state” of the Jupyter Notebook</p>
+</div>
+</div>
+<div id="tricks" class="section level3">
+<h3><span class="header-section-number">2.5.2</span> Tricks</h3>
+<p>In den folgenden Zeilen Zeige ich dir, wie Programmierung effizienter geht in Python.</p>
+<div id="swap-the-values-of-two-variables" class="section level4">
+<h4><span class="header-section-number">2.5.2.1</span> Swap the values of two variables</h4>
+<p>Am besten schaust du dir <a href="https://www.youtube.com/watch?v=Z1Yd7upQsXY&amp;list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg">dieses Youtube-Video ab 19:45-24:00</a></p>
+</div>
+</div>
+<div id="libraries" class="section level3">
+<h3><span class="header-section-number">2.5.3</span> Libraries</h3>
+<ul>
+<li><strong>Pandas</strong>: Das ist die Library, welche in Python <strong>für Datenanalysen verwendet</strong> wird. Ohne diese Library kann z.B. nicht ein Datensatz geloadet werden. Deshalb wirst du diese Library sehr oft brauchen in deinem Job.</li>
+</ul>
+</div>
+<div id="data-analysis-functions" class="section level3">
+<h3><span class="header-section-number">2.5.4</span> Data-Analysis Functions</h3>
+<ul>
+<li><strong>dropna()</strong>-function == Wird alle Beobachtungen aus dem Datensatz werfen, welche <em>NAs</em> in einer column enthalten.
+<ul>
+<li><u>Note</u>: You need to import the package “pandas” to use this function.</li>
+<li><u>Example</u>:</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="foundatios-of-programming.html#cb32-1"></a><span class="co"># remove the matches with NAN values:</span></span>
+<span id="cb32-2"><a href="foundatios-of-programming.html#cb32-2"></a>raw_bundesliga <span class="op">=</span> raw_bundesliga.dropna()</span></code></pre></div>
+<ul>
+<li><strong>isna()</strong>-function == Gibt Booleans (= TRUE / FALSE) als Output wieder, für alle rows aus dem Datensatz, welche <em>NAs</em> in einer column enthalten.
+<ul>
+<li><u>Note</u>: You need to import the package “pandas” to use this function.</li>
+<li><u>Trick</u>: **Combine it with the sum()-function, to display the number of missing values within the whole dataset.</li>
+<li><u>Example</u>:</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="foundatios-of-programming.html#cb33-1"></a><span class="co"># count the number of matches with NAN values:</span></span>
+<span id="cb33-2"><a href="foundatios-of-programming.html#cb33-2"></a><span class="bu">print</span>(<span class="st">&quot;Nr. of NAN in Serie A: </span><span class="ch">\n</span><span class="st">&quot;</span>, raw_seriea.isna().<span class="bu">sum</span>())</span></code></pre></div>
 
 </div>
 </div>

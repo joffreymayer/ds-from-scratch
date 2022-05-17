@@ -226,9 +226,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html"><i class="fa fa-check"></i><b>2</b> Foundatios of Programming</a><ul>
 <li class="chapter" data-level="2.1" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#how-to-program"><i class="fa fa-check"></i><b>2.1</b> How to Program?</a></li>
-<li class="chapter" data-level="2.2" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#tools-to-get-started"><i class="fa fa-check"></i><b>2.2</b> Tools to get started</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#definitionen"><i class="fa fa-check"></i><b>2.2.1</b> Definitionen</a></li>
-<li class="chapter" data-level="2.2.2" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#synonyme-2"><i class="fa fa-check"></i><b>2.2.2</b> Synonyme</a></li>
+<li class="chapter" data-level="2.2" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#tools-to-get-started"><i class="fa fa-check"></i><b>2.2</b> Tools to get started</a></li>
+<li class="chapter" data-level="2.3" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#definitionen"><i class="fa fa-check"></i><b>2.3</b> Definitionen</a></li>
+<li class="chapter" data-level="2.4" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#synonyme-2"><i class="fa fa-check"></i><b>2.4</b> Synonyme</a></li>
+<li class="chapter" data-level="2.5" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#python-basics"><i class="fa fa-check"></i><b>2.5</b> Python-Basics</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#begriffe-bzw.-fragen"><i class="fa fa-check"></i><b>2.5.1</b> Begriffe bzw. Fragen</a></li>
+<li class="chapter" data-level="2.5.2" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#tricks"><i class="fa fa-check"></i><b>2.5.2</b> Tricks</a></li>
+<li class="chapter" data-level="2.5.3" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#libraries"><i class="fa fa-check"></i><b>2.5.3</b> Libraries</a></li>
+<li class="chapter" data-level="2.5.4" data-path="foundatios-of-programming.html"><a href="foundatios-of-programming.html#data-analysis-functions"><i class="fa fa-check"></i><b>2.5.4</b> Data-Analysis Functions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html"><i class="fa fa-check"></i><b>3</b> Foundations of Data Science</a><ul>
@@ -414,27 +419,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="create-a-dataframe" class="section level3">
 <h3><span class="header-section-number">4.3.1</span> Create a <code>DataFrame</code></h3>
 <p>The following <code>DataFrame</code> was build with many <code>Series</code>-Objects:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="python-libraries.html#cb35-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">&#39;LoadCH&#39;</span>: ts_loadFc[time_index_hourly], </span>
-<span id="cb35-2"><a href="python-libraries.html#cb35-2"></a>                   <span class="st">&#39;LoadD&#39;</span>: ts_DE_loadFc.resample(<span class="st">&#39;H&#39;</span>).mean()[time_index_hourly], </span>
-<span id="cb35-3"><a href="python-libraries.html#cb35-3"></a>                   <span class="st">&#39;LoadF&#39;</span>: ts_FR_loadFc[time_index_hourly], </span>
-<span id="cb35-4"><a href="python-libraries.html#cb35-4"></a>                   <span class="st">&#39;LoadIT&#39;</span>: ts_IT_loadFc[time_index_hourly],</span>
-<span id="cb35-5"><a href="python-libraries.html#cb35-5"></a>                   <span class="st">&#39;GenCH&#39;</span>: ts_genFc[time_index_hourly], </span>
-<span id="cb35-6"><a href="python-libraries.html#cb35-6"></a>                   <span class="st">&#39;GenD&#39;</span>: ts_DE_genFc[time_index_hourly], </span>
-<span id="cb35-7"><a href="python-libraries.html#cb35-7"></a>                   <span class="st">&#39;GenF&#39;</span>: ts_FR_genFc[time_index_hourly], </span>
-<span id="cb35-8"><a href="python-libraries.html#cb35-8"></a>                   <span class="st">&#39;GenIT&#39;</span>: ts_IT_genFc[time_index_hourly],</span>
-<span id="cb35-9"><a href="python-libraries.html#cb35-9"></a>                   <span class="st">&#39;RenGenCH&#39;</span>: ts_RenGenAllCH[time_index_hourly], <span class="co"># we take the aggregated renewable generation</span></span>
-<span id="cb35-10"><a href="python-libraries.html#cb35-10"></a>                   <span class="st">&#39;RenGenD&#39;</span>: ts_RenGenAllDE[time_index_hourly], </span>
-<span id="cb35-11"><a href="python-libraries.html#cb35-11"></a>                   <span class="st">&#39;RenGenF&#39;</span>: ts_RenGenAllFR[time_index_hourly], </span>
-<span id="cb35-12"><a href="python-libraries.html#cb35-12"></a>                   <span class="st">&#39;RenGenIT&#39;</span>: ts_RenGenAllIT[time_index_hourly], </span>
-<span id="cb35-13"><a href="python-libraries.html#cb35-13"></a>                   <span class="st">&#39;TransFromDach&#39;</span>: ts_TransFromDACH[time_index_hourly], </span>
-<span id="cb35-14"><a href="python-libraries.html#cb35-14"></a>                   <span class="st">&#39;TransToDach&#39;</span>: ts_TransToDACH[time_index_hourly], </span>
-<span id="cb35-15"><a href="python-libraries.html#cb35-15"></a>                   <span class="st">&#39;TransToIT&#39;</span>: ts_TransToIT[time_index_hourly],</span>
-<span id="cb35-16"><a href="python-libraries.html#cb35-16"></a>                   <span class="st">&#39;SeasonAndProduct&#39;</span>: ts_season_prod[time_index_hourly], <span class="co"># TO-DO: re-name this column, since its name is confusing!</span></span>
-<span id="cb35-17"><a href="python-libraries.html#cb35-17"></a>                   <span class="st">&#39;tInfoDaySin&#39;</span> : ts_timeInfoDayI_4forecast[time_index_hourly],</span>
-<span id="cb35-18"><a href="python-libraries.html#cb35-18"></a>                   <span class="st">&#39;tInfoDayCos&#39;</span> : ts_timeInfoDayII_4forecast[time_index_hourly], </span>
-<span id="cb35-19"><a href="python-libraries.html#cb35-19"></a>                   <span class="st">&#39;tInfoYearSin&#39;</span> : ts_timeInfoYearI_4forecast[time_index_hourly], </span>
-<span id="cb35-20"><a href="python-libraries.html#cb35-20"></a>                   <span class="st">&#39;tInfoYearCos&#39;</span> : ts_timeInfoYearII_4forecast[time_index_hourly],</span>
-<span id="cb35-21"><a href="python-libraries.html#cb35-21"></a>                   <span class="st">&#39;PricesCH&#39;</span>: ts_DA_Price[time_index_hourly]}) </span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="python-libraries.html#cb38-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">&#39;LoadCH&#39;</span>: ts_loadFc[time_index_hourly], </span>
+<span id="cb38-2"><a href="python-libraries.html#cb38-2"></a>                   <span class="st">&#39;LoadD&#39;</span>: ts_DE_loadFc.resample(<span class="st">&#39;H&#39;</span>).mean()[time_index_hourly], </span>
+<span id="cb38-3"><a href="python-libraries.html#cb38-3"></a>                   <span class="st">&#39;LoadF&#39;</span>: ts_FR_loadFc[time_index_hourly], </span>
+<span id="cb38-4"><a href="python-libraries.html#cb38-4"></a>                   <span class="st">&#39;LoadIT&#39;</span>: ts_IT_loadFc[time_index_hourly],</span>
+<span id="cb38-5"><a href="python-libraries.html#cb38-5"></a>                   <span class="st">&#39;GenCH&#39;</span>: ts_genFc[time_index_hourly], </span>
+<span id="cb38-6"><a href="python-libraries.html#cb38-6"></a>                   <span class="st">&#39;GenD&#39;</span>: ts_DE_genFc[time_index_hourly], </span>
+<span id="cb38-7"><a href="python-libraries.html#cb38-7"></a>                   <span class="st">&#39;GenF&#39;</span>: ts_FR_genFc[time_index_hourly], </span>
+<span id="cb38-8"><a href="python-libraries.html#cb38-8"></a>                   <span class="st">&#39;GenIT&#39;</span>: ts_IT_genFc[time_index_hourly],</span>
+<span id="cb38-9"><a href="python-libraries.html#cb38-9"></a>                   <span class="st">&#39;RenGenCH&#39;</span>: ts_RenGenAllCH[time_index_hourly], <span class="co"># we take the aggregated renewable generation</span></span>
+<span id="cb38-10"><a href="python-libraries.html#cb38-10"></a>                   <span class="st">&#39;RenGenD&#39;</span>: ts_RenGenAllDE[time_index_hourly], </span>
+<span id="cb38-11"><a href="python-libraries.html#cb38-11"></a>                   <span class="st">&#39;RenGenF&#39;</span>: ts_RenGenAllFR[time_index_hourly], </span>
+<span id="cb38-12"><a href="python-libraries.html#cb38-12"></a>                   <span class="st">&#39;RenGenIT&#39;</span>: ts_RenGenAllIT[time_index_hourly], </span>
+<span id="cb38-13"><a href="python-libraries.html#cb38-13"></a>                   <span class="st">&#39;TransFromDach&#39;</span>: ts_TransFromDACH[time_index_hourly], </span>
+<span id="cb38-14"><a href="python-libraries.html#cb38-14"></a>                   <span class="st">&#39;TransToDach&#39;</span>: ts_TransToDACH[time_index_hourly], </span>
+<span id="cb38-15"><a href="python-libraries.html#cb38-15"></a>                   <span class="st">&#39;TransToIT&#39;</span>: ts_TransToIT[time_index_hourly],</span>
+<span id="cb38-16"><a href="python-libraries.html#cb38-16"></a>                   <span class="st">&#39;SeasonAndProduct&#39;</span>: ts_season_prod[time_index_hourly], <span class="co"># TO-DO: re-name this column, since its name is confusing!</span></span>
+<span id="cb38-17"><a href="python-libraries.html#cb38-17"></a>                   <span class="st">&#39;tInfoDaySin&#39;</span> : ts_timeInfoDayI_4forecast[time_index_hourly],</span>
+<span id="cb38-18"><a href="python-libraries.html#cb38-18"></a>                   <span class="st">&#39;tInfoDayCos&#39;</span> : ts_timeInfoDayII_4forecast[time_index_hourly], </span>
+<span id="cb38-19"><a href="python-libraries.html#cb38-19"></a>                   <span class="st">&#39;tInfoYearSin&#39;</span> : ts_timeInfoYearI_4forecast[time_index_hourly], </span>
+<span id="cb38-20"><a href="python-libraries.html#cb38-20"></a>                   <span class="st">&#39;tInfoYearCos&#39;</span> : ts_timeInfoYearII_4forecast[time_index_hourly],</span>
+<span id="cb38-21"><a href="python-libraries.html#cb38-21"></a>                   <span class="st">&#39;PricesCH&#39;</span>: ts_DA_Price[time_index_hourly]}) </span></code></pre></div>
 </div>
 <div id="put-a-time-stamp-on-each-python-cell" class="section level3">
 <h3><span class="header-section-number">4.3.2</span> Put a time-stamp on each Python-Cell</h3>
@@ -477,23 +482,23 @@ and columns.</p></li>
 <ul>
 <li><u>Example</u>:</li>
 </ul>
-<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="python-libraries.html#cb39-1"></a><span class="co">## Möglichkeit 1: with &#39;iloc&#39;</span></span>
-<span id="cb39-2"><a href="python-libraries.html#cb39-2"></a>iloc_test <span class="op">=</span> dd.iloc[<span class="dv">0</span>:<span class="dv">5</span>,<span class="dv">0</span>] <span class="co"># row-position == 0:5 --&gt; first 5 rows; EXCLUDES &#39;5&#39; from the range &quot;0,1,2,3,4,5&quot; </span></span>
-<span id="cb39-3"><a href="python-libraries.html#cb39-3"></a>                                          <span class="co"># --&gt; hence range(0:5) results in --&gt; &quot;0,1,2,3,4&quot;</span></span>
-<span id="cb39-4"><a href="python-libraries.html#cb39-4"></a>                                          <span class="co"># column-position == 0 --&gt; 1st row --&gt; remember: indexing in </span></span>
-<span id="cb39-5"><a href="python-libraries.html#cb39-5"></a>                                          <span class="co"># Python starts at &#39;0&#39;!</span></span>
-<span id="cb39-6"><a href="python-libraries.html#cb39-6"></a></span>
-<span id="cb39-7"><a href="python-libraries.html#cb39-7"></a>    <span class="co"># IMPORTANT: &#39;iloc&#39; uses the &#39;Python stdlib&#39; indexing scheme, where the first element of the range is </span></span>
-<span id="cb39-8"><a href="python-libraries.html#cb39-8"></a>    <span class="co"># included and the last one excluded. So 0:5 will select entries 0,...,4 (= these are the first *5* </span></span>
-<span id="cb39-9"><a href="python-libraries.html#cb39-9"></a>    <span class="co"># entries!!).</span></span>
-<span id="cb39-10"><a href="python-libraries.html#cb39-10"></a></span>
-<span id="cb39-11"><a href="python-libraries.html#cb39-11"></a><span class="co">## Möglichkeit 2: to get the SAME output with &#39;loc&#39;, we need a slightly DIFFERENT range!</span></span>
-<span id="cb39-12"><a href="python-libraries.html#cb39-12"></a>loc_test <span class="op">=</span> dd.loc[<span class="dv">0</span>:<span class="dv">4</span>,<span class="st">&#39;order_id&#39;</span>] <span class="co"># row-position == 0:4 --&gt; first 5 rows; INCLUDES &#39;4&#39; </span></span>
-<span id="cb39-13"><a href="python-libraries.html#cb39-13"></a>                                  <span class="co"># --&gt; hence range(0:4) results in --&gt; &quot;0,1,2,3,4&quot;</span></span>
-<span id="cb39-14"><a href="python-libraries.html#cb39-14"></a></span>
-<span id="cb39-15"><a href="python-libraries.html#cb39-15"></a><span class="co">## check if the output are the same, even though &quot;range()&quot; has slightly different inputs? --&gt; yes!</span></span>
-<span id="cb39-16"><a href="python-libraries.html#cb39-16"></a><span class="bu">print</span>(iloc_test)</span>
-<span id="cb39-17"><a href="python-libraries.html#cb39-17"></a><span class="bu">print</span>(loc_test)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="python-libraries.html#cb42-1"></a><span class="co">## Möglichkeit 1: with &#39;iloc&#39;</span></span>
+<span id="cb42-2"><a href="python-libraries.html#cb42-2"></a>iloc_test <span class="op">=</span> dd.iloc[<span class="dv">0</span>:<span class="dv">5</span>,<span class="dv">0</span>] <span class="co"># row-position == 0:5 --&gt; first 5 rows; EXCLUDES &#39;5&#39; from the range &quot;0,1,2,3,4,5&quot; </span></span>
+<span id="cb42-3"><a href="python-libraries.html#cb42-3"></a>                                          <span class="co"># --&gt; hence range(0:5) results in --&gt; &quot;0,1,2,3,4&quot;</span></span>
+<span id="cb42-4"><a href="python-libraries.html#cb42-4"></a>                                          <span class="co"># column-position == 0 --&gt; 1st row --&gt; remember: indexing in </span></span>
+<span id="cb42-5"><a href="python-libraries.html#cb42-5"></a>                                          <span class="co"># Python starts at &#39;0&#39;!</span></span>
+<span id="cb42-6"><a href="python-libraries.html#cb42-6"></a></span>
+<span id="cb42-7"><a href="python-libraries.html#cb42-7"></a>    <span class="co"># IMPORTANT: &#39;iloc&#39; uses the &#39;Python stdlib&#39; indexing scheme, where the first element of the range is </span></span>
+<span id="cb42-8"><a href="python-libraries.html#cb42-8"></a>    <span class="co"># included and the last one excluded. So 0:5 will select entries 0,...,4 (= these are the first *5* </span></span>
+<span id="cb42-9"><a href="python-libraries.html#cb42-9"></a>    <span class="co"># entries!!).</span></span>
+<span id="cb42-10"><a href="python-libraries.html#cb42-10"></a></span>
+<span id="cb42-11"><a href="python-libraries.html#cb42-11"></a><span class="co">## Möglichkeit 2: to get the SAME output with &#39;loc&#39;, we need a slightly DIFFERENT range!</span></span>
+<span id="cb42-12"><a href="python-libraries.html#cb42-12"></a>loc_test <span class="op">=</span> dd.loc[<span class="dv">0</span>:<span class="dv">4</span>,<span class="st">&#39;order_id&#39;</span>] <span class="co"># row-position == 0:4 --&gt; first 5 rows; INCLUDES &#39;4&#39; </span></span>
+<span id="cb42-13"><a href="python-libraries.html#cb42-13"></a>                                  <span class="co"># --&gt; hence range(0:4) results in --&gt; &quot;0,1,2,3,4&quot;</span></span>
+<span id="cb42-14"><a href="python-libraries.html#cb42-14"></a></span>
+<span id="cb42-15"><a href="python-libraries.html#cb42-15"></a><span class="co">## check if the output are the same, even though &quot;range()&quot; has slightly different inputs? --&gt; yes!</span></span>
+<span id="cb42-16"><a href="python-libraries.html#cb42-16"></a><span class="bu">print</span>(iloc_test)</span>
+<span id="cb42-17"><a href="python-libraries.html#cb42-17"></a><span class="bu">print</span>(loc_test)</span></code></pre></div>
 </div>
 </div>
 </div>
