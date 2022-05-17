@@ -105,7 +105,7 @@ Was "gute" Modelle von "Schlechten" unterscheidet, ist oftmals, wie du deine `X`
 
 - Approx. von "_Marktmacht_"
   - <u>Benötigte Variable</u>: **Marktanteil within a country**. _Hierfür musst du die Unternehmen der Branchen & deren Umsätze kennen_...
-    - <u>Berechnung</u>: $ Marktanteil-Firma_i= \frac{Umsatz_i}{\sum_{i=1}^N Umsatz_i}$
+    - <u>Berechnung</u>: $Marktanteil-Firma_i= \frac{Umsatz_i}{\sum_{i=1}^N Umsatz_i}$
     - <u>Where to get the Data?</u>: Beispielsweise aus **Geschäftsberichten**.
     - <u>Themen</u>: Übertragung der Teuerung der Lebensmittel auf die Konsumenten von Migros & Coop (wegen Krieg in der Ukraine, 2022).
 - Approx. von "_unternehmerischer Erfolg_"
