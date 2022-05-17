@@ -130,6 +130,7 @@ p-hacking
 appendix-for-the-future
 python-libraries
 list-of-useful-python-libraries
+python-mustercodes-für-data-science
 basic-python
 create-a-dataframe
 apply-a-function-on-a-column

@@ -1,7 +1,5 @@
 # Python Libraries
 
-Dieses <a href="https://joffreymayer.github.io/ds-from-scratch/python-mustercodes.html" target="_blank">Juypiter Notebook ZF</a>.
-
 ## List of Useful Python-Libraries 
 
 - `numpy`, for **mathematical operations**.
@@ -18,6 +16,10 @@ Dieses <a href="https://joffreymayer.github.io/ds-from-scratch/python-mustercode
 - `seaborn`, for **data-visualization**.
 - `datetime`, for **dealing with dates**.
 
+## `Python`-Mustercodes für Data-Science
+
+Für eine übersichtliche **Zusammenfassung, welche die Python-Basics bis hin zu Visualisierungen abdeckt**, empfehle ich dir <a href="https://joffreymayer.github.io/ds-from-scratch/python-mustercodes.html" target="_blank">dieses Juypiter Notebook</a>.
+
 ## Basic `Python`
 
 In this part, I will give you some useful `Python`-Code, which can be helpful in _any_ project.
@@ -26,7 +28,7 @@ In this part, I will give you some useful `Python`-Code, which can be helpful in
 
 The following `DataFrame` was build with many `Series`-Objects:
 
-```
+```{python eval=FALSE}
 df = pd.DataFrame({'LoadCH': ts_loadFc[time_index_hourly], 
                    'LoadD': ts_DE_loadFc.resample('H').mean()[time_index_hourly], 
                    'LoadF': ts_FR_loadFc[time_index_hourly], 
