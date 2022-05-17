@@ -15776,7 +15776,7 @@ or summary contain a given string such as &#34;spam&#34;, type &#34;modules spam
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="You-can-also-%60View%60-the-5-last-rows-of-your-dataset-by-using-%60tails()%60:"><a id="view-last-five" style="color:black; text-decoration: none;">You can also `View` the 5 last rows of your dataset by using `tails()`</a>:<a class="anchor-link" href="#You-can-also-%60View%60-the-5-last-rows-of-your-dataset-by-using-%60tails()%60:">&#182;</a></h4>
+<h4 id="You-can-also-%60View%60-the-5-last-rows-of-your-dataset-by-using-%60tail()%60:"><a id="view-last-five" style="color:black; text-decoration: none;">You can also `View` the 5 last rows of your dataset by using `tail()`</a>:<a class="anchor-link" href="#You-can-also-%60View%60-the-5-last-rows-of-your-dataset-by-using-%60tail()%60:">&#182;</a></h4>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -15820,7 +15820,7 @@ or summary contain a given string such as &#34;spam&#34;, type &#34;modules spam
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a href="https://www.w3schools.com/python/python_datatypes.asp">To get a beautiful overview over all types that exist in Python, I recommend you to visit the website of W3Schools.com</a></p>
+<p><a href="https://www.w3schools.com/python/python_datatypes.asp" target="_blank">To get a beautiful overview over all types that exist in Python, I recommend you to visit the website of W3Schools.com</a></p>
 <p><strong><u>Bemerkung hier</u></strong>: It can be, that columns are from the type <code>object</code>. In practice, it often means that <em>all</em> of the values in an <code>object</code>-column are <u>strings</u>. If you encounter any <code>object</code>-columns, it is strongly recommended that you convert them into a more apropriate <code>data-type</code>, otherwise some of the functions won't work on these <code>object</code>-columns...</p>
 
 </div>
@@ -15962,7 +15962,7 @@ or summary contain a given string such as &#34;spam&#34;, type &#34;modules spam
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Find-the-unique-values-from-a-column:"><a id="unique-values" style="color:black; text-decoration: none;"><u>Find the unique values from a column</u></a>:<a class="anchor-link" href="#Find-the-unique-values-from-a-column:">&#182;</a></h3><p>This can be useful, when you want to filter all unique <code>categories</code> within a column. You can then put all those categories wihtin a new variable in order to loop through them to apply some function to those.</p>
+<h3 id="Find-the-unique-values-from-a-column:"><a id="unique-values" style="color:black; text-decoration: none;"><u>Find the unique values from a column</u></a>:<a class="anchor-link" href="#Find-the-unique-values-from-a-column:">&#182;</a></h3><p>This can be useful, when you want to filter all unique <code>categories</code> within a column. <em>You can then put all those categories within a new variable in order to loop through them to apply some function to those</em>.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -16033,7 +16033,7 @@ or summary contain a given string such as &#34;spam&#34;, type &#34;modules spam
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># In order to be able to perform a transformation, we will need the `numpy`-package</span>
 
 <span class="c1"># set-up:</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># this is our column &#39;x&#39;</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># this is our column &#39;x&#39; --&gt; Output of this: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
 <span class="n">condlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">]</span> <span class="c1"># set of conditions, that need to be fullfilled --&gt; which are the value-ranges, on which you will apply </span>
 <span class="c1"># a custom-function [which will be defined next]? --&gt; all numbers below 3 AND all numbers above 5</span>
 <span class="n">choicelist</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># the custom-function you will apply here: x^2</span>
@@ -16154,7 +16154,32 @@ or summary contain a given string such as &#34;spam&#34;, type &#34;modules spam
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Assign-a-unique-ID:"><a id="unique-id" style="color:black; text-decoration: none;"><u>Assign a unique ID</u></a>:<a class="anchor-link" href="#Assign-a-unique-ID:">&#182;</a></h3>
+<h3 id="Assign-a-unique-ID:"><a id="unique-id" style="color:black; text-decoration: none;"><u>Assign a unique ID</u></a>:<a class="anchor-link" href="#Assign-a-unique-ID:">&#182;</a></h3><ul>
+<li><strong><u>For a single Column</u></strong>:</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;date&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">ngroup</span><span class="p">()</span> <span class="c1"># of Course, you could simply use 1 column fo the assignment of an unique ID. </span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><strong><u>For multiple Columns</u></strong>:</li>
+</ul>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -16166,20 +16191,6 @@ or summary contain a given string such as &#34;spam&#34;, type &#34;modules spam
 <span class="c1"># a unique ID.</span>
 
 <span class="c1"># Quelle: https://stackoverflow.com/questions/45685254/q-pandas-how-to-efficiently-assign-unique-id-to-individuals-with-multiple-ent</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;date&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">ngroup</span><span class="p">()</span> <span class="c1"># if Course, you could also simply use 1 column fo the assignment of an unique ID. </span>
 </pre></div>
 
      </div>
@@ -16734,7 +16745,8 @@ Name: order_id, dtype: int64
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">dd</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="c1"># Reihenfolge der inputs == 1) &#39;rows&#39; (--&gt; &quot;0&quot; == 1st row), then 2) &#39;columns&#39; (--&gt; &quot;4&quot; == 5th column)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">dd</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="c1"># Reihenfolge der inputs == 1) &#39;rows&#39; (--&gt; &quot;0&quot; == 1st row), then 2) &#39;columns&#39; </span>
+                    <span class="c1"># (--&gt; &quot;4&quot; == 5th column)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">)</span> <span class="c1"># check if it worked? --&gt; should print the value &#39;65&#39;</span>
 </pre></div>
 
@@ -16779,7 +16791,8 @@ Name: order_id, dtype: int64
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">dd</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;order_total&#39;</span><span class="p">]</span> <span class="c1"># Reihenfolge der inputs == 1) &#39;rows&#39; (--&gt; &quot;0&quot; == NAME der 1st row), then 2) &#39;columns&#39; (--&gt; &quot;order_total&quot; == NAME der gewünschten 5th column)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">dd</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;order_total&#39;</span><span class="p">]</span> <span class="c1"># Reihenfolge der inputs == 1) &#39;rows&#39; (--&gt; &quot;0&quot; == NAME der 1st row), </span>
+                               <span class="c1"># then 2) &#39;columns&#39; (--&gt; &quot;order_total&quot; == NAME der gewünschten 5th column)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">)</span> <span class="c1"># check if it worked? --&gt; should print the value &#39;65&#39;</span>
 </pre></div>
 
@@ -17357,8 +17370,11 @@ Name: order_id, dtype: int64
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Variante 1: mit reset_index &amp; neuer set_index</span>
-<span class="n">df_weather_2</span> <span class="o">=</span> <span class="n">df_weather</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;city_name&#39;</span><span class="p">],</span> <span class="c1"># Drop the duplicate, if all the rows are the same // have the same values (Achtung: we only look at the duplicates in the &#39;time&#39; &amp; &#39;city_name&#39;-column from this analysis!).</span>
-                                                        <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;last&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span> <span class="c1"># if you have duplicate, keep only the last of the duplicated-rows.</span>
+<span class="n">df_weather_2</span> <span class="o">=</span> <span class="n">df_weather</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span>
+    <span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;city_name&#39;</span><span class="p">],</span> <span class="c1"># Drop the duplicate, if all the rows are the same // have the same </span>
+                                  <span class="c1"># values (Achtung: we only look at the duplicates in the &#39;time&#39; &amp; </span>
+                                  <span class="c1"># &#39;city_name&#39;-column from this analysis!).</span>
+    <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;last&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span> <span class="c1"># if you have duplicate, keep only the last of the duplicated-rows.</span>
 </pre></div>
 
      </div>
@@ -17373,9 +17389,11 @@ Name: order_id, dtype: int64
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Variante 2: man dropt den &quot;alten&quot; Index (VOR merge) und neuem set_index </span>
-<span class="n">df_unique_dates</span> <span class="o">=</span> <span class="n">df_ferien</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="s1">&#39;datum&#39;</span><span class="p">,</span> <span class="c1"># only consider the column &quot;datum&quot; [= column that has duplicates] when dropping the duplicates </span>
-                                    <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># reset the index, otherwise you get weird indizes (mit 10&#39;000 für manche)</span>
-                                                                         <span class="c1"># &#39;drop = True&#39; means that we do not keep the &quot;old&quot; index as a separate &#39;column&#39;</span>
+<span class="n">df_unique_dates</span> <span class="o">=</span> <span class="n">df_ferien</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span>
+    <span class="n">subset</span><span class="o">=</span><span class="s1">&#39;datum&#39;</span><span class="p">,</span> <span class="c1"># only consider the column &quot;datum&quot; [= column that has duplicates] when dropping the duplicates </span>
+    <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># reset the index, otherwise you get weird indizes (mit 10&#39;000 für manche)</span>
+                                         <span class="c1"># &#39;drop = True&#39; means that we do not keep the &quot;old&quot; index as a separate </span>
+                                         <span class="c1"># &#39;column&#39;</span>
 <span class="n">df_unique_dates</span>
 </pre></div>
 
@@ -17484,43 +17502,6 @@ Name: order_id, dtype: int64
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="n">planets</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&#39;[Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune]&#39;</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -17543,7 +17524,9 @@ Name: order_id, dtype: int64
     <span class="n">how</span><span class="o">=</span><span class="s2">&quot;outer&quot;</span><span class="p">,</span>
     <span class="n">left_on</span><span class="o">=</span><span class="n">y_train</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="c1"># merging via index // row-label des DataFrames der y-Variable</span>
     <span class="n">right_on</span><span class="o">=</span><span class="n">x_train</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="c1"># merging via index // row-label des DataFrames der x-Variablen</span>
-<span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;key_0&#39;</span><span class="p">)</span> <span class="c1"># optional: da wir hier eine Zeitreihe haben, dessen Row-Index den Column-Name &#39;key_0&#39; animmt beim Merging, wird hier als neuer Row-Index für den gemerged Dataframe gesetzt</span>
+<span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;key_0&#39;</span><span class="p">)</span> <span class="c1"># optional: da wir hier eine Zeitreihe haben, dessen Row-Index den Column-Name &#39;key_0&#39; animmt </span>
+                     <span class="c1"># beim Merging, wird die Spalte &#39;key_0&#39; hier als neuer Row-Index für den gemerged Dataframe </span>
+                     <span class="c1"># gesetzt.</span>
 <span class="n">test</span> <span class="c1"># check if it worked</span>
 </pre></div>
 
@@ -17594,11 +17577,14 @@ Name: order_id, dtype: int64
 <span class="c1"># Step 2: make a for-loop, to merge all the 6 datasets simultaneously</span>
 <span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="n">dfs</span><span class="p">:</span> <span class="c1"># here, we loop through every city-group of our list of data frames (see step 1)</span>
     <span class="n">city</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;city_name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> <span class="c1"># we store the names of the 5 cities - as a list - in a variable</span>
-    <span class="n">city_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">city</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;[&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1"># we perform some string-manipulation to eliminate all the characters that are not necessary</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">add_suffix</span><span class="p">(</span><span class="s1">&#39;_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">city_str</span><span class="p">))</span> <span class="c1"># we re-name the columns, by adding the name of the city to each column</span>
+    <span class="n">city_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">city</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;[&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1"># we perform some </span>
+    <span class="c1"># string-manipulation to eliminate all the characters that are not necessary</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">add_suffix</span><span class="p">(</span><span class="s1">&#39;_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">city_str</span><span class="p">))</span> <span class="c1"># we re-name the columns, by adding the name of the city to each column.</span>
     <span class="n">df_final</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="c1"># this is the merging-part!</span>
-                              <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="c1"># we want to merge via the index // row-label of both datasets --&gt; since they are both in UTC-time, this will work!</span>
-                              <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span> <span class="c1"># &#39;outer&#39; means: we want the &#39;union&#39; --&gt; see this youtube-video for a good explanation: https://www.youtube.com/watch?v=h4hOPGo4UVU</span>
+                              <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="c1"># we want to merge via the index // row-label of both datasets --&gt; since </span>
+                                           <span class="c1"># they are both in UTC-time, this will work!</span>
+                              <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span> <span class="c1"># &#39;outer&#39; means: we want the &#39;union&#39; --&gt; see this youtube-video for a </span>
+                                           <span class="c1"># good explanation: https://www.youtube.com/watch?v=h4hOPGo4UVU</span>
     <span class="n">df_final</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;city_name_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">city_str</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># let&#39;s drop some columns that we don&#39;t need anymore</span>
     
 <span class="c1"># Step 3: &quot;final results&quot;-check</span>
@@ -17617,7 +17603,7 @@ Name: order_id, dtype: int64
 <ul>
     <li><strong><u>Key-Question</u></strong>: <h1><em><center>Did the merging really worked? &#8594; Yes / No</center></em></h1></li><br>
     <ul>
-        <li><strong><u>"Trick" to answer the question</u></strong>: Look at Missings &amp; Duplicates.</li>
+        <li><strong><u>"Trick" to answer the question</u></strong>: Look at Missings AND Duplicates.</li>
     </ul>
 </ul>
 </div>
@@ -17646,7 +17632,7 @@ Name: order_id, dtype: int64
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3><em>If the answer is 'yes', then merging should have worked, if you have no missings and no duplicates. <br><br>
+<h3><em>If you have <u>no</u> missings AND <u>no</u> duplicates, then merging should have worked and the answer to the above question should be 'yes'. <br><br>
     If the answer to the above question is 'no', then you need to go back to step 2 and try to figure out what you did wrong when merging the datasets together.</em></h3>
 </div>
 </div>
@@ -17708,7 +17694,8 @@ Name: order_id, dtype: int64
 
 <span class="k">def</span> <span class="nf">parse_date</span><span class="p">(</span><span class="n">date</span><span class="p">):</span>
     <span class="n">data</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">date</span><span class="o">==</span><span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="c1"># this condition will never be true, since the column &#39;Date-Time&#39; NEVER has an empty string; ### raise exception</span>
+    <span class="k">if</span> <span class="n">date</span><span class="o">==</span><span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="c1"># this condition will never be true, since the column &#39;Date-Time&#39; NEVER has an empty string; </span>
+    <span class="c1">### raise exception</span>
         <span class="k">return</span> <span class="kc">None</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">,</span> <span class="n">yearfirst</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">utc</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
@@ -18056,7 +18043,7 @@ Name: order_id, dtype: int64
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Zukunftszeitpunkt-mit-dem-%22jetzt%22-als-Referenzpunkt-//-Startpunkt:"><a id="zukunft-relativ-zu-jetzt" style="color:black; text-decoration: none;"><u>Zukunftszeitpunkt mit dem "jetzt" als Referenzpunkt // Startpunkt</u></a>:<a class="anchor-link" href="#Zukunftszeitpunkt-mit-dem-%22jetzt%22-als-Referenzpunkt-//-Startpunkt:">&#182;</a></h3>
+<h3 id="Rechnen-mit-Datum:-Addition-mit-dem-%22jetzt%22-als-Referenzpunkt-//-Startpunkt:"><a id="zukunft-relativ-zu-jetzt" style="color:black; text-decoration: none;"><u>Rechnen mit Datum: Addition mit dem "jetzt" als Referenzpunkt // Startpunkt</u></a>:<a class="anchor-link" href="#Rechnen-mit-Datum:-Addition-mit-dem-%22jetzt%22-als-Referenzpunkt-//-Startpunkt:">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -18304,7 +18291,8 @@ Name: order_id, dtype: int64
                  <span class="n">on</span><span class="o">=</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="c1"># in this case, we merge over the &quot;date&quot;-column; note that &#39;df&#39; has 365 rows, while &#39;df_year_2019&#39; only 270 rows</span>
                  <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">,</span> <span class="c1"># we need to set</span>
                  <span class="n">indicator</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># the flag is &quot;indicator&quot;</span>
-<span class="n">df2</span> <span class="c1"># we get a ddset with 360 rows. On the outside, the &#39;testo&#39;-ddset seems NOT to be different form the &#39;df&#39;, however, the purpose of the merge was to create a new dummy-variable to see from which dataset it came from</span>
+<span class="n">df2</span> <span class="c1"># we get a ddset with 360 rows. On the outside, the &#39;testo&#39;-ddset seems NOT to be different form the &#39;df&#39;, </span>
+<span class="c1"># however, the purpose of the merge was to create a new dummy-variable to see from which dataset it came from.</span>
 </pre></div>
 
      </div>
@@ -18320,7 +18308,8 @@ Name: order_id, dtype: int64
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># step 2: we want some more meaningful values within the &#39;merge&#39;-column --&gt; apply an if-statement onto the (string-) column</span>
 
-<span class="n">df2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;_merge&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="s1">&#39;ferien&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Here, we create a column &#39;Ferien&#39;, which will be equal to &quot;1&quot;, if the value in the &#39;_merge&#39;-column is equal to the string &quot;both&quot;</span>
+<span class="n">df2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;_merge&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="s1">&#39;ferien&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Here, we create a column &#39;Ferien&#39;, which will be equal to &quot;1&quot;, if </span>
+                                               <span class="c1"># the value in the &#39;_merge&#39;-column is equal to the string &quot;both&quot;</span>
 <span class="n">df2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;_merge&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="s1">&#39;ferien&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;False&#39;</span> <span class="c1"># Ferien-Dummy equals zero otherwise</span>
 </pre></div>
 
@@ -18393,7 +18382,7 @@ Name: order_id, dtype: int64
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Scaling-Variables"><a id="scaling-variables" style="color:black; text-decoration: none;">Scaling Variables</a><a class="anchor-link" href="#Scaling-Variables">&#182;</a></h2><hr>
 <p>When applying machine learning, one condition to use those fancy models will be to scale our variables first.</p>
-<p>The main <strong>methods for scaling can be seen in <a href="https://stats.stackexchange.com/questions/70553/what-does-normalization-mean-and-how-to-verify-that-a-sample-or-a-distribution">this Stack-Exchange Post</a></strong>.</p>
+<p>The main <strong>methods for scaling can be seen in <a href="https://stats.stackexchange.com/questions/70553/what-does-normalization-mean-and-how-to-verify-that-a-sample-or-a-distribution" target="_blank" style="text-decoration: none;">this Stack-Exchange Post</a></strong>.</p>
 
 </div>
 </div>
@@ -18680,7 +18669,7 @@ Name: order_id, dtype: int64
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Now that you 'saved' the variable <code>myData</code> with the <code>Magic Commands</code>, <strong>go and open another of your Jupyter Notebooks</strong> and type in the following:</p>
 <div class="highlight"><pre><span></span><span class="o">%</span><span class="n">store</span> <span class="o">-</span><span class="n">r</span> <span class="n">myData</span> <span class="c1"># step one: run this line in the first cell</span>
-<span class="n">myData</span> <span class="c1"># step 2: run this line in the secons cell</span>
+<span class="n">myData</span> <span class="c1"># step 2: run this line in the second cell</span>
 </pre></div>
 
 </div>
