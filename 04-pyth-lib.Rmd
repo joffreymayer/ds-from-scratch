@@ -1,6 +1,6 @@
 # Python Libraries
 
-Dieses [Juypiter Notebook ZF](./cheat-sheets/python-mustercodes.ipynb).
+Dieses [Juypiter Notebook ZF](python-mustercodes.html).
 
 ## List of Useful Python-Libraries 
 
