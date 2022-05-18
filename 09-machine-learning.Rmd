@@ -88,6 +88,101 @@ ggplot(data.frame(x = c(-7, 7)), aes(x = x)) +
   geom_hline(yintercept = 0) # zeichnet eine horizontale Linie bei 0, um die y-Achse zu verdeutlichen
 ```
 
+
+## Difference between Training-, Validation- &amp; Test-dataset
+
+Since I started with Machine Learning, I was always confused about the concept of **data splitting**, e.g. which sub-set of the *entire* dataset is now considered to be the *training dataset*, which one is the *validation dataset* and which one is the *testing dataset*. 
+
+<u>In the graph below, you see how it is defined correctly</u>:
+
+![Training Set VS. Validation Set VS. Test Set](./bilder/training-VS-validation-VS-test-ddset.jpg)
+
+- <u>Important to note</u>: There is oftentimes confusion between the definition of *validation dataset* VS. *testing dataset*, because there is no consens about it. **Therefore - and if we take the above picture as the "true" definition - some people will call the *validation dataset* the "test dataset" and vice versa, e.g. the *test data* as the "validation data"! xD** 
+
+### Validation-Set VS. Test-Set
+
+> What is the difference between a `Validation Dataset` and a `Testing Dataset`?
+
+Es gibt keinen Konsens dafür, was nun das `validation dataset` und welches das `test set` genau ist. **Nima** (= mein Mentor bei der SBB) verwendet den Begriff `test set` für dasjenige Dataset, welches `hold out` // separat für die (spätere) `Prediction` verwendet wird.
+
+- <u>Regel zu Unterscheidung der beiden Terme</u>: Wenn steht: `we hold out [name of the set]`, dann ist es das `testing dataset`.
+
+### Reason for a Validation-Set
+
+> Why do we need `validation set`?
+
+At the end, you want the best model possible. If you want to tune your hyperparameters, you will need your `test set`. **The big problem here, however, is that - *if we use the test-set more than once when wanting to find out the best hyperparameters* - our model will know the data by heart and the predictions will be too good, <u>but only</u> on this dataset that you are currently using**! The model will not generalize well on new data. 
+
+*That's why we need this additional subsetting of the training-dataset!*
+
+## Concept of Stratification
+
+Angenommen du hast eine *kategorische* Y-Variable, welche entweder Nullen oder Einsen als Werte annimmt. Nehme nun an, dass - *im Training-Dataset* - der Anteil der Nullen 60% beträgt. Wenn du nun ein `stratified Sample` willst, dann wird das *Test-Dataset* ebenfalls einen Anteil von 60% an Nullen enthalten!
+
+- <u>Quelle</u>: [Train-Test-Split in Sklearn and Cross-Validation](https://www.youtube.com/watch?v=KEBS7Kyc0Po)
+
+## Cross-Validation
+
+The concept of *cross-validation* can be splitted into 2 parts:
+
+- <u>Step 1</u>: Split your dataset into 1 training- &amp; 1 test-set.
+	- <u>Rule of Thumb</u>: Usually, the split is **70-90% training set** and **10-30% for the test-set**.
+	- <u>Code Example</u>: 
+
+![Example of Code for Train-Test Split](./bilder/code-example-cross-validation.png)
+
+- <u>Step 2</u>: Now, we divide the *training set* further, such that it will contain - *if we assume a 3-fold cross-validation as an example* -  **3 <u>different</u> validation sets** and **3 training sets**.
+
+![Allgemeine Cross-Validation](./bilder/example-of-a-general-3-fold-cross-validation.png)
+
+### <u>Special Case</u>: Cross-Validation for Time-Series Data
+
+Because time-series are ordered, since *the flow of time* is only going forward, the graph shown above for *step 2* is <u>not</u> valid and we need another approach!
+
+### Why do we use Cross-Validation?
+
+There are 2 reasons:
+
+1) It allows us **to compare the score (MAPE, MAE or RMSE) of different model set-ups**, for example: 
+  - *CV-Scheme changes*, e.g. a _Time-Series_ Prophet-Model with a `Sliding-Window` of 4 Months VS. a Prophet-Model with an `Expanding-Window` (full past).
+  - OR *changes in the covariates*, e.g. a model that includes an important covariate, while the other model does not.
+  **This will allow you to draw conclusions regarding the selection of "the best" model**.
+2) It allows you **to assess the performance** of different machine-learning methods. In a _classification-setting_ for example, you can use the _confusion-matrix_. 
+
+![Cross-Validation for Time Series](./bilder/example-3-fold-cross-validation-for-time-series.png)
+
+This picture shows **an example of a 3-fold cross-validation for a time-series**. 
+
+
+## Normalisierung der Daten
+
+> Was versteht man unter `Normalisierung`? Was sollte man dabei beachten? Warum wird in einem Pre-Processing Schritt eine Normalisierung durchgeführt?
+
+`Normalisierung` == **Subtrahiere den Mittelwert und dividiere durch die Standardabweichung jedes Merkmals**. Es sollte beachtet werden, dass der Mittelwert und die Standardabweichung **nur anhand der Trainings-Daten berechnet werden sollte**, damit die Modelle keinen Zugriff auf die Werte in den Validierungs- und Testsätzen haben.
+
+**Es ist wichtig, Features zu skalieren, bevor ein neuronales Netzwerk trainiert wird**. Normalisierung ist eine gängige Methode für diese Skalierung.
+
+## RNN
+
+> Was macht ein `Reccurrent Neural Network (RNN)`?
+
+Ein Beispiel für ein RNN wäre ein `Long Short Term Memory` Modell (LSTM Modell). Dabei nimmt das RNN zunächst ein ganz kleines Vergangenheits-Intervall, macht eine Modell-Estimation und dann - im nächsten Schritt - wird ein grösseres Vergangenheits-Intervall verwendet (**inkl. predicted Y-Variable aus dem vorherigen Modell**), um eine neue Modell-Estimation zu machen etc.
+
+![Beispiel eines RNN: hier ein LSTM](https://github.com/tensorflow/docs/blob/master/site/en/tutorials/structured_data/images/lstm_many_window.png?raw=1)
+
+## Data-Pipelines
+
+**Data Pipelines use an input to produce an output and then - on a second step - use the produced output as an input to produce another output etc...**
+
+- <u>Visualisierung</u>: Du kannst dir unter _Data Pipelines_ nichts anderes als eine "Guetzli Fabrik" vorstellen, welche diverse Produktionsmaschinen verwendet - zum Beispiel einen Teig-Cutter, dann einen Butter-Schmierer, sowie einen fetten Ofen und einen Sortierer von "guten VS. schlechte Guetzli" - um die Inputs immer weiter zu verarbeiten, sodass schlussendlich ein Endprodukt (= die fertigen "Guetzli") ensteht, dass man verkaufen kann.
+
+> [How to create good Data-Pipelines in Scikit-Learn?](https://www.youtube.com/watch?v=w9IGkBfOoic)
+
+ - <u>Ziel von Data-Pipeline</u>: Write more clean // readable code, especially when you do <em>data cleaning</em>. **A datapipeline is basically a way of standardizing your code**.
+ - <u>Warum sind Data-Pipelines so geil?</u>: Because you can **compare many different regression-models (Linear-Regression Vs. Logistic-Regression Vs. RandomForrest ...), applying different "scaling-techniques" (= normalize a variable with mean 0 and standard-deviation of 1), as well as using "data cleaning techniques" (= reduce dimensions via PCA, reduce missing-values etc...)**. Another cool thing to note is, that **you can choose the order, in which the cleaning, scaling and fitting occures!**
+   - See also the summary of the guy [on Youtube ab 10:00-11:00](https://www.youtube.com/watch?v=w9IGkBfOoic).
+- <u>Link to Github for an example</u>: <a href="https://github.com/krishnaik06/Pipelines-Using-Sklearn/blob/master/SklearnPipeline.ipynb" target="_blank">Jupyter-Notebook code-example on how to create a little Data-Pipeline by yourself</a>
+
 ## Uni-Kurs `Neural Networks & Deep Learning`
 
 ### Notation Neural Networks

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 9 Machine Learning | Data Science from Scratch Code</title>
-  <meta name="description" content="Chapter 9 Machine Learning | Data Science from Scratch Code" />
+  <title>Chapter 11 Business | Die Welt der Unternehmen | Data Science from Scratch Code</title>
+  <meta name="description" content="Chapter 11 Business | Die Welt der Unternehmen | Data Science from Scratch Code" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 9 Machine Learning | Data Science from Scratch Code" />
+  <meta property="og:title" content="Chapter 11 Business | Die Welt der Unternehmen | Data Science from Scratch Code" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 Machine Learning | Data Science from Scratch Code" />
+  <meta name="twitter:title" content="Chapter 11 Business | Die Welt der Unternehmen | Data Science from Scratch Code" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="econometrics.html"/>
-<link rel="next" href="mengenlehre.html"/>
+<link rel="prev" href="mengenlehre.html"/>
+<link rel="next" href="openai.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -387,460 +387,73 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="machine-learning" class="section level1">
-<h1><span class="header-section-number">Chapter 9</span> Machine Learning</h1>
-<p>In diesem Kapitel, werde ich vertiefter in das Thema “Machine Learning” eingehen.</p>
-<div id="typen-von-machine-learning" class="section level2">
-<h2><span class="header-section-number">9.1</span> Typen von Machine Learning</h2>
-<p>Es gibt grundsätzlich <strong>2 Kategorien</strong>, in denen die verschiedenen <em>Methoden in Machine Learning</em> eingeordnet werden:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Supervised Learning</strong>
+<div id="business-die-welt-der-unternehmen" class="section level1">
+<h1><span class="header-section-number">Chapter 11</span> Business | Die Welt der Unternehmen</h1>
+<p>In diesem File werde ich alles “business-related” tun, was in Zusammenhang mit Data-Science steht.</p>
+<div id="wörterbuch-6" class="section level2">
+<h2><span class="header-section-number">11.1</span> Wörterbuch</h2>
+<div id="it-software-development" class="section level3">
+<h3><span class="header-section-number">11.1.1</span> IT &amp; Software-Development</h3>
 <ul>
-<li><u>Goal 1</u>: <strong>Classification</strong>
+<li><strong>agnostisch</strong>: Im IT-Umfeld hat das Wort agnostisch eine besondere Bedeutung. Es bezieht sich auf etwas, das soweit <strong>verallgemeinert</strong> wird, dass es auch unter verschiedenen Umgebungen funktionieren kann.
 <ul>
-<li>Image Classification</li>
+<li><u>Allgemeines Beispiel</u>: Denke an mathematische Formeln, welche nur aus “allgemeinen Variablen” bestehen.</li>
+<li><u>Konkretes Software-Beispiel</u>: Eine Plattform-agnostische Software läuft unter jeder Kombination aus Betriebssystemen und Prozessorarchitekturen.</li>
 </ul></li>
-<li><u>Goal 2</u>: <strong>Predictions</strong> with Regressions
+<li><strong>cached</strong>: stored away for future use.
 <ul>
-<li>Translation (zum Beispiel angewendet in Deepl.com)</li>
-<li>Image Captioning (siehe Bild): <img src="./bilder/machine-learning/example-image-captioning.png" alt="Beispiel zu Image Captioning" /></li>
+<li><u>Beispiel</u>: Think of a Browser, which can store - in his memory - the pictures and other HTML, CSS or JS-Files. This allows faster download of these resources, once a user visits a website on a later point in time in the future.</li>
 </ul></li>
-</ul></li>
-<li><strong>Unsupervised Learning</strong>
-<ul>
-<li>Clustering:
-<ul>
-<li>Matching // K-Means Clustering</li>
-</ul></li>
-<li>Dimension Reduction:
-<ul>
-<li>Principal Component Analysis (PCA)</li>
-</ul></li>
-<li>Outlier Detection</li>
-</ul></li>
-</ol>
-</div>
-<div id="supervised-learning" class="section level2">
-<h2><span class="header-section-number">9.2</span> Supervised Learning</h2>
-<p><strong>Bei Supervised Learning</strong> wird die <strong>Annahme</strong> gemacht, <em>dass man die Funktion ‘f’ <strong>kennt</strong>, um mittels den Werten der Zufallsvariablen ‘X’ die Werte der Zufallsvariablen ‘Y’ herauszufinden</em>.</p>
-<p><u>Mathematisch ausgedrückt</u>: <code>f : X -&gt; Y</code>.</p>
-</div>
-<div id="methods" class="section level2">
-<h2><span class="header-section-number">9.3</span> Methods</h2>
-<p>Hier soll eine Auflistung aller Vorgehen bei Machine Learning aufgelistet werden:</p>
-<ul>
-<li><p><strong><u>Algorithm for “best fit” to find the weights</u></strong>:</p>
-<ol style="list-style-type: decimal">
-<li><p>Guess some random weights.</p></li>
-<li><p>“Go downhill”, e.g. <strong>apply a <em>learning rate</em></strong> when using the method <strong>gradient descent</strong>.</p></li>
-<li><p>Is the <strong>fitted line good enough?</strong></p>
-<ul>
-<li>If the <em>answer is “no”</em>, then go <strong>back to point 2)</strong>.</li>
-</ul></li>
-</ol></li>
+<li><strong>Client</strong>: Damit ist häufig der Browser gemeint, wenn er Abfragen an den Server gibt.</li>
+<li><strong>composite</strong>: custom</li>
 </ul>
 </div>
-<div id="wichtige-funktionen" class="section level2">
-<h2><span class="header-section-number">9.4</span> Wichtige Funktionen</h2>
-<p>Da Machine Learning mittels Aktivierungsfunktionen funktioniert, folgt eine Übersicht zu verschiedenen Funktionen:</p>
+<div id="organisation" class="section level3">
+<h3><span class="header-section-number">11.1.2</span> Organisation</h3>
 <ul>
-<li><strong><u>Identity Function</u></strong>: damit ist die Funktion <code>f(x) = x</code> bzw. <code>y = x</code> gemeint:</li>
-</ul>
-<p><img src="bookdownproj_files/figure-html/identity-function-1.png" width="672" /></p>
+<li><strong><u>Was ist ein <em>Kanban</em>?</u></strong>: In der BWL-Sprache ist <em>Kanban</em> <strong>ein Vorgehensmodell</strong> zur Softwareentwicklung.
 <ul>
-<li><strong><u>Logitstic Function // Sigmoid Function // S-Shaped Function</u></strong>: damit ist die Funktion <span class="math inline">\(\sigma(x) = \frac{1}{1 + e^{-x}}\)</span> gemeint:</li>
+<li><u>Ziel #1</u>: Das Meetings soll die Anzahl an paralleler Arbeiten, (= <strong>der Work in Progress (WiP)) minimiert // begrenzt werden</strong> und somit kürzere Durchlaufzeiten erreicht.</li>
+<li><u>Ziel #2</u>: Das Meeting soll die Probleme – insbesondere <strong>Engpässe – schnell sichtbar machen</strong>.</li>
+</ul></li>
 </ul>
-<p><img src="bookdownproj_files/figure-html/input-only-2-1.png" width="672" /></p>
 </div>
-<div id="difference-between-training--validation--test-dataset" class="section level2">
-<h2><span class="header-section-number">9.5</span> Difference between Training-, Validation- &amp; Test-dataset</h2>
-<p>Since I started with Machine Learning, I was always confused about the concept of <strong>data splitting</strong>, e.g. which sub-set of the <em>entire</em> dataset is now considered to be the <em>training dataset</em>, which one is the <em>validation dataset</em> and which one is the <em>testing dataset</em>.</p>
-<p><u>In the graph below, you see how it is defined correctly</u>:</p>
-<div class="figure">
-<img src="./bilder/training-VS-validation-VS-test-ddset.jpg" alt="" />
-<p class="caption">Training Set VS. Validation Set VS. Test Set</p>
 </div>
+<div id="projekt-management" class="section level2">
+<h2><span class="header-section-number">11.2</span> Projekt-Management</h2>
 <ul>
-<li><u>Important to note</u>: There is oftentimes confusion between the definition of <em>validation dataset</em> VS. <em>testing dataset</em>, because there is no consens about it. <strong>Therefore - and if we take the above picture as the “true” definition - some people will call the <em>validation dataset</em> the “test dataset” and vice versa, e.g. the <em>test data</em> as the “validation data”! xD</strong></li>
+<li><strong>Sitzungen müssen gut dokumentiert werden! Insbesondere ist hervorzuheben, in welche Richtung das Projekt geht.</strong></li>
 </ul>
-<div id="validation-set-vs.-test-set" class="section level3">
-<h3><span class="header-section-number">9.5.1</span> Validation-Set VS. Test-Set</h3>
+</div>
+<div id="meetings" class="section level2">
+<h2><span class="header-section-number">11.3</span> Meetings</h2>
 <blockquote>
-<p>What is the difference between a <code>Validation Dataset</code> and a <code>Testing Dataset</code>?</p>
+<p>Was ist das Ziel eines Meetings?</p>
 </blockquote>
-<p>Es gibt keinen Konsens dafür, was nun das <code>validation dataset</code> und welches das <code>test set</code> genau ist. <strong>Nima</strong> (= mein Mentor bei der SBB) verwendet den Begriff <code>test set</code> für dasjenige Dataset, welches <code>hold out</code> // separat für die (spätere) <code>Prediction</code> verwendet wird.</p>
-<ul>
-<li><u>Regel zu Unterscheidung der beiden Terme</u>: Wenn steht: <code>we hold out [name of the set]</code>, dann ist es das <code>testing dataset</code>.</li>
-</ul>
-</div>
-<div id="reason-for-a-validation-set" class="section level3">
-<h3><span class="header-section-number">9.5.2</span> Reason for a Validation-Set</h3>
-<blockquote>
-<p>Why do we need <code>validation set</code>?</p>
-</blockquote>
-<p>At the end, you want the best model possible. If you want to tune your hyperparameters, you will need your <code>test set</code>. <strong>The big problem here, however, is that - <em>if we use the test-set more than once when wanting to find out the best hyperparameters</em> - our model will know the data by heart and the predictions will be too good, <u>but only</u> on this dataset that you are currently using</strong>! The model will not generalize well on new data.</p>
-<p><em>That’s why we need this additional subsetting of the training-dataset!</em></p>
-</div>
-</div>
-<div id="concept-of-stratification" class="section level2">
-<h2><span class="header-section-number">9.6</span> Concept of Stratification</h2>
-<p>Angenommen du hast eine <em>kategorische</em> Y-Variable, welche entweder Nullen oder Einsen als Werte annimmt. Nehme nun an, dass - <em>im Training-Dataset</em> - der Anteil der Nullen 60% beträgt. Wenn du nun ein <code>stratified Sample</code> willst, dann wird das <em>Test-Dataset</em> ebenfalls einen Anteil von 60% an Nullen enthalten!</p>
-<ul>
-<li><u>Quelle</u>: <a href="https://www.youtube.com/watch?v=KEBS7Kyc0Po">Train-Test-Split in Sklearn and Cross-Validation</a></li>
-</ul>
-</div>
-<div id="cross-validation" class="section level2">
-<h2><span class="header-section-number">9.7</span> Cross-Validation</h2>
-<p>The concept of <em>cross-validation</em> can be splitted into 2 parts:</p>
-<ul>
-<li><u>Step 1</u>: Split your dataset into 1 training- &amp; 1 test-set.
-<ul>
-<li><u>Rule of Thumb</u>: Usually, the split is <strong>70-90% training set</strong> and <strong>10-30% for the test-set</strong>.</li>
-<li><u>Code Example</u>:</li>
-</ul></li>
-</ul>
-<div class="figure">
-<img src="./bilder/code-example-cross-validation.png" alt="" />
-<p class="caption">Example of Code for Train-Test Split</p>
-</div>
-<ul>
-<li><u>Step 2</u>: Now, we divide the <em>training set</em> further, such that it will contain - <em>if we assume a 3-fold cross-validation as an example</em> - <strong>3 <u>different</u> validation sets</strong> and <strong>3 training sets</strong>.</li>
-</ul>
-<div class="figure">
-<img src="./bilder/example-of-a-general-3-fold-cross-validation.png" alt="" />
-<p class="caption">Allgemeine Cross-Validation</p>
-</div>
-<div id="special-case-cross-validation-for-time-series-data" class="section level3">
-<h3><span class="header-section-number">9.7.1</span> <u>Special Case</u>: Cross-Validation for Time-Series Data</h3>
-<p>Because time-series are ordered, since <em>the flow of time</em> is only going forward, the graph shown above for <em>step 2</em> is <u>not</u> valid and we need another approach!</p>
-</div>
-<div id="why-do-we-use-cross-validation" class="section level3">
-<h3><span class="header-section-number">9.7.2</span> Why do we use Cross-Validation?</h3>
-<p>There are 2 reasons:</p>
-<ol style="list-style-type: decimal">
-<li>It allows us <strong>to compare the score (MAPE, MAE or RMSE) of different model set-ups</strong>, for example:</li>
+<p>Das Ziel des Meetings ist es, dir &amp; deinem Team die <strong>nötige Basis zu geben, damit du in der folgenden Zeit bis zum nächsten Meeting genau weisst, was du zu tun hast</strong>.</p>
+<p>Am wichtigsten ist hier mit dem “Boss” zu reden und klar definieren, was er erreichen will im Projekt. Dies gibt die <em>globale Richtung</em> des Projektes an.</p>
+<p><em>Es ist exterm wichtig, mit dem Boss diese Ziele zu definieren, da die Planung des gesamten Projektes in dieser Phase hier noch definiert werden kann. Nachdem diese anfängliche Gliederung getätigt wurde, kann im Verlauf des Projektes nicht mehr viel davon abgewichen werden. Deshalb hängt die Gesampt-Performance eines Projektes sehr stark von der anfänglichen Planung ab!</em></p>
+<p><u>Während</u> des Projektes gibt es dann immer wieder folgende Punkte zu prüfen:</p>
+<ol start="0" style="list-style-type: decimal">
+<li>Sind die getätigten Schritte im Einklang mit dem Endziel des Bosses? Wichtig ist zu rechtfertigen, was du gerade am tun bist und warum genau du das tust.</li>
+<li>Aufklärung, damit alle auf dem gleichen Informationsstand sind</li>
 </ol>
 <ul>
-<li><em>CV-Scheme changes</em>, e.g. a <em>Time-Series</em> Prophet-Model with a <code>Sliding-Window</code> of 4 Months VS. a Prophet-Model with an <code>Expanding-Window</code> (full past).</li>
-<li>OR <em>changes in the covariates</em>, e.g. a model that includes an important covariate, while the other model does not.
-<strong>This will allow you to draw conclusions regarding the selection of “the best” model</strong>.</li>
+<li><u>Goal</u>: Wo stehen wir? Wie sieht die Situation mit dem Notebook aus?</li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
-<li>It allows you <strong>to assess the performance</strong> of different machine-learning methods. In a <em>classification-setting</em> for example, you can use the <em>confusion-matrix</em>.</li>
+<li>Gibt es noch offene Lücken im Wissen eines Team-Mitglieds, welches von anderen Mitarbeitern gedeckt werden müsste? –&gt; <u>Goal</u>: Kein Mitglied isolieren, jeder muss sich integriert fühlen. Insbesondere Wert auf Papers &amp; Daten setzen hier</li>
+<li>Was sind weitere offene Optionen und inwiefern eignen sich diese Ansätze für unser Ziel?
+<ul>
+<li><u>Goal</u>: Aufzeigen, dass wir noch weitere Alternativen haben, als nur Phillip’s Notebooks</li>
+</ul></li>
+<li>Sonstige Unklarheiten / Bemerkungen / Inputs / Vorschläge? –&gt; <u>Goal</u>: letzte Informationsasymmetrien beheben.</li>
 </ol>
-<div class="figure">
-<img src="./bilder/example-3-fold-cross-validation-for-time-series.png" alt="" />
-<p class="caption">Cross-Validation for Time Series</p>
 </div>
-<p>This picture shows <strong>an example of a 3-fold cross-validation for a time-series</strong>.</p>
-</div>
-</div>
-<div id="normalisierung-der-daten" class="section level2">
-<h2><span class="header-section-number">9.8</span> Normalisierung der Daten</h2>
-<blockquote>
-<p>Was versteht man unter <code>Normalisierung</code>? Was sollte man dabei beachten? Warum wird in einem Pre-Processing Schritt eine Normalisierung durchgeführt?</p>
-</blockquote>
-<p><code>Normalisierung</code> == <strong>Subtrahiere den Mittelwert und dividiere durch die Standardabweichung jedes Merkmals</strong>. Es sollte beachtet werden, dass der Mittelwert und die Standardabweichung <strong>nur anhand der Trainings-Daten berechnet werden sollte</strong>, damit die Modelle keinen Zugriff auf die Werte in den Validierungs- und Testsätzen haben.</p>
-<p><strong>Es ist wichtig, Features zu skalieren, bevor ein neuronales Netzwerk trainiert wird</strong>. Normalisierung ist eine gängige Methode für diese Skalierung.</p>
-</div>
-<div id="rnn" class="section level2">
-<h2><span class="header-section-number">9.9</span> RNN</h2>
-<blockquote>
-<p>Was macht ein <code>Reccurrent Neural Network (RNN)</code>?</p>
-</blockquote>
-<p>Ein Beispiel für ein RNN wäre ein <code>Long Short Term Memory</code> Modell (LSTM Modell). Dabei nimmt das RNN zunächst ein ganz kleines Vergangenheits-Intervall, macht eine Modell-Estimation und dann - im nächsten Schritt - wird ein grösseres Vergangenheits-Intervall verwendet (<strong>inkl. predicted Y-Variable aus dem vorherigen Modell</strong>), um eine neue Modell-Estimation zu machen etc.</p>
-<div class="figure">
-<img src="https://github.com/tensorflow/docs/blob/master/site/en/tutorials/structured_data/images/lstm_many_window.png?raw=1" alt="" />
-<p class="caption">Beispiel eines RNN: hier ein LSTM</p>
-</div>
-</div>
-<div id="data-pipelines" class="section level2">
-<h2><span class="header-section-number">9.10</span> Data-Pipelines</h2>
-<p><strong>Data Pipelines use an input to produce an output and then - on a second step - use the produced output as an input to produce another output etc…</strong></p>
+<div id="job-interviews" class="section level2">
+<h2><span class="header-section-number">11.4</span> Job-Interviews</h2>
 <ul>
-<li><u>Visualisierung</u>: Du kannst dir unter <em>Data Pipelines</em> nichts anderes als eine “Guetzli Fabrik” vorstellen, welche diverse Produktionsmaschinen verwendet - zum Beispiel einen Teig-Cutter, dann einen Butter-Schmierer, sowie einen fetten Ofen und einen Sortierer von “guten VS. schlechte Guetzli” - um die Inputs immer weiter zu verarbeiten, sodass schlussendlich ein Endprodukt (= die fertigen “Guetzli”) ensteht, dass man verkaufen kann.</li>
-</ul>
-<blockquote>
-<p><a href="https://www.youtube.com/watch?v=w9IGkBfOoic">How to create good Data-Pipelines in Scikit-Learn?</a></p>
-</blockquote>
-<ul>
-<li><u>Ziel von Data-Pipeline</u>: Write more clean // readable code, especially when you do <em>data cleaning</em>. <strong>A datapipeline is basically a way of standardizing your code</strong>.</li>
-<li><u>Warum sind Data-Pipelines so geil?</u>: Because you can <strong>compare many different regression-models (Linear-Regression Vs. Logistic-Regression Vs. RandomForrest …), applying different “scaling-techniques” (= normalize a variable with mean 0 and standard-deviation of 1), as well as using “data cleaning techniques” (= reduce dimensions via PCA, reduce missing-values etc…)</strong>. Another cool thing to note is, that <strong>you can choose the order, in which the cleaning, scaling and fitting occures!</strong>
-<ul>
-<li>See also the summary of the guy <a href="https://www.youtube.com/watch?v=w9IGkBfOoic">on Youtube ab 10:00-11:00</a>.</li>
-</ul></li>
-<li><u>Link to Github for an example</u>: <a href="https://github.com/krishnaik06/Pipelines-Using-Sklearn/blob/master/SklearnPipeline.ipynb" target="_blank">Jupyter-Notebook code-example on how to create a little Data-Pipeline by yourself</a></li>
-</ul>
-</div>
-<div id="uni-kurs-neural-networks-deep-learning" class="section level2">
-<h2><span class="header-section-number">9.11</span> Uni-Kurs <code>Neural Networks &amp; Deep Learning</code></h2>
-<div id="notation-neural-networks" class="section level3">
-<h3><span class="header-section-number">9.11.1</span> Notation Neural Networks</h3>
-<p><strong>Machine Learning verwendet unterschiedliche Begriffe für diverse gleiche Konzepte &amp; Definitionen aus den Wirtschaftswissenschaften</strong>. Nun geht es darum, die korrekte Übersetzungen für diese Wörter aufzulisten:</p>
-<ul>
-<li>weights = Beta-Coefficients = parameters = a, b = neurons</li>
-<li>Input units = independent variables “x”</li>
-<li>inputs = Anzahl Observations in Total</li>
-<li>Output unit = Dependent variable “y” = labels</li>
-<li>Activation function (AF) = you need this function to plug in your <u>estimated</u> regression model.
-<ul>
-<li><u><strong>Examples of AF</strong></u>:
-<ul>
-<li>logit,</li>
-<li>probit,</li>
-<li>relu,</li>
-<li>simple “threshold” AF etc…</li>
-</ul></li>
-</ul></li>
-<li>Perceptron = Linear Binary Classifier = usually, the perceptron is a <u>linear</u> separator (= line that separates group in a regression) = <em>Perceptron</em> is a <strong>single layer neural network</strong></li>
-<li>Multi-layer perceptron == <em>Neural Networks</em>.
-<ul>
-<li><u>Example</u>:
-<img src="./bilder/machine-learning/example-of-a-multi-layer-network.png" alt="Neural Network with 3 Layers" /></li>
-</ul></li>
-<li>learning rate = how far to go in a particular direction</li>
-<li>features = inputs = independent variables “x” = X<sub>ki</sub></li>
-<li>labels = this is the “true Y” you observe in the real world = output = dependent variable</li>
-<li>“going downhill” = this is the learning process that you get by using the method “gradient decent” (<a href="https://www.youtube.com/watch?v=L-Lsfu4ab74">look youtube video of user called “the coding train” at ca. 17:30</a>) &amp; applying a “learning rate” to it</li>
-<li>y<sub>k</sub> = this is the <u>estimated</u> regression function</li>
-<li>z<sub>k</sub> = “logits”, e.g. this is the whole <em>sum of the weights multiplied by the x-variables (= entire regression)</em>, but this time we <strong>put this entire regression as an <em>input</em> into the logistic function</strong> –&gt; <u>in other words</u>: the same as y<sub>k</sub> but we then apply the specific activation function “logit function” to the estimated z<sub>k</sub> // <span class="math inline">\(\hat{y}\)</span></li>
-<li>Input Layer = Layer 0 = very first set of Neuron</li>
-<li>Output Layer = Last Layer = last set of Neurons</li>
-<li>Hidden Layers = All Layers between the input &amp; output Layer</li>
-<li>input node = nodes at the input layer</li>
-<li>output node = nodes at the output layer</li>
-<li>hidden nodes = nodes, which are in the hidden layers or at the output layer &amp; don’t give out outputs</li>
-<li>Feed forward neural networks = connections only between layer i and layer i+1</li>
-<li>Convolutional neural networks = a type of feed-foward network</li>
-<li>Recurrent neural networks = connections flow backwards to previous layers as well</li>
-<li>supervised learning = function estimation
-<ul>
-<li><u>There are 2 different types</u>:
-<ol style="list-style-type: decimal">
-<li>regression,</li>
-<li>classification</li>
-</ol></li>
-</ul></li>
-<li>unsupervised learning = structure the data into groups (very subjective) // detecting patterns.
-<ul>
-<li>Can also be used for:
-<ol style="list-style-type: decimal">
-<li>data reduction,</li>
-<li>outlier detection</li>
-</ol></li>
-</ul></li>
-<li>loss-function = cost-function = [TRUE y - ESTIMATED <span class="math inline">\(\hat{Y}\)</span>]<sup>2</sup> = error –&gt; we define the loss-function be the “least squares”</li>
-<li>identity function = y = x bzw. f(x) = x</li>
-<li>sigmoid function = logit function</li>
-<li>bias term = error term
-<ul>
-<li><u>Note</u>: Oftmals wird der <strong>“input” für den bias term als Zahl “1”</strong> angegeben (siehe Bild oben “Example of Multi-Layer Network”, wo der bias term als Zahl “1” angegeben ist.)</li>
-</ul></li>
-<li>Epoch = means we go through the whole data set once –&gt; default is ten epochs</li>
-<li>Net Input Function = Regressionsmodell als Ganzes = sum of all weighted inputs // “x”</li>
-<li>kernel = (starting) values for the weights</li>
-<li>regularizers = penalties that are used to reduce overfitting (of the starting values for the weights?)</li>
-<li>backpropagation = back pass = when we have our error-term, we can calculate the gradient and - if the error was too big - we can backpass the error-term with the help of the <em>learning rate</em> to a previous layer and estimate new // better weights</li>
-<li>breaking symmetry = principle, which says that you need to have different initial weights for hidden units with the same activation function and same inputs</li>
-<li>batches = these are smaller samples that you take from the whole dataset, e.g. you take only a fraction of the dataset –&gt; you use batches because the computation gets faster rather than putting the whole dataset into the machine
-learning “Apparat” –&gt; Rule: the higher the batch size, the better estimates you get</li>
-<li>decay = In Machine Learning, it has become kind of standard to make learning rates dynamic, e.g. first have bigger learning rates, because you can be very wrong at the beginning with the random weights, but then - towards the end of estimation - you adapt the learning rate only very smoothly, since you slowly go towards the optimum –&gt; typically, this decay will make the learning rate smaller as the training continues.</li>
-<li>momentum = makes learning rates dynamic –&gt; If you see that - in the history of gradients - the gradients point generally in the same direction, momentum will adjust the learning rate by increasing the step size</li>
-<li>hyperparameters = <u>examples are</u>:
-<ul>
-<li>Learning rate,</li>
-<li>Learning Rate Decay,</li>
-<li>Momentum,</li>
-<li>Batch Size,</li>
-<li>Weight / Bias initialization</li>
-</ul></li>
-<li>Confusion Matrix = C = shows - in the diagonal of the matrix - how many times your predicted outcome was the same as the actual outcome. All the other numbers are saying that your model’s prediction was not in line with the actual outcome</li>
-<li>Precision = if i look at a guess // prediction, how many % my algorithm guessed correctly? –&gt; E.g. Anteil der predicted outcome <span class="math inline">\(\hat{y}\)</span>, welche korrekt mit den ture outcomes übereinstimmen.
-<ul>
-<li><u>Mathematisch ausgedrückt</u>: Im Zähler die Anzahl an übereinstimmenden predicted outcomes <span class="math inline">\(\hat{y}\)</span> &amp; im Nenner Totale Anzahl an predicted Outcomes <span class="math inline">\(\hat{y}\)</span>.</li>
-</ul></li>
-<li>Recall = if i look at an actual true outcome, how many % where guessed correctly? –&gt; E.g. Anteil der true outcome Y, welche korrekt vorhergesagt wurden
-<ul>
-<li><u>Mathematisch ausgedrückt</u>: Im Zähler die Anzahl an korrekt vorhergesehenen true outcomes &amp; im Nenner Totale Anzahl an True Outcomes.</li>
-</ul></li>
-<li>Training data = Training set is the one on which we train and fit our model basically to fit the parameters.</li>
-<li>Testing data = Testing Data is used only to assess performance of the model.</li>
-<li>Variance = Overfit = you use too much X’s // features in your model –&gt; you get too much variance in your predictions</li>
-<li>Bagging = Train the same architecture on different subsets of data</li>
-<li>Boosting = Train different model architectures on the same data</li>
-<li>data augmentation = get more data by adding noise on the input layer</li>
-<li>weight tying = Make the weights similar</li>
-</ul>
-<div id="alphabetisch-sortiert" class="section level4">
-<h4><span class="header-section-number">9.11.1.1</span> Alphabetisch sortiert:</h4>
-<p>Um die Begriffe noch leichter zu finden, habe ich sie hier noch alphabetisch sortiert:</p>
-<ul>
-<li>Activation function = you need this function to plug in your estimated regression model. Examples of AF = logit, probit, relu, simple “threshold” AF etc…</li>
-<li>backpropagation = back pass = when we have our error-term, we can calculate the gradient and - if the error was too big - we can backpass the error-term with
-the helplearning rate to a previous layer and estimate new // better weights</li>
-<li>batches = these are samples from the whole dataset –&gt; you use batches because the computation gets faster rather than putting the whole dataset into the machine
-learning “Apparat” –&gt; Rule: the higher the batch size, the better estimates you get</li>
-<li>bias term = error term</li>
-<li>breaking symmetry = principle, which says that you need to have different initial weights for hidden units with the same activation function and same inputs</li>
-<li>Confusion Matrix = C = shows - in the diagonal of the matrix - how many times your predicted outcome was the same as the actual outcome. All the other numbers are saying that your model’s prediction was not in line with the actual outcome</li>
-<li>Convolutional neural networks = a type of feed fowardnetwork</li>
-<li>decay = make learning rates dynamic –&gt; typically, this decay will make the learning rate smaller as the training continues.</li>
-<li>Epoch = means we go through the whole data set once –&gt; default is ten epochs</li>
-<li>features = inputs = independent variables “x” = X(ki)</li>
-<li>Feed forward neural networks = connections only between layer i and layer i+1</li>
-<li>“going downhill” = this is the learning process that you get by using the method “gradient decent” (look youtube video by “the coding train” at ca. 17:30) &amp; applying a “learning rate” to it</li>
-<li>Hidden Layers = All Layers between the input &amp; output Layer</li>
-<li>hidden nodes = nodes, which are in the hidden layers or at the output layer &amp; don’t give out outputs</li>
-<li>hyperparameters = examples are: Learning rate, Learning Rate Decay, Momentum, Batch Size, Weight / Bias initialization</li>
-<li>identity function = y = x bzw. f(x) = x</li>
-<li>inputs = Anzahl Observations in Total</li>
-<li>Input Layer = Layer 0 = very first set of Neuron</li>
-<li>input node = nodes at the input layer</li>
-<li>Input units = independent variables “x”</li>
-<li>kernel = (starting) values for the weights</li>
-<li>labels = this is the “true Y” you observe in the real world = output = dependent variable</li>
-<li>learning rate = how far to go in a particular direction</li>
-<li>loss-function = cost-function = [TRUE y - ESTIMATED Y(hat)]^2 = error –&gt; we define the loss-function be the “least squares”</li>
-<li>Net Input Function = Regressionsmodell als Ganzes = sum of all weighted inputs // “x”</li>
-<li>momentum = makes learning rates dynamic –&gt; If you see that - in the history of gradients - the gradients point generally in the same direction, momentum will adjust the learning rate by increasing the step size</li>
-<li>Output Layer = Last Layer = last set of Neurons</li>
-<li>output node = node at the output layer</li>
-<li>Perceptron = Linear Binary Classifier = linear seperator (= line that separates group in a regression) = Perceptron is a single layer neural network and a multi-layer perceptron is called Neural Networks.</li>
-<li>Precision = if i look at a guess // prediction, how many % my algorithm guessed correctly?</li>
-<li>Recall = if i look at an actual true outcome, how many % where guessed correctly</li>
-<li>Recurrent neural networks = connections flow backwards to previous layers as well</li>
-<li>regularizers = penalties that are used to reduce overfitting (of the starting values for the weights?)</li>
-<li>sigmoid function = logit function</li>
-<li>saling = pre-processing data</li>
-<li>supervised learning = function estimation –&gt; 2 different types: 1) regression; 2) classification</li>
-<li>Training data = Training set is the one on which we train and fit our model basically to fit the parameters.</li>
-<li>Testing data = Testing Data is used only to assess performance of the model.
-unsupervised learning = structure the data into groups (very subjective) // detecting patterns // data reduction</li>
-<li>weights = Beta-Coefficients = parameters = a, b = neurons</li>
-<li>y(k) = this is the estimated(!!) regresion function</li>
-<li>z(k) = “logits” –&gt; the same as y(k) but we then apply the specific activation function “logit function” to the estimated z(k) // y(hat)</li>
-</ul>
-</div>
-</div>
-</div>
-<div id="wörterbuch-4" class="section level2">
-<h2><span class="header-section-number">9.12</span> Wörterbuch</h2>
-<div id="synonyme-2" class="section level3">
-<h3><span class="header-section-number">9.12.1</span> Synonyme</h3>
-<ul>
-<li>Training Dataset // Training Set</li>
-<li>Testing Dataset // Test Set</li>
-<li>generalize // extrapolate</li>
-<li>relativ zu // im Verhältnis zu</li>
-<li>feed in // plug in</li>
-<li>shape // dimension</li>
-<li>target // predicted y-value</li>
-<li>Treiber // x-Variablen</li>
-<li>Score // Error</li>
-<li>Cross-Validation Score // Validation Error</li>
-<li>Volume // Speicherplatz</li>
-<li>Weights // estimated coefficients</li>
-</ul>
-</div>
-<div id="data-science" class="section level3">
-<h3><span class="header-section-number">9.12.2</span> Data Science</h3>
-<ul>
-<li><strong>Samples</strong> == number of rows // number of observations within a dataset.</li>
-<li><strong>Instance</strong>: value within a cell –&gt; konkreter “x”-Wert, welcher angenommen wird und du - beispielsweise - für eine Prediction verwenden kannst.</li>
-</ul>
-<div class="figure">
-<img src="./bilder/python-lib/pandas-df.jpg" alt="" />
-<p class="caption">This is the overview of a <code>Pandas</code> DataFrame, where an instance would be nothing else but a “value”.</p>
-</div>
-<ul>
-<li><strong>Label</strong>: <em>true</em> y-value</li>
-<li><strong>Forcasted data</strong>: These are the predictions that you do via the help of a model (–&gt; by plugging in concrete x-values), that you’ve built.</li>
-<li><strong>Training Dataset</strong>: This is the sample, that you use to estimate your model.</li>
-<li><strong>Testing Dataset</strong>: This is the <code>hold out</code>-set, which you use at the end, to check whether your model is able to generalize // extrapolate well to new data.</li>
-<li><strong>“The model is learning”</strong>: What is meant by “learning” is –&gt; given some Datenpunkt-Wolke, the computer will try and fit the “best line” [oftentimes by minimizing the sum of the squared residuals, if you use <code>OLS</code> (= Ordinary Least Squared) OR by using the <em>Gradient Descend Method</em>, when you have more data] to construct the “best model” possible.</li>
-<li><strong>Training</strong>: You are estimating a model on the trainig-dataset, such that the model “learns” from the data.</li>
-<li><strong>Bias</strong>: When a modl displays “bias”, then it means that your model is too simpel (not enough <code>X</code>-variables included, for example) and - as a result - your estimated <code>sample regression function</code> is not able to approximate the (true) underlying (unknown) <code>population regression function</code>.
-<img src="./bilder/home/def-bias-from-google.png" alt="Alternatively, this is the definition, Google-Researchers gave to bias." /></li>
-<li><strong>Overfitting</strong>: The problem of overfitting occurs when a model is <strong>too complex and captures too much detail</strong> from the <em>training</em> data. This can lead to the model being unable to generalize to new, unseen data.
-<ul>
-<li><u>Fazit</u>: This is like the problem of “<strong>low external validity</strong>”. You may have a high “internal validity”, but external validity is <em>low</em>!</li>
-</ul></li>
-<li><strong>Shuffle</strong>: englisches Wort für “mischen”. In the context of <code>splitting the dataset into test- &amp; training-data</code>, it is common practice to <code>shuffle</code> your observations within your dataset first.
-<ul>
-<li><u>Reason why you <code>shuffle</code></u>?: Shuffling data serves the purpose of
-<ul>
-<li>reducing variance AND</li>
-<li>making sure that models remain general AND</li>
-<li>overfit less.</li>
-</ul></li>
-<li><u>Merke</u>: When dealing with <em>time-series</em>, you should not use <code>shuffle</code> when <code>splitting the data</code> into training- &amp; testing-data.</li>
-</ul></li>
-<li><strong>Training Score OR Test Error</strong>: This error // score is the [oftentimes squared] difference between the <em>true</em> Y-variable and <em>predicted</em> Y-variable (= <span class="math inline">\(\hat{y}\)</span>).
-<ul>
-<li>Note that the for the formula <span class="math inline">\(\sum_i^N{(y_i-\hat{y_i})}\)</span>, the <strong><span class="math inline">\(y_i\)</span></strong> can be either related to:
-<ul>
-<li>The <strong>test</strong>-set, when you are evaluating the <em>final</em> model-performance, OR</li>
-<li>The <strong>validation</strong>-dataset, when you are evaluating how well the model is “performing” with the help of <em>Cross Validation</em>, e.g. how the model performs with an increasingly bigger <code>training dataset</code>.</li>
-</ul></li>
-</ul></li>
-<li><strong>Cross-Validation Score</strong>: This is the <em>mean</em> error // score that <strong>measures // evaluates how the model is “learning” over increasingly bigger <code>training datasets</code></strong>.
-<ul>
-<li>It is important to highlight the fact that this metric is only a <em>mean</em>, e.g. you don’t see the <em>individual</em> forecast that was being made.</li>
-<li>The <strong>main purpose</strong> of this metric is to be able <strong>to judge the model-performance very quickly: with only 1 single number, namely the mean error (by an increasing amount of sample-size)</strong>.</li>
-<li>If you have a “bad” model - e.g. a high mean error - you will need to look at the <em>individual</em> errors (and not just the mean error), in order to understand what went wrong with the model!</li>
-</ul></li>
-<li><strong>Fold</strong> == <strong>subset</strong> of the <code>training dataset</code>.
-<ul>
-<li><u>Example</u>: In a <code>K-Fold Cross-Validation</code>, you <em>randomly</em> split the <u>training set</u> into <strong>10 distinct subsets</strong>, which are called <code>folds</code>.</li>
-</ul></li>
-<li><strong>Grid</strong>: Das ist nichts anderes als die <strong>Optimierung von diversen “Modell-Parametern”</strong>.
-- <u>Beispiel</u>: Bei Random-Forrest Modellen kann man zum Beispiel die Tiefe eines Modells bestimmen, dh die relevante Frage, welche ein Forscher sich stellt, ist: <strong><em>wie viele Baum-Zweigungen die geeignesten Predictions bringen?</em></strong>. Mit Funktionen, wie zum Beispiel <code>GridSearchCV()</code> kann dieses Problem geregelt werden.</li>
-<li><strong>Classifiers</strong>: These are simply Regression-Functions, where <strong>the Y-variable is binary</strong>, e.g. die Y-Variable kann nur <code>Y = 0</code> <u>oder</u> <code>Y= = 1</code> als Werte annehmen.
-<ul>
-<li><u>Beispiele</u>:
-<ul>
-<li>Logit-Regression</li>
-<li>Probit-Regression</li>
-<li>Naive Bayes</li>
-<li>etc…</li>
-<li><u>Example</u>: Logit- &amp; Probit-Regression, or Naiv Bayes, etc…</li>
-</ul></li>
-</ul></li>
-<li><strong>feed in</strong>: Häufig im Zusammenhang mit Einsetzen von konkreten Werten für die x-Variablen in das <em>geschätzte</em> Modell, um Predictions zu erhalten.</li>
-<li><strong>Batch</strong>: sample-size when you train your model with a dataset.</li>
-<li><strong>Granularität</strong> (Beispiel): Angenommen, man möchte wissen, wie viele Tage, Stunden, Minuten und Sekunden innerhalb von 20’044 Sekunden enthalten sind → hier haben wir also <em>Granularität von 4</em> →
-<ul>
-<li><u>Lösung</u>: 4 Tage, 18 Stunden, 37 Minuten, 44 Sekunden</li>
-</ul></li>
-<li><strong>Kalibrierung des Modells</strong>: Wie wurde das Modell programmiert im Allgemeinen? → Dazu gehört - beim <code>preisprog</code>-Projekt der SBB - die Anpassung der Prognose.</li>
-<li><strong>Extrapolation</strong>: Das ist eine <em>Prediction</em>, welche mittels X-Variablen ermittelt werden, welche <u>zuvor nicht im Datensatz</u> waren.</li>
-<li><strong>Interpolation</strong>: Das ist eine <em>Prediction</em>, welche mittels X-Variablen ermittelt werden, welche <u>bereits im Datensatz</u> waren, als die Schätzung getätigt wurde.
-<strong>Pearson Korrelation</strong> == <u>Lineare</u> Korrelation</li>
-</ul>
-</div>
-<div id="time-series" class="section level3">
-<h3><span class="header-section-number">9.12.3</span> Time-Series</h3>
-<ul>
-<li><strong>Sliding Window</strong>: This is just a way to tell python how to do a cross-validation and have equal lengths of time series where we can learn on.</li>
-<li><strong>Forecasting Horizon</strong>: These are the points in time (in the future), for which you want to make a prediction (= <span class="math inline">\(\hat{y}\)</span>). This is something, you need to define, when you want to estimate your model in a <em>time-series</em> setting.</li>
-<li><strong>Learning Task</strong>: Forecasting Task // Extrapolation [in Time Series] –&gt; <em>not sure if this is correct</em>… xD</li>
-<li><strong>Time Heterogenous Data</strong>: These are different time-series datasets, that have different time stamps.
-<ul>
-<li><u>Quelle</u>: Ab 27:05 (Link: <a href="http://www.youtube.com/watch?v=Wf2naBHRo8Q&amp;t=27m05s" class="uri">http://www.youtube.com/watch?v=Wf2naBHRo8Q&amp;t=27m05s</a>)</li>
-</ul></li>
-<li><strong>Seasonal Periodicity</strong>: The number of times per year, in which the forecaster expects to see a seasonal pattern.
-<ul>
-<li><u>Concrete Example</u>: In Philipp’s Notebook, he had a seasonal periodicity of 2, e.g. he said that in winter &amp; sommer, he expects a seasonal pattern.</li>
-</ul></li>
-<li><strong>“Reduction is composable”</strong>: Synonym wäre “addieren” → E.g. you can split a difficult task into a bunch of smaller tasks (= <code>reduction</code>) and “add” them together to solve the bigger task at the end → “reduction is composable”…</li>
-</ul>
-</div>
-</div>
-<div id="quellen" class="section level2">
-<h2><span class="header-section-number">9.13</span> Quellen</h2>
-<ul>
-<li><a href="https://blog.exxactcorp.com/lets-learn-the-difference-between-a-deep-learning-cnn-and-rnn/" class="uri">https://blog.exxactcorp.com/lets-learn-the-difference-between-a-deep-learning-cnn-and-rnn/</a>
-<a href="https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Fall.2016/notes/Sonia_Hornik.pdf" class="uri">https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Fall.2016/notes/Sonia_Hornik.pdf</a></li>
+<li><u>Vorbereitung Data-Science Interviews</u>: <a href="https://www.kdnuggets.com/2020/01/data-science-interview-study-guide.html">Diese Webseite</a> hat einen kompletten Guide mit Videos / Artikeln zu extrem vielen Key-Concepts gesammelt und zur Verfügung gestellt.</li>
 </ul>
 
 </div>
@@ -850,8 +463,8 @@ unsupervised learning = structure the data into groups (very subjective) // dete
           </div>
         </div>
       </div>
-<a href="econometrics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="mengenlehre.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="mengenlehre.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="openai.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -883,7 +496,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/joffreymayer/ds-from-scratch/edit/master/09-machine-learning.Rmd",
+"link": "https://github.com/joffreymayer/ds-from-scratch/edit/master/98-unternehmens-welt.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -891,7 +504,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/joffreymayer/ds-from-scratch/blob/master/09-machine-learning.Rmd",
+"link": "https://github.com/joffreymayer/ds-from-scratch/blob/master/98-unternehmens-welt.Rmd",
 "text": null
 },
 "download": null,

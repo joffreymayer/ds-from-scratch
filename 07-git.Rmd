@@ -2,18 +2,123 @@
 
 If you work on projects, especially when collaborating in teams, it is very important to use a versioncontrol system, such as - for example - `Git`.
 
+_In this chapter, I will give you a list of useful `Git`-commands, that you will be likely to use_.
 
-## Useful `Git`-Commands
+## Wörterbuch 
+	
+- pull request = "Take some changes from a particular branch and bring it into another branch."
+	- <u>Achtung</u>: es ist eine *Request*, es wurde noch nichts gemerged! Für das brauch es noch `merge` als zusätzlichen Befehl. 		
+- `fork a repo` = "Take someone else's repo - because you love it 😊  - and put it into your own list of repos, in order to be able to edit it yourself without affectig the original repository of the owner."
+- `commit` = save
+- `hash` = unique identifier in the history of files. A `has` is a huge string composed of characters (= Buchstaben) & numbers and is used when using a version-control software, such as `Git`.
+- `git add` =  Der Befehl `git add` wird zu vielen verschiedenen Zwecken eingesetzt. Man verwendet ihn, um: 
+  1) neue Dateien zur Version-Control hinzuzufügen, 
+  2) Dateien für einen Commit vorzumerken, UND
+  3) verschiedene andere Dinge – beispielsweise einen Konflikt aus einem Merge als aufgelöst zu kennzeichnen. 
+Leider wird der Befehl `git add` oft missverstanden. Viele assoziieren damit, dass damit Dateien zum Projekt hinzugefügt werden. Wie Sie aber gerade gelernt haben, wird der Befehl auch noch für viele andere Dinge eingesetzt. Wenn Sie den Befehl git add einsetzen, sollten Sie das eher so sehen, dass Sie damit einen bestimmten Inhalt für den nächsten Commit vormerken (= also Punkt (2) ist vor allem relevant in der obigen Liste.
+				
+> How to tell the original owner you want to merge <u>your</u> changes that you made back into their orignal repo and implement them those changes into their original work // repo?
+				
+Look at [the youtube video from Coding Train ab 9:35-11:50](https://www.youtube.com/watch?v=_NrSWLQsDL4&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=3)
+  
+  - To see how to **refer** to issues & bugs in your code <u>directly</u> via your commit-command, [look at the youtube video ab 6:35-7:40](https://www.youtube.com/watch?v=WMykv2ZMyEQ&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=4) and to <u>diretly</u> **close** issues, because you resolved it, look [look at the youtube video ab 7:40-8:55](https://www.youtube.com/watch?v=WMykv2ZMyEQ&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=4).
 
-### Activate the automatic Password: from local Computer to Github
+> What is a remote?
 
-If you use `Github`, you will absolutely need an `shh-key`, where `Github` gets the `public-key` and your computer has the `private-key` to establish an **automatic connection** when you work on your local computer and you want to push some changes to the Github-Cloud.
+A remote is a **duplicate instance of your repository (on your local computer)** that lives somewhere else on a remote server (like Github).
+				
+## First time using Git &amp; Github
+
+There are specific `Git`-commands that you need to know, when you begin to start to work with `Git` and Gibthun for the first time. Note that all these `Git`-commands need to be typed <u>within the Terminal</u> on your local computer.
+	
+- `git config --list` = Sehr wichtig, **wenn du `Git` zum ersten Mal via einem neuen Computer runst**! Dieser Befehl zeigt dir, welchen Username & Email du aktuell  verwendest (schaue bei `user.name` & `user.email`, ob es deine Github Anmelde-Daten sind). Es ist key - **insbesondere, wenn du neu mit Git beginnst** - dass diese  Parameter mit deinen Github Anmelde-Daten übereinstimmen! Ansonsten musst du immer `git clone` machen und die ältere Version in einen "alt"-Ordner tun, was extrem mühsam ist. 
+  - Wenn du noch keinen `user.name` hast, dann gebe folgenden Code in die Command-Line ein: `git config --global user.name 'Dein_Github_UserName'`.
+	  - <u>Beachte</u>: Schreibe den Namen <u>**mit**</u> die Anführungszeichen!
+  - Wenn du noch keinen `user.name` hast, dann gebe folgenden Code in die Command-Line ein: `git config --global user.name 'deineEmail@email.ch'`.
+	  - <u>Beachte</u>: Schreibe die Email <u>**ohne**</u> die Anführungszeichen!
+  - <u>Check if it worked</u>?: Gebe wieder den Befehl `git config --list` und schaue bei `user.name` & `user.email`, ob dort deine Github Anmelde-Daten übernommen wurden.
+	
+- `git push` = this is the act of sending to `Github`.
+- `git pull` = this is the act of receiving from `Github`.
+
+## 2 Key concepts in Git
+
+Before starting to work with `Git`, you need to understand that there are 2 ways of starting a project:
+
+```
+1) Create a `remote` repository on Github and then `cloning` it - via Git - on your local computer to work from there.
+2) Creating a repository `locally` on your computer and then - aftre a few months working on this repository - adding it to Github.
+```
+
+*Depending on which of those 2 different ways you choose to start a project (create a repo right from the get-go on `Github` VS. work locally and then - after some time - push everything to `Github`), the Git-Commands will slightly differ.*
+
+### Start Project via Github | Remote-Possibility
+		
+> What are the Git-Commands, if you start your project directly by creating a Repo on Github (= *possibility 1*) above)? 
+		
+- `git clone https://github.com/joffreymayer/tageb.git` == Will clone your <u>remote</u> directory `tageb` - which is currently on Github on your <u>local</u> computer, which is simpler // more comfy when working on projects =)
+- `git status` = Assume that you worked on & modified a file on your local computer that you previously had on Github (you cloned the directory with the file in it on your local computer). With the command `git status`, `Git` will check whether there is any changes between your local files VS. the files in the remote directory on the Github-Server // -Website.
+- <a name="anchor-1">`git commit -a -m "Test comment for a commit"`</a> = If you changed a file locally and you are happy with your results, you will need to make a `commit` (= save) <u>and</u> `add` all files (= this is why we have an input // argument `-a`; the concept of `adding` will be explored in the chapter below, where you want to put a local repo into Github after a few months) and you also want to document, what exactly you modified, if you need to go back to a previous version of your file (= this is why we have an input // argument `-m "comment is here..."`).
+- `git push origin master` = If you have done some changes locally on your file, you can now `push` everything on the Github-Website.
+- `git log` = see, locally, the history of your `git commit`s.
+	- <u>Achtung</u>: When running this command, you might - accidentally - run into a dangerous environment called `VIM`, which is a terminal-based text-editor. The problem when you are in `VIM`, is that you might not be able to get out of it. 
+		-<u>Solution</u>: To get out of `VIM`, just type in `:q` and you will get out of it.
+- `git remote -v` = This will tell you which URL is the `remote` on which your repository is hosted.
+	- <u>Merke</u>: The URL of your repo is *assigned* to the variable `origin` in `Git`.
+	
+### Start Project via local computer | Local-Possibility
+		
+> What commands do you need, when you decide - after a few months working <u>locally</u> on your computer - to put everything on Github (= *possibility 2*)?
+		
+- `git init` == To get started, you need to go to your repository with your terminal - e.g. set the working directory with `cd Joffrey\dokumente\my_project`) first - and, then, transform your repository to a *Git-Repository* by just typing `git init` into your terminal.
+- `git add single_file.txt` == *After* you initialized your repository, you will have an **empty git-repository**. `Git` will <u>not</u> `track` the files in your repository (= `untracked files`), unless you explicitly point them out via the `git add` command.
+	- <u>If you want to add all files quickly // simultanoeusly</u>: `git add .`
+	- <u>Für genauere Theorie // Erklärung dahinter</u>: Siehe Youtube-Video Coding Train ab [2:10-6:03](https://www.youtube.com/watch?v=9p2d-CuVlgc&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=7)
+- `git commit -m "Adding a new comment for my commit"`: *After* having pointed out to `Git`, which files he needs to track, you can do a `commit` of the changes of the files you modified, like in *possibility 1)*. 
+	- <u>Achtung, es gibt einen kleinen Unterschied zu *possibility 1)*</u>: das `-a` ([siehe oben](#anchor-1)) ist verschwunden, weil wir hier `add` und `commit` als zwei separate Schritte betrachten.
+- `git remote add origin https://github.com/joffreymayer/new-repo` = Because our repository is still currently not on `Github`, we <u>first</u> need to [go on the Github Website](https://github.com/joffreymayer?tab=repositories) and create an <u>empty</u> repository. *After* having done this, you need to tell `Git` - with the command `git remote add origin` + **copy-pasting the URL** "https://github.com/joffreymayer/new-repo" - that this is our local 
+	- <u>Check if it worked</u>: Type the following into the Terminal `git remote -v`. It should output the variable name - usually called `origin` - 
+		- <u>Note if you want to be fancy</u>: Within `git remote add origin`, the name `origin` can be changed to any word you like. This is just the variable name in which your Github-URL will be stored.
+	- If there is already a remote with the default name `origin` but you don't like the name, you can change the name by: 
+		1) `git remote remove origin` --> this will delete the remote
+		2) `git remote -v` --> just to check if step 1) worked --> should not output anything
+		3) `git remote add noob https:\\github.com\project-1` --> now, re-name the remote and call it `noob` 
+- `git push origin master` == *Finally*, you will be able to put all your files into the freshly made remote-repository on `Github`.
+- `git pull origin master` == Assume that you did changes `remotly` on Github but not yet locally on your computer. This does not matter, since you can just enter the command `git pull origin master` to be able to retrieve the changes that you did `remotly` on Github onto your local computer =)
+
+## Working with Branches
+		
+> Tutorial for branches?
+
+Look at [youtube-videos from Coding Train](https://youtu.be/oPpnCh7InLY).
+		
+- `git branch new_branch` == this will create a branch locally on your computer
+- `git checkout new_branch` == this will tell `Git`: "ah, he wants to go into the branch called 'new_branch'".
+- `git branch` == this will give you a list of all the branches you ave created locally. Furthermore, it will tell you on which branch you currently work on.
+
+> How to merge the changes you made on a separate branch to the `master-branch` (= main branch)?
+		
+1) `git branch new_branch` == this will **create a branch** called `new_branch` locally on your computer.
+2) `git checkout new_branch` == You will tell `Git`: "I now want to **work on this newly created branch** called 'new_branch'".
+3) `git checkout master` == *After* you are happy with the changes you did in `new_branch` you will need to prepare for the merging by **switching to your main-branch**, which is the `master`-branch.
+4) `git merge new_branch` == Since you currently are in the `master-branch`, Git will know that you want to **merge** `new_branch` <u>into</u> the `master-branch`.
+
+## Set-Up an SSH-Key for Github
+
+Whenever you will work with `Git` and `Github`, you will always need to type in your password, whenever you push something to the `Github`-Cloud. Therefore, you will absolutely need an `shh-key`, where `Github` gets the `public-key` and your computer has the `private-key` to establish an **automatic connection** when you work on your local computer and you want to push some changes to the Github-Cloud.
 
 In order to activate the connection between your local computer and the Github-Cloud, you will need to type in the following command **into your terminal**:
 
-`git remote set-url origin git@github.com:Your_Github_UserName_here/Name_of_Your_Remote_Repository_on_Github.git`
+```
+git remote set-url origin git@github.com:Your_Github_UserName_here/Name_of_Your_Remote_Repository_on_Github.git
+```
 
-### Create a `.gitignore`-file
+
+Follow the instructions on [this Youtube-Video from WebDevSimplified](https://www.youtube.com/watch?v=HfTXHrWMGVY&t=1m52s) from `WebDevSimplified` in order to set-up your `ssh-key` =)
+		
+That was it 😎
+
+## Create a `.gitignore`-file
 
 You will NEVER want to use version-control on every single file in your repository. That's why you need a `.gitignore`-file, in which you can write - on each line - which paths can be ignored. 
 
@@ -26,7 +131,7 @@ You will NEVER want to use version-control on every single file in your reposito
 - <u>It can be a path to a repository that you don't want to stage</u>: `/bilder`
 - <u>It can be all `log`-files</u>: `**.log`
 
-### Speicherplatz verwendet durch `Git`-History
+## Speicherplatz verwendet durch `Git`-History
 
 Um den Status zu erhalten, brauchen wir bloss, den folgenden Code einzugeben: 
 `git count-objects -v`.
@@ -47,7 +152,7 @@ size-garbage: 0
 
 Der size-pack Eintrag gibt die Größe Ihrer Packdateien in Kilobyte an. Somit verwenden Sie **fast 5 MB an Speicherplatz**. Das ist **oftmals zu gross, beispielsweise Bild-Dateien sind hier enthalten**, die man nicht - wie zum Beispiel HTML-Files - ständig bearbeitet. Deshalb solltest du diese nicht alles in deinem Repository stagen!
 
-### Unstage everything
+## Unstage everything
 
 Dieser Befehl enthält zwar den gefährlichen Befehel `rm`, doch hier werden keine Files deleted, sondern bloss die _komplette_ `git`-history gelöscht:
 
@@ -55,10 +160,10 @@ Dieser Befehl enthält zwar den gefährlichen Befehel `rm`, doch hier werden kei
 
 > Warum will man die gesamte `Git`-History löschen?
 
-Weil man muss nicht alles via Version-Control verwalten. Ein gutes Beispiel sind Bild-Dateien, welche man _nicht_ - im Gegensatz zu HTML- oder CSS-Files - häufig bearbeitet. 
+Weil man muss nicht alles via Version-Control verwalten. Ein gutes Beispiel sind Bild-Dateien, welche man <u>nicht</u> - im Gegensatz zu HTML- oder CSS-Files - häufig bearbeitet. 
 
-Ein zweiter Nachteil, wenn alles via Version-Control läuft, ist, dass es viel zu viel Speicher benötigt, obwohl `Git` Bilder zwar komprimiert, aber diese bleiben trotzdem grosse Dateien...
+Ein **zweiter Nachteil**, wenn alles via Version-Control läuft, ist, dass es **viel zu viel Speicher benötigt**, obwohl `Git` Bilder zwar komprimiert, aber diese bleiben trotzdem grosse Dateien...
 
-### Stage only a certain type of file - for example - only `.html`-files
+## Stage only a certain type of file - for example - only `.html`-files
 
 - `git add *.html`

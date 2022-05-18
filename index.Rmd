@@ -733,114 +733,6 @@ Let's assume, that we took `PyCharm` as our IDE. We do the following steps:
 2) Once you opened the PyCharm-`Terminal`, go to the directory that will be used for the Jupyter Notebook, by typing something as `cd /some_folder_name`.
 3) Finally, type in `jupyter notebook` in the `Terminal` to launch the Jupyter Notebook App. The notebook interface will appear in a new browser window or tab.
 
-## Git &amp; Github: 
-	
-- `pull request` = "Take some changes from a particular branch and bring it into another branch."
-	- <u>Achtung</u>: es ist eine *Request*, es wurde noch nichts gemerged! Für das brauch es noch `merge` als zusätzlichen Befehl. 		
-- `fork a repo` = "Take someone else's repo - because you love it 😊  - and put it into your own list of repos, in order to be able to edit it yourself without affectig the original repository of the owner."
-- `commit` = save
-- `hash` = unique identifier in the history of files. A `has` is a huge string composed of characters (= Buchstaben) & numbers and is used when using a version-control software, such as `Git`.
-- `git add` =  Der Befehl `git add` wird zu vielen verschiedenen Zwecken eingesetzt. Man verwendet ihn, um: 
-  1) neue Dateien zur Version-Control hinzuzufügen, 
-  2) Dateien für einen Commit vorzumerken, UND
-  3) verschiedene andere Dinge – beispielsweise einen Konflikt aus einem Merge als aufgelöst zu kennzeichnen. 
-Leider wird der Befehl `git add` oft missverstanden. Viele assoziieren damit, dass damit Dateien zum Projekt hinzugefügt werden. Wie Sie aber gerade gelernt haben, wird der Befehl auch noch für viele andere Dinge eingesetzt. Wenn Sie den Befehl git add einsetzen, sollten Sie das eher so sehen, dass Sie damit einen bestimmten Inhalt für den nächsten Commit vormerken (= also Punkt (2) ist vor allem relevant in der obigen Liste.
-				
-> How to tell the original owner you want to merge <u>your</u> changes that you made back into their orignal repo and implement them those changes into their original work // repo?
-				
-Look at [the youtube video from Coding Train ab 9:35-11:50](https://www.youtube.com/watch?v=_NrSWLQsDL4&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=3)
-  
-  - To see how to **refer** to issues & bugs in your code <u>directly</u> via your commit-command, [look at the youtube video ab 6:35-7:40](https://www.youtube.com/watch?v=WMykv2ZMyEQ&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=4) and to <u>diretly</u> **close** issues, because you resolved it, look [look at the youtube video ab 7:40-8:55](https://www.youtube.com/watch?v=WMykv2ZMyEQ&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=4).
-
-> What is a remote?
-
-A remote is a **duplicate instance of your repository (on your local computer)** that lives somewhere else on a remote server (like Github).
-				
-### First time using Git &amp; Github
-
-There are specific `Git`-commands that you need to know, when you begin to start to work with `Git` and Gibthun for the first time. Note that all these `Git`-commands need to be typed <u>within the Terminal</u> on your local computer.
-	
-- `git config --list` = Sehr wichtig, **wenn du `Git` zum ersten Mal via einem neuen Computer runst**! Dieser Befehl zeigt dir, welchen Username & Email du aktuell  verwendest (schaue bei `user.name` & `user.email`, ob es deine Github Anmelde-Daten sind). Es ist key - **insbesondere, wenn du neu mit Git beginnst** - dass diese  Parameter mit deinen Github Anmelde-Daten übereinstimmen! Ansonsten musst du immer `git clone` machen und die ältere Version in einen "alt"-Ordner tun, was extrem mühsam ist. 
-  - Wenn du noch keinen `user.name` hast, dann gebe folgenden Code in die Command-Line ein: `git config --global user.name 'Dein_Github_UserName'`.
-	  - <u>Beachte</u>: Schreibe den Namen <u>**mit**</u> die Anführungszeichen!
-  - Wenn du noch keinen `user.name` hast, dann gebe folgenden Code in die Command-Line ein: `git config --global user.name 'deineEmail@email.ch'`.
-	  - <u>Beachte</u>: Schreibe die Email <u>**ohne**</u> die Anführungszeichen!
-  - <u>Check if it worked</u>?: Gebe wieder den Befehl `git config --list` und schaue bei `user.name` & `user.email`, ob dort deine Github Anmelde-Daten übernommen wurden.
-	
-- `git push` = this is the act of sending to `Github`.
-- `git pull` = this is the act of receiving from `Github`.
-
-### 2 Key concepts in Git
-
-Before starting to work with `Git`, you need to understand that there are 2 ways of starting a project:
-
-```
-1) Create a `remote` repository on Github and then `cloning` it - via Git - on your local computer to work from there.
-2) Creating a repository `locally` on your computer and then - aftre a few months working on this repository - adding it to Github.
-```
-
-*Depending on which of those 2 different ways you choose to start a project (create a repo right from the get-go on `Github` VS. work locally and then - after some time - push everything to `Github`), the Git-Commands will slightly differ.*
-
-#### Start Project via Github (remote-possibility)
-		
-> What are the Git-Commands, if you start your project directly by creating a Repo on Github (= *possibility 1*) above)? 
-		
-- `git clone https://github.com/joffreymayer/tageb.git` == Will clone your <u>remote</u> directory `tageb` - which is currently on Github on your <u>local</u> computer, which is simpler // more comfy when working on projects =)
-- `git status` = Assume that you worked on & modified a file on your local computer that you previously had on Github (you cloned the directory with the file in it on your local computer). With the command `git status`, `Git` will check whether there is any changes between your local files VS. the files in the remote directory on the Github-Server // -Website.
-- <a name="anchor-1">`git commit -a -m "Test comment for a commit"`</a> = If you changed a file locally and you are happy with your results, you will need to make a `commit` (= save) <u>and</u> `add` all files (= this is why we have an input // argument `-a`; the concept of `adding` will be explored in the chapter below, where you want to put a local repo into Github after a few months) and you also want to document, what exactly you modified, if you need to go back to a previous version of your file (= this is why we have an input // argument `-m "comment is here..."`).
-- `git push origin master` = If you have done some changes locally on your file, you can now `push` everything on the Github-Website.
-- `git log` = see, locally, the history of your `git commit`s.
-	- <u>Achtung</u>: When running this command, you might - accidentally - run into a dangerous environment called `VIM`, which is a terminal-based text-editor. The problem when you are in `VIM`, is that you might not be able to get out of it. 
-		-<u>Solution</u>: To get out of `VIM`, just type in `:q` and you will get out of it.
-- `git remote -v` = This will tell you which URL is the `remote` on which your repository is hosted.
-	- <u>Merke</u>: The URL of your repo is *assigned* to the variable `origin` in `Git`.
-	
-#### Start Project via local computer (local-possibility)
-		
-> What commands do you need, when you decide - after a few months working <u>locally</u> on your computer - to put everything on Github (= *possibility 2*)?
-		
-- `git init` == To get started, you need to go to your repository with your terminal - e.g. set the working directory with `cd Joffrey\dokumente\my_project`) first - and, then, transform your repository to a *Git-Repository* by just typing `git init` into your terminal.
-- `git add single_file.txt` == *After* you initialized your repository, you will have an **empty git-repository**. `Git` will <u>not</u> `track` the files in your repository (= `untracked files`), unless you explicitly point them out via the `git add` command.
-	- <u>If you want to add all files quickly // simultanoeusly</u>: `git add .`
-	- <u>Für genauere Theorie // Erklärung dahinter</u>: Siehe Youtube-Video Coding Train ab [2:10-6:03](https://www.youtube.com/watch?v=9p2d-CuVlgc&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=7)
-- `git commit -m "Adding a new comment for my commit"`: *After* having pointed out to `Git`, which files he needs to track, you can do a `commit` of the changes of the files you modified, like in *possibility 1)*. 
-	- <u>Achtung, es gibt einen kleinen Unterschied zu *possibility 1)*</u>: das `-a` ([siehe oben](#anchor-1)) ist verschwunden, weil wir hier `add` und `commit` als zwei separate Schritte betrachten.
-- `git remote add origin https://github.com/joffreymayer/new-repo` = Because our repository is still currently not on `Github`, we <u>first</u> need to [go on the Github Website](https://github.com/joffreymayer?tab=repositories) and create an <u>empty</u> repository. *After* having done this, you need to tell `Git` - with the command `git remote add origin` + **copy-pasting the URL** "https://github.com/joffreymayer/new-repo" - that this is our local 
-	- <u>Check if it worked</u>: Type the following into the Terminal `git remote -v`. It should output the variable name - usually called `origin` - 
-		- <u>Note if you want to be fancy</u>: Within `git remote add origin`, the name `origin` can be changed to any word you like. This is just the variable name in which your Github-URL will be stored.
-	- If there is already a remote with the default name `origin` but you don't like the name, you can change the name by: 
-		1) `git remote remove origin` --> this will delete the remote
-		2) `git remote -v` --> just to check if step 1) worked --> should not output anything
-		3) `git remote add noob https:\\github.com\project-1` --> now, re-name the remote and call it `noob` 
-- `git push origin master` == *Finally*, you will be able to put all your files into the freshly made remote-repository on `Github`.
-- `git pull origin master` == Assume that you did changes `remotly` on Github but not yet locally on your computer. This does not matter, since you can just enter the command `git pull origin master` to be able to retrieve the changes that you did `remotly` on Github onto your local computer =)
-
-### Working with Branches
-		
-> Tutorial for branches?
-
-Look at [youtube-videos from Coding Train](https://youtu.be/oPpnCh7InLY).
-		
-- `git branch new_branch` == this will create a branch locally on your computer
-- `git checkout new_branch` == this will tell `Git`: "ah, he wants to go into the branch called 'new_branch'".
-- `git branch` == this will give you a list of all the branches you ave created locally. Furthermore, it will tell you on which branch you currently work on.
-
-> How to merge the changes you made on a separate branch to the `master-branch` (= main branch)?
-		
-1) `git branch new_branch` == this will **create a branch** called `new_branch` locally on your computer.
-2) `git checkout new_branch` == You will tell `Git`: "I now want to **work on this newly created branch** called 'new_branch'".
-3) `git checkout master` == *After* you are happy with the changes you did in `new_branch` you will need to prepare for the merging by **switching to your main-branch**, which is the `master`-branch.
-4) `git merge new_branch` == Since you currently are in the `master-branch`, Git will know that you want to **merge** `new_branch` <u>into</u> the `master-branch`.
-
-### Set-Up an SSH-Key for Github
-
-Whenever you will work with `Git` and `Github`, you will always need to type in your password, whenever you push something to the `Github`-Cloud. 
-
-*That's why you should start using an SSH-Key, giving `Github` your public-key and your computer the private-key.
-
-[This Youtube-Video](https://www.youtube.com/watch?v=HfTXHrWMGVY&t=1m52s) from `WebDevSimplified` will show you how to do it =)
-		
-That was it 😎
 
 ## LaTeX
 
@@ -854,22 +746,20 @@ Simply type:
 $\hat{y}$
 ```
 
+### Useful Websites
+
+- <u>Frequent Formulas as LaTeX-Code</u>: http://www.malinc.se/math/latex/basiccodeen.php#:~:text=The%20code%20%5Ctimes%20is%20used,never%20be%20negative%20by%20definition.
+- <u>LaTeX-Converter</u>: http://www.sciweavers.org/free-online-latex-equation-editor
+
 ## Wörterbuch
 
 Jargon of a domain - like in Artificial Intelligence, Software Development or Economics - is one of the biggest challenges if you truly want tounderstand and master a new subject. 
 
 Scientists love to create sophisticated new words for new discoveries, methods or conclusions that they came to uncover in their respecitve fields. The problem with that, is that it acts as a huge market-barrier to those that want to enter the world many years later. You can see this even for "non-scientific" things, like the Pokemon franchise, that grow from 150 Pokemon to almost 1'000 Pokemons. The problem is, that the audience does not nearly grow as much, as in the beginning and that the new generation is not so enthousiastic about it, partly because the field has become too large for noobies. 
 
-That's why it is form utmost importance to know each field's jargon. I firmly believe that it is one of the biggest chalenges to overcome in order to be good at something. Because when you are able to "decode" the jargon, you can start "understand" the things. And when you understand, you can start applying, and that is where the fun truly begins :)
+That's why it is form utmost importance to know each field's jargon. I firmly believe that it is one of the biggest chalenges to overcome in order to be good at something. Because when you are able to "decode" the jargon, you can start "understand" the things. And when you understand, you can start applying, and that is where the fun truly begins!
 
-### Allgemein
-
-- Overfitting = The problem of overfitting occurs when a model is **too complex and captures too much detail** from the _training_ data. This can lead to the model being unable to generalize to new, unseen data.
-  - <u>Fazit</u>: This is like the problem of "**low external validity**". You may have a high "internal validity", but external validity is _low_! 
-
-### Synonyme
-
-- Source == Programming Language (any kind of)
+And this is why you will almost find a "Wörterbuch"-sub-chapter in every chapter of this bookdown :)
 
 ### Data Science VS. mein Economics-Studium
 
@@ -877,212 +767,13 @@ That's why it is form utmost importance to know each field's jargon. I firmly be
 
 - <u>Erkenntnis</u>: Machine Learning wird als eine "Black Box" betrachtet, wo man den X-Variablen des Modells keine grosse Beachtung schenkt: man bringt sie einfach ins Modell rein. Im Kontrast dazu, sind Ökonomen mehr dazu getrimmt, mit Hilfe eines theoretischen Modells, die "richtigen" X-Variablen zu selektieren. Man nennt dies dann auch "structural econometrics".
 
+- <u>Erkenntnis 2</u>: Bei uns im Studium wurde - _VOR_ der Modellschätzung - der Schritt vom "Data-Splitting (into Train- & Test-Set)" <u>nie</u> gemacht, da diese Simulations-Methoden schlichtweg sehr wenig verbreitet sind im Forschungs-Feld. 
+
 > What is artificial intelligence?
 
-Artificial intelligence is a branch of computer science that deals with the creation of "intelligent agents", which are systems that can _reason, learn, and act autonomously_.
+Artificial intelligence is a branch of computer science that deals with the creation of "intelligent agents", which are systems that can _reason, learn, and act autonomously_. 
 
-### IDE explained
-
-> What is an **IDE**?
-
-- <u>Abkürzung</u>: `IDE` == Integrated Development Environment
-- <u>Definition</u>: An integrated development environment (IDE) is software for building applications. It combines common developer tools into a single graphical user interface (GUI).
-  - <u>Example</u>: R, PyCharm oder Visual-Studio Code are all IDEs. Think of it as a modern Dream Weaver! :)
-  
-> Was ist `IDE PyCharm`?
-
-Das ist das RStudio von Python.
-  
-### Restful API
-
-In a Rest API, every
-  
-> What are **Rest APIs**? 
-
-- <u>Synonym</u>: Restful APIs
-- <u>Defintion</u>: API stands for *<u>A</u>pplication <u>P</u>rogramming <u>I</u>nterface*. It **is a way for 2 computers to "talk" // communicate with each other**. During the talk, one computer sends a "request", while the other sends the "response". *How is this possible?* In order for you to use an API (e.g. to enable the "talking" between the computers), you need to write code to explicitly "request" data from a server // computer. Most APIs in the world are **"restful"**, e.g. they follow some set of rules // constraints known as "representational state transfer", which is the "gold-standard" for API-development since the early 2000's (invented by **Roy Fielding**, in its PhD dissertation).
-  - <u>Example</u>: If you are a "noob", you can retrieve the NASA-images of asteroids by looking at their websites. However, you could also use NASA's "Rest API" to get the data via a `.json`-file.
-  - <u>How it works?</u>: From a architecture point a view, a Rest API, organizes "data entities" // resources into a bunch of unique URLs. Well, technically speaking, they are NOT URLs, but rather "URIs" (aka "uniform resource identifier"), which identifies exactly each data-resource on the server. A client can then retrieve // get the data about a resource by making a request to the server // "endpoint" (over the "http"-protocol). This request has a very specific format, see [this youtube-video (ab 1:03)](https://www.youtube.com/watch?v=-MTSQjw5DrM&t=103s).
-  - <u>"Stateless" Architecture (key to know)</u>: The two parties // computers **don't need to store any information about each other** <u>AND</u> every "request-response"-cycle is **independent** from another "request-response"-cycle. These two characteristics are important, because  it leads to an application that is **predictable** AND **reliable**.
-	- Quelle: [Pokemon-API](https://pokeapi.co/about)
-- <u>Zusammengefasst in meinen Worten</u>: **Ein API sind Befehle, die du gibst, um mit einer Datenbank (z.B. auf einem Server) zu kommunizieren ODER ein Package (in R oder Python) zum runnen zu bringen.** Ganz einfach xD
-- <u>Background Client-Server Architecture</u>: most of the applications these days, follow this architecture.
-  - Client == App itself == Front-End
-  - Server == Back-End
-  
-- Communication between the Sever & the Client (= App) happens via API by using the `Http Protocol`.
-  - <u>Example</u>: if the App wants to access the particular data of a customer, it sends a request to the server via http-protocol.
-- **So, when does the `Rest API` comes into play?** --> the Rest API is **a standard that established itself in the industry, when communaction between client & server** --> these are the `CRUD Operations`, which are by definition: 
-  
-    1) `GET` == *getting the data from the server*
-    2) `POST` == *creating data*
-    3) `PUT` == *updating data*
-    4) `DELETE` == *deleting data*
-    
-#### API Example
-
-> Beispiel eines `API` in Python?
-
-Das Modul // Package `sktime` verwendet einen ähnlichen `API`, wie die berühmte Machine-Learning `sklearn`-Library. Hierbei wäre der Programmierer (= Du) als *Forecaster* verstanden, welcher via sogannten *methods* (zum Beispiel die *fit-method*, um das Modell zu trainieren // estimaten) mit der *application* (= hier: Python) interagiert.
-
-### Magic Commands in Python 
-
-> "Magic Commands" in Python, mit denen du unglaublich schnell herausfinden kannst, was eine Funktion überhaupt tut UND welche Inputs in eine Funktion gehören?
-
-1) `shift` + `Tab` &#8594; wenn du nicht weisst, was eine Funktion // Method tut
-2) `Tab` &#8594; innerhalb einer Funktion, um eine Übersicht zu allen Inputs zu erhalten! xD
-
-### Pipe-Operator in R
-
-> What is the `Pipe-Operator` in `R` and what does it do?
-
-The Pipe-Operator in `R` looks like this: `%>%`. It takes in an input and "transports" it into another function to use the input and produces an output. This verbal explanation can be best illustrated via a code-example in R: 
-
-```
-library(tidyverse)
-result <- mtcars %>% 
-    group_by(cyl) %>% 
-    summarise(meanMPG = mean(mpg))
-```
-
-- Quelle: [A Guide to the Pipe in R](https://towardsdatascience.com/an-introduction-to-the-pipe-in-r-823090760d64#:~:text=The%20pipe%20operator%20feeds%20the,the%20tibble%20result%20%2C%20shown%20below.)
-
-### Docker
-
-> Was ist `Docker` und was ist der Vorteil davon?
-
-Docker wird verwendet, um ein **Virtual Environment** zu bilden, welches - wie ein Container - dir Punktgenaue Versionen von bestimmten Packages und Programmiersprachen (Python etc.) liefert. `Docker` läuft über `Open Shift`, welches eine Art **Management-Programm** für `Docker` ist (so viel ich das verstanden habe...).
-
-#### Definitions
-
-- `Image` - An image is an environment that has been built from a series of instructions called a `DockerFile`. Images can be prebuilt and hosted on `DockerHub` (similar to how GitHub hosts version controlled software files). The image is needed to run a Docker Container.
-
-- `Container` - A container is a virtual environment that **combines a Docker Image with software (files) to run an application** in a controlled environment (a reproducible software environment created virtually from the Docker Image).
-
-- `DockerHub`  - An online community for storing and sharing container images. Has Public and Private repositories for image storage. It's basically a Cloud, like Github.
-
-- <u>Fazit</u>: DockerFile --> Docker Image (can be pre-built and hosted on the DockerHub-Cloud) --> Docker Container
-
-### Tensorflow and PyTorch
-
-> Definition?
-
-PyTorch and TensorFlow are far and away **the two most popular Deep Learning frameworks** today.
-
-While **`TensorFlow` has a reputation for being an industry-focused framework** and **`PyTorch` has a reputation for being a research-focused framework**.
-
-> Which one is more popular in the Deep-Learning Community?
-
-![PyTorch VS. Tensorflow popularity](./bilder/usage-pytorch-vs-tensorflow.png)
-
-As you can see, the adoption of PyTorch was extremely rapid and, in just a few years, grew from use in just about 7% to use in almost 80% of papers that use either PyTorch or TensorFlow.
-
-![Sankey-Diagram, in order to answer the question: Which one has the Momentum?](./bilder/momentum-tensorflow-vs-pytorch.png)
-The researchers find that **the majority of authors who used TensorFlow in 2018 migrated to PyTorch in 2019 (55%), while the vast majority of authors who used PyTorch in 2018 stayed with PyTorch 2019 (85%)**. 
-
-This data is visualized in the `Sankey diagram` above, where the left side corresponds to 2018 and the right side to 2019.
-
-### Data Pipeline
-
-> Was ist eine `Data-Pipeline`?
-
-After streaming your data (in real time) // downloading your data from a provider, it's basically **a way to automate the process of data cleaning** in order to be able to get the plots // models from your "dirty data" in a fraction of the time you would spend, if you would do the data cleaning "by hand" yourself.
-
-- <u>Youtube-Video</u>: [What is a Data-Pipeline?](https://www.youtube.com/watch?v=VtzvF17ysbc)
-
-### Fundamental-Daten
-	
-> Was versteht man unter `Fundamental-Daten`?
-
-Fundamental-Daten sind **effektiv messbare Daten**, die über Datenbanken accessible sind und welche als Proxy - beispielsweise in Regressions-Analysen - verwendet werden können.
-
-### Data-Flow
-
-> Was versteht man unter dem `Data Flow`?
-
-Mit dem `Data Flow` sollen folgende Fragen beantwortet werden:
-
-1) Welche Daten werden wo geholt & wieso? 
-2) Wie werden die Daten anschliessend verarbeitet?
-3) Was ist der End-Output, nachdem die Daten - beispielsweise - in einem ML-Modell verwedet wurde?
-
-Zur Illustration des `Data Flows`, gab es hierzu im Wissensaustausch auch eine Bild:
-
-![Beispiel zum Data Flow](./bilder/beispiel-data-flow.jpg)
-
-## Synonyme
-
-### Data Science
-
-- **bias**:
-![This is the definition, Google-Researchers gave to `bias`.](./bilder/home/def-bias-from-google.png)
-- **batch**: sample-size when you train your model with a dataset
-- Granularität (Beispiel) = Angenommen, man möchte wissen, wie viele Tage, Stunden, Minuten und Sekunden innerhalb von 20'044 Sekunden enthalten sind &#8594; hier haben wir also *Granularität von 4* &#8594; <u>Lösung</u>: 4 Tage, 18 Stunden, 37 Minuten, 44 Sekunden
-- Kalibrierung des Modells == Wie wurde das Modell programmiert im Allgemeinen? &#8594; Dazu gehört - bei uns - die Anpassung der Prognose.
-- label == true y-value
-- `Pop` == "Pop" is simply a word that means "to drop something". For example, `df.pop('date')` means that I am dropping the column called "data" from a dataframe called "df". Fancily, if you write `df.pop('date')` and *save* it into another variable, then you can only **select** this dropped column from the ddset.
-	- <u>Example</u>: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pop.html
-- relativ zu == im Verhältnis zu
-- shape == dimension
-- target == predicted y-value
-- Treiber == x-Variablen
-- Volume == Speicherplatz
-- weights == estimated coefficients
-
-
-### Python
-
-- `Module` == Python-File
-- `PyPA` ==  Python Packaging Authority
-- `PyPI` == Python Package Index
-
-### IT &amp; Software-Development
-
-- Abhängigkeitsprobleme == 1) Probleme bei den Versionen des Packages; 2) Packages werden vorausgesetzt, sodass gewisser Code dann einen Error printed, wenn man ihn nach 2 Jahren wiederverwenden will. 
-- *agnostisch* == Im IT-Umfeld hat das Wort agnostisch eine besondere Bedeutung. Es bezieht sich auf etwas, das soweit **verallgemeinert** wird, dass es auch unter verschiedenen Umgebungen funktionieren kann. 
-	- <u>Beispiel</u>: Eine Plattform-agnostische Software läuft unter jeder Kombination aus Betriebssystemen und Prozessorarchitekturen.
-- *cached* == store away for future use
-- *Client* == Damit ist häufig der Browser gemeint, wenn er Abfragen an den Server gibt.
-- *composite* == custom
-- *fetch data* == retrieve data
-- *Remote* == Das ist z.B. ein Server / eine Maschine, die du nicht lokal bedienst.
-- *Rest API* == Restful API
-- *instanziieren* == Das Erzeugen eines Objekts in der objektorientierten Programmierung.
-
-## Projekt-Management
-
-- **Sitzungen müssen gut dokumentiert werden! Insbesondere ist hervorzuheben, in welche Richtung das Projekt geht.**
-
-### Meetings
-
-> Was ist das Ziel eines Meetings?
-
-Das Ziel des Meetings ist es, dir & deinem Team die **nötige Basis zu geben, damit du in der folgenden Zeit bis zum nächsten Meeting genau weisst, was du zu tun hast**.
-
-Am wichtigsten ist hier mit dem "Boss" zu reden und klar definieren, was er erreichen will im Projekt. Dies gibt die _globale Richtung_ des Projektes an.
-
-_Es ist exterm wichtig, mit dem Boss diese Ziele zu definieren, da die Planung des gesamten Projektes in dieser Phase hier noch definiert werden kann. Nachdem diese anfängliche Gliederung getätigt wurde, kann im Verlauf des Projektes nicht mehr viel davon abgewichen werden. Deshalb hängt die Gesampt-Performance eines Projektes sehr stark von der anfänglichen Planung ab!_
-
-<u>Während</u> des Projektes gibt es dann immer wieder folgende Punkte zu prüfen:
-
-0) Sind die getätigten Schritte im Einklang mit dem Endziel des Bosses? Wichtig ist zu rechtfertigen, was du gerade am tun bist und warum genau du das tust.
-1) Aufklärung, damit alle auf dem gleichen Informationsstand sind 
-  - <u>Goal</u>: Wo stehen wir? Wie sieht die Situation mit dem Notebook aus?
-2) Gibt es noch offene Lücken im Wissen eines Team-Mitglieds, welches von anderen Mitarbeitern gedeckt werden müsste? --> <u>Goal</u>: Kein Mitglied isolieren, jeder muss sich integriert fühlen. Insbesondere Wert auf Papers & Daten setzen hier
-3) Was sind weitere offene Optionen und inwiefern eignen sich diese Ansätze für unser Ziel?
-    - <u>Goal</u>: Aufzeigen, dass wir noch weitere Alternativen haben, als nur Phillip's Notebooks
-4) Sonstige Unklarheiten / Bemerkungen / Inputs / Vorschläge? --> <u>Goal</u>: letzte Informationsasymmetrien beheben
-
-> Was ist ein *Kanban*?
-
-In der BWL-Sprache ist *Kanban* **ein Vorgehensmodell** zur Softwareentwicklung.
-  
-  - <u>Ziel #1</u>: Das Meetings soll die Anzahl an paralleler Arbeiten, (= **der Work in Progress (WiP)) minimiert // begrenzt werden** und somit kürzere Durchlaufzeiten erreicht.
-  - <u>Ziel #2</u>: Das Meeting soll die Probleme – insbesondere **Engpässe – schnell sichtbar machen**.
-  
-## Job-Interviews
-
-- <u>Vorbereitung Data-Science Interviews</u>: [Diese Webseite](https://www.kdnuggets.com/2020/01/data-science-interview-study-guide.html) hat einen kompletten Guide mit Videos / Artikeln zu extrem vielen Key-Concepts gesammelt und zur Verfügung gestellt.
+In contrast, **Machine Learning is a <u>subset</u> of artificial intelligence** that helps you build AI-driven applications. Aditionally, **Deep Learning is a <u>subset</u> of _machine learning_** that uses vast volumes of data and complex algorithms to train a model.
   
 ## Ausblick
 

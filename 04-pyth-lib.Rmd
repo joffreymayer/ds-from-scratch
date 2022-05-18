@@ -17,6 +17,8 @@
 - `seaborn`, for **data-visualization**.
 - `datetime`, for **dealing with dates**.
 - `beautifulsoup`, for **getting data**.
+- `PyTorch`, for **deeplearning**.
+- `TensorFlow`, for **deeplearning**.
 
 ## `Python`-Mustercodes für Data-Science
 
@@ -138,6 +140,19 @@ _In order to see, how to manipulate strings, I strongly recommend you to look at
 
 ## Statsmodels
 
+This library should be used when you need to:
+
+- **Estimate an OLS-regression**,
+- **Estimate a binary regression**, like:
+  - A linear probability model, 
+  - A logit regression OR,
+  - A probit regression.
+- **Estimate a choice model**, such as: 
+  - A multinomial logit model, 
+  - A probit model OR, 
+  - A logit model.
+- **Estimate a time-series regression**, 
+
 ### Useful Nice-to-Knows
 
 - Use `statsmodels` in combination with the `patsy`-library. For instance, if we have: some variable y, and we want to regress it against some other variables x, a, b, and the interaction of a and b, then we simply write:
@@ -258,3 +273,21 @@ Besides `Sktime`, there are 5 other libraries in Python which you can use for di
 
 - <u>Einheit der y-Variable</u>: in Monate
 
+## Tensorflow and PyTorch
+
+> Definition?
+
+PyTorch and TensorFlow are far and away **the two most popular Deep Learning frameworks** today.
+
+While **`TensorFlow` has a reputation for being an industry-focused framework** and **`PyTorch` has a reputation for being a research-focused framework**.
+
+> Which one is more popular in the Deep-Learning Community?
+
+![PyTorch VS. Tensorflow popularity](./bilder/usage-pytorch-vs-tensorflow.png)
+
+As you can see, the adoption of PyTorch was extremely rapid and, in just a few years, grew from use in just about 7% to use in almost 80% of papers that use either PyTorch or TensorFlow.
+
+![Sankey-Diagram, in order to answer the question: Which one has the Momentum?](./bilder/momentum-tensorflow-vs-pytorch.png)
+The researchers find that **the majority of authors who used TensorFlow in 2018 migrated to PyTorch in 2019 (55%), while the vast majority of authors who used PyTorch in 2018 stayed with PyTorch 2019 (85%)**. 
+
+This data is visualized in the `Sankey diagram` above, where the left side corresponds to 2018 and the right side to 2019.

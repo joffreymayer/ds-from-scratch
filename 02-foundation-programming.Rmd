@@ -17,7 +17,12 @@ In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen
 - inputs // arguments
 - function // command
 - cartesian coordinate system // "normales Koordinatensystem", dh mit der X-Achse für die horizontale Linie & Y-Achse für die vertikale Linie
+- Source // Programming Language (any kind of)
 - initialization // declaration // specification
+- dependencies // Abhängigkeitsprobleme
+- fetch data // retrieve data
+- cache data // store data in the computer's memory (for future use)
+- Rest API // Restful API
 
 ### Programming
 
@@ -31,11 +36,62 @@ In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen
 
 ![The y-axis of a computer goes down starting the top-right corner, while the x-axis goes to the right starting the top-right corner](./bilder/programming/coordinate-system.PNG)
 
-- **Array**: A List of Data is an array. It is a data structure, which contains "n" objects within a list.
+- **<u>What is an Array?</u>**: An `Array` is a List of Data. In a `DataFrame`-Object, you can think of a `column` **<u>OR</u>** a `row` to be `arrays`. It is a data structure, which contains `N`-objects _within_ a list. 
 	- <u>Quelle</u>: [The Coding Train 3:10-3:22](https://www.youtube.com/watch?v=NptnmWvkbTw&t=3m10s)
-- __Specification__:  This is the assignment of an initial value for a data object or variable.
-  - <u>Example</u>: Plugging in some values, in order to get a prediction from an estimated model.
+- **<u>What is an `IDE`?</u>**
+  - <u>Abkürzung</u>: `IDE` == Integrated Development Environment
+  - <u>Definition</u>: An integrated development environment (IDE) is software for building applications. It combines common developer tools into a single graphical user interface (GUI).
+  - <u>Example</u>: R, PyCharm oder Visual-Studio Code are all IDEs. **Think of it as a modern Dream Weaver**! :)
+- **<u>What are Dependencies?</u>**: Das sind Probleme, die mit den Versionen der eingesetzten Packages - welche du in einem DS-Projekt verwendest - zu tun haben. Die Lösung wäre der Einsatz von einem `Virtual Environment` (oder ein Docker-Container).
+  - <u>Beispiel, dass das Problem beschreibt</u>: Du machst eine Datenanalyse und verwendest zum Zeitpunkt "t" bestimmte Versionen dieser Packages. Nun vergeht jedoch über 1 Jahr und du möchstest das Modell wieder zum laufen bringen, welches du damals konstruiert hattest. Ausserdem verwendest du dabei einen anderen Computer. Mit einem Memory-Stick überträgst du das Modell auf diesen neuen Computer. Allerdings funktioniert das Modell nicht mehr. Nach etlichen Recherchen findest du heraus, dass dein neuer Computer eine **ge-updatete Version eines Package** verwendet, welches du für deine Analyse benötigt hast. Dieses ge-updatete Package war allerdings <u>**nicht kompatibel**</u> mit einem anderen Package, das du _ebenfalls_ für die Analyse benötigt hast. **Es bestand also ein "unsichtbares" Abhängigkeitsproblem, was der Grund war, weshalb dein Modell auf dem neuen Computer nicht ge-runt hat!**
+- __Remote__: Das ist z.B. ein Server / eine Maschine, die du nicht lokal bedienst.
+- __instanziieren__: Das Erzeugen eines Objekts in der objektorientierten Programmierung.
+- __Specification__: This is the assignment of an initial value for a data object or variable. Dieser Schritt passiert gleich nach einer _Instanzierung einer Variablen_ (siehe vorheriger Listenpunkt).
+  - <u>Example in another Context</u>: Plugging in some values, in order to get a prediction from an estimated model.
+  
+## Data-Types
 
+In `R` oder `Python` ist es wichtig zu verstehen, dass gewisse Funktionen nur dann funktionieren, wenn die Inputs, die wir in die Funktion eingeben wollen, einen bestimmten Data-Type aufweisen müssen.
+
+On the website *W3-Schools*, I found this [extremely good overview of all data-types](https://www.w3schools.com/python/python_datatypes.asp), which is crucial concept to understand when doing data cleaning. 
+
+![Overview of different Data-Types](./bilder/data-types-overview.jpg)
+
+*Data-Types are a key-thing to understand. Otherwise, you won't be able to apply some algorithms on your dataset!*
+
+## Global Variables VS. Local Variables
+
+Variables that are created **outside of a function** are known as *global variables*.
+
+Global variables can be used by everyone, both **inside of functions <u>and</u> outside**.
+
+- <u>Example of a global variable</u>:
+
+```{python}
+x = "awesome"
+
+def myfunc():
+  print("Python is " + x)
+
+myfunc()
+```
+
+In contrast, if you create a variable *with the same name* <u>inside</u> a function, this variable will be **local**, and **can only be used <u>inside</u> the function**. The global variable with the *same* name will remain as it was, global and with the original value.
+
+- <u>Example of a local variable</u>:
+
+```
+x = "awesome"
+
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+
+myfunc()
+
+print("Python is " + x)
+```
+- Output of this: [click here](https://www.w3schools.com/python/trypython.asp?filename=demo_variables_global2)
 
 ## Python-Basics
 
@@ -54,6 +110,16 @@ In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen
     2) "Else-clause":
     
 ![This is an Else-Clause](./bilder/programming/else-clause.png)
+### Magic Commands in Python 
+
+**Das sind Tastatur-Shortcuts, wenn du `Python` bedienst. Es hilft dir, schneller & produktiver beim Codieren zu sein**.
+
+_Mit Hilfe dieser "Magic Commands" in Python, kannst du unglaublich schnell herausfinden kannst, was eine Funktion überhaupt tut UND welche Inputs in eine Funktion gehören_.
+
+<u>Hier die Liste</u>:
+
+- `shift` + `Tab` &#8594; wenn du nicht weisst, was eine Funktion // Method tut
+- `Tab` &#8594; **Drücke die `Tab`-Taste, <u>während sich dein Cursor innerhalb einer Funktion befindet</u>**, um eine Übersicht zu allen Inputs der Funktion zu erhalten! xD
 
 ### Wörterbuch
 
@@ -64,6 +130,9 @@ In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen
 - **<u>What is "the state" of a jupyter notebook?</u>**: To answer this question more precisely, look at this [youtube video from 3:50-4:30](https://www.youtube.com/watch?v=AWek49wXGzI&list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg&index=2). You can think of it as the **internal memory of the jupyter notebook**. You can erase the memory by restarting the kernel by clicking on the button I just marked in the image below:
 
 ![Clearing the "state" of the Jupyter Notebook](./bilder/programming/clear-state-of-jupyter-notebook.png)
+- **Module**: Python-File
+- __PyPA__: Python Packaging Authority
+- __PyPI__: Python Package Index
 
 ### Tricks
 
@@ -77,3 +146,98 @@ Am besten schaust du dir [dieses Youtube-Video ab 19:45-24:00](https://www.youtu
 
 - **Write `Markdown` faster**: https://thinkr-open.github.io/remedy/
   - Manage your Short-Cuts (to Code faster): [Check out this Youtube-Video, from 2:21-2:51](https://www.youtube.com/watch?v=zAtf9NkSOUg&t=2m17s)
+  
+### Pipe-Operator in R
+
+> What is the `Pipe-Operator` in `R` and what does it do?
+
+The Pipe-Operator in `R` looks like this: `%>%`. It takes in an input and "transports" it into another function to use the input and produces an output. This verbal explanation can be best illustrated via a code-example in R: 
+
+```
+library(tidyverse)
+result <- mtcars %>% 
+    group_by(cyl) %>% 
+    summarise(meanMPG = mean(mpg))
+```
+
+The **Keyboard-Shortcut** to use the Pipe-Operator would be: `Shift + control + M`.
+
+- Quelle: [A Guide to the Pipe in R](https://towardsdatascience.com/an-introduction-to-the-pipe-in-r-823090760d64#:~:text=The%20pipe%20operator%20feeds%20the,the%20tibble%20result%20%2C%20shown%20below.)
+  
+## Restful API
+  
+> What are **Rest APIs**? 
+
+- <u>Synonym</u>: Restful APIs
+- <u>Defintion</u>: API stands for *<u>A</u>pplication <u>P</u>rogramming <u>I</u>nterface*. It **is a way for 2 computers to "talk" // communicate with each other**. During the talk, one computer sends a "request", while the other sends the "response". *How is this possible?* In order for you to use an API (e.g. to enable the "talking" between the computers), you need to write code to explicitly "request" data from a server // computer. Most APIs in the world are **"restful"**, e.g. they follow some set of rules // constraints known as "representational state transfer", which is the "gold-standard" for API-development since the early 2000's (invented by **Roy Fielding**, in its PhD dissertation).
+  - <u>Example</u>: If you are a "noob", you can retrieve the NASA-images of asteroids by looking at their websites. However, you could also use NASA's "Rest API" to get the data via a `.json`-file.
+  - <u>How it works?</u>: From a architecture point a view, a Rest API, organizes "data entities" // resources into a bunch of unique URLs. Well, technically speaking, they are NOT URLs, but rather "URIs" (aka "uniform resource identifier"), which identifies exactly each data-resource on the server. A client can then retrieve // get the data about a resource by making a request to the server // "endpoint" (over the "http"-protocol). This request has a very specific format, see [this youtube-video (ab 1:03)](https://www.youtube.com/watch?v=-MTSQjw5DrM&t=103s).
+  - <u>"Stateless" Architecture (key to know)</u>: The two parties // computers **don't need to store any information about each other** <u>AND</u> every "request-response"-cycle is **independent** from another "request-response"-cycle. These two characteristics are important, because  it leads to an application that is **predictable** AND **reliable**.
+	- Quelle: [Pokemon-API](https://pokeapi.co/about)
+- <u>Zusammengefasst in meinen Worten</u>: **Ein API sind Befehle, die du gibst, um mit einer Datenbank (z.B. auf einem Server) zu kommunizieren ODER ein Package (in R oder Python) zum runnen zu bringen.** Ganz einfach xD
+- <u>Background Client-Server Architecture</u>: most of the applications these days, follow this architecture.
+  - Client == App itself == Front-End
+  - Server == Back-End
+  
+- Communication between the Sever & the Client (= App) happens via API by using the `Http Protocol`.
+  - <u>Example</u>: if the App wants to access the particular data of a customer, it sends a request to the server via http-protocol.
+- **So, when does the `Rest API` comes into play?** --> the Rest API is **a standard that established itself in the industry, when communaction between client & server** --> these are the `CRUD Operations`, which are by definition: 
+  
+    1) `GET` == *getting the data from the server*
+    2) `POST` == *creating data*
+    3) `PUT` == *updating data*
+    4) `DELETE` == *deleting data*
+    
+#### API Example
+
+> Beispiel eines `API` in Python?
+
+Das Modul // Package `sktime` verwendet einen ähnlichen `API`, wie die berühmte Machine-Learning `sklearn`-Library. Hierbei wäre der Programmierer (= Du) als *Forecaster* verstanden, welcher via sogannten *methods* (zum Beispiel die *fit-method*, um das Modell zu trainieren // estimaten) mit der *application* (= hier: Python) interagiert.
+
+## More advanced Topics
+
+### Data Pipeline
+
+> Was ist eine `Data-Pipeline`?
+
+After streaming your data (in real time) // downloading your data from a provider, it's basically **a way to automate the process of data cleaning** in order to be able to get the plots // models from your "dirty data" in a fraction of the time you would spend, if you would do the data cleaning "by hand" yourself.
+
+- <u>Youtube-Video</u>: [What is a Data-Pipeline?](https://www.youtube.com/watch?v=VtzvF17ysbc)
+
+### Fundamental-Daten
+	
+> Was versteht man unter `Fundamental-Daten`?
+
+Fundamental-Daten sind **effektiv messbare Daten**, die über Datenbanken accessible sind und welche als Proxy - beispielsweise in Regressions-Analysen - verwendet werden können.
+
+### Data-Flow
+
+> Was versteht man unter dem `Data Flow`?
+
+Mit dem `Data Flow` sollen folgende Fragen beantwortet werden:
+
+1) Welche Daten werden wo geholt & wieso? 
+2) Wie werden die Daten anschliessend verarbeitet?
+3) Was ist der End-Output, nachdem die Daten - beispielsweise - in einem ML-Modell verwedet wurde?
+
+Zur Illustration des `Data Flows`, gab es hierzu im Wissensaustausch auch eine Bild:
+
+![Beispiel zum Data Flow](./bilder/beispiel-data-flow.jpg)
+
+### Docker
+
+> Was ist `Docker` und was ist der Vorteil davon?
+
+_Docker wird verwendet, **um ein Virtual Environment zu bilden**, welches - wie ein Container - dir punktgenaue Versionen von bestimmten Packages und Programmiersprachen (Python etc.) liefert_. 
+
+`Docker` läuft über `Open Shift`, welches eine Art **Management-Programm** für `Docker` ist (so viel ich das verstanden habe...).
+
+#### Definitions
+
+- `Image` - An image is an environment that has been built from a series of instructions called a `DockerFile`. Images can be prebuilt and hosted on `DockerHub` (similar to how GitHub hosts version controlled software files). The image is needed to run a Docker Container.
+
+- `Container` - A container is a virtual environment that **combines a Docker Image with software (files) to run an application** in a controlled environment (a reproducible software environment created virtually from the Docker Image).
+
+- `DockerHub`  - An online community for storing and sharing container images. Has Public and Private repositories for image storage. It's basically a Cloud, like Github.
+
+- <u>Fazit</u>: DockerFile --> Docker Image (can be pre-built and hosted on the DockerHub-Cloud) --> Docker Container

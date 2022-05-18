@@ -1,0 +1,49 @@
+# Business | Die Welt der Unternehmen
+
+In diesem File werde ich alles "business-related" tun, was in Zusammenhang mit Data-Science steht.
+
+## Wörterbuch
+
+### IT &amp; Software-Development
+
+- __agnostisch__: Im IT-Umfeld hat das Wort agnostisch eine besondere Bedeutung. Es bezieht sich auf etwas, das soweit **verallgemeinert** wird, dass es auch unter verschiedenen Umgebungen funktionieren kann. 
+	- <u>Allgemeines Beispiel</u>: Denke an mathematische Formeln, welche nur aus "allgemeinen Variablen" bestehen. 
+	- <u>Konkretes Software-Beispiel</u>: Eine Plattform-agnostische Software läuft unter jeder Kombination aus Betriebssystemen und Prozessorarchitekturen.
+- __cached__: stored away for future use. 
+  - <u>Beispiel</u>: Think of a Browser, which can store - in his memory - the pictures and other HTML, CSS or JS-Files. This allows faster download of these resources, once a user visits a website on a later point in time in the future.
+- __Client__: Damit ist häufig der Browser gemeint, wenn er Abfragen an den Server gibt.
+- __composite__: custom
+
+### Organisation
+
+- **<u>Was ist ein _Kanban_?</u>**: In der BWL-Sprache ist *Kanban* **ein Vorgehensmodell** zur Softwareentwicklung.
+  - <u>Ziel #1</u>: Das Meetings soll die Anzahl an paralleler Arbeiten, (= **der Work in Progress (WiP)) minimiert // begrenzt werden** und somit kürzere Durchlaufzeiten erreicht.
+  - <u>Ziel #2</u>: Das Meeting soll die Probleme – insbesondere **Engpässe – schnell sichtbar machen**.
+
+## Projekt-Management
+
+- **Sitzungen müssen gut dokumentiert werden! Insbesondere ist hervorzuheben, in welche Richtung das Projekt geht.**
+
+## Meetings
+
+> Was ist das Ziel eines Meetings?
+
+Das Ziel des Meetings ist es, dir & deinem Team die **nötige Basis zu geben, damit du in der folgenden Zeit bis zum nächsten Meeting genau weisst, was du zu tun hast**.
+
+Am wichtigsten ist hier mit dem "Boss" zu reden und klar definieren, was er erreichen will im Projekt. Dies gibt die _globale Richtung_ des Projektes an.
+
+_Es ist exterm wichtig, mit dem Boss diese Ziele zu definieren, da die Planung des gesamten Projektes in dieser Phase hier noch definiert werden kann. Nachdem diese anfängliche Gliederung getätigt wurde, kann im Verlauf des Projektes nicht mehr viel davon abgewichen werden. Deshalb hängt die Gesampt-Performance eines Projektes sehr stark von der anfänglichen Planung ab!_
+
+<u>Während</u> des Projektes gibt es dann immer wieder folgende Punkte zu prüfen:
+
+0) Sind die getätigten Schritte im Einklang mit dem Endziel des Bosses? Wichtig ist zu rechtfertigen, was du gerade am tun bist und warum genau du das tust.
+1) Aufklärung, damit alle auf dem gleichen Informationsstand sind 
+  - <u>Goal</u>: Wo stehen wir? Wie sieht die Situation mit dem Notebook aus?
+2) Gibt es noch offene Lücken im Wissen eines Team-Mitglieds, welches von anderen Mitarbeitern gedeckt werden müsste? --> <u>Goal</u>: Kein Mitglied isolieren, jeder muss sich integriert fühlen. Insbesondere Wert auf Papers & Daten setzen hier
+3) Was sind weitere offene Optionen und inwiefern eignen sich diese Ansätze für unser Ziel?
+    - <u>Goal</u>: Aufzeigen, dass wir noch weitere Alternativen haben, als nur Phillip's Notebooks
+4) Sonstige Unklarheiten / Bemerkungen / Inputs / Vorschläge? --> <u>Goal</u>: letzte Informationsasymmetrien beheben.
+  
+## Job-Interviews
+
+- <u>Vorbereitung Data-Science Interviews</u>: [Diese Webseite](https://www.kdnuggets.com/2020/01/data-science-interview-study-guide.html) hat einen kompletten Guide mit Videos / Artikeln zu extrem vielen Key-Concepts gesammelt und zur Verfügung gestellt.
