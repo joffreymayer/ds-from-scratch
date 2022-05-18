@@ -107,6 +107,34 @@ print(loc_test)
 
 - __Pop__: "Pop" is simply a word that means "to drop something". For example, `df.pop('date')` means that I am dropping the column called "data" from a dataframe called "df". Fancily, if you write `df.pop('date')` and *save* it into another variable, then you can only **select** this dropped column from the ddset.
   - <u>Example</u>: [See the `Pandas`-Documentation](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pop.html)
+  
+### Convert into "Date-Time"-format with the `to_datetime()`-Method
+
+**This method can be used when you need to convert a "Date"-Column into the correct `Date-Time`-Format in order to work with _time-series data_**.
+
+```{python eval = FALSE}
+df['Date-Time'] = pd.to_datetime(df['Date-Time'], format='%Y-%m-%d %H:%M:%S')
+df['Date-Time'] # check, if it worked?
+```
+
+### <u>Umgekehrt</u>: Use the `strftime()`-Method to convert a Date-Column back into a "String"-Format
+
+```{python eval = FALSE}
+df['Date-Time'] = df['Date-Time'].apply(lambda x: x.strftime('%Y-%m-%d %H:%M:%S%z'))
+```
+
+> Why would we do this?
+
+Sometimes, there will be the **problem, that we want to merge different time-series together, but they have different `Date-Time`-Formats to begin with**! 
+
+Hence, _BEFORE_ we apply the `UTC`-universal `Date-Time`-Format, we will need to bring every separate data-frame into the same `Date-Time`-Format. 
+
+Since `Python` is really good for handling transformations on the `str`-format, we can use this to our advantages and:
+
+1) Bring the `Date-Time`-**String** into the way we want it to be on all our _separate_ `Date-Time`-Columns across those different datasets.
+2) And then, we will be able to convert them back into the `UTC`-Format! =)
+
+_In order to see, how to manipulate strings, I strongly recommend you to look at the sub-chapter "String-Manipulation"._
 
 ## Statsmodels
 
@@ -144,33 +172,11 @@ print(results.summary()) # Step 3: Summarize model
 results.params
 ```
 
-## String-Manipulation
+## Time-Series Forecasting
 
-Handling Data that are in `string`-Format is important, since knowledge & human language is mostly based on "writing", and therefore comes in as `string`-formatted data.
+Here, I will explore different libraries that will allow you to make forecasts into the future.
 
-### Split a String at a specific point
-
-```
-timestamps = time_series_str_column.str.split("+", expand=True) 
-  # "+" is the Buchstabe, at which we will split the string.
-  # "expand = True" says that we want to keep both parts of the string that was being split.
-```
-
-### Cut a String in half
-
-Here, we define 2 `functions`, which will cut the string in half:
-
-```
-def splitstring_p1(value):
-  string1, string2 = value[:len(value) // 2], value[len(value) // 2:]
-  return string1
-
-def splitstring_p2(value):
-  string1, string2 = value[:len(value) // 2], value[len(value) // 2:]
-  return string2
-```
-
-## Working with `Date`-Columns
+### Working with `Date`-Columns
 
 _Since you will - most probably - often work with time-series data, you MUST learn how to handle this data-type well_! 
 
@@ -181,93 +187,19 @@ _Since you will - most probably - often work with time-series data, you MUST lea
 - If you work with multiple time-series: are all time-series already in the UTC-format? If NOT, then you better do it, otherwise you have the wrong hours across different time-zones!
 ```
 
-### Define a Range of Dates
-
-```
-# Step 1: We need a starting & endpoint for the range of dates
-the_start_date = '2019-01-01'
-the_end_date = str(datetime.today().date() + timedelta(days = 2)) # this is simply "today" + 2 days into the future 
-
-# Step 2: Let's create the range of dates based on the starting- & end-point
-date_range_of_interest = pd.date_range(the_start_date, # starting date-point (= is fixed)
-                                         the_end_date, # end date-point (= can change dynamically // updates with new data from entsoe)
-                                         freq = 'h', # we want to have 'hours'
-                                         closed = 'left', # The input 'closed' let's you choose whether you want to include the start and end dates. 
-                                         # --> 'left' will exclude the end-date, which is good, since this date is in the "future" (= today + 2)!
-                                         tz = 'Europe/Berlin') # this is the time-zone
-```
-
-#### Date-Range in 15-Minutes Abstand
-
-```
-date_range_15Min = pd.date_range(the_start_date,
-                                        the_end_date, 
-                                        freq = '15Min', # only thing that changes --> will be used for Germany, since DE has quarterly-houred observations
-                                        closed = 'left', 
-                                        tz = 'Europe/Berlin')
-```
-
-
-### Convert a `string`-Date Column INTO a `date-time`-format
-
-We can use `pandas` for this:
-
-```
-df['Date-Time'] = pd.to_datetime(df['Date-Time'], format='%Y-%m-%d %H:%M:%S')
-df['Date-Time'] # check, if it worked?
-```
-
-### <u>Umgekehrt</u>: Convert a `date-time`-Column, into a `str`-format
-
-```
-df['Date-Time'] = df['Date-Time'].apply(lambda x: x.strftime('%Y-%m-%d %H:%M:%S%z'))
-```
-
-> Why would we do this?
-
-Sometimes, there will be the **problem, that we want to merge different time-series together, but they have different `Date-Time`-Formats to begin with**! 
-
-Hence, _BEFORE_ we apply the `UTC`-universal `Date-Time`-Format, we will need to bring every separate data-frame into the same `Date-Time`-Format. 
-
-Since `Python` is really good for handling transformations on the `str`-format, we can use this to our advantages and:
-
-1) Bring the `Date-Time`-**String** into the way we want it to be on all our _separate_ `Date-Time`-Columns across those different datasets.
-2) And then, we will be able to convert them back into the `UTC`-Format! =)
-
-_In order to see, how to manipulate strings, I strongly recommend you to look at the sub-chapter "String-Manipulation"._
-
-### <u>For UTC-Conversions</u>: Keep a copy of the "Local"-Time
-
-Here, we create a new column `Local-Time`, in order to have both, the "local" & the "UTC" time next to each other:
-
-```
-df['Local-Time'] = df['Date-Time'].apply(lambda x: x.strftime('%Y-%m-%d %H:%M:%S'))
-```
-
-### Create a _unique ID_ based on a `Date`-Column
-
-```
-df = df.reset_index().rename({'index': 'Date-Time-ID'}, axis='columns')
-```
-
-## Time-Series Forecasting
-
-Here, I will explore different libraries that will allow you to make forecasts into the future.
-
-
-### Facebook Prophet
+### Facebook Prophet Library
 
 Aus einer didaktischen Perspektive ist die offizielle Dokumentation der **Prophet-Library wunderbar, um die Unterschiede zwischen `R` &amp; `Python` (Objekt-Orientierte Programmierung) zu entdecken**.
 
 - <u>Link zur offiziellen Dokumentation</u>: https://facebook.github.io/prophet/docs/quick_start.html
 
-### SkLearn
+### SkLearn Library
 
 > In some functions, you will need to set the option `random_state`. **If you want reproducible results**, how do you need to handle `random_state`?
 
 Just set `random_state` to an integer. Dieser integer kann *beliebig* gewählt werden, das ist `SkLearn` egal!
 
-### SkTime
+### SkTime Library
 
 #### SkTime API
 
