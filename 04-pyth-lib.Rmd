@@ -3,7 +3,8 @@
 ## List of Useful Python-Libraries 
 
 - `numpy`, for **mathematical operations**.
-- `pandas`, for **handling data**, for example:
+- `pandas`, for **doing data analysis**, for example:
+  - _Read & Save data_.
   - _Drop missing values_.
   - _Feature Engineering_.
 - `statsmodels`, for **regression analysis in "econometrics-style"**.

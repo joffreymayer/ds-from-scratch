@@ -109,8 +109,6 @@ python-basics
 begriffe-bzw.-fragen
 tricks
 swap-the-values-of-two-variables
-libraries
-data-analysis-functions
 foundations-of-data-science
 find-data
 questions-you-need-to-answer-when-starting-a-new-project

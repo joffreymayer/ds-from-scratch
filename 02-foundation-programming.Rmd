@@ -22,7 +22,7 @@ In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen
     
 - **<u>What is a Command & what are arguments?</u>**:
 
-![The command is a function, while arguments are the inputs of a function // command](./bilder/programming/commands-and-arguments.PNG)
+![The command is the function as a whole, while arguments are the inputs of a function // command](./bilder/programming/commands-and-arguments.PNG)
 
 - **<u>The coordinate system of a computer VS. the coordinate system in mathematics?</u>**:
 
@@ -73,29 +73,3 @@ In den folgenden Zeilen Zeige ich dir, wie Programmierung effizienter geht in Py
 #### Swap the values of two variables
 
 Am besten schaust du dir [dieses Youtube-Video ab 19:45-24:00](https://www.youtube.com/watch?v=Z1Yd7upQsXY&list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg)
-
-### Libraries
-
-- **Pandas**: Das ist die Library, welche in Python **für Datenanalysen verwendet** wird. Ohne diese Library kann z.B. nicht ein Datensatz geloadet werden. Deshalb wirst du diese Library sehr oft brauchen in deinem Job.
-
-### Data-Analysis Functions
-
-- **dropna()**-function == Wird alle Beobachtungen aus dem Datensatz werfen, welche _NAs_ in einer column enthalten.
-  - <u>Note</u>: You need to import the package "pandas" to use this function.
-  - <u>Example</u>:
-  
-``` {python example-dropna, eval = FALSE}
-# remove the matches with NAN values:
-raw_bundesliga = raw_bundesliga.dropna()
-```
-
-- **isna()**-function == Gibt Booleans (= TRUE / FALSE) als Output wieder, für alle rows aus dem Datensatz, welche _NAs_ in einer column enthalten.
-  - <u>Note</u>: You need to import the package "pandas" to use this function.
-  - <u>Trick</u>: **Combine it with the sum()-function, to display the number of missing values within the whole dataset. 
-  - <u>Example</u>:
-  
-``` {python example-isna, eval = FALSE}
-# count the number of matches with NAN values:
-print("Nr. of NAN in Serie A: \n", raw_seriea.isna().sum())
-```
-
