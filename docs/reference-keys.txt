@@ -112,6 +112,7 @@ swap-the-values-of-two-variables
 foundations-of-data-science
 find-data
 questions-you-need-to-answer-when-starting-a-new-project
+ablauf-eines-data-science-projektes
 effective-research-how-to-find-answers-quickly
 fragestellungen-beantworten
 methoden

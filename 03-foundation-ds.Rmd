@@ -58,10 +58,52 @@ Metriken verwendet, nämlich:
 	
 - <u>Was ist die Daten-Imputation Methode?</u>: Missing Values mit Mittelwerten
 
+## Ablauf eines Data-Science Projektes
+
+Die meisten Data-Science Projekte werden wie folgt ablaufen:
+
+```
+- Define the problem that you are trying to solve.
+- Get the data you need to solve the problem
+- Start with "understanding" your data:
+  - What "X"-variables do you have? In which "Einheit"?
+  - What is the Y-Variable? In which "Einheit"?
+  - Make some very BASIC summary-statistics // just screen the data a little bit.
+    - Key: You need to see whether your data is good enough OR garbage. Because then you don't even need to put efforts into trying to solve the problem! xD
+  - If the data is OK: start with "Literatur-Recherche"
+    - Einlesen ins Thema
+    - Are there researchers that faced similar problems? What methods did they use?
+- Clean the data
+- Split the data into training & testing data
+- Estimate // Train your model (with the training data)
+- Evaluate your model:
+  - How good did it "learn"? // Performance on the training-data (MAE, MAPE,...)
+  - How good did it "extrapolate"? // Performance on the testing-data (MAE, MAPE...)
+- Conclusions
+- If you are happy with your model: Make a "Minimum Viable Product" (MVP):
+  - For example, a dashboard on the web.
+```
 
 ## Effective Research: How to find answers quickly?
 
-> How to find Answers quickly, especially when a Concept is complicated
+Hier mein Vorgehen, um jedes mögliche DS-Problem zu lösen, **_after_ you came to the conclusion: "Yes, the data looks OK. We can try to solve the problem!"**
+
+The list below basically starts at the "Literatur-Recherche" point:
+
+```
+- Make a list of Papers on the problem (Google Scholar), but only read the "introduction"!
+  - Key here is "intelligent copying"-concept: You need to pick 2-3 papers that are the most relevant to your problem. Start with those.
+- For any topics that you don't understand enough: Find Youtube-Videos on the topic(s). Twitter-Threads is also great. Furthermore, give Reddit a try!
+- Next, choose which libraries are the most apropriate for the problem?
+  - Key here: Your end-result will only be as good as your tools, with which you will be able to tackle the problem. Remember my MA-thesis: the libraries I needed were in Python, but I solved it (very painfully & inefficiently) in R!
+- Start with the data cleaning.
+- Estimate your Model.
+- Evaluate the Model (with CV).
+  - Conclusions? --> Key: Can we do better?
+- Make a MVP, for example a dashboard.
+```
+
+> How to find Answers quickly, especially when a Concept is complicated?
 
 Aus Erfahrung weiss ich jetzt, dass **Youtube bisher *immer*, die beste Quelle war, um mir etwas schnell &amp; effizient beizubringen**. 
 
