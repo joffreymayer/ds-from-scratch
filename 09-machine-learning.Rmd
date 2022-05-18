@@ -268,7 +268,7 @@ unsupervised learning = structure the data into groups (very subjective) // dete
 - **batch**: sample-size when you train your model with a dataset
 - **Granularität** (Beispiel) = Angenommen, man möchte wissen, wie viele Tage, Stunden, Minuten und Sekunden innerhalb von 20'044 Sekunden enthalten sind &#8594; hier haben wir also *Granularität von 4* &#8594; <u>Lösung</u>: 4 Tage, 18 Stunden, 37 Minuten, 44 Sekunden
 - **Kalibrierung des Modells** == Wie wurde das Modell programmiert im Allgemeinen? &#8594; Dazu gehört - bei uns - die Anpassung der Prognose.
-- label == true y-value
+- __label__ == true y-value
 - `Pop` == "Pop" is simply a word that means "to drop something". For example, `df.pop('date')` means that I am dropping the column called "data" from a dataframe called "df". Fancily, if you write `df.pop('date')` and *save* it into another variable, then you can only **select** this dropped column from the ddset.
 	- <u>Example</u>: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pop.html
 - relativ zu == im Verhältnis zu
