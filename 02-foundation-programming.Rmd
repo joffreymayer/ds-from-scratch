@@ -73,3 +73,8 @@ In den folgenden Zeilen Zeige ich dir, wie Programmierung effizienter geht in Py
 #### Swap the values of two variables
 
 Am besten schaust du dir [dieses Youtube-Video ab 19:45-24:00](https://www.youtube.com/watch?v=Z1Yd7upQsXY&list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg)
+
+## R as your IDE
+
+- **Write `Markdown` faster**: https://thinkr-open.github.io/remedy/
+  - Manage your Short-Cuts (to Code faster): [Check out this Youtube-Video, from 2:21-2:51](https://www.youtube.com/watch?v=zAtf9NkSOUg&t=2m17s)

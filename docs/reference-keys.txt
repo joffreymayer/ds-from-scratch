@@ -109,6 +109,7 @@ python-basics
 begriffe-bzw.-fragen
 tricks
 swap-the-values-of-two-variables
+r-as-your-ide
 foundations-of-data-science
 allgemeine-roadmap-für-data-science-projekte
 find-data
