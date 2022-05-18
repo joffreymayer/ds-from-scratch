@@ -240,9 +240,11 @@ uni-kurs-neural-networks-deep-learning
 notation-neural-networks
 alphabetisch-sortiert
 more-ml-jargon
+wörterbuch-1
+data-science-1
 quellen
 mengenlehre
-wörterbuch-1
+wörterbuch-2
 mathematische-schrift-lesen
 openai
 what-can-openai-do-the-output

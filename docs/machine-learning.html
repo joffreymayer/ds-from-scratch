@@ -356,10 +356,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.5.1" data-path="machine-learning.html"><a href="machine-learning.html#notation-neural-networks"><i class="fa fa-check"></i><b>9.5.1</b> Notation Neural Networks</a></li>
 <li class="chapter" data-level="9.5.2" data-path="machine-learning.html"><a href="machine-learning.html#more-ml-jargon"><i class="fa fa-check"></i><b>9.5.2</b> More ML-Jargon</a></li>
 </ul></li>
-<li class="chapter" data-level="9.6" data-path="machine-learning.html"><a href="machine-learning.html#quellen"><i class="fa fa-check"></i><b>9.6</b> Quellen</a></li>
+<li class="chapter" data-level="9.6" data-path="machine-learning.html"><a href="machine-learning.html#wörterbuch-1"><i class="fa fa-check"></i><b>9.6</b> Wörterbuch</a><ul>
+<li class="chapter" data-level="9.6.1" data-path="machine-learning.html"><a href="machine-learning.html#data-science-1"><i class="fa fa-check"></i><b>9.6.1</b> Data Science</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="machine-learning.html"><a href="machine-learning.html#quellen"><i class="fa fa-check"></i><b>9.7</b> Quellen</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="mengenlehre.html"><a href="mengenlehre.html"><i class="fa fa-check"></i><b>10</b> Mengenlehre</a><ul>
-<li class="chapter" data-level="10.1" data-path="mengenlehre.html"><a href="mengenlehre.html#wörterbuch-1"><i class="fa fa-check"></i><b>10.1</b> Wörterbuch</a></li>
+<li class="chapter" data-level="10.1" data-path="mengenlehre.html"><a href="mengenlehre.html#wörterbuch-2"><i class="fa fa-check"></i><b>10.1</b> Wörterbuch</a></li>
 <li class="chapter" data-level="10.2" data-path="mengenlehre.html"><a href="mengenlehre.html#mathematische-schrift-lesen"><i class="fa fa-check"></i><b>10.2</b> Mathematische “Schrift” lesen</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="openai.html"><a href="openai.html"><i class="fa fa-check"></i><b>11</b> OpenAI</a><ul>
@@ -668,8 +671,32 @@ unsupervised learning = structure the data into groups (very subjective) // dete
 </ul>
 </div>
 </div>
+<div id="wörterbuch-1" class="section level2">
+<h2><span class="header-section-number">9.6</span> Wörterbuch</h2>
+<div id="data-science-1" class="section level3">
+<h3><span class="header-section-number">9.6.1</span> Data Science</h3>
+<ul>
+<li><strong>bias</strong>:
+<img src="./bilder/home/def-bias-from-google.png" alt="This is the definition, Google-Researchers gave to bias." /></li>
+<li><strong>batch</strong>: sample-size when you train your model with a dataset</li>
+<li><strong>Granularität</strong> (Beispiel) = Angenommen, man möchte wissen, wie viele Tage, Stunden, Minuten und Sekunden innerhalb von 20’044 Sekunden enthalten sind → hier haben wir also <em>Granularität von 4</em> → <u>Lösung</u>: 4 Tage, 18 Stunden, 37 Minuten, 44 Sekunden</li>
+<li><strong>Kalibrierung des Modells</strong> == Wie wurde das Modell programmiert im Allgemeinen? → Dazu gehört - bei uns - die Anpassung der Prognose.</li>
+<li>label == true y-value</li>
+<li><code>Pop</code> == “Pop” is simply a word that means “to drop something”. For example, <code>df.pop('date')</code> means that I am dropping the column called “data” from a dataframe called “df”. Fancily, if you write <code>df.pop('date')</code> and <em>save</em> it into another variable, then you can only <strong>select</strong> this dropped column from the ddset.
+<ul>
+<li><u>Example</u>: <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pop.html" class="uri">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pop.html</a></li>
+</ul></li>
+<li>relativ zu == im Verhältnis zu</li>
+<li>shape == dimension</li>
+<li>target == predicted y-value</li>
+<li>Treiber == x-Variablen</li>
+<li>Volume == Speicherplatz</li>
+<li>weights == estimated coefficients</li>
+</ul>
+</div>
+</div>
 <div id="quellen" class="section level2">
-<h2><span class="header-section-number">9.6</span> Quellen</h2>
+<h2><span class="header-section-number">9.7</span> Quellen</h2>
 <ul>
 <li><a href="https://blog.exxactcorp.com/lets-learn-the-difference-between-a-deep-learning-cnn-and-rnn/" class="uri">https://blog.exxactcorp.com/lets-learn-the-difference-between-a-deep-learning-cnn-and-rnn/</a>
 <a href="https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Fall.2016/notes/Sonia_Hornik.pdf" class="uri">https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Fall.2016/notes/Sonia_Hornik.pdf</a></li>

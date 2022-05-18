@@ -30,7 +30,7 @@ Die meisten Data-Science Projekte werden wie folgt ablaufen:
 
 <mark>**Der erste und wichtigste Meilenstein ist vermutlich die Frage: 'Sind meine Daten "gut genug", um das Problem zu lösen oder sind sie einfach nur Müll?"**</mark>
 
-_Wenn du nämlich die obige Frage mit "NEIN" beantwortest, dann brauchst du schon gar nicht mit dem Projekt zu beginnen, denn es wäre ineffizient ;)
+_Wenn du nämlich die obige Frage mit "NEIN" beantwortest, dann brauchst du schon gar nicht mit dem Projekt zu beginnen, denn es wäre ineffizient_ ;)
 
 ### Find Data
 
@@ -93,7 +93,7 @@ Metriken verwendet, nämlich:
 
 ### After having concluded: "My data is OK!" | Wie geht es weiter?
 
-Hier mein Vorgehen, um jedes mögliche DS-Problem zu lösen, **_after_ you came to the conclusion: "Yes, the data looks OK. We can try to solve the problem!"**
+Hier mein Vorgehen, um jedes mögliche DS-Problem zu lösen,.
 
 The list below basically starts at the "Literatur-Recherche" point:
 
@@ -118,7 +118,7 @@ Twitter-Community von Wissenschaftlern sind ebenfalls sehr wertvoll. Als **Beisp
 
 > How to read Notebooks from other People?
 
-*Es geht am Anfang um die Gesamtübersicht und noch nicht um die Details // Eigenheiten im Code oder im Datensatz! Am wichtigsten ist es, dass du [diese Fragen](#questions-you-need-to-answer-when-starting-a-new-project) zunächst beantworten kannst, wenn du das Notebook liest.*
+*Es geht am Anfang um die Gesamtübersicht und noch nicht um die Details // Eigenheiten im Code oder im Datensatz! Am wichtigsten ist es, dass du [diese Fragen](#after-having-found-your-data-the-questions-you-need-to-have-an-answer-on) zunächst beantworten kannst, wenn du das Notebook liest.*
 
 ## Fragestellungen beantworten
 
