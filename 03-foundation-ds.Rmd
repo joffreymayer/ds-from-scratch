@@ -2,9 +2,39 @@
 
 In meinem Data Scientist Job werde ich häufig auf ähnliche Probleme stossen mit der Zeit. Hier habe ich eine Reihe an Fragen aufgelistet, welche ich fähig sein muss, zu beantworten, wenn ich effizient in meinem Beruf sein will!
 
-## Find Data
+## Allgemeine Roadmap für Data-Science Projekte
 
-In order to work with data, you also need to have the supply. 
+Die meisten Data-Science Projekte werden wie folgt ablaufen:
+
+```
+- Define the problem that you are trying to solve.
+- Get the data you need to solve the problem
+- Start with "understanding" your data:
+  - What "X"-variables do you have? In which "Einheit"?
+  - What is the Y-Variable? In which "Einheit"?
+  - Make some very BASIC summary-statistics // just screen the data a little bit.
+    - Key: You need to see whether your data is good enough OR garbage. Because then you don't even need to put efforts into trying to solve the problem! xD
+  - If the data is OK: start with "Literatur-Recherche"
+    - Einlesen ins Thema
+    - Are there researchers that faced similar problems? What methods did they use?
+- Clean the data
+- Split the data into training & testing data
+- Estimate // Train your model (with the training data)
+- Evaluate your model:
+  - How good did it "learn"? // Performance on the training-data (MAE, MAPE,...)
+  - How good did it "extrapolate"? // Performance on the testing-data (MAE, MAPE...)
+- Conclusions
+- If you are happy with your model: Make a "Minimum Viable Product" (MVP):
+  - For example, a dashboard on the web.
+```
+
+<mark>**Der erste und wichtigste Meilenstein ist vermutlich die Frage: 'Sind meine Daten "gut genug", um das Problem zu lösen oder sind sie einfach nur Müll?"**</mark>
+
+_Wenn du nämlich die obige Frage mit "NEIN" beantwortest, dann brauchst du schon gar nicht mit dem Projekt zu beginnen, denn es wäre ineffizient ;)
+
+### Find Data
+
+*Der erste grosse Schritt bei allen Data-Science Projekten, ist der "Rohstoff" namens Daten! Ohne sie, kannst du jegliche DS-Projekte vergessen!*
 
 Here is a list of **websites, that offer free to use datasets**:
 
@@ -14,9 +44,11 @@ Here is a list of **websites, that offer free to use datasets**:
 - Google Dataset Search
 - https://datasetsearch.research.google.com/
 
-## Questions you need to answer when starting a new Project
+_Wenn du deine eigenen Daten sammeln willst, empfehle ich dir auch die Library `Beautiful-Soup`. Eventuell gibt es auch **einen Twitter-, Reddit- oder Youtube-Crawler API**, mit denen du wertvolle Daten sammeln könntest!_
 
-BEFORE you start writing your R-Scripts or Jupyter-Notebooks, you **first need to think about several key-things** &amp; -questions:
+### After having found your Data: the Questions you need to have an answer on
+
+BEFORE you start writing your R-Scripts or Jupyter-Notebooks, you **first need to think about several key-things** &amp; -questions, <mark>because this will help you to come to the conclusion: "is my data good or bad?":
 
 ```
 - Welche Datenbasis haben wir?
@@ -24,7 +56,7 @@ BEFORE you start writing your R-Scripts or Jupyter-Notebooks, you **first need t
 - Welche Metrik hast du in deinen Notebooks verwendet?
 - Wie ist das Trainings- & Validierungs-Dataset aufgebaut?
 - Welche Daten sind im Test-Set, welche für den Benchmark verwendet werden?
-- Welche Prognoseansätze wurden angewendet? 
+- Welche (bereits bestehende) Prognoseansätze wurden angewendet? 
 - Welche Daten sind effektiv genutzt & welche sind verfügbar?
 - Etc…
 ```
@@ -58,33 +90,8 @@ Metriken verwendet, nämlich:
 	
 - <u>Was ist die Daten-Imputation Methode?</u>: Missing Values mit Mittelwerten
 
-## Ablauf eines Data-Science Projektes
 
-Die meisten Data-Science Projekte werden wie folgt ablaufen:
-
-```
-- Define the problem that you are trying to solve.
-- Get the data you need to solve the problem
-- Start with "understanding" your data:
-  - What "X"-variables do you have? In which "Einheit"?
-  - What is the Y-Variable? In which "Einheit"?
-  - Make some very BASIC summary-statistics // just screen the data a little bit.
-    - Key: You need to see whether your data is good enough OR garbage. Because then you don't even need to put efforts into trying to solve the problem! xD
-  - If the data is OK: start with "Literatur-Recherche"
-    - Einlesen ins Thema
-    - Are there researchers that faced similar problems? What methods did they use?
-- Clean the data
-- Split the data into training & testing data
-- Estimate // Train your model (with the training data)
-- Evaluate your model:
-  - How good did it "learn"? // Performance on the training-data (MAE, MAPE,...)
-  - How good did it "extrapolate"? // Performance on the testing-data (MAE, MAPE...)
-- Conclusions
-- If you are happy with your model: Make a "Minimum Viable Product" (MVP):
-  - For example, a dashboard on the web.
-```
-
-## Effective Research: How to find answers quickly?
+### After having concluded: "My data is OK!" | Wie geht es weiter?
 
 Hier mein Vorgehen, um jedes mögliche DS-Problem zu lösen, **_after_ you came to the conclusion: "Yes, the data looks OK. We can try to solve the problem!"**
 
@@ -109,6 +116,10 @@ Aus Erfahrung weiss ich jetzt, dass **Youtube bisher *immer*, die beste Quelle w
 
 Twitter-Community von Wissenschaftlern sind ebenfalls sehr wertvoll. Als **Beispiel wäre [dieser Twitter-Post](https://twitter.com/seanjtaylor/status/1123278380369973248?s=11) vom Prophet-Gründer**.
 
+> How to read Notebooks from other People?
+
+*Es geht am Anfang um die Gesamtübersicht und noch nicht um die Details // Eigenheiten im Code oder im Datensatz! Am wichtigsten ist es, dass du [diese Fragen](#questions-you-need-to-answer-when-starting-a-new-project) zunächst beantworten kannst, wenn du das Notebook liest.*
+
 ## Fragestellungen beantworten
 
 **In Data-Science - wie auch in der Wissenschaft - dreht sich alles um die Beantwortung von (relevanten) Fragen**. 
@@ -117,12 +128,12 @@ _Somit stellt die Datenanalyse schlussendlich nur das Werkzeug, mit welchem man 
 
 In diesem Kapitel habe ich anhand von Beispielen versucht, **eine Liste zu mit diversen Methoden & konkreten Daten-Features** zu erstellen, mit denen man interessante Fragen zu beantworten versucht.
 
-### Methoden
+### Methoden | Liste an diverser Technologien, um Fragestellungen zu beantworten
 
 - _Difference-in-Differences_
   - <u>Geeignet für</u>: **Kausaleffekte**, wobei hier ein Vergleich zweier _praktisch gleicher_ Gruppen über die Zeit stattfindet, um den Effekt eines "Treatments" (= treated OR not treated) zu messen.
   
-## Die "Kunst des Feature-Engineering" für gute Modellierung
+## Die "Kunst des Feature-Engineering" für gute Modellierung | Effizienter Modellieren
 
 Was "gute" Modelle von "Schlechten" unterscheidet, ist oftmals, wie du deine `X`-Variablen für das Modell kallibriest. Das wird in der Data-Science Branche als "Feature Engineering" bezeichnet. 
 
@@ -130,13 +141,13 @@ Was "gute" Modelle von "Schlechten" unterscheidet, ist oftmals, wie du deine `X`
 
 <mark>Der _Key-Point_, den es hier zu verstehen gilt: "Talent" gibt es zwar schon, aber die Kunst besteht darin, eine _echte_, messbare Daten-Grösse zu haben, welche "Talent" approximiert</mark>.
 
-#### Geographie
+### Geographie
 
 - Approx. von "_Propensity to work in another country_" OR "_Propensity to buy cheap food abroad_"
   - <u>Benötigte Variable</u>: **Distance to Boarder**
   - <u>Themen</u>: Wurde in Card & Krueger (1992) Diff-in-Diff Methode verwendet
 
-#### Finance
+### Finance
 
 - Approx. von "_Marktmacht_"
   - <u>Benötigte Variable</u>: **Marktanteil within a country**. _Hierfür musst du die Unternehmen der Branchen & deren Umsätze kennen_...
@@ -158,11 +169,6 @@ Was "gute" Modelle von "Schlechten" unterscheidet, ist oftmals, wie du deine `X`
         - <u>Einheit</u>: z.B. Mitarbeiter pro 1'000m<sup>2</sup>.
   - <u>Where to get the Data?</u>: Beispielsweise aus **Geschäftsberichten**.
   - <u>Themen</u>: Übertragung der Teuerung der Lebensmittel auf die Konsumenten von Migros & Coop (wegen Krieg in der Ukraine, 2022).
-
-
-## How to read Notebooks from other People?
-
-*Es geht am Anfang um die Gesamtübersicht und noch nicht um die Details // Eigenheiten im Code oder im Datensatz! Am wichtigsten ist es, dass du [diese Fragen](#questions-you-need-to-answer-when-starting-a-new-project) zunächst beantworten kannst, wenn du das Notebook liest.*
 
 ## Machine-Learning Theory
 
