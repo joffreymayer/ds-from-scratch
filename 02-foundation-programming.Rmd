@@ -10,16 +10,19 @@ In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen
   - [Processing Foundation](https://processingfoundation.org/)
   - [Learning Processing Book](http://learningprocessing.com/)
 
-## Definitionen
+## Wörterbuch
 
-- **<u>What is an Algorithm?</u>**:
+### Synonyme
 
-    An Algorithm is **a _list_ of instructions**.
+- inputs // arguments
+- function // command
+- cartesian coordinate system // "normales Koordinatensystem", dh mit der X-Achse für die horizontale Linie & Y-Achse für die vertikale Linie
+- initialization // declaration // specification
 
-- **<u>What is Programming about?</u>**:
+### Programming
 
-    Programming is <u>not</u> about hardcoding numbers into functions to create a picture. **Programming is about creating a _sequence of instructions_ (= a logic) to execute a task**. 
-    
+- **<u>What is an Algorithm?</u>**: An Algorithm is **a _list_ of instructions**.
+- **<u>What is Programming about?</u>**: Programming is <u>not</u> about hardcoding numbers into functions to create a picture. **Programming is about creating a _sequence of instructions_ (= a logic) to execute a task**. 
 - **<u>What is a Command & what are arguments?</u>**:
 
 ![The command is the function as a whole, while arguments are the inputs of a function // command](./bilder/programming/commands-and-arguments.PNG)
@@ -28,21 +31,21 @@ In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen
 
 ![The y-axis of a computer goes down starting the top-right corner, while the x-axis goes to the right starting the top-right corner](./bilder/programming/coordinate-system.PNG)
 
-## Synonyme
+- **Array**: A List of Data is an array. It is a data structure, which contains "n" objects within a list.
+	- <u>Quelle</u>: [The Coding Train 3:10-3:22](https://www.youtube.com/watch?v=NptnmWvkbTw&t=3m10s)
+- __Specification__:  This is the assignment of an initial value for a data object or variable.
+  - <u>Example</u>: Plugging in some values, in order to get a prediction from an estimated model.
 
-- inputs == arguments
-- function == command
-- cartesian coordinate system == "normales Koordinatensystem", dh mit der X-Achse für die horizontale Linie & Y-Achse für die vertikale Linie
 
 ## Python-Basics
 
-- <u>Kernel</u>: The kernel is the **command line for a jupyter notebook**. It always runs in the background when you run code in the jupyter notebook environment. You can **think of it as the terminal on your mac**, only that this time, it is for a jupyter notebook. This is how it looks like:
+- **Kernel**: The kernel is the **command line for a jupyter notebook**. It always runs in the background when you run code in the jupyter notebook environment. You can **think of it as the terminal on your mac**, only that this time, it is for a jupyter notebook. This is how it looks like:
 
 ![This is the Kernel](./bilder/programming/example-kernel.png)
 
-- <u>Variables</u>: Eine Variable wird mittels dem **"="-Zeichen** assigned. 
+- **Variables**: Eine Variable wird mittels dem `=`-**Zeichen** assigned. 
 
-- <u>If-Else Statements</u>: Die If-Else Statements bestehen aus zwei (oder mehr Bausteinen).
+- **If-Else Statements**: Die If-Else Statements bestehen aus zwei (oder mehr Bausteinen).
 
     1) "If-clause": 
     
@@ -52,17 +55,13 @@ In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen
     
 ![This is an Else-Clause](./bilder/programming/else-clause.png)
 
-### Begriffe bzw. Fragen
+### Wörterbuch
 
-- What is a "Cell"?
-
-This is the green box which you can write your code into, when you use jupyter notebook:
+- **<u>What is a "Cell"?</u>**: This is the green box which you can write your code into, when you use jupyter notebook:
 
 ![This is a Cell](./bilder/programming/example-of-a-cell.png)
 
-- What is "the state" of a jupyter notebook?
-
-To answer this question more precisely, look at this [youtube video from 3:50-4:30](https://www.youtube.com/watch?v=AWek49wXGzI&list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg&index=2). You can think of it as the **internal memory of the jupyter notebook**. You can erase the memory by restarting the kernel by clicking on the button I just marked in the image below:
+- **<u>What is "the state" of a jupyter notebook?</u>**: To answer this question more precisely, look at this [youtube video from 3:50-4:30](https://www.youtube.com/watch?v=AWek49wXGzI&list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg&index=2). You can think of it as the **internal memory of the jupyter notebook**. You can erase the memory by restarting the kernel by clicking on the button I just marked in the image below:
 
 ![Clearing the "state" of the Jupyter Notebook](./bilder/programming/clear-state-of-jupyter-notebook.png)
 

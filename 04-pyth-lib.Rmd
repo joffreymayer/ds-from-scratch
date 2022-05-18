@@ -16,6 +16,7 @@
 - `matplotlib`, for **data-visualization**.
 - `seaborn`, for **data-visualization**.
 - `datetime`, for **dealing with dates**.
+- `beautifulsoup`, for **getting data**.
 
 ## `Python`-Mustercodes für Data-Science
 
@@ -24,34 +25,6 @@ Für eine übersichtliche **Zusammenfassung, welche die Python-Basics bis hin zu
 ## Basic `Python`
 
 In this part, I will give you some useful `Python`-Code, which can be helpful in _any_ project.
-
-### Create a `DataFrame`
-
-The following `DataFrame` was build with many `Series`-Objects:
-
-```{python eval=FALSE}
-df = pd.DataFrame({'LoadCH': ts_loadFc[time_index_hourly], 
-                   'LoadD': ts_DE_loadFc.resample('H').mean()[time_index_hourly], 
-                   'LoadF': ts_FR_loadFc[time_index_hourly], 
-                   'LoadIT': ts_IT_loadFc[time_index_hourly],
-                   'GenCH': ts_genFc[time_index_hourly], 
-                   'GenD': ts_DE_genFc[time_index_hourly], 
-                   'GenF': ts_FR_genFc[time_index_hourly], 
-                   'GenIT': ts_IT_genFc[time_index_hourly],
-                   'RenGenCH': ts_RenGenAllCH[time_index_hourly], # we take the aggregated renewable generation
-                   'RenGenD': ts_RenGenAllDE[time_index_hourly], 
-                   'RenGenF': ts_RenGenAllFR[time_index_hourly], 
-                   'RenGenIT': ts_RenGenAllIT[time_index_hourly], 
-                   'TransFromDach': ts_TransFromDACH[time_index_hourly], 
-                   'TransToDach': ts_TransToDACH[time_index_hourly], 
-                   'TransToIT': ts_TransToIT[time_index_hourly],
-                   'SeasonAndProduct': ts_season_prod[time_index_hourly], # TO-DO: re-name this column, since its name is confusing!
-                   'tInfoDaySin' : ts_timeInfoDayI_4forecast[time_index_hourly],
-                   'tInfoDayCos' : ts_timeInfoDayII_4forecast[time_index_hourly], 
-                   'tInfoYearSin' : ts_timeInfoYearI_4forecast[time_index_hourly], 
-                   'tInfoYearCos' : ts_timeInfoYearII_4forecast[time_index_hourly],
-                   'PricesCH': ts_DA_Price[time_index_hourly]}) 
-```
 
 ### Put a time-stamp on each Python-Cell
 
@@ -75,7 +48,11 @@ It uses a `Python Magic-Command` (= note the `%`) in order to be able to use thi
 %load_ext autotime
 ```
 
-## Pandas
+## Pandas Library
+
+### Padas DataFrame
+
+![This is the overview of a `Pandas` DataFrame](./bilder/python-lib/pandas-df.jpg)
 
 ### How to display all the columns?
 
@@ -124,6 +101,12 @@ print(iloc_test)
 print(loc_test)
 ```
 
+### Drop a Column with the `pop()`-Method
+
+**This method can be used, when you split your dataset into `y` (= the label) and the `X`-variables**.
+
+- __Pop__: "Pop" is simply a word that means "to drop something". For example, `df.pop('date')` means that I am dropping the column called "data" from a dataframe called "df". Fancily, if you write `df.pop('date')` and *save* it into another variable, then you can only **select** this dropped column from the ddset.
+  - <u>Example</u>: [See the `Pandas`-Documentation](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pop.html)
 
 ## Statsmodels
 

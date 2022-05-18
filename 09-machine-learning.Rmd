@@ -213,70 +213,85 @@ unsupervised learning = structure the data into groups (very subjective) // dete
 - weights = Beta-Coefficients = parameters = a, b = neurons
 - y(k) = this is the estimated(!!) regresion function
 - z(k) = "logits" --> the same as y(k) but we then apply the specific activation function "logit function" to the estimated z(k) // y(hat)
+    
+## Wörterbuch 
 
-### More ML-Jargon
+### Synonyme
 
-- `"feed in"` == plug in (--> häufig im Zusammenhang mit Einsetzen von konkreten Werten für die x-Variablen in das geschätzte Modell, um Predictions zu erhalten)
-- `instance` == value within a cell == konkreter "x"-Wert, welcher angenommen wird und du - beispielsweise - für eine Prediction verwenden kannst.
-- `Forcasted data` == These are the predictions that you do via the help of a model (--> by plugging in concrete x-values), that you've built.
-- `Training Dataset` // `Training Set` == This is the sample, that you use to estimate your model.
-- `Testing Dataset` // `Test Set` == This is the `hold out` set, which you use at the end, to check whether your model is able to `generalize` // `extrapolate` well to new data.
-- `"the model is learning` == what is meant by "learning" is: given some Datenpunkt-Wolke, the computer will try and fit the "best line" [oftentimes by minimizing the sum of the squared residuals, if you use `OLS` (= Ordinary Least Squared)] to construct the "best model" possible.
-- `Training` == You are estimating a model on the trainig-dataset, such that the model "learns" from the data.
-- `shuffle` == englisches Wort für "mischen". In the context of `splitting the dataset into test- & training-data`, it is common practice to `shuffle` your observations within your dataset first.
+- Training Dataset // Training Set
+- Testing Dataset // Test Set
+- generalize // extrapolate
+- relativ zu // im Verhältnis zu
+- feed in // plug in
+- shape // dimension 
+- target // predicted y-value
+- Treiber // x-Variablen
+- Score // Error 
+- Cross-Validation Score // Validation Error
+- Volume // Speicherplatz
+- Weights // estimated coefficients
+
+### Data Science
+
+- __Samples__ == number of rows // number of observations within a dataset.
+- **Instance**: value within a cell --> konkreter "x"-Wert, welcher angenommen wird und du - beispielsweise - für eine Prediction verwenden kannst.
+
+![This is the overview of a `Pandas` DataFrame, where an instance would be nothing else but a "value".](./bilder/python-lib/pandas-df.jpg)
+
+- __Label__: _true_ y-value
+- __Forcasted data__: These are the predictions that you do via the help of a model (--> by plugging in concrete x-values), that you've built.
+- __Training Dataset__: This is the sample, that you use to estimate your model.
+- __Testing Dataset__: This is the `hold out`-set, which you use at the end, to check whether your model is able to generalize // extrapolate well to new data.
+- __"The model is learning"__: What is meant by "learning" is --> given some Datenpunkt-Wolke, the computer will try and fit the "best line" [oftentimes by minimizing the sum of the squared residuals, if you use `OLS` (= Ordinary Least Squared) OR by using the _Gradient Descend Method_, when you have more data] to construct the "best model" possible.
+- __Training__: You are estimating a model on the trainig-dataset, such that the model "learns" from the data.
+- **Bias**: When a modl displays "bias", then it means that your model is too simpel (not enough `X`-variables included, for example) and - as a result - your estimated `sample regression function` is not able to approximate the (true) underlying (unknown) `population regression function`.
+![Alternatively, this is the definition, Google-Researchers gave to `bias`.](./bilder/home/def-bias-from-google.png)
+- __Overfitting__: The problem of overfitting occurs when a model is **too complex and captures too much detail** from the _training_ data. This can lead to the model being unable to generalize to new, unseen data.
+  - <u>Fazit</u>: This is like the problem of "**low external validity**". You may have a high "internal validity", but external validity is _low_! 
+- __Shuffle__: englisches Wort für "mischen". In the context of `splitting the dataset into test- & training-data`, it is common practice to `shuffle` your observations within your dataset first.
 	- <u>Reason why you `shuffle`</u>?: Shuffling data serves the purpose of
 		- reducing variance AND 
 		- making sure that models remain general AND 
 		- overfit less.
-	- <u>Merke</u>: When dealing with `time series`, you should not use `shuffle` when `splitting the data` into training- &amp; testing-data.
-- `training score` // `Test Error` == This error // score is the [oftentimes squared] difference between the `true y-variable` and `estimated // predicted y-variable` and **measures // evaluates how well the model is "performing" // how good the model is on a `test set` with an increasingly bigger `training dataset`**.
-- `cross-validation score` // `Validation Error` == This is the (mean) error // score [because of `cross-validation`] that **measures // evaluates how the model is "learning" over increasingly bigger `training datasets`**.
-- `fold` == **subset** of the `training dataset`
+	- <u>Merke</u>: When dealing with _time-series_, you should not use `shuffle` when `splitting the data` into training- &amp; testing-data.
+- __Training Score OR Test Error__: This error // score is the [oftentimes squared] difference between the _true_ Y-variable and _predicted_ Y-variable (= $\hat{y}$).
+  - Note that the for the formula $\sum_i^N{(y_i-\hat{y_i})}$, the **$y_i$** can be either related to:
+    - The **test**-set, when you are evaluating the _final_ model-performance, OR 
+    - The **validation**-dataset, when you are evaluating how well the model is "performing" with the help of _Cross Validation_, e.g. how the model performs with an increasingly bigger `training dataset`.
+- __Cross-Validation Score__: This is the _mean_ error // score that **measures // evaluates how the model is "learning" over increasingly bigger `training datasets`**.
+  - It is important to highlight the fact that this metric is only a _mean_, e.g. you don't see the _individual_ forecast that was being made. 
+  - The **main purpose** of this metric is to be able **to judge the model-performance very quickly: with only 1 single number, namely the mean error (by an increasing amount of sample-size)**. 
+  - If you have a "bad" model - e.g. a high mean error - you will need to look at the _individual_ errors (and not just the mean error), in order to understand what went wrong with the model! 
+- __Fold__ == **subset** of the `training dataset`.
 	- <u>Example</u>: In a `K-Fold Cross-Validation`, you *randomly* split the <u>training set</u> into **10 distinct subsets**, which are called `folds`.
-- `samples` == number of rows // number of observations within a dataset.
-- `classifiers` == These are simply regression-functions, where the **Y-Variable is binary**, e.g. die Y-Variable kann nur `Y = 0` ODER `Y = 1` als Werte annehmen.
-	- <u>Example</u>: Logit- &amp; Probit-Regression, or Naiv Bayes, etc...
-- `initialization` // `declaration` // `specification` ==  This is the assignment of an initial value for a data object or variable.
-- `Array` == A List of Data is an array. It is a data structure, which contains "n" objects within a list.
-	- <u>Quelle</u>: [The Coding Train 3:10-3:22](https://www.youtube.com/watch?v=NptnmWvkbTw&t=3m10s)
-- `Extrapolation` == Voraussage von Y-Predict<u>ed</u> Values, welche mittels X-Variablen ermittelt werden, welche <u>zuvor nicht im Datensatz</u> waren.
-- `Interpolation` == Voraussage von Y-Predict<u>ed</u> Values, welche mittels X-Variablen ermittelt werden, welche <u>bereits im Datensatz</u> waren, als die Schätzung  getätigt wurde.
-- `sliding window` == This is just a way to tell python how to do a cross-validation and have equal lengths of time series where we can learn on.
-- `Learning Task` == Forecasting Task // Extrapolation [in Time Series]
-- `Forecasting Horizon` == Time Points, you want to predict (= dein ) $\hat{y}$
-- `Time Heterogenous Data` == Different Time Series have different time stamps
-	- <u>Quelle</u>: Ab 27:05 (Link: http://www.youtube.com/watch?v=Wf2naBHRo8Q&t=27m05s)
-- `Seasonal Periodicity` == The number of months per year, in which the forecaster expects to see a seasonal pattern. 
-	- <u>Concrete Example</u>: In Philipp's Notebook, he had a seasonal periodicity of 2, e.g. he said that in winter & sommer, he expects a seasonal pattern.
-- `Reduction is composable` &#8594; Synonym wäre "addieren" &#8594; E.g. you can split a difficult task into a bunch of smaller tasks (= reduction) and "add" them together to solve the bigger task at the end (= "reduction is composable").
-- `Pearson Korrelation` == <u>Lineare</u> Korrelation
-- `Grid` &#8594; Das ist nichts anderes als die **Optimierung von diversen "Modell-Parametern"**. 
-		- <u>Beispiel</u>: Bei Random-Forrest Modellen kann man zum Beispiel die Tiefe eines Modells bestimmen, dh die relevante Frage, welche ein Forscher sich stellt, ist, *wie viele Baum-Zweigungen die geeignesten Predictions bringen?* Mit Funktionen, wie zum Beispiel `GridSearchCV()` kann dieses Problem geregelt werden.
-- `Classifier` == These are simply Regression-Functions, where **the Y-variable is binary**, e.g. die Y-Variable kann nur `Y = 0` <u>oder</u> `Y= = 1` als Werte annehmen. 
+- __Grid__: Das ist nichts anderes als die **Optimierung von diversen "Modell-Parametern"**. 
+		- <u>Beispiel</u>: Bei Random-Forrest Modellen kann man zum Beispiel die Tiefe eines Modells bestimmen, dh die relevante Frage, welche ein Forscher sich stellt, ist: ***wie viele Baum-Zweigungen die geeignesten Predictions bringen?***. Mit Funktionen, wie zum Beispiel `GridSearchCV()` kann dieses Problem geregelt werden.
+- __Classifiers__: These are simply Regression-Functions, where **the Y-variable is binary**, e.g. die Y-Variable kann nur `Y = 0` <u>oder</u> `Y= = 1` als Werte annehmen. 
   - <u>Beispiele</u>: 
     - Logit-Regression
     - Probit-Regression
     - Naive Bayes
     - etc...
-    
-## Wörterbuch 
+	- <u>Example</u>: Logit- &amp; Probit-Regression, or Naiv Bayes, etc...
+- **feed in**: Häufig im Zusammenhang mit Einsetzen von konkreten Werten für die x-Variablen in das _geschätzte_ Modell, um Predictions zu erhalten.
+- **Batch**: sample-size when you train your model with a dataset.
+- **Granularität** (Beispiel): Angenommen, man möchte wissen, wie viele Tage, Stunden, Minuten und Sekunden innerhalb von 20'044 Sekunden enthalten sind &#8594; hier haben wir also *Granularität von 4* &#8594; 
+  - <u>Lösung</u>: 4 Tage, 18 Stunden, 37 Minuten, 44 Sekunden
+- **Kalibrierung des Modells**: Wie wurde das Modell programmiert im Allgemeinen? &#8594; Dazu gehört - beim `preisprog`-Projekt der SBB - die Anpassung der Prognose.
+- __Extrapolation__: Das ist eine _Prediction_, welche mittels X-Variablen ermittelt werden, welche <u>zuvor nicht im Datensatz</u> waren.
+- __Interpolation__: Das ist eine _Prediction_, welche mittels X-Variablen ermittelt werden, welche <u>bereits im Datensatz</u> waren, als die Schätzung getätigt wurde.
+__Pearson Korrelation__ == <u>Lineare</u> Korrelation
 
-### Data Science
+### Time-Series
 
-- **bias**:
-![This is the definition, Google-Researchers gave to `bias`.](./bilder/home/def-bias-from-google.png)
-- **batch**: sample-size when you train your model with a dataset
-- **Granularität** (Beispiel) = Angenommen, man möchte wissen, wie viele Tage, Stunden, Minuten und Sekunden innerhalb von 20'044 Sekunden enthalten sind &#8594; hier haben wir also *Granularität von 4* &#8594; <u>Lösung</u>: 4 Tage, 18 Stunden, 37 Minuten, 44 Sekunden
-- **Kalibrierung des Modells** == Wie wurde das Modell programmiert im Allgemeinen? &#8594; Dazu gehört - bei uns - die Anpassung der Prognose.
-- __label__ == true y-value
-- __Pop__ == "Pop" is simply a word that means "to drop something". For example, `df.pop('date')` means that I am dropping the column called "data" from a dataframe called "df". Fancily, if you write `df.pop('date')` and *save* it into another variable, then you can only **select** this dropped column from the ddset.
-	- <u>Example</u>: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pop.html
-- __relativ zu__ == im Verhältnis zu
-- __shape__ == dimension 
-- __target__ == predicted y-value
-- Treiber == x-Variablen
-- Volume == Speicherplatz
-- weights == estimated coefficients
+- __Sliding Window__: This is just a way to tell python how to do a cross-validation and have equal lengths of time series where we can learn on.
+- __Forecasting Horizon__: These are the points in time (in the future), for which you want to make a prediction (= $\hat{y}$). This is something, you need to define, when you want to estimate your model in a _time-series_ setting.
+- __Learning Task__: Forecasting Task // Extrapolation [in Time Series] --> _not sure if this is correct_... xD
+- __Time Heterogenous Data__: These are different time-series datasets, that have different time stamps.
+	- <u>Quelle</u>: Ab 27:05 (Link: http://www.youtube.com/watch?v=Wf2naBHRo8Q&t=27m05s)
+- __Seasonal Periodicity__: The number of times per year, in which the forecaster expects to see a seasonal pattern. 
+	- <u>Concrete Example</u>: In Philipp's Notebook, he had a seasonal periodicity of 2, e.g. he said that in winter & sommer, he expects a seasonal pattern.
+- __"Reduction is composable"__: Synonym wäre "addieren" &#8594; E.g. you can split a difficult task into a bunch of smaller tasks (= `reduction`) and "add" them together to solve the bigger task at the end &#8594; "reduction is composable"...
 
 ## Quellen 
 
