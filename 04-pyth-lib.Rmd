@@ -273,13 +273,15 @@ Besides `Sktime`, there are 5 other libraries in Python which you can use for di
 
 - <u>Einheit der y-Variable</u>: in Monate
 
-## Tensorflow and PyTorch
+## Tensorflow
 
-> Definition?
+### Definition
 
 PyTorch and TensorFlow are far and away **the two most popular Deep Learning frameworks** today.
 
 While **`TensorFlow` has a reputation for being an industry-focused framework** and **`PyTorch` has a reputation for being a research-focused framework**.
+
+### Tensorflow VS. PyTorch
 
 > Which one is more popular in the Deep-Learning Community?
 
@@ -291,3 +293,22 @@ As you can see, the adoption of PyTorch was extremely rapid and, in just a few y
 The researchers find that **the majority of authors who used TensorFlow in 2018 migrated to PyTorch in 2019 (55%), while the vast majority of authors who used PyTorch in 2018 stayed with PyTorch 2019 (85%)**. 
 
 This data is visualized in the `Sankey diagram` above, where the left side corresponds to 2018 and the right side to 2019.
+
+### Data-Windowing Konzept | Erklärung mittels Beispielen
+
+> Wie erklärt man einem Computer, dass man gerne eine Vorhersage möchte von 1h, aber <u>NICHT</u> für die darauf folgende Stunde, sondern <u>erst in 24h</u>!?
+
+Mittels **Data-Windowing** lässt sich dieses Problem allgemein lösen:
+
+![Data-Windowing anhand von 2 Beispielen erklärt. Es geht darum, den richtigen Prognose-Horizont festzulegen.](./bilder/python-lib/data-windowing-konzept.jpg)
+
+### Wörterbuch
+
+- __Offset__: Zeitlicher Versatz zwischen den Input-Variablen $X_t$ und der zu vorhersehenden Variable $Y_{t+1}$.
+  - <u>Beispiel, anhand einer "single Prediction", welche 24h weiter in der Zukunft liegt</u>: 
+  
+![Visualisierung des Offsets](./bilder/python-lib/offset-example.jpg)
+
+#### Synonyme
+
+- Offset // shift

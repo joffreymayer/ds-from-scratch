@@ -70,6 +70,14 @@ A histogram sorts the data, then it is putting the data into intervalls of data 
 
 - Useful to check the distribution of the data
 
+> Why should we use this?
+
+For example, in order to see whether our data is normally distributed (= Glockenkurve). 
+
+_By definition - if a variable follows (roughly) a normal distribution - you can standardize the variable._
+
+<mark>If you want to do _Deep Learning_, then a transformation like normalisation (OR standardisation?) is required, that's the reason why we care about the distribution!</mark>
+
 ##### Discrete Version
 
 ```{python, eval = FALSE}

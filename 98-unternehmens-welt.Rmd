@@ -13,6 +13,7 @@ In diesem File werde ich alles "business-related" tun, was in Zusammenhang mit D
   - <u>Beispiel</u>: Think of a Browser, which can store - in his memory - the pictures and other HTML, CSS or JS-Files. This allows faster download of these resources, once a user visits a website on a later point in time in the future.
 - __Client__: Damit ist häufig der Browser gemeint, wenn er Abfragen an den Server gibt.
 - __composite__: custom
+- __End to End__: Synonym für "es funktioniert". Hierbei setzt man das Modell mit dem Code auf, führt es aus und man erhält abschliessend einen Output, ohne dass z.B. der Kernel abstürzt (wie es z.B. bei der `AutoARIMA()`-Methode bei `sktime` der Fall war...).
 
 ### Organisation
 

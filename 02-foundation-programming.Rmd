@@ -23,6 +23,8 @@ In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen
 - fetch data // retrieve data
 - cache data // store data in the computer's memory (for future use)
 - Rest API // Restful API
+- `__init__` // Custom-Constructor // Initialisierungs-Methode
+- Taxonomie // Framework // ("State-of-the-Art") Methodik // Systematik
 
 ### Programming
 
@@ -48,7 +50,23 @@ In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen
 - __instanziieren__: Das Erzeugen eines Objekts in der objektorientierten Programmierung.
 - __Specification__: This is the assignment of an initial value for a data object or variable. Dieser Schritt passiert gleich nach einer _Instanzierung einer Variablen_ (siehe vorheriger Listenpunkt).
   - <u>Example in another Context</u>: Plugging in some values, in order to get a prediction from an estimated model.
+- __Self__: `self` refereziert den Zustand eines Objektes in Python --> dieser kann durch `methods` verändert werden.
+  - <u>Beispiel</u>: 
   
+```{python eval=FALSE}
+### Step 1: initialize a Python-Object 'x' with the class 'LinearRegression'
+x = linear_model.LinearRegression # important: this will create an instance of the class!
+
+### Step 2: Now that we have specified a model-type (= linear model), we can estimate a linear regression
+x.fit() # <-- THIS LINE IS KEY: "hier" wird der Zustand des Modells verändert!
+
+### Step 3: Make a prediction
+x_pred = x.predict(x_test)
+```
+
+- __Superklasse__: Begriff, welcher in der "objektorientierten Programmierung" verwendet wird. Damit ist gemeint, dass eine Klasse von einer anderen Klasse abstammt und dessen Eigenschaften "inherited". 
+  - <u>Analogie</u>: Das ist dasselbe Konzept, wie ein Parent-Element in `HTML`, welcher die `CSS`-Styling-Eigenschaften den Kindern vererbt!
+
 ## Data-Types
 
 In `R` oder `Python` ist es wichtig zu verstehen, dass gewisse Funktionen nur dann funktionieren, wenn die Inputs, die wir in die Funktion eingeben wollen, einen bestimmten Data-Type aufweisen müssen.

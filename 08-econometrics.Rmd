@@ -33,6 +33,7 @@
 - Finite // Definite
 - Infinite // indefinite
 - Relativ zu // im Verhältnis zu
+- Seasonal ARIMA // SARIMA // ARIMA(p,d,q)(P,D,Q)
 
 ## English Words Synonyme
 
@@ -410,6 +411,30 @@
 - **Which people do we compare in an RDD?** —> In a RDD, we only compare our individuals exactly above and below the treatment. That's why we can say that - whether these indivuals receive the treatment or not - is basically random! The fact that those two individual being treated or not is random is nice, because the variable becomes basically independent (no correlation) from all other factors that we cannot conrtrol for.
 - **External validity with RDD?** In an RDD, we compare the two individuals just above & below the threshold value, e.g. we compare the very first  person that does not get the treatment with the last person who gets treated. _Generally_, this generates precise and valid estimates (that are causal) --> **high internal validity**. But because we look at two precise individuals when estimating our effect, the estimated effects are not generalizable, but rather: they estimate a local treatment effect, which can at most be applied to the individuals just around the threshold, but not for the rest of the sample!
 
+## Time Series
+
+- __Univariate Forecasting__: Verwende nur die **vergangenen** Preise der (_eigenen_) Zeitreihe, um die Preise der Zukunft zu forecasten.
+- Multivariate Forecasting: Verwende - **<u>nebst</u> vergangenen Preise** der (eigenen Zeitreihe) - auch noch **andere Zeitreihen**, um die Preise der Zukunft zu forecasten.
+- **<u>What is Seasonality?</u>**: A **repeating pattern** <u>within a year</u>.
+  - <u>Example 1</u>: You see a "Buckel" every weekend --> _Weekend Seasonality_
+  - <u>Example 2</u>: You see an "s-shape" for each day of the weak --> _Daily Seasonality_
+- **<u>What is a Cycle?</u>**: This is NOT the same thing as seasonality.
+Cycles **take place over the course of several year**, rather than _within_ a year for seasonality. Generally, **cycles are not predictable**.
+  - <u>Example</u>: _Given a time-seroes_, there may be a 1st cycle that takes place over the course of 3 years, while another cycle can take 1.25 years to complete --> there is no general rule, to quantify their duration!
+- **<u>What is the "MA"-Term // q-Parameter in the ARIMA-Modell?</u>**: You make a forecast based on the <u>past errors</u> in the time series (= "error lags").
+
+### Machine Learning
+
+- __Data Splitting__: Weil Zeitreihen-daten die Eigenschaft besitzen, **geordnet** zu sein, muss beim `Train-Test Split` aufpassen: it is done <u>without</u> `shuffling` (= randomisation), weil wir ansonsten ein _Data Leakage Problem_ hätten!
+
+![Darstellung des Data Leakage Problems bei Time Series: das Modell kann leichte Vorhersagen machen, weil es Teile der Zukunft sieht! xD](./bilder/econ/data-leakage-problem-ts.jpg)
+ - __Berechnung der Validation-Error__:
+ 
+![Visuelle Darstellung, wie der verschiedenen Validierungs-Fehler (MAPE, MAE oder RMSE) berechnet werden auf dem Trainingsset. Vergesse nicht, dass jeweils bloss ein durchschnittswert pro Tabular-Regression ausgerechnet wird!](./bilder/econ/validation-error-ts.jpg) 
+ 
+ - __Berechnung der Test-Fehler__:
+ 
+ ![Visuelle Darstellung, wie die verschiedenen Test-Fehler (MAPE, MAE oder RMSE) berechnet werden. Vergesse nicht, dass jeweils bloss ein durchschnittswert pro Tabular-Regression ausgerechnet wird!](./bilder/econ/test-error-calc-ts.jpg)
 
 ## Coded Algorithms & R-Functions
 

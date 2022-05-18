@@ -325,6 +325,8 @@ unsupervised learning = structure the data into groups (very subjective) // dete
 - Cross-Validation Score // Validation Error
 - Volume // Speicherplatz
 - Weights // estimated coefficients
+- Parameter Tuning // Grid-Search
+- tweakable parameters // veränderbare Parameter (wenn du Parameter-Tuning)
 
 ### Data Science
 

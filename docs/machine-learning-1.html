@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Git Versioncontrol | Data Science from Scratch Code</title>
-  <meta name="description" content="Chapter 7 Git Versioncontrol | Data Science from Scratch Code" />
+  <title>Chapter 9 Machine Learning | Data Science from Scratch Code</title>
+  <meta name="description" content="Chapter 9 Machine Learning | Data Science from Scratch Code" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Git Versioncontrol | Data Science from Scratch Code" />
+  <meta property="og:title" content="Chapter 9 Machine Learning | Data Science from Scratch Code" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Git Versioncontrol | Data Science from Scratch Code" />
+  <meta name="twitter:title" content="Chapter 9 Machine Learning | Data Science from Scratch Code" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="improve-yourself-constantly.html"/>
-<link rel="next" href="econometrics.html"/>
+<link rel="prev" href="econometrics.html"/>
+<link rel="next" href="mengenlehre.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -395,198 +395,462 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="git-versioncontrol" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Git Versioncontrol</h1>
-<p>If you work on projects, especially when collaborating in teams, it is very important to use a versioncontrol system, such as - for example - <code>Git</code>.</p>
-<p><em>In this chapter, I will give you a list of useful <code>Git</code>-commands, that you will be likely to use</em>.</p>
-<div id="wörterbuch-4" class="section level2">
-<h2><span class="header-section-number">7.1</span> Wörterbuch</h2>
-<ul>
-<li>pull request = “Take some changes from a particular branch and bring it into another branch.”
-<ul>
-<li><u>Achtung</u>: es ist eine <em>Request</em>, es wurde noch nichts gemerged! Für das brauch es noch <code>merge</code> als zusätzlichen Befehl.<br />
-</li>
-</ul></li>
-<li><code>fork a repo</code> = “Take someone else’s repo - because you love it 😊 - and put it into your own list of repos, in order to be able to edit it yourself without affectig the original repository of the owner.”</li>
-<li><code>commit</code> = save</li>
-<li><code>hash</code> = unique identifier in the history of files. A <code>has</code> is a huge string composed of characters (= Buchstaben) &amp; numbers and is used when using a version-control software, such as <code>Git</code>.</li>
-<li><code>git add</code> = Der Befehl <code>git add</code> wird zu vielen verschiedenen Zwecken eingesetzt. Man verwendet ihn, um:
+<div id="machine-learning-1" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> Machine Learning</h1>
+<p>In diesem Kapitel, werde ich vertiefter in das Thema “Machine Learning” eingehen.</p>
+<div id="typen-von-machine-learning" class="section level2">
+<h2><span class="header-section-number">9.1</span> Typen von Machine Learning</h2>
+<p>Es gibt grundsätzlich <strong>2 Kategorien</strong>, in denen die verschiedenen <em>Methoden in Machine Learning</em> eingeordnet werden:</p>
 <ol style="list-style-type: decimal">
-<li>neue Dateien zur Version-Control hinzuzufügen,</li>
-<li>Dateien für einen Commit vorzumerken, UND</li>
-<li>verschiedene andere Dinge – beispielsweise einen Konflikt aus einem Merge als aufgelöst zu kennzeichnen.
-Leider wird der Befehl <code>git add</code> oft missverstanden. Viele assoziieren damit, dass damit Dateien zum Projekt hinzugefügt werden. Wie Sie aber gerade gelernt haben, wird der Befehl auch noch für viele andere Dinge eingesetzt. Wenn Sie den Befehl git add einsetzen, sollten Sie das eher so sehen, dass Sie damit einen bestimmten Inhalt für den nächsten Commit vormerken (= also Punkt (2) ist vor allem relevant in der obigen Liste.</li>
-</ol></li>
-</ul>
-<blockquote>
-<p>How to tell the original owner you want to merge <u>your</u> changes that you made back into their orignal repo and implement them those changes into their original work // repo?</p>
-</blockquote>
-<p>Look at <a href="https://www.youtube.com/watch?v=_NrSWLQsDL4&amp;list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&amp;index=3">the youtube video from Coding Train ab 9:35-11:50</a></p>
+<li><strong>Supervised Learning</strong>
 <ul>
-<li>To see how to <strong>refer</strong> to issues &amp; bugs in your code <u>directly</u> via your commit-command, <a href="https://www.youtube.com/watch?v=WMykv2ZMyEQ&amp;list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&amp;index=4">look at the youtube video ab 6:35-7:40</a> and to <u>diretly</u> <strong>close</strong> issues, because you resolved it, look <a href="https://www.youtube.com/watch?v=WMykv2ZMyEQ&amp;list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&amp;index=4">look at the youtube video ab 7:40-8:55</a>.</li>
-</ul>
-<blockquote>
-<p>What is a remote?</p>
-</blockquote>
-<p>A remote is a <strong>duplicate instance of your repository (on your local computer)</strong> that lives somewhere else on a remote server (like Github).</p>
-</div>
-<div id="first-time-using-git-github" class="section level2">
-<h2><span class="header-section-number">7.2</span> First time using Git &amp; Github</h2>
-<p>There are specific <code>Git</code>-commands that you need to know, when you begin to start to work with <code>Git</code> and Gibthun for the first time. Note that all these <code>Git</code>-commands need to be typed <u>within the Terminal</u> on your local computer.</p>
+<li><u>Goal 1</u>: <strong>Classification</strong>
 <ul>
-<li><code>git config --list</code> = Sehr wichtig, <strong>wenn du <code>Git</code> zum ersten Mal via einem neuen Computer runst</strong>! Dieser Befehl zeigt dir, welchen Username &amp; Email du aktuell verwendest (schaue bei <code>user.name</code> &amp; <code>user.email</code>, ob es deine Github Anmelde-Daten sind). Es ist key - <strong>insbesondere, wenn du neu mit Git beginnst</strong> - dass diese Parameter mit deinen Github Anmelde-Daten übereinstimmen! Ansonsten musst du immer <code>git clone</code> machen und die ältere Version in einen “alt”-Ordner tun, was extrem mühsam ist.
-<ul>
-<li>Wenn du noch keinen <code>user.name</code> hast, dann gebe folgenden Code in die Command-Line ein: <code>git config --global user.name 'Dein_Github_UserName'</code>.
-<ul>
-<li><u>Beachte</u>: Schreibe den Namen <u><strong>mit</strong></u> die Anführungszeichen!</li>
+<li>Image Classification</li>
 </ul></li>
-<li>Wenn du noch keinen <code>user.name</code> hast, dann gebe folgenden Code in die Command-Line ein: <code>git config --global user.name 'deineEmail@email.ch'</code>.
+<li><u>Goal 2</u>: <strong>Predictions</strong> with Regressions
 <ul>
-<li><u>Beachte</u>: Schreibe die Email <u><strong>ohne</strong></u> die Anführungszeichen!</li>
+<li>Translation (zum Beispiel angewendet in Deepl.com)</li>
+<li>Image Captioning (siehe Bild): <img src="./bilder/machine-learning/example-image-captioning.png" alt="Beispiel zu Image Captioning" /></li>
 </ul></li>
-<li><u>Check if it worked</u>?: Gebe wieder den Befehl <code>git config --list</code> und schaue bei <code>user.name</code> &amp; <code>user.email</code>, ob dort deine Github Anmelde-Daten übernommen wurden.</li>
 </ul></li>
-<li><code>git push</code> = this is the act of sending to <code>Github</code>.</li>
-<li><code>git pull</code> = this is the act of receiving from <code>Github</code>.</li>
-</ul>
-</div>
-<div id="key-concepts-in-git" class="section level2">
-<h2><span class="header-section-number">7.3</span> 2 Key concepts in Git</h2>
-<p>Before starting to work with <code>Git</code>, you need to understand that there are 2 ways of starting a project:</p>
-<pre><code>1) Create a `remote` repository on Github and then `cloning` it - via Git - on your local computer to work from there.
-2) Creating a repository `locally` on your computer and then - aftre a few months working on this repository - adding it to Github.</code></pre>
-<p><em>Depending on which of those 2 different ways you choose to start a project (create a repo right from the get-go on <code>Github</code> VS. work locally and then - after some time - push everything to <code>Github</code>), the Git-Commands will slightly differ.</em></p>
-<div id="start-project-via-github-remote-possibility" class="section level3">
-<h3><span class="header-section-number">7.3.1</span> Start Project via Github | Remote-Possibility</h3>
-<blockquote>
-<p>What are the Git-Commands, if you start your project directly by creating a Repo on Github (= <em>possibility 1</em>) above)?</p>
-</blockquote>
+<li><strong>Unsupervised Learning</strong>
 <ul>
-<li><code>git clone https://github.com/joffreymayer/tageb.git</code> == Will clone your <u>remote</u> directory <code>tageb</code> - which is currently on Github on your <u>local</u> computer, which is simpler // more comfy when working on projects =)</li>
-<li><code>git status</code> = Assume that you worked on &amp; modified a file on your local computer that you previously had on Github (you cloned the directory with the file in it on your local computer). With the command <code>git status</code>, <code>Git</code> will check whether there is any changes between your local files VS. the files in the remote directory on the Github-Server // -Website.</li>
-<li><a name="anchor-1"><code>git commit -a -m "Test comment for a commit"</code></a> = If you changed a file locally and you are happy with your results, you will need to make a <code>commit</code> (= save) <u>and</u> <code>add</code> all files (= this is why we have an input // argument <code>-a</code>; the concept of <code>adding</code> will be explored in the chapter below, where you want to put a local repo into Github after a few months) and you also want to document, what exactly you modified, if you need to go back to a previous version of your file (= this is why we have an input // argument <code>-m "comment is here..."</code>).</li>
-<li><code>git push origin master</code> = If you have done some changes locally on your file, you can now <code>push</code> everything on the Github-Website.</li>
-<li><code>git log</code> = see, locally, the history of your <code>git commit</code>s.
+<li>Clustering:
 <ul>
-<li><u>Achtung</u>: When running this command, you might - accidentally - run into a dangerous environment called <code>VIM</code>, which is a terminal-based text-editor. The problem when you are in <code>VIM</code>, is that you might not be able to get out of it.
--<u>Solution</u>: To get out of <code>VIM</code>, just type in <code>:q</code> and you will get out of it.</li>
+<li>Matching // K-Means Clustering</li>
 </ul></li>
-<li><code>git remote -v</code> = This will tell you which URL is the <code>remote</code> on which your repository is hosted.
+<li>Dimension Reduction:
 <ul>
-<li><u>Merke</u>: The URL of your repo is <em>assigned</em> to the variable <code>origin</code> in <code>Git</code>.</li>
+<li>Principal Component Analysis (PCA)</li>
 </ul></li>
-</ul>
-</div>
-<div id="start-project-via-local-computer-local-possibility" class="section level3">
-<h3><span class="header-section-number">7.3.2</span> Start Project via local computer | Local-Possibility</h3>
-<blockquote>
-<p>What commands do you need, when you decide - after a few months working <u>locally</u> on your computer - to put everything on Github (= <em>possibility 2</em>)?</p>
-</blockquote>
-<ul>
-<li><code>git init</code> == To get started, you need to go to your repository with your terminal - e.g. set the working directory with <code>cd Joffrey\dokumente\my_project</code>) first - and, then, transform your repository to a <em>Git-Repository</em> by just typing <code>git init</code> into your terminal.</li>
-<li><code>git add single_file.txt</code> == <em>After</em> you initialized your repository, you will have an <strong>empty git-repository</strong>. <code>Git</code> will <u>not</u> <code>track</code> the files in your repository (= <code>untracked files</code>), unless you explicitly point them out via the <code>git add</code> command.
-<ul>
-<li><u>If you want to add all files quickly // simultanoeusly</u>: <code>git add .</code></li>
-<li><u>Für genauere Theorie // Erklärung dahinter</u>: Siehe Youtube-Video Coding Train ab <a href="https://www.youtube.com/watch?v=9p2d-CuVlgc&amp;list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&amp;index=7">2:10-6:03</a></li>
+<li>Outlier Detection</li>
 </ul></li>
-<li><code>git commit -m "Adding a new comment for my commit"</code>: <em>After</em> having pointed out to <code>Git</code>, which files he needs to track, you can do a <code>commit</code> of the changes of the files you modified, like in <em>possibility 1)</em>.
-<ul>
-<li><u>Achtung, es gibt einen kleinen Unterschied zu <em>possibility 1)</em></u>: das <code>-a</code> (<a href="#anchor-1">siehe oben</a>) ist verschwunden, weil wir hier <code>add</code> und <code>commit</code> als zwei separate Schritte betrachten.</li>
-</ul></li>
-<li><code>git remote add origin https://github.com/joffreymayer/new-repo</code> = Because our repository is still currently not on <code>Github</code>, we <u>first</u> need to <a href="https://github.com/joffreymayer?tab=repositories">go on the Github Website</a> and create an <u>empty</u> repository. <em>After</em> having done this, you need to tell <code>Git</code> - with the command <code>git remote add origin</code> + <strong>copy-pasting the URL</strong> “<a href="https://github.com/joffreymayer/new-repo" class="uri">https://github.com/joffreymayer/new-repo</a>” - that this is our local
-<ul>
-<li><u>Check if it worked</u>: Type the following into the Terminal <code>git remote -v</code>. It should output the variable name - usually called <code>origin</code> -
-<ul>
-<li><u>Note if you want to be fancy</u>: Within <code>git remote add origin</code>, the name <code>origin</code> can be changed to any word you like. This is just the variable name in which your Github-URL will be stored.</li>
-</ul></li>
-<li>If there is already a remote with the default name <code>origin</code> but you don’t like the name, you can change the name by:
-<ol style="list-style-type: decimal">
-<li><code>git remote remove origin</code> –&gt; this will delete the remote</li>
-<li><code>git remote -v</code> –&gt; just to check if step 1) worked –&gt; should not output anything</li>
-<li><code>git remote add noob https:\\github.com\project-1</code> –&gt; now, re-name the remote and call it <code>noob</code></li>
-</ol></li>
-</ul></li>
-<li><code>git push origin master</code> == <em>Finally</em>, you will be able to put all your files into the freshly made remote-repository on <code>Github</code>.</li>
-<li><code>git pull origin master</code> == Assume that you did changes <code>remotly</code> on Github but not yet locally on your computer. This does not matter, since you can just enter the command <code>git pull origin master</code> to be able to retrieve the changes that you did <code>remotly</code> on Github onto your local computer =)</li>
-</ul>
-</div>
-</div>
-<div id="working-with-branches" class="section level2">
-<h2><span class="header-section-number">7.4</span> Working with Branches</h2>
-<blockquote>
-<p>Tutorial for branches?</p>
-</blockquote>
-<p>Look at <a href="https://youtu.be/oPpnCh7InLY">youtube-videos from Coding Train</a>.</p>
-<ul>
-<li><code>git branch new_branch</code> == this will create a branch locally on your computer</li>
-<li><code>git checkout new_branch</code> == this will tell <code>Git</code>: “ah, he wants to go into the branch called ‘new_branch’”.</li>
-<li><code>git branch</code> == this will give you a list of all the branches you ave created locally. Furthermore, it will tell you on which branch you currently work on.</li>
-</ul>
-<blockquote>
-<p>How to merge the changes you made on a separate branch to the <code>master-branch</code> (= main branch)?</p>
-</blockquote>
-<ol style="list-style-type: decimal">
-<li><code>git branch new_branch</code> == this will <strong>create a branch</strong> called <code>new_branch</code> locally on your computer.</li>
-<li><code>git checkout new_branch</code> == You will tell <code>Git</code>: “I now want to <strong>work on this newly created branch</strong> called ‘new_branch’”.</li>
-<li><code>git checkout master</code> == <em>After</em> you are happy with the changes you did in <code>new_branch</code> you will need to prepare for the merging by <strong>switching to your main-branch</strong>, which is the <code>master</code>-branch.</li>
-<li><code>git merge new_branch</code> == Since you currently are in the <code>master-branch</code>, Git will know that you want to <strong>merge</strong> <code>new_branch</code> <u>into</u> the <code>master-branch</code>.</li>
 </ol>
 </div>
-<div id="set-up-an-ssh-key-for-github" class="section level2">
-<h2><span class="header-section-number">7.5</span> Set-Up an SSH-Key for Github</h2>
-<p>Whenever you will work with <code>Git</code> and <code>Github</code>, you will always need to type in your password, whenever you push something to the <code>Github</code>-Cloud. Therefore, you will absolutely need an <code>shh-key</code>, where <code>Github</code> gets the <code>public-key</code> and your computer has the <code>private-key</code> to establish an <strong>automatic connection</strong> when you work on your local computer and you want to push some changes to the Github-Cloud.</p>
-<p>In order to activate the connection between your local computer and the Github-Cloud, you will need to type in the following command <strong>into your terminal</strong>:</p>
-<pre><code>git remote set-url origin git@github.com:Your_Github_UserName_here/Name_of_Your_Remote_Repository_on_Github.git</code></pre>
-<p>Follow the instructions on <a href="https://www.youtube.com/watch?v=HfTXHrWMGVY&amp;t=1m52s">this Youtube-Video from WebDevSimplified</a> from <code>WebDevSimplified</code> in order to set-up your <code>ssh-key</code> =)</p>
-<p>That was it 😎</p>
+<div id="supervised-learning" class="section level2">
+<h2><span class="header-section-number">9.2</span> Supervised Learning</h2>
+<p><strong>Bei Supervised Learning</strong> wird die <strong>Annahme</strong> gemacht, <em>dass man die Funktion ‘f’ <strong>kennt</strong>, um mittels den Werten der Zufallsvariablen ‘X’ die Werte der Zufallsvariablen ‘Y’ herauszufinden</em>.</p>
+<p><u>Mathematisch ausgedrückt</u>: <code>f : X -&gt; Y</code>.</p>
 </div>
-<div id="create-a-.gitignore-file" class="section level2">
-<h2><span class="header-section-number">7.6</span> Create a <code>.gitignore</code>-file</h2>
-<p>You will NEVER want to use version-control on every single file in your repository. That’s why you need a <code>.gitignore</code>-file, in which you can write - on each line - which paths can be ignored.</p>
-<p><strong>Be sure to be in the root of your working directory when you create the <code>.gitignore</code>-file!</strong></p>
+<div id="methods" class="section level2">
+<h2><span class="header-section-number">9.3</span> Methods</h2>
+<p>Hier soll eine Auflistung aller Vorgehen bei Machine Learning aufgelistet werden:</p>
 <ul>
-<li><code>touch .gitignore</code></li>
+<li><p><strong><u>Algorithm for “best fit” to find the weights</u></strong>:</p>
+<ol style="list-style-type: decimal">
+<li><p>Guess some random weights.</p></li>
+<li><p>“Go downhill”, e.g. <strong>apply a <em>learning rate</em></strong> when using the method <strong>gradient descent</strong>.</p></li>
+<li><p>Is the <strong>fitted line good enough?</strong></p>
+<ul>
+<li>If the <em>answer is “no”</em>, then go <strong>back to point 2)</strong>.</li>
+</ul></li>
+</ol></li>
+</ul>
+</div>
+<div id="wichtige-funktionen" class="section level2">
+<h2><span class="header-section-number">9.4</span> Wichtige Funktionen</h2>
+<p>Da Machine Learning mittels Aktivierungsfunktionen funktioniert, folgt eine Übersicht zu verschiedenen Funktionen:</p>
+<ul>
+<li><strong><u>Identity Function</u></strong>: damit ist die Funktion <code>f(x) = x</code> bzw. <code>y = x</code> gemeint:</li>
+</ul>
+<p><img src="bookdownproj_files/figure-html/identity-function-1.png" width="672" /></p>
+<ul>
+<li><strong><u>Logitstic Function // Sigmoid Function // S-Shaped Function</u></strong>: damit ist die Funktion <span class="math inline">\(\sigma(x) = \frac{1}{1 + e^{-x}}\)</span> gemeint:</li>
+</ul>
+<p><img src="bookdownproj_files/figure-html/input-only-2-1.png" width="672" /></p>
+</div>
+<div id="difference-between-training--validation--test-dataset" class="section level2">
+<h2><span class="header-section-number">9.5</span> Difference between Training-, Validation- &amp; Test-dataset</h2>
+<p>Since I started with Machine Learning, I was always confused about the concept of <strong>data splitting</strong>, e.g. which sub-set of the <em>entire</em> dataset is now considered to be the <em>training dataset</em>, which one is the <em>validation dataset</em> and which one is the <em>testing dataset</em>.</p>
+<p><u>In the graph below, you see how it is defined correctly</u>:</p>
+<div class="figure">
+<img src="./bilder/training-VS-validation-VS-test-ddset.jpg" alt="" />
+<p class="caption">Training Set VS. Validation Set VS. Test Set</p>
+</div>
+<ul>
+<li><u>Important to note</u>: There is oftentimes confusion between the definition of <em>validation dataset</em> VS. <em>testing dataset</em>, because there is no consens about it. <strong>Therefore - and if we take the above picture as the “true” definition - some people will call the <em>validation dataset</em> the “test dataset” and vice versa, e.g. the <em>test data</em> as the “validation data”! xD</strong></li>
+</ul>
+<div id="validation-set-vs.-test-set" class="section level3">
+<h3><span class="header-section-number">9.5.1</span> Validation-Set VS. Test-Set</h3>
+<blockquote>
+<p>What is the difference between a <code>Validation Dataset</code> and a <code>Testing Dataset</code>?</p>
+</blockquote>
+<p>Es gibt keinen Konsens dafür, was nun das <code>validation dataset</code> und welches das <code>test set</code> genau ist. <strong>Nima</strong> (= mein Mentor bei der SBB) verwendet den Begriff <code>test set</code> für dasjenige Dataset, welches <code>hold out</code> // separat für die (spätere) <code>Prediction</code> verwendet wird.</p>
+<ul>
+<li><u>Regel zu Unterscheidung der beiden Terme</u>: Wenn steht: <code>we hold out [name of the set]</code>, dann ist es das <code>testing dataset</code>.</li>
+</ul>
+</div>
+<div id="reason-for-a-validation-set" class="section level3">
+<h3><span class="header-section-number">9.5.2</span> Reason for a Validation-Set</h3>
+<blockquote>
+<p>Why do we need <code>validation set</code>?</p>
+</blockquote>
+<p>At the end, you want the best model possible. If you want to tune your hyperparameters, you will need your <code>test set</code>. <strong>The big problem here, however, is that - <em>if we use the test-set more than once when wanting to find out the best hyperparameters</em> - our model will know the data by heart and the predictions will be too good, <u>but only</u> on this dataset that you are currently using</strong>! The model will not generalize well on new data.</p>
+<p><em>That’s why we need this additional subsetting of the training-dataset!</em></p>
+</div>
+</div>
+<div id="concept-of-stratification" class="section level2">
+<h2><span class="header-section-number">9.6</span> Concept of Stratification</h2>
+<p>Angenommen du hast eine <em>kategorische</em> Y-Variable, welche entweder Nullen oder Einsen als Werte annimmt. Nehme nun an, dass - <em>im Training-Dataset</em> - der Anteil der Nullen 60% beträgt. Wenn du nun ein <code>stratified Sample</code> willst, dann wird das <em>Test-Dataset</em> ebenfalls einen Anteil von 60% an Nullen enthalten!</p>
+<ul>
+<li><u>Quelle</u>: <a href="https://www.youtube.com/watch?v=KEBS7Kyc0Po">Train-Test-Split in Sklearn and Cross-Validation</a></li>
+</ul>
+</div>
+<div id="cross-validation" class="section level2">
+<h2><span class="header-section-number">9.7</span> Cross-Validation</h2>
+<p>The concept of <em>cross-validation</em> can be splitted into 2 parts:</p>
+<ul>
+<li><u>Step 1</u>: Split your dataset into 1 training- &amp; 1 test-set.
+<ul>
+<li><u>Rule of Thumb</u>: Usually, the split is <strong>70-90% training set</strong> and <strong>10-30% for the test-set</strong>.</li>
+<li><u>Code Example</u>:</li>
+</ul></li>
+</ul>
+<div class="figure">
+<img src="./bilder/code-example-cross-validation.png" alt="" />
+<p class="caption">Example of Code for Train-Test Split</p>
+</div>
+<ul>
+<li><u>Step 2</u>: Now, we divide the <em>training set</em> further, such that it will contain - <em>if we assume a 3-fold cross-validation as an example</em> - <strong>3 <u>different</u> validation sets</strong> and <strong>3 training sets</strong>.</li>
+</ul>
+<div class="figure">
+<img src="./bilder/example-of-a-general-3-fold-cross-validation.png" alt="" />
+<p class="caption">Allgemeine Cross-Validation</p>
+</div>
+<div id="special-case-cross-validation-for-time-series-data" class="section level3">
+<h3><span class="header-section-number">9.7.1</span> <u>Special Case</u>: Cross-Validation for Time-Series Data</h3>
+<p>Because time-series are ordered, since <em>the flow of time</em> is only going forward, the graph shown above for <em>step 2</em> is <u>not</u> valid and we need another approach!</p>
+</div>
+<div id="why-do-we-use-cross-validation" class="section level3">
+<h3><span class="header-section-number">9.7.2</span> Why do we use Cross-Validation?</h3>
+<p>There are 2 reasons:</p>
+<ol style="list-style-type: decimal">
+<li>It allows us <strong>to compare the score (MAPE, MAE or RMSE) of different model set-ups</strong>, for example:</li>
+</ol>
+<ul>
+<li><em>CV-Scheme changes</em>, e.g. a <em>Time-Series</em> Prophet-Model with a <code>Sliding-Window</code> of 4 Months VS. a Prophet-Model with an <code>Expanding-Window</code> (full past).</li>
+<li>OR <em>changes in the covariates</em>, e.g. a model that includes an important covariate, while the other model does not.
+<strong>This will allow you to draw conclusions regarding the selection of “the best” model</strong>.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>It allows you <strong>to assess the performance</strong> of different machine-learning methods. In a <em>classification-setting</em> for example, you can use the <em>confusion-matrix</em>.</li>
+</ol>
+<div class="figure">
+<img src="./bilder/example-3-fold-cross-validation-for-time-series.png" alt="" />
+<p class="caption">Cross-Validation for Time Series</p>
+</div>
+<p>This picture shows <strong>an example of a 3-fold cross-validation for a time-series</strong>.</p>
+</div>
+</div>
+<div id="normalisierung-der-daten" class="section level2">
+<h2><span class="header-section-number">9.8</span> Normalisierung der Daten</h2>
+<blockquote>
+<p>Was versteht man unter <code>Normalisierung</code>? Was sollte man dabei beachten? Warum wird in einem Pre-Processing Schritt eine Normalisierung durchgeführt?</p>
+</blockquote>
+<p><code>Normalisierung</code> == <strong>Subtrahiere den Mittelwert und dividiere durch die Standardabweichung jedes Merkmals</strong>. Es sollte beachtet werden, dass der Mittelwert und die Standardabweichung <strong>nur anhand der Trainings-Daten berechnet werden sollte</strong>, damit die Modelle keinen Zugriff auf die Werte in den Validierungs- und Testsätzen haben.</p>
+<p><strong>Es ist wichtig, Features zu skalieren, bevor ein neuronales Netzwerk trainiert wird</strong>. Normalisierung ist eine gängige Methode für diese Skalierung.</p>
+</div>
+<div id="rnn" class="section level2">
+<h2><span class="header-section-number">9.9</span> RNN</h2>
+<blockquote>
+<p>Was macht ein <code>Reccurrent Neural Network (RNN)</code>?</p>
+</blockquote>
+<p>Ein Beispiel für ein RNN wäre ein <code>Long Short Term Memory</code> Modell (LSTM Modell). Dabei nimmt das RNN zunächst ein ganz kleines Vergangenheits-Intervall, macht eine Modell-Estimation und dann - im nächsten Schritt - wird ein grösseres Vergangenheits-Intervall verwendet (<strong>inkl. predicted Y-Variable aus dem vorherigen Modell</strong>), um eine neue Modell-Estimation zu machen etc.</p>
+<div class="figure">
+<img src="https://github.com/tensorflow/docs/blob/master/site/en/tutorials/structured_data/images/lstm_many_window.png?raw=1" alt="" />
+<p class="caption">Beispiel eines RNN: hier ein LSTM</p>
+</div>
+</div>
+<div id="data-pipelines" class="section level2">
+<h2><span class="header-section-number">9.10</span> Data-Pipelines</h2>
+<p><strong>Data Pipelines use an input to produce an output and then - on a second step - use the produced output as an input to produce another output etc…</strong></p>
+<ul>
+<li><u>Visualisierung</u>: Du kannst dir unter <em>Data Pipelines</em> nichts anderes als eine “Guetzli Fabrik” vorstellen, welche diverse Produktionsmaschinen verwendet - zum Beispiel einen Teig-Cutter, dann einen Butter-Schmierer, sowie einen fetten Ofen und einen Sortierer von “guten VS. schlechte Guetzli” - um die Inputs immer weiter zu verarbeiten, sodass schlussendlich ein Endprodukt (= die fertigen “Guetzli”) ensteht, dass man verkaufen kann.</li>
 </ul>
 <blockquote>
-<p>Example, of what to write into a <code>.gitignore</code>-file?</p>
+<p><a href="https://www.youtube.com/watch?v=w9IGkBfOoic">How to create good Data-Pipelines in Scikit-Learn?</a></p>
 </blockquote>
 <ul>
-<li><u>It can be a path to a repository that you don’t want to stage</u>: <code>/bilder</code></li>
-<li><u>It can be all <code>log</code>-files</u>: <code>**.log</code></li>
+<li><u>Ziel von Data-Pipeline</u>: Write more clean // readable code, especially when you do <em>data cleaning</em>. <strong>A datapipeline is basically a way of standardizing your code</strong>.</li>
+<li><u>Warum sind Data-Pipelines so geil?</u>: Because you can <strong>compare many different regression-models (Linear-Regression Vs. Logistic-Regression Vs. RandomForrest …), applying different “scaling-techniques” (= normalize a variable with mean 0 and standard-deviation of 1), as well as using “data cleaning techniques” (= reduce dimensions via PCA, reduce missing-values etc…)</strong>. Another cool thing to note is, that <strong>you can choose the order, in which the cleaning, scaling and fitting occures!</strong>
+<ul>
+<li>See also the summary of the guy <a href="https://www.youtube.com/watch?v=w9IGkBfOoic">on Youtube ab 10:00-11:00</a>.</li>
+</ul></li>
+<li><u>Link to Github for an example</u>: <a href="https://github.com/krishnaik06/Pipelines-Using-Sklearn/blob/master/SklearnPipeline.ipynb" target="_blank">Jupyter-Notebook code-example on how to create a little Data-Pipeline by yourself</a></li>
 </ul>
 </div>
-<div id="speicherplatz-verwendet-durch-git-history" class="section level2">
-<h2><span class="header-section-number">7.7</span> Speicherplatz verwendet durch <code>Git</code>-History</h2>
-<p>Um den Status zu erhalten, brauchen wir bloss, den folgenden Code einzugeben:
-<code>git count-objects -v</code>.</p>
-<p>Der Output wird sein:</p>
-<pre><code>git count-objects -v
-count: 7
-size: 32
-in-pack: 17
-packs: 1
-size-pack: 4868
-prune-packable: 0
-garbage: 0
-size-garbage: 0</code></pre>
-<p>Der size-pack Eintrag gibt die Größe Ihrer Packdateien in Kilobyte an. Somit verwenden Sie <strong>fast 5 MB an Speicherplatz</strong>. Das ist <strong>oftmals zu gross, beispielsweise Bild-Dateien sind hier enthalten</strong>, die man nicht - wie zum Beispiel HTML-Files - ständig bearbeitet. Deshalb solltest du diese nicht alles in deinem Repository stagen!</p>
-</div>
-<div id="unstage-everything" class="section level2">
-<h2><span class="header-section-number">7.8</span> Unstage everything</h2>
-<p>Dieser Befehl enthält zwar den gefährlichen Befehel <code>rm</code>, doch hier werden keine Files deleted, sondern bloss die <em>komplette</em> <code>git</code>-history gelöscht:</p>
+<div id="uni-kurs-neural-networks-deep-learning" class="section level2">
+<h2><span class="header-section-number">9.11</span> Uni-Kurs <code>Neural Networks &amp; Deep Learning</code></h2>
+<div id="notation-neural-networks" class="section level3">
+<h3><span class="header-section-number">9.11.1</span> Notation Neural Networks</h3>
+<p><strong>Machine Learning verwendet unterschiedliche Begriffe für diverse gleiche Konzepte &amp; Definitionen aus den Wirtschaftswissenschaften</strong>. Nun geht es darum, die korrekte Übersetzungen für diese Wörter aufzulisten:</p>
 <ul>
-<li><code>git rm --cached -r .</code></li>
+<li>weights = Beta-Coefficients = parameters = a, b = neurons</li>
+<li>Input units = independent variables “x”</li>
+<li>inputs = Anzahl Observations in Total</li>
+<li>Output unit = Dependent variable “y” = labels</li>
+<li>Activation function (AF) = you need this function to plug in your <u>estimated</u> regression model.
+<ul>
+<li><u><strong>Examples of AF</strong></u>:
+<ul>
+<li>logit,</li>
+<li>probit,</li>
+<li>relu,</li>
+<li>simple “threshold” AF etc…</li>
+</ul></li>
+</ul></li>
+<li>Perceptron = Linear Binary Classifier = usually, the perceptron is a <u>linear</u> separator (= line that separates group in a regression) = <em>Perceptron</em> is a <strong>single layer neural network</strong></li>
+<li>Multi-layer perceptron == <em>Neural Networks</em>.
+<ul>
+<li><u>Example</u>:
+<img src="./bilder/machine-learning/example-of-a-multi-layer-network.png" alt="Neural Network with 3 Layers" /></li>
+</ul></li>
+<li>learning rate = how far to go in a particular direction</li>
+<li>features = inputs = independent variables “x” = X<sub>ki</sub></li>
+<li>labels = this is the “true Y” you observe in the real world = output = dependent variable</li>
+<li>“going downhill” = this is the learning process that you get by using the method “gradient decent” (<a href="https://www.youtube.com/watch?v=L-Lsfu4ab74">look youtube video of user called “the coding train” at ca. 17:30</a>) &amp; applying a “learning rate” to it</li>
+<li>y<sub>k</sub> = this is the <u>estimated</u> regression function</li>
+<li>z<sub>k</sub> = “logits”, e.g. this is the whole <em>sum of the weights multiplied by the x-variables (= entire regression)</em>, but this time we <strong>put this entire regression as an <em>input</em> into the logistic function</strong> –&gt; <u>in other words</u>: the same as y<sub>k</sub> but we then apply the specific activation function “logit function” to the estimated z<sub>k</sub> // <span class="math inline">\(\hat{y}\)</span></li>
+<li>Input Layer = Layer 0 = very first set of Neuron</li>
+<li>Output Layer = Last Layer = last set of Neurons</li>
+<li>Hidden Layers = All Layers between the input &amp; output Layer</li>
+<li>input node = nodes at the input layer</li>
+<li>output node = nodes at the output layer</li>
+<li>hidden nodes = nodes, which are in the hidden layers or at the output layer &amp; don’t give out outputs</li>
+<li>Feed forward neural networks = connections only between layer i and layer i+1</li>
+<li>Convolutional neural networks = a type of feed-foward network</li>
+<li>Recurrent neural networks = connections flow backwards to previous layers as well</li>
+<li>supervised learning = function estimation
+<ul>
+<li><u>There are 2 different types</u>:
+<ol style="list-style-type: decimal">
+<li>regression,</li>
+<li>classification</li>
+</ol></li>
+</ul></li>
+<li>unsupervised learning = structure the data into groups (very subjective) // detecting patterns.
+<ul>
+<li>Can also be used for:
+<ol style="list-style-type: decimal">
+<li>data reduction,</li>
+<li>outlier detection</li>
+</ol></li>
+</ul></li>
+<li>loss-function = cost-function = [TRUE y - ESTIMATED <span class="math inline">\(\hat{Y}\)</span>]<sup>2</sup> = error –&gt; we define the loss-function be the “least squares”</li>
+<li>identity function = y = x bzw. f(x) = x</li>
+<li>sigmoid function = logit function</li>
+<li>bias term = error term
+<ul>
+<li><u>Note</u>: Oftmals wird der <strong>“input” für den bias term als Zahl “1”</strong> angegeben (siehe Bild oben “Example of Multi-Layer Network”, wo der bias term als Zahl “1” angegeben ist.)</li>
+</ul></li>
+<li>Epoch = means we go through the whole data set once –&gt; default is ten epochs</li>
+<li>Net Input Function = Regressionsmodell als Ganzes = sum of all weighted inputs // “x”</li>
+<li>kernel = (starting) values for the weights</li>
+<li>regularizers = penalties that are used to reduce overfitting (of the starting values for the weights?)</li>
+<li>backpropagation = back pass = when we have our error-term, we can calculate the gradient and - if the error was too big - we can backpass the error-term with the help of the <em>learning rate</em> to a previous layer and estimate new // better weights</li>
+<li>breaking symmetry = principle, which says that you need to have different initial weights for hidden units with the same activation function and same inputs</li>
+<li>batches = these are smaller samples that you take from the whole dataset, e.g. you take only a fraction of the dataset –&gt; you use batches because the computation gets faster rather than putting the whole dataset into the machine
+learning “Apparat” –&gt; Rule: the higher the batch size, the better estimates you get</li>
+<li>decay = In Machine Learning, it has become kind of standard to make learning rates dynamic, e.g. first have bigger learning rates, because you can be very wrong at the beginning with the random weights, but then - towards the end of estimation - you adapt the learning rate only very smoothly, since you slowly go towards the optimum –&gt; typically, this decay will make the learning rate smaller as the training continues.</li>
+<li>momentum = makes learning rates dynamic –&gt; If you see that - in the history of gradients - the gradients point generally in the same direction, momentum will adjust the learning rate by increasing the step size</li>
+<li>hyperparameters = <u>examples are</u>:
+<ul>
+<li>Learning rate,</li>
+<li>Learning Rate Decay,</li>
+<li>Momentum,</li>
+<li>Batch Size,</li>
+<li>Weight / Bias initialization</li>
+</ul></li>
+<li>Confusion Matrix = C = shows - in the diagonal of the matrix - how many times your predicted outcome was the same as the actual outcome. All the other numbers are saying that your model’s prediction was not in line with the actual outcome</li>
+<li>Precision = if i look at a guess // prediction, how many % my algorithm guessed correctly? –&gt; E.g. Anteil der predicted outcome <span class="math inline">\(\hat{y}\)</span>, welche korrekt mit den ture outcomes übereinstimmen.
+<ul>
+<li><u>Mathematisch ausgedrückt</u>: Im Zähler die Anzahl an übereinstimmenden predicted outcomes <span class="math inline">\(\hat{y}\)</span> &amp; im Nenner Totale Anzahl an predicted Outcomes <span class="math inline">\(\hat{y}\)</span>.</li>
+</ul></li>
+<li>Recall = if i look at an actual true outcome, how many % where guessed correctly? –&gt; E.g. Anteil der true outcome Y, welche korrekt vorhergesagt wurden
+<ul>
+<li><u>Mathematisch ausgedrückt</u>: Im Zähler die Anzahl an korrekt vorhergesehenen true outcomes &amp; im Nenner Totale Anzahl an True Outcomes.</li>
+</ul></li>
+<li>Training data = Training set is the one on which we train and fit our model basically to fit the parameters.</li>
+<li>Testing data = Testing Data is used only to assess performance of the model.</li>
+<li>Variance = Overfit = you use too much X’s // features in your model –&gt; you get too much variance in your predictions</li>
+<li>Bagging = Train the same architecture on different subsets of data</li>
+<li>Boosting = Train different model architectures on the same data</li>
+<li>data augmentation = get more data by adding noise on the input layer</li>
+<li>weight tying = Make the weights similar</li>
 </ul>
-<blockquote>
-<p>Warum will man die gesamte <code>Git</code>-History löschen?</p>
-</blockquote>
-<p>Weil man muss nicht alles via Version-Control verwalten. Ein gutes Beispiel sind Bild-Dateien, welche man <u>nicht</u> - im Gegensatz zu HTML- oder CSS-Files - häufig bearbeitet.</p>
-<p>Ein <strong>zweiter Nachteil</strong>, wenn alles via Version-Control läuft, ist, dass es <strong>viel zu viel Speicher benötigt</strong>, obwohl <code>Git</code> Bilder zwar komprimiert, aber diese bleiben trotzdem grosse Dateien…</p>
-</div>
-<div id="stage-only-a-certain-type-of-file---for-example---only-.html-files" class="section level2">
-<h2><span class="header-section-number">7.9</span> Stage only a certain type of file - for example - only <code>.html</code>-files</h2>
+<div id="alphabetisch-sortiert" class="section level4">
+<h4><span class="header-section-number">9.11.1.1</span> Alphabetisch sortiert:</h4>
+<p>Um die Begriffe noch leichter zu finden, habe ich sie hier noch alphabetisch sortiert:</p>
 <ul>
-<li><code>git add *.html</code></li>
+<li>Activation function = you need this function to plug in your estimated regression model. Examples of AF = logit, probit, relu, simple “threshold” AF etc…</li>
+<li>backpropagation = back pass = when we have our error-term, we can calculate the gradient and - if the error was too big - we can backpass the error-term with
+the helplearning rate to a previous layer and estimate new // better weights</li>
+<li>batches = these are samples from the whole dataset –&gt; you use batches because the computation gets faster rather than putting the whole dataset into the machine
+learning “Apparat” –&gt; Rule: the higher the batch size, the better estimates you get</li>
+<li>bias term = error term</li>
+<li>breaking symmetry = principle, which says that you need to have different initial weights for hidden units with the same activation function and same inputs</li>
+<li>Confusion Matrix = C = shows - in the diagonal of the matrix - how many times your predicted outcome was the same as the actual outcome. All the other numbers are saying that your model’s prediction was not in line with the actual outcome</li>
+<li>Convolutional neural networks = a type of feed fowardnetwork</li>
+<li>decay = make learning rates dynamic –&gt; typically, this decay will make the learning rate smaller as the training continues.</li>
+<li>Epoch = means we go through the whole data set once –&gt; default is ten epochs</li>
+<li>features = inputs = independent variables “x” = X(ki)</li>
+<li>Feed forward neural networks = connections only between layer i and layer i+1</li>
+<li>“going downhill” = this is the learning process that you get by using the method “gradient decent” (look youtube video by “the coding train” at ca. 17:30) &amp; applying a “learning rate” to it</li>
+<li>Hidden Layers = All Layers between the input &amp; output Layer</li>
+<li>hidden nodes = nodes, which are in the hidden layers or at the output layer &amp; don’t give out outputs</li>
+<li>hyperparameters = examples are: Learning rate, Learning Rate Decay, Momentum, Batch Size, Weight / Bias initialization</li>
+<li>identity function = y = x bzw. f(x) = x</li>
+<li>inputs = Anzahl Observations in Total</li>
+<li>Input Layer = Layer 0 = very first set of Neuron</li>
+<li>input node = nodes at the input layer</li>
+<li>Input units = independent variables “x”</li>
+<li>kernel = (starting) values for the weights</li>
+<li>labels = this is the “true Y” you observe in the real world = output = dependent variable</li>
+<li>learning rate = how far to go in a particular direction</li>
+<li>loss-function = cost-function = [TRUE y - ESTIMATED Y(hat)]^2 = error –&gt; we define the loss-function be the “least squares”</li>
+<li>Net Input Function = Regressionsmodell als Ganzes = sum of all weighted inputs // “x”</li>
+<li>momentum = makes learning rates dynamic –&gt; If you see that - in the history of gradients - the gradients point generally in the same direction, momentum will adjust the learning rate by increasing the step size</li>
+<li>Output Layer = Last Layer = last set of Neurons</li>
+<li>output node = node at the output layer</li>
+<li>Perceptron = Linear Binary Classifier = linear seperator (= line that separates group in a regression) = Perceptron is a single layer neural network and a multi-layer perceptron is called Neural Networks.</li>
+<li>Precision = if i look at a guess // prediction, how many % my algorithm guessed correctly?</li>
+<li>Recall = if i look at an actual true outcome, how many % where guessed correctly</li>
+<li>Recurrent neural networks = connections flow backwards to previous layers as well</li>
+<li>regularizers = penalties that are used to reduce overfitting (of the starting values for the weights?)</li>
+<li>sigmoid function = logit function</li>
+<li>saling = pre-processing data</li>
+<li>supervised learning = function estimation –&gt; 2 different types: 1) regression; 2) classification</li>
+<li>Training data = Training set is the one on which we train and fit our model basically to fit the parameters.</li>
+<li>Testing data = Testing Data is used only to assess performance of the model.
+unsupervised learning = structure the data into groups (very subjective) // detecting patterns // data reduction</li>
+<li>weights = Beta-Coefficients = parameters = a, b = neurons</li>
+<li>y(k) = this is the estimated(!!) regresion function</li>
+<li>z(k) = “logits” –&gt; the same as y(k) but we then apply the specific activation function “logit function” to the estimated z(k) // y(hat)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="wörterbuch-5" class="section level2">
+<h2><span class="header-section-number">9.12</span> Wörterbuch</h2>
+<div id="synonyme-3" class="section level3">
+<h3><span class="header-section-number">9.12.1</span> Synonyme</h3>
+<ul>
+<li>Training Dataset // Training Set</li>
+<li>Testing Dataset // Test Set</li>
+<li>generalize // extrapolate</li>
+<li>relativ zu // im Verhältnis zu</li>
+<li>feed in // plug in</li>
+<li>shape // dimension</li>
+<li>target // predicted y-value</li>
+<li>Treiber // x-Variablen</li>
+<li>Score // Error</li>
+<li>Cross-Validation Score // Validation Error</li>
+<li>Volume // Speicherplatz</li>
+<li>Weights // estimated coefficients</li>
+<li>Parameter Tuning // Grid-Search</li>
+<li>tweakable parameters // veränderbare Parameter (wenn du Parameter-Tuning)</li>
+</ul>
+</div>
+<div id="data-science" class="section level3">
+<h3><span class="header-section-number">9.12.2</span> Data Science</h3>
+<ul>
+<li><strong>Samples</strong> == number of rows // number of observations within a dataset.</li>
+<li><strong>Instance</strong>: value within a cell –&gt; konkreter “x”-Wert, welcher angenommen wird und du - beispielsweise - für eine Prediction verwenden kannst.</li>
+</ul>
+<div class="figure">
+<img src="./bilder/python-lib/pandas-df.jpg" alt="" />
+<p class="caption">This is the overview of a <code>Pandas</code> DataFrame, where an instance would be nothing else but a “value”.</p>
+</div>
+<ul>
+<li><strong>Label</strong>: <em>true</em> y-value</li>
+<li><strong>Forcasted data</strong>: These are the predictions that you do via the help of a model (–&gt; by plugging in concrete x-values), that you’ve built.</li>
+<li><strong>Training Dataset</strong>: This is the sample, that you use to estimate your model.</li>
+<li><strong>Testing Dataset</strong>: This is the <code>hold out</code>-set, which you use at the end, to check whether your model is able to generalize // extrapolate well to new data.</li>
+<li><strong>“The model is learning”</strong>: What is meant by “learning” is –&gt; given some Datenpunkt-Wolke, the computer will try and fit the “best line” [oftentimes by minimizing the sum of the squared residuals, if you use <code>OLS</code> (= Ordinary Least Squared) OR by using the <em>Gradient Descend Method</em>, when you have more data] to construct the “best model” possible.</li>
+<li><strong>Training</strong>: You are estimating a model on the trainig-dataset, such that the model “learns” from the data.</li>
+<li><strong>Bias</strong>: When a modl displays “bias”, then it means that your model is too simpel (not enough <code>X</code>-variables included, for example) and - as a result - your estimated <code>sample regression function</code> is not able to approximate the (true) underlying (unknown) <code>population regression function</code>.
+<img src="./bilder/home/def-bias-from-google.png" alt="Alternatively, this is the definition, Google-Researchers gave to bias." /></li>
+<li><strong>Overfitting</strong>: The problem of overfitting occurs when a model is <strong>too complex and captures too much detail</strong> from the <em>training</em> data. This can lead to the model being unable to generalize to new, unseen data.
+<ul>
+<li><u>Fazit</u>: This is like the problem of “<strong>low external validity</strong>”. You may have a high “internal validity”, but external validity is <em>low</em>!</li>
+</ul></li>
+<li><strong>Shuffle</strong>: englisches Wort für “mischen”. In the context of <code>splitting the dataset into test- &amp; training-data</code>, it is common practice to <code>shuffle</code> your observations within your dataset first.
+<ul>
+<li><u>Reason why you <code>shuffle</code></u>?: Shuffling data serves the purpose of
+<ul>
+<li>reducing variance AND</li>
+<li>making sure that models remain general AND</li>
+<li>overfit less.</li>
+</ul></li>
+<li><u>Merke</u>: When dealing with <em>time-series</em>, you should not use <code>shuffle</code> when <code>splitting the data</code> into training- &amp; testing-data.</li>
+</ul></li>
+<li><strong>Training Score OR Test Error</strong>: This error // score is the [oftentimes squared] difference between the <em>true</em> Y-variable and <em>predicted</em> Y-variable (= <span class="math inline">\(\hat{y}\)</span>).
+<ul>
+<li>Note that the for the formula <span class="math inline">\(\sum_i^N{(y_i-\hat{y_i})}\)</span>, the <strong><span class="math inline">\(y_i\)</span></strong> can be either related to:
+<ul>
+<li>The <strong>test</strong>-set, when you are evaluating the <em>final</em> model-performance, OR</li>
+<li>The <strong>validation</strong>-dataset, when you are evaluating how well the model is “performing” with the help of <em>Cross Validation</em>, e.g. how the model performs with an increasingly bigger <code>training dataset</code>.</li>
+</ul></li>
+</ul></li>
+<li><strong>Cross-Validation Score</strong>: This is the <em>mean</em> error // score that <strong>measures // evaluates how the model is “learning” over increasingly bigger <code>training datasets</code></strong>.
+<ul>
+<li>It is important to highlight the fact that this metric is only a <em>mean</em>, e.g. you don’t see the <em>individual</em> forecast that was being made.</li>
+<li>The <strong>main purpose</strong> of this metric is to be able <strong>to judge the model-performance very quickly: with only 1 single number, namely the mean error (by an increasing amount of sample-size)</strong>.</li>
+<li>If you have a “bad” model - e.g. a high mean error - you will need to look at the <em>individual</em> errors (and not just the mean error), in order to understand what went wrong with the model!</li>
+</ul></li>
+<li><strong>Fold</strong> == <strong>subset</strong> of the <code>training dataset</code>.
+<ul>
+<li><u>Example</u>: In a <code>K-Fold Cross-Validation</code>, you <em>randomly</em> split the <u>training set</u> into <strong>10 distinct subsets</strong>, which are called <code>folds</code>.</li>
+</ul></li>
+<li><strong>Grid</strong>: Das ist nichts anderes als die <strong>Optimierung von diversen “Modell-Parametern”</strong>.
+- <u>Beispiel</u>: Bei Random-Forrest Modellen kann man zum Beispiel die Tiefe eines Modells bestimmen, dh die relevante Frage, welche ein Forscher sich stellt, ist: <strong><em>wie viele Baum-Zweigungen die geeignesten Predictions bringen?</em></strong>. Mit Funktionen, wie zum Beispiel <code>GridSearchCV()</code> kann dieses Problem geregelt werden.</li>
+<li><strong>Classifiers</strong>: These are simply Regression-Functions, where <strong>the Y-variable is binary</strong>, e.g. die Y-Variable kann nur <code>Y = 0</code> <u>oder</u> <code>Y= = 1</code> als Werte annehmen.
+<ul>
+<li><u>Beispiele</u>:
+<ul>
+<li>Logit-Regression</li>
+<li>Probit-Regression</li>
+<li>Naive Bayes</li>
+<li>etc…</li>
+<li><u>Example</u>: Logit- &amp; Probit-Regression, or Naiv Bayes, etc…</li>
+</ul></li>
+</ul></li>
+<li><strong>feed in</strong>: Häufig im Zusammenhang mit Einsetzen von konkreten Werten für die x-Variablen in das <em>geschätzte</em> Modell, um Predictions zu erhalten.</li>
+<li><strong>Batch</strong>: sample-size when you train your model with a dataset.</li>
+<li><strong>Granularität</strong> (Beispiel): Angenommen, man möchte wissen, wie viele Tage, Stunden, Minuten und Sekunden innerhalb von 20’044 Sekunden enthalten sind → hier haben wir also <em>Granularität von 4</em> →
+<ul>
+<li><u>Lösung</u>: 4 Tage, 18 Stunden, 37 Minuten, 44 Sekunden</li>
+</ul></li>
+<li><strong>Kalibrierung des Modells</strong>: Wie wurde das Modell programmiert im Allgemeinen? → Dazu gehört - beim <code>preisprog</code>-Projekt der SBB - die Anpassung der Prognose.</li>
+<li><strong>Extrapolation</strong>: Das ist eine <em>Prediction</em>, welche mittels X-Variablen ermittelt werden, welche <u>zuvor nicht im Datensatz</u> waren.</li>
+<li><strong>Interpolation</strong>: Das ist eine <em>Prediction</em>, welche mittels X-Variablen ermittelt werden, welche <u>bereits im Datensatz</u> waren, als die Schätzung getätigt wurde.
+<strong>Pearson Korrelation</strong> == <u>Lineare</u> Korrelation</li>
+</ul>
+</div>
+<div id="time-series-1" class="section level3">
+<h3><span class="header-section-number">9.12.3</span> Time-Series</h3>
+<ul>
+<li><strong>Sliding Window</strong>: This is just a way to tell python how to do a cross-validation and have equal lengths of time series where we can learn on.</li>
+<li><strong>Forecasting Horizon</strong>: These are the points in time (in the future), for which you want to make a prediction (= <span class="math inline">\(\hat{y}\)</span>). This is something, you need to define, when you want to estimate your model in a <em>time-series</em> setting.</li>
+<li><strong>Learning Task</strong>: Forecasting Task // Extrapolation [in Time Series] –&gt; <em>not sure if this is correct</em>… xD</li>
+<li><strong>Time Heterogenous Data</strong>: These are different time-series datasets, that have different time stamps.
+<ul>
+<li><u>Quelle</u>: Ab 27:05 (Link: <a href="http://www.youtube.com/watch?v=Wf2naBHRo8Q&amp;t=27m05s" class="uri">http://www.youtube.com/watch?v=Wf2naBHRo8Q&amp;t=27m05s</a>)</li>
+</ul></li>
+<li><strong>Seasonal Periodicity</strong>: The number of times per year, in which the forecaster expects to see a seasonal pattern.
+<ul>
+<li><u>Concrete Example</u>: In Philipp’s Notebook, he had a seasonal periodicity of 2, e.g. he said that in winter &amp; sommer, he expects a seasonal pattern.</li>
+</ul></li>
+<li><strong>“Reduction is composable”</strong>: Synonym wäre “addieren” → E.g. you can split a difficult task into a bunch of smaller tasks (= <code>reduction</code>) and “add” them together to solve the bigger task at the end → “reduction is composable”…</li>
+</ul>
+</div>
+</div>
+<div id="quellen" class="section level2">
+<h2><span class="header-section-number">9.13</span> Quellen</h2>
+<ul>
+<li><a href="https://blog.exxactcorp.com/lets-learn-the-difference-between-a-deep-learning-cnn-and-rnn/" class="uri">https://blog.exxactcorp.com/lets-learn-the-difference-between-a-deep-learning-cnn-and-rnn/</a>
+<a href="https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Fall.2016/notes/Sonia_Hornik.pdf" class="uri">https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Fall.2016/notes/Sonia_Hornik.pdf</a></li>
 </ul>
 
 </div>
@@ -596,8 +860,8 @@ size-garbage: 0</code></pre>
           </div>
         </div>
       </div>
-<a href="improve-yourself-constantly.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="econometrics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="econometrics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="mengenlehre.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -629,7 +893,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/joffreymayer/ds-from-scratch/edit/master/07-git.Rmd",
+"link": "https://github.com/joffreymayer/ds-from-scratch/edit/master/09-machine-learning.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -637,7 +901,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/joffreymayer/ds-from-scratch/blob/master/07-git.Rmd",
+"link": "https://github.com/joffreymayer/ds-from-scratch/blob/master/09-machine-learning.Rmd",
 "text": null
 },
 "download": null,
