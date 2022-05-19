@@ -24,7 +24,7 @@ In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen
 - cache data // store data in the computer's memory (for future use)
 - Rest API // Restful API
 - `__init__` // Custom-Constructor // Initialisierungs-Methode
-- Taxonomie // Framework // ("State-of-the-Art") Methodik // Systematik
+- Taxonomie // Framework // ("State-of-the-Art") Methodik // Systematik // Vorgehensweise
 
 ### Programming
 
@@ -138,6 +138,10 @@ _Mit Hilfe dieser "Magic Commands" in Python, kannst du unglaublich schnell hera
 
 - `shift` + `Tab` &#8594; wenn du nicht weisst, was eine Funktion // Method tut
 - `Tab` &#8594; **Drücke die `Tab`-Taste, <u>während sich dein Cursor innerhalb einer Funktion befindet</u>**, um eine Übersicht zu allen Inputs der Funktion zu erhalten! xD
+- `shift` + `control` + `_`-Taste &#8594; Trennt eine Cell in mehrere, kleinere Cells, je nachdem, wo du den Cursor in der Cell platziert hast. Dieser dient dann als "Flag", wodurch der Computer weiss: "Aha, hier muss ich die Cell in zwei teilen!"
+  - <u>Wieso?</u>: Dieser Keyword-Shortcut ist **nützlich für das Debugging einer langen Funktion**. Damit siehst du dann z.B. jeweils, wie lange jeweils eine Cell braucht, um ausgeführt zu werden. =)
+- `shift` + `M`-Taste &#8594; Merge Cells, nachdem du eine Funktion debugged hast (mit dem Key-board-Shortcut `shift` + `control` + `_`) =)
+
 
 ### Wörterbuch
 

@@ -6,6 +6,7 @@ In diesem File werde ich alles "business-related" tun, was in Zusammenhang mit D
 
 ### IT &amp; Software-Development
 
+- __"Eine Stroy (mit Daten) haben"__: Damit ist gemeint, dass du einen Erklärungsansatz hast, um z.B. ein "weirdes" Phänomen in den Daten zu erklären.
 - __agnostisch__: Im IT-Umfeld hat das Wort agnostisch eine besondere Bedeutung. Es bezieht sich auf etwas, das soweit **verallgemeinert** wird, dass es auch unter verschiedenen Umgebungen funktionieren kann. 
 	- <u>Allgemeines Beispiel</u>: Denke an mathematische Formeln, welche nur aus "allgemeinen Variablen" bestehen. 
 	- <u>Konkretes Software-Beispiel</u>: Eine Plattform-agnostische Software läuft unter jeder Kombination aus Betriebssystemen und Prozessorarchitekturen.
@@ -44,7 +45,23 @@ _Es ist exterm wichtig, mit dem Boss diese Ziele zu definieren, da die Planung d
 3) Was sind weitere offene Optionen und inwiefern eignen sich diese Ansätze für unser Ziel?
     - <u>Goal</u>: Aufzeigen, dass wir noch weitere Alternativen haben, als nur Phillip's Notebooks
 4) Sonstige Unklarheiten / Bemerkungen / Inputs / Vorschläge? --> <u>Goal</u>: letzte Informationsasymmetrien beheben.
-  
+
+## Abschluss-Präsentation
+
+- Folgender Aufbau eignet sich:
+
+```
+1) Wissenschatlicher ODER unternehmerische Relevanz deines Projektes?
+2) Präsentation wichtiger Kernschritte
+  - Ziele
+  - Methodologie
+  - wichtigste Ergebnisse pro Kernschritte
+3) Thema a: zum Beispiel Datensammlung
+4) Thema b: zum Beispiel Modellierung des "besten Modelles"
+5) Thema c: Schlussfolgerungen // Präsentation des MVPs
+6) Fragen & Diskussion
+```
+
 ## Job-Interviews
 
 - <u>Vorbereitung Data-Science Interviews</u>: [Diese Webseite](https://www.kdnuggets.com/2020/01/data-science-interview-study-guide.html) hat einen kompletten Guide mit Videos / Artikeln zu extrem vielen Key-Concepts gesammelt und zur Verfügung gestellt.

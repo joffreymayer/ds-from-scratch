@@ -19,6 +19,7 @@
 - `beautifulsoup`, for **getting data**.
 - `PyTorch`, for **deeplearning**.
 - `TensorFlow`, for **deeplearning**.
+- `darts`, for **dashboarding**.
 
 ## `Python`-Mustercodes für Data-Science
 

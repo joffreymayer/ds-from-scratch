@@ -170,6 +170,23 @@ Was "gute" Modelle von "Schlechten" unterscheidet, ist oftmals, wie du deine `X`
   - <u>Where to get the Data?</u>: Beispielsweise aus **Geschäftsberichten**.
   - <u>Themen</u>: Übertragung der Teuerung der Lebensmittel auf die Konsumenten von Migros & Coop (wegen Krieg in der Ukraine, 2022).
 
+## Allgemeine Schwächen von Data-Science
+
+### Visualisierungen für Erklärungen verwenden
+
+Aus eigener Erfahrung habe ich gemerkt, wie schwierig es ist, **extrem komplexe Themen innerhalb von wenigen Minuten einem _Laien_ zu erklären**. Das fällt jedoch nicht nur mir schwer. Das ist ein allgemeines Problem von der Data.
+
+Obwohl das Problem schwierig zu meistern ist, liegt hier jedoch eines der grössten Potentiale: denn häufig **werden deine Cheffen Manager sein, die sich nicht gut in Data Science auskennen**. Entsprechend ist es sehr wichtig, schnell & effizient die richtigen Erklärungen zu finden, denn **diese finanzieren das Projekt**. 
+
+_Wenn sie nicht überzeugt sind, dann wird genau deine Karriere als Data Scientist sehr kurz enden! xD
+
+- <u>Lösung</u>: Hier musst du insbesondere weiterhin auf deine Präsentations-Künste mittels Web-Development beharren. Das wird sich auszahlen!
+
+### Nur 20% der Data-Science Projekte haben "Erfolg" | Apropos Geld...
+
+Das ist eine absolut wahnsinnige Zahl! Dies zeigt, dass **Data Science Projekte relativ riskant sind, aus der Perspektive von Unternehmen**. 
+
+- <u>Lösung</u>: Ich bin weiterhin überzeugt, dass das Anbieten einer "Freelancing"-Option für Data-Science eine sehr attraktive Lösung darstellt. So kannst du den Unternehmen genügend Flexibilität anbieten (indem du für weniger Lohn arbeitest) und gleichzeitig gewinnst Erfahrung.
 
 ## Statistics-Theory
 

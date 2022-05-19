@@ -137,7 +137,34 @@ The concept of *cross-validation* can be splitted into 2 parts:
 
 ### <u>Special Case</u>: Cross-Validation for Time-Series Data
 
-Because time-series are ordered, since *the flow of time* is only going forward, the graph shown above for *step 2* is <u>not</u> valid and we need another approach!
+Because time-series are _ordered_, since *the flow of time* is only going forward, the graph shown above for *step 2* is <u>not</u> valid and we need another approach!
+
+![Cross-Validation for Time Series](./bilder/example-3-fold-cross-validation-for-time-series.png)
+
+This picture shows **an example of a 3-fold cross-validation for a time-series**.
+
+#### The Expanding-Window Cross-Validation | Variante 1
+
+One version of the special-case "CV for time-series" is the so-called `Expanding-Window Cross-Validation`.
+
+_In this CV, we expand the number of training-data progressively, until we reach the end of the training-set_.
+
+![Visuelle Darstellung, wie der verschiedenen Validierungs-Fehler (MAPE, MAE oder RMSE) berechnet werden auf dem Trainingsset.](./bilder/econ/3-fold-cv-for-ts.png) 
+
+- <u>Achtung</u>: Vergesse nicht, dass jeweils bloss ein durchschnittswert pro Tabular-Regression ausgerechnet wird! _Wenn du also nicht zufriedenstellende Prognosen 
+
+#### The Sliding-Window Cross-Validation | Variante 2
+
+_In this CV, we start with a first BIG sub-training dataset. For the **second** fold - however we only take the most recent past data to predict the. the number of training-data progressively, until we reach the end of the training-set_.
+
+![Example of a 18-fold Sliding-Window Cross-Validation](./bilder/machine-learning/sliding-window.png)
+
+#### What are the Advantages / Disadvantages of those two types of Cross-Validation?
+
+- The `Expanding Windows Splitter` is **<u>less volatile</u> when a _big macroeconomic shock_ occurs, like the COVID-19 crisis. However, the model _reacts more slowly_ // is more sluggish (= träge), when it enters a "Regime-Wechsel" (= Zustandsänderung an den Märkten).
+- The `Sliding Windows Splitter`, it is the opposite: **<u>(much) more volatile</u> when a _big macroeconomic shock_ occurs, like the COVID-19 crisis. However, the model _reacts more quickly_, when it enters a "Regime-Wechsel" (= Zustandsänderung an den Märkten).
+
+![Expanding-Window VS. Sliding-Window: Vergleiche jeweils hell-rot mit dunkel-rot ODER hell-blau mit dunkel-blau, um den Verlgeich zwischen Expanding- & Sliding-Window zu sehen.](./bilder/machine-learning/sliding-window-VS-expanding-window.png)
 
 ### Why do we use Cross-Validation?
 
@@ -148,11 +175,6 @@ There are 2 reasons:
   - OR *changes in the covariates*, e.g. a model that includes an important covariate, while the other model does not.
   **This will allow you to draw conclusions regarding the selection of "the best" model**.
 2) It allows you **to assess the performance** of different machine-learning methods. In a _classification-setting_ for example, you can use the _confusion-matrix_. 
-
-![Cross-Validation for Time Series](./bilder/example-3-fold-cross-validation-for-time-series.png)
-
-This picture shows **an example of a 3-fold cross-validation for a time-series**. 
-
 
 ## Normalisierung der Daten
 
@@ -379,9 +401,11 @@ unsupervised learning = structure the data into groups (very subjective) // dete
 - __Interpolation__: Das ist eine _Prediction_, welche mittels X-Variablen ermittelt werden, welche <u>bereits im Datensatz</u> waren, als die Schätzung getätigt wurde.
 __Pearson Korrelation__ == <u>Lineare</u> Korrelation
 
+![Beispiel einer Pearson-Korrelations Matrix](./bilder/machine-learning/pearson-corr-matrix.png)
+
 ### Time-Series
 
-- __Sliding Window__: This is just a way to tell python how to do a cross-validation and have equal lengths of time series where we can learn on.
+- __Sliding Window__: This is just a way to tell python **how to do a particular type of cross-validation** and have equal lengths of time series where we can learn on.
 - __Forecasting Horizon__: These are the points in time (in the future), for which you want to make a prediction (= $\hat{y}$). This is something, you need to define, when you want to estimate your model in a _time-series_ setting.
 - __Learning Task__: Forecasting Task // Extrapolation [in Time Series] --> _not sure if this is correct_... xD
 - __Time Heterogenous Data__: These are different time-series datasets, that have different time stamps.

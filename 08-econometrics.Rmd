@@ -413,24 +413,77 @@
 
 ## Time Series
 
+### Wörterbuch
+
 - __Univariate Forecasting__: Verwende nur die **vergangenen** Preise der (_eigenen_) Zeitreihe, um die Preise der Zukunft zu forecasten.
-- Multivariate Forecasting: Verwende - **<u>nebst</u> vergangenen Preise** der (eigenen Zeitreihe) - auch noch **andere Zeitreihen**, um die Preise der Zukunft zu forecasten.
-- **<u>What is Seasonality?</u>**: A **repeating pattern** <u>within a year</u>.
-  - <u>Example 1</u>: You see a "Buckel" every weekend --> _Weekend Seasonality_
-  - <u>Example 2</u>: You see an "s-shape" for each day of the weak --> _Daily Seasonality_
-- **<u>What is a Cycle?</u>**: This is NOT the same thing as seasonality.
-Cycles **take place over the course of several year**, rather than _within_ a year for seasonality. Generally, **cycles are not predictable**.
-  - <u>Example</u>: _Given a time-seroes_, there may be a 1st cycle that takes place over the course of 3 years, while another cycle can take 1.25 years to complete --> there is no general rule, to quantify their duration!
+- __Multivariate Forecasting__: Verwende - **<u>nebst</u> vergangenen Preise** der (eigenen Zeitreihe) - auch noch **andere Zeitreihen**, um die Preise der Zukunft zu forecasten.
+- __Cross-Correlation__: Das ist die Korrelation zwischen dem Preis "heute" und einem bestimmten Lag einer anderen Zeitreihe.
+  - <u>Mathematisch ausgedrückt</u>: *Corr($Y_t$, $X_{t-n}$)*, wobei n = {1, 2, ..., n}
+  - <u>Bemerkung</u>: Leider habe ich <u>kein</u> Python-Package gefunden, welches die **partielle** Cross-Correlation berechnet, was sehr schade ist!
 - **<u>What is the "MA"-Term // q-Parameter in the ARIMA-Modell?</u>**: You make a forecast based on the <u>past errors</u> in the time series (= "error lags").
+
+### Seasonality
+
+> What is Seasonality? 
+
+A **repeating pattern** <u>within a year</u>.
+  - <u>Example 1</u>: You see a "M"-shape every day --> _Daily Seasonality_
+
+![Beispiel einer Tages-Saisonalität](./bilder/econ/tages-seasonality.png)
+
+  - <u>Example 2</u>: You see an "Buckel" for each day of the weak --> _Weekly Seasonality_
+  
+![Beispiel einer Wochen-Saisonalität](./bilder/econ/weekly-seasonality.png)
+  
+  - <u>Example 3</u>: You see an the same "Abwärtsbewegung" **for the first 3 months of the year(!)** --> _Monthly Seasonality_
+ 
+![Beispiel einer Monats-Saisonalität](./bilder/econ/monats-seasonality.png) 
+
+> How to get rid // account for Seasonality in the Data? 
+
+- <u>There are **2 possibilities**</u>:
+  - Use already de-seasonalized data: for example, _unemployment rates_.
+  - Include all year-, month- or week-dummies (exclude one, otherwise: Dummy-Variable Trap...).
+
+
+### Cycles 
+
+> What is a Cycle?
+
+A cycle is NOT the same thing as seasonality! Cycles **take place over the course of several year**, rather than _within_ a year for seasonality. Generally, **cycles are not predictable**.
+  - <u>Example</u>: _Given a time-seroes_, there may be a 1st cycle that takes place over the course of 3 years, while another cycle can take 1.25 years to complete --> there is no general rule, to quantify their duration!
+  
+### Partial Auto-Correlation
+
+> Definition? 
+
+Misst den _direkten_ Effekt zwischen dem Preis "jetzt" und dem Preis vor "n"-Stunden (= deshalb "auto"-Korrelation), nachdem der **indirekte** Effekt einer oder mehrerer Kontroll-Variablen (deshalb "partielle"-Korrelation) entfernt wurde.
+
+![Visualisierung des direkten VS. indirekten Effektes](./bilder/econ/direkt-und-indirekter-effekt.png)
+
+- <u>Mathematisch ausgedrückt</u>: *Corr($Y_t$, $Y_{t-n}$)*, wobei n = {1, 2, ..., n}
+
+![Hier ein Beispiel eines partiellen Auto-Korrelations Plot](./bilder/econ/partielle-auto-korr-plot.png)
+
+### How to create a simple Benchmark Time-Series Model?
+
+> Vorgehen?
+
+Erstelle ein simples `Mono-Copy`-Modell, welches einfach - beispielsweise, bei einer Zeitreihe in _Stunden-Einheiten_ - jeweils die letzten 24 Werte aus der Vergangenheit nimmt, um einen Forecast zu erstellen.
+
+![Monocopy-Modell illustriert](./bilder/econ/monocopy-modell.png)
 
 ### Machine Learning
 
 - __Data Splitting__: Weil Zeitreihen-daten die Eigenschaft besitzen, **geordnet** zu sein, muss beim `Train-Test Split` aufpassen: it is done <u>without</u> `shuffling` (= randomisation), weil wir ansonsten ein _Data Leakage Problem_ hätten!
 
 ![Darstellung des Data Leakage Problems bei Time Series: das Modell kann leichte Vorhersagen machen, weil es Teile der Zukunft sieht! xD](./bilder/econ/data-leakage-problem-ts.jpg)
- - __Berechnung der Validation-Error__:
  
-![Visuelle Darstellung, wie der verschiedenen Validierungs-Fehler (MAPE, MAE oder RMSE) berechnet werden auf dem Trainingsset. Vergesse nicht, dass jeweils bloss ein durchschnittswert pro Tabular-Regression ausgerechnet wird!](./bilder/econ/validation-error-ts.jpg) 
+ ### Cross-Validation for Time-Series
+ 
+> Berechnung der _Validation_-Errors?
+ 
+![Visuelle Darstellung, wie der verschiedenen Validierungs-Fehler (MAPE, MAE oder RMSE) berechnet werden auf dem Trainingsset. Vergesse nicht, dass jeweils bloss ein durchschnittswert pro Tabular-Regression ausgerechnet wird!](./bilder/econ/3-fold-cv-for-ts.png) 
  
  - __Berechnung der Test-Fehler__:
  
