@@ -83,6 +83,7 @@ programming
 data-types
 global-variables-vs.-local-variables
 python-basics
+magic-commands-in-python
 wörterbuch-2
 tricks
 swap-the-values-of-two-variables
