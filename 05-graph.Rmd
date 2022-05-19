@@ -182,7 +182,7 @@ library(gcookbook)
 ### 2) Plot a function:
 
 my_normaldistr_fun <- function(xvar) {
-1 / (10*sqrt(2*3.141593))*(exp(-((xvar-170)^2)/2*100))
+1 / (10*sqrt(2*3.141593))*exp(-((xvar-170)^2)/2*100)
 } # first, I specify the function
 
 # First, create a dataframe with only 1 variable - e.g. our range of x-values -
@@ -192,7 +192,7 @@ my_normaldistr_fun <- function(xvar) {
 # tell R that you want those numbers 0 & 20 to be plottet on your x-axis -
 # -> this is all the code within the 'ggplot()' function:
 set.seed(123)
-x <- sample(165:175, size = 1000, replace = TRUE)
+x <- sample(165:175, size = 100, replace = TRUE)
 ggplot(data.frame(x = x), aes(x = x)) +
   stat_function(fun = my_normaldistr_fun, geom = "line") # then, pass the above "user-defined
 # function" called 'my_normaldistr_fun' as an input into the function stat_function()
