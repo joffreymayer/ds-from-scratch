@@ -283,6 +283,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.1.1" data-path="visualization.html"><a href="visualization.html#seaborn"><i class="fa fa-check"></i><b>5.1.1</b> Seaborn</a></li>
 <li class="chapter" data-level="5.1.2" data-path="visualization.html"><a href="visualization.html#matplotlib"><i class="fa fa-check"></i><b>5.1.2</b> Matplotlib</a></li>
 </ul></li>
+<li class="chapter" data-level="5.2" data-path="visualization.html"><a href="visualization.html#statistics"><i class="fa fa-check"></i><b>5.2</b> Statistics</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="visualization.html"><a href="visualization.html#the-normal-distribution"><i class="fa fa-check"></i><b>5.2.1</b> The Normal Distribution</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="improve-yourself-constantly.html"><a href="improve-yourself-constantly.html"><i class="fa fa-check"></i><b>6</b> Improve Yourself Constantly</a><ul>
 <li class="chapter" data-level="6.1" data-path="improve-yourself-constantly.html"><a href="improve-yourself-constantly.html#to-share"><i class="fa fa-check"></i><b>6.1</b> To Share</a></li>
@@ -540,8 +543,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="visualization.html#cb61-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb61-2"><a href="visualization.html#cb61-2"></a></span>
 <span id="cb61-3"><a href="visualization.html#cb61-3"></a>plt.legend()</span></code></pre></div>
-
 </div>
+</div>
+</div>
+<div id="statistics" class="section level2">
+<h2><span class="header-section-number">5.2</span> Statistics</h2>
+<div id="the-normal-distribution" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> The Normal Distribution</h3>
+<p><em>Wir wollen die Normal-Verteilung der Grösse aller Menschen abbilden. Dies ist möglich, wenn wir die Durchschnitts-Grösse <span class="math inline">\(\mu\)</span> &amp; die Standard-Abweichung <span class="math inline">\(\sigma\)</span> der Menschen-Grösse kennen, z.B.</em>:</p>
+<ul>
+<li><span class="math inline">\(\mu\)</span> = 170cm</li>
+<li><span class="math inline">\(\sigma\)</span> = 10cm</li>
+</ul>
+<p>Diese Werte müssen nun in die <strong>Formel der Normalverteilung</strong> (= Funktion) eingesetzt werden:</p>
+<p><span class="math inline">\(f(x) = \frac{1}{\sigma\sqrt{2\pi}}*e^{-\frac{(x - \mu)^2}{2\sigma^2}}\)</span></p>
+<p><img src="bookdownproj_files/figure-html/normal-distr-plot-1.png" width="672" /></p>
+<p><mark>Nun müsste man bloss alle einzelne Werte der Grösse (inkl. <span class="math inline">\(\mu\)</span> &amp; <span class="math inline">\(\sigma\)</span>), um die Glockenkurve darstellen zu können</mark>.</p>
+
 </div>
 </div>
 </div>

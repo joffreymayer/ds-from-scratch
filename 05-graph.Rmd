@@ -156,3 +156,45 @@ plt.legend()
 ```
 
 
+## Statistics
+
+### The Normal Distribution
+
+_Wir wollen die Normal-Verteilung der Grösse aller Menschen abbilden. Dies ist möglich, wenn wir die Durchschnitts-Grösse $\mu$ & die Standard-Abweichung $\sigma$ der Menschen-Grösse kennen, z.B._:
+
+- $\mu$ = 170cm
+- $\sigma$ = 10cm
+
+Diese Werte müssen nun in die **Formel der Normalverteilung** (= Funktion) eingesetzt werden:
+
+$f(x) = \frac{1}{\sigma\sqrt{2\pi}}*e^{-\frac{(x - \mu)^2}{2\sigma^2}}$
+
+```{r normal-distr-plot, echo=FALSE, message=FALSE, warning=FALSE}
+# Here I will plot a Graph with ggplot2:
+
+
+### 1) Load packages & datasets needed:
+
+library(ggplot2)
+library(dplyr)
+library(gcookbook)
+
+### 2) Plot a function:
+
+my_normaldistr_fun <- function(xvar) {
+1 / (10*sqrt(2*3.141593))*(exp(-((xvar-170)^2)/2*100))
+} # first, I specify the function
+
+# First, create a dataframe with only 1 variable - e.g. our range of x-values -
+# that goes - for example - from 0 to 20 [note that - technically - the command
+# x = c(0,20) will only create two values, namely 0 and 20, but NOT the whole
+# range of values from 0 to 20!!! However, the code below works anyway!]. Next,
+# tell R that you want those numbers 0 & 20 to be plottet on your x-axis -
+# -> this is all the code within the 'ggplot()' function:
+ggplot(data.frame(x = c(0, 20)), aes(x = x)) +
+  stat_function(fun = my_normaldistr_fun, geom = "line") # then, pass the above "user-defined
+# function" called 'my_normaldistr_fun' as an input into the function stat_function()
+```
+
+
+<mark>Nun müsste man bloss alle einzelne Werte der Grösse (inkl. $\mu$ & $\sigma$), um die Glockenkurve darstellen zu können</mark>.

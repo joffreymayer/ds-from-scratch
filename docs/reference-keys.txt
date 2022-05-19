@@ -168,6 +168,8 @@ set-width-height-of-graph
 set-title-of-graph
 set-label-of-axes
 force-legend-to-appear
+statistics
+the-normal-distribution
 improve-yourself-constantly
 to-share
 git-versioncontrol

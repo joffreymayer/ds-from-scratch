@@ -18,6 +18,8 @@ In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen
 - function // command
 - cartesian coordinate system // "normales Koordinatensystem", dh mit der X-Achse für die horizontale Linie & Y-Achse für die vertikale Linie
 - Source // Programming Language (any kind of)
+- Properties of an object (Kontext: in `Object Oriented Proggramming`) // properties // variables // fields // instances // state
+- Functionality of an object (in `Object Oriented Programming`) // methods // behaviour // operations
 - initialization // declaration // specification
 - dependencies // Abhängigkeitsprobleme
 - fetch data // retrieve data
