@@ -64,7 +64,7 @@ sns.scatterplot(x = health_data['bmi'], y = health_data['life_expectancy'], hue 
 sns.lmplot(x = health_data['bmi'], y = health_data['life_expectancy'], hue = health_data['smoker']) # note that it is not the same, as when you used 2 variables!
 ```
 
-#### Draw a Histogram
+#### Draw a Histogram 
 
 A histogram sorts the data, then it is putting the data into intervalls of data (= batches) and finally counts the frequency those batches occur.
 
