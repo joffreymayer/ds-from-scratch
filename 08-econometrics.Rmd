@@ -429,15 +429,15 @@
 A **repeating pattern** <u>within a year</u>.
   - <u>Example 1</u>: You see a "M"-shape every day --> _Daily Seasonality_
 
-![Beispiel einer Tages-Saisonalität](./bilder/econ/tages-seasonality.png)
+![Beispiel einer Tages-Saisonalität](./bilder/econ/tages-seasonality.jpg)
 
   - <u>Example 2</u>: You see an "Buckel" for each day of the weak --> _Weekly Seasonality_
   
-![Beispiel einer Wochen-Saisonalität](./bilder/econ/weekly-seasonality.png)
+![Beispiel einer Wochen-Saisonalität](./bilder/econ/weekly-seasonality.jpg)
   
   - <u>Example 3</u>: You see an the same "Abwärtsbewegung" **for the first 3 months of the year(!)** --> _Monthly Seasonality_
  
-![Beispiel einer Monats-Saisonalität](./bilder/econ/monats-seasonality.png) 
+![Beispiel einer Monats-Saisonalität](./bilder/econ/monats-seasonality.jpg) 
 
 > How to get rid // account for Seasonality in the Data? 
 
@@ -463,7 +463,7 @@ Misst den _direkten_ Effekt zwischen dem Preis "jetzt" und dem Preis vor "n"-Stu
 
 - <u>Mathematisch ausgedrückt</u>: *Corr($Y_t$, $Y_{t-n}$)*, wobei n = {1, 2, ..., n}
 
-![Hier ein Beispiel eines partiellen Auto-Korrelations Plot](./bilder/econ/partielle-auto-korr-plot.png)
+![Hier ein Beispiel eines partiellen Auto-Korrelations Plot](./bilder/econ/partielle-auto-korr-plot.jpg)
 
 ### How to create a simple Benchmark Time-Series Model?
 
@@ -485,7 +485,7 @@ Erstelle ein simples `Mono-Copy`-Modell, welches einfach - beispielsweise, bei e
  
 ![Visuelle Darstellung, wie der verschiedenen Validierungs-Fehler (MAPE, MAE oder RMSE) berechnet werden auf dem Trainingsset. Vergesse nicht, dass jeweils bloss ein durchschnittswert pro Tabular-Regression ausgerechnet wird!](./bilder/econ/3-fold-cv-for-ts.png) 
  
- - __Berechnung der Test-Fehler__:
+> Berechnung der Test-Fehler?
  
  ![Visuelle Darstellung, wie die verschiedenen Test-Fehler (MAPE, MAE oder RMSE) berechnet werden. Vergesse nicht, dass jeweils bloss ein durchschnittswert pro Tabular-Regression ausgerechnet wird!](./bilder/econ/test-error-calc-ts.jpg)
 

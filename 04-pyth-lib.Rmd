@@ -223,7 +223,7 @@ Just set `random_state` to an integer. Dieser integer kann *beliebig* gewählt w
 
 Grundsätzlich verwendet `sktime` fit-, predict-, und transform-class-methods. Um zu verstehen, was dies genau bedeutet, hier eine globalere Übersicht mit Hilfe einer Visualisierung veranschaulicht:
 
-![API of sktime](./bilder/api_sktime.jpg)
+![API of sktime](./bilder/python-lib/api_sktime.jpg)
 
 - For *estimator classes* (a.k.a. model classes), `sktime` provides:
  	- a fit-method (= <u>goal</u>: training // estimating the model) and 
@@ -286,11 +286,11 @@ While **`TensorFlow` has a reputation for being an industry-focused framework** 
 
 > Which one is more popular in the Deep-Learning Community?
 
-![PyTorch VS. Tensorflow popularity](./bilder/usage-pytorch-vs-tensorflow.png)
+![PyTorch VS. Tensorflow popularity](./bilder/python-lib/usage-pytorch-vs-tensorflow.png)
 
 As you can see, the adoption of PyTorch was extremely rapid and, in just a few years, grew from use in just about 7% to use in almost 80% of papers that use either PyTorch or TensorFlow.
 
-![Sankey-Diagram, in order to answer the question: Which one has the Momentum?](./bilder/momentum-tensorflow-vs-pytorch.png)
+![Sankey-Diagram, in order to answer the question: Which one has the Momentum?](./bilder/python-lib/momentum-tensorflow-vs-pytorch.png)
 The researchers find that **the majority of authors who used TensorFlow in 2018 migrated to PyTorch in 2019 (55%), while the vast majority of authors who used PyTorch in 2018 stayed with PyTorch 2019 (85%)**. 
 
 This data is visualized in the `Sankey diagram` above, where the left side corresponds to 2018 and the right side to 2019.

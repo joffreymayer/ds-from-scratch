@@ -32,11 +32,11 @@ In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen
 - **<u>What is Programming about?</u>**: Programming is <u>not</u> about hardcoding numbers into functions to create a picture. **Programming is about creating a _sequence of instructions_ (= a logic) to execute a task**. 
 - **<u>What is a Command & what are arguments?</u>**:
 
-![The command is the function as a whole, while arguments are the inputs of a function // command](./bilder/programming/commands-and-arguments.PNG)
+![The command is the function as a whole, while arguments are the inputs of a function // command](./bilder/programming/commands-and-arguments.jpg)
 
 - **<u>The coordinate system of a computer VS. the coordinate system in mathematics?</u>**:
 
-![The y-axis of a computer goes down starting the top-right corner, while the x-axis goes to the right starting the top-right corner](./bilder/programming/coordinate-system.PNG)
+![The y-axis of a computer goes down starting the top-right corner, while the x-axis goes to the right starting the top-right corner](./bilder/programming/coordinate-system.jpg)
 
 - **<u>What is an Array?</u>**: An `Array` is a List of Data. In a `DataFrame`-Object, you can think of a `column` **<u>OR</u>** a `row` to be `arrays`. It is a data structure, which contains `N`-objects _within_ a list. 
 	- <u>Quelle</u>: [The Coding Train 3:10-3:22](https://www.youtube.com/watch?v=NptnmWvkbTw&t=3m10s)
@@ -73,7 +73,7 @@ In `R` oder `Python` ist es wichtig zu verstehen, dass gewisse Funktionen nur da
 
 On the website *W3-Schools*, I found this [extremely good overview of all data-types](https://www.w3schools.com/python/python_datatypes.asp), which is crucial concept to understand when doing data cleaning. 
 
-![Overview of different Data-Types](./bilder/data-types-overview.jpg)
+![Overview of different Data-Types](./bilder/programming/data-types-overview.jpg)
 
 *Data-Types are a key-thing to understand. Otherwise, you won't be able to apply some algorithms on your dataset!*
 
@@ -115,7 +115,7 @@ print("Python is " + x)
 
 - **Kernel**: The kernel is the **command line for a jupyter notebook**. It always runs in the background when you run code in the jupyter notebook environment. You can **think of it as the terminal on your mac**, only that this time, it is for a jupyter notebook. This is how it looks like:
 
-![This is the Kernel](./bilder/programming/example-kernel.png)
+![This is the Kernel](./bilder/programming/example-kernel.jpg)
 
 - **Variables**: Eine Variable wird mittels dem `=`-**Zeichen** assigned. 
 
@@ -147,7 +147,7 @@ _Mit Hilfe dieser "Magic Commands" in Python, kannst du unglaublich schnell hera
 
 - **<u>What is a "Cell"?</u>**: This is the green box which you can write your code into, when you use jupyter notebook:
 
-![This is a Cell](./bilder/programming/example-of-a-cell.png)
+![This is a Cell](./bilder/programming/example-of-a-cell.jpg)
 
 - **<u>What is "the state" of a jupyter notebook?</u>**: To answer this question more precisely, look at this [youtube video from 3:50-4:30](https://www.youtube.com/watch?v=AWek49wXGzI&list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg&index=2). You can think of it as the **internal memory of the jupyter notebook**. You can erase the memory by restarting the kernel by clicking on the button I just marked in the image below:
 
@@ -244,7 +244,7 @@ Mit dem `Data Flow` sollen folgende Fragen beantwortet werden:
 
 Zur Illustration des `Data Flows`, gab es hierzu im Wissensaustausch auch eine Bild:
 
-![Beispiel zum Data Flow](./bilder/beispiel-data-flow.jpg)
+![Beispiel zum Data Flow](./bilder/programming/beispiel-data-flow.jpg)
 
 ### Docker
 
