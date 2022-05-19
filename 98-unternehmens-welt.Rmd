@@ -64,4 +64,16 @@ _Es ist exterm wichtig, mit dem Boss diese Ziele zu definieren, da die Planung d
 
 ## Job-Interviews
 
+### Praxis
+
+- <u>Frage des Interviewers</u>: _"Wieso so kompliziert die Webseite deines Vaters? Wenn etwas einfacher geht, sollte es man so machen, nicht?"_ 
+  - **<u>Meine Antwort</u>**: „Ja, da haben Sie recht, deshalb habe ich - **in einem späteren Projekt** - meine eigene Webseite mit Hugo kompliert, <mark>was circa 2h geht</mark> ;)
+  
+### Vorteil von Data-Science Projekten | Punkte, auf die du unbedingt zu Sprechen kommen solltest...
+
+- **<u>Enorm hohes _langfristiges_ Ertrags-Potential</u>**: Sie haben potentiell hohe langfristige Erträge, weil die Modelle - wenn sie nach einem ersten PoC - noch deutlich verbessert werden können.
+  - Persistenz-Eigenschaft über die Zeit: das Projekt bleibt bestehen --> keine Sandburg...
+
+### Quellen
+
 - <u>Vorbereitung Data-Science Interviews</u>: [Diese Webseite](https://www.kdnuggets.com/2020/01/data-science-interview-study-guide.html) hat einen kompletten Guide mit Videos / Artikeln zu extrem vielen Key-Concepts gesammelt und zur Verfügung gestellt.

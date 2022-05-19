@@ -257,6 +257,9 @@ projekt-management
 meetings
 abschluss-präsentation
 job-interviews
+praxis
+vorteil-von-data-science-projekten-punkte-auf-die-du-unbedingt-zu-sprechen-kommen-solltest
+quellen-1
 openai
 what-can-openai-do-the-output
 how-does-the-model-work-the-blueprint
