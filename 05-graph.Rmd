@@ -191,7 +191,9 @@ my_normaldistr_fun <- function(xvar) {
 # range of values from 0 to 20!!! However, the code below works anyway!]. Next,
 # tell R that you want those numbers 0 & 20 to be plottet on your x-axis -
 # -> this is all the code within the 'ggplot()' function:
-ggplot(data.frame(x = c(0, 20)), aes(x = x)) +
+set.seed(123)
+x <- sample(165:175, size = 1000, replace = TRUE)
+ggplot(data.frame(x = x), aes(x = x)) +
   stat_function(fun = my_normaldistr_fun, geom = "line") # then, pass the above "user-defined
 # function" called 'my_normaldistr_fun' as an input into the function stat_function()
 ```
