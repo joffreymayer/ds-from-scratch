@@ -73,6 +73,7 @@ what-is-the-latex-code-for-haty
 useful-websites
 wörterbuch
 data-science-vs.-mein-economics-studium
+why-data-science-starts-with-data-visualization-the-key-thing-i-learned
 ausblick
 foundatios-of-programming
 how-to-program
@@ -83,7 +84,7 @@ programming
 data-types
 global-variables-vs.-local-variables
 python-basics
-magic-commands-in-python
+magic-commands-in-python-keyboard-shortcuts
 wörterbuch-2
 tricks
 swap-the-values-of-two-variables

@@ -774,6 +774,23 @@ And this is why you will almost find a "Wörterbuch"-sub-chapter in every chapte
 Artificial intelligence is a branch of computer science that deals with the creation of "intelligent agents", which are systems that can _reason, learn, and act autonomously_. 
 
 In contrast, **Machine Learning is a <u>subset</u> of artificial intelligence** that helps you build AI-driven applications. Aditionally, **Deep Learning is a <u>subset</u> of _machine learning_** that uses vast volumes of data and complex algorithms to train a model.
+
+## Why Data-Science starts with Data-Visualization | The Key-Thing I learned
+
+Grundsätzlich musst du unterscheiden zwischen den Themen:
+
+- `Data Cleaning & Visualizations (= Exploratory Data-Analysis)` VS. 
+- `Machine Learning & Causal Inference`. 
+
+Um eine "gutes" Data-Cleaning zu machen, **ist die Grundvoraussetzung, zunächst einmal eine Übersicht an _allen möglichen Plots_ zu haben, die man erstellen kann**, wie bei deiner Bachelorarbeit, nachdem du alle Daten gesammelt hattest. Hierbei spielt auch eine Rolle, wie viel Fachwissen du besitzt. Dh du musst dich - _parallel dazu_ - auch **in den Themenbereich einlesen**! _ERST DANN_ solltest du das "Data Cleaning" machen! Denn das "Data Cleaning" ist grundsätzlich nur ein Tool, um den Datensatz in die gewünschte Form zu bringen, die du dir vorstellst ;)
+
+Bei `Machine Learning & Causal Inference` ist es dasselbe. Zunächst musst du die Theorie (z.B. Data Splitting) & die Methoden (z.B. DiD, RDD etc...) verstanden haben. ERST DANN benötigst du wieder `Data Cleaning`-Techniken, um den Datensatz in die richtige Form zu bringen, damit du diese Analysen durchführen kannst!
+
+_Mein Fehler bisher war, dass ich so auf "lerne Python" fokussiert war, dass ich das Essentielle vergessen hatte: was ist die Botschaft, die du dem Chef vermitteln willst und mit welchem Tool - das kann Python sein, aber auch andere! - kannst du diese Botschaft aufzeigen?_
+
+<mark>Deshalb sollte deine _Learning-Journey_ mit der folgenden Reihenfolge beginnen: 1) "Econometrics (= applied Statistics) Theory", 2) "Data Visualization Theory", 3) "Applied Visualization", 4) "Applied Data-Cleaning"</mark>
+
+- <u>Bemerkung</u>: Das Kapitel "Daten Generierung" habe ich nicht vergessen. Allerdings bin ich noch nicht dazu gekommen, wenn du diese Zeilen liest... But it's on my To-Do list ;)
   
 ## Ausblick
 

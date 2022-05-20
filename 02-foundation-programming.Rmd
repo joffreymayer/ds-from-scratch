@@ -131,7 +131,7 @@ print("Python is " + x)
     
 ![This is an Else-Clause](./bilder/programming/else-clause.png)
 
-### Magic Commands in Python 
+### Magic Commands in Python | Keyboard-Shortcuts
 
 **Das sind Tastatur-Shortcuts, wenn du `Python` bedienst. Es hilft dir, schneller & produktiver beim Codieren zu sein**.
 

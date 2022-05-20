@@ -6,9 +6,10 @@ When you analyze data, it is crucial to communicate with simplicity what evidenc
 
 When you work with Python, there are three main libraries you need to know: 
 
-- `seaborn`, which can plot extremely beautiful graphs, without much efforts. 
-- `matplotlib`, for more advanced stuff, this is the library you need to master.
-- `plotly`, for implementations into websites. Noob.
+- `seaborn`, which can plot extremely beautiful graphs, without much efforts.
+  - It is build on top of the `matplotlib`-library.
+- `matplotlib`, recommended to use for more advanced visualizations.
+- `plotly`, for implementations into websites, because of its interactiveness.
 
 ### Seaborn
 
