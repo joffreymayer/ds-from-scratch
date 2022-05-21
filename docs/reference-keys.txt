@@ -118,8 +118,6 @@ finance
 allgemeine-schwächen-von-data-science
 visualisierungen-für-erklärungen-verwenden
 nur-20-der-data-science-projekte-haben-erfolg-apropos-geld
-statistics-theory
-p-hacking
 appendix-for-the-future
 python-libraries
 list-of-useful-python-libraries

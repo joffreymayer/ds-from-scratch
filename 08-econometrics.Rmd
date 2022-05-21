@@ -205,6 +205,12 @@
 - **Types of Errors in statistical Testing**:
 ![These are all the possible types of errors you encounter.](./bilder/econ/types-of-errors.jpeg)
 
+> Was ist <u>p-hacking</u>?
+
+In der Statistik gibt es den **p-Wert** ein: *Man nimmt an die Hypothese sei wahr und berechnet dann die Wahrscheinlichkeit, dass die beobachtete Statistik mindestens so extrem ausfallen würde (für die Gegner von Wischi-Waschi [hier die Wikipedia-Definition](https://de.wikipedia.org/wiki/P-Wert#Mathematische_Formulierung))*. Falls diese Wahrscheinlichkeit unter 5% liegt, dann sei das Resultat "statistisch signifikant" (yay!) und die Nullhypothese kann verworfen werden, was oftmals die Absicht ist. 
+
+<u>Das **Problem** ist nur</u>: *Hypothesen gibt es viele und z.T. auch recht ähnliche*. Wenn man genug Hypothesen aufstellt - **vor allem, <u>nachdem</u> man sich die Daten angeschaut hat** - dann ist es durchaus möglich, dass man ein statistisch signifikantes Resultat erhält, unabhängig davon, ob das Resultat tatsächlich auch stimmt. **Das nennt man p-Hacking**. Es kommt häufig in der Forschung vor, aber es kommt sicher auch in der SBB vor (dennoch hier eine +1 für Hypothesen-basiertes arbeiten!). Wie einfach man in die "falsche Signifikanz Falle" tappen kann, wird hübsch in dieser Gallerie falscher Korrelationen illustriert.
+
 ## Formulierungen
 
 - **For "correlation"**:
