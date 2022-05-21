@@ -106,6 +106,7 @@ phase-1---get-the-data-erste-recherchearbeit
 phase-2---load-the-data-vanilla-exploration
 phase-3---after-having-concluded-my-data-is-ok-wie-geht-es-weiter
 phase-4---model-estimation-applying-machine-learning-on-the-data
+further-questions-that-you-need-to-have-answers-on-efficient-technical-communication
 phase-5---deployment-erstellung-eines-minimal-viable-product-abschluss-des-projektes
 fragestellungen-beantworten
 methoden-liste-an-diverser-technologien-um-fragestellungen-zu-beantworten

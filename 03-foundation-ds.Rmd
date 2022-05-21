@@ -88,7 +88,7 @@ Wenn die Abschlussfrage im vorherigen Schritt (garbage-data or not?) mit: "nein,
       - etc...
 ``` 
 
-> More details to "step 7", on how to acquire "Expert-Knowledge"?
+More details to "step 7", on how to acquire "Expert-Knowledge":
 
 - Make a list of Papers on the problem (Google Scholar), but only read the "introduction"!
   - <u>Key here is _"intelligent copying"-concept_</u>: You need to pick 2-3 papers that are the most relevant to your problem. Start with those.
@@ -133,7 +133,9 @@ In this phase, we will want to generate predictions (most of the time). Here are
     - Bedingung: know how to interpret the results & draw conclusions from it.
 ```
 
-> To efficiently communicate your results with other "Data Scientists", consider to send them answers to the following list of questions:
+#### Further Questions that you need to have Answers on | Efficient (technical) Communication
+
+**To efficiently communicate your results _with other Data Scientists_**, consider to send them answers to the following list of questions:
 
 ```
 - Woher stammen die verwendeten Daten? --> deine Datenbasis
