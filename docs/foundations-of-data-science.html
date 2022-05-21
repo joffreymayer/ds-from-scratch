@@ -226,12 +226,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html"><i class="fa fa-check"></i><b>3</b> Foundations of Data Science</a><ul>
-<li class="chapter" data-level="3.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#allgemeine-roadmap-für-data-science-projekte"><i class="fa fa-check"></i><b>3.1</b> Allgemeine Roadmap für Data-Science Projekte</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#management-eines-ds-projektes-the-step-by-step-guide"><i class="fa fa-check"></i><b>3.1.1</b> Management eines DS-Projektes | The Step-by-Step Guide</a></li>
-</ul></li>
-<li class="chapter" data-level="3.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-science-aus-uni-sicht"><i class="fa fa-check"></i><b>3.2</b> Data-Science, aus “Uni”-Sicht</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#after-having-found-your-data-the-questions-you-need-to-have-an-answer-on"><i class="fa fa-check"></i><b>3.2.1</b> After having found your Data: the Questions you need to have an answer on</a></li>
-<li class="chapter" data-level="3.2.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#after-having-concluded-my-data-is-ok-wie-geht-es-weiter"><i class="fa fa-check"></i><b>3.2.2</b> After having concluded: “My data is OK!” | Wie geht es weiter?</a></li>
+<li class="chapter" data-level="3.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#allgemeine-roadmap-für-data-science-projekte"><i class="fa fa-check"></i><b>3.1</b> Allgemeine Roadmap für Data-Science Projekte</a></li>
+<li class="chapter" data-level="3.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#management-eines-ds-projektes-the-step-by-step-guide"><i class="fa fa-check"></i><b>3.2</b> Management eines DS-Projektes | The Step-by-Step Guide</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-0---correct-initialization-of-a-project"><i class="fa fa-check"></i><b>3.2.1</b> Phase 0 - Correct initialization of a Project</a></li>
+<li class="chapter" data-level="3.2.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-1---get-the-data-erste-recherchearbeit"><i class="fa fa-check"></i><b>3.2.2</b> Phase 1 - Get the Data &amp; erste Recherchearbeit</a></li>
+<li class="chapter" data-level="3.2.3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-2---load-the-data-vanilla-exploration"><i class="fa fa-check"></i><b>3.2.3</b> Phase 2 - Load the Data &amp; Vanilla Exploration</a></li>
+<li class="chapter" data-level="3.2.4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-3---after-having-concluded-my-data-is-ok-wie-geht-es-weiter"><i class="fa fa-check"></i><b>3.2.4</b> Phase 3 - After having concluded: “My data is OK!” | Wie geht es weiter?</a></li>
+<li class="chapter" data-level="3.2.5" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-4---model-estimation-applying-machine-learning-on-the-data"><i class="fa fa-check"></i><b>3.2.5</b> Phase 4 - Model Estimation | Applying Machine-Learning on the Data</a></li>
+<li class="chapter" data-level="3.2.6" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-5---deployment-erstellung-eines-minimal-viable-product-abschluss-des-projektes"><i class="fa fa-check"></i><b>3.2.6</b> Phase 5 - Deployment: Erstellung eines Minimal Viable Product | Abschluss des Projektes</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#fragestellungen-beantworten"><i class="fa fa-check"></i><b>3.3</b> Fragestellungen beantworten</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#methoden-liste-an-diverser-technologien-um-fragestellungen-zu-beantworten"><i class="fa fa-check"></i><b>3.3.1</b> Methoden | Liste an diverser Technologien, um Fragestellungen zu beantworten</a></li>
@@ -429,171 +431,94 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <img src="./bilder/foundation-ds/roadmap-uebersicht.jpg" alt="" />
 <p class="caption">Übersicht zu den 4 Teil-Etappen in Data-Science</p>
 </div>
-<div id="management-eines-ds-projektes-the-step-by-step-guide" class="section level3">
-<h3><span class="header-section-number">3.1.1</span> Management eines DS-Projektes | The Step-by-Step Guide</h3>
-<ol style="list-style-type: decimal">
-<li>Create a <strong>new folder</strong> with the project’s name.</li>
-<li>Create a <strong>virtual environment</strong> <code>venv</code> for the project (in order to solve dependency issues).</li>
-<li>Create <strong>a <code>readme.md</code>-file</strong> on how to set-up your computer.</li>
-</ol>
+</div>
+<div id="management-eines-ds-projektes-the-step-by-step-guide" class="section level2">
+<h2><span class="header-section-number">3.2</span> Management eines DS-Projektes | The Step-by-Step Guide</h2>
+<div id="phase-0---correct-initialization-of-a-project" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Phase 0 - Correct initialization of a Project</h3>
+<p>BEFORE you even start a project, <strong>you need to make sure that your project always will work in a reliable way, even when you don’t work on your own machine</strong>:</p>
+<pre><code>1) Create a **new folder** with the project&#39;s name.
+2) Create a **virtual environment** `venv` for the project (in order to solve dependency issues).
+3) Create **a `readme.md`-file** on how to set-up your computer.
+  - Copy-Paste this from a previous project.</code></pre>
+</div>
+<div id="phase-1---get-the-data-erste-recherchearbeit" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Phase 1 - Get the Data &amp; erste Recherchearbeit</h3>
+<p>The basis of every data-science project is your commodity (= Rohstoff): the data that you will work with. That’s why, you should use your “Googling ability” to try and find what you are looking for online. Anohter way to get to the data you want is through web-crawlers:</p>
 <ul>
-<li>Copy-Paste this from a previous project.</li>
-</ul>
-<ol start="4" style="list-style-type: decimal">
-<li>Get the data.</li>
-<li>Acquire <em>some</em> (minimal) understanding of your topic // research-area (Achtung: not too deep yet!).</li>
-</ol>
-<ul>
-<li><u>Goal</u>: Formulate a resarch-question.
-<ul>
-<li>What would be interesting questions to answer with this type of data that you have?</li>
-<li>Can you formulate a hypothesis?</li>
-</ul></li>
-<li>Google some books on the topics.
-<ul>
-<li>Having a look at Bibliotheks-Bücher can also be helpful.</li>
-</ul></li>
-<li>Read some introductions on the topic.
-<ul>
-<li>Are there any White-Papers?</li>
-<li>Have you seen any meta-paper on the topic? These give a really great overview on the topic!</li>
-</ul></li>
-</ul>
-<ol start="6" style="list-style-type: decimal">
-<li>Load the data: the <u>goal</u> here is to <strong>get acquianted with your data</strong>. What is your first impression of what you got here?</li>
-</ol>
-<ul>
-<li>How many columns &amp; rows?</li>
-<li><code>Dtype</code> of each column?</li>
-<li>What data does each column represent?
-<ul>
-<li><u>Problem you want to solve</u>: Oftentimes, columns have weird names and you don’t know what those abbreviations stand for.</li>
-</ul></li>
-<li>What are the possible ranges of values for each <u>categorical</u> data-column?</li>
-<li><u>Final goal here</u>: <em>You need to decide <strong>whether your data is good enough OR garbage</strong>. Because then you don’t even need to put efforts into trying to solve the problem!</em> xD</li>
-</ul>
-<ol start="7" style="list-style-type: decimal">
-<li><u>Wenn die Abschlussfrage im vorherigen Schritt (garbage-data or not?) mit: “nein, wir haben hier wirklich brauchbare Daten für unser Problem” beantwortet werden kann</u>: Acquire even more “Expert-Knowledge” –&gt; vertiefteres Einlesen in den Themenbereich.</li>
-</ol>
-<ul>
-<li><u>Ziel hier</u>: figure out what (similar) model / problem has already been solved by others –&gt; AKA “intelligent copying” ;)
-<ul>
-<li>Lese Papaers,</li>
-<li>Schaue ZF auf Youtube,</li>
-<li>Twitter-Threads zum Thema,</li>
-<li>Are there any Kaggle-Datasets on the topic?</li>
+<li><code>beautifulsoup</code></li>
+<li>Twitter API</li>
+<li>Twitch API</li>
+<li>Youtube API</li>
 <li>etc…</li>
-</ul></li>
 </ul>
-<ol start="8" style="list-style-type: decimal">
-<li>Make a first “deeper” data exploration.</li>
-</ol>
-<ul>
-<li><u>Goal</u>: Let the data tell its story, e.g. <strong>do some very good data-visualisations</strong> in order for your boss to be able to understand with what data you are working AND <em>what insights it is possible to get with it</em>.</li>
-</ul>
-<ol start="9" style="list-style-type: decimal">
-<li>Create // Estimate a model to make predictions.</li>
-</ol>
-<ul>
-<li>Was ist das Prognoseobjekt (=<span class="math inline">\(\hat{y}\)</span> + dessen Einheit)?</li>
-<li>Welche ML-Libraries willst du verwenden?</li>
-<li>Clean the data</li>
-<li>Split the data into training &amp; testing data</li>
-<li>Estimate // Train your model (with the training data)</li>
-<li>Evaluate your model:
-<ul>
-<li>How good did it “learn”? // Performance on the training-data (MAE, MAPE,…)</li>
-<li>How good did it “extrapolate”? // Performance on the testing-data (MAE, MAPE…)</li>
-</ul></li>
-<li>Conclusions: know how to interpret the results &amp; draw conclusions from it.</li>
-</ul>
-<ol start="10" style="list-style-type: decimal">
-<li>If you are happy with your model in “step 9”: create your “minimal viable product” (MVP // Prototyp) from the (best) Model-Predictions that you got.</li>
-</ol>
-<ul>
-<li><u>Goal</u>: Create a dashboard (oder sowas in der Art).
-<ul>
-<li>Choose which library to use (dash, plotly, bokeh, shiny-app, sphinx, bookdown etc…)</li>
-</ul></li>
-</ul>
+<p>Then, the steps are relatively clear:</p>
+<pre><code>4) Get the data.
+5) NICHT OBLIGATORISCHER SCHRITT, WENN DU KEINE WISSENSCHAFTLICHE ARBEIT SCHREIBST: Acquire some (theoretical) understanding of your topic // research-area (Achtung: not too deep yet!).
+  - Goal (in academia): Formulate a resarch-question. 
+    - What would be interesting questions to answer with this type of data that you have? 
+    - Can you formulate a hypothesis?
+  - Google some books on the topics.
+    - Having a look at Bibliotheks-Bücher can also be helpful.
+  - Read some introductions on the topic.
+    - Are there any White-Papers?
+    - Have you seen any meta-paper on the topic? These give a really great overview on the topic!</code></pre>
 </div>
+<div id="phase-2---load-the-data-vanilla-exploration" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Phase 2 - Load the Data &amp; Vanilla Exploration</h3>
+<p>When Loading the data</p>
+<pre><code>6) Load the data
+  - The goal: get acquianted with your data --&gt; Ultimately: Can this data be useful for the problem we are trying to solve?
+    - How many columns &amp; rows?
+    - `Dtype` of each column?
+    - What data does each column represent?
+      - Problem you want to solve here: Oftentimes, columns have weird names and you don&#39;t know what those abbreviations stand for.
+    - What are the possible ranges of values for each categorical(!) data-column?</code></pre>
+<p><mark><strong>Der wichtigste Meilenstein bei dieser Etappe ist vermutlich die Frage: ’Sind meine Daten “gut genug”, um das Problem zu lösen oder sind sie einfach nur Müll?"</strong></mark></p>
+<p><em>Wenn du nämlich die obige Frage mit “NEIN” beantwortest, dann brauchst du schon gar nicht mit dem Projekt zu beginnen, denn es wäre ineffizient (oder du machst dich auf die Suche nach neuen Daten…)</em> ;)</p>
 </div>
-<div id="data-science-aus-uni-sicht" class="section level2">
-<h2><span class="header-section-number">3.2</span> Data-Science, aus “Uni”-Sicht</h2>
-<p>Dies ist eine alternative Übersicht, wie man ein Data-Science Projekt von A bis Z durchführt (eventuell veraltet?):</p>
-<pre><code>- Define the problem that you are trying to solve.
-- Get the data you need to solve the problem
-- Start with &quot;understanding&quot; your data:
-  - What &quot;X&quot;-variables do you have? In which &quot;Einheit&quot;?
-  - What is the Y-Variable? In which &quot;Einheit&quot;?
-  - Make some very BASIC summary-statistics // just screen the data a little bit.
-    - Key: You need to see whether your data is good enough OR garbage. Because then you don&#39;t even need to put efforts into trying to solve the problem! xD
-  - If the data is OK: start with &quot;Literatur-Recherche&quot;
-    - Einlesen ins Thema
-    - Are there researchers that faced similar problems? What methods did they use?
-- Clean the data
-- Split the data into training &amp; testing data
-- Estimate // Train your model (with the training data)
-- Evaluate your model:
-  - How good did it &quot;learn&quot;? // Performance on the training-data (MAE, MAPE,...)
-  - How good did it &quot;extrapolate&quot;? // Performance on the testing-data (MAE, MAPE...)
-- Conclusions
-- If you are happy with your model: Make a &quot;Minimum Viable Product&quot; (MVP):
-  - For example, a dashboard on the web.</code></pre>
-<p><mark><strong>Der erste und wichtigste Meilenstein ist vermutlich die Frage: ’Sind meine Daten “gut genug”, um das Problem zu lösen oder sind sie einfach nur Müll?"</strong></mark></p>
-<p><em>Wenn du nämlich die obige Frage mit “NEIN” beantwortest, dann brauchst du schon gar nicht mit dem Projekt zu beginnen, denn es wäre ineffizient</em> ;)</p>
-<div id="after-having-found-your-data-the-questions-you-need-to-have-an-answer-on" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> After having found your Data: the Questions you need to have an answer on</h3>
-<p>BEFORE you start writing your R-Scripts or Jupyter-Notebooks, you <strong>first need to think about several key-things</strong> &amp; -questions, <mark>because this will help you to come to the conclusion: “is my data good or bad?”:</p>
-<pre><code>- Welche Datenbasis haben wir?
-- Was ist das Prognoseobjekt?
-- Welche Metrik hast du in deinen Notebooks verwendet?
-- Wie ist das Trainings- &amp; Validierungs-Dataset aufgebaut?
-- Welche Daten sind im Test-Set, welche für den Benchmark verwendet werden?
-- Welche (bereits bestehende) Prognoseansätze wurden angewendet? 
-- Welche Daten sind effektiv genutzt &amp; welche sind verfügbar?
-- Etc…</code></pre>
+<div id="phase-3---after-having-concluded-my-data-is-ok-wie-geht-es-weiter" class="section level3">
+<h3><span class="header-section-number">3.2.4</span> Phase 3 - After having concluded: “My data is OK!” | Wie geht es weiter?</h3>
+<p>Wenn die Abschlussfrage im vorherigen Schritt (garbage-data or not?) mit: “nein, wir haben hier wirklich brauchbare Daten für unser Problem” beantwortet werden kann</p>
+<pre><code>7) Acquire even more &quot;Expert-Knowledge&quot; --&gt; vertiefteres Einlesen in den Themenbereich.
+  - Ziel hier: figure out how we can:
+    1) visualize things AND 
+    2) how to model / problem has already been solved by others --&gt; AKA &quot;intelligent copying&quot; ;)
+      - Lese Papers, 
+      - Schaue ZF auf Youtube,
+      - Twitter-Threads zum Thema,
+      - Are there any Kaggle-Datasets on the topic?
+      - etc...
+8) Make a first &quot;deeper&quot; data exploration.
+  - Goal: Let the data tell its story, e.g. **do some very good data-visualisations** in order for your boss to be able to understand with what data you are working AND _what insights it is possible to get with it_. 
+    - Which visualization-libraries do you choose?
+    - Clean the data
+      - How to deal with Outliers?
+      - Merging &amp; Splitting different Datasets?
+      - Which data-imputation-strategy should you choose?
+      - etc...</code></pre>
+<blockquote>
+<p>More details to “step 7”, on how to acquire “Expert-Knowledge”?</p>
+</blockquote>
 <ul>
-<li><u>Datenbasis // Woher kommen die Daten?</u>:</li>
-</ul>
-<p>ENTSOE exklusiv. Das ist der Dachverband der TSO (kennen Nachfrage und Angebot)</p>
+<li>Make a list of Papers on the problem (Google Scholar), but only read the “introduction”!
 <ul>
-<li><u>Prognoseobjekt (= y-dach)</u>:</li>
-</ul>
-<p>Stündliche EUR/kWh für Folgetag.</p>
-<ul>
-<li><u>Metrik</u>:</li>
-</ul>
-<p>Zeigt, wie gut das Modell “lernt” (= training error) &amp; “generalisiert” // exrapoliert (= generalization error). Im Notebook von Philipp werden 2 verschiedene
-Metriken verwendet, nämlich:</p>
-<pre><code>- Mean Absolute Error, sowie 
-- [Root] Mean Squared Error.</code></pre>
-<ul>
-<li><p><u>Training Dataset</u>: Daten von 2019.</p></li>
-<li><p><u>Validation Dataset</u>: Random choice of 20% of the hours within this year.</p></li>
-<li><p><u>Mit welchem <em>true y-value</em> werden die Predictions verglichen? // Was ist der Benchmark? // Test-Set</u>: EFFEX Spotpreise benutzt für Benchmark // true [y-]values.</p></li>
-<li><p><u>Struktur [der Analyse]</u>:</p>
-<ul>
-<li><u>Output</u>: Day ahead Strompreis CH</li>
-<li><u>Input</u>: jeweils 24h für ca. 20 Prädiktoren. Reshape: K dimensionen = #Prediktors x 24h</li>
+<li><u>Key here is <em>“intelligent copying”-concept</em></u>: You need to pick 2-3 papers that are the most relevant to your problem. Start with those.</li>
 </ul></li>
-<li><p><u>Was ist die Daten-Imputation Methode?</u>: Missing Values mit Mittelwerten</p></li>
+<li>For any topics that you don’t understand enough:
+<ul>
+<li>Find Youtube-Videos on the topic(s).</li>
+<li>Twitter-Threads is also great.</li>
+<li>Furthermore, give Reddit a try!</li>
+</ul></li>
+<li>Next, choose which libraries are the most apropriate for the problem?
+<ul>
+<li><u>Key here</u>: <strong>Your end-result will only be as good as your tools, with which you will be able to tackle the problem</strong>.
+<ul>
+<li><u>Example</u>: Remember my MA-thesis! The libraries I needed were in <code>Python</code>, but I solved it - very painfully &amp; inefficiently - in <code>R</code>!</li>
+</ul></li>
+</ul></li>
 </ul>
-</div>
-<div id="after-having-concluded-my-data-is-ok-wie-geht-es-weiter" class="section level3">
-<h3><span class="header-section-number">3.2.2</span> After having concluded: “My data is OK!” | Wie geht es weiter?</h3>
-<p>Hier mein Vorgehen, um jedes mögliche DS-Problem zu lösen,.</p>
-<p>The list below basically starts at the “Literatur-Recherche” point:</p>
-<pre><code>- Make a list of Papers on the problem (Google Scholar), but only read the &quot;introduction&quot;!
-  - Key here is &quot;intelligent copying&quot;-concept: You need to pick 2-3 papers that are the most relevant to your problem. Start with those.
-- For any topics that you don&#39;t understand enough: Find Youtube-Videos on the topic(s). Twitter-Threads is also great. Furthermore, give Reddit a try!
-- Next, choose which libraries are the most apropriate for the problem?
-  - Key here: Your end-result will only be as good as your tools, with which you will be able to tackle the problem. Remember my MA-thesis: the libraries I needed were in Python, but I solved it (very painfully &amp; inefficiently) in R!
-- Start with the data cleaning.
-- Estimate your Model.
-- Evaluate the Model (with CV).
-  - Conclusions? --&gt; Key: Can we do better?
-- Make a MVP, for example a dashboard.</code></pre>
 <blockquote>
 <p>How to find Answers quickly, especially when a Concept is complicated?</p>
 </blockquote>
@@ -602,7 +527,58 @@ Metriken verwendet, nämlich:</p>
 <blockquote>
 <p>How to read Notebooks from other People?</p>
 </blockquote>
-<p><em>Es geht am Anfang um die Gesamtübersicht und noch nicht um die Details // Eigenheiten im Code oder im Datensatz! Am wichtigsten ist es, dass du <a href="foundations-of-data-science.html#after-having-found-your-data-the-questions-you-need-to-have-an-answer-on">diese Fragen</a> zunächst beantworten kannst, wenn du das Notebook liest.</em></p>
+<p><em>Es geht am Anfang um die Gesamtübersicht und noch nicht um die Details // Eigenheiten im Code oder im Datensatz! Am wichtigsten ist es, dass du <a href="#after-having-found-your-data-the-questions-you-need-to-have-an-answer-on">diese Fragen</a> zunächst beantworten kannst, wenn du das Notebook liest.</em></p>
+</div>
+<div id="phase-4---model-estimation-applying-machine-learning-on-the-data" class="section level3">
+<h3><span class="header-section-number">3.2.5</span> Phase 4 - Model Estimation | Applying Machine-Learning on the Data</h3>
+<p>In this phase, we will want to generate predictions (most of the time). Here are the steps you need to consider:</p>
+<pre><code>9) Create // Estimate a model to make predictions.
+  - Was ist das Prognoseobjekt (=$\hat{y}$ + dessen Einheit)?
+  - Welche ML-Libraries willst du verwenden?
+  - Clean the data
+    - How to deal with Outliers?
+    - Merging &amp; Splitting of different Datasets?
+    - Feature Engineering Strategy?
+    - Which data-imputation-strategy should you choose?
+    - etc...
+  - Split the data into training &amp; testing data
+  - Estimate // Train your model (with the training data)
+  - Evaluate your model (with Cross-Validation):
+    - How good did it &quot;learn&quot;? // Performance on the training-data (MAE, MAPE,...)
+    - How good did it &quot;extrapolate&quot;? // Performance on the testing-data (MAE, MAPE...)
+  - Conclusions --&gt; can we do better? 
+    - Bedingung: know how to interpret the results &amp; draw conclusions from it.</code></pre>
+<blockquote>
+<p>To efficiently communicate your results with other “Data Scientists”, consider to send them answers to the following list of questions:</p>
+</blockquote>
+<pre><code>- Woher stammen die verwendeten Daten? --&gt; deine Datenbasis
+- Was ist das Prognoseobjekt? --&gt; dein y_(dach)
+- Was ist die &quot;Input-Output-Struktur&quot; der Analyse?
+  - &lt;u&gt;(Beispiels-) Output&lt;/u&gt;: Day ahead Strompreis CH
+    - &lt;u&gt;(Beispiels-) Inputs&lt;/u&gt;: jeweils 24h für ca. 20 Prädiktoren.
+- Was ist die Daten-Imputation Methode? 
+  - Beispiel: Missing Values mit Mittelwerten ersetzt.
+- Welche Metrik hast du in deinen Notebooks verwendet? --&gt; MAPE, MAE und / oder RMSE für Cross-Validation?
+- Wie ist das Trainings- &amp; Validierungs-Dataset aufgebaut?
+- Welche Daten sind im Test-Set, welche für den Benchmark verwendet werden?
+- Welche (bereits bestehende) Prognoseansätze wurden angewendet? --&gt; Resultate aus deiner Literatur-Recherche 
+- Welche Daten sind effektiv genutzt &amp; welche sind verfügbar?
+- Etc…</code></pre>
+<p><mark><em>With those <strong>key-questions above</strong>, a Data-Scientist should be able to assess the question: “is my data good or bad?”, WITHOUT even creating ANY Jupyter-Notebook and running ANY lines of code in it!</em></mark></p>
+</div>
+<div id="phase-5---deployment-erstellung-eines-minimal-viable-product-abschluss-des-projektes" class="section level3">
+<h3><span class="header-section-number">3.2.6</span> Phase 5 - Deployment: Erstellung eines Minimal Viable Product | Abschluss des Projektes</h3>
+<p><strong>If you are happy with your model in “step 9”</strong>, you have a last step ahead of you:</p>
+<pre><code>- Create your &quot;minimal viable product&quot; (MVP // Prototyp) from the (best) Model-Predictions that you got. 
+  - Goal: Create a dashboard (oder sowas in der Art).
+    - Choose which library to use:
+      - dash, 
+      - plotly, 
+      - bokeh, 
+      - R shiny-app, 
+      - sphinx for documentation, 
+      - bookdown 
+      - etc...</code></pre>
 </div>
 </div>
 <div id="fragestellungen-beantworten" class="section level2">

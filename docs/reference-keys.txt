@@ -101,9 +101,12 @@ definitions
 foundations-of-data-science
 allgemeine-roadmap-für-data-science-projekte
 management-eines-ds-projektes-the-step-by-step-guide
-data-science-aus-uni-sicht
-after-having-found-your-data-the-questions-you-need-to-have-an-answer-on
-after-having-concluded-my-data-is-ok-wie-geht-es-weiter
+phase-0---correct-initialization-of-a-project
+phase-1---get-the-data-erste-recherchearbeit
+phase-2---load-the-data-vanilla-exploration
+phase-3---after-having-concluded-my-data-is-ok-wie-geht-es-weiter
+phase-4---model-estimation-applying-machine-learning-on-the-data
+phase-5---deployment-erstellung-eines-minimal-viable-product-abschluss-des-projektes
 fragestellungen-beantworten
 methoden-liste-an-diverser-technologien-um-fragestellungen-zu-beantworten
 find-data

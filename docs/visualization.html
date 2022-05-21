@@ -226,12 +226,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html"><i class="fa fa-check"></i><b>3</b> Foundations of Data Science</a><ul>
-<li class="chapter" data-level="3.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#allgemeine-roadmap-für-data-science-projekte"><i class="fa fa-check"></i><b>3.1</b> Allgemeine Roadmap für Data-Science Projekte</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#management-eines-ds-projektes-the-step-by-step-guide"><i class="fa fa-check"></i><b>3.1.1</b> Management eines DS-Projektes | The Step-by-Step Guide</a></li>
-</ul></li>
-<li class="chapter" data-level="3.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-science-aus-uni-sicht"><i class="fa fa-check"></i><b>3.2</b> Data-Science, aus “Uni”-Sicht</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#after-having-found-your-data-the-questions-you-need-to-have-an-answer-on"><i class="fa fa-check"></i><b>3.2.1</b> After having found your Data: the Questions you need to have an answer on</a></li>
-<li class="chapter" data-level="3.2.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#after-having-concluded-my-data-is-ok-wie-geht-es-weiter"><i class="fa fa-check"></i><b>3.2.2</b> After having concluded: “My data is OK!” | Wie geht es weiter?</a></li>
+<li class="chapter" data-level="3.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#allgemeine-roadmap-für-data-science-projekte"><i class="fa fa-check"></i><b>3.1</b> Allgemeine Roadmap für Data-Science Projekte</a></li>
+<li class="chapter" data-level="3.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#management-eines-ds-projektes-the-step-by-step-guide"><i class="fa fa-check"></i><b>3.2</b> Management eines DS-Projektes | The Step-by-Step Guide</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-0---correct-initialization-of-a-project"><i class="fa fa-check"></i><b>3.2.1</b> Phase 0 - Correct initialization of a Project</a></li>
+<li class="chapter" data-level="3.2.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-1---get-the-data-erste-recherchearbeit"><i class="fa fa-check"></i><b>3.2.2</b> Phase 1 - Get the Data &amp; erste Recherchearbeit</a></li>
+<li class="chapter" data-level="3.2.3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-2---load-the-data-vanilla-exploration"><i class="fa fa-check"></i><b>3.2.3</b> Phase 2 - Load the Data &amp; Vanilla Exploration</a></li>
+<li class="chapter" data-level="3.2.4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-3---after-having-concluded-my-data-is-ok-wie-geht-es-weiter"><i class="fa fa-check"></i><b>3.2.4</b> Phase 3 - After having concluded: “My data is OK!” | Wie geht es weiter?</a></li>
+<li class="chapter" data-level="3.2.5" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-4---model-estimation-applying-machine-learning-on-the-data"><i class="fa fa-check"></i><b>3.2.5</b> Phase 4 - Model Estimation | Applying Machine-Learning on the Data</a></li>
+<li class="chapter" data-level="3.2.6" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-5---deployment-erstellung-eines-minimal-viable-product-abschluss-des-projektes"><i class="fa fa-check"></i><b>3.2.6</b> Phase 5 - Deployment: Erstellung eines Minimal Viable Product | Abschluss des Projektes</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#fragestellungen-beantworten"><i class="fa fa-check"></i><b>3.3</b> Fragestellungen beantworten</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#methoden-liste-an-diverser-technologien-um-fragestellungen-zu-beantworten"><i class="fa fa-check"></i><b>3.3.1</b> Methoden | Liste an diverser Technologien, um Fragestellungen zu beantworten</a></li>
@@ -440,21 +442,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>A line-chart is often used to visualize a trend in the data over time.</li>
 </ul>
-<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="visualization.html#cb50-1"></a><span class="im">import</span> seabron <span class="im">as</span> sns</span>
-<span id="cb50-2"><a href="visualization.html#cb50-2"></a></span>
-<span id="cb50-3"><a href="visualization.html#cb50-3"></a>sns.lineplot(data <span class="op">=</span> spotify_data)</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="visualization.html#cb53-1"></a><span class="im">import</span> seabron <span class="im">as</span> sns</span>
+<span id="cb53-2"><a href="visualization.html#cb53-2"></a></span>
+<span id="cb53-3"><a href="visualization.html#cb53-3"></a>sns.lineplot(data <span class="op">=</span> spotify_data)</span></code></pre></div>
 </div>
 <div id="draw-a-barplot-barchart" class="section level4">
 <h4><span class="header-section-number">5.1.1.2</span> Draw a Barplot (= Barchart)</h4>
-<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="visualization.html#cb51-1"></a><span class="im">import</span> seabron <span class="im">as</span> sns</span>
-<span id="cb51-2"><a href="visualization.html#cb51-2"></a></span>
-<span id="cb51-3"><a href="visualization.html#cb51-3"></a>sns.barplot(x <span class="op">=</span> data.Racing, y <span class="op">=</span> data.index)</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="visualization.html#cb54-1"></a><span class="im">import</span> seabron <span class="im">as</span> sns</span>
+<span id="cb54-2"><a href="visualization.html#cb54-2"></a></span>
+<span id="cb54-3"><a href="visualization.html#cb54-3"></a>sns.barplot(x <span class="op">=</span> data.Racing, y <span class="op">=</span> data.index)</span></code></pre></div>
 </div>
 <div id="draw-a-heatmap" class="section level4">
 <h4><span class="header-section-number">5.1.1.3</span> Draw a Heatmap</h4>
-<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="visualization.html#cb52-1"></a><span class="im">import</span> seabron <span class="im">as</span> sns</span>
-<span id="cb52-2"><a href="visualization.html#cb52-2"></a></span>
-<span id="cb52-3"><a href="visualization.html#cb52-3"></a>sns.heatmap(data <span class="op">=</span> flight_data, annot <span class="op">=</span> <span class="va">True</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="visualization.html#cb55-1"></a><span class="im">import</span> seabron <span class="im">as</span> sns</span>
+<span id="cb55-2"><a href="visualization.html#cb55-2"></a></span>
+<span id="cb55-3"><a href="visualization.html#cb55-3"></a>sns.heatmap(data <span class="op">=</span> flight_data, annot <span class="op">=</span> <span class="va">True</span>)</span></code></pre></div>
 </div>
 <div id="draw-a-scatterplot-streudiagramm-punktwolke" class="section level4">
 <h4><span class="header-section-number">5.1.1.4</span> Draw a Scatterplot (Streudiagramm // Punktwolke)</h4>
@@ -463,21 +465,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div id="with-2-variables-incl.-regression-line" class="section level5">
 <h5><span class="header-section-number">5.1.1.4.1</span> With 2 variables (incl. regression-line)</h5>
-<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="visualization.html#cb53-1"></a><span class="im">import</span> seabron <span class="im">as</span> sns</span>
-<span id="cb53-2"><a href="visualization.html#cb53-2"></a></span>
-<span id="cb53-3"><a href="visualization.html#cb53-3"></a>sns.scatterplot(x <span class="op">=</span> health_data[<span class="st">&#39;bmi&#39;</span>], y <span class="op">=</span> health_data[<span class="st">&#39;life_expectancy&#39;</span>])</span>
-<span id="cb53-4"><a href="visualization.html#cb53-4"></a></span>
-<span id="cb53-5"><a href="visualization.html#cb53-5"></a><span class="co"># include a regression-line:</span></span>
-<span id="cb53-6"><a href="visualization.html#cb53-6"></a>sns.regplot(x <span class="op">=</span> health_data[<span class="st">&#39;bmi&#39;</span>], y <span class="op">=</span> health_data[<span class="st">&#39;life_expectancy&#39;</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="visualization.html#cb56-1"></a><span class="im">import</span> seabron <span class="im">as</span> sns</span>
+<span id="cb56-2"><a href="visualization.html#cb56-2"></a></span>
+<span id="cb56-3"><a href="visualization.html#cb56-3"></a>sns.scatterplot(x <span class="op">=</span> health_data[<span class="st">&#39;bmi&#39;</span>], y <span class="op">=</span> health_data[<span class="st">&#39;life_expectancy&#39;</span>])</span>
+<span id="cb56-4"><a href="visualization.html#cb56-4"></a></span>
+<span id="cb56-5"><a href="visualization.html#cb56-5"></a><span class="co"># include a regression-line:</span></span>
+<span id="cb56-6"><a href="visualization.html#cb56-6"></a>sns.regplot(x <span class="op">=</span> health_data[<span class="st">&#39;bmi&#39;</span>], y <span class="op">=</span> health_data[<span class="st">&#39;life_expectancy&#39;</span>])</span></code></pre></div>
 </div>
 <div id="with-3-variables-where-2-are-continuous-1-is-categorical" class="section level5">
 <h5><span class="header-section-number">5.1.1.4.2</span> With 3 variables, where 2 are <code>continuous</code> &amp; 1 is <code>categorical</code></h5>
-<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="visualization.html#cb54-1"></a><span class="im">import</span> seabron <span class="im">as</span> sns</span>
-<span id="cb54-2"><a href="visualization.html#cb54-2"></a></span>
-<span id="cb54-3"><a href="visualization.html#cb54-3"></a>sns.scatterplot(x <span class="op">=</span> health_data[<span class="st">&#39;bmi&#39;</span>], y <span class="op">=</span> health_data[<span class="st">&#39;life_expectancy&#39;</span>], hue <span class="op">=</span> health_data[<span class="st">&#39;smoker&#39;</span>])</span>
-<span id="cb54-4"><a href="visualization.html#cb54-4"></a></span>
-<span id="cb54-5"><a href="visualization.html#cb54-5"></a><span class="co"># include a regression-line:</span></span>
-<span id="cb54-6"><a href="visualization.html#cb54-6"></a>sns.lmplot(x <span class="op">=</span> health_data[<span class="st">&#39;bmi&#39;</span>], y <span class="op">=</span> health_data[<span class="st">&#39;life_expectancy&#39;</span>], hue <span class="op">=</span> health_data[<span class="st">&#39;smoker&#39;</span>]) <span class="co"># note that it is not the same, as when you used 2 variables!</span></span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="visualization.html#cb57-1"></a><span class="im">import</span> seabron <span class="im">as</span> sns</span>
+<span id="cb57-2"><a href="visualization.html#cb57-2"></a></span>
+<span id="cb57-3"><a href="visualization.html#cb57-3"></a>sns.scatterplot(x <span class="op">=</span> health_data[<span class="st">&#39;bmi&#39;</span>], y <span class="op">=</span> health_data[<span class="st">&#39;life_expectancy&#39;</span>], hue <span class="op">=</span> health_data[<span class="st">&#39;smoker&#39;</span>])</span>
+<span id="cb57-4"><a href="visualization.html#cb57-4"></a></span>
+<span id="cb57-5"><a href="visualization.html#cb57-5"></a><span class="co"># include a regression-line:</span></span>
+<span id="cb57-6"><a href="visualization.html#cb57-6"></a>sns.lmplot(x <span class="op">=</span> health_data[<span class="st">&#39;bmi&#39;</span>], y <span class="op">=</span> health_data[<span class="st">&#39;life_expectancy&#39;</span>], hue <span class="op">=</span> health_data[<span class="st">&#39;smoker&#39;</span>]) <span class="co"># note that it is not the same, as when you used 2 variables!</span></span></code></pre></div>
 </div>
 </div>
 <div id="draw-a-histogram" class="section level4">
@@ -494,30 +496,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><mark>If you want to do <em>Deep Learning</em>, then a transformation like normalisation (OR standardisation?) is required, that’s the reason why we care about the distribution!</mark></p>
 <div id="discrete-version" class="section level5">
 <h5><span class="header-section-number">5.1.1.5.1</span> Discrete Version</h5>
-<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="visualization.html#cb55-1"></a><span class="im">import</span> seabron <span class="im">as</span> sns</span>
-<span id="cb55-2"><a href="visualization.html#cb55-2"></a></span>
-<span id="cb55-3"><a href="visualization.html#cb55-3"></a>sns.distplot(</span>
-<span id="cb55-4"><a href="visualization.html#cb55-4"></a>a <span class="op">=</span> iris_data[<span class="st">&#39;Petal Length (cm)&#39;</span>], <span class="co"># a column you would like to plot</span></span>
-<span id="cb55-5"><a href="visualization.html#cb55-5"></a>label <span class="op">=</span> <span class="st">&quot;Rose&quot;</span>,</span>
-<span id="cb55-6"><a href="visualization.html#cb55-6"></a>kde <span class="op">=</span> <span class="va">False</span> <span class="co"># &quot;Kernel Density Estimate&quot; (kde): always provide this input when creating a histogram</span></span>
-<span id="cb55-7"><a href="visualization.html#cb55-7"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="visualization.html#cb58-1"></a><span class="im">import</span> seabron <span class="im">as</span> sns</span>
+<span id="cb58-2"><a href="visualization.html#cb58-2"></a></span>
+<span id="cb58-3"><a href="visualization.html#cb58-3"></a>sns.distplot(</span>
+<span id="cb58-4"><a href="visualization.html#cb58-4"></a>a <span class="op">=</span> iris_data[<span class="st">&#39;Petal Length (cm)&#39;</span>], <span class="co"># a column you would like to plot</span></span>
+<span id="cb58-5"><a href="visualization.html#cb58-5"></a>label <span class="op">=</span> <span class="st">&quot;Rose&quot;</span>,</span>
+<span id="cb58-6"><a href="visualization.html#cb58-6"></a>kde <span class="op">=</span> <span class="va">False</span> <span class="co"># &quot;Kernel Density Estimate&quot; (kde): always provide this input when creating a histogram</span></span>
+<span id="cb58-7"><a href="visualization.html#cb58-7"></a>)</span></code></pre></div>
 </div>
 <div id="continuous-version-kernel-density-estimate" class="section level5">
 <h5><span class="header-section-number">5.1.1.5.2</span> Continuous Version (Kernel Density Estimate)</h5>
-<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="visualization.html#cb56-1"></a><span class="im">import</span> seabron <span class="im">as</span> sns</span>
-<span id="cb56-2"><a href="visualization.html#cb56-2"></a></span>
-<span id="cb56-3"><a href="visualization.html#cb56-3"></a><span class="co">### ---- Standard KDE-Plot</span></span>
-<span id="cb56-4"><a href="visualization.html#cb56-4"></a>sns.kdeplot(</span>
-<span id="cb56-5"><a href="visualization.html#cb56-5"></a>data <span class="op">=</span> iris_data[<span class="st">&#39;Petal Length (cm)&#39;</span>],</span>
-<span id="cb56-6"><a href="visualization.html#cb56-6"></a>shade <span class="op">=</span> <span class="va">True</span> <span class="co"># colors the area below the curve</span></span>
-<span id="cb56-7"><a href="visualization.html#cb56-7"></a>)</span>
-<span id="cb56-8"><a href="visualization.html#cb56-8"></a></span>
-<span id="cb56-9"><a href="visualization.html#cb56-9"></a><span class="co">### ---- 2-Dimensional KDE-Plot, when using more than 1 column</span></span>
-<span id="cb56-10"><a href="visualization.html#cb56-10"></a>sns.jointplot(</span>
-<span id="cb56-11"><a href="visualization.html#cb56-11"></a>x <span class="op">=</span> iris_data[<span class="st">&#39;Petal Length (cm)&#39;</span>,</span>
-<span id="cb56-12"><a href="visualization.html#cb56-12"></a>y <span class="op">=</span> iris_data[<span class="st">&#39;Septal Width (cm)&#39;</span>],</span>
-<span id="cb56-13"><a href="visualization.html#cb56-13"></a>kind <span class="op">=</span> <span class="st">&quot;kde&quot;</span></span>
-<span id="cb56-14"><a href="visualization.html#cb56-14"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="visualization.html#cb59-1"></a><span class="im">import</span> seabron <span class="im">as</span> sns</span>
+<span id="cb59-2"><a href="visualization.html#cb59-2"></a></span>
+<span id="cb59-3"><a href="visualization.html#cb59-3"></a><span class="co">### ---- Standard KDE-Plot</span></span>
+<span id="cb59-4"><a href="visualization.html#cb59-4"></a>sns.kdeplot(</span>
+<span id="cb59-5"><a href="visualization.html#cb59-5"></a>data <span class="op">=</span> iris_data[<span class="st">&#39;Petal Length (cm)&#39;</span>],</span>
+<span id="cb59-6"><a href="visualization.html#cb59-6"></a>shade <span class="op">=</span> <span class="va">True</span> <span class="co"># colors the area below the curve</span></span>
+<span id="cb59-7"><a href="visualization.html#cb59-7"></a>)</span>
+<span id="cb59-8"><a href="visualization.html#cb59-8"></a></span>
+<span id="cb59-9"><a href="visualization.html#cb59-9"></a><span class="co">### ---- 2-Dimensional KDE-Plot, when using more than 1 column</span></span>
+<span id="cb59-10"><a href="visualization.html#cb59-10"></a>sns.jointplot(</span>
+<span id="cb59-11"><a href="visualization.html#cb59-11"></a>x <span class="op">=</span> iris_data[<span class="st">&#39;Petal Length (cm)&#39;</span>,</span>
+<span id="cb59-12"><a href="visualization.html#cb59-12"></a>y <span class="op">=</span> iris_data[<span class="st">&#39;Septal Width (cm)&#39;</span>],</span>
+<span id="cb59-13"><a href="visualization.html#cb59-13"></a>kind <span class="op">=</span> <span class="st">&quot;kde&quot;</span></span>
+<span id="cb59-14"><a href="visualization.html#cb59-14"></a>)</span></code></pre></div>
 </div>
 </div>
 <div id="change-style-of-different-seaborn-plots" class="section level4">
@@ -525,38 +527,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><u>Key</u>:Set the new style BEFORE you run your code for the actual graph!</li>
 </ul>
-<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="visualization.html#cb57-1"></a><span class="im">import</span> seabron <span class="im">as</span> sns</span>
-<span id="cb57-2"><a href="visualization.html#cb57-2"></a></span>
-<span id="cb57-3"><a href="visualization.html#cb57-3"></a><span class="co">### ---- Example for changing the colors // styles with a new style &quot;dark&quot;:</span></span>
-<span id="cb57-4"><a href="visualization.html#cb57-4"></a>sns.set_style(<span class="st">&quot;dark&quot;</span>) <span class="co"># Possibile styles to choose from: {&quot;darkgrid&quot;, &quot;whitegrid&quot;, &quot;dark&quot;, &quot;white&quot;, &quot;ticks&quot;}</span></span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="visualization.html#cb60-1"></a><span class="im">import</span> seabron <span class="im">as</span> sns</span>
+<span id="cb60-2"><a href="visualization.html#cb60-2"></a></span>
+<span id="cb60-3"><a href="visualization.html#cb60-3"></a><span class="co">### ---- Example for changing the colors // styles with a new style &quot;dark&quot;:</span></span>
+<span id="cb60-4"><a href="visualization.html#cb60-4"></a>sns.set_style(<span class="st">&quot;dark&quot;</span>) <span class="co"># Possibile styles to choose from: {&quot;darkgrid&quot;, &quot;whitegrid&quot;, &quot;dark&quot;, &quot;white&quot;, &quot;ticks&quot;}</span></span></code></pre></div>
 </div>
 </div>
 <div id="matplotlib" class="section level3">
 <h3><span class="header-section-number">5.1.2</span> Matplotlib</h3>
 <div id="set-width-height-of-graph" class="section level4">
 <h4><span class="header-section-number">5.1.2.1</span> Set Width &amp; Height of Graph</h4>
-<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="visualization.html#cb58-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb58-2"><a href="visualization.html#cb58-2"></a></span>
-<span id="cb58-3"><a href="visualization.html#cb58-3"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">6</span>)) <span class="co"># 1. width, 2. height</span></span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="visualization.html#cb61-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb61-2"><a href="visualization.html#cb61-2"></a></span>
+<span id="cb61-3"><a href="visualization.html#cb61-3"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">6</span>)) <span class="co"># 1. width, 2. height</span></span></code></pre></div>
 </div>
 <div id="set-title-of-graph" class="section level4">
 <h4><span class="header-section-number">5.1.2.2</span> Set title of Graph</h4>
-<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="visualization.html#cb59-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb59-2"><a href="visualization.html#cb59-2"></a></span>
-<span id="cb59-3"><a href="visualization.html#cb59-3"></a>plt.title(<span class="st">&#39;Hello World&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="visualization.html#cb62-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb62-2"><a href="visualization.html#cb62-2"></a></span>
+<span id="cb62-3"><a href="visualization.html#cb62-3"></a>plt.title(<span class="st">&#39;Hello World&#39;</span>)</span></code></pre></div>
 </div>
 <div id="set-label-of-axes" class="section level4">
 <h4><span class="header-section-number">5.1.2.3</span> Set Label of Axes</h4>
-<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="visualization.html#cb60-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb60-2"><a href="visualization.html#cb60-2"></a></span>
-<span id="cb60-3"><a href="visualization.html#cb60-3"></a>plt.ylabel(<span class="st">&#39;Average Gaming Score&#39;</span>)</span>
-<span id="cb60-4"><a href="visualization.html#cb60-4"></a>plt.xlabel(<span class="st">&#39;Date&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="visualization.html#cb63-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb63-2"><a href="visualization.html#cb63-2"></a></span>
+<span id="cb63-3"><a href="visualization.html#cb63-3"></a>plt.ylabel(<span class="st">&#39;Average Gaming Score&#39;</span>)</span>
+<span id="cb63-4"><a href="visualization.html#cb63-4"></a>plt.xlabel(<span class="st">&#39;Date&#39;</span>)</span></code></pre></div>
 </div>
 <div id="force-legend-to-appear" class="section level4">
 <h4><span class="header-section-number">5.1.2.4</span> Force Legend to appear</h4>
-<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="visualization.html#cb61-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb61-2"><a href="visualization.html#cb61-2"></a></span>
-<span id="cb61-3"><a href="visualization.html#cb61-3"></a>plt.legend()</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a href="visualization.html#cb64-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb64-2"><a href="visualization.html#cb64-2"></a></span>
+<span id="cb64-3"><a href="visualization.html#cb64-3"></a>plt.legend()</span></code></pre></div>
 </div>
 </div>
 </div>

@@ -226,12 +226,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html"><i class="fa fa-check"></i><b>3</b> Foundations of Data Science</a><ul>
-<li class="chapter" data-level="3.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#allgemeine-roadmap-für-data-science-projekte"><i class="fa fa-check"></i><b>3.1</b> Allgemeine Roadmap für Data-Science Projekte</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#management-eines-ds-projektes-the-step-by-step-guide"><i class="fa fa-check"></i><b>3.1.1</b> Management eines DS-Projektes | The Step-by-Step Guide</a></li>
-</ul></li>
-<li class="chapter" data-level="3.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#data-science-aus-uni-sicht"><i class="fa fa-check"></i><b>3.2</b> Data-Science, aus “Uni”-Sicht</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#after-having-found-your-data-the-questions-you-need-to-have-an-answer-on"><i class="fa fa-check"></i><b>3.2.1</b> After having found your Data: the Questions you need to have an answer on</a></li>
-<li class="chapter" data-level="3.2.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#after-having-concluded-my-data-is-ok-wie-geht-es-weiter"><i class="fa fa-check"></i><b>3.2.2</b> After having concluded: “My data is OK!” | Wie geht es weiter?</a></li>
+<li class="chapter" data-level="3.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#allgemeine-roadmap-für-data-science-projekte"><i class="fa fa-check"></i><b>3.1</b> Allgemeine Roadmap für Data-Science Projekte</a></li>
+<li class="chapter" data-level="3.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#management-eines-ds-projektes-the-step-by-step-guide"><i class="fa fa-check"></i><b>3.2</b> Management eines DS-Projektes | The Step-by-Step Guide</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-0---correct-initialization-of-a-project"><i class="fa fa-check"></i><b>3.2.1</b> Phase 0 - Correct initialization of a Project</a></li>
+<li class="chapter" data-level="3.2.2" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-1---get-the-data-erste-recherchearbeit"><i class="fa fa-check"></i><b>3.2.2</b> Phase 1 - Get the Data &amp; erste Recherchearbeit</a></li>
+<li class="chapter" data-level="3.2.3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-2---load-the-data-vanilla-exploration"><i class="fa fa-check"></i><b>3.2.3</b> Phase 2 - Load the Data &amp; Vanilla Exploration</a></li>
+<li class="chapter" data-level="3.2.4" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-3---after-having-concluded-my-data-is-ok-wie-geht-es-weiter"><i class="fa fa-check"></i><b>3.2.4</b> Phase 3 - After having concluded: “My data is OK!” | Wie geht es weiter?</a></li>
+<li class="chapter" data-level="3.2.5" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-4---model-estimation-applying-machine-learning-on-the-data"><i class="fa fa-check"></i><b>3.2.5</b> Phase 4 - Model Estimation | Applying Machine-Learning on the Data</a></li>
+<li class="chapter" data-level="3.2.6" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#phase-5---deployment-erstellung-eines-minimal-viable-product-abschluss-des-projektes"><i class="fa fa-check"></i><b>3.2.6</b> Phase 5 - Deployment: Erstellung eines Minimal Viable Product | Abschluss des Projektes</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#fragestellungen-beantworten"><i class="fa fa-check"></i><b>3.3</b> Fragestellungen beantworten</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="foundations-of-data-science.html"><a href="foundations-of-data-science.html#methoden-liste-an-diverser-technologien-um-fragestellungen-zu-beantworten"><i class="fa fa-check"></i><b>3.3.1</b> Methoden | Liste an diverser Technologien, um Fragestellungen zu beantworten</a></li>
@@ -507,23 +509,23 @@ and columns.</p></li>
 <ul>
 <li><u>Example</u>:</li>
 </ul>
-<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="python-libraries.html#cb42-1"></a><span class="co">## Möglichkeit 1: with &#39;iloc&#39;</span></span>
-<span id="cb42-2"><a href="python-libraries.html#cb42-2"></a>iloc_test <span class="op">=</span> dd.iloc[<span class="dv">0</span>:<span class="dv">5</span>,<span class="dv">0</span>] <span class="co"># row-position == 0:5 --&gt; first 5 rows; EXCLUDES &#39;5&#39; from the range &quot;0,1,2,3,4,5&quot; </span></span>
-<span id="cb42-3"><a href="python-libraries.html#cb42-3"></a>                                          <span class="co"># --&gt; hence range(0:5) results in --&gt; &quot;0,1,2,3,4&quot;</span></span>
-<span id="cb42-4"><a href="python-libraries.html#cb42-4"></a>                                          <span class="co"># column-position == 0 --&gt; 1st row --&gt; remember: indexing in </span></span>
-<span id="cb42-5"><a href="python-libraries.html#cb42-5"></a>                                          <span class="co"># Python starts at &#39;0&#39;!</span></span>
-<span id="cb42-6"><a href="python-libraries.html#cb42-6"></a></span>
-<span id="cb42-7"><a href="python-libraries.html#cb42-7"></a>    <span class="co"># IMPORTANT: &#39;iloc&#39; uses the &#39;Python stdlib&#39; indexing scheme, where the first element of the range is </span></span>
-<span id="cb42-8"><a href="python-libraries.html#cb42-8"></a>    <span class="co"># included and the last one excluded. So 0:5 will select entries 0,...,4 (= these are the first *5* </span></span>
-<span id="cb42-9"><a href="python-libraries.html#cb42-9"></a>    <span class="co"># entries!!).</span></span>
-<span id="cb42-10"><a href="python-libraries.html#cb42-10"></a></span>
-<span id="cb42-11"><a href="python-libraries.html#cb42-11"></a><span class="co">## Möglichkeit 2: to get the SAME output with &#39;loc&#39;, we need a slightly DIFFERENT range!</span></span>
-<span id="cb42-12"><a href="python-libraries.html#cb42-12"></a>loc_test <span class="op">=</span> dd.loc[<span class="dv">0</span>:<span class="dv">4</span>,<span class="st">&#39;order_id&#39;</span>] <span class="co"># row-position == 0:4 --&gt; first 5 rows; INCLUDES &#39;4&#39; </span></span>
-<span id="cb42-13"><a href="python-libraries.html#cb42-13"></a>                                  <span class="co"># --&gt; hence range(0:4) results in --&gt; &quot;0,1,2,3,4&quot;</span></span>
-<span id="cb42-14"><a href="python-libraries.html#cb42-14"></a></span>
-<span id="cb42-15"><a href="python-libraries.html#cb42-15"></a><span class="co">## check if the output are the same, even though &quot;range()&quot; has slightly different inputs? --&gt; yes!</span></span>
-<span id="cb42-16"><a href="python-libraries.html#cb42-16"></a><span class="bu">print</span>(iloc_test)</span>
-<span id="cb42-17"><a href="python-libraries.html#cb42-17"></a><span class="bu">print</span>(loc_test)</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="python-libraries.html#cb45-1"></a><span class="co">## Möglichkeit 1: with &#39;iloc&#39;</span></span>
+<span id="cb45-2"><a href="python-libraries.html#cb45-2"></a>iloc_test <span class="op">=</span> dd.iloc[<span class="dv">0</span>:<span class="dv">5</span>,<span class="dv">0</span>] <span class="co"># row-position == 0:5 --&gt; first 5 rows; EXCLUDES &#39;5&#39; from the range &quot;0,1,2,3,4,5&quot; </span></span>
+<span id="cb45-3"><a href="python-libraries.html#cb45-3"></a>                                          <span class="co"># --&gt; hence range(0:5) results in --&gt; &quot;0,1,2,3,4&quot;</span></span>
+<span id="cb45-4"><a href="python-libraries.html#cb45-4"></a>                                          <span class="co"># column-position == 0 --&gt; 1st row --&gt; remember: indexing in </span></span>
+<span id="cb45-5"><a href="python-libraries.html#cb45-5"></a>                                          <span class="co"># Python starts at &#39;0&#39;!</span></span>
+<span id="cb45-6"><a href="python-libraries.html#cb45-6"></a></span>
+<span id="cb45-7"><a href="python-libraries.html#cb45-7"></a>    <span class="co"># IMPORTANT: &#39;iloc&#39; uses the &#39;Python stdlib&#39; indexing scheme, where the first element of the range is </span></span>
+<span id="cb45-8"><a href="python-libraries.html#cb45-8"></a>    <span class="co"># included and the last one excluded. So 0:5 will select entries 0,...,4 (= these are the first *5* </span></span>
+<span id="cb45-9"><a href="python-libraries.html#cb45-9"></a>    <span class="co"># entries!!).</span></span>
+<span id="cb45-10"><a href="python-libraries.html#cb45-10"></a></span>
+<span id="cb45-11"><a href="python-libraries.html#cb45-11"></a><span class="co">## Möglichkeit 2: to get the SAME output with &#39;loc&#39;, we need a slightly DIFFERENT range!</span></span>
+<span id="cb45-12"><a href="python-libraries.html#cb45-12"></a>loc_test <span class="op">=</span> dd.loc[<span class="dv">0</span>:<span class="dv">4</span>,<span class="st">&#39;order_id&#39;</span>] <span class="co"># row-position == 0:4 --&gt; first 5 rows; INCLUDES &#39;4&#39; </span></span>
+<span id="cb45-13"><a href="python-libraries.html#cb45-13"></a>                                  <span class="co"># --&gt; hence range(0:4) results in --&gt; &quot;0,1,2,3,4&quot;</span></span>
+<span id="cb45-14"><a href="python-libraries.html#cb45-14"></a></span>
+<span id="cb45-15"><a href="python-libraries.html#cb45-15"></a><span class="co">## check if the output are the same, even though &quot;range()&quot; has slightly different inputs? --&gt; yes!</span></span>
+<span id="cb45-16"><a href="python-libraries.html#cb45-16"></a><span class="bu">print</span>(iloc_test)</span>
+<span id="cb45-17"><a href="python-libraries.html#cb45-17"></a><span class="bu">print</span>(loc_test)</span></code></pre></div>
 </div>
 </div>
 <div id="drop-a-column-with-the-pop-method" class="section level3">
@@ -539,12 +541,12 @@ and columns.</p></li>
 <div id="convert-into-date-time-format-with-the-to_datetime-method" class="section level3">
 <h3><span class="header-section-number">4.4.6</span> Convert into “Date-Time”-format with the <code>to_datetime()</code>-Method</h3>
 <p><strong>This method can be used when you need to convert a “Date”-Column into the correct <code>Date-Time</code>-Format in order to work with <em>time-series data</em></strong>.</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="python-libraries.html#cb43-1"></a>df[<span class="st">&#39;Date-Time&#39;</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">&#39;Date-Time&#39;</span>], <span class="bu">format</span><span class="op">=</span><span class="st">&#39;%Y-%m-</span><span class="sc">%d</span><span class="st"> %H:%M:%S&#39;</span>)</span>
-<span id="cb43-2"><a href="python-libraries.html#cb43-2"></a>df[<span class="st">&#39;Date-Time&#39;</span>] <span class="co"># check, if it worked?</span></span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="python-libraries.html#cb46-1"></a>df[<span class="st">&#39;Date-Time&#39;</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">&#39;Date-Time&#39;</span>], <span class="bu">format</span><span class="op">=</span><span class="st">&#39;%Y-%m-</span><span class="sc">%d</span><span class="st"> %H:%M:%S&#39;</span>)</span>
+<span id="cb46-2"><a href="python-libraries.html#cb46-2"></a>df[<span class="st">&#39;Date-Time&#39;</span>] <span class="co"># check, if it worked?</span></span></code></pre></div>
 </div>
 <div id="umgekehrt-use-the-strftime-method-to-convert-a-date-column-back-into-a-string-format" class="section level3">
 <h3><span class="header-section-number">4.4.7</span> <u>Umgekehrt</u>: Use the <code>strftime()</code>-Method to convert a Date-Column back into a “String”-Format</h3>
-<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="python-libraries.html#cb44-1"></a>df[<span class="st">&#39;Date-Time&#39;</span>] <span class="op">=</span> df[<span class="st">&#39;Date-Time&#39;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: x.strftime(<span class="st">&#39;%Y-%m-</span><span class="sc">%d</span><span class="st"> %H:%M:%S%z&#39;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="python-libraries.html#cb47-1"></a>df[<span class="st">&#39;Date-Time&#39;</span>] <span class="op">=</span> df[<span class="st">&#39;Date-Time&#39;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: x.strftime(<span class="st">&#39;%Y-%m-</span><span class="sc">%d</span><span class="st"> %H:%M:%S%z&#39;</span>))</span></code></pre></div>
 <blockquote>
 <p>Why would we do this?</p>
 </blockquote>

@@ -8,15 +8,35 @@ Die meisten Data-Science Projekte werden wie folgt ablaufen:
 
 ![Übersicht zu den 4 Teil-Etappen in Data-Science](./bilder/foundation-ds/roadmap-uebersicht.jpg)
 
-### Management eines DS-Projektes | The Step-by-Step Guide
+## Management eines DS-Projektes | The Step-by-Step Guide
 
+### Phase 0 - Correct initialization of a Project
+
+BEFORE you even start a project, **you need to make sure that your project always will work in a reliable way, even when you don't work on your own machine**:
+
+```
 1) Create a **new folder** with the project's name.
 2) Create a **virtual environment** `venv` for the project (in order to solve dependency issues).
 3) Create **a `readme.md`-file** on how to set-up your computer.
   - Copy-Paste this from a previous project.
+```
+
+### Phase 1 - Get the Data & erste Recherchearbeit
+
+The basis of every data-science project is your commodity (= Rohstoff): the data that you will work with. That's why, you should use your "Googling ability" to try and find what you are looking for online. Anohter way to get to the data you want is through web-crawlers:
+
+- `beautifulsoup`
+- Twitter API
+- Twitch API
+- Youtube API
+- etc...
+
+Then, the steps are relatively clear:
+
+```
 4) Get the data.
-5) Acquire _some_ (minimal) understanding of your topic // research-area (Achtung: not too deep yet!).
-  - <u>Goal</u>: Formulate a resarch-question. 
+5) NICHT OBLIGATORISCHER SCHRITT, WENN DU KEINE WISSENSCHAFTLICHE ARBEIT SCHREIBST: Acquire some (theoretical) understanding of your topic // research-area (Achtung: not too deep yet!).
+  - Goal (in academia): Formulate a resarch-question. 
     - What would be interesting questions to answer with this type of data that you have? 
     - Can you formulate a hypothesis?
   - Google some books on the topics.
@@ -24,130 +44,62 @@ Die meisten Data-Science Projekte werden wie folgt ablaufen:
   - Read some introductions on the topic.
     - Are there any White-Papers?
     - Have you seen any meta-paper on the topic? These give a really great overview on the topic!
-6) Load the data: the <u>goal</u> here is to **get acquianted with your data**. What is your first impression of what you got here?
-  - How many columns & rows?
-  - `Dtype` of each column?
-  - What data does each column represent?
-    - <u>Problem you want to solve</u>: Oftentimes, columns have weird names and you don't know what those abbreviations stand for.
-  - What are the possible ranges of values for each <u>categorical</u> data-column?
-  - <u>Final goal here</u>: _You need to decide **whether your data is good enough OR garbage**. Because then you don't even need to put efforts into trying to solve the problem!_ xD
-7) <u>Wenn die Abschlussfrage im vorherigen Schritt (garbage-data or not?) mit: "nein, wir haben hier wirklich brauchbare Daten für unser Problem" beantwortet werden kann</u>: Acquire even more "Expert-Knowledge" --> vertiefteres Einlesen in den Themenbereich.
-  - <u>Ziel hier</u>: figure out what (similar) model / problem has already been solved by others --> AKA "intelligent copying" ;)
-    - Lese Papaers, 
-    - Schaue ZF auf Youtube,
-    - Twitter-Threads zum Thema,
-    - Are there any Kaggle-Datasets on the topic?
-    - etc...
+```
+
+### Phase 2 - Load the Data & Vanilla Exploration
+
+When Loading the data
+
+```
+6) Load the data
+  - The goal: get acquianted with your data --> Ultimately: Can this data be useful for the problem we are trying to solve?
+    - How many columns & rows?
+    - `Dtype` of each column?
+    - What data does each column represent?
+      - Problem you want to solve here: Oftentimes, columns have weird names and you don't know what those abbreviations stand for.
+    - What are the possible ranges of values for each categorical(!) data-column?
+```
+
+<mark>**Der wichtigste Meilenstein bei dieser Etappe ist vermutlich die Frage: 'Sind meine Daten "gut genug", um das Problem zu lösen oder sind sie einfach nur Müll?"**</mark>
+
+_Wenn du nämlich die obige Frage mit "NEIN" beantwortest, dann brauchst du schon gar nicht mit dem Projekt zu beginnen, denn es wäre ineffizient (oder du machst dich auf die Suche nach neuen Daten...)_ ;)
+
+### Phase 3 - After having concluded: "My data is OK!" | Wie geht es weiter?
+
+Wenn die Abschlussfrage im vorherigen Schritt (garbage-data or not?) mit: "nein, wir haben hier wirklich brauchbare Daten für unser Problem" beantwortet werden kann
+
+```
+7) Acquire even more "Expert-Knowledge" --> vertiefteres Einlesen in den Themenbereich.
+  - Ziel hier: figure out how we can:
+    1) visualize things AND 
+    2) how to model / problem has already been solved by others --> AKA "intelligent copying" ;)
+      - Lese Papers, 
+      - Schaue ZF auf Youtube,
+      - Twitter-Threads zum Thema,
+      - Are there any Kaggle-Datasets on the topic?
+      - etc...
 8) Make a first "deeper" data exploration.
-  - <u>Goal</u>: Let the data tell its story, e.g. **do some very good data-visualisations** in order for your boss to be able to understand with what data you are working AND _what insights it is possible to get with it_. 
-9) Create // Estimate a model to make predictions.
-  - Was ist das Prognoseobjekt (=$\hat{y}$ + dessen Einheit)?
-  - Welche ML-Libraries willst du verwenden?
-  - Clean the data
-  - Split the data into training & testing data
-  - Estimate // Train your model (with the training data)
-  - Evaluate your model:
-    - How good did it "learn"? // Performance on the training-data (MAE, MAPE,...)
-    - How good did it "extrapolate"? // Performance on the testing-data (MAE, MAPE...)
-  - Conclusions: know how to interpret the results & draw conclusions from it.
-10) If you are happy with your model in "step 9": create your "minimal viable product" (MVP // Prototyp) from the (best) Model-Predictions that you got. 
-  - <u>Goal</u>: Create a dashboard (oder sowas in der Art).
-    - Choose which library to use (dash, plotly, bokeh, shiny-app, sphinx, bookdown etc...)
+  - Goal: Let the data tell its story, e.g. **do some very good data-visualisations** in order for your boss to be able to understand with what data you are working AND _what insights it is possible to get with it_. 
+    - Which visualization-libraries do you choose?
+    - Clean the data
+      - How to deal with Outliers?
+      - Merging & Splitting different Datasets?
+      - Which data-imputation-strategy should you choose?
+      - etc...
+``` 
 
-## Data-Science, aus "Uni"-Sicht
+> More details to "step 7", on how to acquire "Expert-Knowledge"?
 
-Dies ist eine alternative Übersicht, wie man ein Data-Science Projekt von A bis Z durchführt (eventuell veraltet?):
-
-```
-- Define the problem that you are trying to solve.
-- Get the data you need to solve the problem
-- Start with "understanding" your data:
-  - What "X"-variables do you have? In which "Einheit"?
-  - What is the Y-Variable? In which "Einheit"?
-  - Make some very BASIC summary-statistics // just screen the data a little bit.
-    - Key: You need to see whether your data is good enough OR garbage. Because then you don't even need to put efforts into trying to solve the problem! xD
-  - If the data is OK: start with "Literatur-Recherche"
-    - Einlesen ins Thema
-    - Are there researchers that faced similar problems? What methods did they use?
-- Clean the data
-- Split the data into training & testing data
-- Estimate // Train your model (with the training data)
-- Evaluate your model:
-  - How good did it "learn"? // Performance on the training-data (MAE, MAPE,...)
-  - How good did it "extrapolate"? // Performance on the testing-data (MAE, MAPE...)
-- Conclusions
-- If you are happy with your model: Make a "Minimum Viable Product" (MVP):
-  - For example, a dashboard on the web.
-```
-
-<mark>**Der erste und wichtigste Meilenstein ist vermutlich die Frage: 'Sind meine Daten "gut genug", um das Problem zu lösen oder sind sie einfach nur Müll?"**</mark>
-
-_Wenn du nämlich die obige Frage mit "NEIN" beantwortest, dann brauchst du schon gar nicht mit dem Projekt zu beginnen, denn es wäre ineffizient_ ;)
-
-### After having found your Data: the Questions you need to have an answer on
-
-BEFORE you start writing your R-Scripts or Jupyter-Notebooks, you **first need to think about several key-things** &amp; -questions, <mark>because this will help you to come to the conclusion: "is my data good or bad?":
-
-```
-- Welche Datenbasis haben wir?
-- Was ist das Prognoseobjekt?
-- Welche Metrik hast du in deinen Notebooks verwendet?
-- Wie ist das Trainings- & Validierungs-Dataset aufgebaut?
-- Welche Daten sind im Test-Set, welche für den Benchmark verwendet werden?
-- Welche (bereits bestehende) Prognoseansätze wurden angewendet? 
-- Welche Daten sind effektiv genutzt & welche sind verfügbar?
-- Etc…
-```
-
-- <u>Datenbasis // Woher kommen die Daten?</u>: 
-
-ENTSOE exklusiv. Das ist der Dachverband der TSO (kennen Nachfrage und Angebot)
-
-- <u>Prognoseobjekt (= y-dach)</u>: 
-
-Stündliche EUR/kWh für Folgetag.
-
-- <u>Metrik</u>: 
-
-Zeigt, wie gut das Modell "lernt" (= training error) & "generalisiert" // exrapoliert (= generalization error). Im Notebook von Philipp werden 2 verschiedene 
-Metriken verwendet, nämlich: 
-
-	- Mean Absolute Error, sowie 
-	- [Root] Mean Squared Error.
-
-- <u>Training Dataset</u>: Daten von 2019.
-
-- <u>Validation Dataset</u>: Random choice of 20% of the hours within this year.
-
-- <u>Mit welchem *true y-value* werden die Predictions verglichen? // Was ist der Benchmark? // Test-Set</u>: EFFEX Spotpreise benutzt für Benchmark // true [y-]values.
-
-- <u>Struktur [der Analyse]</u>:
-
-	- <u>Output</u>: Day ahead Strompreis CH
-	- <u>Input</u>: jeweils 24h für ca. 20 Prädiktoren. Reshape: K dimensionen = #Prediktors x 24h
-	
-- <u>Was ist die Daten-Imputation Methode?</u>: Missing Values mit Mittelwerten
-
-
-### After having concluded: "My data is OK!" | Wie geht es weiter?
-
-Hier mein Vorgehen, um jedes mögliche DS-Problem zu lösen,.
-
-The list below basically starts at the "Literatur-Recherche" point:
-
-```
 - Make a list of Papers on the problem (Google Scholar), but only read the "introduction"!
-  - Key here is "intelligent copying"-concept: You need to pick 2-3 papers that are the most relevant to your problem. Start with those.
-- For any topics that you don't understand enough: Find Youtube-Videos on the topic(s). Twitter-Threads is also great. Furthermore, give Reddit a try!
+  - <u>Key here is _"intelligent copying"-concept_</u>: You need to pick 2-3 papers that are the most relevant to your problem. Start with those.
+- For any topics that you don't understand enough: 
+  - Find Youtube-Videos on the topic(s). 
+  - Twitter-Threads is also great. 
+  - Furthermore, give Reddit a try!
 - Next, choose which libraries are the most apropriate for the problem?
-  - Key here: Your end-result will only be as good as your tools, with which you will be able to tackle the problem. Remember my MA-thesis: the libraries I needed were in Python, but I solved it (very painfully & inefficiently) in R!
-- Start with the data cleaning.
-- Estimate your Model.
-- Evaluate the Model (with CV).
-  - Conclusions? --> Key: Can we do better?
-- Make a MVP, for example a dashboard.
-```
-
+  - <u>Key here</u>: **Your end-result will only be as good as your tools, with which you will be able to tackle the problem**. 
+    - <u>Example</u>: Remember my MA-thesis! The libraries I needed were in `Python`, but I solved it - very painfully & inefficiently - in `R`!
+    
 > How to find Answers quickly, especially when a Concept is complicated?
 
 Aus Erfahrung weiss ich jetzt, dass **Youtube bisher *immer*, die beste Quelle war, um mir etwas schnell &amp; effizient beizubringen**. 
@@ -157,6 +109,66 @@ Twitter-Community von Wissenschaftlern sind ebenfalls sehr wertvoll. Als **Beisp
 > How to read Notebooks from other People?
 
 *Es geht am Anfang um die Gesamtübersicht und noch nicht um die Details // Eigenheiten im Code oder im Datensatz! Am wichtigsten ist es, dass du [diese Fragen](#after-having-found-your-data-the-questions-you-need-to-have-an-answer-on) zunächst beantworten kannst, wenn du das Notebook liest.*
+    
+### Phase 4 - Model Estimation | Applying Machine-Learning on the Data
+
+In this phase, we will want to generate predictions (most of the time). Here are the steps you need to consider:
+
+```
+9) Create // Estimate a model to make predictions.
+  - Was ist das Prognoseobjekt (=$\hat{y}$ + dessen Einheit)?
+  - Welche ML-Libraries willst du verwenden?
+  - Clean the data
+    - How to deal with Outliers?
+    - Merging & Splitting of different Datasets?
+    - Feature Engineering Strategy?
+    - Which data-imputation-strategy should you choose?
+    - etc...
+  - Split the data into training & testing data
+  - Estimate // Train your model (with the training data)
+  - Evaluate your model (with Cross-Validation):
+    - How good did it "learn"? // Performance on the training-data (MAE, MAPE,...)
+    - How good did it "extrapolate"? // Performance on the testing-data (MAE, MAPE...)
+  - Conclusions --> can we do better? 
+    - Bedingung: know how to interpret the results & draw conclusions from it.
+```
+
+> To efficiently communicate your results with other "Data Scientists", consider to send them answers to the following list of questions:
+
+```
+- Woher stammen die verwendeten Daten? --> deine Datenbasis
+- Was ist das Prognoseobjekt? --> dein y_(dach)
+- Was ist die "Input-Output-Struktur" der Analyse?
+  - <u>(Beispiels-) Output</u>: Day ahead Strompreis CH
+	- <u>(Beispiels-) Inputs</u>: jeweils 24h für ca. 20 Prädiktoren.
+- Was ist die Daten-Imputation Methode? 
+  - Beispiel: Missing Values mit Mittelwerten ersetzt.
+- Welche Metrik hast du in deinen Notebooks verwendet? --> MAPE, MAE und / oder RMSE für Cross-Validation?
+- Wie ist das Trainings- & Validierungs-Dataset aufgebaut?
+- Welche Daten sind im Test-Set, welche für den Benchmark verwendet werden?
+- Welche (bereits bestehende) Prognoseansätze wurden angewendet? --> Resultate aus deiner Literatur-Recherche 
+- Welche Daten sind effektiv genutzt & welche sind verfügbar?
+- Etc…
+```
+
+<mark>_With those **key-questions above**, a Data-Scientist should be able to assess the question: "is my data good or bad?", WITHOUT even creating ANY Jupyter-Notebook and running ANY lines of code in it!_</mark> 
+
+### Phase 5 - Deployment: Erstellung eines Minimal Viable Product | Abschluss des Projektes
+
+**If you are happy with your model in "step 9"**, you have a last step ahead of you: 
+
+```
+- Create your "minimal viable product" (MVP // Prototyp) from the (best) Model-Predictions that you got. 
+  - Goal: Create a dashboard (oder sowas in der Art).
+    - Choose which library to use:
+      - dash, 
+      - plotly, 
+      - bokeh, 
+      - R shiny-app, 
+      - sphinx for documentation, 
+      - bookdown 
+      - etc...
+```
 
 ## Fragestellungen beantworten
 
