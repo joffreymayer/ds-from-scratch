@@ -6,6 +6,58 @@ In meinem Data Scientist Job werde ich häufig auf ähnliche Probleme stossen mi
 
 Die meisten Data-Science Projekte werden wie folgt ablaufen:
 
+![Übersicht zu den 4 Teil-Etappen in Data-Science](./bilder/foundation-ds/roadmap-uebersicht.jpg)
+
+### Management eines DS-Projektes | The Step-by-Step Guide
+
+1) Create a **new folder** with the project's name.
+2) Create a **virtual environment** `venv` for the project (in order to solve dependency issues).
+3) Create **a `readme.md`-file** on how to set-up your computer.
+  - Copy-Paste this from a previous project.
+4) Get the data.
+5) Acquire _some_ (minimal) understanding of your topic // research-area (Achtung: not too deep yet!).
+  - <u>Goal</u>: Formulate a resarch-question. 
+    - What would be interesting questions to answer with this type of data that you have? 
+    - Can you formulate a hypothesis?
+  - Google some books on the topics.
+    - Having a look at Bibliotheks-Bücher can also be helpful.
+  - Read some introductions on the topic.
+    - Are there any White-Papers?
+    - Have you seen any meta-paper on the topic? These give a really great overview on the topic!
+6) Load the data: the <u>goal</u> here is to **get acquianted with your data**. What is your first impression of what you got here?
+  - How many columns & rows?
+  - `Dtype` of each column?
+  - What data does each column represent?
+    - <u>Problem you want to solve</u>: Oftentimes, columns have weird names and you don't know what those abbreviations stand for.
+  - What are the possible ranges of values for each <u>categorical</u> data-column?
+  - <u>Final goal here</u>: _You need to decide **whether your data is good enough OR garbage**. Because then you don't even need to put efforts into trying to solve the problem!_ xD
+7) <u>Wenn die Abschlussfrage im vorherigen Schritt (garbage-data or not?) mit: "nein, wir haben hier wirklich brauchbare Daten für unser Problem" beantwortet werden kann</u>: Acquire even more "Expert-Knowledge" --> vertiefteres Einlesen in den Themenbereich.
+  - <u>Ziel hier</u>: figure out what (similar) model / problem has already been solved by others --> AKA "intelligent copying" ;)
+    - Lese Papaers, 
+    - Schaue ZF auf Youtube,
+    - Twitter-Threads zum Thema,
+    - Are there any Kaggle-Datasets on the topic?
+    - etc...
+8) Make a first "deeper" data exploration.
+  - <u>Goal</u>: Let the data tell its story, e.g. **do some very good data-visualisations** in order for your boss to be able to understand with what data you are working AND _what insights it is possible to get with it_. 
+9) Create // Estimate a model to make predictions.
+  - Was ist das Prognoseobjekt (=$\hat{y}$ + dessen Einheit)?
+  - Welche ML-Libraries willst du verwenden?
+  - Clean the data
+  - Split the data into training & testing data
+  - Estimate // Train your model (with the training data)
+  - Evaluate your model:
+    - How good did it "learn"? // Performance on the training-data (MAE, MAPE,...)
+    - How good did it "extrapolate"? // Performance on the testing-data (MAE, MAPE...)
+  - Conclusions: know how to interpret the results & draw conclusions from it.
+10) If you are happy with your model in "step 9": create your "minimal viable product" (MVP // Prototyp) from the (best) Model-Predictions that you got. 
+  - <u>Goal</u>: Create a dashboard (oder sowas in der Art).
+    - Choose which library to use (dash, plotly, bokeh, shiny-app, sphinx, bookdown etc...)
+
+## Data-Science, aus "Uni"-Sicht
+
+Dies ist eine alternative Übersicht, wie man ein Data-Science Projekt von A bis Z durchführt (eventuell veraltet?):
+
 ```
 - Define the problem that you are trying to solve.
 - Get the data you need to solve the problem
@@ -31,20 +83,6 @@ Die meisten Data-Science Projekte werden wie folgt ablaufen:
 <mark>**Der erste und wichtigste Meilenstein ist vermutlich die Frage: 'Sind meine Daten "gut genug", um das Problem zu lösen oder sind sie einfach nur Müll?"**</mark>
 
 _Wenn du nämlich die obige Frage mit "NEIN" beantwortest, dann brauchst du schon gar nicht mit dem Projekt zu beginnen, denn es wäre ineffizient_ ;)
-
-### Find Data
-
-*Der erste grosse Schritt bei allen Data-Science Projekten, ist der "Rohstoff" namens Daten! Ohne sie, kannst du jegliche DS-Projekte vergessen!*
-
-Here is a list of **websites, that offer free to use datasets**:
-
-- Kaggle
-- UCI Machine Learning Repository
-- [awesome-public-datasets](https://project-awesome.org/awesomedata/awesome-public-datasets)
-- Google Dataset Search
-- https://datasetsearch.research.google.com/
-
-_Wenn du deine eigenen Daten sammeln willst, empfehle ich dir auch die Library `Beautiful-Soup`. Eventuell gibt es auch **einen Twitter-, Reddit- oder Youtube-Crawler API**, mit denen du wertvolle Daten sammeln könntest!_
 
 ### After having found your Data: the Questions you need to have an answer on
 
@@ -132,6 +170,25 @@ In diesem Kapitel habe ich anhand von Beispielen versucht, **eine Liste zu mit d
 
 - _Difference-in-Differences_
   - <u>Geeignet für</u>: **Kausaleffekte**, wobei hier ein Vergleich zweier _praktisch gleicher_ Gruppen über die Zeit stattfindet, um den Effekt eines "Treatments" (= treated OR not treated) zu messen.
+  
+## Find Data
+
+*Der erste grosse Schritt bei allen Data-Science Projekten, ist der "Rohstoff" namens Daten! Ohne sie, kannst du jegliche DS-Projekte vergessen!*
+
+Here is a list of **websites, that offer free to use datasets**:
+
+- Kaggle
+- UCI Machine Learning Repository
+- [awesome-public-datasets](https://project-awesome.org/awesomedata/awesome-public-datasets)
+- Google Dataset Search
+- https://datasetsearch.research.google.com/
+
+_Wenn du deine eigenen Daten sammeln willst, empfehle ich dir auch die Library `Beautiful-Soup`. Eventuell gibt es auch **einen Twitter-, Reddit- oder Youtube-Crawler API**, mit denen du wertvolle Daten sammeln könntest!_
+
+### Sport-Daten
+
+- https://football-data.co.uk/
+  - <u>Description</u>: Football-Data is a free football betting portal providing historical results & odds to help football betting enthusiasts analyse many years of data quickly and efficiently to gain an edge over the bookmaker.
   
 ## Die "Kunst des Feature-Engineering" für gute Modellierung | Effizienter Modellieren
 

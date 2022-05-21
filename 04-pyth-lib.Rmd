@@ -20,6 +20,8 @@
 - `PyTorch`, for **deeplearning**.
 - `TensorFlow`, for **deeplearning**.
 - `darts`, for **dashboarding**.
+- `Sphinx`, for **writing documentation on the web**.
+  - The `Python documentation` was created via this tool.
 
 ## `Python`-Mustercodes für Data-Science
 

@@ -100,11 +100,14 @@ docker
 definitions
 foundations-of-data-science
 allgemeine-roadmap-für-data-science-projekte
-find-data
+management-eines-ds-projektes-the-step-by-step-guide
+data-science-aus-uni-sicht
 after-having-found-your-data-the-questions-you-need-to-have-an-answer-on
 after-having-concluded-my-data-is-ok-wie-geht-es-weiter
 fragestellungen-beantworten
 methoden-liste-an-diverser-technologien-um-fragestellungen-zu-beantworten
+find-data
+sport-daten
 die-kunst-des-feature-engineering-für-gute-modellierung-effizienter-modellieren
 geographie
 finance
