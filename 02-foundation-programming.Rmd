@@ -4,12 +4,6 @@
 
 In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen, meine Programmierkenntnisse zu erweitern.
 
-## Tools to get started 
-
-- [Download the Program _Processing_](http://processing.org): _The Coding Train_ uses this to make all of his example. The programming language of _Processing_ is **Java**. 
-  - [Processing Foundation](https://processingfoundation.org/)
-  - [Learning Processing Book](http://learningprocessing.com/)
-
 ## Wörterbuch
 
 ### Synonyme
@@ -27,6 +21,7 @@ In dieser ZF, werde ich mit Hilfe des **Youtubers _The Coding Train_** versuchen
 - Rest API // Restful API
 - `__init__` // Custom-Constructor // Initialisierungs-Methode
 - Taxonomie // Framework // ("State-of-the-Art") Methodik // Systematik // Vorgehensweise
+- OOP // Object Oriented Programming
 
 ### Programming
 
@@ -68,6 +63,7 @@ x_pred = x.predict(x_test)
 
 - __Superklasse__: Begriff, welcher in der "objektorientierten Programmierung" verwendet wird. Damit ist gemeint, dass eine Klasse von einer anderen Klasse abstammt und dessen Eigenschaften "inherited". 
   - <u>Analogie</u>: Das ist dasselbe Konzept, wie ein Parent-Element in `HTML`, welcher die `CSS`-Styling-Eigenschaften den Kindern vererbt!
+- **<u>What is the difference between a `low-level` VS. `high-level` Programming language?</u>**:
 
 ## Data-Types
 
@@ -112,6 +108,65 @@ myfunc()
 print("Python is " + x)
 ```
 - Output of this: [click here](https://www.w3schools.com/python/trypython.asp?filename=demo_variables_global2)
+
+## What is Python? | The Context
+
+Shortly explained, we can describe `Python` to be:
+
+```
+- A "high-level programming-language".
+- A Programming Language that supports multiple "programming-paradigms".
+- A so-called "general-purpose" language.
+```
+
+_But what does this mean exactly?_
+
+In order to understand the jargon used above, we need to understand some key-concepts in computer science.
+
+### Types of Programming Languages
+
+Nowadays, there are **many different programming languages**. We can categorize them into 2 types:
+
+- **Low-Level Programming Languages**: Such languages are _non-portable_, meaning that they are **hardware-dependent**. A programmer will **need to write his code based on the hardware-architecture**.
+  - <u>Beispiele</u>: 
+    - Assembly Language, 
+    - Machine-Language
+- **High-Level Programming Languages**: Such languages are _portable_, e.g. they are **hardware-independent**! 
+  - <u>Beispiele</u>: 
+    - C, 
+    - C++, 
+    - .net, 
+    - Java OR,
+    - **Python**.
+
+### Programming-Paradigms of a Programming-Language
+
+A Programming-Paradigm is a Technique // Methodology, that **provides a set of rules & regulations** in order to develop applications with technologies, such as `Python`, `Java` or `.net`. 
+
+Every programming language follows certain rules & regulations, e.g. every language has a certain _programming paradigm_. Note that a programming-paradigm _only provides suggestions_. **It does <u>not</u> provide any syntax or API**. 
+
+If you choose `Python` as your programming-language, you can choose between 3 kinds of programming-paradigms.:
+
+- You can write your program using an **Object-Oriented**-Principle, OR
+- Using a **Proceidural**-Principle, OR
+- Using a **Functional**-Principle. 
+
+You can see that **`Python` supports mulitple paradigms**. 
+
+_This makes the development of applications easier_.
+
+### Purpose-Based VS. General-Purpose Programming Languages
+
+Finally, we can categorize each programming-language based on its purpose. There exists **2 types**: 
+
+- **Purpose-Based Languages**, meaning that they are used for a <u>very specific</u> purpose.
+  - <u>Examples</u>:
+    - _Pascal_, a language which used for developping scientific applications.
+    - _Fortran_, a language which is used for evaluation complicated mathematical expressions.
+    - _COBOL_, a language which is used for developping business-applications.
+- General Purpose Languages, e.g. you can use such languages to **develop <u>ANY</u> kind of application**.
+  - <u>Examples</u>:
+    - `Python`! :D
 
 ## Python-Basics
 
@@ -166,6 +221,42 @@ In den folgenden Zeilen Zeige ich dir, wie Programmierung effizienter geht in Py
 #### Swap the values of two variables
 
 Am besten schaust du dir [dieses Youtube-Video ab 19:45-24:00](https://www.youtube.com/watch?v=Z1Yd7upQsXY&list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg)
+
+## Object Oriented Programming
+
+This is one of the "paradigms", in which you can use `Python` to create a program. _To be more precise, it is a **technique // methodology** that provides some set of rules & regulations (note that these are only suggestions!) on how to develop your applications_. 
+
+### Reason why, we use OOP
+
+_If you want to represent ANY real world object THORUGH technology - like `Python` - you <u>require</u> OOP_.
+
+### Konzept
+
+In the real world, you can represent _anything_ as an **"object"**. 
+
+<u>For example</u>:
+
+- An **animal** is an "object" (--> a better word would be "entity"?),
+- A **person** is an "object",
+- A **school** is also en "object",
+- etc...
+
+For example, **if you wanted to build a specific _object_ (thorugh `Python`)** - for instance a hotel - you would need to provide a (theoretical) "blueprint" (= Bauanleitung // Tutorial), on how the real-world object "hotel" should be described. In OOP, this would be the `Class`.
+
+A `Class` is an (imaginary) specification, in order to develop the "hotel"-object in the real world. 
+
+#### Characteristics of an Object
+
+Objects come along with **3 characteristics**:
+
+- **Identity**: This is the **specific name of the object**. It allows is to differentiate one object from another object.
+  - <u>To stick with our Hotel-Example</u>: Carlton
+- **Properties**: These are the specific Eigenschaften of the hotel-object. Note that the properties ACROSS different objects <u>are the same</u>, **BUT their values that they take may differ**!
+  - <u>Example</u>: The hotel has a certain `height`, a certain `color`, a certain `location` etc...
+- **Functionalities**
+  - <u>Example</u>: A hotel has a `kunden_empfang()`, it has a `food_offer()`, it has a `activity_offer()` etc...
+
+In order to be able to build our "hotel"-object, we will need to define the class, its identity, property , as well as the functionalities.
 
 ## R as your IDE
 

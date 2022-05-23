@@ -15,10 +15,12 @@
 - `sklearn`, for **machine-learning in "computer-science style"**.
 - `matplotlib`, for **data-visualization**.
 - `seaborn`, for **data-visualization**.
+- `plotnine`, for **"ggplot2"-style data-visualisation**.
 - `datetime`, for **dealing with dates**.
 - `beautifulsoup`, for **getting data**.
 - `PyTorch`, for **deeplearning**.
 - `TensorFlow`, for **deeplearning**.
+- `streamlit`, for **app-crations** & **deployment**.
 - `darts`, for **dashboarding**.
 - `Sphinx`, for **writing documentation on the web**.
   - The `Python documentation` was created via this tool.
