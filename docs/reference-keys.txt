@@ -63,6 +63,7 @@ creating-a-new-directory
 create-a-new-file
 remove-files
 open-the-current-directory-you-are-in
+show-invisible-files
 terminal-magic-commands-for-being-faster
 syntax-im-terminal
 beispiel-delete-all-files-in-a-folder-that-start-with-the-letter-a

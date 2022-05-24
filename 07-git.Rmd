@@ -67,6 +67,30 @@ Before starting to work with `Git`, you need to understand that there are 2 ways
 	- <u>Merke</u>: The URL of your repo is *assigned* to the variable `origin` in `Git`.
 	
 ### Start Project via local computer | Local-Possibility
+
+> Schritt-für-Schritt Anleitung?
+
+```
+1) Go to your terminal --> Goal: set your working-directory (trick: drag & drop the wd to your terminal, it will fit the path in automatically!)
+  > cd /Users/romaye/Documents/your_remaining_path
+2) Initialize your git-repo 
+  --> Goal: activate your git-repo via the terminal
+  > touch .gitignore
+3) Now, you don't want to track - for example - images, or other . That's exactly why we created a '.gitignore'-file! 
+  --> Goal: tell the '.gitignore'-file to ignore those things in your git-repo, which are NOT worth watching (images etc...)
+  > open the '.gitignore'-file 
+    --> type in the (relative!) path, of those directories that you don't want to have tracked. Alternatively, you can also type in all specific types of files, you want to ignore (for example '.log'-files).
+    --> For example: '/bilder'
+    --> Other exmaple: '**.log'
+4) Now that you excluded the files you don't want, we need to track all the rest.
+  --> Goal: Add all files that we want to track.
+  > open the terminal:
+    --> 'git add .'
+5) Finally, we need to actually do the "screenshot" of the tracked files
+  --> Goal: make your first commit
+  --> in the terminal type in the following:
+    > 'git commit -m "Initial commit" .'
+```
 		
 > What commands do you need, when you decide - after a few months working <u>locally</u> on your computer - to put everything on Github (= *possibility 2*)?
 		

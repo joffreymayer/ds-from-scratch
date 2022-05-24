@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-05-23" />
+<meta name="date" content="2022-05-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -186,8 +186,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4.6" data-path="index.html"><a href="index.html#create-a-new-file"><i class="fa fa-check"></i><b>1.4.6</b> Create a new file?</a></li>
 <li class="chapter" data-level="1.4.7" data-path="index.html"><a href="index.html#remove-files"><i class="fa fa-check"></i><b>1.4.7</b> Remove files?</a></li>
 <li class="chapter" data-level="1.4.8" data-path="index.html"><a href="index.html#open-the-current-directory-you-are-in"><i class="fa fa-check"></i><b>1.4.8</b> Open the current directory you are in?</a></li>
-<li class="chapter" data-level="1.4.9" data-path="index.html"><a href="index.html#terminal-magic-commands-for-being-faster"><i class="fa fa-check"></i><b>1.4.9</b> Terminal Magic-Commands for being faster?</a></li>
-<li class="chapter" data-level="1.4.10" data-path="index.html"><a href="index.html#syntax-im-terminal"><i class="fa fa-check"></i><b>1.4.10</b> Syntax im Terminal</a></li>
+<li class="chapter" data-level="1.4.9" data-path="index.html"><a href="index.html#show-invisible-files"><i class="fa fa-check"></i><b>1.4.9</b> Show invisible Files</a></li>
+<li class="chapter" data-level="1.4.10" data-path="index.html"><a href="index.html#terminal-magic-commands-for-being-faster"><i class="fa fa-check"></i><b>1.4.10</b> Terminal Magic-Commands for being faster?</a></li>
+<li class="chapter" data-level="1.4.11" data-path="index.html"><a href="index.html#syntax-im-terminal"><i class="fa fa-check"></i><b>1.4.11</b> Syntax im Terminal</a></li>
 </ul></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#how-to-activate-use-python"><i class="fa fa-check"></i><b>1.5</b> How to activate &amp; use Python?</a></li>
 <li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#latex"><i class="fa fa-check"></i><b>1.6</b> LaTeX</a><ul>
@@ -429,7 +430,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Data Science from Scratch Code</h1>
 <p class="author"><em>Joffrey Anthony</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2022-05-23</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>2022-05-24</em></p>
 </div>
 <div id="computer-set-up" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Computer Set-Up</h1>
@@ -1082,8 +1083,14 @@ Achtung
 <li><code>open .</code> = opens the current directory you are in</li>
 </ul>
 </div>
+<div id="show-invisible-files" class="section level3">
+<h3><span class="header-section-number">1.4.9</span> Show invisible Files</h3>
+<p>Your computer deliberately chooses not to show you every single file. Especially files that are crucial for the hardware of the computer. If those would be deleted by a user, your computer would start to be “stupid” and you simply cannot work with it anymore. Therefore, you need to be careful when you have access to invisible files.</p>
+<p>However, sometimes you will need to see those invisible files. <strong>For example, I needed to delete one of my <code>git repos</code>, that I accidentally created in my <code>Users\</code>-root-folder</strong>! xD</p>
+<p>Here is how to make invisible files visible on your Mac: <code>shift</code> + <code>command</code> + <code>.</code>-Zeichen</p>
+</div>
 <div id="terminal-magic-commands-for-being-faster" class="section level3">
-<h3><span class="header-section-number">1.4.9</span> Terminal Magic-Commands for being faster?</h3>
+<h3><span class="header-section-number">1.4.10</span> Terminal Magic-Commands for being faster?</h3>
 <ul>
 <li><u>Trick #1</u>: hit the “Tab-Taste” == will automatically auto-fill the name of the file / directories etc.
 <ul>
@@ -1096,12 +1103,12 @@ Achtung
 </ul>
 </div>
 <div id="syntax-im-terminal" class="section level3">
-<h3><span class="header-section-number">1.4.10</span> Syntax im Terminal</h3>
+<h3><span class="header-section-number">1.4.11</span> Syntax im Terminal</h3>
 <ul>
 <li><code>*</code>-Zeichen == Represents “all files”.</li>
 </ul>
 <div id="beispiel-delete-all-files-in-a-folder-that-start-with-the-letter-a" class="section level4">
-<h4><span class="header-section-number">1.4.10.1</span> <u>Beispiel</u>: Delete all Files in a folder that start with the letter <code>a</code>?</h4>
+<h4><span class="header-section-number">1.4.11.1</span> <u>Beispiel</u>: Delete all Files in a folder that start with the letter <code>a</code>?</h4>
 <p>To delete all files in a folder that start with the letter <code>a</code>, then you should write:</p>
 <pre><code>/folder/a*</code></pre>
 <ul>
@@ -1110,7 +1117,7 @@ Achtung
 </ul>
 </div>
 <div id="beispiel-how-to-return-to-your-home-directory" class="section level4">
-<h4><span class="header-section-number">1.4.10.2</span> <u>Beispiel</u>: how to return to your home directory?</h4>
+<h4><span class="header-section-number">1.4.11.2</span> <u>Beispiel</u>: how to return to your home directory?</h4>
 <p>You should use:</p>
 <pre><code>cd ~</code></pre>
 </div>

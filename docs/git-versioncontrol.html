@@ -24,7 +24,7 @@
 <meta name="author" content="Joffrey Anthony" />
 
 
-<meta name="date" content="2022-05-23" />
+<meta name="date" content="2022-05-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -186,8 +186,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4.6" data-path="index.html"><a href="index.html#create-a-new-file"><i class="fa fa-check"></i><b>1.4.6</b> Create a new file?</a></li>
 <li class="chapter" data-level="1.4.7" data-path="index.html"><a href="index.html#remove-files"><i class="fa fa-check"></i><b>1.4.7</b> Remove files?</a></li>
 <li class="chapter" data-level="1.4.8" data-path="index.html"><a href="index.html#open-the-current-directory-you-are-in"><i class="fa fa-check"></i><b>1.4.8</b> Open the current directory you are in?</a></li>
-<li class="chapter" data-level="1.4.9" data-path="index.html"><a href="index.html#terminal-magic-commands-for-being-faster"><i class="fa fa-check"></i><b>1.4.9</b> Terminal Magic-Commands for being faster?</a></li>
-<li class="chapter" data-level="1.4.10" data-path="index.html"><a href="index.html#syntax-im-terminal"><i class="fa fa-check"></i><b>1.4.10</b> Syntax im Terminal</a></li>
+<li class="chapter" data-level="1.4.9" data-path="index.html"><a href="index.html#show-invisible-files"><i class="fa fa-check"></i><b>1.4.9</b> Show invisible Files</a></li>
+<li class="chapter" data-level="1.4.10" data-path="index.html"><a href="index.html#terminal-magic-commands-for-being-faster"><i class="fa fa-check"></i><b>1.4.10</b> Terminal Magic-Commands for being faster?</a></li>
+<li class="chapter" data-level="1.4.11" data-path="index.html"><a href="index.html#syntax-im-terminal"><i class="fa fa-check"></i><b>1.4.11</b> Syntax im Terminal</a></li>
 </ul></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#how-to-activate-use-python"><i class="fa fa-check"></i><b>1.5</b> How to activate &amp; use Python?</a></li>
 <li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#latex"><i class="fa fa-check"></i><b>1.6</b> LaTeX</a><ul>
@@ -510,6 +511,28 @@ Leider wird der Befehl <code>git add</code> oft missverstanden. Viele assoziiere
 </div>
 <div id="start-project-via-local-computer-local-possibility" class="section level3">
 <h3><span class="header-section-number">7.3.2</span> Start Project via local computer | Local-Possibility</h3>
+<blockquote>
+<p>Schritt-für-Schritt Anleitung?</p>
+</blockquote>
+<pre><code>1) Go to your terminal --&gt; Goal: set your working-directory (trick: drag &amp; drop the wd to your terminal, it will fit the path in automatically!)
+  &gt; cd /Users/romaye/Documents/your_remaining_path
+2) Initialize your git-repo 
+  --&gt; Goal: activate your git-repo via the terminal
+  &gt; touch .gitignore
+3) Now, you don&#39;t want to track - for example - images, or other . That&#39;s exactly why we created a &#39;.gitignore&#39;-file! 
+  --&gt; Goal: tell the &#39;.gitignore&#39;-file to ignore those things in your git-repo, which are NOT worth watching (images etc...)
+  &gt; open the &#39;.gitignore&#39;-file 
+    --&gt; type in the (relative!) path, of those directories that you don&#39;t want to have tracked. Alternatively, you can also type in all specific types of files, you want to ignore (for example &#39;.log&#39;-files).
+    --&gt; For example: &#39;/bilder&#39;
+    --&gt; Other exmaple: &#39;**.log&#39;
+4) Now that you excluded the files you don&#39;t want, we need to track all the rest.
+  --&gt; Goal: Add all files that we want to track.
+  &gt; open the terminal:
+    --&gt; &#39;git add .&#39;
+5) Finally, we need to actually do the &quot;screenshot&quot; of the tracked files
+  --&gt; Goal: make your first commit
+  --&gt; in the terminal type in the following:
+    &gt; &#39;git commit -m &quot;Initial commit&quot; .&#39;</code></pre>
 <blockquote>
 <p>What commands do you need, when you decide - after a few months working <u>locally</u> on your computer - to put everything on Github (= <em>possibility 2</em>)?</p>
 </blockquote>

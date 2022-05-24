@@ -693,6 +693,14 @@ A terminal will be essential for your projects, since you will - oftentimes - in
 
 - `open .` = opens the current directory you are in
 
+### Show invisible Files
+
+Your computer deliberately chooses not to show you every single file. Especially files that are crucial for the hardware of the computer. If those would be deleted by a user, your computer would start to be "stupid" and you simply cannot work with it anymore. Therefore, you need to be careful when you have access to invisible files.
+
+However, sometimes you will need to see those invisible files. **For example, I needed to delete one of my `git repos`, that I accidentally created in my `Users\`-root-folder**! xD
+
+Here is how to make invisible files visible on your Mac: `shift` + `command` + `.`-Zeichen
+
 ### Terminal Magic-Commands for being faster?
 
 - <u>Trick #1</u>: hit the "Tab-Taste" == will automatically auto-fill the name of the file / directories etc.
